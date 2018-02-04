@@ -1,6 +1,9 @@
 {
   "scripts": {
-    "dev": "node bin/dev.js"
+    "dev": "node bin/dev.js",
+    "build": "yarn webpack && yarn site",
+    "webpack": "webpack --config webpack.config.node.js",
+    "site": "node bin/site.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -17,6 +20,7 @@
     "eslint-plugin-react": "^7.6.1",
     "eslint-plugin-standard": "^3.0.1",
     "express": "^4.16.2",
+    "mkdirp": "^0.5.1",
     "webpack": "^4.0.0-beta.0",
     "webpack-cli": "^2.0.4",
     "webpack-dev-middleware": "^2.0.4",

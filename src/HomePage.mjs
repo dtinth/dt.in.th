@@ -4,7 +4,12 @@ import Chance from 'chance'
 import _ from 'lodash'
 const beat = n => `${n * 24}px`
 
-export default function Home () {
+export default {
+  title: 'dt.in.th',
+  render: renderPage
+}
+
+function renderPage () {
   return (
     <div>
       <Perspective>

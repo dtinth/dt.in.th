@@ -9,7 +9,7 @@ app.use(webpackIsomorphicDevMiddleware(
 ))
 
 app.get('*', (req, res, next) => {
-  Promise.resolve(res.locals.isomorphic.exports.default())
+  Promise.resolve(res.locals.isomorphic.exports.handleRequest(req))
     .then(html => res.send(html))
     .catch(next)
 })
