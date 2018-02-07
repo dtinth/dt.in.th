@@ -70,11 +70,11 @@ const getAnimation = _.memoize((i) => {
   const yr = c.floating({ min: -20, max: 20 })
   const zr = c.floating({ min: -20, max: 20 })
   const keyframe = i => {
-    const v = Math.pow(1 - (i / 10), 3)
-    const o = Math.pow(i / 10, 0.5)
+    const v = Math.pow(1 - (i / 8), 3)
+    const o = Math.pow(i / 8, 0.5)
     const f = x => x.toFixed(3).replace(/(\..*?)0*$/, '$1').replace(/\.$/, '')
     return `
-      ${i * 100 / 10}% {
+      ${i * 100 / 8}% {
         transform:
           rotate3d(${f(xr * v)}, ${f(yr * v)}, ${f(zr * v)}, ${f(v * 180)}deg)
           translate3d(${f(x0 * v)}vw, ${f(y0 * v)}vw, ${f(z0 * v)}vw);
@@ -83,7 +83,7 @@ const getAnimation = _.memoize((i) => {
     `
   }
   return keyframes`
-    ${Array(11).fill().map((_, i) => i).map(keyframe).join('')}
+    ${Array(9).fill().map((_, i) => i).map(keyframe).join('')}
   `
 })
 
@@ -102,6 +102,7 @@ const SiteTitle = styled.h1`
   text-align: center;
   margin: 0 0 ${beat(1)};
   font-size: 64px;
+  font-family: Arimo SiteTitle, Helvetica, sans-serif;
   @media (min-width: 360px) { font-size: 96px; }
   @media (min-width: 480px) { font-size: 128px; }
   @media (min-width: 720px) { font-size: 192px; }

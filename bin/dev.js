@@ -3,13 +3,15 @@ const webpackIsomorphicDevMiddleware = require('webpack-isomorphic-dev-middlewar
 const express = require('express')
 const app = express()
 
+app.use(require('compression')())
+
 app.use(webpackIsomorphicDevMiddleware(
   webpack(require('../webpack.config.browser')),
   webpack(require('../webpack.config.node'))
 ))
 
 app.get('*', (req, res, next) => {
-  Promise.resolve(res.locals.isomorphic.exports.handleRequest(req))
+  Promise.resolve(res.locals.isomorphic.exports.handleRequest(req, res))
     .then(html => res.send(html))
     .catch(next)
 })

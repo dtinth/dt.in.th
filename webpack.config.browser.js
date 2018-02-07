@@ -4,7 +4,7 @@ module.exports = {
   entry: './src/browser.mjs',
   mode: 'production',
   output: {
-    path: path.join(__dirname, 'build')
+    path: path.join(__dirname, 'build', 'browser')
   },
   module: {
     rules: [
