@@ -4,13 +4,14 @@ import home from './home'
 import titleFont from '!!url-loader!./arimo-bold-title-subset.woff2'
 import htmlMinifier from 'html-minifier'
 import cheerio from 'cheerio'
+import talks from './talks'
 
 /* eslint import/no-webpack-loader-syntax: off */
 
 // List of all pages.
-export const pages = {
+export const pages = Object.assign({
   '/': home
-}
+}, talks)
 
 // The global CSS.
 const globalCss = `
@@ -33,6 +34,10 @@ body {
   margin: 0;
   padding: 0;
 }
+a {
+  color: #ffb;
+  text-decoration-skip: ink;
+}
 `
 
 // Renders a page to HTML.
@@ -44,7 +49,7 @@ export function renderPageToHTML (page, clientAssets) {
     `<!DOCTYPE html>`,
     `<meta charset=utf-8>`,
     `<meta name="viewport" content="width=device-width, initial-scale=1.0" />`,
-    `<title>dt.in.th</title>`,
+    `<title>${page.title}</title>`,
     `<style>${globalCss}</style>`,
     sheet.getStyleTags(),
     `<body>`,
