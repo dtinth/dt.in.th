@@ -115,14 +115,14 @@ const SiteTitleContainer = styled.div`
 const Footer = styled(({ className }) => {
   return (
     <footer className={className}>
-      <Navigation small animated={false} />
+      <Navigation small homeLink animated={false} />
     </footer>
   )
 })`
   margin: ${beat(3)} 0 ${beat(1)};
 `
 
-function Navigation ({ animated, small }) {
+function Navigation ({ animated, homeLink, small }) {
   const item = (index, href, text) => (
     <LinkItem
       animated={animated}
@@ -135,6 +135,7 @@ function Navigation ({ animated, small }) {
   )
   return (
     <Links>
+      {item(0, 'https://dt.in.th', <SiteName>dt.in.th</SiteName>)}
       {item(2, 'https://flicknote.spacet.me', 'Music')}
       {item(3, 'https://github.com/dtinth', 'GitHub')}
       {item(4, 'https://twitter.com/dtinth', 'Twitter')}
@@ -143,6 +144,8 @@ function Navigation ({ animated, small }) {
     </Links>
   )
 }
+
+const SiteName = styled.strong`color: #8b8685;`
 
 const Links = styled.div`
   display: flex;
