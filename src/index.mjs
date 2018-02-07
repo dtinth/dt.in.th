@@ -1,6 +1,6 @@
 import ReactDOMServer from 'react-dom/server'
 import { ServerStyleSheet } from 'styled-components'
-import HomePage from './HomePage'
+import home from './home'
 import titleFont from '!!url-loader!./arimo-bold-title-subset.woff2'
 import htmlMinifier from 'html-minifier'
 import cheerio from 'cheerio'
@@ -9,7 +9,7 @@ import cheerio from 'cheerio'
 
 // List of all pages.
 export const pages = {
-  '/': HomePage
+  '/': home
 }
 
 // The global CSS.
