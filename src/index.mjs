@@ -9,12 +9,14 @@ export const pages = {
 
 // The global CSS.
 const globalCss = `
+:root, html {
+  font: 18px Arimo, Helvetica, sans-serif;
+}
 body {
   background: #353433;
   color: #e9e8e7;
   margin: 0;
   padding: 0;
-  font: 18px Arimo, Helvetica, sans-serif;
 }
 `
 

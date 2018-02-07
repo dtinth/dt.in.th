@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components'
 import React from 'react'
 import Chance from 'chance'
 import _ from 'lodash'
-const beat = n => `${n * 24}px`
+import { fontSize, beat, C4, B4, E4 } from './styles'
 
 export default {
   title: 'dt.in.th',
@@ -21,27 +21,38 @@ function renderPage () {
                 : <AnimatedCharacter key={i} seed={i} delay={i * 0.03}>{ch}</AnimatedCharacter>
             ))}
           </SiteTitle>
-          <Links>
-            {/* <LinkItem index={0} href='/projects/'>Projects</LinkItem> */}
-            <LinkItem index={1} href='https://flicknote.spacet.me'>Music</LinkItem>
-            {/* <LinkItem index={2} href='/talks/'>Talks</LinkItem> */}
-            <LinkItem index={3} href='https://github.com/dtinth'>GitHub</LinkItem>
-            <LinkItem index={4} href='https://twitter.com/dtinth'>Twitter</LinkItem>
-            <LinkItem index={5} href='https://medium.com/@dtinth'>Medium</LinkItem>
-            <LinkItem index={6} href='https://me.dt.in.th'>Blog</LinkItem>
-          </Links>
+          <Navigation animated />
         </SiteTitleContainer>
         <MainContent>
+          <Heading>About</Heading>
           <Intro>
-            Hi! I’m <strong>Thai Pangsakulyanont</strong>.
+            Hi! I’m <Name>Thai Pangsakulyanont</Name>.
             I’m a software developer from Thailand.
             I like to build random stuff!
           </Intro>
+          <Footer />
         </MainContent>
       </Perspective>
     </div>
   )
 }
+
+const Heading = styled.h2`
+  color: #D7FC70;
+  margin: ${beat(1.5)} 0 0;
+  font-size: ${fontSize(B4)};
+  line-height: ${beat(1.5)};
+`
+
+const Name = styled.strong`
+  color: #bef;
+`
+
+const Intro = styled.p`
+  margin: ${beat(1)} 0;
+  font-size: ${fontSize(E4)};
+  line-height: ${beat(1.25)};
+`
 
 const Perspective = styled.div`
   min-height: 100vh;
@@ -89,7 +100,7 @@ const AnimatedCharacter = styled(
 const SiteTitle = styled.h1`
   color: #8b8685;
   text-align: center;
-  margin: 0;
+  margin: 0 0 ${beat(1)};
   font-size: 64px;
   @media (min-width: 360px) { font-size: 96px; }
   @media (min-width: 480px) { font-size: 128px; }
@@ -100,6 +111,38 @@ const SiteTitleContainer = styled.div`
   padding-top: 20vh;
 `
 
+const Footer = styled(({ className }) => {
+  return (
+    <footer className={className}>
+      <Navigation small animated={false} />
+    </footer>
+  )
+})`
+  margin: ${beat(3)} 0 ${beat(1)};
+`
+
+function Navigation ({ animated, small }) {
+  const item = (index, href, text) => (
+    <LinkItem
+      animated={animated}
+      small={small}
+      index={index}
+      href={href}
+    >
+      {text}
+    </LinkItem>
+  )
+  return (
+    <Links>
+      {item(2, 'https://flicknote.spacet.me', 'Music')}
+      {item(3, 'https://github.com/dtinth', 'GitHub')}
+      {item(4, 'https://twitter.com/dtinth', 'Twitter')}
+      {item(5, 'https://medium.com/@dtinth', 'Medium')}
+      {item(6, 'https://me.dt.in.th', 'Blog')}
+    </Links>
+  )
+}
+
 const Links = styled.div`
   display: flex;
   padding: 0 16px;
@@ -107,45 +150,37 @@ const Links = styled.div`
   justify-content: center;
 `
 
-function LinkItem ({ index, children, href }) {
+function LinkItem ({ animated, small, index, children, href }) {
+  const wrapWithAnimation = x => animated
+    ? <AnimatedCharacter delay={index * 0.07 + 0.3} seed={index + 99}>{x}</AnimatedCharacter>
+    : x
   return (
-    <LinkListItem>
-      <AnimatedCharacter delay={index * 0.07 + 0.3} seed={index + 99}>
-        <a href={href}>{children}</a>
-      </AnimatedCharacter>
+    <LinkListItem small={small}>
+      {wrapWithAnimation(<a href={href}>{children}</a>)}
     </LinkListItem>
   )
 }
 
 const LinkListItem = styled.div`
-  margin: 12px 16px;
-  font-size: 24px;
+  margin: ${props => props.small ? `${beat(0.25)} ${beat(0.5)}` : `${beat(0.5)} ${beat(0.67)}`};
+  font-size: ${props => fontSize(props.small ? C4 : E4)};
   a {
     color: #ffb;
     text-decoration: none;
   }
 `
 
-const introAnimation = keyframes`
+const fadeIn = keyframes`
   from { opacity: 0; transform: translateY(0px); }
   to { opacity: 1; transform: translateY(0px); }
 `
 
 const MainContent = styled.div`
-  margin: ${beat(3)} auto ${beat(1)};
+  margin: ${beat(3)} auto ${beat(2)};
   padding: 0 8px;
   max-width: 720px;
   line-height: ${beat(1)};
-`
-
-const Intro = styled.p`
-  margin: ${beat(1)} 0;
-  font-size: 24px;
-  animation: 1s ${introAnimation} ease-out;
-  animation-fill-mode: backwards;
+  animation: 1s ${fadeIn} ease-out;
   animation-delay: 0.7s;
-  line-height: ${beat(1.5)};
-  strong {
-    color: #bef;
-  }
+  animation-fill-mode: backwards;
 `
