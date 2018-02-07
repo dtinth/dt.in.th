@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 import React from 'react'
 import { beat } from './styles'
-import { Footer, Main, Navigation, Wrapper, Perspective, AnimatedCharacter, Heading, Intro, Name } from './common'
+import { ActiveSectionProvider, Footer, Main, Navigation, Wrapper, Perspective, AnimatedCharacter, Heading, Intro, Name } from './common'
 
 export default {
   title: 'dt.in.th',
@@ -10,7 +10,7 @@ export default {
 
 function renderPage () {
   return (
-    <div>
+    <ActiveSectionProvider activeSection='home'>
       <Perspective>
         <SiteTitleContainer>
           <SiteTitle>
@@ -36,7 +36,7 @@ function renderPage () {
           </FadeIn>
         </Main>
       </Perspective>
-    </div>
+    </ActiveSectionProvider>
   )
 }
 

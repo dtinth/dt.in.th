@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import React from 'react'
+import { Broadcast, Subscriber } from 'react-broadcast'
 import Chance from 'chance'
 import _ from 'lodash'
 import { fontSize, beat, C4, B4, E4 } from './styles'
@@ -105,50 +106,66 @@ export const Footer = styled(({ className }) => {
 `
 
 export function Navigation ({ animated, homeLink, small }) {
-  const item = (index, href, text) => (
-    <LinkItem
-      animated={animated}
-      small={small}
-      index={index}
-      href={href}
-    >
-      {text}
-    </LinkItem>
+  const item = (section, index, href, text) => (
+    <Subscriber channel='activeSection'>
+      {activeSection => (
+        <LinkItem
+          animated={animated}
+          small={small}
+          index={index}
+          active={activeSection === section}
+          href={href}
+        >
+          {text}
+        </LinkItem>
+      )}
+    </Subscriber>
   )
   return (
     <Links>
-      {homeLink && item(0, 'https://dt.in.th', <SiteName>dt.in.th</SiteName>)}
-      {item(2, 'https://flicknote.spacet.me', 'Music')}
-      {item(3, 'https://github.com/dtinth', 'GitHub')}
-      {item(4, 'https://twitter.com/dtinth', 'Twitter')}
-      {item(5, 'https://medium.com/@dtinth', 'Medium')}
-      {item(6, 'https://me.dt.in.th', 'Blog')}
+      {homeLink && item('home', 0, '/', <SiteName>dt.in.th</SiteName>)}
+      {item('talks', 1, '/talks/', 'Talks')}
+      {item('music', 2, 'https://flicknote.spacet.me', 'Music')}
+      {item('github', 3, 'https://github.com/dtinth', 'GitHub')}
+      {item('twitter', 4, 'https://twitter.com/dtinth', 'Twitter')}
+      {item('medium', 5, 'https://medium.com/@dtinth', 'Medium')}
+      {item('blog', 6, 'https://me.dt.in.th', 'Blog')}
     </Links>
+  )
+}
+
+export function ActiveSectionProvider ({ children, activeSection }) {
+  return (
+    <Broadcast channel='activeSection' value={activeSection}>
+      {children}
+    </Broadcast>
   )
 }
 
 const SiteName = styled.strong`color: #8b8685;`
 
-const Links = styled.div`
+const Links = styled.ul`
   display: flex;
   padding: 0 16px;
   flex-wrap: wrap;
+  list-style: none;
   justify-content: center;
 `
 
-function LinkItem ({ animated, small, index, children, href }) {
+function LinkItem ({ animated, active, small, index, children, href }) {
   const wrapWithAnimation = x => animated
     ? <AnimatedCharacter delay={index * 0.07 + 0.3} seed={index + 99}>{x}</AnimatedCharacter>
     : x
   return (
-    <LinkListItem small={small}>
+    <LinkListItem small={small} active={active}>
       {wrapWithAnimation(<a href={href}>{children}</a>)}
     </LinkListItem>
   )
 }
 
-const LinkListItem = styled.div`
+const LinkListItem = styled.li`
   margin: ${props => props.small ? `${beat(0.25)} ${beat(0.5)}` : `${beat(0.5)} ${beat(0.67)}`};
+  font-weight: ${props => props.active ? '700' : '400'};
   font-size: ${props => fontSize(props.small ? C4 : E4)};
   a {
     color: #ffb;

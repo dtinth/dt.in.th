@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Breadcrumb, Main, Wrapper, Heading, Intro, P, Footer, YouTube, Name } from './common'
+import { ActiveSectionProvider, Breadcrumb, Main, Wrapper, Heading, Intro, P, Footer, YouTube, Name } from './common'
 import { beat } from './styles'
 
 const data = [
@@ -62,39 +62,43 @@ function renderTalk (talkData) {
     { text: 'Talks', href: '/talks/' }
   ]
   return (
-    <Main>
-      <Wrapper>
-        <Breadcrumb items={breadcrumb} />
-        <Heading><Name>{talkData.title}</Name></Heading>
-        {talkData.description()}
-      </Wrapper>
-      <P>
-        {!!talkData.youtube && <YouTube id={talkData.youtube} />}
-      </P>
-      <Wrapper>
-        {talkData.links()}
-        <Footer />
-      </Wrapper>
-    </Main>
+    <ActiveSectionProvider activeSection='talks'>
+      <Main>
+        <Wrapper>
+          <Breadcrumb items={breadcrumb} />
+          <Heading><Name>{talkData.title}</Name></Heading>
+          {talkData.description()}
+        </Wrapper>
+        <P>
+          {!!talkData.youtube && <YouTube id={talkData.youtube} />}
+        </P>
+        <Wrapper>
+          {talkData.links()}
+          <Footer />
+        </Wrapper>
+      </Main>
+    </ActiveSectionProvider>
   )
 }
 
 function renderIndex () {
   return (
-    <Main>
-      <Wrapper>
-        <Breadcrumb />
-        <Heading>Talks</Heading>
-        <TalkLinks>
-          {data.map((talk, i) => (
-            <li key={i}>
-              <a href={`/talks/${talk.id}/`}><Name>{talk.title}</Name></a>
-            </li>
-          ))}
-        </TalkLinks>
-        <Footer />
-      </Wrapper>
-    </Main>
+    <ActiveSectionProvider activeSection='talks'>
+      <Main>
+        <Wrapper>
+          <Breadcrumb />
+          <Heading>Talks</Heading>
+          <TalkLinks>
+            {data.map((talk, i) => (
+              <li key={i}>
+                <a href={`/talks/${talk.id}/`}><Name>{talk.title}</Name></a>
+              </li>
+            ))}
+          </TalkLinks>
+          <Footer />
+        </Wrapper>
+      </Main>
+    </ActiveSectionProvider>
   )
 }
 
