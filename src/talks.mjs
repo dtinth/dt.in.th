@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ActiveSectionProvider, Breadcrumb, Main, Wrapper, Heading, Intro, P, Footer, YouTube, Name } from './common'
+import { ActiveSectionProvider, Breadcrumb, Main, Wrapper, Heading, Intro, P, Footer, YouTube, SlideShare, Name } from './common'
 import { beat } from './styles'
 
 const data = [
   {
     id: 'smells-in-react-apps',
     title: 'Smells in React Apps',
+    date: '2018-01-27',
     description: () => (
       <React.Fragment>
         <Intro>
@@ -36,6 +37,245 @@ const data = [
       </TalkLinks>
     ),
     youtube: 'xBa0_b-5XDw'
+  },
+
+  {
+    id: 'web-midi-instruments-lightning-talk',
+    title: 'Creating musical instruments using Web MIDI API',
+    date: '2016-11-26',
+    description: () => (
+      <React.Fragment>
+        <P>
+          Presented at <a href='https://2016.jsconf.asia/'>JSConf.Asia 2016</a>.
+        </P>
+      </React.Fragment>
+    ),
+    links: () => (
+      <TalkLinks>
+        <li>
+          <a href='https://our.wonderful.software/my-musical-instruments-f88ed8b12331'>Writeup</a>
+        </li>
+      </TalkLinks>
+    ),
+    youtube: '3Y-XeJmGQis'
+  },
+
+  {
+    id: 'react-live-coding',
+    title: 'React Bangkok 2.0.0: Live coding / mob programming session',
+    date: '2017-06-03',
+    description: () => (
+      <React.Fragment>
+        <P>
+          In this session,
+          I demonstrated how one can quickly create a simple React application
+          by doing live coding.
+          The goal is to let people interested in React see
+          how React app development feels like.
+        </P>
+        <P>
+          Presented at <a href='https://reactbkk.com/2.0.0/'>React Bangkok 2.0.0</a>.
+        </P>
+      </React.Fragment>
+    ),
+    youtube: 'u5mpnKYhfUE'
+  },
+
+  {
+    id: 'hoc',
+    title: 'Higher-Order Components and Recompose',
+    date: '2016-08-27',
+    description: () => (
+      <React.Fragment>
+        <P>
+          In this talk, I presented about higher-order functions,
+          and a pattern for solving code duplication in React components
+          using higher-order components.
+          I also talked about how object-oriented programming
+          (pursuing well-factored code) and functional programming
+          (pursuing predictable code) goes hand in hand.
+        </P>
+        <P>
+          Presented at <a href='https://reactbkk.github.io/1.0.0/'>React Bangkok 1.0.0</a>.
+        </P>
+      </React.Fragment>
+    ),
+    links: () => (
+      <TalkLinks>
+        <li>
+          <a href='https://reactbkk.github.io/1.0.0/higher-order-components.pdf'>Slides</a>
+        </li>
+      </TalkLinks>
+    ),
+    youtube: 'MyX4Et5fqlY'
+  },
+
+  {
+    id: 'taskworld-react',
+    title: 'Taskworld and the Evolving Use of React.js',
+    date: '2016-06-14',
+    description: () => (
+      <React.Fragment>
+        <P>
+          In this talk,
+          I and <a href='https://medium.com/@chrisza'>Chakrit Likitkhajorn</a>
+          {' '}
+          presented about the basic concepts of React.js
+          and how Taskworld uses React.js in its front-end.
+          Topics include declarative views, functional components,
+          virtual DOM, and handling state changes.
+          It also explores the benefits and challenges of using React,
+          and gives a quick overview of Redux, a state management solution.
+        </P>
+        <P>
+          Presented at <a href='https://www.meetup.com/bkk-web/events/231034570/'>BKK WEB Meetup</a>
+          {' '}
+          and <a href='https://www.eventpop.me/e/2489'>Facebook Developer Circles Bangkok: Meetup Launch {'&'} Hackathon</a>.
+        </P>
+      </React.Fragment>
+    ),
+    links: () => (
+      <TalkLinks>
+        <li>
+          <a href='https://taskworld.github.io/react-talk/'>Slides</a>
+        </li>
+      </TalkLinks>
+    )
+  },
+
+  {
+    id: 'tdd',
+    title: 'TDD',
+    date: '2016-03-30',
+    description: () => (
+      <React.Fragment>
+        <P>
+          A lecture I gave to Computer Engineering students in a Seminar course.
+          In this lecture I give a gentle introduction to test-driven development.
+          When I published the slides, it got shared more than 1,000 times in the first day.
+        </P>
+      </React.Fragment>
+    ),
+    links: () => (
+      <TalkLinks>
+        <li>
+          <a href='http://go.spacet.me/tdd20160330'>Slides</a>
+        </li>
+      </TalkLinks>
+    )
+  },
+
+  {
+    id: 'spring',
+    title: 'CSS Spring Animation Using Physics and Calculus',
+    date: '2015-11-22',
+    description: () => (
+      <React.Fragment>
+        <Intro>
+          Where design, programming, physics and calculus meet.
+        </Intro>
+        <P>
+          In this talk, I implemented a realistic spring-type animation
+          using basic knowledge of physics and calculus.
+          I talk about this because many software engineering students
+          wonder if they’ll ever use the knowledge learn
+          from the required Calculus and Physics course in their life.
+          I want to show that knowledge allows you to be more creative.
+        </P>
+        <P>
+          Presented at <a href='http://2015.barcampbangkhen.org/'>BarCamp Bangkhen 6</a>.
+        </P>
+      </React.Fragment>
+    ),
+    links: () => (
+      <TalkLinks>
+        <li>
+          <a href='https://medium.com/@dtinth/spring-animation-in-css-2039de6e1a03'>Writeup</a>
+        </li>
+      </TalkLinks>
+    )
+  },
+
+  {
+    id: 'functional-reactive-programming',
+    title: 'Functional Reactive Programming using RxJS',
+    date: '2015-07-18',
+    description: () => (
+      <React.Fragment>
+        <P>
+          In this talk, I explained the basic concepts of functional reactive programming,
+          the marble diagram, and a library that enables reactive programming, RxJS.
+        </P>
+      </React.Fragment>
+    ),
+    links: () => (
+      <TalkLinks>
+        <li>
+          <a href={'https://www.youtube.com/watch?v=6ghavmltuso&index=24&list=PLN3vA36CdPiQc18953hkzgM0fxHKYzdns'}>
+            Videos
+          </a>
+        </li>
+      </TalkLinks>
+    )
+  },
+
+  {
+    id: 'codemania2015',
+    title: 'Frontend Web Development in 2015',
+    date: '2015-06-27',
+    description: () => (
+      <React.Fragment>
+        <P>
+          In this talk, I walked through the new technologies in
+          front-end web development that has become increasingly popular in 2015.
+          It includes browser technologies (WebGL, Web Audio, WebRTC, Service Worker),
+          development tools (preprocessing languages, transpilers, package managers,
+          module bundlers), and React library.
+        </P>
+        <P>
+          Presented at <em>Code Mania 10</em>.
+        </P>
+      </React.Fragment>
+    ),
+    links: () => (
+      <TalkLinks>
+        <li>
+          <a href='https://spacet.me/codemania2015/'>Talk homepage</a>
+        </li>
+      </TalkLinks>
+    ),
+    youtube: '3PWmxxKeT2Y'
+  },
+
+  {
+    id: 'vim',
+    title: 'VIM tips, technique, scripts, plugins',
+    date: '2013-09-22',
+    description: () => (
+      <React.Fragment>
+        <P>
+          In this talk, I showed my VIM configuration, with the tricks and plugins that I use.
+        </P>
+        <P>
+          Presented at <a href='http://2013.barcampbangkhen.org/'>BarCamp Bangkhen 4</a>.
+        </P>
+      </React.Fragment>
+    ),
+    slideshare: 'whRzNPugGQEBOI'
+  },
+
+  {
+    id: 'recursion',
+    title: 'Introduction to Recursion (Python)',
+    date: '2013-06-27',
+    description: () => (
+      <React.Fragment>
+        <P>
+          An introductory lecture to recursion for freshmen students in Python.
+        </P>
+      </React.Fragment>
+    ),
+    slideshare: 'DiR07r8gy55JdE'
   }
 ]
 
@@ -70,10 +310,14 @@ function renderTalk (talkData) {
           {talkData.description()}
         </Wrapper>
         <P>
-          {!!talkData.youtube && <YouTube id={talkData.youtube} />}
+          {talkData.youtube ? (
+            <YouTube id={talkData.youtube} />
+          ) : talkData.slideshare ? (
+            <SlideShare id={talkData.slideshare} />
+          ) : null}
         </P>
         <Wrapper>
-          {talkData.links()}
+          {!!talkData.links && talkData.links()}
           <Footer />
         </Wrapper>
       </Main>
@@ -91,7 +335,7 @@ function renderIndex () {
           <TalkLinks>
             {data.map((talk, i) => (
               <li key={i}>
-                <a href={`/talks/${talk.id}/`}><Name>{talk.title}</Name></a>
+                {talk.date} <a href={`/talks/${talk.id}/`}>{talk.title}</a>
               </li>
             ))}
           </TalkLinks>

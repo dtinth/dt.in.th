@@ -188,20 +188,34 @@ export const Main = styled.div`
 
 export function YouTube ({ id }) {
   return (
-    <YouTubeContainer>
+    <EmbedContainer ratio={720 / 405}>
       <iframe
         width='720'
         height='405'
-        className='youtube'
         src={'https://www.youtube.com/embed/' + id + '?rel=0'}
         frameBorder='0'
         allowFullscreen
       />
-    </YouTubeContainer>
+    </EmbedContainer>
   )
 }
 
-const YouTubeContainer = styled.span`
+export function SlideShare ({ id }) {
+  return (
+    <EmbedContainer ratio={720 / 587}>
+      <iframe
+        width='720'
+        height='587'
+        className='youtube'
+        src={'https://www.slideshare.net/slideshow/embed_code/key/' + id + '?rel=0'}
+        frameBorder='0'
+        allowFullscreen
+      />
+    </EmbedContainer>
+  )
+}
+
+const EmbedContainer = styled.span`
   display: block;
   margin: 0 auto;
   max-width: 720px;
@@ -209,6 +223,6 @@ const YouTubeContainer = styled.span`
   iframe {
     display: block;
     max-width: 100vw;
-    max-height: 56.25vw;
+    max-height: ${props => 100 / props.ratio}vw;
   }
 `
