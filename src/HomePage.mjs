@@ -135,7 +135,7 @@ function Navigation ({ animated, homeLink, small }) {
   )
   return (
     <Links>
-      {item(0, 'https://dt.in.th', <SiteName>dt.in.th</SiteName>)}
+      {homeLink && item(0, 'https://dt.in.th', <SiteName>dt.in.th</SiteName>)}
       {item(2, 'https://flicknote.spacet.me', 'Music')}
       {item(3, 'https://github.com/dtinth', 'GitHub')}
       {item(4, 'https://twitter.com/dtinth', 'Twitter')}
