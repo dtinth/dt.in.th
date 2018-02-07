@@ -1,9 +1,11 @@
 import styled, { keyframes } from 'styled-components'
 import React from 'react'
-import { Broadcast, Subscriber } from 'react-broadcast'
+import ReactBroadcast from 'react-broadcast'
 import Chance from 'chance'
 import _ from 'lodash'
 import { fontSize, beat, C4, B4, E4 } from './styles'
+
+const { Broadcast, Subscriber } = ReactBroadcast
 
 export function Breadcrumb ({ items = [ ] }) {
   return (
