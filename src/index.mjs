@@ -41,7 +41,7 @@ a {
 `
 
 // Renders a page to HTML.
-export function renderPageToHTML (page, clientAssets) {
+export function renderPageToHTML (page, clientAsset) {
   const sheet = new ServerStyleSheet()
   const jsx = sheet.collectStyles(page.render())
   const html = ReactDOMServer.renderToStaticMarkup(jsx)
@@ -55,7 +55,7 @@ export function renderPageToHTML (page, clientAssets) {
     `<body>`,
     html,
     '<script>',
-    clientAssets['main.js'],
+    clientAsset('browser/main.js'),
     '</script>'
   ]
   const $ = cheerio.load(result.join(''))
@@ -76,7 +76,7 @@ export function handleRequest (req, res) {
   if (!page) {
     return 'Not found ^_^'
   }
-  return renderPageToHTML(page, {
-    'browser/main.js': res.locals.isomorphic.compilation.clientStats.compilation.assets['browser/main.js'].source()
+  return renderPageToHTML(page, (name) => {
+    return res.locals.isomorphic.compilation.clientStats.compilation.assets[name].source()
   })
 }
