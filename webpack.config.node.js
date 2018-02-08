@@ -5,7 +5,8 @@ module.exports = {
   target: 'node',
   mode: 'development',
   output: {
-    path: path.join(__dirname, 'build', 'node'),
+    path: path.join(__dirname, 'build'),
+    filename: 'node/main.js',
     library: 'dtinth',
     libraryTarget: 'commonjs2'
   },

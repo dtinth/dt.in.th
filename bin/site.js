@@ -4,7 +4,7 @@ const path = require('path')
 const fs = require('fs')
 
 const clientAssets = {
-  'main.js': fs.readFileSync('build/browser/main.js', 'utf8')
+  'browser/main.js': fs.readFileSync('build/browser/main.js', 'utf8')
 }
 
 for (const pathname of Object.keys(site.pages)) {

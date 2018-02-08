@@ -77,6 +77,6 @@ export function handleRequest (req, res) {
     return 'Not found ^_^'
   }
   return renderPageToHTML(page, {
-    'main.js': res.locals.isomorphic.compilation.clientStats.compilation.assets['main.js'].source()
+    'browser/main.js': res.locals.isomorphic.compilation.clientStats.compilation.assets['browser/main.js'].source()
   })
 }
