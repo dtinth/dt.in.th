@@ -40,27 +40,6 @@ const data = [
   },
 
   {
-    id: 'web-midi-instruments-lightning-talk',
-    title: 'Creating musical instruments using Web MIDI API',
-    date: '2016-11-26',
-    description: () => (
-      <React.Fragment>
-        <P>
-          Presented at <a href='https://2016.jsconf.asia/'>JSConf.Asia 2016</a>.
-        </P>
-      </React.Fragment>
-    ),
-    links: () => (
-      <TalkLinks>
-        <li>
-          <a href='https://our.wonderful.software/my-musical-instruments-f88ed8b12331'>Writeup</a>
-        </li>
-      </TalkLinks>
-    ),
-    youtube: '3Y-XeJmGQis'
-  },
-
-  {
     id: 'react-live-coding',
     title: 'React Bangkok 2.0.0: Live coding / mob programming session',
     date: '2017-06-03',
@@ -79,6 +58,27 @@ const data = [
       </React.Fragment>
     ),
     youtube: 'u5mpnKYhfUE'
+  },
+
+  {
+    id: 'web-midi-instruments-lightning-talk',
+    title: 'Creating musical instruments using Web MIDI API',
+    date: '2016-11-26',
+    description: () => (
+      <React.Fragment>
+        <P>
+          Presented at <a href='https://2016.jsconf.asia/'>JSConf.Asia 2016</a>.
+        </P>
+      </React.Fragment>
+    ),
+    links: () => (
+      <TalkLinks>
+        <li>
+          <a href='https://our.wonderful.software/my-musical-instruments-f88ed8b12331'>Writeup</a>
+        </li>
+      </TalkLinks>
+    ),
+    youtube: '3Y-XeJmGQis'
   },
 
   {
