@@ -29,7 +29,7 @@ const BreadcrumbContainer = styled.div`
   }
 `
 
-export const Heading = styled.h2`
+export const Heading = styled.h1`
   color: #D7FC70;
   margin: ${beat(1.5)} 0 0;
   font-size: ${fontSize(B4)};
