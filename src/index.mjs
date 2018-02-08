@@ -40,6 +40,18 @@ a {
 }
 `
 
+const googleAnalytics = `
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4343503-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4343503-1');
+</script>
+`
+
 // Renders a page to HTML.
 export function renderPageToHTML (page, clientAsset) {
   const sheet = new ServerStyleSheet()
@@ -47,12 +59,15 @@ export function renderPageToHTML (page, clientAsset) {
   const html = ReactDOMServer.renderToStaticMarkup(jsx)
   const result = [
     `<!DOCTYPE html>`,
+    `<head>`,
     `<meta charset=utf-8>`,
     `<meta name="viewport" content="width=device-width, initial-scale=1.0" />`,
     `<title>${page.title}</title>`,
     page.head && ReactDOMServer.renderToStaticMarkup(page.head()),
     `<style>${globalCss}</style>`,
     sheet.getStyleTags(),
+    googleAnalytics,
+    `</head>`,
     `<body>`,
     html,
     '<script>',
