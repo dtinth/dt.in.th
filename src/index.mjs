@@ -50,6 +50,7 @@ export function renderPageToHTML (page, clientAsset) {
     `<meta charset=utf-8>`,
     `<meta name="viewport" content="width=device-width, initial-scale=1.0" />`,
     `<title>${page.title}</title>`,
+    page.head && ReactDOMServer.renderToStaticMarkup(page.head()),
     `<style>${globalCss}</style>`,
     sheet.getStyleTags(),
     `<body>`,
@@ -58,12 +59,15 @@ export function renderPageToHTML (page, clientAsset) {
     clientAsset('browser/main.js'),
     '</script>'
   ]
+
+  // Combine all <style> tags (from styled-components) into a single style tag.
   const $ = cheerio.load(result.join(''))
   const css = Array.from($('style'))
     .map(x => x.children.map(c => c.data).join('\n'))
     .join('\n')
   $('style').remove()
   $('head').append($('<style></style>').text(css))
+
   return htmlMinifier.minify($.html(), {
     removeAttributeQuotes: true,
     minifyCSS: true

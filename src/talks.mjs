@@ -8,6 +8,9 @@ const data = [
     id: 'smells-in-react-apps',
     title: 'Smells in React Apps',
     date: '2018-01-27',
+    meta: {
+      description: 'Recognizing code smells is an important skill that helps you build maintainable software.'
+    },
     description: () => (
       <React.Fragment>
         <Intro>
@@ -318,9 +321,18 @@ pages['/talks/'] = {
 }
 
 function talkPage (talkData) {
+  const description = talkData.meta && talkData.meta.description
   return {
     title: talkData.title,
-    render: () => renderTalk(talkData)
+    render: () => renderTalk(talkData),
+    head: () => (
+      <React.Fragment>
+        {!!description && <meta name='description' content={description} />}
+        <meta property='og:title' content={talkData.title} />
+        {!!description && <meta property='og:description' content={description} />}
+        <meta property='og:url' content={`https://dt.in.th/talks/${talkData.id}/`} />
+      </React.Fragment>
+    )
   }
 }
 
