@@ -194,7 +194,7 @@ export function YouTube ({ id }) {
         height='405'
         src={'https://www.youtube.com/embed/' + id + '?rel=0'}
         frameBorder='0'
-        allowFullscreen
+        allowFullScreen
       />
     </EmbedContainer>
   )
@@ -209,7 +209,7 @@ export function SlideShare ({ id }) {
         className='youtube'
         src={'https://www.slideshare.net/slideshow/embed_code/key/' + id + '?rel=0'}
         frameBorder='0'
-        allowFullscreen
+        allowFullScreen
       />
     </EmbedContainer>
   )
