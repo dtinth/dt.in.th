@@ -18,3 +18,8 @@ for (const pathname of Object.keys(site.pages)) {
       console.error('Cannot render', target, e)
     })
 }
+
+require('vinyl-fs')
+  .src('build/assets/**/*')
+  .pipe(require('vinyl-fs').dest('dist/assets'))
+  .on('data', f => { console.log(f.relative) })
