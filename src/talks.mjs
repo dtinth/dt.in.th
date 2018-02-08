@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { ActiveSectionProvider, Breadcrumb, Main, Wrapper, Heading, Intro, P, Footer, YouTube, SlideShare, Name } from './common'
 import { beat } from './styles'
+import smellsInReactAppsImage from './talks/smells-in-react-apps.jpg'
 
 const data = [
   {
@@ -9,7 +10,8 @@ const data = [
     title: 'Smells in React Apps',
     date: '2018-01-27',
     meta: {
-      description: 'Recognizing code smells is an important skill that helps you build maintainable software.'
+      description: 'Recognizing code smells is an important skill that helps you build maintainable software.',
+      image: smellsInReactAppsImage
     },
     description: () => (
       <React.Fragment>
@@ -321,7 +323,9 @@ pages['/talks/'] = {
 }
 
 function talkPage (talkData) {
-  const description = talkData.meta && talkData.meta.description
+  const meta = talkData.meta || { }
+  const description = meta.description
+  const image = meta.image
   return {
     title: talkData.title,
     render: () => renderTalk(talkData),
@@ -331,6 +335,7 @@ function talkPage (talkData) {
         <meta property='og:title' content={talkData.title} />
         {!!description && <meta property='og:description' content={description} />}
         <meta property='og:url' content={`https://dt.in.th/talks/${talkData.id}/`} />
+        {!!image && <meta property='og:image' content={image} />}
       </React.Fragment>
     )
   }

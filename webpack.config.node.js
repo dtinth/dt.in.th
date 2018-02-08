@@ -6,6 +6,7 @@ module.exports = {
   mode: 'development',
   output: {
     path: path.join(__dirname, 'build'),
+    publicPath: '/',
     filename: 'node/main.js',
     library: 'dtinth',
     libraryTarget: 'commonjs2'
@@ -20,7 +21,8 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.m?js$/, exclude: [/node_modules/], use: ['babel-loader'] }
+      { test: /\.m?js$/, exclude: [/node_modules/], use: ['babel-loader'] },
+      { test: /\.jpg$/, use: [ { loader: 'file-loader', options: { name: 'assets/[hash].[ext]' } } ] }
     ]
   }
 }

@@ -5,6 +5,7 @@ module.exports = {
   mode: 'production',
   output: {
     path: path.join(__dirname, 'build'),
+    publicPath: '/',
     filename: 'browser/main.js'
   },
   module: {
