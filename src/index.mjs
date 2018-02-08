@@ -17,6 +17,7 @@ export const pages = Object.assign({
 const globalCss = `
 @font-face {
   font-family: Arimo SiteTitle;
+  font-weight: bold;
   src: url(${titleFont});
 }
 :root, html {
