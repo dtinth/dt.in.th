@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ActiveSectionProvider, Breadcrumb, Main, Wrapper, Heading, Intro, P, Footer, YouTube, SlideShare, Name } from './common'
-import { beat } from './styles'
+import { beat, fontSize, G3 } from './styles'
 import smellsInReactAppsImage from './talks/smells-in-react-apps.jpg'
 
 const data = [
@@ -345,6 +345,9 @@ function renderTalk (talkData) {
   const breadcrumb = [
     { text: 'Talks', href: '/talks/' }
   ]
+  const index = data.indexOf(talkData)
+  const newerTalk = data[index - 1]
+  const olderTalk = data[index + 1]
   return (
     <ActiveSectionProvider activeSection='talks'>
       <Main>
@@ -372,12 +375,59 @@ function renderTalk (talkData) {
         </P>
         <Wrapper>
           {!!talkData.links && talkData.links()}
+          <PreviousNext>
+            {!!olderTalk && (
+              <PreviousNext.Item older>
+                <PreviousNext.Link href={`/talks/${olderTalk.id}/`}>
+                  &laquo; older talk
+                  <PreviousNext.Title>{olderTalk.title}</PreviousNext.Title>
+                </PreviousNext.Link>
+              </PreviousNext.Item>
+            )}
+            {!!newerTalk && (
+              <PreviousNext.Item newer>
+                <PreviousNext.Link href={`/talks/${newerTalk.id}/`}>
+                  newer talk &raquo;
+                  <PreviousNext.Title>{newerTalk.title}</PreviousNext.Title>
+                </PreviousNext.Link>
+              </PreviousNext.Item>
+            )}
+          </PreviousNext>
           <Footer />
         </Wrapper>
       </Main>
     </ActiveSectionProvider>
   )
 }
+
+const PreviousNext = styled.ul`
+  padding: 0;
+  margin: ${beat(2)} 0 0;
+  list-style: none;
+  display: flex;
+`
+
+PreviousNext.Item = styled.li`
+  text-align: ${props => props.older ? 'left' : 'right'};
+  margin-left: ${props => props.newer ? 'auto' : '0'};
+  width: 32%;
+  @media (max-width: 719px) {
+    width: 48%;
+  }
+`
+
+PreviousNext.Link = styled.a`
+  display: block;
+  text-decoration: none;
+  line-height: ${beat(1)};
+`
+
+PreviousNext.Title = styled.span`
+  display: block;
+  color: #8b8685;
+  font-size: ${fontSize(G3)};
+  line-height: ${beat(0.75)};
+`
 
 function renderIndex () {
   return (
