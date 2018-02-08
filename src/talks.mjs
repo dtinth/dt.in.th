@@ -40,6 +40,33 @@ const data = [
   },
 
   {
+    id: 'code-mania-110',
+    title: 'Let’s Start Contributing to Open Source!',
+    date: '2017-11-25',
+    description: () => (
+      <React.Fragment>
+        <P>
+          A workshop to encourage people to start contributing to Open Source!
+        </P>
+        <P>
+          Presented at <a href='https://www.eventpop.me/e/2446'>Code Mania 110</a>.
+        </P>
+      </React.Fragment>
+    ),
+    speakerdeck: {
+      id: 'dfd8464f036645128c8dcb1d59f55419',
+      ratio: 1.33333333333333
+    },
+    links: () => (
+      <TalkLinks>
+        <li>
+          <a href='https://www.youtube.com/watch?v=XCdW7-kmxXg'>Workshop recording</a>
+        </li>
+      </TalkLinks>
+    )
+  },
+
+  {
     id: 'react-live-coding',
     title: 'React Bangkok 2.0.0: Live coding / mob programming session',
     date: '2017-06-03',
@@ -312,6 +339,16 @@ function renderTalk (talkData) {
         <P>
           {talkData.youtube ? (
             <YouTube id={talkData.youtube} />
+          ) : talkData.speakerdeck ? (
+            <Wrapper>
+              <script
+                async
+                className='speakerdeck-embed'
+                data-id={talkData.speakerdeck.id}
+                data-ratio={talkData.speakerdeck.ratio}
+                src='https://speakerdeck.com/assets/embed.js'
+              />
+            </Wrapper>
           ) : talkData.slideshare ? (
             <SlideShare id={talkData.slideshare} />
           ) : null}
