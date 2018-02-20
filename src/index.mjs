@@ -1,6 +1,7 @@
 import ReactDOMServer from 'react-dom/server'
 import { ServerStyleSheet } from 'styled-components'
 import home from './home'
+import music from './music'
 import titleFont from '!!url-loader!./arimo-bold-title-subset.woff2'
 import htmlMinifier from 'html-minifier'
 import cheerio from 'cheerio'
@@ -11,7 +12,7 @@ import talks from './talks'
 // List of all pages.
 export const pages = Object.assign({
   '/': home
-}, talks)
+}, talks, music)
 
 // The global CSS.
 const globalCss = `
