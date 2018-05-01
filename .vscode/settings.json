@@ -1,0 +1,6 @@
+{
+  // https://github.com/prettier/prettier-eslint/pull/173
+  "editor.formatOnSave": false,
+
+  "prettier.eslintIntegration": true
+}

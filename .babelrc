@@ -1,1 +1,9 @@
-{ "presets": [ [ "env", { "modules": false } ], "react" ] }
+{
+  "presets": [
+    [
+      "env",
+      { "modules": false, "exclude": ["babel-plugin-transform-regenerator"] }
+    ],
+    "react"
+  ]
+}

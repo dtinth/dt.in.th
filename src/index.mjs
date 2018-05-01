@@ -5,14 +5,19 @@ import music from './music'
 import titleFont from '!!url-loader!./arimo-bold-title-subset.woff2'
 import htmlMinifier from 'html-minifier'
 import cheerio from 'cheerio'
+import uncss from 'uncss'
 import talks from './talks'
 
 /* eslint import/no-webpack-loader-syntax: off */
 
 // List of all pages.
-export const pages = Object.assign({
-  '/': home
-}, talks, music)
+export const pages = Object.assign(
+  {
+    '/': home
+  },
+  talks,
+  music
+)
 
 // The global CSS.
 const globalCss = `
@@ -55,7 +60,7 @@ const googleAnalytics = `
 `
 
 // Renders a page to HTML.
-export function renderPageToHTML (page, clientAsset) {
+export async function renderPageToHTML (page, clientAsset) {
   const sheet = new ServerStyleSheet()
   const jsx = sheet.collectStyles(page.render())
   const html = ReactDOMServer.renderToStaticMarkup(jsx)
@@ -83,7 +88,16 @@ export function renderPageToHTML (page, clientAsset) {
     .map(x => x.children.map(c => c.data).join('\n'))
     .join('\n')
   $('style').remove()
-  $('head').append($('<style></style>').text(css))
+  const minifiedCss = await new Promise((resolve, reject) => {
+    const uncssOptions = {
+      raw: css
+    }
+    uncss($.html(), uncssOptions, (err, result) => {
+      if (err) return reject(err)
+      resolve(result)
+    })
+  })
+  $('head').append($('<style></style>').text(minifiedCss))
 
   return htmlMinifier.minify($.html(), {
     removeAttributeQuotes: true,
@@ -91,13 +105,14 @@ export function renderPageToHTML (page, clientAsset) {
   })
 }
 
-// Express request handler.
+// Express request handler
 export function handleRequest (req, res) {
   const page = pages[req.path]
   if (!page) {
     return 'Not found ^_^'
   }
-  return renderPageToHTML(page, (name) => {
-    return res.locals.isomorphic.compilation.clientStats.compilation.assets[name].source()
+  return renderPageToHTML(page, name => {
+    const compilation = res.locals.isomorphic.compilation
+    return compilation.clientStats.compilation.assets[name].source()
   })
 }
