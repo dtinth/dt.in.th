@@ -1,11 +1,8 @@
 import styled, { keyframes } from 'styled-components'
 import React from 'react'
-import ReactBroadcast from 'react-broadcast'
 import Chance from 'chance'
 import _ from 'lodash'
 import { fontSize, beat, C4, B4, E4 } from './styles'
-
-const { Broadcast, Subscriber } = ReactBroadcast
 
 export function Breadcrumb ({ items = [ ] }) {
   return (
@@ -107,9 +104,11 @@ export const Footer = styled(({ className }) => {
   margin: ${beat(3)} 0 ${beat(1)};
 `
 
+const activeSectionContext = React.createContext()
+
 export function Navigation ({ animated, homeLink, small }) {
   const item = (section, index, href, text) => (
-    <Subscriber channel='activeSection'>
+    <activeSectionContext.Consumer>
       {activeSection => (
         <LinkItem
           animated={animated}
@@ -121,7 +120,7 @@ export function Navigation ({ animated, homeLink, small }) {
           {text}
         </LinkItem>
       )}
-    </Subscriber>
+    </activeSectionContext.Consumer>
   )
   return (
     <Links>
@@ -138,9 +137,9 @@ export function Navigation ({ animated, homeLink, small }) {
 
 export function ActiveSectionProvider ({ children, activeSection }) {
   return (
-    <Broadcast channel='activeSection' value={activeSection}>
+    <activeSectionContext.Provider value={activeSection}>
       {children}
-    </Broadcast>
+    </activeSectionContext.Provider>
   )
 }
 
