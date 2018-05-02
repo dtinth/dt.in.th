@@ -1,5 +1,6 @@
 import ReactDOMServer from 'react-dom/server'
 import { ServerStyleSheet } from 'styled-components'
+import { createPrefetchContext } from './prefetch'
 import home from './home'
 import music from './music'
 import titleFont from '!!url-loader!./arimo-bold-title-subset.woff2'
@@ -62,7 +63,8 @@ const googleAnalytics = `
 // Renders a page to HTML.
 export async function renderPageToHTML (page, clientAsset) {
   const sheet = new ServerStyleSheet()
-  const jsx = sheet.collectStyles(page.render())
+  const prefetch = createPrefetchContext()
+  const jsx = prefetch.collectUrls(sheet.collectStyles(page.render()))
   const html = ReactDOMServer.renderToStaticMarkup(jsx)
   const result = [
     `<!DOCTYPE html>`,
@@ -74,6 +76,9 @@ export async function renderPageToHTML (page, clientAsset) {
     `<style>${globalCss}</style>`,
     sheet.getStyleTags(),
     googleAnalytics,
+    prefetch.getUrls().map(url => (
+      `<link rel="prefetch" href="${url}" />`
+    )).join('\n'),
     `</head>`,
     `<body>`,
     html,

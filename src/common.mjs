@@ -3,6 +3,7 @@ import React from 'react'
 import Chance from 'chance'
 import _ from 'lodash'
 import { fontSize, beat, C4, B4, E4 } from './styles'
+import { Prefetcher } from './prefetch.mjs'
 
 export function Breadcrumb ({ items = [ ] }) {
   return (
@@ -123,15 +124,17 @@ export function Navigation ({ animated, homeLink, small }) {
     </activeSectionContext.Consumer>
   )
   return (
-    <Links>
-      {homeLink && item('home', 0, '/', <SiteName>dt.in.th</SiteName>)}
-      {item('talks', 1, '/talks/', 'Talks')}
-      {item('music', 2, 'https://flicknote.spacet.me', 'Music')}
-      {item('github', 3, 'https://github.com/dtinth', 'GitHub')}
-      {item('twitter', 4, 'https://twitter.com/dtinth', 'Twitter')}
-      {item('medium', 5, 'https://medium.com/@dtinth', 'Medium')}
-      {item('blog', 6, 'https://me.dt.in.th', 'Blog')}
-    </Links>
+    <Prefetcher>{prefetch => (
+      <Links>
+        {homeLink && item('home', 0, prefetch('/'), <SiteName>dt.in.th</SiteName>)}
+        {item('talks', 1, prefetch('/talks/'), 'Talks')}
+        {item('music', 2, 'https://flicknote.spacet.me', 'Music')}
+        {item('github', 3, 'https://github.com/dtinth', 'GitHub')}
+        {item('twitter', 4, 'https://twitter.com/dtinth', 'Twitter')}
+        {item('medium', 5, 'https://medium.com/@dtinth', 'Medium')}
+        {item('blog', 6, 'https://me.dt.in.th', 'Blog')}
+      </Links>
+    )}</Prefetcher>
   )
 }
 

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { ActiveSectionProvider, Breadcrumb, Main, Wrapper, Heading, Intro, P, Footer, YouTube, SlideShare, Name } from './common'
 import { beat, fontSize, G3 } from './styles'
 import smellsInReactAppsImage from './talks/smells-in-react-apps.jpg'
+import { Prefetcher } from './prefetch.mjs'
 
 const data = [
   {
@@ -373,28 +374,30 @@ function renderTalk (talkData) {
             <SlideShare id={talkData.slideshare} />
           ) : null}
         </P>
-        <Wrapper>
-          {!!talkData.links && talkData.links()}
-          <PreviousNext>
-            {!!olderTalk && (
-              <PreviousNext.Item older>
-                <PreviousNext.Link href={`/talks/${olderTalk.id}/`}>
-                  &laquo; older talk
-                  <PreviousNext.Title>{olderTalk.title}</PreviousNext.Title>
-                </PreviousNext.Link>
-              </PreviousNext.Item>
-            )}
-            {!!newerTalk && (
-              <PreviousNext.Item newer>
-                <PreviousNext.Link href={`/talks/${newerTalk.id}/`}>
-                  newer talk &raquo;
-                  <PreviousNext.Title>{newerTalk.title}</PreviousNext.Title>
-                </PreviousNext.Link>
-              </PreviousNext.Item>
-            )}
-          </PreviousNext>
-          <Footer />
-        </Wrapper>
+        <Prefetcher>{prefetch => (
+          <Wrapper>
+            {!!talkData.links && talkData.links()}
+            <PreviousNext>
+              {!!olderTalk && (
+                <PreviousNext.Item older>
+                  <PreviousNext.Link href={prefetch(`/talks/${olderTalk.id}/`)}>
+                    &laquo; older talk
+                    <PreviousNext.Title>{olderTalk.title}</PreviousNext.Title>
+                  </PreviousNext.Link>
+                </PreviousNext.Item>
+              )}
+              {!!newerTalk && (
+                <PreviousNext.Item newer>
+                  <PreviousNext.Link href={prefetch(`/talks/${newerTalk.id}/`)}>
+                    newer talk &raquo;
+                    <PreviousNext.Title>{newerTalk.title}</PreviousNext.Title>
+                  </PreviousNext.Link>
+                </PreviousNext.Item>
+              )}
+            </PreviousNext>
+            <Footer />
+          </Wrapper>
+        )}</Prefetcher>
       </Main>
     </ActiveSectionProvider>
   )
@@ -436,13 +439,15 @@ function renderIndex () {
         <Wrapper>
           <Breadcrumb />
           <Heading>Talks</Heading>
-          <TalkLinks>
-            {data.map((talk, i) => (
-              <li key={i}>
-                {talk.date} <a href={`/talks/${talk.id}/`}>{talk.title}</a>
-              </li>
-            ))}
-          </TalkLinks>
+          <Prefetcher>{prefetch => (
+            <TalkLinks>
+              {data.map((talk, i) => (
+                <li key={i}>
+                  {talk.date} <a href={prefetch(`/talks/${talk.id}/`, { when: i < 3 })}>{talk.title}</a>
+                </li>
+              ))}
+            </TalkLinks>
+          )}</Prefetcher>
           <Footer />
         </Wrapper>
       </Main>
