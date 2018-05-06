@@ -11,3 +11,4 @@ export const F3 = 53
 export const Db3 = 49
 
 export const fontSize = n => `${(1 / Math.pow(2, (n - 60) / 12)).toFixed(3)}rem`
+export const relativeFontSize = n => `${(1 / Math.pow(2, n / 12)).toFixed(3)}em`
