@@ -76,9 +76,10 @@ export async function renderPageToHTML (page, clientAsset) {
     `<style>${globalCss}</style>`,
     sheet.getStyleTags(),
     googleAnalytics,
-    prefetch.getUrls().map(url => (
-      `<link rel="prefetch" href="${url}" />`
-    )).join('\n'),
+    prefetch
+      .getUrls()
+      .map(url => `<link rel="prefetch" href="${url}" />`)
+      .join('\n'),
     `</head>`,
     `<body>`,
     html,

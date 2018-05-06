@@ -1,4 +1,17 @@
-import { ActiveSectionProvider, Footer, FadeIn, Main, Navigation, Wrapper, Perspective, AnimatedCharacter, Heading, Intro, SiteTitle, SiteTitleContainer, Name } from './common'
+import {
+  ActiveSectionProvider,
+  Footer,
+  FadeIn,
+  Main,
+  Wrapper,
+  Perspective,
+  AnimatedCharacter,
+  Heading,
+  Intro,
+  SiteTitle,
+  SiteTitleContainer,
+  Name
+} from './common'
 import React from 'react'
 
 export const ENABLED = process.env.NODE_ENV !== 'production'
@@ -125,25 +138,29 @@ function renderHome () {
       <Perspective>
         <SiteTitleContainer>
           <SiteTitle>
-            {'flicknote'.split('').map((ch, i) => (
-              ch === ' '
-                ? <span>{' '}</span>
-                : <AnimatedCharacter key={i} seed={i} delay={i * 0.03}>{ch}</AnimatedCharacter>
-            ))}
+            {'flicknote'.split('').map(
+              (ch, i) =>
+                ch === ' ' ? (
+                  <span />
+                ) : (
+                  <AnimatedCharacter key={i} seed={i} delay={i * 0.03}>
+                    {ch}
+                  </AnimatedCharacter>
+                )
+            )}
           </SiteTitle>
         </SiteTitleContainer>
         <Main>
           <FadeIn>
             <Wrapper>
               <Intro>
-                Hi! I’m <Name>Thai Pangsakulyanont</Name>.
-                I am an amateur composer, producer, and iPad-drummer. Here’s a selection of my song projects and collaborations!
-                I also <a href='/'>build software</a>.
+                Hi! I’m <Name>Thai Pangsakulyanont</Name>. I am an amateur
+                composer, producer, and iPad-drummer. Here’s a selection of my
+                song projects and collaborations! I also{' '}
+                <a href='/'>build software</a>.
               </Intro>
-
               <Heading>Tracklist</Heading>
               ...
-
               <Footer />
             </Wrapper>
           </FadeIn>
@@ -153,4 +170,4 @@ function renderHome () {
   )
 }
 
-export default ENABLED ? pages : { }
+export default (ENABLED ? pages : {})

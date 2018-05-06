@@ -2,16 +2,12 @@ import React from 'react'
 const context = React.createContext()
 
 export function Prefetcher ({ children }) {
-  return (
-    <context.Consumer>
-      {prefetch => children(prefetch)}
-    </context.Consumer>
-  )
+  return <context.Consumer>{prefetch => children(prefetch)}</context.Consumer>
 }
 
 export function createPrefetchContext () {
   const urls = new Set()
-  const prefetch = (url, { when: active = true } = { }) => {
+  const prefetch = (url, { when: active = true } = {}) => {
     if (active) {
       urls.add(url)
     }
@@ -19,14 +15,10 @@ export function createPrefetchContext () {
   }
   return {
     collectUrls (element) {
-      return (
-        <context.Provider value={prefetch}>
-          {element}
-        </context.Provider>
-      )
+      return <context.Provider value={prefetch}>{element}</context.Provider>
     },
     getUrls () {
-      return [ ...urls ]
+      return [...urls]
     }
   }
 }

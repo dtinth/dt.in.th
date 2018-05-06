@@ -5,10 +5,13 @@ import _ from 'lodash'
 import { fontSize, beat, C4, B4, E4 } from './styles'
 import { Prefetcher } from './prefetch.mjs'
 
-export function Breadcrumb ({ items = [ ] }) {
+export function Breadcrumb ({ items = [] }) {
   return (
     <BreadcrumbContainer>
-      <a href='https://dt.in.th/'><SiteName>dt.in.th</SiteName></a> &raquo;
+      <a href='https://dt.in.th/'>
+        <SiteName>dt.in.th</SiteName>
+      </a>{' '}
+      &raquo;
       {items.map((item, i) => (
         <React.Fragment key={i}>
           {' '}
@@ -28,7 +31,7 @@ const BreadcrumbContainer = styled.div`
 `
 
 export const Heading = styled.h1`
-  color: #D7FC70;
+  color: #d7fc70;
   margin: ${beat(1.5)} 0 0;
   font-size: ${fontSize(B4)};
   line-height: ${beat(1.5)};
@@ -59,7 +62,7 @@ export const Perspective = styled.div`
   overflow: hidden;
 `
 
-const getAnimation = _.memoize((i) => {
+const getAnimation = _.memoize(i => {
   const c = new Chance(i)
   const x0 = c.floating({ min: -20, max: 20 })
   const y0 = c.floating({ min: -20, max: 20 })
@@ -68,9 +71,13 @@ const getAnimation = _.memoize((i) => {
   const yr = c.floating({ min: -20, max: 20 })
   const zr = c.floating({ min: -20, max: 20 })
   const keyframe = i => {
-    const v = Math.pow(1 - (i / 8), 3)
+    const v = Math.pow(1 - i / 8, 3)
     const o = Math.pow(i / 8, 0.5)
-    const f = x => x.toFixed(3).replace(/(\..*?)0*$/, '$1').replace(/\.$/, '')
+    const f = x =>
+      x
+        .toFixed(3)
+        .replace(/(\..*?)0*$/, '$1')
+        .replace(/\.$/, '')
     return `
       ${i * 100 / 8}% {
         transform:
@@ -81,13 +88,17 @@ const getAnimation = _.memoize((i) => {
     `
   }
   return keyframes`
-    ${Array(9).fill().map((_, i) => i).map(keyframe).join('')}
+    ${Array(9)
+    .fill()
+    .map((_, i) => i)
+    .map(keyframe)
+    .join('')}
   `
 })
 
-export const AnimatedCharacter = styled(
-  ({ className, children }) => <span className={className}>{children}</span>
-)`
+export const AnimatedCharacter = styled(({ className, children }) => (
+  <span className={className}>{children}</span>
+))`
   display: inline-block;
   position: relative;
   animation: 1s ${props => getAnimation(props.seed)} linear;
@@ -124,17 +135,20 @@ export function Navigation ({ animated, homeLink, small }) {
     </activeSectionContext.Consumer>
   )
   return (
-    <Prefetcher>{prefetch => (
-      <Links>
-        {homeLink && item('home', 0, prefetch('/'), <SiteName>dt.in.th</SiteName>)}
-        {item('talks', 1, prefetch('/talks/'), 'Talks')}
-        {item('music', 2, 'https://flicknote.spacet.me', 'Music')}
-        {item('github', 3, 'https://github.com/dtinth', 'GitHub')}
-        {item('twitter', 4, 'https://twitter.com/dtinth', 'Twitter')}
-        {item('medium', 5, 'https://medium.com/@dtinth', 'Medium')}
-        {item('blog', 6, 'https://me.dt.in.th', 'Blog')}
-      </Links>
-    )}</Prefetcher>
+    <Prefetcher>
+      {prefetch => (
+        <Links>
+          {homeLink &&
+            item('home', 0, prefetch('/'), <SiteName>dt.in.th</SiteName>)}
+          {item('talks', 1, prefetch('/talks/'), 'Talks')}
+          {item('music', 2, 'https://flicknote.spacet.me', 'Music')}
+          {item('github', 3, 'https://github.com/dtinth', 'GitHub')}
+          {item('twitter', 4, 'https://twitter.com/dtinth', 'Twitter')}
+          {item('medium', 5, 'https://medium.com/@dtinth', 'Medium')}
+          {item('blog', 6, 'https://me.dt.in.th', 'Blog')}
+        </Links>
+      )}
+    </Prefetcher>
   )
 }
 
@@ -146,7 +160,9 @@ export function ActiveSectionProvider ({ children, activeSection }) {
   )
 }
 
-const SiteName = styled.strong`color: #8b8685;`
+const SiteName = styled.strong`
+  color: #8b8685;
+`
 
 const Links = styled.ul`
   display: flex;
@@ -157,9 +173,14 @@ const Links = styled.ul`
 `
 
 function LinkItem ({ animated, active, small, index, children, href }) {
-  const wrapWithAnimation = x => animated
-    ? <AnimatedCharacter delay={index * 0.07 + 0.3} seed={index + 99}>{x}</AnimatedCharacter>
-    : x
+  const wrapWithAnimation = x =>
+    animated ? (
+      <AnimatedCharacter delay={index * 0.07 + 0.3} seed={index + 99}>
+        {x}
+      </AnimatedCharacter>
+    ) : (
+      x
+    )
   return (
     <LinkListItem small={small} active={active}>
       {wrapWithAnimation(<a href={href}>{children}</a>)}
@@ -168,8 +189,9 @@ function LinkItem ({ animated, active, small, index, children, href }) {
 }
 
 const LinkListItem = styled.li`
-  margin: ${props => props.small ? `${beat(0.25)} ${beat(0.5)}` : `${beat(0.5)} ${beat(0.67)}`};
-  font-weight: ${props => props.active ? '700' : '400'};
+  margin: ${props =>
+    props.small ? `${beat(0.25)} ${beat(0.5)}` : `${beat(0.5)} ${beat(0.67)}`};
+  font-weight: ${props => (props.active ? '700' : '400')};
   font-size: ${props => fontSize(props.small ? C4 : E4)};
   a {
     color: #ffb;
@@ -209,7 +231,9 @@ export function SlideShare ({ id }) {
         width='720'
         height='587'
         className='youtube'
-        src={'https://www.slideshare.net/slideshow/embed_code/key/' + id + '?rel=0'}
+        src={
+          'https://www.slideshare.net/slideshow/embed_code/key/' + id + '?rel=0'
+        }
         frameBorder='0'
         allowFullScreen
       />
@@ -246,9 +270,15 @@ export const SiteTitle = styled.h1`
   margin: 0 0 ${beat(1)};
   font-size: 64px;
   font-family: Arimo SiteTitle, Helvetica, sans-serif;
-  @media (min-width: 360px) { font-size: 96px; }
-  @media (min-width: 480px) { font-size: 128px; }
-  @media (min-width: 720px) { font-size: 192px; }
+  @media (min-width: 360px) {
+    font-size: 96px;
+  }
+  @media (min-width: 480px) {
+    font-size: 128px;
+  }
+  @media (min-width: 720px) {
+    font-size: 192px;
+  }
 `
 
 export const SiteTitleContainer = styled.div`
