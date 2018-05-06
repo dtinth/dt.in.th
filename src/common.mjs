@@ -141,7 +141,7 @@ export function Navigation ({ animated, homeLink, small }) {
           {homeLink &&
             item('home', 0, prefetch('/'), <SiteName>dt.in.th</SiteName>)}
           {item('talks', 1, prefetch('/talks/'), 'Talks')}
-          {item('music', 2, 'https://flicknote.spacet.me', 'Music')}
+          {item('music', 2, prefetch('/music/'), 'Music')}
           {item('github', 3, 'https://github.com/dtinth', 'GitHub')}
           {item('twitter', 4, 'https://twitter.com/dtinth', 'Twitter')}
           {item('medium', 5, 'https://medium.com/@dtinth', 'Medium')}
