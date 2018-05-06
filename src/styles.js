@@ -2,12 +2,12 @@
 export const beat = n => `${n * 27}px`
 
 // MIDI Notes for implementing a typography scale based on a musical scale!
-export const G3 = 55
-export const A3 = 57
+export const F4 = 65
+export const Eb4 = 63
 export const C4 = 60
-export const D4 = 62
-export const E4 = 64
-export const G4 = 67
-export const B4 = 71
+export const Bb3 = 58
+export const Ab3 = 56
+export const F3 = 53
+export const Db3 = 49
 
-export const fontSize = n => `${Math.pow(2, (n - 60) / 12).toFixed(3)}rem`
+export const fontSize = n => `${(1 / Math.pow(2, (n - 60) / 12)).toFixed(3)}rem`

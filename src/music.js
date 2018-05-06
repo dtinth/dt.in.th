@@ -18,7 +18,7 @@ import {
 import { Prefetcher } from './prefetch'
 import styled from 'styled-components'
 import React from 'react'
-import { beat, fontSize, G3, A3, D4 } from './styles'
+import { beat, fontSize, F4, Eb4, Bb3 } from './styles'
 
 export const ENABLED = true // process.env.NODE_ENV !== 'production'
 
@@ -234,7 +234,7 @@ const TracklistItem = styled(({ className, song }) => (
   line-height: ${beat(1)};
   > .genre {
     color: #8b8685;
-    font-size: ${fontSize(G3)};
+    font-size: ${fontSize(F4)};
     display: block;
   }
   > .title {
@@ -242,7 +242,7 @@ const TracklistItem = styled(({ className, song }) => (
     display: block;
   }
   > .artist {
-    font-size: ${fontSize(G3)};
+    font-size: ${fontSize(F4)};
     display: block;
   }
   > br {
@@ -318,16 +318,16 @@ const SongHeading = styled(({ className, song }) => (
   > .genre {
     color: #8b8685;
     display: block;
-    font-size: ${fontSize(A3)};
+    font-size: ${fontSize(Eb4)};
   }
   > .title {
     color: #bef;
     display: block;
-    font-size: ${fontSize(D4)};
+    font-size: ${fontSize(Bb3)};
   }
   > .artist {
     display: block;
-    font-size: ${fontSize(A3)};
+    font-size: ${fontSize(Eb4)};
   }
   > br {
     display: none;

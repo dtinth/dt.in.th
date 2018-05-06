@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components'
 import React from 'react'
 import Chance from 'chance'
 import _ from 'lodash'
-import { fontSize, beat, C4, B4, E4, G3 } from './styles'
+import { fontSize, beat, C4, Db3, Ab3, F4 } from './styles'
 import { Prefetcher } from './prefetch'
 
 export function Breadcrumb ({ items = [] }) {
@@ -33,7 +33,7 @@ const BreadcrumbContainer = styled.div`
 export const Heading = styled.h1`
   color: #d7fc70;
   margin: ${beat(1.5)} 0 0;
-  font-size: ${fontSize(B4)};
+  font-size: ${fontSize(Db3)};
   line-height: ${beat(1.5)};
   ${BreadcrumbContainer} + & {
     margin-top: 0;
@@ -51,7 +51,7 @@ export const Name = styled.strong`
 
 export const Intro = styled.p`
   margin: ${beat(1)} 0;
-  font-size: ${fontSize(E4)};
+  font-size: ${fontSize(Ab3)};
   line-height: ${beat(1.25)};
 `
 
@@ -192,7 +192,7 @@ const LinkListItem = styled.li`
   margin: ${props =>
     props.small ? `${beat(0.25)} ${beat(0.5)}` : `${beat(0.5)} ${beat(0.67)}`};
   font-weight: ${props => (props.active ? '700' : '400')};
-  font-size: ${props => fontSize(props.small ? C4 : E4)};
+  font-size: ${props => fontSize(props.small ? C4 : Ab3)};
   a {
     color: #ffb;
     text-decoration: none;
@@ -322,6 +322,6 @@ PreviousNext.Link = styled.a`
 PreviousNext.Title = styled.span`
   display: block;
   color: #8b8685;
-  font-size: ${fontSize(G3)};
+  font-size: ${fontSize(F4)};
   line-height: ${beat(0.75)};
 `
