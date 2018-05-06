@@ -8,7 +8,7 @@ import { Prefetcher } from './prefetch.mjs'
 export function Breadcrumb ({ items = [] }) {
   return (
     <BreadcrumbContainer>
-      <a href='https://dt.in.th/'>
+      <a href='/'>
         <SiteName>dt.in.th</SiteName>
       </a>{' '}
       &raquo;
