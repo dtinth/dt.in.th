@@ -3,7 +3,7 @@ import React from 'react'
 import Chance from 'chance'
 import _ from 'lodash'
 import { fontSize, beat, C4, B4, E4, G3 } from './styles'
-import { Prefetcher } from './prefetch.mjs'
+import { Prefetcher } from './prefetch'
 
 export function Breadcrumb ({ items = [] }) {
   return (

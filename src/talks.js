@@ -16,7 +16,7 @@ import {
 } from './common'
 import { beat } from './styles'
 import smellsInReactAppsImage from './talks/smells-in-react-apps.jpg'
-import { Prefetcher } from './prefetch.mjs'
+import { Prefetcher } from './prefetch'
 
 const data = [
   {

@@ -4,6 +4,6 @@
     "target": "es2016",
     "jsx": "preserve"
   },
-  "include": ["src/**/*.mjs"],
+  "include": ["src/**/*.js"],
   "exclude": ["node_modules", "**/node_modules/*"]
 }
