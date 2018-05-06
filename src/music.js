@@ -19,138 +19,12 @@ import { Prefetcher } from './prefetch'
 import styled from 'styled-components'
 import React from 'react'
 import { beat, fontSize, F4, Eb4, Bb3, relativeFontSize } from './styles'
+import data from './music.yml'
+import HtmlToReact from 'html-to-react'
+import MarkdownIt from 'markdown-it'
 
 export const ENABLED = true // process.env.NODE_ENV !== 'production'
-
-export const songs = [
-  {
-    id: '422',
-    title: '422',
-    artist: 'flicknote · vocals by MindaRyn',
-    type: 'original',
-    genre: '0xF09F8EB9',
-    youtube: 'gGIVlAwr-m8',
-    date: '2017-07-16'
-  },
-  {
-    id: 'butter-fly-cover-collab',
-    title: 'Butter-Fly (Digimon Tri Ver.) (Cover)',
-    artist: 'original by Wada Kouji · cover by MindaRyn',
-    type: 'collab',
-    genre: 'ANIME SONG COLLABORATION',
-    youtube: 'CHarkZrQH34',
-    date: '2017-01-20'
-  },
-  {
-    id: 'everyday-evermore',
-    title: 'Everyday evermore',
-    artist: 'flicknote vs Dekdekbaloo feat. MindaRyn',
-    type: 'original',
-    genre: 'HOPEFUL LOVE SONG',
-    youtube: 'KEqiqYXuaj8',
-    date: '2016-09-23'
-  },
-  {
-    id: 'bursting-music-star',
-    title: 'bursting☆music☆star',
-    artist: 'flicknote · video by 5argon',
-    type: 'original',
-    genre: 'MOR LAM SING STYLE',
-    youtube: 'KEqiqYXuaj8',
-    date: '2016-09-23'
-  },
-  {
-    id: 'over-whelming-joy',
-    title: 'OVER-WHELMING JOY',
-    artist: 'flicknote',
-    type: 'original',
-    genre: 'SPEED CARNIVAL',
-    youtube: '0eRTa2NQ4r0',
-    date: '2016-07-03'
-  },
-  {
-    id: 'running-out-2015',
-    title: 'Running Out 2015',
-    artist: 'flicknote · video by 5argon',
-    type: 'original',
-    genre: 'FRANTIC',
-    youtube: 'X6y2m09V4Hw',
-    date: '2016-07-03'
-  },
-  {
-    id: 'only-love-remix',
-    title: 'Only Love (Euphoric Trance Remix)',
-    artist: 'Shannon Hurley remixed by flicknote',
-    type: 'remix',
-    genre: 'EUPHORIC TRANCE',
-    youtube: 'KUoi1Hp-bzM',
-    date: '2015-08-16'
-  },
-  {
-    id: 'by-my-side-ambient-house-mix',
-    title: 'BY☆MY☆SIDE (Ambient House Mix)',
-    artist: 'flicknote',
-    type: 'original',
-    genre: 'AMBIENT HOUSE',
-    soundcloud: '207325787',
-    date: '2015-05-27'
-  },
-  {
-    id: 'auto-synchro',
-    title: 'AUTO±SYNCHRO',
-    artist: 'flicknote',
-    type: 'original',
-    genre: 'HARDSTYLE',
-    soundcloud: '186916227',
-    date: '2015-01-20'
-  },
-  {
-    id: 'reminiscentia',
-    title: 'Reminiscentia',
-    artist: 'flicknote',
-    type: 'original',
-    genre: 'DRAMATIC TRANCE',
-    soundcloud: '171200575',
-    date: '2014-10-08'
-  },
-  {
-    id: 'by-my-side',
-    title: 'BY☆MY☆SIDE',
-    artist: 'flicknote',
-    type: 'original',
-    genre: 'TRANCE CORE',
-    soundcloud: '126044912',
-    date: '2013-12-23'
-  },
-  {
-    id: 'sawasdee-new-year',
-    title: 'Sawasdee New Year',
-    artist: 'flicknote',
-    type: 'remix',
-    genre: 'CYBER QUICK WALTZ',
-    soundcloud: '73064541',
-    date: '2012-12-31'
-  },
-  {
-    id: 'dont-wake-me-up-re-remix',
-    title: 'Don’t Wake Me Up (iaht’s Re-Remix)',
-    artist: 'original by Addict Animal vs Surafux · remixed by iaht',
-    type: 'remix',
-    genre: 'MELODIC TRANCE',
-    soundcloud: '55936013',
-    date: '2012-08-11'
-  },
-  {
-    id: 'opaque-space',
-    title: 'Opaque Space',
-    artist: 'iaht',
-    type: 'original',
-    genre: 'HARDCORE',
-    soundcloud: '182770407',
-    date: '2010-09-10'
-  }
-]
-
+const songs = data.songs
 const pages = {
   '/music/': {
     title: 'flicknote',
@@ -246,7 +120,7 @@ const TracklistItem = styled(({ className, song }) => (
   background: #252423;
   padding: ${beat(0.5)};
   border: 1px solid #656463;
-  box-shadow: 2px 2px 0 #090807;
+  box-shadow: 2px 2px 0 #151413;
   line-height: ${beat(1)};
   > .genre {
     color: #8b8685;
@@ -286,6 +160,11 @@ function renderSongPage (song) {
         ) : song.soundcloud ? (
           <SoundCloud id={song.soundcloud} />
         ) : null}
+        {!!song.description && (
+          <Wrapper>
+            <SongDescription text={song.description} />
+          </Wrapper>
+        )}
         <Prefetcher>
           {prefetch => (
             <Wrapper>
@@ -354,7 +233,6 @@ const SongHeading = styled(({ className, song }) => (
     display: none;
   }
 `
-
 const SongNavigation = styled(({ className, children, older, newer }) => (
   <div className={className}>
     <div className='current'>{children}</div>
@@ -398,6 +276,46 @@ const SongNavigation = styled(({ className, children, older, newer }) => (
         pointer-events: none;
       }
     }
+  }
+`
+
+const md = MarkdownIt({
+  linkify: true
+})
+const SongDescription = styled(({ className, text }) => {
+  const html = md.render(text)
+  const parser = new HtmlToReact.Parser()
+  const element = parser.parse(html)
+  return <div className={className}>{element}</div>
+})`
+  margin-top: ${beat(1)};
+  pre,
+  code {
+    font: inherit;
+  }
+  p,
+  h1,
+  h2,
+  pre,
+  blockquote {
+    &:first-child {
+      margin: 0;
+    }
+    &:not(:first-child) {
+      margin: ${beat(1)} 0 0;
+    }
+  }
+  blockquote {
+    background: #090807;
+    border: 1px solid #656463;
+    margin: ${beat(1)} 0 0;
+    box-shadow: 2px 2px 0 #151413;
+    padding: ${beat(0.5)};
+  }
+  hr {
+    border: 0;
+    border-top: 2px solid #454443;
+    margin: ${beat(1)} 0;
   }
 `
 

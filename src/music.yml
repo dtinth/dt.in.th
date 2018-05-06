@@ -1,0 +1,282 @@
+songs:
+  - id: '422'
+    title: '422'
+    artist: flicknote · vocals by MindaRyn
+    type: original
+    genre: '0xF09F8EB9'
+    youtube: gGIVlAwr-m8
+    date: '2017-07-16'
+    description: |
+      This song is a [submission](https://bmssearch.net/venue/detail?event=3&id=42) to the [BMS衆議院選](https://qstol.info/events/BMS_Shuin/) event.
+
+      ## Submission text
+
+      > Hello! \
+      > This is flicknote. \
+      > There were times when I feel something, but I don’t know what to do about it. \
+      > I made some music instead.
+      >
+      > I put in several key modulations in the song to give it a bit of chaotic feeling. \
+      > I also added a vocal track to help better convey the message in this song.
+      >
+      > For the vocals, I asked MindaRyn to help sing the vocals. \
+      > I made some parts of the vocals very low-pitched to give the feeling of self-reflection. \
+      > With the lowest note below the contralto range, I was a bit worried if she could sing it or not. \
+      > It turns out that she could sing it well. I was very impressed. \
+      > She also sang in another song of mine, [“Everyday evermore”](/music/everyday-evermore/). \
+      > Please check out [her channel](https://www.youtube.com/channel/UCI3GAvwaZwf1abbeREza8eA) for more of her vocal performances.
+      >
+      > Before I finish producing this song, I got affected by RSI (反復運動過多損傷). \
+      > It caused pain in my hands. \
+      > Because of that, I could not create all the note charts for this song. \
+      > I asked [Dolphin](https://soundcloud.com/Dolphin) to help me design the note charts. \
+      > He helped create the NORMAL (4), HYPER (9) and ANOTHER (12) charts. \
+      > I made few minor adjustments afterwards. \
+      > I also created a PIANO (11) chart which only contains the piano notes. \
+      > With RSI, creating BMS is very exhausting. \
+      > I hope I will get well soon.
+      >
+      > For the BGA, the visualization was generated procedurally using JavaScript code to process data from MIDI file. \
+      > I experimented by assigning a different color to each pitch class. \
+      > This allows you to also “see” the music in addition to hearing it.
+      >
+      > I hope that you will enjoy this song! \
+      > flicknote \
+      > https://flicknote.spacet.me/ \
+      > @bemusegame
+  - id: butter-fly-cover-collab
+    title: Butter-Fly (Digimon Tri Ver.) (Cover)
+    artist: original by Wada Kouji · cover by MindaRyn
+    type: collab
+    genre: ANIME SONG COLLABORATION
+    youtube: CHarkZrQH34
+    date: '2017-01-20'
+    description: |
+      In this anime song collaboration project,
+      I performed drums using my own [web-based MIDI instruments](https://github.com/dtinth/midi-instruments).
+      Big thanks to [MindaRyn](https://www.youtube.com/channel/UCI3GAvwaZwf1abbeREza8eA) for inviting me to do a collab!
+  - id: everyday-evermore
+    title: Everyday evermore
+    artist: flicknote vs Dekdekbaloo feat. MindaRyn
+    type: original
+    genre: HOPEFUL LOVE SONG
+    youtube: KEqiqYXuaj8
+    date: '2016-09-23'
+    description: |
+      This song is a [submission](http://manbow.nothing.sh/event/event.cgi?action=More_def&num=170&event=110) to the [BOFU2016 - Legendary Again -](http://bmsoffighters.net/bofu2016/) event.
+
+      ## Submission text
+
+      > 作曲： flicknote \
+      > 作詞： Dekdekbaloo vs flicknote \
+      > 歌： MindaRyn \
+      > ギター： Dekdekbaloo \
+      > 和訳： suitougreentea
+      >
+      > This year I wanted to make a song outside of my normal style. \
+      > So, this year, I wanted to try making a pop-rock song, a love song.
+      >
+      > Making this kind of song is not easy for me, given my personality. \
+      > I have never written any song with lyrics. \
+      > Let alone a love letter, or even a birthday card. \
+      > But I want to try anyway.
+      >
+      > I could write only just a small verse. \
+      > After that, I don’t know what to write anymore.
+      >
+      > I asked my musician friend ([Dekdekbaloo](https://github.com/dekdekbaloo)) to help me complete the lyrics. \
+      > He also performed the guitar. \
+      > I’m amazed that he can play along with such a fast song.
+      >
+      > [MindaRyn](https://www.youtube.com/channel/UCI3GAvwaZwf1abbeREza8eA) provided the vocals. \
+      > Such a powerful vocal performance!
+      >
+      > [@suitougreentea](https://twitter.com/suitougreentea) also helped translate the song lyrics into Japanese. \
+      > I hope to make a longer version with Japanese vocals.
+      >
+      > I appreciate everyone’s help in this project.
+      >
+      > This song is based on piano and has intense drums. \
+      > Therefore, I have also included the [PIANO] and [DRUMS] charts. \
+      > I hope you will enjoy this song and its notecharts.
+      >
+      > p.s. \
+      > I also made [another song](/music/bursting-music-star/) in team “隊.” \
+      > In that song, I try to imitate a popular music style in northeastern Thailand. \
+      > I hope to convey the feeling of Thai-style music. \
+      > Please check it out, and I hope you also enjoy that!
+      >
+      > flicknote (@bemusegame) \
+      > https://bemuse.ninja/
+      >
+      > ---
+      >
+      > You can follow and see more of MindaRyn’s work here:
+      >
+      > FB: Natcha Pongsupanee \
+      > IG: mijung_devil \
+      > YT: https://www.youtube.com/channel/UCI3GAvwaZwf1abbeREza8eA
+      >
+      > ---
+      >
+      > This is the first song that I recorded with an electric guitar. \
+      > I usually play acoustic guitar and sing pop songs.
+      >
+      > Collaborating with this project reminded me of the time \
+      > when I was so much into music games such as DJ MAX, O2Jam, Osu etc. \
+      > I am not that good at playing these games but I love music \
+      > and many songs in the games are so well produced. \
+      > I got goosebumps whenever I listen to one of these songs. \
+      > I almost forgot that I really wanted to compose songs for music games at least once. \
+      > This brings back good old memories.
+      >
+      > After listening to the song \
+      > I've already felt the notes moving around on the game screen. \
+      > The main idea is to make the notes sound fun to play. \
+      > I slowly went through each section \
+      > and put notes on each along with these crazy chord progressions we have.
+      >
+      > For the lyrics, \
+      > I added the melody notes first and think up of a way to tell a love story. \
+      > This is not a happy ending song nor a sad dramatic love story. \
+      > I want listeners to feel about the time when you fell in love \
+      > and you were really happy just by thinking of someone. \
+      > So, combined with main theme of the chorus part, \
+      > I created a back story which clarifies and connect all of the parts together \
+      > leading to a wonderful ending.
+      >
+      > Make sure you listen to all parts in this masterpiece bits by bits. \
+      > It shows you the blend of each unique artists' style which deliver to you awesomeness!
+      >
+      > I also wrote several songs and published with a record label "Garden Music" in Thailand. \
+      > Please kindly check them out! \
+      > https://youtu.be/M5NLoBCeMwo \
+      > https://youtu.be/RCWUWdhKOUQ \
+      > https://youtu.be/4Mr39PxfasE
+      >
+      > Dekdekbaloo
+      >
+      > ---
+      >
+      > (英語詩からの)日本語訳を担当させていただきました。 \
+      > 初めての試みでしたが、"歌える"訳にするのってとても難しいですね。 \
+      > 拙い訳ですが、温かい目で見て頂けたら幸いです。 \
+      > ついでに、私の作品「[Piece of Mine](http://manbow.nothing.sh/event/event.cgi?action=More_def&num=302&event=110)」もよろしくお願いします。
+      >
+      > @suitougreentea
+  - id: bursting-music-star
+    title: bursting☆music☆star
+    artist: flicknote · video by 5argon
+    type: original
+    genre: MOR LAM SING STYLE
+    youtube: PCRrr2kqvV8
+    date: '2016-09-23'
+    description: |
+      This song is a [submission](http://manbow.nothing.sh/event/event.cgi?action=More_def&num=247&event=110) to the [BOFU2016 - Legendary Again -](http://bmsoffighters.net/bofu2016/) event.
+
+      ## Submission text
+
+      > This year I wanted to make a song outside of my normal style.
+      >
+      > “Mor lam sing” is a modern music genre in the northeastern Thailand. \
+      > It is based on an Isan/Lao music genre, “Mor lam,” or literally, “expert singer.” \
+      > The word “sing” comes from “racing,” which refers to the fast tempo. \
+      > It is a very popular genre in Thailand.
+      >
+      > Although I don’t usually listen to this music style, I hear them everywhere. \
+      > In television. In taxis. In restaurants. In festivals. In concerts. \
+      > They are just everywhere.
+      >
+      > I hear them so often that I thought, \
+      > “I wanna try compose a song with this style of music, \
+      > even when I don’t listen to them!”
+      >
+      > However, \
+      > I don’t know anyone who could sing in this genre, \
+      > so I can only make an instrumental version.
+      >
+      > I also remember… \
+      > Last year, I got some comments during a BMS event. \
+      > They said they’d like to hear some Thai-style music. \
+      > That is also the inspiration for creating this song. \
+      > So here it is.
+      >
+      > I hope you enjoy this song.
+      >
+      > p.s. \
+      > I also made [another song](/music/everyday-evermore/) in “TEAM-BMSON.” \
+      > It is a love song with vocals and lyrics in Thai. \
+      > Please check it out, I hope you also enjoy that!
+      >
+      > --flicknote (@bemusegame) \
+      > https://bemuse.ninja/
+  - id: over-whelming-joy
+    title: OVER-WHELMING JOY
+    artist: flicknote
+    type: original
+    genre: SPEED CARNIVAL
+    youtube: 0eRTa2NQ4r0
+    date: '2016-07-03'
+  - id: running-out-2015
+    title: Running Out 2015
+    artist: flicknote · video by 5argon
+    type: original
+    genre: FRANTIC
+    youtube: X6y2m09V4Hw
+    date: '2016-07-03'
+  - id: only-love-remix
+    title: Only Love (Euphoric Trance Remix)
+    artist: Shannon Hurley remixed by flicknote
+    type: remix
+    genre: EUPHORIC TRANCE
+    youtube: KUoi1Hp-bzM
+    date: '2015-08-16'
+  - id: by-my-side-ambient-house-mix
+    title: BY☆MY☆SIDE (Ambient House Mix)
+    artist: flicknote
+    type: original
+    genre: AMBIENT HOUSE
+    soundcloud: '207325787'
+    date: '2015-05-27'
+  - id: auto-synchro
+    title: AUTO±SYNCHRO
+    artist: flicknote
+    type: original
+    genre: HARDSTYLE
+    soundcloud: '186916227'
+    date: '2015-01-20'
+  - id: reminiscentia
+    title: Reminiscentia
+    artist: flicknote
+    type: original
+    genre: DRAMATIC TRANCE
+    soundcloud: '171200575'
+    date: '2014-10-08'
+  - id: by-my-side
+    title: BY☆MY☆SIDE
+    artist: flicknote
+    type: original
+    genre: TRANCE CORE
+    soundcloud: '126044912'
+    date: '2013-12-23'
+  - id: sawasdee-new-year
+    title: Sawasdee New Year
+    artist: flicknote
+    type: remix
+    genre: CYBER QUICK WALTZ
+    soundcloud: '73064541'
+    date: '2012-12-31'
+  - id: dont-wake-me-up-re-remix
+    title: Don’t Wake Me Up (iaht’s Re-Remix)
+    artist: original by Addict Animal vs Surafux · remixed by iaht
+    type: remix
+    genre: MELODIC TRANCE
+    soundcloud: '55936013'
+    date: '2012-08-11'
+  - id: opaque-space
+    title: Opaque Space
+    artist: iaht
+    type: original
+    genre: HARDCORE
+    soundcloud: '182770407'
+    date: '2010-09-10'
