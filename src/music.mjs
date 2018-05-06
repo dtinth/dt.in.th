@@ -22,7 +22,7 @@ export const songs = [
     id: '422',
     title: '422',
     artist: 'flicknote · vocals by MindaRyn',
-    genre: 'UNPROCESSABLE ENTITY',
+    genre: '0xF09F8EB9',
     youtube: 'gGIVlAwr-m8',
     date: '2017-07-16'
   },
@@ -192,7 +192,7 @@ const Tracklist = styled(({ className }) => {
   )
 })`
   padding: 0;
-  margin: 0;
+  margin: ${beat(2)} 0 0;
   list-style: none;
   > li {
     display: block;
@@ -213,6 +213,12 @@ const TracklistItem = styled(({ className, song }) => (
   text-decoration: none;
   display: block;
   text-align: center;
+  margin: 0 auto;
+  max-width: ${beat(24)};
+  background: #252423;
+  padding: ${beat(0.5)};
+  border: 1px solid #656463;
+  box-shadow: 2px 2px 0 #090807;
   > .genre {
     color: #8b8685;
     font-size: ${fontSize(G3)};
