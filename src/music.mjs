@@ -13,7 +13,7 @@ import {
 } from './common'
 import styled from 'styled-components'
 import React from 'react'
-import { beat, fontSize, G3, C4 } from './styles'
+import { beat, fontSize, G3 } from './styles'
 
 export const ENABLED = true // process.env.NODE_ENV !== 'production'
 
@@ -219,15 +219,22 @@ const TracklistItem = styled(({ className, song }) => (
   padding: ${beat(0.5)};
   border: 1px solid #656463;
   box-shadow: 2px 2px 0 #090807;
+  line-height: ${beat(1)};
   > .genre {
     color: #8b8685;
     font-size: ${fontSize(G3)};
+    display: block;
   }
   > .title {
     color: #bef;
+    display: block;
   }
   > .artist {
-    font-size: ${fontSize(C4)};
+    font-size: ${fontSize(G3)};
+    display: block;
+  }
+  > br {
+    display: none;
   }
 `
 
