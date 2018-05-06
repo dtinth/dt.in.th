@@ -33,7 +33,7 @@ const globalCss = `
 html {
   font-family: Helvetica, sans-serif;
 }
-html.webfont-ready {
+html.wf-active {
   font-family: Arimo, Helvetica, sans-serif;
 }
 body {
@@ -96,9 +96,12 @@ export async function renderPageToHTML (page, clientAsset) {
   $('style').remove()
   const minifiedCss = await new Promise((resolve, reject) => {
     const uncssOptions = {
-      raw: css
+      raw: css,
+      ignore: [/wf-/]
     }
-    uncss($.html(), uncssOptions, (err, result) => {
+    const $noScript = cheerio.load($.html())
+    $noScript('script').remove()
+    uncss($noScript.html(), uncssOptions, (err, result) => {
       if (err) return reject(err)
       resolve(result)
     })
