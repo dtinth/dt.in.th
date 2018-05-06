@@ -3,6 +3,7 @@ export const beat = n => `${n * 27}px`
 
 // MIDI Notes for implementing a typography scale based on a musical scale!
 export const G3 = 55
+export const A3 = 57
 export const C4 = 60
 export const D4 = 62
 export const E4 = 64

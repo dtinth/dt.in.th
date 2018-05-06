@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components'
 import React from 'react'
 import Chance from 'chance'
 import _ from 'lodash'
-import { fontSize, beat, C4, B4, E4 } from './styles'
+import { fontSize, beat, C4, B4, E4, G3 } from './styles'
 import { Prefetcher } from './prefetch.mjs'
 
 export function Breadcrumb ({ items = [] }) {
@@ -224,6 +224,21 @@ export function YouTube ({ id }) {
   )
 }
 
+export function SoundCloud ({ id }) {
+  return (
+    <Wrapper>
+      <iframe
+        width='100%'
+        height='300'
+        scrolling='no'
+        frameBorder='no'
+        allow='autoplay'
+        src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${id}&color=%238b8685&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true`}
+      />
+    </Wrapper>
+  )
+}
+
 export function SlideShare ({ id }) {
   return (
     <EmbedContainer ratio={720 / 587}>
@@ -283,4 +298,30 @@ export const SiteTitle = styled.h1`
 
 export const SiteTitleContainer = styled.div`
   padding-top: 20vh;
+`
+
+export const PreviousNext = styled.ul`
+  padding: 0;
+  margin: ${beat(2)} 0 0;
+  list-style: none;
+  display: flex;
+`
+PreviousNext.Item = styled.li`
+  text-align: ${props => (props.older ? 'left' : 'right')};
+  margin-left: ${props => (props.newer ? 'auto' : '0')};
+  width: 32%;
+  @media (max-width: 719px) {
+    width: 48%;
+  }
+`
+PreviousNext.Link = styled.a`
+  display: block;
+  text-decoration: none;
+  line-height: ${beat(1)};
+`
+PreviousNext.Title = styled.span`
+  display: block;
+  color: #8b8685;
+  font-size: ${fontSize(G3)};
+  line-height: ${beat(0.75)};
 `

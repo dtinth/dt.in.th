@@ -9,11 +9,16 @@ import {
   Intro,
   SiteTitle,
   SiteTitleContainer,
+  PreviousNext,
+  Breadcrumb,
+  YouTube,
+  SoundCloud,
   Name
 } from './common'
+import { Prefetcher } from './prefetch'
 import styled from 'styled-components'
 import React from 'react'
-import { beat, fontSize, G3 } from './styles'
+import { beat, fontSize, G3, A3, D4 } from './styles'
 
 export const ENABLED = true // process.env.NODE_ENV !== 'production'
 
@@ -141,6 +146,13 @@ const pages = {
   }
 }
 
+for (const song of songs) {
+  pages[`/music/${song.id}/`] = {
+    title: song.title,
+    render: () => renderSongPage(song)
+  }
+}
+
 function renderHome () {
   return (
     <ActiveSectionProvider activeSection='music'>
@@ -235,6 +247,136 @@ const TracklistItem = styled(({ className, song }) => (
   }
   > br {
     display: none;
+  }
+`
+
+function renderSongPage (song) {
+  const breadcrumb = [{ text: 'Music', href: '/music/' }]
+  const index = songs.indexOf(song)
+  const newerSong = songs[index - 1]
+  const olderSong = songs[index + 1]
+  return (
+    <ActiveSectionProvider activeSection='music'>
+      <Main>
+        <Wrapper>
+          <Breadcrumb items={breadcrumb} />
+          <SongNavigation older={olderSong} newer={newerSong}>
+            <SongHeading song={song} />
+          </SongNavigation>
+        </Wrapper>
+        {song.youtube ? (
+          <YouTube id={song.youtube} />
+        ) : song.soundcloud ? (
+          <SoundCloud id={song.soundcloud} />
+        ) : null}
+        <Prefetcher>
+          {prefetch => (
+            <Wrapper>
+              <PreviousNext>
+                {!!olderSong && (
+                  <PreviousNext.Item older>
+                    <PreviousNext.Link
+                      href={prefetch(`/music/${olderSong.id}/`)}
+                    >
+                      &laquo; older song
+                      <PreviousNext.Title>{olderSong.title}</PreviousNext.Title>
+                    </PreviousNext.Link>
+                  </PreviousNext.Item>
+                )}
+                {!!newerSong && (
+                  <PreviousNext.Item newer>
+                    <PreviousNext.Link
+                      href={prefetch(`/music/${newerSong.id}/`)}
+                    >
+                      newer song &raquo;
+                      <PreviousNext.Title>{newerSong.title}</PreviousNext.Title>
+                    </PreviousNext.Link>
+                  </PreviousNext.Item>
+                )}
+              </PreviousNext>
+              <Footer />
+            </Wrapper>
+          )}
+        </Prefetcher>
+      </Main>
+    </ActiveSectionProvider>
+  )
+}
+const SongHeading = styled(({ className, song }) => (
+  <h1 href={`/music/${song.id}/`} className={className}>
+    <span className='genre'>{song.genre}</span>
+    <br />
+    <strong className='title'>{song.title}</strong>
+    <br />
+    <span className='artist'>{song.artist}</span>
+  </h1>
+))`
+  text-align: center;
+  margin: ${beat(1)} 0;
+  line-height: ${beat(1)};
+  font-weight: normal;
+  > .genre {
+    color: #8b8685;
+    display: block;
+    font-size: ${fontSize(A3)};
+  }
+  > .title {
+    color: #bef;
+    display: block;
+    font-size: ${fontSize(D4)};
+  }
+  > .artist {
+    display: block;
+    font-size: ${fontSize(A3)};
+  }
+  > br {
+    display: none;
+  }
+`
+
+const SongNavigation = styled(({ className, children, older, newer }) => (
+  <div className={className}>
+    <div className='current'>{children}</div>
+    <div className='navigate older'>
+      <a
+        href={older ? `/music/${older.id}/` : '#'}
+        className={older ? '' : 'is-disabled'}
+        tabIndex={older ? 0 : -1}
+      >
+        &laquo;
+      </a>
+    </div>
+    <div className='navigate newer'>
+      <a
+        href={newer ? `/music/${newer.id}/` : '#'}
+        className={newer ? '' : 'is-disabled'}
+        tabIndex={newer ? 0 : -1}
+      >
+        &raquo;
+      </a>
+    </div>
+  </div>
+))`
+  display: flex;
+  align-items: center;
+  > .current {
+    order: 2;
+    flex: 1;
+  }
+  > .older {
+    order: 1;
+  }
+  > .newer {
+    order: 3;
+  }
+  > .navigate {
+    > a {
+      text-decoration: none;
+      &.is-disabled {
+        color: #8b8685;
+        pointer-events: none;
+      }
+    }
   }
 `
 
