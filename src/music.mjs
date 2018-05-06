@@ -6,17 +6,26 @@ import {
   Wrapper,
   Perspective,
   AnimatedCharacter,
-  Heading,
   Intro,
   SiteTitle,
   SiteTitleContainer,
   Name
 } from './common'
+import styled from 'styled-components'
 import React from 'react'
+import { beat, fontSize, G3, C4 } from './styles'
 
-export const ENABLED = process.env.NODE_ENV !== 'production'
+export const ENABLED = true // process.env.NODE_ENV !== 'production'
 
 export const songs = [
+  {
+    id: '422',
+    title: '422',
+    artist: 'flicknote · vocals by MindaRyn',
+    genre: 'UNPROCESSABLE ENTITY',
+    youtube: 'gGIVlAwr-m8',
+    date: '2017-07-16'
+  },
   {
     id: 'butter-fly-cover-collab',
     title: 'Butter-Fly (Digimon Tri Ver.) (Cover/Collab)',
@@ -159,15 +168,61 @@ function renderHome () {
                 song projects and collaborations! I also{' '}
                 <a href='/'>build software</a>.
               </Intro>
-              <Heading>Tracklist</Heading>
-              ...
-              <Footer />
             </Wrapper>
           </FadeIn>
+          <Wrapper>
+            <Tracklist />
+            <Footer />
+          </Wrapper>
         </Main>
       </Perspective>
     </ActiveSectionProvider>
   )
 }
+
+const Tracklist = styled(({ className }) => {
+  return (
+    <ul className={className}>
+      {songs.map(song => (
+        <li key={song.id}>
+          <TracklistItem song={song} />
+        </li>
+      ))}
+    </ul>
+  )
+})`
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  > li {
+    display: block;
+    margin-top: ${beat(1)};
+  }
+`
+
+const TracklistItem = styled(({ className, song }) => (
+  <a href={`/music/${song.id}/`} className={className}>
+    <span className='genre'>{song.genre}</span>
+    <br />
+    <strong className='title'>{song.title}</strong>
+    <br />
+    <span className='artist'>{song.artist}</span>
+  </a>
+))`
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  > .genre {
+    color: #8b8685;
+    font-size: ${fontSize(G3)};
+  }
+  > .title {
+    color: #bef;
+  }
+  > .artist {
+    font-size: ${fontSize(C4)};
+  }
+`
 
 export default (ENABLED ? pages : {})
