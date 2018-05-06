@@ -145,7 +145,7 @@ export function Navigation ({ animated, homeLink, small }) {
           {item('github', 3, 'https://github.com/dtinth', 'GitHub')}
           {item('twitter', 4, 'https://twitter.com/dtinth', 'Twitter')}
           {item('medium', 5, 'https://medium.com/@dtinth', 'Medium')}
-          {item('blog', 6, 'https://me.dt.in.th', 'Blog')}
+          {item('blog', 6, 'https://me.dt.in.th', 'Old Blog')}
         </Links>
       )}
     </Prefetcher>
