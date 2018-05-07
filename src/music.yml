@@ -264,6 +264,29 @@ songs:
     genre: SPEED CARNIVAL
     youtube: 0eRTa2NQ4r0
     date: '2016-07-03'
+    description: |
+      This song is a [submission](http://manbow.nothing.sh/event/event.cgi?action=More_def&num=20&event=109) to the [Be Happiness!!!!](http://nextreflection.net/behappiness/) event.
+
+      ## Submission text
+
+      > Hello! My name is flicknote.
+      >
+      > This BMS is an adaptation of a short song I composed 1 year ago.
+      >
+      > I started composing the BMS version just before the registration period began. \
+      > I have only 2 days to submit this song. Therefore, this song is done in a rush.
+      >
+      > My main objective is to practice making BMS quickly. \
+      > So the song is not very well polished and the BMS has only one level. \
+      > Nevertheless, I hope you enjoy playing this song.
+      >
+      > Thank you for playing! \
+      > — flicknote
+
+      Unfortunately, in a rush, I didn’t read the event rules carefully,
+      in particular, the part about using pseudonym (fake name).
+      Therefore, this song is disqualified from participating in the event.
+      Next time I will have to read the rules more carefully.
   - id: running-out-2015
     title: Running Out 2015
     artist: flicknote · video by 5argon
@@ -271,6 +294,15 @@ songs:
     genre: FRANTIC
     youtube: X6y2m09V4Hw
     date: '2016-07-03'
+    description: |
+      This song is a [submission](http://manbow.nothing.sh/event/event.cgi?action=More_def&num=155&event=104) to the event [大血戦 -THE BMS OF FIGHTERS ULTIMATE-](http://www.bmsoffighters.net/bofu_daikessen/index.html).
+
+      ## Submission text
+      こんにちは！ \
+      flicknote です。タイから来ました。 \
+      これは私がＢＭＳイベントに参加した二回目です。 \
+      気に入ってくれたら嬉しいです！！ \
+      (妹が訳してくれました。)
   - id: only-love-remix
     title: Only Love (Euphoric Trance Remix)
     artist: Shannon Hurley remixed by flicknote
@@ -278,6 +310,23 @@ songs:
     genre: EUPHORIC TRANCE
     youtube: KUoi1Hp-bzM
     date: '2015-08-16'
+    description: |
+      This song is made for into a demonstration of the [bmson file format](https://bmson.nekokan.dyndns.info/),
+      a modern file format for rhythm game data.
+
+      > Artist: [flicknote](https://soundcloud.com/o_ooooo) \
+      > Original Artist: [Shannon Hurley](http://www.shannonhurley.com/) \
+      > License: Creative Commons [CC-BY-NC 3.0](http://creativecommons.org/licenses/by-nc/3.0/)
+      >
+      > [Listen on SoundCloud](https://soundcloud.com/o_ooooo/only-love)
+      >
+      > This song is dedicated to the #bmson community. \
+      > Our community is strong because of our love for rhythm games. \
+      > Creating a note chart for this song is much faster than my previous work \
+      > because I don't have to slice sounds anymore. Great job! \
+      > I am looking forward to this format.
+      >
+      > — flicknote
   - id: by-my-side-ambient-house-mix
     title: BY☆MY☆SIDE (Ambient House Mix)
     artist: flicknote
@@ -285,6 +334,10 @@ songs:
     genre: AMBIENT HOUSE
     soundcloud: '207325787'
     date: '2015-05-27'
+    description: |
+      A slower and calmer version of [BY☆MY☆SIDE](/music/by-my-side/). Created in 2 hours using FL Studio.
+
+      This song has been made into the background music of the song selection screen in [Bemuse](https://bemuse.ninja/) game.
   - id: auto-synchro
     title: AUTO±SYNCHRO
     artist: flicknote
@@ -292,6 +345,10 @@ songs:
     genre: HARDSTYLE
     soundcloud: '186916227'
     date: '2015-01-20'
+    description: |
+      This song is created for audio/video delay calibration algorithm in [Bemuse](https://bemuse.ninja/).
+
+      You can [see it in action here](https://bemuse.ninja/?mode=sync).
   - id: reminiscentia
     title: Reminiscentia
     artist: flicknote
@@ -299,6 +356,10 @@ songs:
     genre: DRAMATIC TRANCE
     soundcloud: '171200575'
     date: '2014-10-08'
+    description: |
+      I've always wanted to try making some classical music, but somehow, this one ended up as a trance song.
+
+      Enjoy!
   - id: by-my-side
     title: BY☆MY☆SIDE
     artist: flicknote
@@ -306,6 +367,8 @@ songs:
     genre: TRANCE CORE
     soundcloud: '126044912'
     date: '2013-12-23'
+    description: |
+      This is the tutorial song in the game [Bemuse](https://bemuse.ninja/).
   - id: sawasdee-new-year
     title: Sawasdee New Year
     artist: flicknote
@@ -313,6 +376,21 @@ songs:
     genre: CYBER QUICK WALTZ
     soundcloud: '73064541'
     date: '2012-12-31'
+    description: |
+      A song to celebrate a new year!
+
+      Based on song "Sawasdee Pee Mai (สวัสดีปีใหม่)" by Suntaraporn (สุนทราภรณ์), a song about new year, by Thailand's most well-known big band.
+
+      Inspirations and Influences:
+
+      - I heard that song many times everywhere during the new year season and like it
+      - encX - Sawasdee (for remixing a thai traditional tune and inspiration for song title)
+      - Tatsh - reunion (for the genre "cyber waltz" and a speedy waltz song)
+      - ...and many other songs from various music games have also influences several parts of this song
+
+      HAPPY NEW YEAR 2013
+
+      O2Jam music file available: https://www.youtube.com/watch?v=VqlA0lAqpKM
   - id: dont-wake-me-up-re-remix
     title: Don’t Wake Me Up (iaht’s Re-Remix)
     artist: original by Addict Animal vs Surafux · remixed by iaht
@@ -320,6 +398,21 @@ songs:
     genre: MELODIC TRANCE
     soundcloud: '55936013'
     date: '2012-08-11'
+    description: |
+      This is a remix of Surafux's version of Addict Animal's song, "Don't wake me up."
+
+      Surafux's version can be found on dB Team's album [Projekt No.Three](http://phil-wcalbum.tumblr.com/post/10685816441/db-team-projekt-no-three) or [on YouTube](https://www.youtube.com/watch?v=n0Xdzyqdx1Y).
+  - id: type-your-text-here
+    title: TYPE YOUR TEXT HERE
+    artist: iaht
+    type: original
+    genre: ELECTRO RINGTONE
+    date: '2011-11-15'
+    soundcloud: '32399158'
+    description: |
+      This is the ringtone music I use on my phone.
+
+      "Type your text here" vocal generated by Speech Synthesizer in FL (default settings with default text!)
   - id: opaque-space
     title: Opaque Space
     artist: iaht
@@ -327,3 +420,5 @@ songs:
     genre: HARDCORE
     soundcloud: '182770407'
     date: '2010-09-10'
+    description: |
+      Old work from 2010. Part of _Free Your Tune_ album by dB Team.
