@@ -55,6 +55,8 @@ songs:
     date: '2017-07-16'
     description: |
       This song is a [submission](https://bmssearch.net/venue/detail?event=3&id=42) to the [BMS衆議院選](https://qstol.info/events/BMS_Shuin/) event.
+      This is the first song in which I compose the lyrics on my own.
+      I also made the video by myself, using THREE.js to generate the visualization based on MIDI data. [Source code is available.](https://github.com/dtinth/422)
 
       ## Submission text
 
@@ -91,6 +93,29 @@ songs:
       > flicknote \
       > https://flicknote.spacet.me/ \
       > @bemusegame
+
+      ## Lyrics
+
+      > **[Intro]** \
+      > Every time that I see you… \
+      > Every time that I see you…
+      >
+      > **[Pre-chorus]** \
+      > I don’t know what to say… \
+      > I don’t know what to think… \
+      > What made me feel this way? \
+      > What is going on?? \
+      > My mind?!? \
+      > Oh..!!?
+      >
+      > **[Chorus]** \
+      > Every time that I see you \
+      > Cannot process that feeling \
+      > Do not know what to do \
+      > Four-hundred-twenty-two…
+
+      ## Trivia
+      - [422 is an HTTP error code.](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
   - id: butter-fly-cover-collab
     title: Butter-Fly (Digimon Tri Ver.) (Cover)
     artist: original by Wada Kouji · cover by MindaRyn
@@ -211,6 +236,72 @@ songs:
       > ついでに、私の作品「[Piece of Mine](http://manbow.nothing.sh/event/event.cgi?action=More_def&num=302&event=110)」もよろしくお願いします。
       >
       > @suitougreentea
+
+      ## Lyrics (Thai)
+      > **[Verse]** \
+      > ฉัน ฉันนั้นโชคดีเหลือเกิน \
+      > ที่ได้เกิดมาได้พบเจอกับเธอ \
+      > ทำให้เราได้รักกัน มีวันเวลาที่สวยงาม \
+      > เพราะเธอ เพราะเธอ
+      >
+      > คิด ฉันคิดถึงเธอเหลือเกิน \
+      > อยากให้เธอมาอยู่ตรงนี้ข้างกาย \
+      > แม้วันเวลาที่ผ่านมา ทำให้เธอนั้นหายไป \
+      > แต่ในใจของฉันไม่เคยจะลืม
+      >
+      > **[Pre-chorus]** \
+      > เวียนเปลี่ยนหมุนไป \
+      > วันเวลาไม่เคยจะรอใครใครทั้งนั้น \
+      > ห่างกันแค่ไหน \
+      > ใจฉันยังรอ \
+      > แค่เพียงอยากบอกว่า
+      >
+      > **[Chorus]** \
+      > รักเธอทุกวัน \
+      > รักเธอเหลือเกิน \
+      > อยากให้เธออยู่ตรงนี้นานนาน \
+      > และยังคงรักเธอทุกวัน \
+      > คิดถึงเธอทุกคืน \
+      > อยากให้เธอได้ยินว่าฉันรักเธอ จริงจริง
+      >
+      > **[Ending]** \
+      > อยากบอกว่า \
+      > รักเธอ รักเธอ \
+      > รักเธอ รักเธอ \
+      > แต่ว่าทำได้เพียงคิดถึงเธอคนเดียว
+
+      ## Lyrics Meaning (English)
+      > **[Verse]** \
+      > How—how fortunate I am \
+      > That I have found you here in my life \
+      > Love that we have cared and all good times that we shared \
+      > All because of you, because of you
+      >
+      > Miss—I miss you all this time \
+      > I just wish that you were by my side \
+      > ’cause what we have been through separated you away \
+      > But in my heart all these moments stay
+      >
+      > **[Pre-chorus]** \
+      > Revolvin’ around, spinnin’ around \
+      > Time is never gonna wait for anyone \
+      > Despite how far \
+      > I’ll wait for you \
+      > And I will say I…
+      >
+      > **[Chorus]** \
+      > Love you everyday \
+      > Love you evermore \
+      > Wish you’re stayin’ with me here, always \
+      > ’cause I still love you everyday \
+      > And miss you every night \
+      > Wish you’d know I love you ’til the end of time
+      >
+      > **[Ending]** \
+      > Wanna say I \
+      > Love you, Love you \
+      > Love you, Love you \
+      > But now I only can dream of you alone
   - id: bursting-music-star
     title: bursting☆music☆star
     artist: flicknote · video by 5argon
