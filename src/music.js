@@ -81,9 +81,9 @@ function renderHome () {
 const Tracklist = styled(({ className }) => {
   return (
     <ul className={className}>
-      {songs.map(song => (
+      {songs.map((song, index) => (
         <li key={song.id}>
-          <TracklistItem song={song} />
+          <TracklistItem song={song} index={index} />
         </li>
       ))}
     </ul>
@@ -98,18 +98,25 @@ const Tracklist = styled(({ className }) => {
   }
 `
 
-const TracklistItem = styled(({ className, song }) => (
-  <a href={`/music/${song.id}/`} className={className}>
-    <span className='genre'>
-      <SongType type={song.type} />
-      <br />
-      {song.genre}
-    </span>
-    <br />
-    <strong className='title'>{song.title}</strong>
-    <br />
-    <span className='artist'>{song.artist}</span>
-  </a>
+const TracklistItem = styled(({ className, song, index }) => (
+  <Prefetcher>
+    {prefetch => (
+      <a
+        href={prefetch(`/music/${song.id}/`, { when: index < 3 })}
+        className={className}
+      >
+        <span className='genre'>
+          <SongType type={song.type} />
+          <br />
+          {song.genre}
+        </span>
+        <br />
+        <strong className='title'>{song.title}</strong>
+        <br />
+        <span className='artist'>{song.artist}</span>
+      </a>
+    )}
+  </Prefetcher>
 ))`
   color: inherit;
   text-decoration: none;
