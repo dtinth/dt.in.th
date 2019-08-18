@@ -12,11 +12,10 @@ import {
   YouTube,
   PreviousNext,
   SlideShare,
-  Name
+  Name,
 } from './common'
 import { beat } from './styles'
 import smellsInReactAppsImage from './talks/smells-in-react-apps.jpg'
-import { Prefetcher } from './prefetch'
 
 const data = [
   {
@@ -26,7 +25,7 @@ const data = [
     meta: {
       description:
         'Recognizing code smells is an important skill that helps you build maintainable software.',
-      image: smellsInReactAppsImage
+      image: smellsInReactAppsImage,
     },
     description: () => (
       <React.Fragment>
@@ -40,25 +39,25 @@ const data = [
           components.
         </P>
         <P>
-          Presented at <a href='https://2018.jsconf.asia/'>JSConf.Asia 2018</a>.
+          Presented at <a href="https://2018.jsconf.asia/">JSConf.Asia 2018</a>.
         </P>
       </React.Fragment>
     ),
     links: () => (
       <TalkLinks>
         <li>
-          <a href='https://speakerdeck.com/dtinth/smells-in-react-apps'>
+          <a href="https://speakerdeck.com/dtinth/smells-in-react-apps">
             Slides
           </a>
         </li>
         <li>
-          <a href='https://speakerdeck.com/dtinth/smells-in-react-apps-with-edited-transcript'>
+          <a href="https://speakerdeck.com/dtinth/smells-in-react-apps-with-edited-transcript">
             Slides (with edited transcript)
           </a>
         </li>
       </TalkLinks>
     ),
-    youtube: 'xBa0_b-5XDw'
+    youtube: 'xBa0_b-5XDw',
   },
 
   {
@@ -72,23 +71,23 @@ const data = [
         </P>
         <P>
           Presented at{' '}
-          <a href='https://www.eventpop.me/e/2446'>Code Mania 110</a>.
+          <a href="https://www.eventpop.me/e/2446">Code Mania 110</a>.
         </P>
       </React.Fragment>
     ),
     speakerdeck: {
       id: 'dfd8464f036645128c8dcb1d59f55419',
-      ratio: 1.33333333333333
+      ratio: 1.33333333333333,
     },
     links: () => (
       <TalkLinks>
         <li>
-          <a href='https://www.youtube.com/watch?v=XCdW7-kmxXg'>
+          <a href="https://www.youtube.com/watch?v=XCdW7-kmxXg">
             Workshop recording
           </a>
         </li>
       </TalkLinks>
-    )
+    ),
   },
 
   {
@@ -104,11 +103,11 @@ const data = [
         </P>
         <P>
           Presented at{' '}
-          <a href='https://reactbkk.com/2.0.0/'>React Bangkok 2.0.0</a>.
+          <a href="https://reactbkk.com/2.0.0/">React Bangkok 2.0.0</a>.
         </P>
       </React.Fragment>
     ),
-    youtube: 'u5mpnKYhfUE'
+    youtube: 'u5mpnKYhfUE',
   },
 
   {
@@ -118,20 +117,20 @@ const data = [
     description: () => (
       <React.Fragment>
         <P>
-          Presented at <a href='https://2016.jsconf.asia/'>JSConf.Asia 2016</a>.
+          Presented at <a href="https://2016.jsconf.asia/">JSConf.Asia 2016</a>.
         </P>
       </React.Fragment>
     ),
     links: () => (
       <TalkLinks>
         <li>
-          <a href='https://our.wonderful.software/my-musical-instruments-f88ed8b12331'>
+          <a href="https://our.wonderful.software/my-musical-instruments-f88ed8b12331">
             Writeup
           </a>
         </li>
       </TalkLinks>
     ),
-    youtube: '3Y-XeJmGQis'
+    youtube: '3Y-XeJmGQis',
   },
 
   {
@@ -149,20 +148,20 @@ const data = [
         </P>
         <P>
           Presented at{' '}
-          <a href='https://reactbkk.github.io/1.0.0/'>React Bangkok 1.0.0</a>.
+          <a href="https://reactbkk.github.io/1.0.0/">React Bangkok 1.0.0</a>.
         </P>
       </React.Fragment>
     ),
     links: () => (
       <TalkLinks>
         <li>
-          <a href='https://reactbkk.github.io/1.0.0/higher-order-components.pdf'>
+          <a href="https://reactbkk.github.io/1.0.0/higher-order-components.pdf">
             Slides
           </a>
         </li>
       </TalkLinks>
     ),
-    youtube: 'MyX4Et5fqlY'
+    youtube: 'MyX4Et5fqlY',
   },
 
   {
@@ -173,7 +172,7 @@ const data = [
       <React.Fragment>
         <P>
           In this talk, I and{' '}
-          <a href='https://medium.com/@chrisza'>Chakrit Likitkhajorn</a>{' '}
+          <a href="https://medium.com/@chrisza">Chakrit Likitkhajorn</a>{' '}
           presented about the basic concepts of React.js and how Taskworld uses
           React.js in its front-end. Topics include declarative views,
           functional components, virtual DOM, and handling state changes. It
@@ -182,23 +181,24 @@ const data = [
         </P>
         <P>
           Presented at{' '}
-          <a href='https://www.meetup.com/bkk-web/events/231034570/'>
+          <a href="https://www.meetup.com/bkk-web/events/231034570/">
             BKK WEB Meetup
           </a>{' '}
           and{' '}
-          <a href='https://www.eventpop.me/e/2489'>
+          <a href="https://www.eventpop.me/e/2489">
             Facebook Developer Circles Bangkok: Meetup Launch {'&'} Hackathon
-          </a>.
+          </a>
+          .
         </P>
       </React.Fragment>
     ),
     links: () => (
       <TalkLinks>
         <li>
-          <a href='https://taskworld.github.io/react-talk/'>Slides</a>
+          <a href="https://taskworld.github.io/react-talk/">Slides</a>
         </li>
       </TalkLinks>
-    )
+    ),
   },
 
   {
@@ -218,10 +218,10 @@ const data = [
     links: () => (
       <TalkLinks>
         <li>
-          <a href='http://go.spacet.me/tdd20160330'>Slides</a>
+          <a href="http://go.spacet.me/tdd20160330">Slides</a>
         </li>
       </TalkLinks>
-    )
+    ),
   },
 
   {
@@ -240,19 +240,19 @@ const data = [
         </P>
         <P>
           Presented at{' '}
-          <a href='http://2015.barcampbangkhen.org/'>BarCamp Bangkhen 6</a>.
+          <a href="http://2015.barcampbangkhen.org/">BarCamp Bangkhen 6</a>.
         </P>
       </React.Fragment>
     ),
     links: () => (
       <TalkLinks>
         <li>
-          <a href='https://medium.com/@dtinth/spring-animation-in-css-2039de6e1a03'>
+          <a href="https://medium.com/@dtinth/spring-animation-in-css-2039de6e1a03">
             Writeup
           </a>
         </li>
       </TalkLinks>
-    )
+    ),
   },
 
   {
@@ -280,7 +280,7 @@ const data = [
           </a>
         </li>
       </TalkLinks>
-    )
+    ),
   },
 
   {
@@ -304,11 +304,11 @@ const data = [
     links: () => (
       <TalkLinks>
         <li>
-          <a href='https://spacet.me/codemania2015/'>Talk homepage</a>
+          <a href="https://spacet.me/codemania2015/">Talk homepage</a>
         </li>
       </TalkLinks>
     ),
-    youtube: '3PWmxxKeT2Y'
+    youtube: '3PWmxxKeT2Y',
   },
 
   {
@@ -323,11 +323,11 @@ const data = [
         </P>
         <P>
           Presented at{' '}
-          <a href='http://2013.barcampbangkhen.org/'>BarCamp Bangkhen 4</a>.
+          <a href="http://2013.barcampbangkhen.org/">BarCamp Bangkhen 4</a>.
         </P>
       </React.Fragment>
     ),
-    slideshare: 'whRzNPugGQEBOI'
+    slideshare: 'whRzNPugGQEBOI',
   },
 
   {
@@ -341,8 +341,8 @@ const data = [
         </P>
       </React.Fragment>
     ),
-    slideshare: 'DiR07r8gy55JdE'
-  }
+    slideshare: 'DiR07r8gy55JdE',
+  },
 ]
 
 const pages = {}
@@ -353,10 +353,10 @@ for (const talkData of data) {
 
 pages['/talks/'] = {
   title: 'Thai’s Talks',
-  render: renderIndex
+  render: renderIndex,
 }
 
-function talkPage (talkData) {
+function talkPage(talkData) {
   const meta = talkData.meta || {}
   const description = meta.description
   const image = meta.image
@@ -365,28 +365,28 @@ function talkPage (talkData) {
     render: () => renderTalk(talkData),
     head: () => (
       <React.Fragment>
-        {!!description && <meta name='description' content={description} />}
-        <meta property='og:title' content={talkData.title} />
+        {!!description && <meta name="description" content={description} />}
+        <meta property="og:title" content={talkData.title} />
         {!!description && (
-          <meta property='og:description' content={description} />
+          <meta property="og:description" content={description} />
         )}
         <meta
-          property='og:url'
+          property="og:url"
           content={`https://dt.in.th/talks/${talkData.id}/`}
         />
-        {!!image && <meta property='og:image' content={image} />}
+        {!!image && <meta property="og:image" content={image} />}
       </React.Fragment>
-    )
+    ),
   }
 }
 
-function renderTalk (talkData) {
+function renderTalk(talkData) {
   const breadcrumb = [{ text: 'Talks', href: '/talks/' }]
   const index = data.indexOf(talkData)
   const newerTalk = data[index - 1]
   const olderTalk = data[index + 1]
   return (
-    <ActiveSectionProvider activeSection='talks'>
+    <ActiveSectionProvider activeSection="talks">
       <Main>
         <Wrapper>
           <Breadcrumb items={breadcrumb} />
@@ -402,72 +402,57 @@ function renderTalk (talkData) {
             <Wrapper>
               <script
                 async
-                className='speakerdeck-embed'
+                className="speakerdeck-embed"
                 data-id={talkData.speakerdeck.id}
                 data-ratio={talkData.speakerdeck.ratio}
-                src='https://speakerdeck.com/assets/embed.js'
+                src="https://speakerdeck.com/assets/embed.js"
               />
             </Wrapper>
           ) : talkData.slideshare ? (
             <SlideShare id={talkData.slideshare} />
           ) : null}
         </P>
-        <Prefetcher>
-          {prefetch => (
-            <Wrapper>
-              {!!talkData.links && talkData.links()}
-              <PreviousNext>
-                {!!olderTalk && (
-                  <PreviousNext.Item older>
-                    <PreviousNext.Link
-                      href={prefetch(`/talks/${olderTalk.id}/`)}
-                    >
-                      &laquo; older talk
-                      <PreviousNext.Title>{olderTalk.title}</PreviousNext.Title>
-                    </PreviousNext.Link>
-                  </PreviousNext.Item>
-                )}
-                {!!newerTalk && (
-                  <PreviousNext.Item newer>
-                    <PreviousNext.Link
-                      href={prefetch(`/talks/${newerTalk.id}/`)}
-                    >
-                      newer talk &raquo;
-                      <PreviousNext.Title>{newerTalk.title}</PreviousNext.Title>
-                    </PreviousNext.Link>
-                  </PreviousNext.Item>
-                )}
-              </PreviousNext>
-              <Footer />
-            </Wrapper>
-          )}
-        </Prefetcher>
+        <Wrapper>
+          {!!talkData.links && talkData.links()}
+          <PreviousNext>
+            {!!olderTalk && (
+              <PreviousNext.Item older>
+                <PreviousNext.Link href={`/talks/${olderTalk.id}/`}>
+                  &laquo; older talk
+                  <PreviousNext.Title>{olderTalk.title}</PreviousNext.Title>
+                </PreviousNext.Link>
+              </PreviousNext.Item>
+            )}
+            {!!newerTalk && (
+              <PreviousNext.Item newer>
+                <PreviousNext.Link href={`/talks/${newerTalk.id}/`}>
+                  newer talk &raquo;
+                  <PreviousNext.Title>{newerTalk.title}</PreviousNext.Title>
+                </PreviousNext.Link>
+              </PreviousNext.Item>
+            )}
+          </PreviousNext>
+          <Footer />
+        </Wrapper>
       </Main>
     </ActiveSectionProvider>
   )
 }
 
-function renderIndex () {
+function renderIndex() {
   return (
-    <ActiveSectionProvider activeSection='talks'>
+    <ActiveSectionProvider activeSection="talks">
       <Main>
         <Wrapper>
           <Breadcrumb />
           <Heading>Talks</Heading>
-          <Prefetcher>
-            {prefetch => (
-              <TalkLinks>
-                {data.map((talk, i) => (
-                  <li key={i}>
-                    {talk.date}{' '}
-                    <a href={prefetch(`/talks/${talk.id}/`, { when: i < 3 })}>
-                      {talk.title}
-                    </a>
-                  </li>
-                ))}
-              </TalkLinks>
-            )}
-          </Prefetcher>
+          <TalkLinks>
+            {data.map((talk, i) => (
+              <li key={i}>
+                {talk.date} <a href={`/talks/${talk.id}/`}>{talk.title}</a>
+              </li>
+            ))}
+          </TalkLinks>
           <Footer />
         </Wrapper>
       </Main>

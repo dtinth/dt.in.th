@@ -13,9 +13,8 @@ import {
   Breadcrumb,
   YouTube,
   SoundCloud,
-  Name
+  Name,
 } from './common'
-import { Prefetcher } from './prefetch'
 import styled from 'styled-components'
 import React from 'react'
 import { beat, fontSize, F4, Eb4, Bb3, relativeFontSize } from './styles'
@@ -28,32 +27,31 @@ const songs = data.songs
 const pages = {
   '/music/': {
     title: 'flicknote',
-    render: renderHome
-  }
+    render: renderHome,
+  },
 }
 
 for (const song of songs) {
   pages[`/music/${song.id}/`] = {
     title: song.title,
-    render: () => renderSongPage(song)
+    render: () => renderSongPage(song),
   }
 }
 
-function renderHome () {
+function renderHome() {
   return (
-    <ActiveSectionProvider activeSection='music'>
+    <ActiveSectionProvider activeSection="music">
       <Perspective>
         <SiteTitleContainer>
           <SiteTitle>
-            {'flicknote'.split('').map(
-              (ch, i) =>
-                ch === ' ' ? (
-                  <span />
-                ) : (
-                  <AnimatedCharacter key={i} seed={i} delay={i * 0.03}>
-                    {ch}
-                  </AnimatedCharacter>
-                )
+            {'flicknote'.split('').map((ch, i) =>
+              ch === ' ' ? (
+                <span />
+              ) : (
+                <AnimatedCharacter key={i} seed={i} delay={i * 0.03}>
+                  {ch}
+                </AnimatedCharacter>
+              ),
             )}
           </SiteTitle>
         </SiteTitleContainer>
@@ -64,7 +62,7 @@ function renderHome () {
                 Hi! I’m <Name>Thai Pangsakulyanont</Name>. I am an amateur
                 composer, producer, and iPad-drummer. Here’s a selection of my
                 song projects and collaborations! I also{' '}
-                <a href='/'>build software</a>.
+                <a href="/">build software</a>.
               </Intro>
             </Wrapper>
           </FadeIn>
@@ -99,24 +97,17 @@ const Tracklist = styled(({ className }) => {
 `
 
 const TracklistItem = styled(({ className, song, index }) => (
-  <Prefetcher>
-    {prefetch => (
-      <a
-        href={prefetch(`/music/${song.id}/`, { when: index < 3 })}
-        className={className}
-      >
-        <span className='genre'>
-          <SongType type={song.type} />
-          <br />
-          {song.genre}
-        </span>
-        <br />
-        <strong className='title'>{song.title}</strong>
-        <br />
-        <span className='artist'>{song.artist}</span>
-      </a>
-    )}
-  </Prefetcher>
+  <a href={`/music/${song.id}/`} className={className}>
+    <span className="genre">
+      <SongType type={song.type} />
+      <br />
+      {song.genre}
+    </span>
+    <br />
+    <strong className="title">{song.title}</strong>
+    <br />
+    <span className="artist">{song.artist}</span>
+  </a>
 ))`
   color: inherit;
   text-decoration: none;
@@ -148,13 +139,13 @@ const TracklistItem = styled(({ className, song, index }) => (
   }
 `
 
-function renderSongPage (song) {
+function renderSongPage(song) {
   const breadcrumb = [{ text: 'Music', href: '/music/' }]
   const index = songs.indexOf(song)
   const newerSong = songs[index - 1]
   const olderSong = songs[index + 1]
   return (
-    <ActiveSectionProvider activeSection='music'>
+    <ActiveSectionProvider activeSection="music">
       <Main>
         <Wrapper>
           <Breadcrumb items={breadcrumb} />
@@ -172,50 +163,42 @@ function renderSongPage (song) {
             <SongDescription text={song.description} />
           </Wrapper>
         )}
-        <Prefetcher>
-          {prefetch => (
-            <Wrapper>
-              <PreviousNext>
-                {!!olderSong && (
-                  <PreviousNext.Item older>
-                    <PreviousNext.Link
-                      href={prefetch(`/music/${olderSong.id}/`)}
-                    >
-                      &laquo; older song
-                      <PreviousNext.Title>{olderSong.title}</PreviousNext.Title>
-                    </PreviousNext.Link>
-                  </PreviousNext.Item>
-                )}
-                {!!newerSong && (
-                  <PreviousNext.Item newer>
-                    <PreviousNext.Link
-                      href={prefetch(`/music/${newerSong.id}/`)}
-                    >
-                      newer song &raquo;
-                      <PreviousNext.Title>{newerSong.title}</PreviousNext.Title>
-                    </PreviousNext.Link>
-                  </PreviousNext.Item>
-                )}
-              </PreviousNext>
-              <Footer />
-            </Wrapper>
-          )}
-        </Prefetcher>
+        <Wrapper>
+          <PreviousNext>
+            {!!olderSong && (
+              <PreviousNext.Item older>
+                <PreviousNext.Link href={prefetch(`/music/${olderSong.id}/`)}>
+                  &laquo; older song
+                  <PreviousNext.Title>{olderSong.title}</PreviousNext.Title>
+                </PreviousNext.Link>
+              </PreviousNext.Item>
+            )}
+            {!!newerSong && (
+              <PreviousNext.Item newer>
+                <PreviousNext.Link href={`/music/${newerSong.id}/`}>
+                  newer song &raquo;
+                  <PreviousNext.Title>{newerSong.title}</PreviousNext.Title>
+                </PreviousNext.Link>
+              </PreviousNext.Item>
+            )}
+          </PreviousNext>
+          <Footer />
+        </Wrapper>
       </Main>
     </ActiveSectionProvider>
   )
 }
 const SongHeading = styled(({ className, song }) => (
   <h1 href={`/music/${song.id}/`} className={className}>
-    <span className='genre'>
+    <span className="genre">
       <SongType type={song.type} />
       <br />
       {song.genre}
     </span>
     <br />
-    <strong className='title'>{song.title}</strong>
+    <strong className="title">{song.title}</strong>
     <br />
-    <span className='artist'>{song.artist}</span>
+    <span className="artist">{song.artist}</span>
   </h1>
 ))`
   text-align: center;
@@ -242,8 +225,8 @@ const SongHeading = styled(({ className, song }) => (
 `
 const SongNavigation = styled(({ className, children, older, newer }) => (
   <div className={className}>
-    <div className='current'>{children}</div>
-    <div className='navigate older'>
+    <div className="current">{children}</div>
+    <div className="navigate older">
       <a
         href={older ? `/music/${older.id}/` : '#'}
         className={older ? '' : 'is-disabled'}
@@ -252,7 +235,7 @@ const SongNavigation = styled(({ className, children, older, newer }) => (
         &laquo;
       </a>
     </div>
-    <div className='navigate newer'>
+    <div className="navigate newer">
       <a
         href={newer ? `/music/${newer.id}/` : '#'}
         className={newer ? '' : 'is-disabled'}
@@ -287,7 +270,7 @@ const SongNavigation = styled(({ className, children, older, newer }) => (
 `
 
 const md = MarkdownIt({
-  linkify: true
+  linkify: true,
 })
 const SongDescription = styled(({ className, text }) => {
   const html = md.render(text)
@@ -346,4 +329,4 @@ const SongType = styled(({ className, type }) => (
   }
 `
 
-export default (ENABLED ? pages : {})
+export default ENABLED ? pages : {}
