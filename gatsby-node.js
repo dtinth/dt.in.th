@@ -47,7 +47,7 @@ exports.createPages = ({ graphql, actions }) => {
       path: p,
       component: path.resolve('./src/gatsby-page.js'),
       context: {
-        //
+        pagePath: p,
       },
     })
   })
