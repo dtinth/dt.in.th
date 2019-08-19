@@ -16,6 +16,7 @@ import {
 } from './common'
 import { beat } from './styles'
 import smellsInReactAppsImage from './talks/smells-in-react-apps.jpg'
+import { Link } from 'gatsby'
 
 // TODO: Extract this data to files.
 const data = [
@@ -418,7 +419,7 @@ function renderTalk(talkData) {
           <PreviousNext>
             {!!olderTalk && (
               <PreviousNext.Item older>
-                <PreviousNext.Link href={`/talks/${olderTalk.id}/`}>
+                <PreviousNext.Link to={`/talks/${olderTalk.id}/`}>
                   &laquo; older talk
                   <PreviousNext.Title>{olderTalk.title}</PreviousNext.Title>
                 </PreviousNext.Link>
@@ -426,7 +427,7 @@ function renderTalk(talkData) {
             )}
             {!!newerTalk && (
               <PreviousNext.Item newer>
-                <PreviousNext.Link href={`/talks/${newerTalk.id}/`}>
+                <PreviousNext.Link to={`/talks/${newerTalk.id}/`}>
                   newer talk &raquo;
                   <PreviousNext.Title>{newerTalk.title}</PreviousNext.Title>
                 </PreviousNext.Link>
@@ -450,7 +451,7 @@ function renderIndex() {
           <TalkLinks>
             {data.map((talk, i) => (
               <li key={i}>
-                {talk.date} <a href={`/talks/${talk.id}/`}>{talk.title}</a>
+                {talk.date} <Link to={`/talks/${talk.id}/`}>{talk.title}</Link>
               </li>
             ))}
           </TalkLinks>

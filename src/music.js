@@ -20,6 +20,7 @@ import React from 'react'
 import { beat, fontSize, F4, Eb4, Bb3, relativeFontSize } from './styles'
 import data from './music.yml'
 import MarkdownIt from 'markdown-it'
+import { Link } from 'gatsby'
 
 export const ENABLED = true // process.env.NODE_ENV !== 'production'
 const songs = data.songs
@@ -61,7 +62,7 @@ function renderHome() {
                 Hi! I’m <Name>Thai Pangsakulyanont</Name>. I am an amateur
                 composer, producer, and iPad-drummer. Here’s a selection of my
                 song projects and collaborations! I also{' '}
-                <a href="/">build software</a>.
+                <Link to="/">build software</Link>.
               </Intro>
             </Wrapper>
           </FadeIn>
@@ -96,7 +97,7 @@ const Tracklist = styled(({ className }) => {
 `
 
 const TracklistItem = styled(({ className, song, index }) => (
-  <a href={`/music/${song.id}/`} className={className}>
+  <Link to={`/music/${song.id}/`} className={className}>
     <span className="genre">
       <SongType type={song.type} />
       <br />
@@ -106,7 +107,7 @@ const TracklistItem = styled(({ className, song, index }) => (
     <strong className="title">{song.title}</strong>
     <br />
     <span className="artist">{song.artist}</span>
-  </a>
+  </Link>
 ))`
   color: inherit;
   text-decoration: none;
@@ -166,7 +167,7 @@ function renderSongPage(song) {
           <PreviousNext>
             {!!olderSong && (
               <PreviousNext.Item older>
-                <PreviousNext.Link href={`/music/${olderSong.id}/`}>
+                <PreviousNext.Link to={`/music/${olderSong.id}/`}>
                   &laquo; older song
                   <PreviousNext.Title>{olderSong.title}</PreviousNext.Title>
                 </PreviousNext.Link>
@@ -174,7 +175,7 @@ function renderSongPage(song) {
             )}
             {!!newerSong && (
               <PreviousNext.Item newer>
-                <PreviousNext.Link href={`/music/${newerSong.id}/`}>
+                <PreviousNext.Link to={`/music/${newerSong.id}/`}>
                   newer song &raquo;
                   <PreviousNext.Title>{newerSong.title}</PreviousNext.Title>
                 </PreviousNext.Link>
@@ -188,7 +189,7 @@ function renderSongPage(song) {
   )
 }
 const SongHeading = styled(({ className, song }) => (
-  <h1 href={`/music/${song.id}/`} className={className}>
+  <h1 className={className}>
     <span className="genre">
       <SongType type={song.type} />
       <br />
@@ -226,22 +227,22 @@ const SongNavigation = styled(({ className, children, older, newer }) => (
   <div className={className}>
     <div className="current">{children}</div>
     <div className="navigate older">
-      <a
-        href={older ? `/music/${older.id}/` : '#'}
+      <Link
+        to={older ? `/music/${older.id}/` : '#'}
         className={older ? '' : 'is-disabled'}
         tabIndex={older ? 0 : -1}
       >
         &laquo;
-      </a>
+      </Link>
     </div>
     <div className="navigate newer">
-      <a
-        href={newer ? `/music/${newer.id}/` : '#'}
+      <Link
+        to={newer ? `/music/${newer.id}/` : '#'}
         className={newer ? '' : 'is-disabled'}
         tabIndex={newer ? 0 : -1}
       >
         &raquo;
-      </a>
+      </Link>
     </div>
   </div>
 ))`

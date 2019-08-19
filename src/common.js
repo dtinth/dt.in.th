@@ -3,18 +3,24 @@ import React from 'react'
 import Chance from 'chance'
 import _ from 'lodash'
 import { fontSize, beat, C4, Db3, Ab3, F4 } from './styles'
+import { Link } from 'gatsby'
 
 export function Breadcrumb({ items = [] }) {
   return (
     <BreadcrumbContainer>
-      <a href="/">
+      <Link to="/">
         <SiteName>dt.in.th</SiteName>
-      </a>{' '}
+      </Link>{' '}
       &raquo;
       {items.map((item, i) => (
         <React.Fragment key={i}>
           {' '}
-          <a href={item.href}>{item.text}</a> &raquo;
+          {item.href.startsWith('/') ? (
+            <Link to={item.href}>{item.text}</Link>
+          ) : (
+            <a href={item.href}>{item.text}</a>
+          )}{' '}
+          &raquo;
         </React.Fragment>
       ))}
     </BreadcrumbContainer>
@@ -177,7 +183,13 @@ function LinkItem({ animated, active, small, index, children, href }) {
     )
   return (
     <LinkListItem small={small} active={active}>
-      {wrapWithAnimation(<a href={href}>{children}</a>)}
+      {wrapWithAnimation(
+        href.startsWith('/') ? (
+          <Link to={href}>{children}</Link>
+        ) : (
+          <a href={href}>{children}</a>
+        ),
+      )}
     </LinkListItem>
   )
 }
@@ -308,7 +320,7 @@ PreviousNext.Item = styled.li`
     width: 48%;
   }
 `
-PreviousNext.Link = styled.a`
+PreviousNext.Link = styled(Link)`
   display: block;
   text-decoration: none;
   line-height: ${beat(1)};
