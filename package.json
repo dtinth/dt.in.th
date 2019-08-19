@@ -1,4 +1,6 @@
 {
+  "name": "dt.in.th",
+  "private": true,
   "scripts": {
     "dev": "gatsby develop",
     "build": "gatsby build"
