@@ -19,7 +19,6 @@ import styled from 'styled-components'
 import React from 'react'
 import { beat, fontSize, F4, Eb4, Bb3, relativeFontSize } from './styles'
 import data from './music.yml'
-import HtmlToReact from 'html-to-react'
 import MarkdownIt from 'markdown-it'
 
 export const ENABLED = true // process.env.NODE_ENV !== 'production'
@@ -167,7 +166,7 @@ function renderSongPage(song) {
           <PreviousNext>
             {!!olderSong && (
               <PreviousNext.Item older>
-                <PreviousNext.Link href={prefetch(`/music/${olderSong.id}/`)}>
+                <PreviousNext.Link href={`/music/${olderSong.id}/`}>
                   &laquo; older song
                   <PreviousNext.Title>{olderSong.title}</PreviousNext.Title>
                 </PreviousNext.Link>
@@ -274,9 +273,11 @@ const md = MarkdownIt({
 })
 const SongDescription = styled(({ className, text }) => {
   const html = md.render(text)
-  const parser = new HtmlToReact.Parser()
-  const element = parser.parse(html)
-  return <div className={className}>{element}</div>
+
+  // TODO: Render Markdown in preprocessor instead of here
+  return (
+    <div className={className} dangerouslySetInnerHTML={{ __html: html }} />
+  )
 })`
   margin-top: ${beat(1)};
   pre,
