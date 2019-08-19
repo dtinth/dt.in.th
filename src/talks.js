@@ -17,6 +17,7 @@ import {
 import { beat } from './styles'
 import smellsInReactAppsImage from './talks/smells-in-react-apps.jpg'
 
+// TODO: Extract this data to files.
 const data = [
   {
     id: 'smells-in-react-apps',

@@ -1,6 +1,7 @@
 const path = require(`path`)
 
 exports.createPages = ({ graphql, actions }) => {
+  // TODO: Don’t hardcode pages here, source data from files.
   const talkIds = [
     'smells-in-react-apps',
     'code-mania-110',
