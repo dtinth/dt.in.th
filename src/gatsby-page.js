@@ -1,3 +1,4 @@
+import React from 'react'
 import * as layout from './layout'
 import home from './home'
 import music from './music'
@@ -12,5 +13,11 @@ export const pages = Object.assign(
 )
 
 export default props => {
-  return layout.render(pages[props.path])
+  const path = props.pageContext.pagePath
+  const page = pages[path]
+  if (!page) {
+    console.error('No page for path "' + path + '"')
+    return <div>{props.path}</div>
+  }
+  return layout.render(page)
 }
