@@ -12,9 +12,6 @@ const GlobalStyle = createGlobalStyle`
     font-size: 18px;
   }
   html {
-    font-family: Helvetica, sans-serif;
-  }
-  html.wf-active {
     font-family: Arimo, Helvetica, sans-serif;
   }
   body {
