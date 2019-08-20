@@ -22,6 +22,21 @@ import data from './music.yml'
 import MarkdownIt from 'markdown-it'
 import { Link } from 'gatsby'
 
+{
+  // HACK: Export song file templates
+  const yaml = require('js-yaml')
+  const _ = require('lodash')
+  window.songFiles = data.songs.map(t => [
+    t.id,
+    '---\n' +
+      yaml.safeDump(_.omit(t, ['description'])) +
+      '---\n\n' +
+      t.description,
+  ])
+  // In JS console:
+  //    copy(window.songFiles)
+}
+
 export const ENABLED = true // process.env.NODE_ENV !== 'production'
 const songs = data.songs
 const pages = {
