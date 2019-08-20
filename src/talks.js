@@ -347,6 +347,18 @@ const data = [
   },
 ]
 
+{
+  // HACK: Export talk file templates
+  const yaml = require('js-yaml')
+  const _ = require('lodash')
+  window.talkFiles = data.map(t => [
+    t.id,
+    yaml.safeDump(_.omit(t, ['description', 'links', 'id'])),
+  ])
+  // In JS console:
+  //    copy(window.talkFiles)
+}
+
 const pages = {}
 
 for (const talkData of data) {
