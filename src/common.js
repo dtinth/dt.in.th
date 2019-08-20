@@ -3,19 +3,24 @@ import React from 'react'
 import Chance from 'chance'
 import _ from 'lodash'
 import { fontSize, beat, C4, Db3, Ab3, F4 } from './styles'
-import { Prefetcher } from './prefetch'
+import { Link } from 'gatsby'
 
-export function Breadcrumb ({ items = [] }) {
+export function Breadcrumb({ items = [] }) {
   return (
     <BreadcrumbContainer>
-      <a href='/'>
+      <Link to="/">
         <SiteName>dt.in.th</SiteName>
-      </a>{' '}
+      </Link>{' '}
       &raquo;
       {items.map((item, i) => (
         <React.Fragment key={i}>
           {' '}
-          <a href={item.href}>{item.text}</a> &raquo;
+          {item.href.startsWith('/') ? (
+            <Link to={item.href}>{item.text}</Link>
+          ) : (
+            <a href={item.href}>{item.text}</a>
+          )}{' '}
+          &raquo;
         </React.Fragment>
       ))}
     </BreadcrumbContainer>
@@ -79,7 +84,7 @@ const getAnimation = _.memoize(i => {
         .replace(/(\..*?)0*$/, '$1')
         .replace(/\.$/, '')
     return `
-      ${i * 100 / 8}% {
+      ${(i * 100) / 8}% {
         transform:
           rotate3d(${f(xr * v)}, ${f(yr * v)}, ${f(zr * v)}, ${f(v * 180)}deg)
           translate3d(${f(x0 * v)}vw, ${f(y0 * v)}vw, ${f(z0 * v)}vw);
@@ -89,10 +94,10 @@ const getAnimation = _.memoize(i => {
   }
   return keyframes`
     ${Array(9)
-    .fill()
-    .map((_, i) => i)
-    .map(keyframe)
-    .join('')}
+      .fill()
+      .map((_, i) => i)
+      .map(keyframe)
+      .join('')}
   `
 })
 
@@ -118,7 +123,7 @@ export const Footer = styled(({ className }) => {
 
 const activeSectionContext = React.createContext()
 
-export function Navigation ({ animated, homeLink, small }) {
+export function Navigation({ animated, homeLink, small }) {
   const item = (section, index, href, text) => (
     <activeSectionContext.Consumer>
       {activeSection => (
@@ -135,24 +140,19 @@ export function Navigation ({ animated, homeLink, small }) {
     </activeSectionContext.Consumer>
   )
   return (
-    <Prefetcher>
-      {prefetch => (
-        <Links>
-          {homeLink &&
-            item('home', 0, prefetch('/'), <SiteName>dt.in.th</SiteName>)}
-          {item('talks', 1, prefetch('/talks/'), 'Talks')}
-          {item('music', 2, prefetch('/music/'), 'Music')}
-          {item('github', 3, 'https://github.com/dtinth', 'GitHub')}
-          {item('twitter', 4, 'https://twitter.com/dtinth', 'Twitter')}
-          {item('medium', 5, 'https://medium.com/@dtinth', 'Medium')}
-          {item('blog', 6, 'https://me.dt.in.th', 'Old Blog')}
-        </Links>
-      )}
-    </Prefetcher>
+    <Links>
+      {homeLink && item('home', 0, '/', <SiteName>dt.in.th</SiteName>)}
+      {item('talks', 1, '/talks/', 'Talks')}
+      {item('music', 2, '/music/', 'Music')}
+      {item('github', 3, 'https://github.com/dtinth', 'GitHub')}
+      {item('twitter', 4, 'https://twitter.com/dtinth', 'Twitter')}
+      {item('medium', 5, 'https://medium.com/@dtinth', 'Medium')}
+      {item('blog', 6, 'https://me.dt.in.th', 'Old Blog')}
+    </Links>
   )
 }
 
-export function ActiveSectionProvider ({ children, activeSection }) {
+export function ActiveSectionProvider({ children, activeSection }) {
   return (
     <activeSectionContext.Provider value={activeSection}>
       {children}
@@ -172,7 +172,7 @@ const Links = styled.ul`
   justify-content: center;
 `
 
-function LinkItem ({ animated, active, small, index, children, href }) {
+function LinkItem({ animated, active, small, index, children, href }) {
   const wrapWithAnimation = x =>
     animated ? (
       <AnimatedCharacter delay={index * 0.07 + 0.3} seed={index + 99}>
@@ -183,7 +183,13 @@ function LinkItem ({ animated, active, small, index, children, href }) {
     )
   return (
     <LinkListItem small={small} active={active}>
-      {wrapWithAnimation(<a href={href}>{children}</a>)}
+      {wrapWithAnimation(
+        href.startsWith('/') ? (
+          <Link to={href}>{children}</Link>
+        ) : (
+          <a href={href}>{children}</a>
+        ),
+      )}
     </LinkListItem>
   )
 }
@@ -210,46 +216,46 @@ export const Main = styled.div`
   margin: ${beat(3)} auto ${beat(2)};
 `
 
-export function YouTube ({ id }) {
+export function YouTube({ id }) {
   return (
     <EmbedContainer ratio={720 / 405}>
       <iframe
-        width='720'
-        height='405'
+        width="720"
+        height="405"
         src={'https://www.youtube.com/embed/' + id + '?rel=0'}
-        frameBorder='0'
+        frameBorder="0"
         allowFullScreen
       />
     </EmbedContainer>
   )
 }
 
-export function SoundCloud ({ id }) {
+export function SoundCloud({ id }) {
   return (
     <Wrapper>
       <iframe
-        width='100%'
-        height='300'
-        scrolling='no'
-        frameBorder='no'
-        allow='autoplay'
+        width="100%"
+        height="300"
+        scrolling="no"
+        frameBorder="no"
+        allow="autoplay"
         src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${id}&color=%238b8685&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true`}
       />
     </Wrapper>
   )
 }
 
-export function SlideShare ({ id }) {
+export function SlideShare({ id }) {
   return (
     <EmbedContainer ratio={720 / 587}>
       <iframe
-        width='720'
-        height='587'
-        className='youtube'
+        width="720"
+        height="587"
+        className="youtube"
         src={
           'https://www.slideshare.net/slideshow/embed_code/key/' + id + '?rel=0'
         }
-        frameBorder='0'
+        frameBorder="0"
         allowFullScreen
       />
     </EmbedContainer>
@@ -314,7 +320,7 @@ PreviousNext.Item = styled.li`
     width: 48%;
   }
 `
-PreviousNext.Link = styled.a`
+PreviousNext.Link = styled(Link)`
   display: block;
   text-decoration: none;
   line-height: ${beat(1)};

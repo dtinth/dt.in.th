@@ -1,3 +1,4 @@
+# TODO: Extract each of these to its own file
 songs:
   - id: 'just-look-at-my-eyes-bms'
     title: 'Just look at my eyes (bms edit)'
