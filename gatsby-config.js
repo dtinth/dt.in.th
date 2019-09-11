@@ -32,7 +32,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-        component: require.resolve(`./src/page-wrapper.js`),
+        component: require.resolve(`./src/PageWrapper.js`),
       },
     },
   ],
