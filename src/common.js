@@ -306,28 +306,32 @@ export const SiteTitleContainer = styled.div`
   padding-top: 20vh;
 `
 
-export const PreviousNext = styled.ul`
-  padding: 0;
-  margin: ${beat(2)} 0 0;
-  list-style: none;
-  display: flex;
-`
-PreviousNext.Item = styled.li`
-  text-align: ${props => (props.older ? 'left' : 'right')};
-  margin-left: ${props => (props.newer ? 'auto' : '0')};
-  width: 32%;
-  @media (max-width: 719px) {
-    width: 48%;
-  }
-`
-PreviousNext.Link = styled(Link)`
-  display: block;
-  text-decoration: none;
-  line-height: ${beat(1)};
-`
-PreviousNext.Title = styled.span`
-  display: block;
-  color: #8b8685;
-  font-size: ${fontSize(F4)};
-  line-height: ${beat(0.75)};
-`
+export const PreviousNext = Object.assign(
+  styled.ul`
+    padding: 0;
+    margin: ${beat(2)} 0 0;
+    list-style: none;
+    display: flex;
+  `,
+  {
+    Item: styled.li`
+      text-align: ${props => (props.older ? 'left' : 'right')};
+      margin-left: ${props => (props.newer ? 'auto' : '0')};
+      width: 32%;
+      @media (max-width: 719px) {
+        width: 48%;
+      }
+    `,
+    Link: styled(Link)`
+      display: block;
+      text-decoration: none;
+      line-height: ${beat(1)};
+    `,
+    Title: styled.span`
+      display: block;
+      color: #8b8685;
+      font-size: ${fontSize(F4)};
+      line-height: ${beat(0.75)};
+    `,
+  },
+)

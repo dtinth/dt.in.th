@@ -1,6 +1,7 @@
 const path = require(`path`)
+const { createFilePath } = require('gatsby-source-filesystem')
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   // TODO: Don’t hardcode pages here, source data from files.
   const talkIds = [
     'smells-in-react-apps',
@@ -40,7 +41,7 @@ exports.createPages = ({ graphql, actions }) => {
     '/talks/',
     ...talkIds.map(id => `/talks/${id}/`),
     '/music/',
-    ...songIds.map(id => `/music/${id}/`),
+    // ...songIds.map(id => `/music/${id}/`),
   ]
   const { createPage } = actions
   pages.forEach(p => {
@@ -52,4 +53,80 @@ exports.createPages = ({ graphql, actions }) => {
       },
     })
   })
+
+  const result = await graphql(`
+    query Songs {
+      allMdx(
+        filter: { fields: { sourceInstanceName: { eq: "songs" } } }
+        sort: { order: DESC, fields: frontmatter___date }
+      ) {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+          }
+        }
+      }
+    }
+  `)
+  if (result.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+  }
+
+  const songs = result.data.allMdx.edges
+  const songToContext = ({ node } = {}) => {
+    return (
+      node && {
+        id: node.fields.slug,
+        title: node.frontmatter.title,
+      }
+    )
+  }
+  songs.forEach(({ node }, index) => {
+    createPage({
+      path: `/music` + node.fields.slug,
+      component: path.resolve(`./src/song-page.js`),
+      context: {
+        id: node.id,
+        olderSong: songToContext(songs[index + 1]),
+        newerSong: songToContext(songs[index - 1]),
+      },
+    })
+  })
+  // body
+  // frontmatter {
+  //   title
+  //   artist
+  //   youtube
+  //   soundcloud
+  //   type
+  //   genre
+  //   date
+  // }
+}
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `Mdx`) {
+    const parent = getNode(node.parent)
+
+    if (parent.internal.type === 'File') {
+      createNodeField({
+        name: 'sourceInstanceName',
+        node,
+        value: parent.sourceInstanceName,
+      })
+      createNodeField({
+        name: 'slug',
+        node,
+        value: createFilePath({ node, getNode }),
+      })
+    }
+  }
 }

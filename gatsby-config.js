@@ -1,6 +1,7 @@
 module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
+    { resolve: `gatsby-plugin-mdx`, options: { commonmark: true } },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -12,6 +13,20 @@ module.exports = {
       options: {
         fonts: ['Arimo:400,700'],
         display: 'swap',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'songs',
+        path: `${__dirname}/src/songs/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'talks',
+        path: `${__dirname}/src/talks/`,
       },
     },
   ],
