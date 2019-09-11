@@ -18,7 +18,7 @@ exports.createPages = async ({ graphql, actions }) => {
     'vim',
     'recursion',
   ]
-  const pages = ['/', '/talks/', ...talkIds.map(id => `/talks/${id}/`)]
+  const pages = ['/', '/talks/']
   const { createPage } = actions
   pages.forEach(p => {
     createPage({
@@ -30,64 +30,107 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  const result = await graphql(`
-    query Songs {
-      allMdx(
-        filter: { fields: { sourceInstanceName: { eq: "songs" } } }
-        sort: { order: DESC, fields: frontmatter___date }
-      ) {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              title
+  {
+    // Talks
+    const result = await graphql(`
+      query Talks {
+        allMdx(
+          filter: { fields: { sourceInstanceName: { eq: "talks" } } }
+          sort: { order: DESC, fields: frontmatter___date }
+        ) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
             }
           }
         }
       }
+    `)
+    if (result.errors) {
+      reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
     }
-  `)
-  if (result.errors) {
-    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+    const talks = result.data.allMdx.edges
+    const talkEdgeToContext = ({ node } = {}) => {
+      return (
+        node && {
+          id: node.fields.slug,
+          title: node.frontmatter.title,
+        }
+      )
+    }
+    createPage({
+      path: `/talks/`,
+      component: path.resolve(`./src/talks/TalkIndexPage.js`),
+    })
+    talks.forEach(({ node }, index) => {
+      createPage({
+        path: `/talks${node.fields.slug}`,
+        component: path.resolve(`./src/talks/TalkInfoPage.js`),
+        context: {
+          id: node.id,
+          olderTalk: talkEdgeToContext(talks[index + 1]),
+          newerTalk: talkEdgeToContext(talks[index - 1]),
+        },
+      })
+    })
   }
 
-  const songs = result.data.allMdx.edges
-  const songToContext = ({ node } = {}) => {
-    return (
-      node && {
-        id: node.fields.slug,
-        title: node.frontmatter.title,
+  {
+    // Music
+    const result = await graphql(`
+      query Songs {
+        allMdx(
+          filter: { fields: { sourceInstanceName: { eq: "songs" } } }
+          sort: { order: DESC, fields: frontmatter___date }
+        ) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
       }
-    )
-  }
-  createPage({
-    path: `/music/`,
-    component: path.resolve(`./src/music/SongIndexPage.js`),
-  })
-  songs.forEach(({ node }, index) => {
+    `)
+    if (result.errors) {
+      reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+    }
+    const songs = result.data.allMdx.edges
+    const songEdgeToContext = ({ node } = {}) => {
+      return (
+        node && {
+          id: node.fields.slug,
+          title: node.frontmatter.title,
+        }
+      )
+    }
     createPage({
-      path: `/music${node.fields.slug}`,
-      component: path.resolve(`./src/music/SongInfoPage.js`),
-      context: {
-        id: node.id,
-        olderSong: songToContext(songs[index + 1]),
-        newerSong: songToContext(songs[index - 1]),
-      },
+      path: `/music/`,
+      component: path.resolve(`./src/music/SongIndexPage.js`),
     })
-  })
-  // body
-  // frontmatter {
-  //   title
-  //   artist
-  //   youtube
-  //   soundcloud
-  //   type
-  //   genre
-  //   date
-  // }
+    songs.forEach(({ node }, index) => {
+      createPage({
+        path: `/music${node.fields.slug}`,
+        component: path.resolve(`./src/music/SongInfoPage.js`),
+        context: {
+          id: node.id,
+          olderSong: songEdgeToContext(songs[index + 1]),
+          newerSong: songEdgeToContext(songs[index - 1]),
+        },
+      })
+    })
+  }
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {

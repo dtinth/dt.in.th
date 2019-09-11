@@ -1,14 +1,10 @@
 import React from 'react'
 import * as layout from './layout'
 import home from './home'
-import talks from './talks'
 
-export const pages = Object.assign(
-  {
-    '/': home,
-  },
-  talks,
-)
+export const pages = Object.assign({
+  '/': home,
+})
 
 export default props => {
   const path = props.pageContext.pagePath

@@ -1,6 +1,8 @@
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import titleFont from './arimo-bold-title-subset.woff2'
+import { MDXProvider } from '@mdx-js/react'
+import { Heading, P } from './common'
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -29,6 +31,13 @@ const GlobalStyle = createGlobalStyle`
 export default ({ children }) => (
   <React.Fragment>
     <GlobalStyle />
-    {children}
+    <MDXProvider
+      components={{
+        h1: Heading,
+        p: P,
+      }}
+    >
+      {children}
+    </MDXProvider>
   </React.Fragment>
 )

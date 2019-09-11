@@ -3,7 +3,7 @@ import React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import { beat, fontSize, Eb4, Bb3, relativeFontSize } from '../styles'
+import { beat, fontSize, Eb4, Bb3 } from '../styles'
 import { Link } from 'gatsby'
 import { SongType } from './SongType'
 
@@ -19,7 +19,7 @@ import {
 } from '../common'
 
 export const pageQuery = graphql`
-  query BlogPostQuery($id: String) {
+  query SongInfoQuery($id: String) {
     mdx(id: { eq: $id }) {
       id
       body

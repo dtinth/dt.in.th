@@ -230,6 +230,32 @@ export function YouTube({ id }) {
   )
 }
 
+export function SpeakerDeck({ id, ratio }) {
+  // https://kansock.industries/ja/articles/20190426_01/
+  return (
+    <div
+      style={{
+        position: 'relative',
+        paddingBottom: `${(100 / ratio).toFixed(6)}%`,
+      }}
+    >
+      <iframe
+        src={`//speakerdeck.com/player/${id}`}
+        style={{
+          border: 0,
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+        }}
+        frameBorder="0"
+        allowFullScreen
+      ></iframe>
+    </div>
+  )
+}
+
 export function SoundCloud({ id }) {
   return (
     <Wrapper>

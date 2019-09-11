@@ -15,12 +15,11 @@ import {
 import styled from 'styled-components'
 import React from 'react'
 import { beat, fontSize, F4 } from '../styles'
-import { Link } from 'gatsby'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import { SongType } from './SongType'
 
 export const pageQuery = graphql`
-  query Songs {
+  query SongIndexQuery {
     allMdx(
       filter: { fields: { sourceInstanceName: { eq: "songs" } } }
       sort: { order: DESC, fields: frontmatter___date }

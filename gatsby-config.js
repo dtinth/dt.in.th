@@ -26,7 +26,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'talks',
-        path: `${__dirname}/src/talks/`,
+        path: `${__dirname}/src/talks/data/`,
       },
     },
     {
