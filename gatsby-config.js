@@ -29,5 +29,11 @@ module.exports = {
         path: `${__dirname}/src/talks/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/page-wrapper.js`),
+      },
+    },
   ],
 }

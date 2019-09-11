@@ -18,31 +18,7 @@ exports.createPages = async ({ graphql, actions }) => {
     'vim',
     'recursion',
   ]
-  const songIds = [
-    'just-look-at-my-eyes-bms',
-    '422',
-    'butter-fly-cover-collab',
-    'everyday-evermore',
-    'bursting-music-star',
-    'over-whelming-joy',
-    'running-out-2015',
-    'only-love-remix',
-    'by-my-side-ambient-house-mix',
-    'auto-synchro',
-    'reminiscentia',
-    'by-my-side',
-    'sawasdee-new-year',
-    'dont-wake-me-up-re-remix',
-    'type-your-text-here',
-    'opaque-space',
-  ]
-  const pages = [
-    '/',
-    '/talks/',
-    ...talkIds.map(id => `/talks/${id}/`),
-    '/music/',
-    // ...songIds.map(id => `/music/${id}/`),
-  ]
+  const pages = ['/', '/talks/', ...talkIds.map(id => `/talks/${id}/`)]
   const { createPage } = actions
   pages.forEach(p => {
     createPage({

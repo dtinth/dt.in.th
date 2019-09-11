@@ -1,28 +1,20 @@
 // @ts-check
 import React from 'react'
-import * as layout from './layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import { beat, fontSize, F4, Eb4, Bb3, relativeFontSize } from './styles'
+import { beat, fontSize, Eb4, Bb3, relativeFontSize } from './styles'
 import { Link } from 'gatsby'
 
 import {
   ActiveSectionProvider,
   Footer,
-  FadeIn,
   Main,
   Wrapper,
-  Perspective,
-  AnimatedCharacter,
-  Intro,
-  SiteTitle,
-  SiteTitleContainer,
   PreviousNext,
   Breadcrumb,
   YouTube,
   SoundCloud,
-  Name,
 } from './common'
 
 export const pageQuery = graphql`
@@ -54,53 +46,49 @@ export default props => {
   const breadcrumb = [{ text: 'Music', href: '/music/' }]
   const song = mdx.frontmatter
 
-  return layout.render({
-    render() {
-      return (
-        <ActiveSectionProvider activeSection="music">
-          <Main>
-            <Wrapper>
-              <Breadcrumb items={breadcrumb} />
-              <SongNavigation older={olderSong} newer={newerSong}>
-                <SongHeading song={song} />
-              </SongNavigation>
-            </Wrapper>
-            {song.youtube ? (
-              <YouTube id={song.youtube} />
-            ) : song.soundcloud ? (
-              <SoundCloud id={song.soundcloud} />
-            ) : null}
-            <Wrapper>
-              <SongDescription>
-                <MDXRenderer>{mdx.body}</MDXRenderer>
-              </SongDescription>
-            </Wrapper>
-            <Wrapper>
-              <PreviousNext>
-                {!!olderSong && (
-                  <PreviousNext.Item older>
-                    <PreviousNext.Link to={`/music/${olderSong.id}/`}>
-                      &laquo; older song
-                      <PreviousNext.Title>{olderSong.title}</PreviousNext.Title>
-                    </PreviousNext.Link>
-                  </PreviousNext.Item>
-                )}
-                {!!newerSong && (
-                  <PreviousNext.Item newer>
-                    <PreviousNext.Link to={`/music/${newerSong.id}/`}>
-                      newer song &raquo;
-                      <PreviousNext.Title>{newerSong.title}</PreviousNext.Title>
-                    </PreviousNext.Link>
-                  </PreviousNext.Item>
-                )}
-              </PreviousNext>
-              <Footer />
-            </Wrapper>
-          </Main>
-        </ActiveSectionProvider>
-      )
-    },
-  })
+  return (
+    <ActiveSectionProvider activeSection="music">
+      <Main>
+        <Wrapper>
+          <Breadcrumb items={breadcrumb} />
+          <SongNavigation older={olderSong} newer={newerSong}>
+            <SongHeading song={song} />
+          </SongNavigation>
+        </Wrapper>
+        {song.youtube ? (
+          <YouTube id={song.youtube} />
+        ) : song.soundcloud ? (
+          <SoundCloud id={song.soundcloud} />
+        ) : null}
+        <Wrapper>
+          <SongDescription>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </SongDescription>
+        </Wrapper>
+        <Wrapper>
+          <PreviousNext>
+            {!!olderSong && (
+              <PreviousNext.Item older>
+                <PreviousNext.Link to={`/music/${olderSong.id}/`}>
+                  &laquo; older song
+                  <PreviousNext.Title>{olderSong.title}</PreviousNext.Title>
+                </PreviousNext.Link>
+              </PreviousNext.Item>
+            )}
+            {!!newerSong && (
+              <PreviousNext.Item newer>
+                <PreviousNext.Link to={`/music/${newerSong.id}/`}>
+                  newer song &raquo;
+                  <PreviousNext.Title>{newerSong.title}</PreviousNext.Title>
+                </PreviousNext.Link>
+              </PreviousNext.Item>
+            )}
+          </PreviousNext>
+          <Footer />
+        </Wrapper>
+      </Main>
+    </ActiveSectionProvider>
+  )
 }
 
 const SongNavigation = styled(({ className, children, older, newer }) => (

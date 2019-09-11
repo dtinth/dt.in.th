@@ -1,7 +1,6 @@
 import React from 'react'
 import * as layout from './layout'
 import home from './home'
-import music from './music'
 import talks from './talks'
 
 export const pages = Object.assign(
@@ -9,7 +8,6 @@ export const pages = Object.assign(
     '/': home,
   },
   talks,
-  music,
 )
 
 export default props => {
