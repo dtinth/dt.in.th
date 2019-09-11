@@ -3,8 +3,9 @@ import React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import { beat, fontSize, Eb4, Bb3, relativeFontSize } from './styles'
+import { beat, fontSize, Eb4, Bb3, relativeFontSize } from '../styles'
 import { Link } from 'gatsby'
+import { SongType } from './SongType'
 
 import {
   ActiveSectionProvider,
@@ -15,7 +16,7 @@ import {
   Breadcrumb,
   YouTube,
   SoundCloud,
-} from './common'
+} from '../common'
 
 export const pageQuery = graphql`
   query BlogPostQuery($id: String) {
@@ -204,25 +205,5 @@ const SongHeading = styled(({ className, song }) => (
   }
   > br {
     display: none;
-  }
-`
-
-const SongType = styled(({ className, type }) => (
-  <span className={`${className} ${type}`}>{type}</span>
-))`
-  text-transform: uppercase;
-  border: 1px solid currentColor;
-  font-size: ${relativeFontSize(3)};
-  font-weight: normal;
-  padding: 0.1ex 0.25ex;
-  border-radius: 3px;
-  &.collab {
-    color: #f9d153;
-  }
-  &.original {
-    color: #d7fc70;
-  }
-  &.remix {
-    color: #fc80a8;
   }
 `

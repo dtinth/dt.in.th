@@ -14,9 +14,10 @@ import {
 } from '../common'
 import styled from 'styled-components'
 import React from 'react'
-import { beat, fontSize, F4, relativeFontSize } from '../styles'
+import { beat, fontSize, F4 } from '../styles'
 import { Link } from 'gatsby'
 import { graphql } from 'gatsby'
+import { SongType } from './SongType'
 
 export const pageQuery = graphql`
   query Songs {
@@ -147,25 +148,5 @@ const TracklistItem = styled(({ className, song, index }) => (
   }
   > br {
     display: none;
-  }
-`
-
-const SongType = styled(({ className, type }) => (
-  <span className={`${className} ${type}`}>{type}</span>
-))`
-  text-transform: uppercase;
-  border: 1px solid currentColor;
-  font-size: ${relativeFontSize(3)};
-  font-weight: normal;
-  padding: 0.1ex 0.25ex;
-  border-radius: 3px;
-  &.collab {
-    color: #f9d153;
-  }
-  &.original {
-    color: #d7fc70;
-  }
-  &.remix {
-    color: #fc80a8;
   }
 `

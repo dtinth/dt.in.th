@@ -63,10 +63,14 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     )
   }
+  createPage({
+    path: `/music/`,
+    component: path.resolve(`./src/music/SongIndexPage.js`),
+  })
   songs.forEach(({ node }, index) => {
     createPage({
-      path: `/music` + node.fields.slug,
-      component: path.resolve(`./src/song-page.js`),
+      path: `/music${node.fields.slug}`,
+      component: path.resolve(`./src/music/SongInfoPage.js`),
       context: {
         id: node.id,
         olderSong: songToContext(songs[index + 1]),

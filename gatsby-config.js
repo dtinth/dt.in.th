@@ -19,7 +19,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'songs',
-        path: `${__dirname}/src/songs/`,
+        path: `${__dirname}/src/music/songs/`,
       },
     },
     {
