@@ -12,29 +12,23 @@ import {
   Intro,
   SiteTitle,
   SiteTitleContainer,
-  Name
-} from './common'
+  Name,
+} from '../common'
 
-export default {
-  title: 'dt.in.th',
-  render: renderPage
-}
-
-function renderPage () {
+export default () => {
   return (
-    <ActiveSectionProvider activeSection='home'>
+    <ActiveSectionProvider activeSection="home">
       <Perspective>
         <SiteTitleContainer>
           <SiteTitle>
-            {'dt.in.th'.split('').map(
-              (ch, i) =>
-                ch === ' ' ? (
-                  <span />
-                ) : (
-                  <AnimatedCharacter key={i} seed={i} delay={i * 0.03}>
-                    {ch}
-                  </AnimatedCharacter>
-                )
+            {'dt.in.th'.split('').map((ch, i) =>
+              ch === ' ' ? (
+                <span />
+              ) : (
+                <AnimatedCharacter key={i} seed={i} delay={i * 0.03}>
+                  {ch}
+                </AnimatedCharacter>
+              ),
             )}
           </SiteTitle>
           <Navigation animated />
