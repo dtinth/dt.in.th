@@ -15,6 +15,7 @@ import {
   SlideShare,
   Name,
   SpeakerDeck,
+  PageMeta,
 } from '../common'
 import { graphql } from 'gatsby'
 
@@ -55,6 +56,7 @@ export default props => {
 
   return (
     <ActiveSectionProvider activeSection="talks">
+      <PageMeta title={talkData.title} />
       <Main>
         <Wrapper>
           <Breadcrumb items={breadcrumb} />

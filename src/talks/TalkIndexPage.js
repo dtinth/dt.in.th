@@ -6,6 +6,7 @@ import {
   Wrapper,
   Breadcrumb,
   Heading,
+  PageMeta,
 } from '../common'
 import styled from 'styled-components'
 import React from 'react'
@@ -38,6 +39,7 @@ export default props => {
   const { data } = props
   return (
     <ActiveSectionProvider activeSection="talks">
+      <PageMeta title="Talks" />
       <Main>
         <Wrapper>
           <Breadcrumb />

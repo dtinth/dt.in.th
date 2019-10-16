@@ -16,6 +16,7 @@ import {
   Breadcrumb,
   YouTube,
   SoundCloud,
+  PageMeta,
 } from '../common'
 
 export const pageQuery = graphql`
@@ -49,6 +50,7 @@ export default props => {
 
   return (
     <ActiveSectionProvider activeSection="music">
+      <PageMeta title={song.title} />
       <Main>
         <Wrapper>
           <Breadcrumb items={breadcrumb} />

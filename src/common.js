@@ -4,6 +4,19 @@ import Chance from 'chance'
 import _ from 'lodash'
 import { fontSize, beat, C4, Db3, Ab3, F4 } from './styles'
 import { Link } from 'gatsby'
+import { Helmet } from 'react-helmet'
+
+export { Helmet }
+
+export function PageMeta({ title }) {
+  return (
+    <Helmet>
+      <title>{`${title} ★ dt.in.th`}</title>
+      <meta property="og:title" content={`${title}`} />
+      <meta property="og:site_name" content={`dt.in.th`} />
+    </Helmet>
+  )
+}
 
 export function Breadcrumb({ items = [] }) {
   return (

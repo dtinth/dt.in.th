@@ -11,6 +11,7 @@ import {
   SiteTitle,
   SiteTitleContainer,
   Name,
+  PageMeta,
 } from '../common'
 import styled from 'styled-components'
 import React from 'react'
@@ -52,6 +53,7 @@ export default props => {
   }))
   return (
     <ActiveSectionProvider activeSection="music">
+      <PageMeta title="flicknote" />
       <Perspective>
         <SiteTitleContainer>
           <SiteTitle>

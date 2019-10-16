@@ -13,11 +13,13 @@ import {
   SiteTitle,
   SiteTitleContainer,
   Name,
+  PageMeta,
 } from '../common'
 
 export default () => {
   return (
     <ActiveSectionProvider activeSection="home">
+      <PageMeta title="Home" />
       <Perspective>
         <SiteTitleContainer>
           <SiteTitle>
