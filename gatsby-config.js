@@ -36,5 +36,7 @@ module.exports = {
         component: require.resolve(`./src/PageWrapper.js`),
       },
     },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }
