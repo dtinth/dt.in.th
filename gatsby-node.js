@@ -17,11 +17,23 @@ exports.createPages = async ({ graphql, actions }) => {
               id
               fields {
                 slug
+                name
               }
               frontmatter {
                 title
               }
             }
+          }
+        }
+        allFile(
+          filter: {
+            sourceInstanceName: { eq: "talks" }
+            extension: { eq: "jpg" }
+          }
+        ) {
+          nodes {
+            name
+            publicURL
           }
         }
       }
@@ -43,11 +55,15 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`./src/talks/TalkIndexPage.js`),
     })
     talks.forEach(({ node }, index) => {
+      const image = result.data.allFile.nodes.find(
+        f => f.name === node.fields.name,
+      )
       createPage({
         path: `/talks${node.fields.slug}`,
         component: path.resolve(`./src/talks/TalkInfoPage.js`),
         context: {
           id: node.id,
+          image: (image && image.publicURL) || null,
           olderTalk: talkEdgeToContext(talks[index + 1]),
           newerTalk: talkEdgeToContext(talks[index - 1]),
         },
@@ -123,6 +139,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         name: 'slug',
         node,
         value: createFilePath({ node, getNode }),
+      })
+      createNodeField({
+        name: 'name',
+        node,
+        value: parent.name,
       })
     }
   }

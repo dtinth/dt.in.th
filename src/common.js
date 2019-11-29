@@ -8,12 +8,13 @@ import { Helmet } from 'react-helmet'
 
 export { Helmet }
 
-export function PageMeta({ title }) {
+export function PageMeta({ title, image = '' }) {
   return (
     <Helmet>
       <title>{`${title} ★ dt.in.th`}</title>
       <meta property="og:title" content={`${title}`} />
       <meta property="og:site_name" content={`dt.in.th`} />
+      {image && <meta property="og:image" content={image} />}
     </Helmet>
   )
 }
