@@ -48,15 +48,14 @@ export const pageQuery = graphql`
 export default props => {
   const {
     data: { mdx },
-    pageContext: { olderTalk, newerTalk },
+    pageContext: { olderTalk, newerTalk, image },
   } = props
 
   const breadcrumb = [{ text: 'Talks', href: '/talks/' }]
   const talkData = mdx.frontmatter
-
   return (
     <ActiveSectionProvider activeSection="talks">
-      <PageMeta title={talkData.title} />
+      <PageMeta title={talkData.title} image={image} />
       <Main>
         <Wrapper>
           <Breadcrumb items={breadcrumb} />
