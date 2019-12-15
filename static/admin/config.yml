@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: dtinth/dt.in.th
+publish_mode: editorial_workflow
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+collections:
+  - name: "stuff"
+    label: "Stuff"
+    folder: "src/stuff"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "stuff"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Created", name: "created", widget: "datetime"}
+      - {label: "Updated", name: "updated", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
+      - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
