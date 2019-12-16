@@ -1,4 +1,5 @@
 import CMS from 'netlify-cms-app'
+import React from 'react'
 
 CMS.registerPreviewTemplate('stuff', function StuffPreview({
   entry,
