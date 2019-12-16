@@ -76,6 +76,14 @@ module.exports = {
               destinationDir: 'static',
             },
           },
+          {
+            resolve: 'gatsby-remark-embed-video',
+            options: {
+              width: 640,
+              related: false,
+            },
+          },
+          'gatsby-remark-responsive-iframe',
         ],
       },
     },

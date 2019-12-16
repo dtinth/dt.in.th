@@ -1,10 +1,11 @@
 import styled, { keyframes } from 'styled-components'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Chance from 'chance'
 import _ from 'lodash'
 import { fontSize, beat, C4, Db3, Ab3, F4 } from './styles'
 import { Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import { checkTwitterEmbeds } from './twitter-embed'
 
 export { Helmet }
 
@@ -377,31 +378,45 @@ export const PreviousNext = Object.assign(
 )
 
 export const MarkdownContent = styled(({ className, children }) => {
+  useEffect(() => {
+    checkTwitterEmbeds()
+  })
   return <div className={className}>{children}</div>
 })`
-  margin-top: ${beat(1)};
+  margin-top: ${beat(0.75)};
   p,
-  h1,
-  h2,
   pre,
   blockquote {
     &:first-child {
       margin: 0;
     }
     &:not(:first-child) {
-      margin: ${beat(1)} 0 0;
+      margin: ${beat(0.75)} 0 0;
+    }
+  }
+  h2 {
+    color: #d7fc70;
+    margin: ${beat(1.5)} 0 0;
+    font-size: ${fontSize(Db3)};
+    line-height: ${beat(1.5)};
+    * + & {
+      margin-top: 0;
     }
   }
   blockquote {
     background: #090807;
     border: 1px solid #656463;
-    margin: ${beat(1)} 0 0;
+    margin: ${beat(1)} 0;
     box-shadow: 2px 2px 0 #151413;
     padding: ${beat(0.5)};
   }
   hr {
     border: 0;
     border-top: 2px solid #454443;
+    margin: ${beat(0.75)} 0;
+  }
+  .twitter-tweet-rendered,
+  .gatsby-resp-iframe-wrapper {
     margin: ${beat(1)} 0;
   }
 `
