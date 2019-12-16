@@ -59,9 +59,9 @@ export function StuffInfo({ title, created, updated, tags, children }) {
         <Heading>{title}</Heading>
         <StuffMeta>
           <MetaDate>
-            <Date date={created} />
+            <DateDisplay date={created} />
           </MetaDate>
-          {tags.map(tag => (
+          {(tags || []).map(tag => (
             <Tag>{tag}</Tag>
           ))}
         </StuffMeta>
@@ -99,7 +99,7 @@ const Tag = styled.span`
   background: #454443;
 `
 
-function Date({ date }) {
-  const datePart = String(date).split('T')[0]
+function DateDisplay({ date }) {
+  const datePart = String(new Date(date).toJSON()).split('T')[0]
   return <span>{datePart}</span>
 }

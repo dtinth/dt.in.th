@@ -34,7 +34,12 @@ CMS.registerPreviewTemplate(
   withStyledComponentsRendered(function StuffPreview({ entry, widgetFor }) {
     return (
       <PageWrapper>
-        <StuffInfo title={entry.getIn(['data', 'title'])}>
+        <StuffInfo
+          title={entry.getIn(['data', 'title'])}
+          created={entry.getIn(['data', 'created'])}
+          updated={entry.getIn(['data', 'updated'])}
+          tags={entry.getIn(['data', 'tags'])}
+        >
           {widgetFor('body')}
         </StuffInfo>
       </PageWrapper>
