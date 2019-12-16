@@ -27,24 +27,32 @@ export const pageQuery = graphql`
   }
 `
 export default props => {
-  const breadcrumb = [{ text: 'Stuff', href: '/stuff/' }]
   const { markdownRemark: stuff } = props.data
 
   return (
     <ActiveSectionProvider activeSection="stuff">
       <PageMeta title={stuff.frontmatter.title} />
-      <Main>
-        <Wrapper>
-          <Breadcrumb items={breadcrumb} />
-          <Heading>{stuff.frontmatter.title}</Heading>
-        </Wrapper>
-        <Wrapper>
-          <MarkdownContent html={stuff.html} />
-        </Wrapper>
-        <Wrapper>
-          <Footer />
-        </Wrapper>
-      </Main>
+      <StuffInfo title={stuff.frontmatter.title}>
+        <MarkdownContent>
+          <div dangerouslySetInnerHTML={{ __html: stuff.html }} />
+        </MarkdownContent>
+      </StuffInfo>
     </ActiveSectionProvider>
+  )
+}
+
+export function StuffInfo({ title, children }) {
+  const breadcrumb = [{ text: 'Stuff', href: '/stuff/' }]
+  return (
+    <Main>
+      <Wrapper>
+        <Breadcrumb items={breadcrumb} />
+        <Heading>{title}</Heading>
+      </Wrapper>
+      <Wrapper>{children}</Wrapper>
+      <Wrapper>
+        <Footer />
+      </Wrapper>
+    </Main>
   )
 }

@@ -10,13 +10,12 @@ tags:
   - Hackathon
   - Project
 ---
+
 A silly recreation of the Rain Vortex at Jewel Changi Airport, but it’s `node_modules` instead of water. Made at [Super Silly Hackathon 2019](https://supersillyhackathon.sg).
 
 Check out the [presentation](https://github.com/dtinth/super-silly-vortex/tree/master/presentation) and [demo](https://super-silly-vortex.netlify.com/).
 
 [https://www.youtube.com/watch?v=34o10hsWovI](https://www.youtube.com/watch?v=34o10hsWovI)
-
-[this is a temporary project description page, I will move it to my own domain later…]
 
 ## Motivation
 

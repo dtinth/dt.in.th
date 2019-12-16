@@ -376,16 +376,10 @@ export const PreviousNext = Object.assign(
   },
 )
 
-export const MarkdownContent = styled(({ className, html }) => {
-  return (
-    <div className={className} dangerouslySetInnerHTML={{ __html: html }}></div>
-  )
+export const MarkdownContent = styled(({ className, children }) => {
+  return <div className={className}>{children}</div>
 })`
   margin-top: ${beat(1)};
-  pre,
-  code {
-    font: inherit;
-  }
   p,
   h1,
   h2,
