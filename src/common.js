@@ -404,11 +404,10 @@ export const MarkdownContent = styled(({ className, children }) => {
     }
   }
   blockquote {
-    background: #090807;
-    border: 1px solid #656463;
-    margin: ${beat(1)} 0;
-    box-shadow: 2px 2px 0 #151413;
-    padding: ${beat(0.5)};
+    border-left: 4px solid #656463;
+    margin: ${beat(0.75)} 0 0;
+    padding: ${beat(0.25)} ${beat(0.5)};
+    font-style: italic;
   }
   hr {
     border: 0;

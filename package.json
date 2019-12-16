@@ -38,9 +38,11 @@
     "lodash": "^4.17.10",
     "markdown-it": "^9.1.0",
     "netlify-cms-app": "^2.9.7",
+    "node-fetch": "^2.6.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "tkt": "^2.0.0"
   }
 }
