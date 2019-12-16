@@ -375,3 +375,39 @@ export const PreviousNext = Object.assign(
     `,
   },
 )
+
+export const MarkdownContent = styled(({ className, html }) => {
+  return (
+    <div className={className} dangerouslySetInnerHTML={{ __html: html }}></div>
+  )
+})`
+  margin-top: ${beat(1)};
+  pre,
+  code {
+    font: inherit;
+  }
+  p,
+  h1,
+  h2,
+  pre,
+  blockquote {
+    &:first-child {
+      margin: 0;
+    }
+    &:not(:first-child) {
+      margin: ${beat(1)} 0 0;
+    }
+  }
+  blockquote {
+    background: #090807;
+    border: 1px solid #656463;
+    margin: ${beat(1)} 0 0;
+    box-shadow: 2px 2px 0 #151413;
+    padding: ${beat(0.5)};
+  }
+  hr {
+    border: 0;
+    border-top: 2px solid #454443;
+    margin: ${beat(1)} 0;
+  }
+`
