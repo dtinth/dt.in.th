@@ -8,6 +8,7 @@ featured: true
 tags:
   - Project
 ---
+
 **[Bemuse](https://bemuse.ninja)** is a free and open source, web-based online rhythm action game.
 
 <call-to-action href="https://bemuse.ninja">
@@ -38,4 +39,4 @@ In 2018, a **3D mode** is added, and the game can be enjoyed in mobile phones.
 
 As of 2019, Bemuse has over **15,000 monthly active players.**
 
-![](/images/uploads/bemuse-google-analytics-2019.png)
+![](/uploads/bemuse-google-analytics-2019.png)

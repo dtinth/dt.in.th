@@ -3,8 +3,8 @@ backend:
   repo: dtinth/dt.in.th
   branch: netlify-cms
 # publish_mode: editorial_workflow
-media_folder: 'static/images/uploads'
-public_folder: '/images/uploads'
+media_folder: 'static/uploads'
+public_folder: '/uploads'
 collections:
   - name: 'stuff'
     label: 'Stuff'

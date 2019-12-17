@@ -3,6 +3,7 @@ import { StuffInfo } from '../stuff/StuffInfoPage'
 import PageWrapper from '../PageWrapper'
 import React, { useState, useEffect } from 'react'
 import { StyleSheetManager } from 'styled-components'
+import { MarkdownContent } from '../markdown'
 
 // https://github.com/netlify/netlify-cms/issues/1408#issuecomment-526851039
 function StyleInjector({ children }) {
@@ -32,6 +33,7 @@ export default function withStyledComponentsRendered(Comp) {
 CMS.registerPreviewTemplate(
   'stuff',
   withStyledComponentsRendered(function StuffPreview({ entry, widgetFor }) {
+    // const mdr =
     return (
       <PageWrapper>
         <StuffInfo
@@ -40,7 +42,7 @@ CMS.registerPreviewTemplate(
           updated={entry.getIn(['data', 'updated'])}
           tags={entry.getIn(['data', 'tags'])}
         >
-          {widgetFor('body')}
+          <MarkdownContent>{widgetFor('body')}</MarkdownContent>
         </StuffInfo>
       </PageWrapper>
     )

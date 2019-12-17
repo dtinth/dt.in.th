@@ -5,7 +5,7 @@ created: 2019-12-14T03:00:00.000Z
 updated: 2019-12-15T16:00:00.000Z
 description: 'A silly recreation of the Rain Vortex at Jewel Changi Airport, but it’s `node_modules` instead of water. Made at Super Silly Hackathon 2019.'
 featured: true
-image: /images/uploads/super-silly-vortex.png
+image: /uploads/super-silly-vortex.png
 tags:
   - Hackathon
   - Project

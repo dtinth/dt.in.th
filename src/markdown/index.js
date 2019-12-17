@@ -67,7 +67,40 @@ export const MarkdownContent = styled(({ className, children }) => {
     color: white;
     text-shadow: 1px 1px 0 #0003;
   }
+
+  /* for Netlify CMS */
+  twitter-embed,
+  call-to-action {
+    background: #454443;
+    display: block;
+    color: #8b8685;
+    font-size: ${fontSize(F4)};
+    line-height: ${beat(0.75)};
+    padding: ${beat(0.5)};
+    &:not(:first-child) {
+      margin: ${beat(0.75)} 0 0;
+    }
+    & * {
+      color: inherit;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
 `
+
+function createRehypeReactCompiler() {
+  return new RehypeReact(
+    /** @type {any} */ ({
+      createElement: React.createElement,
+      components: {
+        'twitter-embed': TwitterEmbed,
+        'call-to-action': CallToAction,
+      },
+    }),
+  )
+}
 
 function TwitterEmbed({ children }) {
   const ref = useRef(null)
@@ -155,12 +188,4 @@ const CallToAction = styled(({ href, className, children }) => {
   }
 `
 
-export const { Compiler: renderHtmlAst } = new RehypeReact(
-  /** @type {any} */ ({
-    createElement: React.createElement,
-    components: {
-      'twitter-embed': TwitterEmbed,
-      'call-to-action': CallToAction,
-    },
-  }),
-)
+export const { Compiler: renderHtmlAst } = createRehypeReactCompiler()
