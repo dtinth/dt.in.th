@@ -12,6 +12,8 @@ export const MarkdownContent = styled(({ className, children }) => {
   margin-top: ${beat(0.75)};
   p,
   pre,
+  ul,
+  ol,
   blockquote {
     &:first-child {
       margin: 0;
@@ -19,6 +21,12 @@ export const MarkdownContent = styled(({ className, children }) => {
     &:not(:first-child) {
       margin: ${beat(0.75)} 0 0;
     }
+  }
+  li {
+    margin-top: ${beat(0.5)};
+  }
+  li > p:first-child {
+    margin: ${beat(0.75)} 0 0;
   }
   h2 {
     color: #d7fc70;
@@ -65,6 +73,10 @@ export const MarkdownContent = styled(({ className, children }) => {
   }
   strong {
     color: white;
+    text-shadow: 1px 1px 0 #0003;
+  }
+  em {
+    background: #fff1;
     text-shadow: 1px 1px 0 #0003;
   }
 
