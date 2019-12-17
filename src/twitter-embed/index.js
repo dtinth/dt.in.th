@@ -39,7 +39,7 @@ const embedClasses = [
   `.twitter-share-button`,
 ].join(`,`)
 
-export function checkTwitterEmbeds() {
+export function checkTwitterEmbeds(container) {
   // If there's an embedded element, lazy-load the twitter script (if it hasn't
   // already been loaded), and then run the twitter load function.
   if (document.querySelector(embedClasses) !== null) {
@@ -55,7 +55,7 @@ export function checkTwitterEmbeds() {
       twttr.widgets &&
       typeof twttr.widgets.load === `function`
     ) {
-      twttr.widgets.load()
+      twttr.widgets.load(container)
     }
   }
 }

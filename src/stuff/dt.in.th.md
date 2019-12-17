@@ -8,9 +8,12 @@ featured: false
 tags:
   - Project
 ---
+
 This is my website where I document about the stuff that I made. It is this website that you are already looking at.
 
 ## History
+
+Taking a trip down the memory lane.
 
 ### 2005
 
@@ -26,7 +29,7 @@ I [moved](https://web.archive.org/web/20071213194403/http://dt.in.th:80/) my web
 
 ### 2009
 
-I [moved](https://web.archive.org/web/20090420144553/http://dt.in.th/) my blog to a domain, `dttvb.com`. An online friend bought me a domain as a new year present. It runs on Google App Engine.
+An online friend bought me a domain, `dttvb.com`, as a new year present. As a courtesy, I [moved](https://web.archive.org/web/20090420144553/http://dt.in.th/) my blog to that domain. Google [launched Google App Engine](http://googleappengine.blogspot.com/2008/04/introducing-google-app-engine-our-new.html) a year before, so I created a blog engine using Google App Engine.
 
 Later on, the domain expired and the buyer didn’t renew the domain for me. I could not contact him either as he no longer responds to my message after the domain expired.
 
@@ -38,9 +41,7 @@ My blog at `blog.dt.in.th` went down. I learned Ruby on Rails, followed its blog
 
 ### 2012
 
-Hosting my blog on a free Heroku instance means that entering the site for the first time can be very slow. Static site generators became more popular.
-
-I created my own static site generator using Node.js and [migrated](https://web.archive.org/web/20120712155827/http://me.dt.in.th:80/) to host on GitHub Pages instead.
+Hosting my blog on a free Heroku instance means that entering the site for the first time can be very slow (due to cold start). Also, static site generators became ever more popular. So, I created my own static site generator using Node.js and [migrated](https://web.archive.org/web/20120712155827/http://me.dt.in.th:80/) the blog to run on GitHub Pages instead.
 
 Now that I created a lot of projects, I made `dt.in.th` into a [small webpage](https://web.archive.org/web/20120629123821/http://dt.in.th:80/) with basic info, linking to my significant projects, a little resume of sorts, but it hardly ever gets updated. It is a basic HTML/CSS webpage generated using Jade language (which is now called [Pug](https://pugjs.org/api/getting-started.html)).
 
