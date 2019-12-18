@@ -9,7 +9,9 @@ tags:
   - Project
 ---
 
-This is my website where I document about the stuff that I made. It is this website that you are already looking at.
+My website where I document about the stuff that I made.
+
+It is this website that you are already looking at.
 
 ## History
 

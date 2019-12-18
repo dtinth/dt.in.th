@@ -8,7 +8,10 @@ featured: true
 tags:
   - Project
 ---
-A collection of **hackable web-based MIDI instruments**, implemented as a MIDI controller. I wanted to create a MIDI instrument that allows me to jam with other musicians. Web APIs allows user to interact with a webpage in multiple ways. With WebMIDICon, I can play MIDI with my PC keyboard, a touch screen such as an iPad, and more.
+
+A collection of **hackable web-based MIDI instruments**, implemented as a MIDI controller.
+
+I wanted to create a MIDI instrument that allows me to jam with other musicians. Web APIs allows user to interact with a webpage in multiple ways. With WebMIDICon, I can play MIDI with my PC keyboard, a touch screen such as an iPad, and more.
 
 It is built to demonstrating the power of **Web MIDI API** and initially presented as a lightning talk at [JSConf.Asia 2016](https://www.youtube.com/watch?v=3Y-XeJmGQis).
 

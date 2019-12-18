@@ -42,7 +42,7 @@ export default props => {
         updated={stuff.frontmatter.updated}
         tags={stuff.frontmatter.tags}
       >
-        <MarkdownContent>{renderHtmlAst(stuff.htmlAst)}</MarkdownContent>
+        <MarkdownContent intro>{renderHtmlAst(stuff.htmlAst)}</MarkdownContent>
       </StuffInfo>
     </ActiveSectionProvider>
   )

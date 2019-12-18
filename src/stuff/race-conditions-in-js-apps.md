@@ -2,18 +2,24 @@
 id: race-conditions-in-js-apps
 title: Race Conditions in JS Apps
 created: 2019-06-16T03:00:00.000Z
-updated: 2019-12-17T17:54:23.216Z
+updated: 2019-06-16T03:00:00.000Z
 description: >-
   A talk about race conditions in JavaScript, showing how easy it is to create
   one, and how to deal with them. Based on experience building a real-time
   collaborative app.
+  Presented at JSConf.Asia 2019.
 featured: true
 tags:
   - Talk
 ---
-It’s easy to create race conditions in JavaScript if you’re not careful. This talk is about dealing with common kinds of race conditions based on my experience working on a real-time collaborative app. Presented at [JSConf.Asia 2019](https://2019.jsconf.asia/).
+
+It’s easy to create race conditions in JavaScript if you’re not careful.
 
 `youtube: https://www.youtube.com/watch?v=DWZj56qUNfs`
+
+This talk is about dealing with common kinds of race conditions based on my experience working on a real-time collaborative app.
+
+Presented at [JSConf.Asia 2019](https://2019.jsconf.asia/).
 
 ### Talk Proposal
 
@@ -43,23 +49,23 @@ I wrote the following talk sketch before crafting the CFP above. I did not sent 
 
 - Some time ago, a friend asked me: “Is it hard to handle race conditions in JavaScript?”
 
-    - I answered “No. It’s easy. You just don’t forget to deal with them. Then it’s easy.”
+  - I answered “No. It’s easy. You just don’t forget to deal with them. Then it’s easy.”
 
 **Example 1**
 
 - Let’s look at example.
 - Example: Latest result overwritten by earlier requests that responds slowly.
-    - Scenario: Tab bar that loads content via Ajax.
-    - Solution A:
-        - Cancel previous request. e.g. `cancelPreviousRequest()` mutable function.
+  - Scenario: Tab bar that loads content via Ajax.
+  - Solution A:
+    - Cancel previous request. e.g. `cancelPreviousRequest()` mutable function.
 
 **Example 2**
 
 - Example: An autocompletion bar
-    - Solution A:
-        - Same as previous
-    - Solution B (monotonically increasing display):
-        - Assign an increasing request ID to each request. Display the result if its request ID is higher than the one currently displayed.
+  - Solution A:
+    - Same as previous
+  - Solution B (monotonically increasing display):
+    - Assign an increasing request ID to each request. Display the result if its request ID is higher than the one currently displayed.
 
 **As you can see**
 
@@ -72,25 +78,25 @@ I wrote the following talk sketch before crafting the CFP above. I did not sent 
 **Example 3**
 
 - Example: Taskworld CRUD operations
-    - 💡 As we grow, serving many customers, we start getting reports about “inconsistent data”
-    - Optimistic updates: What to do when API call is rejected?
-    - Storing previous results in order to revert
-        - What if there are concurrent changes?
-        - What if before the rejection, someone else change the data?
-    - Operation queue
-        - Keep a queue of pending operations
-        - If connection is down, queue is paused.
-    - Let’s say, if the connection is down, but the user makes a change, and then closes their browser before the connection restored?
-        - Persist the queue contents
-    - A user can open multiple tabs which shares the same queue storage.
-        - Must make sure that queue contents are stay in sync.
-        - But which tab will process the queue?
-            - Must designate a tab.
-                - Each tab: If no one is going to work on it, I will volunteer.
-                    - Race condition concerning the shared storage.
-                    - Job ownership confirmation.
-        - What if the tab is closed while processing the queue?
-            - Other tabs must pick up the unfinished job and resume the queue.
-                - Must keep the timestamp.
+  - 💡 As we grow, serving many customers, we start getting reports about “inconsistent data”
+  - Optimistic updates: What to do when API call is rejected?
+  - Storing previous results in order to revert
+    - What if there are concurrent changes?
+    - What if before the rejection, someone else change the data?
+  - Operation queue
+    - Keep a queue of pending operations
+    - If connection is down, queue is paused.
+  - Let’s say, if the connection is down, but the user makes a change, and then closes their browser before the connection restored?
+    - Persist the queue contents
+  - A user can open multiple tabs which shares the same queue storage.
+    - Must make sure that queue contents are stay in sync.
+    - But which tab will process the queue?
+      - Must designate a tab.
+        - Each tab: If no one is going to work on it, I will volunteer.
+          - Race condition concerning the shared storage.
+          - Job ownership confirmation.
+    - What if the tab is closed while processing the queue?
+      - Other tabs must pick up the unfinished job and resume the queue.
+        - Must keep the timestamp.
 
 </blockquote>

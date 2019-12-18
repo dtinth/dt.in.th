@@ -5,10 +5,21 @@ import { beat, fontSize, Db3, F4, Ab3, F3 } from '../styles'
 import { checkTwitterEmbeds } from '../twitter-embed'
 import RehypeReact from 'rehype-react'
 import { renderToStaticMarkup } from 'react-dom/server'
+import { Intro } from '../common'
 
-export const MarkdownContent = styled(({ className, children }) => {
-  return <div className={className}>{children}</div>
+export const MarkdownContent = styled(({ className, intro, children }) => {
+  return (
+    <div className={className} data-intro={intro ? '1' : '0'}>
+      {children}
+    </div>
+  )
 })`
+  &[data-intro='1'] > p:first-child {
+    margin: ${beat(1)} 0;
+    font-size: ${fontSize(Ab3)};
+    line-height: ${beat(1.25)};
+  }
+
   margin-top: ${beat(0.75)};
   p,
   pre,
@@ -76,6 +87,7 @@ export const MarkdownContent = styled(({ className, children }) => {
     text-shadow: 1px 1px 0 #0003;
   }
   em {
+    color: white;
     background: #fff1;
     text-shadow: 1px 1px 0 #0003;
   }
@@ -106,9 +118,11 @@ function createRehypeReactCompiler() {
   return new RehypeReact(
     /** @type {any} */ ({
       createElement: React.createElement,
+      Fragment: React.Fragment,
       components: {
         'twitter-embed': TwitterEmbed,
         'call-to-action': CallToAction,
+        intro: Intro,
       },
     }),
   )

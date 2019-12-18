@@ -127,7 +127,9 @@ exports.createPages = async ({ graphql, actions }) => {
     // Stuff
     const result = await graphql(`
       {
-        allMarkdownRemark(limit: 1000) {
+        allMarkdownRemark(
+          filter: { fields: { sourceInstanceName: { eq: "stuff" } } }
+        ) {
           edges {
             node {
               id
@@ -148,7 +150,10 @@ exports.createPages = async ({ graphql, actions }) => {
     }
 
     const posts = result.data.allMarkdownRemark.edges
-
+    createPage({
+      path: `/stuff/`,
+      component: path.resolve(`./src/stuff/StuffIndexPage.js`),
+    })
     posts.forEach(edge => {
       const id = edge.node.id
       createPage({
@@ -213,7 +218,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   fmImagesToRelative(node)
 
   if (node.internal.type === `MarkdownRemark`) {
+    const parent = getNode(node.parent)
     const value = '/stuff' + createFilePath({ node, getNode })
+
+    createNodeField({
+      name: 'sourceInstanceName',
+      node,
+      value: parent.sourceInstanceName,
+    })
     createNodeField({
       name: `slug`,
       node,

@@ -14,7 +14,9 @@ tags:
   - Talk
 ---
 
-A silly recreation of the Rain Vortex at Jewel Changi Airport, but it’s `node_modules` instead of water. Made at [Super Silly Hackathon 2019](https://supersillyhackathon.sg).
+A silly recreation of the **Rain Vortex** at Jewel Changi Airport, but it’s `node_modules` instead of water.
+
+Made at [Super Silly Hackathon 2019](https://supersillyhackathon.sg).
 
 `youtube: https://www.youtube.com/watch?v=8as2nAU6cZA`
 
