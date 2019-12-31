@@ -57,7 +57,9 @@ module.exports = {
         plugins: [
           {
             resolve: `gatsby-remark-prismjs`,
-            options: {},
+            options: {
+              noInlineHighlight: true,
+            },
           },
           {
             resolve: 'gatsby-remark-relative-images',
