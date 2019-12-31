@@ -1,6 +1,6 @@
 // @ts-check
 import React, { useEffect, useRef } from 'react'
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import { beat, fontSize, Db3, F4, Ab3, F3 } from '../styles'
 import { checkTwitterEmbeds } from '../twitter-embed'
 import RehypeReact from 'rehype-react'
@@ -10,6 +10,7 @@ import { Intro } from '../common'
 export const MarkdownContent = styled(({ className, intro, children }) => {
   return (
     <div className={className} data-intro={intro ? '1' : '0'}>
+      <PrismTheme />
       {children}
     </div>
   )
@@ -25,7 +26,8 @@ export const MarkdownContent = styled(({ className, intro, children }) => {
   pre,
   ul,
   ol,
-  blockquote {
+  blockquote,
+  div.gatsby-highlight {
     &:first-child {
       margin: 0;
     }
@@ -215,3 +217,75 @@ const CallToAction = styled(({ href, className, children }) => {
 `
 
 export const { Compiler: renderHtmlAst } = createRehypeReactCompiler()
+
+const PrismTheme = createGlobalStyle`
+pre[class*="language-"] {
+	padding: ${beat(0.5)};
+  overflow: auto;
+  background: #252423;
+  color: #e9e8e7;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8b8685;
+}
+
+.token.punctuation {
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+	color: #D4FB79;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #D4FB79;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #73FCD6;
+}
+
+.token.regex,
+.token.important {
+	color: #FF9B9A;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.deleted {
+	color: red;
+}
+`
