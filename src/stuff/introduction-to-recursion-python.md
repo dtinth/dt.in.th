@@ -1,5 +1,5 @@
 ---
-id: recursion-talk
+id: introduction-to-recursion-python
 parent: talks
 title: Introduction to Recursion (Python)
 created: 2013-06-27T00:00:00.000Z
