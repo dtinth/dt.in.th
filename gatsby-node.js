@@ -151,7 +151,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     const posts = result.data.allMarkdownRemark.edges
     createPage({
-      path: `/stuff/`,
+      path: `/p/all/`,
       component: path.resolve(`./src/stuff/StuffIndexPage.js`),
     })
     posts.forEach(edge => {
@@ -219,7 +219,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const parent = getNode(node.parent)
-    const value = '/stuff' + createFilePath({ node, getNode })
+    const value = '/p' + createFilePath({ node, getNode })
 
     createNodeField({
       name: 'sourceInstanceName',
