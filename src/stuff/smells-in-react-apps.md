@@ -8,6 +8,8 @@ description: >-
   an important skill that helps you build maintainable software.
   Presented at JSConf.Asia 2018.
 image: /uploads/smells-in-react-apps.jpg
+tags:
+  - Talk
 ---
 
 Recognizing code smells is an important skill that helps you build

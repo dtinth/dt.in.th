@@ -9,8 +9,8 @@ description: >-
 featured: true
 image: /uploads/super-silly-vortex.png
 tags:
-  - Hackathon
   - Project
+  - Hackathon
   - Talk
 ---
 
@@ -49,5 +49,5 @@ The end result is a 3D recreation of the Jewel using THREE.js where filenames dr
 </twitter-embed>
 
 <call-to-action href="https://github.com/dtinth/super-silly-vortex">
-  GitHub Project
+  GitHub repository
 </call-to-action>

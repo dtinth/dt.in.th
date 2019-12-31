@@ -74,7 +74,8 @@ Here are some technical choices that I felt very happy about when I look back:
 
 ### Experiment with confidence and explore with safety
 
-**Clean architecture** and **tests** enable me to **experiment with new things.**
+**Clean architecture** and **tests** enable me to experiment with new things.
+It lets me make many [two-way door decisions](https://shit.management/one-way-and-two-way-door-decisions/).
 I can try out new (and perhaps not-so-mainstream) libraries and tools (such as webpack (at the time), Ramda, Ractive, and Bacon.js).
 
 If they worked out well, then I could keep them (webpack being one example).
