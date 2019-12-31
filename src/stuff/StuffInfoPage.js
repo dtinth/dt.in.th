@@ -34,7 +34,7 @@ export default props => {
   const { markdownRemark: stuff } = props.data
 
   return (
-    <ActiveSectionProvider activeSection="stuff">
+    <ActiveSectionProvider activeSection="pages">
       <PageMeta title={stuff.frontmatter.title} />
       <StuffInfo
         title={stuff.frontmatter.title}

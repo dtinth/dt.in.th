@@ -45,12 +45,12 @@ export default props => {
   ).reverse()
 
   return (
-    <ActiveSectionProvider activeSection="stuff">
-      <PageMeta title={'Stuff'} />
+    <ActiveSectionProvider activeSection="pages">
+      <PageMeta title={'Pages'} />
       <Main>
         <Wrapper>
           <Breadcrumb items={[]} />
-          <Heading>Stuff</Heading>
+          <Heading>All Pages</Heading>
         </Wrapper>
         <Wrapper>
           <P>Note: This page is an unorganized work in progress…</P>
