@@ -1,5 +1,6 @@
 ---
 id: everyday-evermore
+parent: songs
 title: Everyday evermore
 song:
   artist: flicknote vs Dekdekbaloo feat. MindaRyn
@@ -8,8 +9,6 @@ song:
 created: 2016-09-23T00:00:00.000Z
 updated: 2016-09-23T00:00:00.000Z
 description: A hopeful love song.
-tags:
-  - Music
 ---
 
 A hopeful love song.
