@@ -1,6 +1,7 @@
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
-import titleFont from './arimo-bold-title-subset.woff2'
+import titleFont from './fonts/arimo-bold-title-subset.woff2'
+import comicMono from './fonts/ComicMono.ttf'
 import { MDXProvider } from '@mdx-js/react'
 import { Heading, P, Helmet } from './common'
 
@@ -10,11 +11,18 @@ const GlobalStyle = createGlobalStyle`
     font-weight: bold;
     src: url(${titleFont});
   }
+  @font-face {
+    font-family: Comic Mono;
+    src: url(${comicMono});
+  }
   :root, html {
     font-size: 18px;
   }
   html {
     font-family: Arimo, Helvetica, sans-serif;
+  }
+  pre, code {
+    font-family: Comic Mono, Cousine, Menlo, Consolas, Monaco, monospace;
   }
   body {
     background: #353433;

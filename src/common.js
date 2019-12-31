@@ -1,10 +1,11 @@
 import styled, { keyframes } from 'styled-components'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Chance from 'chance'
 import _ from 'lodash'
 import { fontSize, beat, C4, Db3, Ab3, F4 } from './styles'
 import { Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import { checkTwitterEmbeds } from './twitter-embed'
 
 export { Helmet }
 

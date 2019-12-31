@@ -1,5 +1,5 @@
 // For vertical rhythm and stuff.
-export const beat = n => `${n * 27}px`
+export const beat = n => `${n * 29}px`
 
 // MIDI Notes for implementing a typography scale based on a musical scale!
 export const F4 = 65
