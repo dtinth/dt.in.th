@@ -1,5 +1,5 @@
 // @ts-check
-import React from 'react'
+import React, { createContext, useContext } from 'react'
 
 import {
   ActiveSectionProvider,
@@ -10,10 +10,18 @@ import {
   PageMeta,
   Heading,
 } from '../common'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 import { fontSize, F4, beat } from '../styles'
-import { MarkdownContent, renderHtmlAst } from '../markdown'
+import {
+  MarkdownContent,
+  renderHtmlAst,
+  InjectableComponentContext,
+} from '../markdown'
+import StuffListConnector from './StuffListConnector'
+import _ from 'lodash'
+
+export const CurrentPageIdContext = createContext('')
 
 export const pageQuery = graphql`
   query StuffByID($id: String!) {
@@ -21,6 +29,7 @@ export const pageQuery = graphql`
       id
       htmlAst
       frontmatter {
+        id
         title
         description
         tags
@@ -30,22 +39,68 @@ export const pageQuery = graphql`
     }
   }
 `
+
 export default props => {
   const { markdownRemark: stuff } = props.data
 
   return (
     <ActiveSectionProvider activeSection="pages">
       <PageMeta title={stuff.frontmatter.title} />
-      <StuffInfo
-        title={stuff.frontmatter.title}
-        created={stuff.frontmatter.created}
-        updated={stuff.frontmatter.updated}
-        tags={stuff.frontmatter.tags}
-      >
-        <MarkdownContent intro>{renderHtmlAst(stuff.htmlAst)}</MarkdownContent>
-      </StuffInfo>
+      <CurrentPageIdContext.Provider value={stuff.frontmatter.id}>
+        <InjectableComponentContext.Provider value={injectableComponents}>
+          <StuffInfo
+            title={stuff.frontmatter.title}
+            created={stuff.frontmatter.created}
+            updated={stuff.frontmatter.updated}
+            tags={stuff.frontmatter.tags}
+          >
+            <MarkdownContent intro>
+              {renderHtmlAst(stuff.htmlAst)}
+            </MarkdownContent>
+          </StuffInfo>
+        </InjectableComponentContext.Provider>
+      </CurrentPageIdContext.Provider>
     </ActiveSectionProvider>
   )
+}
+
+const injectableComponents = {
+  'child-page-list': function ChildPageList(props) {
+    const currentPageId = useContext(CurrentPageIdContext)
+
+    return (
+      <StuffListConnector>
+        {stuffs => {
+          return (
+            <ul>
+              {_.sortBy(stuffs, 'frontmatter.updated')
+                .reverse()
+                .filter(stuff => stuff.frontmatter.parent === currentPageId)
+                .map(stuff => (
+                  <li key={stuff.id} style={{ marginTop: beat(1) }}>
+                    <strong>
+                      <Link
+                        to={stuff.fields.slug}
+                        style={{ textDecoration: 'none' }}
+                      >
+                        {stuff.frontmatter.title}
+                      </Link>
+                    </strong>{' '}
+                    <StuffMeta style={{ display: 'inline-block' }}>
+                      <MetaDate style={{ verticalAlign: 'baseline' }}>
+                        <DateDisplay date={stuff.frontmatter.created} />
+                      </MetaDate>
+                    </StuffMeta>
+                    <br />
+                    {stuff.frontmatter.description}
+                  </li>
+                ))}
+            </ul>
+          )
+        }}
+      </StuffListConnector>
+    )
+  },
 }
 
 export function StuffInfo({ title, created, updated, tags, children }) {
