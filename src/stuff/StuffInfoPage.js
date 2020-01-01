@@ -48,20 +48,72 @@ export default props => {
       <PageMeta title={stuff.frontmatter.title} />
       <CurrentPageIdContext.Provider value={stuff.frontmatter.id}>
         <InjectableComponentContext.Provider value={injectableComponents}>
-          <StuffInfo
-            title={stuff.frontmatter.title}
-            created={stuff.frontmatter.created}
-            updated={stuff.frontmatter.updated}
-            tags={stuff.frontmatter.tags}
-          >
-            <MarkdownContent intro>
-              {renderHtmlAst(stuff.htmlAst)}
-            </MarkdownContent>
-          </StuffInfo>
+          <BreadcrumbDataConnector pageId={stuff.frontmatter.id}>
+            {breadcrumbs => (
+              <StuffInfo
+                title={stuff.frontmatter.title}
+                created={stuff.frontmatter.created}
+                updated={stuff.frontmatter.updated}
+                tags={stuff.frontmatter.tags}
+                breadcrumbs={breadcrumbs}
+              >
+                <MarkdownContent intro>
+                  {renderHtmlAst(stuff.htmlAst)}
+                </MarkdownContent>
+              </StuffInfo>
+            )}
+          </BreadcrumbDataConnector>
         </InjectableComponentContext.Provider>
       </CurrentPageIdContext.Provider>
     </ActiveSectionProvider>
   )
+}
+
+function BreadcrumbDataConnector(props) {
+  return (
+    <StuffListConnector>
+      {stuffs => {
+        const breadcrumbs = generateBreadcrumbs(stuffs, props.pageId)
+        return props.children(breadcrumbs)
+      }}
+    </StuffListConnector>
+  )
+}
+
+function generateBreadcrumbs(stuffs, pageId) {
+  const stuffMap = new Map(stuffs.map(stuff => [stuff.frontmatter.id, stuff]))
+  const paths = []
+  const visit = (currentPageId, currentBreadcrumb) => {
+    const page = stuffMap.get(currentPageId)
+    if (!page) {
+      return
+    }
+    const parentIds = getParentIds(page)
+    if (!parentIds.length) {
+      paths.push(currentBreadcrumb)
+      return
+    }
+    for (const parentId of parentIds) {
+      const parentPage = stuffMap.get(parentId)
+      if (parentPage) {
+        visit(parentId, [
+          { href: parentPage.fields.slug, text: parentPage.frontmatter.title },
+          ...currentBreadcrumb,
+        ])
+      }
+    }
+  }
+  visit(pageId, [])
+  if (paths.length === 0) paths.push([])
+  return paths
+}
+
+function getParentIds(stuff) {
+  return stuff.frontmatter.parent
+    ? Array.isArray(stuff.frontmatter.parent)
+      ? stuff.frontmatter.parent
+      : [stuff.frontmatter.parent]
+    : []
 }
 
 const injectableComponents = {
@@ -103,11 +155,20 @@ const injectableComponents = {
   },
 }
 
-export function StuffInfo({ title, created, updated, tags, children }) {
+export function StuffInfo({
+  title,
+  created,
+  updated,
+  tags,
+  children,
+  breadcrumbs = [[]],
+}) {
   return (
     <Main>
       <Wrapper>
-        <Breadcrumb items={[]} />
+        {breadcrumbs.map((b, index) => (
+          <Breadcrumb key={index} items={b} />
+        ))}
         <Heading>{title}</Heading>
         <StuffMeta>
           <MetaDate>
