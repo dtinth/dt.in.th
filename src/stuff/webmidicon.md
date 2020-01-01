@@ -7,6 +7,7 @@ description: A collection of hackable web-based MIDI instruments.
 featured: true
 tags:
   - Project
+  - Talk
 ---
 
 A collection of **hackable web-based MIDI instruments**, implemented as a MIDI controller.
