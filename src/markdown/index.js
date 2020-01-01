@@ -1,5 +1,5 @@
 // @ts-check
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, createContext, useContext } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import { beat, fontSize, Db3, F4, Ab3, F3 } from '../styles'
 import { checkTwitterEmbeds } from '../twitter-embed'
@@ -124,10 +124,25 @@ function createRehypeReactCompiler() {
       components: {
         'twitter-embed': TwitterEmbed,
         'call-to-action': CallToAction,
+        'child-page-list': injectable('child-page-list'),
         intro: Intro,
       },
     }),
   )
+}
+
+export const InjectableComponentContext = createContext({})
+
+function injectable(name) {
+  return function InjectableComponent(props) {
+    const context = useContext(InjectableComponentContext)
+    const Component = context[name]
+    return Component ? (
+      <Component {...props} />
+    ) : (
+      <div>injectable('{name}')</div>
+    )
+  }
 }
 
 function TwitterEmbed({ children }) {
