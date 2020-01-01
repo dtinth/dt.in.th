@@ -15,6 +15,7 @@ export default props => (
                 slug
               }
               frontmatter {
+                id
                 tags
                 title
                 parent
