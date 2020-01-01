@@ -6,4 +6,6 @@ updated: 2019-10-04T17:37:35.000Z
 description: 'An archive of talks presented by @dtinth (Thai Pangsakulyanont).'
 ---
 
+Talks I’ve given:
+
 <child-page-list></child-page-list>
