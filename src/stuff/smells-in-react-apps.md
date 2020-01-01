@@ -1,5 +1,6 @@
 ---
 id: smells-in-react-apps
+parent: talks
 title: Smells in React Apps
 created: 2018-01-27T03:00:00.000Z
 updated: 2018-01-27T03:00:00.000Z
