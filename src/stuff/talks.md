@@ -8,4 +8,5 @@ description: 'An archive of talks presented by @dtinth (Thai Pangsakulyanont).'
 
 Talks I’ve given:
 
-<child-page-list></child-page-list>
+<child-page-list>
+</child-page-list>
