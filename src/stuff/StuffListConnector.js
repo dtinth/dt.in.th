@@ -18,7 +18,7 @@ export default props => (
                 id
                 tags
                 title
-                parent
+                parents
                 description
                 created
                 updated

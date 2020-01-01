@@ -1,6 +1,6 @@
 ---
 id: tdd-talk
-parent: talks
+parents: [talks]
 title: TDD
 created: 2016-03-30T00:00:00.000Z
 updated: 2016-03-30T00:00:00.000Z

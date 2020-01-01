@@ -1,6 +1,6 @@
 ---
 id: vim-tips-technique-scripts-plugins
-parent: talks
+parents: [talks]
 title: 'VIM tips, technique, scripts, plugins'
 created: 2013-09-22T00:00:00.000Z
 updated: 2013-09-22T00:00:00.000Z

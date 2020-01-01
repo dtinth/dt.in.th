@@ -1,6 +1,6 @@
 ---
 id: higher-order-components-and-recompose-talk
-parent: talks
+parents: [talks]
 title: Higher-Order Components and Recompose
 created: 2016-08-27T00:00:00.000Z
 updated: 2016-08-27T00:00:00.000Z

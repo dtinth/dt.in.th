@@ -1,6 +1,6 @@
 ---
 id: spring-animation-in-css
-parent: talks
+parents: [talks]
 title: 'CSS Spring Animation Using Physics and Calculus'
 created: 2015-11-22T00:00:00.000Z
 updated: 2015-11-22T00:00:00.000Z

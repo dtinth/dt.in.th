@@ -1,6 +1,6 @@
 ---
 id: lets-start-contributing-to-open-source-talk
-parent: talks
+parents: [talks]
 title: 'Let’s Start Contributing to Open Source!'
 created: 2017-11-25T00:00:00.000Z
 updated: 2017-11-25T00:00:00.000Z

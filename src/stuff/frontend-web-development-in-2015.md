@@ -1,6 +1,6 @@
 ---
 id: frontend-web-development-in-2015
-parent: talks
+parents: [talks]
 title: Frontend Web Development in 2015
 created: 2015-06-27T00:00:00.000Z
 updated: 2015-06-27T00:00:00.000Z

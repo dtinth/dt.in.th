@@ -109,11 +109,7 @@ function generateBreadcrumbs(stuffs, pageId) {
 }
 
 function getParentIds(stuff) {
-  return stuff.frontmatter.parent
-    ? Array.isArray(stuff.frontmatter.parent)
-      ? stuff.frontmatter.parent
-      : [stuff.frontmatter.parent]
-    : []
+  return stuff.frontmatter.parents || []
 }
 
 const injectableComponents = {
@@ -127,7 +123,7 @@ const injectableComponents = {
             <ul>
               {_.sortBy(stuffs, 'frontmatter.updated')
                 .reverse()
-                .filter(stuff => stuff.frontmatter.parent === currentPageId)
+                .filter(stuff => getParentIds(stuff).includes(currentPageId))
                 .map(stuff => (
                   <li key={stuff.id} style={{ marginTop: beat(1) }}>
                     <strong>

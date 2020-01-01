@@ -1,6 +1,6 @@
 ---
 id: react-bangkok-2.0.0-live-coding-session
-parent: talks
+parents: [talks]
 title: 'React Bangkok 2.0.0: Live coding / mob programming session'
 created: 2017-06-03T00:00:00.000Z
 updated: 2017-06-03T00:00:00.000Z

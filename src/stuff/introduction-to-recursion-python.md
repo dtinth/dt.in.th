@@ -1,6 +1,6 @@
 ---
 id: introduction-to-recursion-python
-parent: talks
+parents: [talks]
 title: Introduction to Recursion (Python)
 created: 2013-06-27T00:00:00.000Z
 updated: 2013-06-27T00:00:00.000Z

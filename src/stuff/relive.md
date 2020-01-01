@@ -1,6 +1,6 @@
 ---
 id: 'relive'
-parent: songs
+parents: [songs]
 title: 'Relive'
 song:
   artist: flicknote feat. shioshiio
