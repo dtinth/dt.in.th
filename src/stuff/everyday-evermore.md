@@ -1,6 +1,6 @@
 ---
 id: everyday-evermore
-parent: songs
+parents: [songs]
 title: Everyday evermore
 song:
   artist: flicknote vs Dekdekbaloo feat. MindaRyn

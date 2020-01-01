@@ -1,5 +1,5 @@
 // @ts-check
-import React from 'react'
+import React, { createContext, useContext } from 'react'
 
 import {
   ActiveSectionProvider,
@@ -10,10 +10,18 @@ import {
   PageMeta,
   Heading,
 } from '../common'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 import { fontSize, F4, beat } from '../styles'
-import { MarkdownContent, renderHtmlAst } from '../markdown'
+import {
+  MarkdownContent,
+  renderHtmlAst,
+  InjectableComponentContext,
+} from '../markdown'
+import StuffListConnector from './StuffListConnector'
+import _ from 'lodash'
+
+export const CurrentPageIdContext = createContext('')
 
 export const pageQuery = graphql`
   query StuffByID($id: String!) {
@@ -21,6 +29,7 @@ export const pageQuery = graphql`
       id
       htmlAst
       frontmatter {
+        id
         title
         description
         tags
@@ -30,29 +39,132 @@ export const pageQuery = graphql`
     }
   }
 `
+
 export default props => {
   const { markdownRemark: stuff } = props.data
 
   return (
     <ActiveSectionProvider activeSection="pages">
       <PageMeta title={stuff.frontmatter.title} />
-      <StuffInfo
-        title={stuff.frontmatter.title}
-        created={stuff.frontmatter.created}
-        updated={stuff.frontmatter.updated}
-        tags={stuff.frontmatter.tags}
-      >
-        <MarkdownContent intro>{renderHtmlAst(stuff.htmlAst)}</MarkdownContent>
-      </StuffInfo>
+      <CurrentPageIdContext.Provider value={stuff.frontmatter.id}>
+        <InjectableComponentContext.Provider value={injectableComponents}>
+          <BreadcrumbDataConnector pageId={stuff.frontmatter.id}>
+            {breadcrumbs => (
+              <StuffInfo
+                title={stuff.frontmatter.title}
+                created={stuff.frontmatter.created}
+                updated={stuff.frontmatter.updated}
+                tags={stuff.frontmatter.tags}
+                breadcrumbs={breadcrumbs}
+              >
+                <MarkdownContent intro>
+                  {renderHtmlAst(stuff.htmlAst)}
+                </MarkdownContent>
+              </StuffInfo>
+            )}
+          </BreadcrumbDataConnector>
+        </InjectableComponentContext.Provider>
+      </CurrentPageIdContext.Provider>
     </ActiveSectionProvider>
   )
 }
 
-export function StuffInfo({ title, created, updated, tags, children }) {
+function BreadcrumbDataConnector(props) {
+  return (
+    <StuffListConnector>
+      {stuffs => {
+        const breadcrumbs = generateBreadcrumbs(stuffs, props.pageId)
+        return props.children(breadcrumbs)
+      }}
+    </StuffListConnector>
+  )
+}
+
+function generateBreadcrumbs(stuffs, pageId) {
+  const stuffMap = new Map(stuffs.map(stuff => [stuff.frontmatter.id, stuff]))
+  const paths = []
+  const visit = (currentPageId, currentBreadcrumb) => {
+    const page = stuffMap.get(currentPageId)
+    if (!page) {
+      return
+    }
+    const parentIds = getParentIds(page)
+    if (!parentIds.length) {
+      paths.push(currentBreadcrumb)
+      return
+    }
+    for (const parentId of parentIds) {
+      const parentPage = stuffMap.get(parentId)
+      if (parentPage) {
+        visit(parentId, [
+          { href: parentPage.fields.slug, text: parentPage.frontmatter.title },
+          ...currentBreadcrumb,
+        ])
+      }
+    }
+  }
+  visit(pageId, [])
+  if (paths.length === 0) paths.push([])
+  return paths
+}
+
+function getParentIds(stuff) {
+  return stuff.frontmatter.parents || []
+}
+
+const injectableComponents = {
+  'child-page-list': function ChildPageList(props) {
+    const currentPageId = useContext(CurrentPageIdContext)
+
+    return (
+      <StuffListConnector>
+        {stuffs => {
+          return (
+            <ul>
+              {_.sortBy(stuffs, 'frontmatter.updated')
+                .reverse()
+                .filter(stuff => getParentIds(stuff).includes(currentPageId))
+                .map(stuff => (
+                  <li key={stuff.id} style={{ marginTop: beat(1) }}>
+                    <strong>
+                      <Link
+                        to={stuff.fields.slug}
+                        style={{ textDecoration: 'none' }}
+                      >
+                        {stuff.frontmatter.title}
+                      </Link>
+                    </strong>{' '}
+                    <StuffMeta style={{ display: 'inline-block' }}>
+                      <MetaDate style={{ verticalAlign: 'baseline' }}>
+                        <DateDisplay date={stuff.frontmatter.created} />
+                      </MetaDate>
+                    </StuffMeta>
+                    <br />
+                    {stuff.frontmatter.description}
+                  </li>
+                ))}
+            </ul>
+          )
+        }}
+      </StuffListConnector>
+    )
+  },
+}
+
+export function StuffInfo({
+  title,
+  created,
+  updated,
+  tags,
+  children,
+  breadcrumbs = [[]],
+}) {
   return (
     <Main>
       <Wrapper>
-        <Breadcrumb items={[]} />
+        {breadcrumbs.map((b, index) => (
+          <Breadcrumb key={index} items={b} />
+        ))}
         <Heading>{title}</Heading>
         <StuffMeta>
           <MetaDate>
