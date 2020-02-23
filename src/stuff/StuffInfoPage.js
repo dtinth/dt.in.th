@@ -167,9 +167,11 @@ export function StuffInfo({
         ))}
         <Heading>{title}</Heading>
         <StuffMeta>
-          <MetaDate>
-            <DateDisplay date={created} />
-          </MetaDate>
+          {!!created && (
+            <MetaDate>
+              <DateDisplay date={created} />
+            </MetaDate>
+          )}
           {(tags || []).map(tag => (
             <Tag>{tag}</Tag>
           ))}

@@ -1,5 +1,6 @@
 ---
 id: super-silly-vortex
+parents: [projects, talks]
 title: super-silly-vortex
 created: 2019-12-14T03:00:00.000Z
 updated: 2019-12-15T16:00:00.000Z
@@ -9,9 +10,7 @@ description: >-
 featured: true
 image: /uploads/super-silly-vortex.png
 tags:
-  - Project
   - Hackathon
-  - Talk
 ---
 
 A silly recreation of the **Rain Vortex** at Jewel Changi Airport, but it’s `node_modules` instead of water.
