@@ -1,5 +1,6 @@
 ---
 id: dt.in.th
+parents: [projects]
 title: dt.in.th
 created: 2005-10-15T16:00:00.000Z
 updated: 2019-12-16T15:36:02.663Z

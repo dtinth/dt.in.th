@@ -1,6 +1,7 @@
 ---
 id: ipedal
 title: iPedal
+parents: [projects]
 created: 2013-09-21T15:42:44Z
 updated: 2013-09-25T02:47:50Z
 description: A programmable foot pedal for your iPad and Node.js.
