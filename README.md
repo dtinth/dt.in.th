@@ -2,7 +2,7 @@
 
 My website/portfolio.
 
-![Screenshot](https://github.com/dtinth/timelapse/blob/master/projects/dt.in.th_initial.png)
+![Screenshot](https://github.com/dtinth/timelapse/raw/master/projects/dt.in.th_initial.png)
 
 ## Tech stack
 
