@@ -4,6 +4,7 @@ import titleFont from './fonts/arimo-bold-title-subset.woff2'
 import comicMono from './fonts/ComicMono.ttf'
 import { MDXProvider } from '@mdx-js/react'
 import { Heading, P, Helmet } from './common'
+import icon from './d7fc70-circle-192.png'
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -41,6 +42,8 @@ export default ({ children }) => (
     <GlobalStyle />
     <Helmet>
       <meta charSet="utf-8" />
+      <link rel="icon" href={icon} />
+      <link rel="apple-touch-icon" href={icon} />
     </Helmet>
     <MDXProvider
       components={{
