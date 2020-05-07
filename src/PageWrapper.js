@@ -42,6 +42,7 @@ export default ({ children }) => (
     <GlobalStyle />
     <Helmet>
       <meta charSet="utf-8" />
+      <meta name="monetization" content="$dt.in.th" />
       <link rel="icon" href={icon} />
       <link rel="apple-touch-icon" href={icon} />
     </Helmet>
