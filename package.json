@@ -36,7 +36,7 @@
     "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-remark-responsive-iframe": "^2.2.30",
     "gatsby-transformer-sharp": "^2.3.0",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.19",
     "markdown-it": "^9.1.0",
     "netlify-cms-app": "^2.9.7",
     "node-fetch": "^2.6.0",
