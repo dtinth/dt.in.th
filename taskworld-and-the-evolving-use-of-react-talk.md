@@ -1,5 +1,4 @@
 ---
-id: taskworld-and-the-evolving-use-of-react-talk
 parents: [talks]
 title: Taskworld and the Evolving Use of React.js
 created: 2016-06-14T00:00:00.000Z

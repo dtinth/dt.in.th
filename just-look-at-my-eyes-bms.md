@@ -1,5 +1,4 @@
 ---
-id: 'just-look-at-my-eyes-bms'
 parents: [songs]
 title: 'Just look at my eyes (bms edit)'
 song:

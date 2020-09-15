@@ -1,5 +1,4 @@
 ---
-id: 'over-whelming-joy'
 parents: [songs]
 title: 'OVER-WHELMING JOY'
 song:

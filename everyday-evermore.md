@@ -1,5 +1,4 @@
 ---
-id: everyday-evermore
 parents: [songs]
 title: Everyday evermore
 song:

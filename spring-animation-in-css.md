@@ -1,5 +1,4 @@
 ---
-id: spring-animation-in-css
 parents: [talks, projects]
 title: 'CSS Spring Animation Using Physics and Calculus'
 created: 2015-11-22T00:00:00.000Z

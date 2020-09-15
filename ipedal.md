@@ -1,5 +1,4 @@
 ---
-id: ipedal
 title: iPedal
 parents: [projects]
 created: 2013-09-21T15:42:44Z

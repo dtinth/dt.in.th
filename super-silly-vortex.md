@@ -1,5 +1,4 @@
 ---
-id: super-silly-vortex
 parents: [projects, talks]
 title: super-silly-vortex
 created: 2019-12-14T03:00:00.000Z

@@ -1,5 +1,4 @@
 ---
-id: tdd-talk
 parents: [talks]
 title: TDD
 created: 2016-03-30T00:00:00.000Z

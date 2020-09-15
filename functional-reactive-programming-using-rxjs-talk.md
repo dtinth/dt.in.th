@@ -1,5 +1,4 @@
 ---
-id: functional-reactive-programming-using-rxjs-talk
 parents: [talks]
 title: Functional Reactive Programming using RxJS
 created: 2015-07-18T00:00:00.000Z

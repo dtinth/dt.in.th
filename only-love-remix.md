@@ -1,5 +1,4 @@
 ---
-id: 'only-love-remix'
 parents: [songs]
 title: 'Only Love (Euphoric Trance Remix)'
 song:

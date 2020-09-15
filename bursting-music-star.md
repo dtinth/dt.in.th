@@ -1,5 +1,4 @@
 ---
-id: 'bursting-music-star'
 parents: [songs]
 title: 'bursting☆music☆star'
 song:

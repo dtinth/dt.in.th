@@ -1,5 +1,4 @@
 ---
-id: 'running-out-2015'
 parents: [songs]
 title: 'Running Out 2015'
 song:

@@ -1,5 +1,4 @@
 ---
-id: 'relive'
 parents: [songs]
 title: 'Relive'
 song:

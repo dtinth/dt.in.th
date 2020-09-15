@@ -1,5 +1,4 @@
 ---
-id: songs
 title: Songs
 description: 'flicknote’s musical compositions, arrangements, and remixes'
 ---

@@ -1,5 +1,4 @@
 ---
-id: bemuse
 parents: [projects]
 title: Bemuse
 created: 2013-12-10T14:41:31.000Z

@@ -1,5 +1,4 @@
 ---
-id: webmidicon
 parents: [projects, talks]
 title: WebMIDICon
 created: 2016-11-21T17:05:00.000Z

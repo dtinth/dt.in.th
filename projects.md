@@ -1,5 +1,4 @@
 ---
-id: projects
 title: Projects
 description: 'An archive of @dtinth’s programming projects.'
 ---

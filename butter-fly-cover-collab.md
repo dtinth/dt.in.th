@@ -1,5 +1,4 @@
 ---
-id: 'butter-fly-cover-collab'
 parents: [songs]
 title: 'Butter-Fly (Digimon Tri Ver.) (Cover)'
 song:
