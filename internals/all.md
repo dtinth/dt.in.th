@@ -1,6 +1,7 @@
 ---
 title: All Pages
 pageClass: all-pages
+showTitle: false
 ---
 
 <template>

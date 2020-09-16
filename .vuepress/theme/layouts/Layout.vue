@@ -1,7 +1,8 @@
 <template>
   <ParentLayout>
     <template #page-top>
-      <h1>{{$page.title}}</h1>
+      <h1 v-if="$page.frontmatter.showTitle !== false">{{$page.title}}</h1>
+      <div v-else style="height: 3.6rem"></div>
     </template>
   </ParentLayout>
 </template>

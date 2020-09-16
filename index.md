@@ -4,5 +4,3 @@ heroText: dt.in.th
 tagline: Thai Pangsakulyanont
 footer: :)
 ---
-
-# hi
