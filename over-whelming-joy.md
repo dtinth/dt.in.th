@@ -8,6 +8,7 @@ song:
 created: 2016-07-03T00:00:00.000Z
 updated: 2016-07-03T00:00:00.000Z
 description: A speedy carnival-style song.
+image: /uploads/over-whelming-joy.png
 ---
 
 A speedy carnival-style song.

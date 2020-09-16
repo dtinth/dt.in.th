@@ -5,6 +5,7 @@ created: 2013-12-10T14:41:31.000Z
 updated: 2019-10-04T17:37:35.000Z
 description: 'A free and open source, online, web-based rhythm action game.'
 featured: true
+image: /uploads/bemuse-screens.jpg
 tags:
   - Project
 ---

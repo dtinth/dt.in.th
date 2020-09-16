@@ -1,6 +1,7 @@
 ---
 parents: [talks]
 title: Race Conditions in JS Apps
+image: /uploads/race-conditions-in-js-apps.jpg
 created: 2019-06-16T03:00:00.000Z
 updated: 2019-06-16T03:00:00.000Z
 description: >-
