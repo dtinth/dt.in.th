@@ -12,7 +12,9 @@ description: A frantic song.
 
 A frantic song.
 
-`youtube: X6y2m09V4Hw`
+<template>
+  <YouTube id="X6y2m09V4Hw" />
+</template>
 
 This song is a [submission](http://manbow.nothing.sh/event/event.cgi?action=More_def&num=155&event=104) to the event [大血戦 -THE BMS OF FIGHTERS ULTIMATE-](http://www.bmsoffighters.net/bofu_daikessen/index.html).
 

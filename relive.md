@@ -12,7 +12,9 @@ description: A retrohouse song.
 
 A retrohouse song, [submitted](http://manbow.nothing.sh/event/event.cgi?action=More_def&num=372&event=123) to the [G2R2018](http://bmsoffighters.net/g2r2018/) event.
 
-`youtube: 33OhpOdxZOs`
+<template>
+  <YouTube id="33OhpOdxZOs" />
+</template>
 
 ## Submission text
 

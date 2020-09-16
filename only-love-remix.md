@@ -13,7 +13,9 @@ description: A euphoric trance remix of Shannon Hurley’s song “Only Love”
 This song is made to demonstrate the [bmson file format](https://bmson.nekokan.dyndns.info/),
 a modern file format for rhythm game data.
 
-`youtube: KUoi1Hp-bzM`
+<template>
+  <YouTube id="KUoi1Hp-bzM" />
+</template>
 
 It is included into [Bemuse](/p/bemuse/)’s song list.
 

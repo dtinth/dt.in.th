@@ -14,12 +14,14 @@ I also talked about how object-oriented programming
 (pursuing well-factored code) and functional programming (pursuing
 predictable code) goes hand in hand.
 
-`youtube: MyX4Et5fqlY`
+<template>
+  <YouTube id="MyX4Et5fqlY" />
+</template>
 
 Presented at [React Bangkok 1.0.0](https://reactbkk.github.io/1.0.0/).
 
 <template>
-  <call-to-action href="https://reactbkk.github.io/1.0.0/higher-order-components.pdf">
+  <CallToAction href="https://reactbkk.github.io/1.0.0/higher-order-components.pdf">
     Slides
-  </call-to-action>
+  </CallToAction>
 </template>

@@ -12,7 +12,9 @@ description: A speedy carnival-style song.
 
 A speedy carnival-style song.
 
-`youtube: 0eRTa2NQ4r0`
+<template>
+  <YouTube id="0eRTa2NQ4r0" />
+</template>
 
 This song is a [submission](http://manbow.nothing.sh/event/event.cgi?action=More_def&num=20&event=109) to the [Be Happiness!!!!](http://nextreflection.net/behappiness/) event.
 

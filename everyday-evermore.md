@@ -12,7 +12,9 @@ description: A hopeful love song.
 
 A hopeful love song.
 
-`youtube: KEqiqYXuaj8`
+<template>
+  <YouTube id="KEqiqYXuaj8" />
+</template>
 
 This song is a [submission](http://manbow.nothing.sh/event/event.cgi?action=More_def&num=170&event=110) to the [BOFU2016 - Legendary Again -](http://bmsoffighters.net/bofu2016/) event.
 

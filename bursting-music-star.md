@@ -12,7 +12,9 @@ description: A song imitating northeastern Thailand-style music.
 
 A song imitating northeastern Thailand-style music.
 
-`youtube: PCRrr2kqvV8`
+<template>
+  <YouTube id="PCRrr2kqvV8" />
+</template>
 
 This song is a [submission](http://manbow.nothing.sh/event/event.cgi?action=More_def&num=247&event=110) to the [BOFU2016 - Legendary Again -](http://bmsoffighters.net/bofu2016/) event.
 

@@ -12,7 +12,9 @@ description: A song imitating TV drama-style music.
 
 A song imitating TV drama-style music.
 
-`youtube: x1GbvumXlv4`
+<template>
+  <YouTube id="x1GbvumXlv4" />
+</template>
 
 This song is a [submission](http://manbow.nothing.sh/event/event.cgi?action=More_def&num=18&event=119) to the [Battle in the Mist 2ndMIX](http://bmsoffighters.net/bim/) event.
 

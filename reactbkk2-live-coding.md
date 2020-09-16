@@ -11,14 +11,16 @@ In this session, I demonstrated how one can quickly create a simple React applic
 React allowed me to be very productive when rapidly prototyping UIs thanks to its **tight feedback loop** (such as hot reloading).
 The goal for this session is to let people interested in React see how React app development feels like when you become acquainted with it.
 
-`youtube: u5mpnKYhfUE`
+<template>
+  <YouTube id="u5mpnKYhfUE" />
+</template>
 
 Presented at [React Bangkok 2.0.0](https://reactbkk.com/2.0.0/).
 
 This resulting project (a live Twitter board for the event) would later be used in React Bangkok 3.0.0.
 
 <template>
-  <call-to-action href="https://github.com/reactbkk/tweetboard-frontend">
+  <CallToAction href="https://github.com/reactbkk/tweetboard-frontend">
     GitHub repository
-  </call-to-action>
+  </CallToAction>
 </template>

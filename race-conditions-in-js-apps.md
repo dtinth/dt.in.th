@@ -15,7 +15,9 @@ tags:
 
 It’s easy to create race conditions in JavaScript if you’re not careful.
 
-`youtube: https://www.youtube.com/watch?v=DWZj56qUNfs`
+<template>
+  <YouTube id="DWZj56qUNfs" />
+</template>
 
 This talk is about dealing with common kinds of race conditions based on my experience working on a real-time collaborative app.
 

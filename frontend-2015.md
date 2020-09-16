@@ -12,7 +12,9 @@ It includes browser technologies (WebGL, Web Audio, WebRTC, Service Worker), dev
 
 Presented at <i>Code Mania 10</i>.
 
-`youtube: 3PWmxxKeT2Y`
+<template>
+  <YouTube id="3PWmxxKeT2Y" />
+</template>
 
 <template>
   <call-to-action href="https://spacet.me/codemania2015/">

@@ -16,6 +16,12 @@ It is one of the most popular talks of mine ever.
 When I published the slides, it got shared more than
 1,000 times in the first day.
 
-<call-to-action href="http://go.spacet.me/tdd20160330">
-  Slides (Thai Language)
-</call-to-action>
+<p style="text-align: center">
+  <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fdtinth%2Fposts%2F10205022751642661&show_text=true&width=552&appId=1691631784411098&height=969" width="552" height="969" style="max-width:100%;border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+</p>
+
+<template>
+  <CallToAction href="http://go.spacet.me/tdd20160330">
+    Slides (Thai Language)
+  </CallToAction>
+</template>

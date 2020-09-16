@@ -10,4 +10,6 @@ In this talk, I explained the basic concepts of functional reactive
 programming, the marble diagram, and a library that enables reactive
 programming, RxJS.
 
-`youtube: 6ghavmltuso`
+<template>
+  <YouTube id="6ghavmltuso" />
+</template>

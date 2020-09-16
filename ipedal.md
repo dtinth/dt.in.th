@@ -24,10 +24,12 @@ pedal.on('up', () => console.log('pedal is up'))
 
 ## History
 
-I created iPedal for use in my talk <i>[VIM tips, technique, scripts, plugins](/p/vim-tips-technique-scripts-plugins/)</i>.
+I created iPedal for use in my talk <i>[VIM tips, technique, scripts, plugins](./vim-tips-technique-scripts-plugins.md)</i>.
 
 In that talk, there was a lot of live demos. To make the demos easy-to-understand, I created a software that display the keystrokes typed. But since in the demos I need both of my hands to type Vim commands, I needed a way to control it without using my hands. And hence this project was born.
 
-<call-to-action href="https://github.com/dtinth/iPedal">
-  GitHub repository
-</call-to-action>
+<template>
+  <CallToAction href="https://github.com/dtinth/iPedal">
+    GitHub repository
+  </CallToAction>
+</template>

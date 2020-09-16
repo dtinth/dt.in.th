@@ -324,10 +324,11 @@ Presented at [BarCamp Bangkhen 6](http://2015.barcampbangkhen.org/).
 
 </div>
 
-<call-to-action href="https://medium.com/@dtinth/spring-animation-in-css-2039de6e1a03">
-  Writeup
-</call-to-action>
-
-<call-to-action href="https://codepen.io/dtinth/pen/jbXKRv">
-  Demo
-</call-to-action>
+<template>
+  <CallToAction href="https://medium.com/@dtinth/spring-animation-in-css-2039de6e1a03">
+    Writeup
+  </CallToAction>
+  <CallToAction href="https://codepen.io/dtinth/pen/jbXKRv">
+    Demo
+  </CallToAction>
+</template>

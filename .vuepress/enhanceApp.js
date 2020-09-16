@@ -1,4 +1,5 @@
 import CallToAction from './global-components/CallToAction.vue'
+import EmbedContainer from './global-components/EmbedContainer.vue'
 import SoundCloud from './global-components/SoundCloud.vue'
 import TwitterEmbed from './global-components/TwitterEmbed.vue'
 import YouTube from './global-components/YouTube.vue'
@@ -10,6 +11,7 @@ export default ({
   siteData // site metadata
 }) => {
   Vue.component('CallToAction', CallToAction)
+  Vue.component('EmbedContainer', EmbedContainer)
   Vue.component('SoundCloud', SoundCloud)
   Vue.component('TwitterEmbed', TwitterEmbed)
   Vue.component('YouTube', YouTube)

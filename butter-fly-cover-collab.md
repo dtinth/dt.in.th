@@ -11,8 +11,10 @@ description: I played drums on an iPad in this anisong collaboration project.
 ---
 
 In this anime song collaboration project,
-I played drums on my iPad using [WebMIDICon](/p/webmidicon).
+I played drums on my iPad using [WebMIDICon](./webmidicon.md).
 
-`youtube: CHarkZrQH34`
+<template>
+  <YouTube id="CHarkZrQH34" />
+</template>
 
 Big thanks to [MindaRyn](https://www.youtube.com/channel/UCI3GAvwaZwf1abbeREza8eA) for inviting me to do a collab!
