@@ -2,7 +2,7 @@
 parents: [projects]
 title: dt.in.th
 created: 2005-10-15T16:00:00.000Z
-updated: 2019-12-16T15:36:02.663Z
+updated: 2020-09-16T00:00:00.000Z
 description: Thai Pangsakulyanont’s website where he documents the stuffs he made.
 featured: false
 tags:

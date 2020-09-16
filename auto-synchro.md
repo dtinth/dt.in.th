@@ -5,7 +5,8 @@ song:
   artist: flicknote
   type: original
   genre: HARDSTYLE
-date: '2015-01-20'
+created: 2015-01-20T00:00:00Z
+updated: 2015-01-20T00:00:00Z
 ---
 
 This hardstyle song is created for audio/video delay calibration algorithm in [Bemuse](bemuse.md).

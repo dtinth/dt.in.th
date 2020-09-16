@@ -49,7 +49,7 @@
           },
           filter: true,
           resizable: true,
-          width: 600,
+          width: 500,
           editable: true,
           valueSetter() {
             return false
@@ -59,7 +59,24 @@
           headerName: 'Diagnostics',
           field: 'diagnostics',
           filter: true,
-          width: 300
+          width: 120,
+          resizable: true
+        },
+        {
+          headerName: 'Created',
+          field: 'frontmatter.created',
+          filter: true,
+          width: 240,
+          resizable: true,
+          sortable: true
+        },
+        {
+          headerName: 'Updated',
+          field: 'frontmatter.updated',
+          filter: true,
+          width: 240,
+          resizable: true,
+          sortable: true
         }
       ]
       var rowData = []
