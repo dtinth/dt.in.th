@@ -29,7 +29,6 @@ module.exports = {
     editLinks: false,
     docsDir: '',
     editLinkText: '',
-    lastUpdated: true,
     nav: [
       // {
       //   text: 'Guide',

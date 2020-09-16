@@ -17,6 +17,8 @@ quick overview of Redux, a state management solution.
 
 Presented at [BKK WEB Meetup](https://www.meetup.com/bkk-web/events/231034570/) and [Facebook Developer Circles Bangkok: Meetup Launch '&' Hackathon](https://www.eventpop.me/e/2489)
 
-<call-to-action href="https://taskworld.github.io/react-talk">
-  Slides (with presenter notes)
-</call-to-action>
+<template>
+  <call-to-action href="https://taskworld.github.io/react-talk">
+    Slides (with presenter notes)
+  </call-to-action>
+</template>

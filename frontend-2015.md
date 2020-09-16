@@ -14,6 +14,8 @@ Presented at <i>Code Mania 10</i>.
 
 `youtube: 3PWmxxKeT2Y`
 
-<call-to-action href="https://spacet.me/codemania2015/">
-  Talk homepage
-</call-to-action>
+<template>
+  <call-to-action href="https://spacet.me/codemania2015/">
+    Talk homepage
+  </call-to-action>
+</template>

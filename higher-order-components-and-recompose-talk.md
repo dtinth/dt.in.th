@@ -18,6 +18,8 @@ predictable code) goes hand in hand.
 
 Presented at [React Bangkok 1.0.0](https://reactbkk.github.io/1.0.0/).
 
-<call-to-action href="https://reactbkk.github.io/1.0.0/higher-order-components.pdf">
-  Slides
-</call-to-action>
+<template>
+  <call-to-action href="https://reactbkk.github.io/1.0.0/higher-order-components.pdf">
+    Slides
+  </call-to-action>
+</template>

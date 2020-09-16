@@ -21,7 +21,7 @@ This talk is about dealing with common kinds of race conditions based on my expe
 
 Presented at [JSConf.Asia 2019](https://2019.jsconf.asia/).
 
-### Talk Proposal
+### Talk Proposals
 
 This is the CFP submission.
 

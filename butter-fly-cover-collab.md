@@ -1,6 +1,6 @@
 ---
 parents: [songs]
-title: 'Butter-Fly (Digimon Tri Ver.) (Cover)'
+title: Butter-Fly (Digimon Tri Ver.) (Cover)
 song:
   artist: 'original by Wada Kouji · cover by MindaRyn'
   type: collab

@@ -13,19 +13,25 @@ A free and open source, web-based online rhythm action game.
 
 Started in 2015, it is built based on modern HTML5 technology and libraries such as React and Pixi.js.
 
-`youtube: https://youtu.be/lGw6VMkDWCA`
+<template>
+  <YouTube id="lGw6VMkDWCA" />
+</template>
 
-<call-to-action href="https://bemuse.ninja">
-  Play the game
-</call-to-action>
+<template>
+  <call-to-action href="https://bemuse.ninja">
+    Play the game
+  </call-to-action>
+</template>
 
 I built this game as a playground in applying software engineering principles and practices.
 It is also my [graduation project](https://gist.github.com/dtinth/0b633afa89a2a070647d).
 The project is open source, and has automated tests as well as a CI/CD pipeline around it.
 
-<call-to-action href="https://github.com/bemusic/bemuse">
-  Source code on GitHub
-</call-to-action>
+<template>
+  <call-to-action href="https://github.com/bemusic/bemuse">
+    Source code on GitHub
+  </call-to-action>
+</template>
 
 The gameplay is heavily inspired and influenced by Lunatic Rave 2, beatmaniaIIDX, and O2Jam. It is **key sounded**, meaning that each individual note gets its own sound. The song will sound off if you did not hit the notes correctly.
 
@@ -33,11 +39,15 @@ I created this project because most PC rhythm games only work on Windows, and I 
 
 In 2018, a **3D mode** is added, and the game can be enjoyed in mobile phones.
 
-`youtube: https://youtu.be/rM1Rhk48iKE`
+<template>
+  <YouTube id="rM1Rhk48iKE" />
+</template>
 
 **Party mode** lets multiple people play Bemuse together.
 
-`youtube: https://youtu.be/hiJzFRIhiiA`
+<template>
+  <YouTube id="hiJzFRIhiiA" />
+</template>
 
 As of 2019, Bemuse has over **15,000 monthly active players.**
 
@@ -113,9 +123,11 @@ It allowed me to update the project to use new tools and follow the general dire
 
 Having a system for automated tests in place also allowed me to implement support for new file format [in a single night](https://twitter.com/bemusegame/status/634020332093837312).
 
-<twitter-embed>
-  <p lang="en" dir="ltr"><a href="https://twitter.com/wosderge?ref_src=twsrc%5Etfw">@wosderge</a> Thanks to unit tests. It saved a lot of manual testing time. <a href="https://t.co/Gkqf3mMfql">https://t.co/Gkqf3mMfql</a> <a href="http://t.co/WUUw1eWjl4">pic.twitter.com/WUUw1eWjl4</a></p>&mdash; Bemuse · flicknote は JSConf.jp に行きます (@bemusegame) <a href="https://twitter.com/bemusegame/status/634204792433197056?ref_src=twsrc%5Etfw">August 20, 2015</a>
-</twitter-embed>
+<template>
+  <TwitterEmbed>
+    <p lang="en" dir="ltr"><a href="https://twitter.com/wosderge?ref_src=twsrc%5Etfw">@wosderge</a> Thanks to unit tests. It saved a lot of manual testing time. <a href="https://t.co/Gkqf3mMfql">https://t.co/Gkqf3mMfql</a> <a href="http://t.co/WUUw1eWjl4">pic.twitter.com/WUUw1eWjl4</a></p>&mdash; Bemuse · flicknote は JSConf.jp に行きます (@bemusegame) <a href="https://twitter.com/bemusegame/status/634204792433197056?ref_src=twsrc%5Etfw">August 20, 2015</a>
+  </TwitterEmbed>
+</template>
 
 ### Music
 

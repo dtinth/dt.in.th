@@ -69,10 +69,6 @@ Tired of having to maintain my custom static site generator, I [migrated](https:
 
 Things that I made are scattered everywhere. Apart from my talks and songs which are now linked from `dt.in.th`, my code projects are on [GitHub repos](https://github.com/dtinth) under multiple different organizations, various [Glitch projects](https://glitch.com/@dtinth), [Codepen](https://codepen.io/dtinth), [CodeSandbox](https://codesandbox.io/u/dtinth) (and more). Writings are on [Medium](https://medium.com/@dtinth), [Dev.to](https://dev.to/dtinth/), [wonderful.software](https://wonderful.software), [my old blog](https://me.dt.in.th/), and sometimes I post some popular content on Facebook.
 
-That was a lot of …stuff! And I didn’t have a catalog for them!
+That was a lot of stuff! And I didn’t have a catalog for them! Instead of having separate catalogs for my code projects, writings, songs, talks, videos, etc. I decided to create one single collection of stuffs that I want to share. This is also a way I can give each thing I made a homepage about it.
 
-Instead of having separate catalogs for my code projects, writings, songs, talks, videos, etc. I decided to create one single collection of “stuffs” that I want to share.
-
-This is also a way I can give each stuff I made a homepage about it.
-
-It is coming soon…
+I wanted to focus more on _content_ rather than _maintaining the content infrastructure_, so I switched the website to use [VuePress](https://vuepress.vuejs.org/).

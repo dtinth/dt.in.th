@@ -1,6 +1,6 @@
 ---
 parents: [songs]
-title: 'bursting☆music☆star'
+title: bursting☆music☆star
 song:
   artist: 'flicknote · video by 5argon'
   type: original

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Page Grid</title>
+    <style>
+      a {
+        color: #ffb;
+      }
+    </style>
+  </head>
+  <body style="margin: 0; padding: 0;">
+    <div
+      id="myGrid"
+      style="width: 100vw; height: 100vh;"
+      class="ag-theme-alpine-dark"
+    ></div>
+    <script src="https://unpkg.com/ag-grid-community@23/dist/ag-grid-community.min.js"></script>
+    <script>
+      var columnDefs = [
+        {
+          headerName: 'Title',
+          field: 'title',
+          sortable: true,
+          filter: true,
+          resizable: true,
+          width: 300,
+          onCellClicked(params) {
+            console.log(params.data)
+          }
+        },
+        {
+          headerName: 'Path',
+          field: 'path',
+          sortable: true,
+          filter: true,
+          resizable: true,
+          width: 300,
+          cellRenderer(params) {
+            return `<a href="${params.value}" target="_top">${params.value}</a>`
+          }
+        },
+        {
+          headerName: 'Description',
+          field: 'frontmatter.description',
+          cellEditor: 'agLargeTextCellEditor',
+          cellEditorParams: {
+            maxLength: 2000,
+            cols: 80
+          },
+          filter: true,
+          resizable: true,
+          width: 600,
+          editable: true,
+          valueSetter() {
+            return false
+          }
+        },
+        {
+          headerName: 'Diagnostics',
+          field: 'diagnostics',
+          filter: true,
+          width: 300
+        }
+      ]
+      var rowData = []
+      var gridOptions = {
+        columnDefs: columnDefs,
+        rowData: rowData
+      }
+      var gridDiv = document.querySelector('#myGrid')
+      new agGrid.Grid(gridDiv, gridOptions)
+      onmessage = event => {
+        if (event.data.pages) {
+          gridOptions.api.setRowData(event.data.pages)
+        }
+      }
+      parent.postMessage({ requestPages: true }, '*')
+    </script>
+  </body>
+</html>

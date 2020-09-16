@@ -17,6 +17,8 @@ Presented at [React Bangkok 2.0.0](https://reactbkk.com/2.0.0/).
 
 This resulting project (a live Twitter board for the event) would later be used in React Bangkok 3.0.0.
 
-<call-to-action href="https://github.com/reactbkk/tweetboard-frontend">
-  GitHub repository
-</call-to-action>
+<template>
+  <call-to-action href="https://github.com/reactbkk/tweetboard-frontend">
+    GitHub repository
+  </call-to-action>
+</template>
