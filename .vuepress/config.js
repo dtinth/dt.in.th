@@ -23,6 +23,7 @@ module.exports = {
           'https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap'
       }
     ]
+    // TODO: Add favicon
     // ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     // ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],

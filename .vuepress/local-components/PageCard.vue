@@ -2,7 +2,7 @@
   <router-link :to="page.path">
     <article class="page-card" :data-overflown="overflown">
       <div class="page-card-contents">
-        <!-- TODO: Use a blurhash as image placeholder -->
+        <!-- TODO: #20 Use a blurhash as image placeholder -->
         <div
           class="image-container"
           :style="{ backgroundImage: `url(${page.frontmatter.image})` }"
@@ -12,8 +12,8 @@
             <h2>
               {{ page.title }}
             </h2>
-            <!-- TODO: Add category or type to PageCard -->
-            <!-- TODO: Add item last modified date to PageCard -->
+            <!-- TODO: #21 Add category or type to PageCard -->
+            <!-- TODO: #22 Add item last modified date to PageCard -->
             <p>{{ page.frontmatter.description }}</p>
           </div>
         </div>
