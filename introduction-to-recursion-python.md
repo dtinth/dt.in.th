@@ -4,6 +4,7 @@ title: Introduction to Recursion (Python)
 created: 2013-06-27T00:00:00.000Z
 updated: 2013-06-27T00:00:00.000Z
 description: An introductory lecture to recursion for freshmen students in Python.
+image: /uploads/introduction-to-recursion-python.jpg
 ---
 
 An introductory lecture to recursion for freshmen students in Python.
