@@ -4,6 +4,7 @@ title: 'React Bangkok 2.0.0: Live coding / mob programming session'
 created: 2017-06-03T00:00:00.000Z
 updated: 2017-06-03T00:00:00.000Z
 description: A live coding session to demonstrate how React made me very productive.
+image: /uploads/reactbkk2-live-coding.jpg
 ---
 
 In this session, I demonstrated how one can quickly create a simple React application by doing live coding.

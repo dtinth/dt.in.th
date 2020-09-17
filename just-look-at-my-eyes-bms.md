@@ -7,6 +7,7 @@ song:
   genre: 'TV Drama Pop'
 created: 2017-04-02T00:00:00.000Z
 updated: 2017-04-02T00:00:00.000Z
+image: /uploads/just-look-at-my-eyes.jpg
 description: A song imitating TV drama-style music.
 ---
 

@@ -7,6 +7,7 @@ song:
   genre: HOPEFUL LOVE SONG
 created: 2016-09-23T00:00:00.000Z
 updated: 2016-09-23T00:00:00.000Z
+image: /uploads/everyday-evermore.jpg
 description: A hopeful love song.
 ---
 

@@ -8,6 +8,7 @@ song:
 created: 2015-11-08T00:00:00.000Z
 updated: 2015-11-08T00:00:00.000Z
 description: A frantic song.
+image: /uploads/running-out-2015.jpg
 ---
 
 A frantic song.

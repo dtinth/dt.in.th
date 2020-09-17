@@ -7,6 +7,7 @@ song:
   genre: 'MOR LAM SING STYLE'
 created: 2016-09-23T00:00:00.000Z
 updated: 2016-09-23T00:00:00.000Z
+image: /uploads/bursting-music-star.jpg
 description: A song imitating northeastern Thailand-style music.
 ---
 

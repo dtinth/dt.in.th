@@ -1,9 +1,10 @@
 ---
 parents: [talks]
-title: TDD
+title: A lecture about TDD
 created: 2016-03-30T00:00:00.000Z
 updated: 2016-03-30T00:00:00.000Z
 description: An introductory lecture about TDD for software engineering students.
+image: /uploads/tdd-talk.png
 ---
 
 An introductory lecture about TDD.
