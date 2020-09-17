@@ -6,6 +6,7 @@ updated: 2019-10-04T17:37:35.000Z
 description: 'A free and open source, online, web-based rhythm action game.'
 featured: true
 image: /uploads/bemuse-screens.jpg
+sidebar: auto
 tags:
   - Project
 ---
@@ -24,6 +25,14 @@ Started in 2015, it is built based on modern HTML5 technology and libraries such
   </call-to-action>
 </template>
 
+## Etymology
+
+The original name of the game was “<u>be</u>at☆<u>mu</u>sic☆<u>se</u>quence”.
+This name was derived from the file format that it uses, [`.bms` (Be-Music Source)](https://en.wikipedia.org/wiki/Be-Music_Source).
+Later, I shortened the name to Bemuse, which happens to be a valid English word, meaning “to make confused”.
+
+## Origin
+
 I built this game as a playground in applying software engineering principles and practices.
 It is also my [graduation project](https://gist.github.com/dtinth/0b633afa89a2a070647d).
 The project is open source, and has automated tests as well as a CI/CD pipeline around it.
@@ -33,6 +42,8 @@ The project is open source, and has automated tests as well as a CI/CD pipeline 
     Source code on GitHub
   </call-to-action>
 </template>
+
+## Features
 
 The gameplay is heavily inspired and influenced by Lunatic Rave 2, beatmaniaIIDX, and O2Jam. It is **key sounded**, meaning that each individual note gets its own sound. The song will sound off if you did not hit the notes correctly.
 
@@ -140,8 +151,8 @@ Most artists are happy to allow me to use their songs for free, given that Bemus
 
 The background music for the game screens, as well as some playable songs, I composed myself.
 
-- Tutorial song: [BY☆MY☆SIDE](/music/by-my-side/)
-- Music selection song: [BY☆MY☆SIDE (Ambient House Mix)](/music/by-my-side-ambient-house-mix/)
-- Delay calibration song: [AUTO±SYNCHRO](/music/auto-synchro/)
+- Tutorial song: [BY☆MY☆SIDE](./by-my-side.md)
+- Music selection song: [BY☆MY☆SIDE (Ambient House Mix)](./by-my-side-ambient-house-mix.md)
+- Delay calibration song: [AUTO±SYNCHRO](./auto-synchro.md)
 
 [unit-tests]: https://bemuse.ninja/?mode=test&grep=game
