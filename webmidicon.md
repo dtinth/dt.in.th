@@ -6,6 +6,7 @@ updated: 2019-08-03T19:03:00.000Z
 description: A collection of hackable web-based MIDI instruments.
 featured: true
 image: /uploads/webmidicon.png
+sidebar: auto
 ---
 
 A collection of **hackable web-based MIDI instruments**, implemented as a MIDI controller.

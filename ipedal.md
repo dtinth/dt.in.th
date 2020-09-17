@@ -11,7 +11,7 @@ tags:
 
 A programmable foot pedal for your iPad and Node.js.
 
-iPedal creates a web server that can be accessed with an iPad, which is then used as a foot pedal.
+iPedal creates a web server that can be accessed through an iPad, which is then used as a foot pedal.
 
 ![](/uploads/ipedal.jpeg)
 
