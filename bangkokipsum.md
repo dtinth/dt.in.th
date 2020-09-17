@@ -39,3 +39,5 @@ In 2020, I updated the model to include phrases from more recent songs.
     <div class="fb-post" data-colorscheme="dark" data-href="https://web.facebook.com/dtinth/posts/10215154955661429" data-show-text="true" data-width=""><blockquote cite="https://www.facebook.com/dtinth/posts/10215154955661429" class="fb-xfbml-parse-ignore"><p>เมื่อสองปีที่แล้วเคยทำเว็บ https://bangkokipsum.app/ เป็นเว็บไว้สร้างข้อความภาษาไทยมั่วๆ...</p>Posted by <a href="#" role="button">Thai Pangsakulyanont</a> on&nbsp;<a href="https://www.facebook.com/dtinth/posts/10215154955661429">Friday, August 7, 2020</a></blockquote></div>
   </FacebookEmbed>
 </template>
+
+I also added an [about page](https://bangkokipsum.app/about/) that explains (in Thai language) how the text-generation algorithm works.
