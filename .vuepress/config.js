@@ -55,6 +55,7 @@ module.exports = {
   themeConfig: {
     repo: 'https://github.com/dtinth/dt.in.th',
     editLinks: false,
+    search: false,
     docsDir: '',
     editLinkText: '',
     nav: [
@@ -88,7 +89,11 @@ module.exports = {
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
-  plugins: ['@vuepress/plugin-back-to-top', '@vuepress/plugin-medium-zoom'],
+  plugins: [
+    '@vuepress/plugin-back-to-top',
+    '@vuepress/plugin-medium-zoom',
+    ['@vuepress/google-analytics', { ga: 'UA-4343503-1' }]
+  ],
 
   postcss: {
     plugins: [
