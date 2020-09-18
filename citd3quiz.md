@@ -71,6 +71,14 @@ The difficulty of the questions here ranges from easy to ridiculous.
   text-align center
   display block
 
+.quiz-option[data-result="correct"]
+  background #254423
+  border 1px solid #355433
+
+.quiz-option[data-result="incorrect"]
+  background #452423
+  border 1px solid #553433
+
 .quiz-option[data-result="correct"] .quiz-option-icon
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.227 1.433c0 .715-.324 1.41-.971 2.089l-.1.1-5.662 5.964C7.29 10.85 6.266 11.827 5.42 12.517c-.846.69-1.443 1.036-1.791 1.036-.367 0-.822-.173-1.365-.518-.544-.345-.895-.7-1.054-1.067-.134-.306-.26-.953-.38-1.942C.712 9.036.652 7.965.652 6.81c0-.629.263-1.21.788-1.745.525-.534 1.106-.801 1.74-.801.605 0 .966.552 1.082 1.658l.027.284c.098.849.21 1.441.34 1.777.127.336.301.504.521.504.092 0 .263-.1.513-.298.25-.198.55-.469.898-.81l5.817-5.763c.489-.488.925-.858 1.31-1.108.385-.25.711-.376.98-.376.202 0 .345.077.43.23.086.152.129.408.129.769v.302z' fill='%23D7FC70' fill-rule='evenodd'/%3E%3C/svg%3E");
 
@@ -84,6 +92,7 @@ The difficulty of the questions here ranges from easy to ridiculous.
 
 <script>
 import { citd3quiz } from './.vuepress/data/citd3quiz'
+import { trackEvent } from './.vuepress/lib/telemetry'
 import Vue from 'vue'
 
 export default {
@@ -108,6 +117,7 @@ export default {
       const key = `${rn}-${qn}`
       if (!this.results[key]) {
         Vue.set(this.results, key, result)
+        trackEvent('citd3quiz', { questionKey: key, result, selectedChoice: an })
       }
     }
   }
