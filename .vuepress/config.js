@@ -8,6 +8,8 @@ module.exports = {
    */
   description: 'Thai Pangsakulyanont’s web site',
 
+  patterns: ['**/*.md', '**/*.vue', '!README.md'],
+
   /**
    * Extra tags to be injected to the page HTML `<head>`
    *
