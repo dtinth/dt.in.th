@@ -149,7 +149,9 @@ You can put in a list of keywords (or people), and they will be highlighted in b
   </TwitterEmbed>
 </template>
 
-- **Custom CSS** — Allows you to put your own CSS to customize the UI.
+### Custom CSS
+
+Allows you to put your own CSS to customize the UI.
 
 <template>
   <TwitterEmbed>
