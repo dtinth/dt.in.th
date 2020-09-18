@@ -1,7 +1,7 @@
 name: Process TODO comments
 on:
   push:
-    branches: [vuepress]
+    branches: [master]
 jobs:
   process_todos:
     runs-on: ubuntu-latest
