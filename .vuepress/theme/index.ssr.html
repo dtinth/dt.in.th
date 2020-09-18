@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<HTML LANG="{{ lang }}" CLASS="dtinth">
+  <HEAD>
+    <META CHARSET="UTF-8">
+    <META NAME="viewport" CONTENT="width=device-width,initial-scale=1">
+    <TITLE>{{ title }}</TITLE>
+    <meta NAME="generator" CONTENT="VuePress {{ version }}">
+    {{{ userHeadTags }}}
+    {{{ pageMeta }}}
+    {{{ renderResourceHints() }}}
+    {{{ renderStyles() }}}
+  </HEAD>
+  <BODY>
+    <!--vue-ssr-outlet-->
+    {{{ renderScripts() }}}
+  </BODY>
+</HTML>
