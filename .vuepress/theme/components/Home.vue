@@ -1,9 +1,19 @@
 <template>
-  <main class="home" :aria-labelledby="data.heroText !== null ? 'main-title' : null">
+  <main
+    class="home"
+    :aria-labelledby="data.heroText !== null ? 'main-title' : null"
+  >
     <header class="hero">
       <h1 id="main-title">dt.in.th</h1>
     </header>
     <Content class="theme-default-content custom" />
+    <footer>
+      <router-link to="/"
+        >@<strong style="color: #d7fc70">dtinth</strong></router-link
+      >
+      <a rel="me authn" href="https://github.com/dtinth">GitHub</a>
+      <a rel="me" href="https://twitter.com/dtinth">Twitter</a>
+    </footer>
   </main>
 </template>
 
@@ -18,8 +28,8 @@ export default {
   computed: {
     data() {
       return this.$page.frontmatter
-    },
-  },
+    }
+  }
 }
 </script>
 
@@ -45,6 +55,16 @@ export default {
 
   @media (min-width: 720px) {
     font-size: 192px;
+  }
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  color: #8b8685;
+  & > a {
+    color: inherit;
+    margin: 0 0.5rem;
   }
 }
 </style>
