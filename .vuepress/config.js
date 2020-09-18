@@ -53,7 +53,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: 'https://github.com/dtinth/dt.in.th',
+    // repo: 'https://github.com/dtinth/dt.in.th',
     editLinks: false,
     search: false,
     docsDir: '',

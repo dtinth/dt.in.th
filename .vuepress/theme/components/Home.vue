@@ -59,7 +59,7 @@ export default {
 }
 
 footer {
-  padding: 1rem;
+  padding: 1rem 0.5rem 2rem;
   text-align: center;
   color: #8b8685;
   & > a {
