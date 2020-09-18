@@ -66,3 +66,7 @@ After the quiz, the top scorers are invited to become a contestant in that round
     Try out the quiz!
   </call-to-action>
 </template>
+
+### JavaScript Bangkok 1.0.0
+
+**auden** has been reused in JavaScript Bangkok 1.0.0 for networking quizzes.

@@ -3,7 +3,6 @@ title: Frontend knowledge quiz
 created: 2019-02-15T00:00:00.000Z
 updated: 2019-02-15T00:00:00.000Z
 description: 'How much do you know frontend? Try out this quiz!'
-image: /uploads/auden.jpg
 ---
 
 How much do you know frontend? Find out by trying out this quiz!

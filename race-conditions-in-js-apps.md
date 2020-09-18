@@ -24,7 +24,7 @@ This talk is about dealing with common kinds of race conditions based on my expe
 
 Presented at [JSConf.Asia 2019](https://2019.jsconf.asia/).
 
-### Talk Proposals
+## Talk proposals
 
 This is the CFP submission.
 
@@ -42,7 +42,7 @@ This is the CFP submission.
 >
 > This talk is not specific to any framework, library, or language. I believe it can benefit the whole developer community, not just JS.
 
-### Original talk sketch
+## Original talk sketch
 
 I wrote the following talk sketch before crafting the CFP above. I did not sent this in the CFP submission.
 
