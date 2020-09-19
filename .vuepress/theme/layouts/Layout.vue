@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="stylus">
-.dtinth .theme-default-content:not(.custom) > *:first-child {
+[DATA-SITE="dtinth"] .theme-default-content:not(.custom) > *:first-child {
   margin-top: 0;
 }
 </style>

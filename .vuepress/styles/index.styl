@@ -1,54 +1,56 @@
 // https://v1.vuepress.vuejs.org/config/#index-styl
 // https://github.com/vuejs/vuepress/blob/master/packages/@vuepress/theme-default/styles/index.styl
 
-html.dtinth
-.dtinth body
+HTML[DATA-SITE="dtinth"]
+[DATA-SITE="dtinth"] BODY
   background #353433
 
-.dtinth body
+[DATA-SITE="dtinth"] BODY
   font-family Arimo, Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
 
-.dtinth .navbar
-.dtinth .navbar .links
+[DATA-SITE="dtinth"] .navbar
+[DATA-SITE="dtinth"] .navbar .links
   background-color #090807
 
-.dtinth .search-box input
-.dtinth .search-box .suggestions
+[DATA-SITE="dtinth"] .search-box INPUT
+[DATA-SITE="dtinth"] .search-box .suggestions
   background #090807
 
-.dtinth .search-box .suggestion.focused
+[DATA-SITE="dtinth"] .search-box .suggestion.focused
   background #454443
 
-.dtinth .theme-default-content:not(.custom)
+[DATA-SITE="dtinth"] .theme-default-content:not(.custom)
   font-size 1.125rem
 
-.dtinth blockquote
+[DATA-SITE="dtinth"] BLOCKQUOTE
   border-left-color #8b8685
   color #e9e8e7
 
-.dtinth a
+[DATA-SITE="dtinth"] A
   color #ffb
+  & > STRONG
+    color #ffb
 
-.dtinth strong
-.dtinth em
+[DATA-SITE="dtinth"] STRONG
+[DATA-SITE="dtinth"] EM
   color #fff
 
-.dtinth .theme-default-content > p:first-child
+[DATA-SITE="dtinth"] .theme-default-content > P:first-child
   font-size 1.25em
 
-.dtinth h2
+[DATA-SITE="dtinth"] H2
   color #D7FC70
   text-shadow 2px 2px RGBA(215,252,112,0.15);
 
-.dtinth h3
+[DATA-SITE="dtinth"] H3
   color #FEBFEA
   text-shadow 2px 2px RGBA(0,0,0,0.25)
 
-.dtinth .sidebar
+[DATA-SITE="dtinth"] .sidebar
   background #252423
   border-right-color #454443
 
-.dtinth :not(pre) > code
+[DATA-SITE="dtinth"] :not(PRE) > CODE
   border 1px solid #555453
   background #252423
   border-radius 2px
@@ -59,11 +61,11 @@ html.dtinth
 .名
   color #bef
 
-.dtinth details
+[DATA-SITE="dtinth"] DETAILS
   background: #252423
   padding 1rem
   margin 1em 0
-  & > summary
+  & > SUMMARY
     color #d7fc70
     margin -1rem
     padding 1rem
