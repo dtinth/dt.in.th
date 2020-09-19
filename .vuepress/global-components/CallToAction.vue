@@ -1,6 +1,6 @@
 <template>
   <p class="cta">
-    <a :href="href" class="link">
+    <a :href="href" class="link" target="_blank">
       <strong>
         <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -9,19 +9,19 @@
             fill-rule="evenodd"
           />
         </svg>
-        {{' '}}
+        {{ ' ' }}
         <span class="title">
           <slot />
         </span>
       </strong>
-      <span class="url">{{href}}</span>
+      <span class="url">{{ href }}</span>
     </a>
   </p>
 </template>
 
 <script>
 export default {
-  props: ['href'],
+  props: ['href']
 }
 </script>
 
