@@ -10,9 +10,19 @@ sidebar: auto
 I recommend every developer try building a personal assistant chat bot.
 It’s a great way to improve skill and make life easier at the same time.
 
-**automatron** is my personal [LINE](https://line.me) [bot](https://developers.line.biz/en/services/messaging-api/) that helps me automate various tasks of everyday life, such as **home control** (air conditioner, lights and plugs), **expense tracking** (record how much I spend each day), and more.
+I built **automatron** to be my personal [LINE](https://line.me) [bot](https://developers.line.biz/en/services/messaging-api/) that helps me automate various tasks of everyday life:
+
+- home control (air conditioner, lights and plugs)
+- expense tracking (record how much I spend each day)
+- notetaking
+- quick calculations
+- etc.
 
 ![Photo of my phone with chat logs](/uploads/automatron.jpg)
+
+There’s a popular saying: **“There’s an app for that.”**
+Yes, but that means if I want to do 5 things, I had to switch between 5 apps.
+By building my own bot, I can integrate all these features _deeply_.
 
 The source code is published on GitHub:
 
@@ -22,47 +32,50 @@ The source code is published on GitHub:
   </call-to-action>
 </template>
 
-## Features
+## The story
 
-### Everything in one app
+**automatron** is the result of my laziness.
 
-This is the most important feature in my opinion.
+### I want my room to be cool already when I get there
 
-There’s a popular saying: **There’s an app for everything.**
-But that means if I want to do 5 things, I had to switch between 5 apps.
-But with a programmable personal assistant, I can program this one bot to do many things.
+**Thailand is a hot country.**
+I’ve always wanted to build was a system that let me remotely turn on the air-condition in my room while I travel.
 
-### Home automation
+I have no hardware hacking experience, so this project remained only an idea, until one day I learned that programmable IR transceivers exist.
+Oh, and Google Assistant is now a thing.
 
-Before automatron…
+So I [bought a Broadlink RM Mini3 and hooked it up to my Google Assistant](https://medium.com/@dtinth/remotely-turning-on-my-air-conditioner-through-google-assistant-1a1441471e9d), along with other smart home stuff, like [Philips Hue](https://github.com/dtinth/hue.sh) and [TP-Link Kasa](https://ifttt.com/services/kasa).
 
-- I used [Google Assistant’s routines](https://support.google.com/googlenest/answer/7029585) to automate my room.
-  While this works fine, there are a few annoyances…
-  - Google Assistant would (slowly) run the actions one-by-one.
-  - In total it would take ~10 seconds to finish the routine.
-  - If I switch to other apps while the routine is running, it will get interrupted.
+This works fine but there are a few annoyances…
 
-Now, with automatron, I just send stickers to it. It controls all the devices at once.
+- Google Assistant would (slowly) run the actions one-by-one.
+- In total it would take ~10 seconds to finish the routine.
+- If I switch to other apps while the routine is running, it will get interrupted.
+
+After I implemented home automation functionalities into automatron,
+now I just send it stickers.
+It controls all the devices at once.
 
 ![home automation](https://raw.githubusercontent.com/dtinth/automatron/master/images/home_automation.png)
 
-At my room, I have a Raspberry Pi set up which can [control lights](https://github.com/dtinth/hue.sh), [air conditioner](https://medium.com/@dtinth/remotely-turning-on-my-air-conditioner-through-google-assistant-1a1441471e9d), and [smart plugs](https://ifttt.com/services/kasa). It receives commands via [Google Cloud IoT Core](https://cloud.google.com/iot-core/).
+### I want to track my expenses
 
-### Expense tracking
+2014, I’m in my last year of college. I start taking internships and making some money.
+I feel the need to keep track of my expenses.
 
-Before automatron…
+At first, I used an **Apple Numbers** spreadsheet.
+While this works, it takes a lot of effort to track of everything.
+I would need to keep my receipt (or take a photo of it) and update the sheet at the end of the day.
+I could also do it on my phone as the day goes by, but iCloud was a lot of hassle —
+occasionally it would say “your files are modified on both devices, choose one to keep.”
 
-- I used Apple Numbers sheet based on the “personal budget” template to track my expenses.
-  - But it takes a lot of effort to track everything.
-  - And also a lot of hassle keeping them properly synchronized on iCloud.
-  - Occasionally I would get things like “Your files are modified on both devices! Choose one to keep.”
-- I then built a web application to help me track my expenses.
-  - Still too many clicks. Gave up.
-  - I even made a voice interface. Still a hassle to use.
+**“Let’s build a dedicated app for this!”** I thought.
+Then I built a web application to help me track my expenses.
+Still too many clicks. Gave up.
+I even made a voice interface. Still quite a hassle to use.
 
 Then I realized… **As a lazy programmer, I like to write more than being asked.**
 Instead of filling in forms, I would rather say something short and unambiguous.
-
 If I had a personal chatbot,
 I can invent my own language that would concisely represent an expense.
 For example, `35f` could mean ฿<u>35</u> for <u>f</u>ood.
@@ -70,45 +83,68 @@ For example, `35f` could mean ฿<u>35</u> for <u>f</u>ood.
 ![expense tracking](https://raw.githubusercontent.com/dtinth/automatron/master/images/expense_tracking.png)
 
 And here it is. No more filling forms.
-Data is saved in [Airtable](https://airtable.com/) for easy CRUD.
+Data is saved in [Airtable](https://airtable.com/).
 
-The reply bubble is deep-linked into the Airtable app, so if I made a mistake, I can edit/delete the record without having to implement it myself.
+::: tip Why I use Airtable
+For expense tracking, ~95% of the time, the use case is to insert a new expense entry.
+I rarely edit/delete existing entries, so I don't want to spend time implementing it myself.
+But they still do happen.
 
-### Transaction aggregation
+I chose Airtable because then I can deep-link the reply into the Airtable app, and use it for edit/delete.
+:::
 
-I’m still too lazy, and then I realized… **Since I use an Android phone, I can parse incoming SMS from multiple banks, aggregate them in one place, and record expenses automatically.**
+### I want to see all the transactions in one place
+
+I have multiple bank accounts and **each bank has its own app.**
+But since I use an Android phone, I can parse incoming SMS from multiple banks, aggregate them in one place, and record expenses automatically.
 
 ![transaction_aggregation](https://raw.githubusercontent.com/dtinth/automatron/master/images/transaction_aggregation.png)
 
-I [set up IFTTT to read SMS messages](https://ifttt.com/services/android_messages) and send it to automatron. It then uses [transaction-parser-th](https://github.com/dtinth/transaction-parser-th) to parse SMS message and extract transaction information.
+I [set up IFTTT to read SMS messages](https://ifttt.com/services/android_messages) and send it to automatron.
+It then uses [transaction-parser-th](https://github.com/dtinth/transaction-parser-th) to parse SMS messages and extract transaction information.
+
+### Why not offer the option to track the transaction as expense as well?
+
+I start to see a pattern…
+Most of the transactions are expenses, and I want to track them.
+Now I want to streamline this process, so I added some [quick reply buttons](https://developers.line.me/en/docs/messaging-api/using-quick-reply/) to the transaction message.
+
+Now when I receive a transaction, I can just tap on the corresponding category to track it as an expense.
 
 ![quick_replies](https://raw.githubusercontent.com/dtinth/automatron/master/images/quick_replies.png)
 
-On my mobile phone, [quick reply buttons](https://developers.line.me/en/docs/messaging-api/using-quick-reply/) lets me quickly turn a transaction into an expense record by simply tapping on the category.
+### Why not track some expenses automatically?
+
+While most transactions can’t be categorized automatically when all it knows is “paid ฿55 to 7-ELEVEN”.
+But some can. If I paid “BTS SkyTrain” then obviously it’s for transportation.
 
 ![auto_expense](https://raw.githubusercontent.com/dtinth/automatron/master/images/auto_expense.png)
 
-Certain kinds of transactions can be automatically be turned into an expense, such as when I [take BTS Skytrain using Rabbit LINE Pay card](https://brandinside.asia/rabbit-line-pay-bts/). Having many features in one bot enabled this kind of tight integrations.
+### I need to do some quick calculations
 
-### Image-to-text
-
-automatron can also convert image to text using [Google Cloud Vision API](https://cloud.google.com/vision/).
-
-![image_to_text](https://raw.githubusercontent.com/dtinth/automatron/master/images/image_to_text.png)
-
-### LiveScript evaluation
-
-[LiveScript](https://livescript.net/) interpreter is included, which allows me to do some quick calculations.
+As a handy feature, I included a [LiveScript](https://livescript.net/) interpreter.
+This allows me to do some quick calculations.
 
 ![livescript](https://raw.githubusercontent.com/dtinth/automatron/master/images/livescript.png)
 
 ### Scheduled commands
 
-I can say “**in 6h lights white**” and that command “**lights white**” will be run 6 hours later.
+Because automatron uses a text-based interface, implementing scheduled commands becomes very easy.
+Now I can tell my bot before sleeping “**<u>in 6h</u> lights on**”, and 6 hours later it would turn my lights back on.
+
+![Airtable table showing scheduled commands](/uploads/automatron-schedule.jpg)
+
+With this I can also implement a **command macros**.
+For example, `gn` (goodnight) means `lights dimmed` and then `in 5m lights off`.
+(When I say goodnight to automatron, it would dim my room’s lights and turn it of 5 minutes later.)
 
 The scheduled commands are also stored in Airtable, so if I need to cancel any scheduled command I can just edit it there.
 
-![Airtable table showing scheduled commands](/uploads/automatron-schedule.jpg)
+### Image-to-text
+
+As an extra feature, automatron can also convert images to text using [Google Cloud Vision API](https://cloud.google.com/vision/).
+
+![image_to_text](https://raw.githubusercontent.com/dtinth/automatron/master/images/image_to_text.png)
 
 ## History
 
