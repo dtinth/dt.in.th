@@ -10,9 +10,12 @@ tags:
   - Project
 ---
 
-Bangkok Ipsum is a webpage that lets you generate random Thai text.
+**Bangkok Ipsum** is a webpage that lets you generate random Thai text.
 
-The text generation model is a simple n-gram probabilistic text generator, trained on a corpus based on lyrics from BNK48 and Sweat16! idol groups.
+Sometimes I just want a random Thai text to test my designs with.
+But existing random Thai text generator does not produce a result that I like. So, I created Bangkok Ipsum.
+
+It uses a simple n-gram probabilistic text generator, trained on a corpus based on lyrics from BNK48 and Sweat16! idol groups.
 
 <template>
   <call-to-action href="https://bangkokipsum.app">
@@ -22,7 +25,7 @@ The text generation model is a simple n-gram probabilistic text generator, train
 
 ## 2018: Project inception
 
-This project was during The Stupid Hackathon Thailand #2 event in 2018.
+I built this project during [The Stupid Hackathon Thailand #2](https://web.facebook.com/events/d41d8cd9/the-stupid-hackathon-thailand-2/169587413711647/) event in 2018.
 
 <template>
   <EmbedContainer :ratio="960 / 569">
