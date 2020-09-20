@@ -9,6 +9,7 @@
             :src="page.frontmatter.image"
             @load="$refs.image.setAttribute('data-loaded', '1')"
             ref="image"
+            data-zoomable="false"
           />
         </div>
         <div class="page-card-info-container" ref="infoContainer">

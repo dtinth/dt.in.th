@@ -93,7 +93,13 @@ module.exports = {
    */
   plugins: [
     '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
+    [
+      '@vuepress/plugin-medium-zoom',
+      {
+        selector:
+          '.theme-default-content :not(a) > img:not([data-zoomable="false"])'
+      }
+    ],
     ['@vuepress/google-analytics', { ga: 'UA-4343503-1' }]
   ],
 
