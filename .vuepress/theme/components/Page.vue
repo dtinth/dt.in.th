@@ -1,6 +1,5 @@
 <template>
   <main class="page h-entry">
-    <data class="u-url u-uid" :value="`https://dt.in.th${$page.path}`"></data>
     <slot name="top" />
 
     <h1 class="p-name" v-if="$page.frontmatter.showTitle !== false">
@@ -14,6 +13,9 @@
     <PageNav v-bind="{ sidebarItems }" />
 
     <slot name="bottom" />
+    <data class="u-url u-uid" :value="`https://dt.in.th${$page.path}`"></data>
+    <data class="dt-published" :value="$page.frontmatter.created"></data>
+    <data class="dt-updated" :value="$page.frontmatter.updated"></data>
   </main>
 </template>
 
