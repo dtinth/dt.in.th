@@ -7,7 +7,7 @@
           <img
             loading="lazy"
             :src="page.frontmatter.image"
-            @load="$refs.image.setAttribute('data-loaded', '1')"
+            @load="$refs.image && $refs.image.setAttribute('data-loaded', '1')"
             ref="image"
             data-zoomable="false"
           />
