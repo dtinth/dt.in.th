@@ -2,16 +2,17 @@
   <router-link :to="page.path">
     <article class="page-card" :data-overflown="overflown">
       <div class="page-card-contents">
-        <!-- TODO: #20 Use a blurhash as image placeholder -->
-        <div
-          class="image-container"
-          :style="{ backgroundImage: `url(${page.frontmatter.image})` }"
-        ></div>
+        <div class="image-container">
+          <blurhash-image :blurhash="blurhash" v-if="blurhash"></blurhash-image>
+          <img
+            :src="page.frontmatter.image"
+            @load="$refs.image.setAttribute('data-loaded', '1')"
+            ref="image"
+          />
+        </div>
         <div class="page-card-info-container" ref="infoContainer">
           <div class="page-card-info" ref="infoContents">
-            <h2>
-              {{ page.title }}
-            </h2>
+            <h2>{{ page.title }}</h2>
             <!-- TODO: #21 Add category or type to PageCard -->
             <!-- TODO: #22 Add item last modified date to PageCard -->
             <p>{{ page.frontmatter.description }}</p>
@@ -23,10 +24,21 @@
 </template>
 
 <script>
+import blurhashes from '../data/blurhashes'
+
 export default {
   props: ['page'],
   data() {
-    return { overflown: 'no' }
+    return {
+      overflown: 'no',
+    }
+  },
+  computed: {
+    blurhash() {
+      const page = this.page
+      const image = page.frontmatter.image
+      return (blurhashes[image] && blurhashes[image].blurhash) || ''
+    },
   },
   mounted() {
     if (
@@ -35,7 +47,7 @@ export default {
     ) {
       this.overflown = 'yes'
     }
-  }
+  },
 }
 </script>
 
@@ -43,19 +55,24 @@ export default {
 .page-list {
   text-align: center;
 }
+
 .page-card {
   margin: 0.5rem 0.5rem;
+
   @media (min-width: 384px) {
     margin: 0.5rem;
     display: inline-block;
     width: 24rem;
   }
+
   @media (min-width: 1440px) {
     width: 28rem;
   }
+
   @media (min-width: 1800px) {
     width: 32rem;
   }
+
   text-align: left;
   vertical-align: top;
   border: 1px solid #656463;
@@ -64,6 +81,7 @@ export default {
   background: #090807;
   color: #e9e8e7;
   position: relative;
+
   &[data-overflown='yes']::after {
     transition: 0.3s opacity;
     content: '';
@@ -77,20 +95,25 @@ export default {
     pointer-events: none;
     opacity: 1;
   }
+
   &[data-overflown='yes']:hover::after {
     opacity: 0;
   }
 }
+
 .page-card-info-container {
   height: 10rem;
 }
+
 .page-card-info {
   min-height: 10rem;
   background: #090807;
   transition: 0.2s transform;
+
   .page-card:hover & {
     transform: translate(0, -100%) translate(0, 10rem);
   }
+
   & > h2 {
     margin: 0;
     padding: 1rem 1rem 0.5rem;
@@ -100,6 +123,7 @@ export default {
     line-height: 2.0625rem;
     overflow: hidden;
   }
+
   & > p {
     margin: 0;
     padding: 0 1rem 1rem;
@@ -107,11 +131,34 @@ export default {
     overflow: hidden;
   }
 }
+
 .image-container {
   position: relative;
   background: #252423 center no-repeat;
   background-size: cover;
   padding-top: 56.25%;
   overflow: hidden;
+
+  & > blurhash-image {
+    background-size: cover;
+  }
+
+  & > img {
+    object-fit: cover;
+    opacity: 0;
+    transition: 0.2s opacity;
+  }
+
+  & > img[data-loaded='1'] {
+    opacity: 1;
+  }
+
+  & > blurhash-image, & > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 </style>

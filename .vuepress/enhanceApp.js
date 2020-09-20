@@ -1,3 +1,5 @@
+import './custom-elements/blurhash-image'
+
 import CallToAction from './global-components/CallToAction.vue'
 import EmbedContainer from './global-components/EmbedContainer.vue'
 import FacebookEmbed from './global-components/FacebookEmbed.vue'
