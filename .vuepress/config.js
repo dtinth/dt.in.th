@@ -44,7 +44,12 @@ module.exports = {
           'KPwXWQr6OIH6bsOGgHWj+S26HijkV/sLuj6R+u73pAFxy+otElk6/JdNHnq0pXtgq6WBDetrLXpcOtTXbx86' +
           'urX779+vAXoL/C/SX0r9H/I4B/ZfDPGP6dxD/E+Jce/5Tk36r8Y5h/bfPPefq9EI9VRTu5xbU5AAAAAElFTkSuQmCC'
       }
-    ]
+    ],
+    [
+      'link',
+      { rel: 'webmention', href: 'https://webmention.io/dt.in.th/webmention' }
+    ],
+    ['link', { rel: 'pingback', href: 'https://webmention.io/dt.in.th/xmlrpc' }]
     // ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     // ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
