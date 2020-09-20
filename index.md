@@ -7,7 +7,7 @@ footer: :)
 
 <div class="page-list h-feed">
   <data class="p-name" value="Featured entries"></data>
-  <data class="h-url" value="https://dt.in.th/">Featured pages</data>
+  <data class="h-url" value="https://dt.in.th/"></data>
   <template v-for="project of projects">
     <PageCard :page="project" />
   </template>
