@@ -32,8 +32,8 @@ export default {
   computed: {
     data() {
       return this.$page.frontmatter
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -66,6 +66,7 @@ footer {
   padding: 1rem 0.5rem 2rem;
   text-align: center;
   color: #8b8685;
+
   & > a {
     color: inherit;
     margin: 0 0.5rem;
