@@ -8,7 +8,7 @@
     </header>
     <Content class="theme-default-content custom" />
     <footer class="h-card">
-      <router-link class="p-nickname" to="/"
+      <router-link class="p-nickname p-name u-url u-uid" to="/"
         >@<strong style="color: #d7fc70">dtinth</strong></router-link
       >
       <a rel="me authn" href="https://github.com/dtinth">GitHub</a>
