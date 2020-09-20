@@ -13,9 +13,21 @@
     <PageNav v-bind="{ sidebarItems }" />
 
     <slot name="bottom" />
-    <data class="u-url u-uid" :value="`https://dt.in.th${$page.path}`"></data>
-    <data class="dt-published" :value="$page.frontmatter.created"></data>
-    <data class="dt-updated" :value="$page.frontmatter.updated"></data>
+    <div class="microformats2">
+      published by <a rel="author" class="p-author h-card" href="/">@dtinth</a>
+      at
+      <a class="u-url u-uid" :href="`https://dt.in.th${$page.path}`">
+        <time class="dt-published" :datetime="$page.frontmatter.created">{{
+          $page.frontmatter.created
+        }}</time> </a
+      ><template
+        v-if="$page.frontmatter.created + '' !== $page.frontmatter.updated + ''"
+        >, last updated at
+        <time class="dt-updated" :datetime="$page.frontmatter.updated">{{
+          $page.frontmatter.updated
+        }}</time>
+      </template>
+    </div>
   </main>
 </template>
 
@@ -59,6 +71,10 @@ h1 {
   @media (max-width: $MQMobileNarrow) {
     padding: 1.5rem;
   }
+}
+
+.microformats2 {
+  display: none;
 }
 </style>
 
