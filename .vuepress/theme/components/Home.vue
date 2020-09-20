@@ -7,12 +7,16 @@
       <h1 id="main-title">dt.in.th</h1>
     </header>
     <Content class="theme-default-content custom" />
-    <footer>
-      <router-link to="/"
+    <footer class="h-card">
+      <router-link class="p-nickname" to="/"
         >@<strong style="color: #d7fc70">dtinth</strong></router-link
       >
       <a rel="me authn" href="https://github.com/dtinth">GitHub</a>
       <a rel="me" href="https://twitter.com/dtinth">Twitter</a>
+      <data
+        class="u-logo"
+        value="https://static.dt.in.th/uploads/2020/09/21/d7fc70-circle-192.png"
+      ></data>
     </footer>
   </main>
 </template>
