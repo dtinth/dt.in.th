@@ -5,6 +5,7 @@
         <div class="image-container">
           <blurhash-image :blurhash="blurhash" v-if="blurhash"></blurhash-image>
           <img
+            loading="lazy"
             :src="page.frontmatter.image"
             @load="$refs.image.setAttribute('data-loaded', '1')"
             ref="image"
