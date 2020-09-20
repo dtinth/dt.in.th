@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="page.path">
+  <router-link :to="page.path" class="h-entry u-url">
     <article class="page-card" :data-overflown="overflown">
       <div class="page-card-contents">
         <div class="image-container">
@@ -14,10 +14,10 @@
         </div>
         <div class="page-card-info-container" ref="infoContainer">
           <div class="page-card-info" ref="infoContents">
-            <h2>{{ page.title }}</h2>
+            <h2 class="p-name">{{ page.title }}</h2>
             <!-- TODO: #21 Add category or type to PageCard -->
             <!-- TODO: #22 Add item last modified date to PageCard -->
-            <p>{{ page.frontmatter.description }}</p>
+            <p class="p-summary">{{ page.frontmatter.description }}</p>
           </div>
         </div>
       </div>
