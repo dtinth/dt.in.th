@@ -116,5 +116,9 @@ module.exports = {
   "/uploads/vxchrome.png": {
     "fileHash": "GMkc2Q/+33C1G55e/nAwOztJN39kbpr/Gh6XMRw3hTU=",
     "blurhash": "L6OzVx%M00~q00s:?I9G00Rkt7NG"
+  },
+  "/uploads/how-i-animate-code-in-keynote.png": {
+    "fileHash": "5fbOBHh/rMHuLNK8tgspgVXisdzXT3lqBQ7fmpl79hA=",
+    "blurhash": "L26kYIo#WaWE_3oIRPRjM|e.%1oz"
   }
 }
