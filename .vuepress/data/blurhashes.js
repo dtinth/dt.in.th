@@ -120,5 +120,9 @@ module.exports = {
   "/uploads/how-i-animate-code-in-keynote.png": {
     "fileHash": "5fbOBHh/rMHuLNK8tgspgVXisdzXT3lqBQ7fmpl79hA=",
     "blurhash": "L26kYIo#WaWE_3oIRPRjM|e.%1oz"
+  },
+  "/uploads/pastebox.png": {
+    "fileHash": "2sCKoojUjCmmKq2tOZqexGP+TJ51rYVDgRO4/h+yo2Y=",
+    "blurhash": "L06t~]-:Hm-;_2ofNFj=07Rm.FRj"
   }
 }
