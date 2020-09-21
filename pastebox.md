@@ -16,7 +16,7 @@ I made a tool to bridge that gap. As a result, it helps streamline my video edit
   <YouTube id="E6aYLVxsRKA" />
 </template>
 
----
+## Motivation
 
 Many applications, both web and native, lets you drag in an image file, but won’t let you paste in an image. For example:
 
