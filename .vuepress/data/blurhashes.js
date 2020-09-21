@@ -100,5 +100,21 @@ module.exports = {
   "/uploads/webmidicon.png": {
     "fileHash": "1DYNGBEIGX+GSU7TOf+qgxbLs65nBYWjo0R81pjR9jg=",
     "blurhash": "L59@bT00--$zI9%2ohS$00_MMLbv"
+  },
+  "/uploads/gyroscratch.jpg": {
+    "fileHash": "breYTirg5r/m1SfAeu9aP3ZQ5k1fVoaXbhmZlujdx5k=",
+    "blurhash": "LHHT$[~7$vNe.RM{=rESxV9b%1Ne"
+  },
+  "/uploads/midi-lights.jpg": {
+    "fileHash": "myczmZA3144lryCv3IYYJwlBs5EgAzmYsifZawsbjfs=",
+    "blurhash": "L7HV3W00000L~pIUoeRj$^t8IWof"
+  },
+  "/uploads/vxchrome-cta.png": {
+    "fileHash": "Pa6ZSBKK+nqBR7SYhd+OM27QAMs6CL3Wjq+BkPNky4k=",
+    "blurhash": "L8OWvm9F00~q004n?bRj004nxuxu"
+  },
+  "/uploads/vxchrome.png": {
+    "fileHash": "GMkc2Q/+33C1G55e/nAwOztJN39kbpr/Gh6XMRw3hTU=",
+    "blurhash": "L6OzVx%M00~q00s:?I9G00Rkt7NG"
   }
 }
