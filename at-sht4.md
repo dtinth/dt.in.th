@@ -75,7 +75,7 @@ With that, I built the initial website…
 
 ## Website
 
-I also built [the event’s website](https://stupidhackth.github.io/4/) based on the same design ideas.
+Later, I expanded on [the event’s website](https://stupidhackth.github.io/4/) based on the same design ideas.
 
 ![Website screenshot](./page-images/at-sht4/final.jpg)
 
