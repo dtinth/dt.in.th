@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  props: ['href']
+  props: ['href'],
 }
 </script>
 
@@ -68,15 +68,16 @@ export default {
     color: #fff;
   }
 
-  & > .cta-url {
+  & > .url {
     display: block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 1rem;
-    line-height: 1rem;
     padding-left: 1.25rem;
-    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    word-wrap: break-word;
+    word-break: break-all;
   }
 }
 </style>
