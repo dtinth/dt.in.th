@@ -19,6 +19,41 @@ A hopeful love song.
 
 This song is a [submission](http://manbow.nothing.sh/event/event.cgi?action=More_def&num=170&event=110) to the [BOFU2016 - Legendary Again -](http://bmsoffighters.net/bofu2016/) event.
 
+- Composed by [**flicknote**](https://dt.in.th/) (Thai Pangsakulyanont)
+- Lyrics by [**Dekdekbaloo**](https://www.youtube.com/channel/UCcqIXlQYhxFW6TTxAlQsl-g) (Jessada Trirongkit) vs **flicknote**
+- Vocals by [**MindaRyn**](https://www.youtube.com/channel/UCI3GAvwaZwf1abbeREza8eA) (Natcha Pongsupanee)
+- Guitar by **Dekdekbaloo**
+- Japanese lyrics by [**suitougreentea**](https://twitter.com/suitougreentea)
+
+## Karaoke
+
+The karaoke-style text in the music video is done in **HTML, CSS and JavaScript.**
+It is then composited into the video using iMovie.
+
+On Sep 23, 2020 (4 year anniversary), the code that used to generate the karaoke overlay has been **open-sourced**.
+
+<template>
+  <call-to-action href="https://dtinth.github.io/everydayevermore/">
+    Karaoke version
+  </call-to-action>
+</template>
+
+<template>
+  <call-to-action href="https://github.com/dtinth/everydayevermore">
+    Source code on GitHub
+  </call-to-action>
+</template>
+
+## Playable in Bemuse
+
+You can play this song in the rhythm game [Bemuse](./bemuse.md).
+
+<template>
+  <call-to-action href="https://bemuse.ninja/?song=Everyday+evermore">
+    Play this song in Bemuse
+  </call-to-action>
+</template>
+
 ## Submission text
 
 > 作曲： flicknote \
