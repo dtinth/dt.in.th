@@ -70,3 +70,13 @@ After the quiz, the top scorers are invited to become a contestant in that round
 ### JavaScript Bangkok 1.0.0
 
 **auden** has been reused in JavaScript Bangkok 1.0.0 for networking quizzes.
+
+### BKK.js \#14: Return of BKK.js
+
+**auden** has been used in BKK.js for some quizzes during the sessions.
+Some new functionalities are added to auden as a result:
+
+- Live chat
+- Collecting questions
+- Sign in with Eventpop
+- Multiple instances of scene type
