@@ -105,7 +105,28 @@ module.exports = {
           '.theme-default-content :not(a) > img:not([data-zoomable="false"])'
       }
     ],
-    ['@vuepress/google-analytics', { ga: 'UA-4343503-1' }]
+    ['@vuepress/google-analytics', { ga: 'UA-4343503-1' }],
+    (pluginOptions, context) => ({
+      name: 'dtinth',
+      extendPageData: $page => {
+        const match = String($page.path).match(
+          /^\/([a-zA-Z0-9][a-zA-Z0-9_.-]*)\.html$/
+        )
+        const existingOgImage = ($page.frontmatter.meta || []).find(
+          m => m.property === 'og:image'
+        )
+        if (match && !existingOgImage) {
+          if (!$page.frontmatter.meta) {
+            $page.frontmatter.meta = []
+          }
+          const screenshotUrl = `https://ss.dt.in.th/api/screenshots/${match[1]}.png`
+          $page.frontmatter.meta.push({
+            property: 'og:image',
+            content: screenshotUrl
+          })
+        }
+      }
+    })
   ],
 
   postcss: {
