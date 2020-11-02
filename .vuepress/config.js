@@ -119,7 +119,7 @@ module.exports = {
           if (!$page.frontmatter.meta) {
             $page.frontmatter.meta = []
           }
-          const screenshotUrl = `https://ss.dt.in.th/api/screenshots/${match[1]}.png`
+          const screenshotUrl = `https://ss.dt.in.th/api/screenshots/dt.in.th-${match[1]}.png`
           $page.frontmatter.meta.push({
             property: 'og:image',
             content: screenshotUrl
