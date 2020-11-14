@@ -134,7 +134,7 @@ module.exports = {
       require('autoprefixer'),
       require('postcss').plugin('postcss-screaming', () => css => {
         css.walkDecls(decl => {
-          decl.prop = decl.prop.toUpperCase()
+          if (!decl.prop.startsWith('--')) decl.prop = decl.prop.toUpperCase()
         })
       })
     ]
@@ -147,5 +147,10 @@ module.exports = {
     config.optimization.minimizer = [
       new TerserPlugin({ terserOptions: { output: { semicolons: false } } })
     ]
+  },
+  markdown: {
+    extendMarkdown: md => {
+      md.use(require('markdown-it-footnote'))
+    }
   }
 }

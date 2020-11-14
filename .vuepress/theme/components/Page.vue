@@ -34,10 +34,16 @@
 <script>
 import PageEdit from '@theme/components/PageEdit.vue'
 import PageNav from '@theme/components/PageNav.vue'
-
+import { setupInteractiveFootnotes } from '../utils/InteractiveFootnotes'
 export default {
   components: { PageEdit, PageNav },
   props: ['sidebarItems'],
+  mounted() {
+    setupInteractiveFootnotes()
+  },
+  updated() {
+    setupInteractiveFootnotes()
+  },
 }
 </script>
 
