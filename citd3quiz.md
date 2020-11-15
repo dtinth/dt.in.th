@@ -11,7 +11,17 @@ How much do you know frontend? Find out by trying out this quiz!
 
 We used this quiz at the [Code in the Dark Thailand: CNX 2019](/auden.html#code-in-the-dark-3-cnx-2019) event
 to select the contestants to participate in each qualification round.
-The difficulty of the questions here ranges from easy to ridiculous.
+The difficulty of the questions here ranges from easy to ridiculous[^why].
+
+<!-- prettier-ignore-start -->
+
+[^why]:
+
+    In the first two events we noticed that some great developers chose to register as an observer and not a contestant because they are not confident enough in their skills.
+
+    We changed that in the third event and ran 3 rounds of live quizzes with the whole audience, choosing top scorers in each round to become a contestant. As a side effect this also lets _everyone_ participate.
+
+<!-- prettier-ignore-end -->
 
 ## Take the quiz
 
