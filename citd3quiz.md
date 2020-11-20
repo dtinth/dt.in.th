@@ -40,7 +40,7 @@ This quiz is not indicative of your skill.
             </a>
           </li>
         </ul>
-        <p v-if="showExplanation[index + '-' + qn]" style="color: #8b8685">That’s correct! {{question.explanation || ''}}</p>
+        <p v-if="showExplanation[index + '-' + qn]" style="color: #8b8685">That’s correct! {{question.explanation || ''}} {{statText(index, qn)}}</p>
         <p v-else-if="results[index + '-' + qn]" style="color: #8b8685">Try again!</p>
       </li>
     </ol>
@@ -113,7 +113,12 @@ export default {
     return {
       citd3quiz: JSON.parse(JSON.stringify(citd3quiz)),
       showExplanation: {},
-      results: {}
+      results: {},
+      stats: {
+        keys: ["0-0", "0-1", "0-2", "0-3", "0-4", "0-5", "0-6", "1-0", "1-1", "1-2", "1-3", "1-4", "1-5", "1-6", "2-0", "2-1", "2-2", "2-3", "2-4", "2-5", "2-6"],
+        answerers: [611, 569, 498, 460, 444, 427, 433, 383, 364, 345, 345, 336, 334, 331, 329, 310, 309, 304, 299, 283, 271],
+        correctPercentage: [88, 66, 48, 51, 55, 47, 17, 54, 69, 72, 41, 44, 79, 36, 28, 47, 74, 37, 24, 25, 10]
+      }
     }
   },
   methods: {
@@ -121,6 +126,11 @@ export default {
       return x.replace(/`([^`]+)`/g, (a, x) => {
         return `<code>${x.replace(/</g, '&lt;')}</code>`
       })
+    },
+    statText(rn, qn) {
+      const key = `${rn}-${qn}`
+      const index=  this.stats.keys.indexOf(key)
+      return `${this.stats.correctPercentage[index]}% answered this question correctly (based on ${this.stats.answerers[index]} answers).`
     },
     correct(prefix) {
       return Object.keys(this.results).filter(k => k.startsWith(prefix) && this.results[k] === 'correct').length
