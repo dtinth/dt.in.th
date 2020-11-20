@@ -12,6 +12,7 @@ How much do you know frontend? Find out by trying out this quiz!
 We used this quiz at the [Code in the Dark Thailand: CNX 2019](/auden.html#code-in-the-dark-3-cnx-2019) event
 to select the contestants to participate in each qualification round.
 The difficulty of the questions here ranges from easy to ridiculous[^why].
+This quiz is not indicative of your skill.
 
 <!-- prettier-ignore-start -->
 
@@ -39,6 +40,8 @@ The difficulty of the questions here ranges from easy to ridiculous[^why].
             </a>
           </li>
         </ul>
+        <p v-if="showExplanation[index + '-' + qn]" style="color: #8b8685">That’s correct! {{question.explanation || ''}}</p>
+        <p v-else-if="results[index + '-' + qn]" style="color: #8b8685">Try again!</p>
       </li>
     </ol>
     <h3>Your score</h3>
@@ -109,6 +112,7 @@ export default {
   data() {
     return {
       citd3quiz: JSON.parse(JSON.stringify(citd3quiz)),
+      showExplanation: {},
       results: {}
     }
   },
@@ -125,6 +129,9 @@ export default {
       const result = answer.correct ? 'correct' : 'incorrect'
       Vue.set(answer, 'result', result)
       const key = `${rn}-${qn}`
+      if (answer.correct) {
+        Vue.set(this.showExplanation, key, true)
+      }
       if (!this.results[key]) {
         Vue.set(this.results, key, result)
         trackEvent('citd3quiz', { questionKey: key, result, selectedChoice: an })
