@@ -17,4 +17,13 @@ export default ({
   Vue.component('SoundCloud', SoundCloud)
   Vue.component('TwitterEmbed', TwitterEmbed)
   Vue.component('YouTube', YouTube)
+
+  router.beforeResolve((to, from, next) => {
+    const animate = window.animateRoute
+    if (!animate) return next()
+    window.animateRoute = null
+    requestAnimationFrame(() => {
+      animate(next)
+    })
+  })
 }

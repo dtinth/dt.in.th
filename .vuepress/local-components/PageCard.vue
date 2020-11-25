@@ -1,6 +1,11 @@
 <template>
   <router-link :to="page.path" class="h-entry u-url">
-    <article class="page-card" :data-overflown="overflown">
+    <article
+      class="page-card"
+      :data-overflown="overflown"
+      ref="card"
+      @click="animate"
+    >
       <div class="page-card-contents">
         <div class="image-container">
           <blurhash-image :blurhash="blurhash" v-if="blurhash"></blurhash-image>
@@ -35,6 +40,61 @@ export default {
       overflown: 'no',
     }
   },
+  methods: {
+    animate() {
+      const card = this.$refs.card
+      if (!card) return
+      const clonedCard = card.cloneNode(true)
+      const screen = document.createElement('div')
+      const container = document.createElement('div')
+      const front = document.createElement('div')
+      const back = document.createElement('div')
+      const rect = card.getBoundingClientRect()
+      screen.setAttribute(
+        'style',
+        `position: fixed; top: 0; right: 0; bottom: 0; left: 0; perspective: 1280px; pointer-events: none; transition: 0.3s opacity; z-index: 99999;`
+      )
+      container.setAttribute(
+        'style',
+        `position: absolute; top: ${rect.top}px; left: ${rect.left}px; width: ${
+          rect.width
+        }px; height: ${
+          rect.height
+        }px; transform-style: preserve-3d; animation: 1s card-go ease-in; animation-fill-mode: both;
+        --offset-x: ${window.innerWidth / 2 - (rect.left + rect.width / 2)}px;
+        --offset-y: ${window.innerHeight / 2 - (rect.top + rect.height / 2)}px;
+        `
+      )
+      front.setAttribute(
+        'style',
+        `position: absolute; top: 0; right: 0; bottom: 0; left: 0; backface-visibility: hidden;`
+      )
+      back.setAttribute(
+        'style',
+        `position: absolute; top: 0; right: 0; bottom: 0; left: 0; transform: rotateX(180deg) translateZ(1px); background: #d7fc70; backface-visibility: hidden; border-radius: 10px;`
+      )
+      clonedCard.style.margin = '0'
+      window.animateRoute = (next) => {
+        card.style.opacity = 0
+        screen.appendChild(container)
+        container.appendChild(front)
+        container.appendChild(back)
+        front.appendChild(clonedCard)
+        document.body.appendChild(screen)
+        setTimeout(() => {
+          requestAnimationFrame(() => {
+            next()
+            requestAnimationFrame(() => {
+              screen.style.opacity = 0
+              setTimeout(() => {
+                screen.remove()
+              }, 500)
+            })
+          })
+        }, 1000)
+      }
+    },
+  },
   computed: {
     blurhash() {
       const page = this.page
@@ -52,6 +112,19 @@ export default {
   },
 }
 </script>
+
+<style>
+@keyframes card-go {
+  from {
+    transform: translate3d(0, 0, 0) rotateY(0deg) rotateZ(0deg);
+    animation-timing-function: ease-in;
+  }
+  to {
+    transform: translate3d(var(--offset-x), var(--offset-y), 1024px)
+      rotateY(180deg) rotateZ(180deg);
+  }
+}
+</style>
 
 <style scoped lang="stylus">
 .page-list {
