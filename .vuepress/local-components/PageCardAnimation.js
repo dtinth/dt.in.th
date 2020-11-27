@@ -40,18 +40,18 @@ export function ensureCardAnimationSystemInitialized() {
           { animate: { width: window.innerWidth, height: window.innerHeight } },
           location.origin
         )
-        iframe.style.visibility = 'hidden'
+        iframe.style.display = 'none'
         iframe.style.width = window.innerWidth + 'px'
         iframe.style.height = window.innerHeight + 'px'
         return {
           release(screen) {
-            iframe.style.visibility = 'visible'
+            iframe.style.display = 'block'
             requestAnimationFrame(() => {
               screen.style.display = 'none'
             })
             clearTimeout(finishTimeout)
             finishTimeout = setTimeout(() => {
-              iframe.style.visibility = 'hidden'
+              iframe.style.display = 'none'
             }, 2000)
           }
         }

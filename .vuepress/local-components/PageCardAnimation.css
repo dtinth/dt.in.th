@@ -52,5 +52,5 @@
   border: 0;
   z-index: 99998;
   pointer-events: none;
-  visibility: hidden;
+  display: none;
 }
