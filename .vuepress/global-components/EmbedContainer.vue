@@ -1,12 +1,27 @@
 <template>
   <div class="dtinth-embed-container" :style="style">
-    <slot />
+    <template v-if="enabled">
+      <slot />
+    </template>
   </div>
 </template>
 
 <script>
+import { activeRouteAnimation } from '../lib/routeAnimations'
+
 export default {
   props: ['ratio'],
+  data() {
+    console.log(activeRouteAnimation.current)
+    return { enabled: !activeRouteAnimation.current }
+  },
+  mounted() {
+    Promise.resolve(activeRouteAnimation.current)
+      .catch(() => {})
+      .then(() => {
+        this.enabled = true
+      })
+  },
   computed: {
     style() {
       return {

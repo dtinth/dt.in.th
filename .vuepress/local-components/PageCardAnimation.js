@@ -1,16 +1,21 @@
 // @ts-check
-import { requestRouteAnimation } from '../lib/routeAnimations'
+import {
+  activateRouteAnimation,
+  requestRouteAnimation
+} from '../lib/routeAnimations'
 import './PageCardAnimation.css'
 
 let initializationRequested = false
 let fx = {
   prepare() {
+    const active = activateRouteAnimation()
     return {
       /**
        * @param {HTMLDivElement} screen
        */
       release(screen) {
         screen.style.opacity = '0'
+        setTimeout(active.finish, 500)
       }
     }
   }
@@ -31,6 +36,12 @@ export function ensureCardAnimationSystemInitialized() {
         }
       })
     })
+    let onFinish = () => {}
+    window.addEventListener('message', e => {
+      if (e.source === iframe.contentWindow && e.data && e.data.fxFinish) {
+        onFinish()
+      }
+    })
     console.log('Fx ready')
     let finishTimeout
     fx = {
@@ -43,6 +54,8 @@ export function ensureCardAnimationSystemInitialized() {
         iframe.style.display = 'none'
         iframe.style.width = window.innerWidth + 'px'
         iframe.style.height = window.innerHeight + 'px'
+        const active = activateRouteAnimation()
+        onFinish = active.finish
         return {
           release(screen) {
             iframe.style.display = 'block'

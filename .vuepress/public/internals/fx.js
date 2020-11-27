@@ -75,7 +75,7 @@ function createParticleSystem(w, h) {
    * @type {{ update(t: number): boolean; destroy(): void; reset(): void }[]}
    */
   const sprites = []
-  const spriteSize = Math.hypot(w, h) / 64
+  const spriteSize = Math.hypot(w, h) / 72
 
   /**
    * @param {number} x
@@ -99,7 +99,7 @@ function createParticleSystem(w, h) {
     // @ts-ignore
     fg.euler.set(0, 0, 0)
     // @ts-ignore
-    fg.scale3d.set((spriteSize / 16) * 1.05)
+    fg.scale3d.set((spriteSize / 16) * 1.1)
 
     camera.addChild(fg)
 
@@ -109,6 +109,10 @@ function createParticleSystem(w, h) {
         fg.euler.x = rx * t
         fg.euler.y = ry * t
         fg.euler.z = rz * t
+        if (x === 0 && y === 0) {
+          const a = 1 - Math.min(1, Math.min(0, fg.position3d.z + 960) / -320)
+          fg.alpha = a
+        }
         return fg.position3d.z < -1600
       },
       destroy() {
@@ -178,6 +182,8 @@ if (parent === self) {
   window.onresize = () => {
     setSize(window.innerWidth, window.innerHeight)
   }
+  setSize(window.innerWidth, window.innerHeight)
+  document.body.style.background = '#353433'
 } else {
   setSize(800, 600)
 }
@@ -196,7 +202,7 @@ function prepareAnimation() {
       if (!currentAnimation.finished) {
         requestAnimationFrame(frame)
       } else {
-        console.log('all done')
+        parent.postMessage({ fxFinish: true }, location.origin)
         animation = null
       }
     }
