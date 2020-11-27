@@ -1,5 +1,64 @@
+// @ts-check
 import { requestRouteAnimation } from '../lib/routeAnimations'
 import './PageCardAnimation.css'
+
+let initializationRequested = false
+let fx = {
+  prepare() {
+    return {
+      /**
+       * @param {HTMLDivElement} screen
+       */
+      release(screen) {
+        screen.style.opacity = '0'
+      }
+    }
+  }
+}
+
+export function ensureCardAnimationSystemInitialized() {
+  if (initializationRequested) return
+  initializationRequested = true
+  const iframe = document.createElement('iframe')
+  iframe.className = 'PageCardAnimation__fx'
+  iframe.src = '/internals/fx.html'
+  document.body.appendChild(iframe)
+  ;(async () => {
+    await new Promise(resolve => {
+      window.addEventListener('message', e => {
+        if (e.source === iframe.contentWindow && e.data && e.data.fxReady) {
+          resolve(null)
+        }
+      })
+    })
+    console.log('Fx ready')
+    let finishTimeout
+    fx = {
+      prepare() {
+        clearTimeout(finishTimeout)
+        iframe.contentWindow?.postMessage(
+          { animate: { width: window.innerWidth, height: window.innerHeight } },
+          location.origin
+        )
+        iframe.style.visibility = 'hidden'
+        iframe.style.width = window.innerWidth + 'px'
+        iframe.style.height = window.innerHeight + 'px'
+        return {
+          release(screen) {
+            iframe.style.visibility = 'visible'
+            requestAnimationFrame(() => {
+              screen.style.display = 'none'
+            })
+            clearTimeout(finishTimeout)
+            finishTimeout = setTimeout(() => {
+              iframe.style.visibility = 'hidden'
+            }, 2000)
+          }
+        }
+      }
+    }
+  })()
+}
 
 export function prepareCardAnimation(card) {
   const clonedCard = card.cloneNode(true)
@@ -31,16 +90,17 @@ export function prepareCardAnimation(card) {
     container.appendChild(back)
     front.appendChild(clonedCard)
     document.body.appendChild(screen)
+    const preparedFx = fx.prepare()
     setTimeout(() => {
       requestAnimationFrame(() => {
         next()
         requestAnimationFrame(() => {
-          screen.opacity = 0
+          preparedFx.release(screen)
           setTimeout(() => {
             screen.remove()
           }, 500)
         })
       })
-    }, 1000)
+    }, 720)
   })
 }

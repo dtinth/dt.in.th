@@ -1,7 +1,14 @@
 export const registeredRouteAnimation = {
-  current: null
+  current: /** @type {RouteAnimation | null} */ (null)
 }
 
+/**
+ * @typedef {(next: () => void) => void} RouteAnimation
+ */
+
+/**
+ * @param {RouteAnimation} fn
+ */
 export function requestRouteAnimation(fn) {
-  registeredRouteAnimation = fn
+  registeredRouteAnimation.current = fn
 }

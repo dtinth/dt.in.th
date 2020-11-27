@@ -32,7 +32,10 @@
 
 <script>
 import blurhashes from '../data/blurhashes'
-import { prepareCardAnimation } from './PageCardAnimation'
+import {
+  prepareCardAnimation,
+  ensureCardAnimationSystemInitialized,
+} from './PageCardAnimation'
 
 export default {
   props: ['page'],
@@ -56,6 +59,7 @@ export default {
     },
   },
   mounted() {
+    ensureCardAnimationSystemInitialized()
     if (
       this.$refs.infoContents.offsetHeight >
       this.$refs.infoContainer.offsetHeight + 5

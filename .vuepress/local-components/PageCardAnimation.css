@@ -23,7 +23,7 @@
 .PageCardAnimation__container {
   position: absolute;
   transform-style: preserve-3d;
-  animation: 1s card-go ease-in;
+  animation: 0.64s card-go ease-in;
   animation-fill-mode: both;
 }
 .PageCardAnimation__front {
@@ -44,4 +44,13 @@
   background: #d7fc70;
   backface-visibility: hidden;
   border-radius: 10px;
+}
+.PageCardAnimation__fx {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 0;
+  z-index: 99998;
+  pointer-events: none;
+  visibility: hidden;
 }
