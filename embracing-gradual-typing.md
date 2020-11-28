@@ -8,9 +8,10 @@ description: >-
 featured: true
 tags:
   - Talk
+screenshotVersion: 2
 ---
 
-**How to gradually adopt TypeScript in a large existing JavaScript project effectively?** That's the topic for this talk.
+How to gradually adopt TypeScript in a large existing JavaScript project effectively? That's the topic for this talk.
 
 <template>
   <YouTube id="xATsf5nm2yc" />

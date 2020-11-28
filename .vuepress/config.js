@@ -123,7 +123,8 @@ module.exports = {
           if (!$page.frontmatter.meta) {
             $page.frontmatter.meta = []
           }
-          const screenshotUrl = `https://ss.dt.in.th/api/screenshots/dt.in.th-${match[1]}.png`
+          const screenshotVersion = $page.frontmatter.screenshotVersion || 1
+          const screenshotUrl = `https://ss.dt.in.th/api/screenshots/dt.in.th-${match[1]}.png?v=${screenshotVersion}`
           $page.frontmatter.meta.push({
             property: 'og:image',
             content: screenshotUrl
