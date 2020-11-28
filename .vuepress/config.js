@@ -66,10 +66,14 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     nav: [
-      // {
-      //   text: 'Guide',
-      //   link: '/guide/',
-      // },
+      {
+        text: 'GitHub',
+        link: 'https://github.com/dtinth'
+      },
+      {
+        text: 'YouTube',
+        link: 'https://dt.in.th/go/youtube'
+      }
       // {
       //   text: 'Config',
       //   link: '/config/'
