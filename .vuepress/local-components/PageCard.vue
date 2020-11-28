@@ -1,6 +1,11 @@
 <template>
   <router-link :to="page.path" class="h-entry u-url">
-    <article class="page-card" :data-overflown="overflown">
+    <article
+      class="page-card"
+      :data-overflown="overflown"
+      ref="card"
+      @click="animate"
+    >
       <div class="page-card-contents">
         <div class="image-container">
           <blurhash-image :blurhash="blurhash" v-if="blurhash"></blurhash-image>
@@ -27,6 +32,10 @@
 
 <script>
 import blurhashes from '../data/blurhashes'
+import {
+  prepareCardAnimation,
+  ensureCardAnimationSystemInitialized,
+} from './PageCardAnimation'
 
 export default {
   props: ['page'],
@@ -34,6 +43,13 @@ export default {
     return {
       overflown: 'no',
     }
+  },
+  methods: {
+    animate() {
+      const card = this.$refs.card
+      if (!card) return
+      prepareCardAnimation(card)
+    },
   },
   computed: {
     blurhash() {
@@ -43,6 +59,7 @@ export default {
     },
   },
   mounted() {
+    ensureCardAnimationSystemInitialized()
     if (
       this.$refs.infoContents.offsetHeight >
       this.$refs.infoContainer.offsetHeight + 5
