@@ -60,8 +60,8 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    // repo: 'https://github.com/dtinth/dt.in.th',
-    editLinks: false,
+    repo: 'https://github.com/dtinth/dt.in.th',
+    editLinks: true,
     search: false,
     docsDir: '',
     editLinkText: '',
