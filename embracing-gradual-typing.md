@@ -21,7 +21,11 @@ How to gradually adopt TypeScript in a large existing JavaScript project effecti
 This was my first prerecorded talk for TS BKK Meetup.
 Since this talk is prerecorded, it contains a plenty of coding demos.
 
-> By the way, if you haven't, please consider subscribing to [my YouTube channel](https://dt.in.th/go/youtube) 😁.
+::: tip By the way...
+
+If you haven't, please consider subscribing to [my YouTube channel](https://dt.in.th/go/youtube) 😁.
+
+:::
 
 Adopting TypeScript in a large existing project may not be that straightforward:
 
