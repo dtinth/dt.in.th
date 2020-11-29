@@ -30,7 +30,8 @@ If you haven't, please consider subscribing to [my YouTube channel](https://dt.i
 Adopting TypeScript in a large existing project may not be that straightforward:
 
 - Hundreds if not thousands of existing untyped JS files.
-- Not sure if benefits would outweigh the costs. May be met with friction.
+- Not sure if benefits would outweigh the costs ("the TypeScript tax").
+- Changes may be met with friction in a large team.
 - You or your team do not want to introduce any extra build step.
 
 Topics including:
