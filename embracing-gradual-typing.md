@@ -17,7 +17,7 @@ How to gradually adopt TypeScript in a large existing JavaScript project effecti
   <YouTube id="xATsf5nm2yc" />
 </template>
 
-**The talk is in Thai language _(English subtitles available)_.**
+**The talk is in Thai language _(English subtitles available and slides are all in English)_.**
 This was my first prerecorded talk for TS BKK Meetup.
 Since this talk is prerecorded, it contains a plenty of coding demos.
 
