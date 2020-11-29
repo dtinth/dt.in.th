@@ -1,3 +1,5 @@
+const twemoji = require('twemoji')
+
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
@@ -106,7 +108,7 @@ module.exports = {
       '@vuepress/plugin-medium-zoom',
       {
         selector:
-          '.theme-default-content :not(a) > img:not([data-zoomable="false"])'
+          '.theme-default-content :not(a) > img:not([data-zoomable="false"]):not(.emoji)'
       }
     ],
     ['@vuepress/google-analytics', { ga: 'UA-4343503-1' }],
@@ -156,6 +158,10 @@ module.exports = {
   markdown: {
     extendMarkdown: md => {
       md.use(require('markdown-it-footnote'))
+      md.renderer.render = (original =>
+        function() {
+          return twemoji.parse(original.apply(this, arguments))
+        })(md.renderer.render)
     }
   }
 }
