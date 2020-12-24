@@ -19,6 +19,9 @@ module.exports = {
    */
   head: [
     ['meta', { name: 'theme-color', content: '#353433' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:site', content: '@dtinth' }],
+    ['meta', { name: 'twitter:creator', content: '@dtinth' }],
     [
       'link',
       {
