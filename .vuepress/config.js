@@ -121,16 +121,27 @@ module.exports = {
         const match = String($page.path).match(
           /^\/([a-zA-Z0-9][a-zA-Z0-9_.-]*)\.html$/
         )
-        const existingOgImage = ($page.frontmatter.meta || []).find(
-          m => m.property === 'og:image'
-        )
-        if (match && !existingOgImage) {
+        /**
+         * @param {string} property
+         */
+        const hasMetaProperty = property => {
+          return ($page.frontmatter.meta || []).find(
+            m => m.property === property
+          )
+        }
+        /**
+         * @param {{ [attribute: string]: string }} tag
+         */
+        const addMetaTag = tag => {
           if (!$page.frontmatter.meta) {
             $page.frontmatter.meta = []
           }
+          $page.frontmatter.meta.push(tag)
+        }
+        if (match && !hasMetaProperty('og:image')) {
           const screenshotVersion = $page.frontmatter.screenshotVersion || 1
           const screenshotUrl = `https://ss.dt.in.th/api/screenshots/dt.in.th-${match[1]}.png?v=${screenshotVersion}`
-          $page.frontmatter.meta.push({
+          addMetaTag({
             property: 'og:image',
             content: screenshotUrl
           })
