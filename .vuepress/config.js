@@ -130,6 +130,12 @@ module.exports = {
           )
         }
         /**
+         * @param {string} name
+         */
+        const hasMetaName = name => {
+          return ($page.frontmatter.meta || []).find(m => m.name === name)
+        }
+        /**
          * @param {{ [attribute: string]: string }} tag
          */
         const addMetaTag = tag => {
@@ -144,6 +150,12 @@ module.exports = {
           addMetaTag({
             property: 'og:image',
             content: screenshotUrl
+          })
+        }
+        if (!hasMetaName('twitter:title')) {
+          addMetaTag({
+            name: 'twitter:title',
+            content: $page.title
           })
         }
       }
