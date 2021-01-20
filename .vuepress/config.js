@@ -78,15 +78,11 @@ module.exports = {
       {
         text: 'YouTube',
         link: 'https://dt.in.th/go/youtube'
-      }
-      // {
-      //   text: 'Config',
-      //   link: '/config/'
-      // },
-      // {
-      //   text: 'VuePress',
-      //   link: 'https://v1.vuepress.vuejs.org'
-      // }
+      },
+      {
+        text: 'Notes',
+        link: 'https://notes.dt.in.th/'
+      },
     ],
     sidebar: {
       // '/guide/': [
