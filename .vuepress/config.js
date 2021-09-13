@@ -76,6 +76,10 @@ module.exports = {
         link: 'https://github.com/dtinth'
       },
       {
+        text: 'Project Docs',
+        link: 'https://docs.dt.in.th/'
+      },
+      {
         text: 'YouTube',
         link: 'https://dt.in.th/go/youtube'
       },
