@@ -54,7 +54,9 @@ module.exports = {
       'link',
       { rel: 'webmention', href: 'https://webmention.io/dt.in.th/webmention' }
     ],
-    ['link', { rel: 'pingback', href: 'https://webmention.io/dt.in.th/xmlrpc' }]
+    ['link', { rel: 'pingback', href: 'https://webmention.io/dt.in.th/xmlrpc' }],
+    ['link', { rel: 'authorization_endpoint', href: 'https://indieauth.com/auth' }],
+    ['link', { rel: 'token_endpoint', href: 'https://tokens.indieauth.com/token' }]
     // ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     // ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
