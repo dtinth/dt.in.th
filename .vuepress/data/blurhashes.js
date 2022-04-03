@@ -148,5 +148,9 @@ module.exports = {
   "/uploads/merge-sort-song.jpg": {
     "fileHash": "a/xgGhJIk+R7zljhwWwGyD6VysjmiNlFp1BQeF4zrRE=",
     "blurhash": "L03bp.*7.c*6Dkx0MzV_01M~Rn%M"
+  },
+  "/uploads/personal-assistant.jpg": {
+    "fileHash": "Xy3nYYp2h9N6h+CwFvqfTgq3NGiw86zUGsKm+rjuilQ=",
+    "blurhash": "L58;PrTL9u~U_3SiIV%LIARjt7Rj"
   }
 }
