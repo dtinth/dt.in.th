@@ -30,3 +30,9 @@ This talk has 4 sections:
   I talk about how solving everyday problems with code can be a great way to improve your skills, and I show how daily life becomes more convenient if you can achieve the “improvised coding” skill.
 
 Presented at [Dev Mountain Tech Festival](https://boodabest.com/products/24VCuwnCtj4YVg9cMyVe0Sl9ERi). More talks in this conference can be found on [Dev Mountain Tech Festival’s YouTube Channel](https://www.youtube.com/channel/UCb9bl6KqJVBkFribwGamUHA). The video published by event organizers also contains the [Q&A section](https://youtu.be/sBgKt1pouXg?t=1771).
+
+## Links
+
+- [automatron project page](automatron.html)
+- [automatron source code](https://github.com/dtinth/automatron)
+- [dtinth’s tools (Android App)](https://github.com/dtinth/dtinth.tools-android)

@@ -171,3 +171,5 @@ As an extra feature, automatron can also convert images to text using [Google Cl
 
 - After 2 years of no issue, the free CloudMQTT instance I use begins to cease accepting connections, and must be manually restarted.
   After this happens twice, I [switched](https://github.com/dtinth/automatron/commit/1163c4808eb1f2544625a915ea6c2f26d2e49c8c) the MQTT service to use [**Google Cloud IoT Core**](https://cloud.google.com/iot-core).
+
+- In 2022, I gave a presentation about automatron at Dev Mountain Tech Festival in a talk titled _[“Let’s build a personal assistant and level-up your coding skills!”](personal-assistant.html)_
