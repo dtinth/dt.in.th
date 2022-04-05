@@ -29,4 +29,4 @@ This talk has 4 sections:
 - **Conclusions.** \
   I talk about how solving everyday problems with code can be a great way to improve your skills, and I show how daily life becomes more convenient if you can achieve the “improvised coding” skill.
 
-Presented at [Dev Mountain Tech Festival](https://boodabest.com/products/24VCuwnCtj4YVg9cMyVe0Sl9ERi).
+Presented at [Dev Mountain Tech Festival](https://boodabest.com/products/24VCuwnCtj4YVg9cMyVe0Sl9ERi). More talks in this conference can be found on [Dev Mountain Tech Festival’s YouTube Channel](https://www.youtube.com/channel/UCb9bl6KqJVBkFribwGamUHA).
