@@ -4,6 +4,9 @@
 # Web Monetization
 /.well-known/pay https://ilp.uphold.com/ERDrjf7x7Rby 302
 
+# Image
+/me.jpg https://github.com/dtinth/dt.in.th/assets/193136/6edd5207-933e-43c8-831a-37588fa1c209 302
+
 # Mapping from previous version of the site
 /music/422/index.html /422.html
 /music/422 /422.html
