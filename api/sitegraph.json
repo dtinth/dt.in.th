@@ -2851,6 +2851,15 @@
 				}
 			,	{	"link": "20230103T095819Z9158"
 				}
+			,	{	"link": "WebringBsky"
+				}
+			]
+		}
+	,	"WebringBsky":
+		{	"title": "อัพเดตโปรเจควงแหวนเว็บ, integrate กับ Bluesky"
+		,	"links":
+			[	{	"link": "Webring"
+				}
 			]
 		}
 	,	"WhenMathsStrikeBack":

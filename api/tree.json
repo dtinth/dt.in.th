@@ -1203,6 +1203,10 @@
 		{	"title": "webring (topic)"
 		,	"parent": "HomePage"
 		}
+	,	"WebringBsky":
+		{	"title": "อัพเดตโปรเจควงแหวนเว็บ, integrate กับ Bluesky"
+		,	"parent": "Webring"
+		}
 	,	"WhenMathsStrikeBack":
 		{	"title": "When Maths Strike Back: Behind the 3D QR code effect in ppqr.app"
 		,	"parent": "QRCode"
