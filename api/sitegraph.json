@@ -1102,6 +1102,8 @@
 				}
 			,	{	"link": "ElysiaNode"
 				}
+			,	{	"link": "ElysiaLogging"
+				}
 			]
 		}
 	,	"ElysiaDeno":
@@ -1110,6 +1112,19 @@
 			[	{	"link": "Elysia"
 				}
 			,	{	"link": "Deno"
+				}
+			]
+		}
+	,	"ElysiaLogging":
+		{	"title": "Request and response logging in Elysia"
+		,	"links":
+			[	{	"link": "#user-content-fn-loggers"
+				}
+			,	{	"link": "#user-content-fn-otel"
+				}
+			,	{	"link": "#user-content-fnref-loggers"
+				}
+			,	{	"link": "#user-content-fnref-otel"
 				}
 			]
 		}

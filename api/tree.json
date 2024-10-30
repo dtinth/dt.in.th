@@ -536,6 +536,10 @@
 		{	"title": "Using Elysia in Deno"
 		,	"parent": "Deno"
 		}
+	,	"ElysiaLogging":
+		{	"title": "Request and response logging in Elysia"
+		,	"parent": "Elysia"
+		}
 	,	"ElysiaNode":
 		{	"title": "Using Elysia in Node.js"
 		,	"parent": "Elysia"
