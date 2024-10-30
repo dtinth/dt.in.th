@@ -1120,6 +1120,8 @@
 		,	"links":
 			[	{	"link": "#user-content-fn-loggers"
 				}
+			,	{	"link": "Elysia"
+				}
 			,	{	"link": "#user-content-fn-otel"
 				}
 			,	{	"link": "#user-content-fnref-loggers"
