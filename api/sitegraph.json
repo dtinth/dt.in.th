@@ -1751,7 +1751,16 @@
 		,	"links":
 			[	{	"link": "MacOSSmartQuotesInWindows"
 				}
+			,	{	"link": "MacOSOCR"
+				}
 			,	{	"link": "Raycast"
+				}
+			]
+		}
+	,	"MacOSOCR":
+		{	"title": "Extracting text from image in macOS from the CLI"
+		,	"links":
+			[	{	"link": "MacOS"
 				}
 			]
 		}

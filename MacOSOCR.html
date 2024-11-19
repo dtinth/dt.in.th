@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html data-precompiled=true lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extracting text from image in macOS from the CLI | notes.dt.in.th</title><meta property="og:title" content="Extracting text from image in macOS from the CLI" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/MacOSOCR" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://notes.dt.in.th/MacOSOCR" data-source="note"><style id="note-styles">/* layer: default */
+.me[data-v-8c9498c0]{margin-inline-end:1rem;}</style>
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
+      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
+      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" crossorigin src="/runtime/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
+    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+  </head>
+  <body class="bg-#252423 text-#e9e8e7 antialiased">
+    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
+      <div class="flex items-center pl-[18px] flex-none">
+        <a
+          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
+          href="/"
+          >notes.dt.in.th</a
+        >
+      </div>
+      <div
+        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
+        id="headerMiddle"
+      >
+        <div class="px-2 flex-none">›</div><div class="truncate"><a title="macOS (topic)" href="MacOS">macOS</a></div>
+      </div>
+      <div
+        class="flex items-center px-[18px] flex-none gap-4"
+        id="headerToolbar"
+      ></div>
+    </header>
+    <div class="h-entry">
+      <main class="bg-#353433" id="main">
+        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><h1 id="extracting-text-from-image-in-macos-from-the-cli" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#extracting-text-from-image-in-macos-from-the-cli" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Extracting text from image in macOS from the CLI</h1><p data-v-8c9498c0>Newer versions of <a href="MacOS" data-v-8c9498c0>macOS</a> has the <a href="https://developer.apple.com/documentation/vision/vnrecognizetextrequest" data-v-8c9498c0>VNRecognizeTextRequest</a> API. However, I can&#39;t find an easy-to-install tool that lets me use this API in a command line. However, this can be worked around thanks to the fact that:</p><ul data-v-8c9498c0><li data-v-8c9498c0>The <a href="https://support.apple.com/guide/shortcuts-mac/intro-to-shortcuts-apdf22b0444c/mac" data-v-8c9498c0>Shortcuts app</a> offers the &quot;Extract text from image&quot; action.</li><li data-v-8c9498c0><a href="https://support.apple.com/guide/shortcuts-mac/run-shortcuts-from-the-command-line-apd455c82f02/mac" data-v-8c9498c0>Shortcuts can be run from the command line</a> and can output its result via stdout.</li></ul><h2 id="setting-up-a-shortcut" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#setting-up-a-shortcut" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Setting up a shortcut</h2><p data-v-8c9498c0>First, create a shortcut like this:</p><p data-v-8c9498c0><img src="https://im.dt.in.th/ipfs/bafybeibofd4xjxkwlsj46uvc6l3dvkaihstazocy6h2wigsg45ntybitia/image.webp" alt="" data-v-8c9498c0></p><h2 id="invoking-the-shortcut" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#invoking-the-shortcut" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Invoking the shortcut</h2><p data-v-8c9498c0>Then, run the shortcut like this:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>shortcuts</span><span style="color:#9ECBFF;" data-v-8c9498c0> run</span><span style="color:#9ECBFF;" data-v-8c9498c0> &#39;Extract Text&#39;</span><span style="color:#79B8FF;" data-v-8c9498c0> -i</span><span style="color:#F97583;" data-v-8c9498c0> &lt;</span><span style="color:#9ECBFF;" data-v-8c9498c0>path/to/image.pn</span><span style="color:#E1E4E8;" data-v-8c9498c0>g</span><span style="color:#F97583;" data-v-8c9498c0>&gt;</span><span style="color:#F97583;" data-v-8c9498c0> |</span><span style="color:#B392F0;" data-v-8c9498c0> cat</span></span></code></pre><p data-v-8c9498c0>The <code data-v-8c9498c0>| cat</code> is required to make the shortcuts CLI output the result to stdout. Otherwise, it will not output anything.</p><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div
+          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
+          id="footerContents"
+        >
+          <notes-page-footer></notes-page-footer>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+var _vue = require('vue');
+
+const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
+const _hoisted_1 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<h1 id=\"extracting-text-from-image-in-macos-from-the-cli\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#extracting-text-from-image-in-macos-from-the-cli\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Extracting text from image in macOS from the CLI</h1><p data-v-8c9498c0>Newer versions of <a href=\"MacOS\" data-v-8c9498c0>macOS</a> has the <a href=\"https://developer.apple.com/documentation/vision/vnrecognizetextrequest\" data-v-8c9498c0>VNRecognizeTextRequest</a> API. However, I can&#39;t find an easy-to-install tool that lets me use this API in a command line. However, this can be worked around thanks to the fact that:</p><ul data-v-8c9498c0><li data-v-8c9498c0>The <a href=\"https://support.apple.com/guide/shortcuts-mac/intro-to-shortcuts-apdf22b0444c/mac\" data-v-8c9498c0>Shortcuts app</a> offers the &quot;Extract text from image&quot; action.</li><li data-v-8c9498c0><a href=\"https://support.apple.com/guide/shortcuts-mac/run-shortcuts-from-the-command-line-apd455c82f02/mac\" data-v-8c9498c0>Shortcuts can be run from the command line</a> and can output its result via stdout.</li></ul><h2 id=\"setting-up-a-shortcut\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#setting-up-a-shortcut\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Setting up a shortcut</h2><p data-v-8c9498c0>First, create a shortcut like this:</p><p data-v-8c9498c0><img src=\"https://im.dt.in.th/ipfs/bafybeibofd4xjxkwlsj46uvc6l3dvkaihstazocy6h2wigsg45ntybitia/image.webp\" alt=\"\" data-v-8c9498c0></p><h2 id=\"invoking-the-shortcut\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#invoking-the-shortcut\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Invoking the shortcut</h2><p data-v-8c9498c0>Then, run the shortcut like this:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>shortcuts</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> run</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> &#39;Extract Text&#39;</span><span style=\"color:#79B8FF;\" data-v-8c9498c0> -i</span><span style=\"color:#F97583;\" data-v-8c9498c0> &lt;</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>path/to/image.pn</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>g</span><span style=\"color:#F97583;\" data-v-8c9498c0>&gt;</span><span style=\"color:#F97583;\" data-v-8c9498c0> |</span><span style=\"color:#B392F0;\" data-v-8c9498c0> cat</span></span></code></pre><p data-v-8c9498c0>The <code data-v-8c9498c0>| cat</code> is required to make the shortcuts CLI output the result to stdout. Otherwise, it will not output anything.</p>", 10)
+function render(_ctx, _cache) {
+  return _hoisted_1
+}
+__sfc__.render = render
+__sfc__.__scopeId = "data-v-8c9498c0"
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"public":true,"title":"Extracting text from image in macOS from the CLI"};
+</script>
+  </body>
+</html>

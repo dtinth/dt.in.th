@@ -747,6 +747,10 @@
 		{	"title": "macOS (topic)"
 		,	"parent": "HomePage"
 		}
+	,	"MacOSOCR":
+		{	"title": "Extracting text from image in macOS from the CLI"
+		,	"parent": "MacOS"
+		}
 	,	"MacOSSmartQuotesInWindows":
 		{	"title": "Using macOS's dashes and smart quotes shortcuts in Windows"
 		,	"parent": "MacOS"
