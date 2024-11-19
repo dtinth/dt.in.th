@@ -228,6 +228,7 @@ https://notes.dt.in.th/OklchPlot
 https://notes.dt.in.th/OpenWebUILiteLLM
 https://notes.dt.in.th/PWA
 https://notes.dt.in.th/PackletsSetup
+https://notes.dt.in.th/PasteImage
 https://notes.dt.in.th/PasteQR
 https://notes.dt.in.th/PersonalPuppeteer
 https://notes.dt.in.th/PianoMajorScaleTrainer

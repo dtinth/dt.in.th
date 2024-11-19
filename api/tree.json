@@ -919,6 +919,10 @@
 		{	"title": "Setting up packlets"
 		,	"parent": "JavaScript"
 		}
+	,	"PasteImage":
+		{	"title": "Paste image"
+		,	"parent": "Tools"
+		}
 	,	"PasteQR":
 		{	"title": "Paste image to decode QR code"
 		,	"parent": "Tools"

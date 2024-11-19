@@ -2184,6 +2184,10 @@
 				}
 			]
 		}
+	,	"PasteImage":
+		{	"title": "Paste image"
+		,	"links": []
+		}
 	,	"PasteQR":
 		{	"title": "Paste image to decode QR code"
 		,	"links": []
@@ -2678,6 +2682,8 @@
 			,	{	"link": "OklchPlot"
 				}
 			,	{	"link": "PasteQR"
+				}
+			,	{	"link": "PasteImage"
 				}
 			,	{	"link": "RandomPort"
 				}
