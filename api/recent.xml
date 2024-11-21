@@ -5,7 +5,7 @@
 		<description><![CDATA[Thai Pangsakulyanont’s writings]]></description>
 		<link>https://dt.in.th</link>
 		<generator>RSS for Node</generator>
-		<lastBuildDate>Tue, 19 Nov 2024 11:01:45 GMT</lastBuildDate>
+		<lastBuildDate>Thu, 21 Nov 2024 12:09:58 GMT</lastBuildDate>
 		<atom:link href="https://notes.dt.in.th/api/recent.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title><![CDATA[Extracting text from image in macOS from the CLI]]></title>
@@ -1197,5 +1197,9 @@
 			<guid isPermaLink="true">https://notes.dt.in.th/20180828T153800Z0775</guid>
 			<pubDate>Tue, 28 Aug 2018 00:00:00 GMT</pubDate>
 		</item>
+		<follow_challenge>
+			<feedId>81341335623521281</feedId>
+			<userId>56028730846183424</userId>
+		</follow_challenge>
 	</channel>
 </rss>
