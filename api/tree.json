@@ -711,6 +711,10 @@
 		{	"title": "Verifying Firebase ID tokens in Node.js without Firebase Admin SDK"
 		,	"parent": "Firebase"
 		}
+	,	"KSortableUniqueID":
+		{	"title": "K-sortable unique ID formats (and generator)"
+		,	"parent": "Recent"
+		}
 	,	"LCH":
 		{	"title": "Using LCH colors"
 		,	"parent": "CreativeCoding"

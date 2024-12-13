@@ -1671,6 +1671,10 @@
 				}
 			]
 		}
+	,	"KSortableUniqueID":
+		{	"title": "K-sortable unique ID formats (and generator)"
+		,	"links": []
+		}
 	,	"LCH":
 		{	"title": "Using LCH colors"
 		,	"links": []
