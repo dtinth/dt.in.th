@@ -392,6 +392,10 @@
 		{	"title": "Bun (topic)"
 		,	"parent": "JavaScript"
 		}
+	,	"BunAppRunner":
+		{	"title": "Deploying a Bun app to AWS App Runner"
+		,	"parent": "Recent"
+		}
 	,	"BunInit":
 		{	"title": "How I initialize my Bun projects"
 		,	"parent": "Bun"

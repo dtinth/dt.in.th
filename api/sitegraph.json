@@ -719,6 +719,10 @@
 				}
 			]
 		}
+	,	"BunAppRunner":
+		{	"title": "Deploying a Bun app to AWS App Runner"
+		,	"links": []
+		}
 	,	"BunInit":
 		{	"title": "How I initialize my Bun projects"
 		,	"links":

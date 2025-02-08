@@ -5,8 +5,24 @@
 		<description><![CDATA[Thai Pangsakulyanont’s writings]]></description>
 		<link>https://dt.in.th</link>
 		<generator>RSS for Node</generator>
-		<lastBuildDate>Fri, 13 Dec 2024 17:39:23 GMT</lastBuildDate>
+		<lastBuildDate>Sat, 08 Feb 2025 05:06:11 GMT</lastBuildDate>
 		<atom:link href="https://notes.dt.in.th/api/recent.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title><![CDATA[Deploying a Bun app to AWS App Runner]]></title>
+			<description
+			><![CDATA[<a href="https://notes.dt.in.th/BunAppRunner">[Read on notes.dt.in.th]</a><!--[--><p>As of December 2024, <a href="https://docs.aws.amazon.com/apprunner/latest/dg/service-source-code-nodejs-releases.html">AWS App Runner</a> supports Node.js 18 runtime. We can use it to run a Bun server.</p><ul><li>In AWS App Runner’s revised build process, building and running are done on <strong>separate containers.</strong> This means that commands installed by <code>npm install -g</code> during build time are not available during runtime.</li><li>Bun binaries are also <a href="https://www.npmjs.com/package/bun">published to npm</a>, so we can make use of that.</li></ul><p>So deploying a Bun server to AWS App Runner consists of:</p><ol><li><p><strong>A Node.js project to install the Bun runtime.</strong> Its sole purpose is to have the Bun runtime binaries available during runtime.</p><p><code>deployment/bun-runtime/package.json</code>:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#E1E4E8;">{</span></span>
+<span class="line"><span style="color:#79B8FF;">  &quot;dependencies&quot;</span><span style="color:#E1E4E8;">: {</span></span>
+<span class="line"><span style="color:#79B8FF;">    &quot;bun&quot;</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">&quot;1.1.40&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8;">  }</span></span>
+<span class="line"><span style="color:#E1E4E8;">}</span></span></code></pre></li><li><p><strong>An install script.</strong> It installs Bun and uses Bun to install the project dependencies:</p><p><code>deployment/scripts/install.sh</code>:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#6A737D;">#!/bin/bash -e</span></span>
+<span class="line"><span style="color:#B392F0;">bash</span><span style="color:#79B8FF;"> -c</span><span style="color:#9ECBFF;"> &#39;cd deployment/bun-runtime &amp;&amp; npm install&#39;</span></span>
+<span class="line"><span style="color:#79B8FF;">exec</span><span style="color:#9ECBFF;"> ./deployment/bun-runtime/node_modules/.bin/bun</span><span style="color:#9ECBFF;"> install</span></span></code></pre></li><li><p><strong>A start script.</strong> It configures the <code>$PATH</code> to include Bun binaries and starts the Bun server:</p><p><code>deployment/scripts/start.sh</code>:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#6A737D;">#!/bin/bash -e</span></span>
+<span class="line"><span style="color:#F97583;">export</span><span style="color:#E1E4E8;"> PATH</span><span style="color:#F97583;">=</span><span style="color:#9ECBFF;">&quot;</span><span style="color:#E1E4E8;">$PWD</span><span style="color:#9ECBFF;">/deployment/bun-runtime/node_modules/.bin:</span><span style="color:#E1E4E8;">$PATH</span><span style="color:#9ECBFF;">&quot;</span></span>
+<span class="line"><span style="color:#79B8FF;">exec</span><span style="color:#9ECBFF;"> bun</span><span style="color:#9ECBFF;"> start</span></span></code></pre></li></ol><!--]-->]]></description>
+			<link>https://notes.dt.in.th/BunAppRunner</link>
+			<guid isPermaLink="true">https://notes.dt.in.th/BunAppRunner</guid>
+			<pubDate>Sat, 08 Feb 2025 00:00:00 GMT</pubDate>
+		</item>
 		<item>
 			<title><![CDATA[K-sortable unique ID formats (and generator)]]></title>
 			<description
@@ -554,14 +570,6 @@ PERPLEXITYAI_API_KEY=
 			<link>https://notes.dt.in.th/OpenWebUILiteLLM</link>
 			<guid isPermaLink="true">https://notes.dt.in.th/OpenWebUILiteLLM</guid>
 			<pubDate>Mon, 15 Jul 2024 00:00:00 GMT</pubDate>
-		</item>
-		<item>
-			<title><![CDATA[LLM กับข้อสอบ O-NET ม.6]]></title>
-			<description
-			><![CDATA[<a href="https://notes.dt.in.th/ThaiLanguageLLMBenchmark">[Read on notes.dt.in.th]</a><!--[--><h1 id="llm-กับข้อสอบ-o-net-ม6"><a aria-hidden="true" tabindex="-1" href="#llm-กับข้อสอบ-o-net-ม6"><span class="icon icon-link"></span></a>LLM กับข้อสอบ O-NET ม.6</h1><p>ช่วงหลังๆ มีโมเดล <a href="LargeLanguageModel">LLM</a> ตัวใหม่ๆ ปล่อยออกมาให้เล่นเยอะมาก ทั้ง <a href="https://openai.com/index/hello-gpt-4o/">GPT-4o</a>, <a href="https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/">Gemini 1.5</a>, <a href="https://www.anthropic.com/news/claude-3-5-sonnet">Claude 3.5</a> จึงสงสัยว่าตัวไหนที่ทำงานกับภาษาไทยได้ดีที่สุดตอนนี้</p><p>จำได้ว่าไม่นานมานี้ <a href="https://huggingface.co/datasets/scb10x/thai_exam">ทาง SCB10X ปล่อย dataset ThaiExam มา</a> เป็นชุดข้อมูลที่รวมข้อสอบต่างๆ เอาไว้ใช้เทียบความรู้ความสามารถของโมเดลภาษา</p><p>เลยลองเอาคำถาม <a href="https://www.niets.or.th/th/content/view/25230">O-NET ม.6 ปี 2564</a> ที่อยู่ในนั้นมาลองถามโมเดลใหม่ๆ ที่เจ้าใหญ่ๆ เพิ่งปล่อยออกมาดู…</p><p><img src="https://im.dt.in.th/ipfs/bafybeidyzhbs4yowimg4ricguyjhqboow6fb2wfwscdvyliimjf3ghea3a/449393841_10221687275525343_2756368389642905696_n.jpg" alt=""></p><p>พบว่า</p><ul><li><p>โมเดล Claude 3.5 Sonnet ทำคะแนนได้ดีสุดตอนนี้ อยู่ที่ 72%</p></li><li><p>ถ้านับเฉพาะโมเดลที่เอามารันบนเครื่องตัวเองได้ (สามารถใช้งานออฟไลน์ได้) ล่าสุด Google เพิ่งปล่อยโมเดล Gemma 2 ออกมาให้โหลดกัน ซึ่งขนาด 9B เล็กพอที่จะรันบนเครื่อง MacBook M1 (16 GB) ผ่าน Ollama ได้ ทำคะแนนได้เยอะที่สุดเท่าที่ลองมา คือ 53%</p></li><li><p>แต่ถ้ามีพื้นที่กับ VRAM เยอะพอที่จะรัน Gemma 2 ขนาด 27B ได้ ตัวนั้นทำคะแนนได้ดีกว่านิดหน่อย คือ 59%</p></li><li><p>ของค่าย OpenAI โมเดล GPT-4o กับ GPT-3.5 คะแนนต่างกันมาก (61% vs 25%)</p></li><li><p>(จากข้อมูลสถิติของ สทศ คะแนนเฉลี่ย O-NET ในปี 2564 อยู่ที่ ~39% โดยปรับสัดส่วนจำนวนข้อตามข้อมูลใน ThaiExam และไม่นับคะแนนวิชาภาษาอังกฤษ)</p></li><li><p>ช่วงนี้คนพูดถึง <a href="https://azure.microsoft.com/en-us/blog/introducing-phi-3-redefining-whats-possible-with-slms/">Phi-3</a> ของค่าย Microsoft กับพอสมควร แต่โมเดลนั้นแทบไม่ได้ train บนข้อมูลภาษาไทยเลย ทำคะแนนได้แค่ 23% จึงไม่ได้ใส่ในตาราง</p></li></ul><p>(จริงๆ นอกจาก O-NET ตัว dataset ยังมีข้อมูลจากข้อสอบอื่นๆ ด้วย ได้แก่ IC, TGAT, TPAT-1, A-Level แต่โพสต์นี้ทดลองแค่ O-NET เพราะขี้เกียจละ)</p><p>(และก็ วิธีที่ผม benchmark จะต่างจาก<a href="https://github.com/stanford-crfm/helm/pull/2534">วิธีที่ SCB10X ทำ</a> เพราะตอนที่ลองทดสอบ ผมอ่านแต่ตัว dataset ไม่ได้อ่านวิธีที่จะเอาไปใช้ให้ถูกต้อง และเข้าใจว่าปกติจะใช้ HELM ซึ่งผมใช้ไม่เป็นและขี้เกียจเรียน ดังนั้น prompt และ model parameter ต่างๆ จะไม่เหมือนกัน ตัวเลขคะแนนที่ได้ก็อาจจะ<a href="https://arxiv.org/abs/2312.13951">แตกต่างกันออกไป</a> นอกจากนี้บางโมเดลผมขี้เกียจรันบนเครื่องตัวเอง เลยไปหา API ใช้ ใครว่างๆ ลอง benchmark ใน HELM แล้วแชร์ผลลัพธ์มาดูได้ครับ จะได้มีผล benchmark เยอะขึ้น และอยู่ในสภาพที่ดีกว่านี้)</p><!--]-->]]></description>
-			<link>https://notes.dt.in.th/ThaiLanguageLLMBenchmark</link>
-			<guid isPermaLink="true">https://notes.dt.in.th/ThaiLanguageLLMBenchmark</guid>
-			<pubDate>Sun, 30 Jun 2024 00:00:00 GMT</pubDate>
 		</item>
 		<follow_challenge>
 			<feedId>81341335623521281</feedId>

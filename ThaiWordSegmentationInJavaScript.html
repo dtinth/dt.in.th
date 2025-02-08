@@ -8,7 +8,11 @@
 <meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/ThaiWordSegmentationInJavaScript" data-source="note">
 <meta property="og:image:width" content="1800" data-source="note">
 <meta property="og:image:height" content="1680" data-source="note">
-<link rel="canonical" href="https://notes.dt.in.th/ThaiWordSegmentationInJavaScript" data-source="note">
+<link rel="canonical" href="https://notes.dt.in.th/ThaiWordSegmentationInJavaScript" data-source="note"><style id="note-styles">/* layer: default */
+.h-48[data-v-8c9498c0]{height:12rem;}
+.w-1\/2[data-v-8c9498c0]{width:50%;}
+.flex[data-v-8c9498c0]{display:flex;}
+.gap-4[data-v-8c9498c0]{gap:1rem;}</style>
     <script
       async
       src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
@@ -48,43 +52,45 @@
     <div class="h-entry">
       <main class="bg-#353433" id="main">
         <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
-          <div class="prose e-content" id="noteContents"><!--[--><p>ตัดคำภาษาไทยใน <a href="Nodejs">Node.js</a> (หรือใน Browser) โดยใช้ API Intl ของ <a href="JavaScript">JavaScript</a></p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#F97583;">const</span><span style="color:#79B8FF;"> result</span><span style="color:#F97583;"> =</span><span style="color:#E1E4E8;"> Array.</span><span style="color:#B392F0;">from</span><span style="color:#E1E4E8;">(</span></span>
-<span class="line"><span style="color:#F97583;">  new</span><span style="color:#E1E4E8;"> Intl.</span><span style="color:#B392F0;">Segmenter</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;th&#39;</span><span style="color:#E1E4E8;">, { granularity: </span><span style="color:#9ECBFF;">&#39;word&#39;</span><span style="color:#E1E4E8;"> }).</span><span style="color:#B392F0;">segment</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;สวััสดีครับ ทดสอบ&#39;</span><span style="color:#E1E4E8;">)</span></span>
-<span class="line"><span style="color:#E1E4E8;">)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#E1E4E8;">console.</span><span style="color:#B392F0;">log</span><span style="color:#E1E4E8;">(result)</span></span>
-<span class="line"><span style="color:#6A737D;">/* =&gt; [</span></span>
-<span class="line"><span style="color:#6A737D;">  {</span></span>
-<span class="line"><span style="color:#6A737D;">    segment: &#39;สวััส&#39;,</span></span>
-<span class="line"><span style="color:#6A737D;">    index: 0,</span></span>
-<span class="line"><span style="color:#6A737D;">    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>
-<span class="line"><span style="color:#6A737D;">    isWordLike: true</span></span>
-<span class="line"><span style="color:#6A737D;">  },</span></span>
-<span class="line"><span style="color:#6A737D;">  {</span></span>
-<span class="line"><span style="color:#6A737D;">    segment: &#39;ดี&#39;,</span></span>
-<span class="line"><span style="color:#6A737D;">    index: 5,</span></span>
-<span class="line"><span style="color:#6A737D;">    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>
-<span class="line"><span style="color:#6A737D;">    isWordLike: true</span></span>
-<span class="line"><span style="color:#6A737D;">  },</span></span>
-<span class="line"><span style="color:#6A737D;">  {</span></span>
-<span class="line"><span style="color:#6A737D;">    segment: &#39;ครับ&#39;,</span></span>
-<span class="line"><span style="color:#6A737D;">    index: 7,</span></span>
-<span class="line"><span style="color:#6A737D;">    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>
-<span class="line"><span style="color:#6A737D;">    isWordLike: true</span></span>
-<span class="line"><span style="color:#6A737D;">  },</span></span>
-<span class="line"><span style="color:#6A737D;">  {</span></span>
-<span class="line"><span style="color:#6A737D;">    segment: &#39; &#39;,</span></span>
-<span class="line"><span style="color:#6A737D;">    index: 11,</span></span>
-<span class="line"><span style="color:#6A737D;">    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>
-<span class="line"><span style="color:#6A737D;">    isWordLike: false</span></span>
-<span class="line"><span style="color:#6A737D;">  },</span></span>
-<span class="line"><span style="color:#6A737D;">  {</span></span>
-<span class="line"><span style="color:#6A737D;">    segment: &#39;ทดสอบ&#39;,</span></span>
-<span class="line"><span style="color:#6A737D;">    index: 12,</span></span>
-<span class="line"><span style="color:#6A737D;">    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>
-<span class="line"><span style="color:#6A737D;">    isWordLike: true</span></span>
-<span class="line"><span style="color:#6A737D;">  }</span></span>
-<span class="line"><span style="color:#6A737D;">] */</span></span></code></pre><!--]--></div>
+          <div class="prose e-content" id="noteContents"><!--[--><p data-v-8c9498c0>ตัดคำภาษาไทยใน <a href="Nodejs" data-v-8c9498c0>Node.js</a> (หรือใน Browser) โดยใช้ API Intl ของ <a href="JavaScript" data-v-8c9498c0>JavaScript</a></p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>const</span><span style="color:#79B8FF;" data-v-8c9498c0> result</span><span style="color:#F97583;" data-v-8c9498c0> =</span><span style="color:#E1E4E8;" data-v-8c9498c0> Array.</span><span style="color:#B392F0;" data-v-8c9498c0>from</span><span style="color:#E1E4E8;" data-v-8c9498c0>(</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>  new</span><span style="color:#E1E4E8;" data-v-8c9498c0> Intl.</span><span style="color:#B392F0;" data-v-8c9498c0>Segmenter</span><span style="color:#E1E4E8;" data-v-8c9498c0>(</span><span style="color:#9ECBFF;" data-v-8c9498c0>&#39;th&#39;</span><span style="color:#E1E4E8;" data-v-8c9498c0>, { granularity: </span><span style="color:#9ECBFF;" data-v-8c9498c0>&#39;word&#39;</span><span style="color:#E1E4E8;" data-v-8c9498c0> }).</span><span style="color:#B392F0;" data-v-8c9498c0>segment</span><span style="color:#E1E4E8;" data-v-8c9498c0>(</span><span style="color:#9ECBFF;" data-v-8c9498c0>&#39;สวััสดีครับ ทดสอบ&#39;</span><span style="color:#E1E4E8;" data-v-8c9498c0>)</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>)</span></span>
+<span class="line" data-v-8c9498c0></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>console.</span><span style="color:#B392F0;" data-v-8c9498c0>log</span><span style="color:#E1E4E8;" data-v-8c9498c0>(result)</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>/* =&gt; [</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>  {</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    segment: &#39;สวััส&#39;,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    index: 0,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    isWordLike: true</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>  },</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>  {</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    segment: &#39;ดี&#39;,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    index: 5,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    isWordLike: true</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>  },</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>  {</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    segment: &#39;ครับ&#39;,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    index: 7,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    isWordLike: true</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>  },</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>  {</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    segment: &#39; &#39;,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    index: 11,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    isWordLike: false</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>  },</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>  {</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    segment: &#39;ทดสอบ&#39;,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    index: 12,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>    isWordLike: true</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>  }</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>] */</span></span></code></pre><div class="flex gap-4" data-v-8c9498c0><textarea class="w-1/2 h-48 form-control" data-v-8c9498c0>สวัสดีครับ ทดสอบ</textarea><textarea class="w-1/2 h-48 form-control" readonly data-v-8c9498c0>สวัสดี
+ครับ
+ทดสอบ</textarea></div><!--]--></div>
         </div>
       </main>
       <footer>
@@ -97,14 +103,60 @@
       </footer>
     </div>
     <script>
-window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});/* Analyzed bindings: {
+  "input": "setup-maybe-ref",
+  "output": "setup-maybe-ref"
+} */
 var _vue = require('vue');
 
-const _hoisted_1 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<p>ตัดคำภาษาไทยใน <a href=\"Nodejs\">Node.js</a> (หรือใน Browser) โดยใช้ API Intl ของ <a href=\"JavaScript\">JavaScript</a></p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#F97583;\">const</span><span style=\"color:#79B8FF;\"> result</span><span style=\"color:#F97583;\"> =</span><span style=\"color:#E1E4E8;\"> Array.</span><span style=\"color:#B392F0;\">from</span><span style=\"color:#E1E4E8;\">(</span></span>\n<span class=\"line\"><span style=\"color:#F97583;\">  new</span><span style=\"color:#E1E4E8;\"> Intl.</span><span style=\"color:#B392F0;\">Segmenter</span><span style=\"color:#E1E4E8;\">(</span><span style=\"color:#9ECBFF;\">&#39;th&#39;</span><span style=\"color:#E1E4E8;\">, { granularity: </span><span style=\"color:#9ECBFF;\">&#39;word&#39;</span><span style=\"color:#E1E4E8;\"> }).</span><span style=\"color:#B392F0;\">segment</span><span style=\"color:#E1E4E8;\">(</span><span style=\"color:#9ECBFF;\">&#39;สวััสดีครับ ทดสอบ&#39;</span><span style=\"color:#E1E4E8;\">)</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">)</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">console.</span><span style=\"color:#B392F0;\">log</span><span style=\"color:#E1E4E8;\">(result)</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">/* =&gt; [</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">  {</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    segment: &#39;สวััส&#39;,</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    index: 0,</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    isWordLike: true</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">  },</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">  {</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    segment: &#39;ดี&#39;,</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    index: 5,</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    isWordLike: true</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">  },</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">  {</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    segment: &#39;ครับ&#39;,</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    index: 7,</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    isWordLike: true</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">  },</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">  {</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    segment: &#39; &#39;,</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    index: 11,</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    isWordLike: false</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">  },</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">  {</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    segment: &#39;ทดสอบ&#39;,</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    index: 12,</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    isWordLike: true</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">  }</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">] */</span></span></code></pre>", 2)
-function render(_ctx, _cache) {
-  return _hoisted_1
+const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
+const _hoisted_1 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<p data-v-8c9498c0>ตัดคำภาษาไทยใน <a href=\"Nodejs\" data-v-8c9498c0>Node.js</a> (หรือใน Browser) โดยใช้ API Intl ของ <a href=\"JavaScript\" data-v-8c9498c0>JavaScript</a></p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>const</span><span style=\"color:#79B8FF;\" data-v-8c9498c0> result</span><span style=\"color:#F97583;\" data-v-8c9498c0> =</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> Array.</span><span style=\"color:#B392F0;\" data-v-8c9498c0>from</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>(</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>  new</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> Intl.</span><span style=\"color:#B392F0;\" data-v-8c9498c0>Segmenter</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>(</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;th&#39;</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>, { granularity: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;word&#39;</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> }).</span><span style=\"color:#B392F0;\" data-v-8c9498c0>segment</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>(</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;สวััสดีครับ ทดสอบ&#39;</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>)</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>)</span></span>\n<span class=\"line\" data-v-8c9498c0></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>console.</span><span style=\"color:#B392F0;\" data-v-8c9498c0>log</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>(result)</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>/* =&gt; [</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>  {</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    segment: &#39;สวััส&#39;,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    index: 0,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    isWordLike: true</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>  },</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>  {</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    segment: &#39;ดี&#39;,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    index: 5,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    isWordLike: true</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>  },</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>  {</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    segment: &#39;ครับ&#39;,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    index: 7,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    isWordLike: true</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>  },</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>  {</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    segment: &#39; &#39;,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    index: 11,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    isWordLike: false</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>  },</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>  {</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    segment: &#39;ทดสอบ&#39;,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    index: 12,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    input: &#39;สวััสดีครับ ทดสอบ&#39;,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>    isWordLike: true</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>  }</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>] */</span></span></code></pre>", 2)
+const _hoisted_3 = { class: "flex gap-4" }
+const _hoisted_4 = ["value"]
+
+
+const __sfc__ = {
+  __name: 'Note',
+  setup(__props) {
+
+  const input = Vue.ref('สวัสดีครับ ทดสอบ')
+  const output = Vue.computed(() => {
+    try {
+      return Array.from(
+        new Intl.Segmenter('th', { granularity: 'word' })
+          .segment(input.value)
+      )
+        .filter(({ isWordLike }) => isWordLike)
+        .map(({ segment }) => segment)
+        .join('\n')
+        .replace(/(\S)(ๆ)/g,'$1\n$2')
+    } catch (error) {
+      return error.message
+    }
+  })
+
+return (_ctx, _cache) => {
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
+    _hoisted_1,
+    _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
+      _vue.withDirectives.call(void 0, _vue.createElementVNode.call(void 0, "textarea", {
+        class: "w-1/2 h-48 form-control",
+        "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (_vue.isRef.call(void 0, input) ? (input).value = $event : null))
+      }, null, 512 /* NEED_PATCH */), [
+        [_vue.vModelText, _vue.unref.call(void 0, input)]
+      ]),
+      _vue.createElementVNode.call(void 0, "textarea", {
+        class: "w-1/2 h-48 form-control",
+        readonly: "",
+        value: _vue.unref.call(void 0, output)
+      }, null, 8 /* PROPS */, _hoisted_4)
+    ])
+  ], 64 /* STABLE_FRAGMENT */))
 }
-__sfc__.render = render
+}
+
+}
+__sfc__.__scopeId = "data-v-8c9498c0"
 __sfc__.__file = "Note.vue"
 exports. default = __sfc__};
 window.precompiledFrontMatter = {"public":true,"aliases":["20220618T113952Z9151"],"title":"ตัดคำภาษาไทยใน Node.js (หรือใน Browser) โดยใช้ API Intl ของ JavaScript"};
