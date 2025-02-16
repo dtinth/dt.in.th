@@ -414,7 +414,7 @@
 		}
 	,	"Caddy":
 		{	"title": "Caddy web server (topic)"
-		,	"parent": "CaddyReverseProxy"
+		,	"parent": "Linux"
 		}
 	,	"CaddyAccessLogging":
 		{	"title": "Enabling access logging in Caddy"
