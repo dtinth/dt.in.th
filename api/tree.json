@@ -416,6 +416,10 @@
 		{	"title": "Caddy web server (topic)"
 		,	"parent": "CaddyReverseProxy"
 		}
+	,	"CaddyAccessLogging":
+		{	"title": "Enabling access logging in Caddy"
+		,	"parent": "Caddy"
+		}
 	,	"CaddyCORS":
 		{	"title": "Setting up CORS in Caddy"
 		,	"parent": "Caddy"

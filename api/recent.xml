@@ -5,8 +5,25 @@
 		<description><![CDATA[Thai Pangsakulyanont’s writings]]></description>
 		<link>https://dt.in.th</link>
 		<generator>RSS for Node</generator>
-		<lastBuildDate>Sat, 08 Feb 2025 05:07:54 GMT</lastBuildDate>
+		<lastBuildDate>Sun, 16 Feb 2025 14:29:57 GMT</lastBuildDate>
 		<atom:link href="https://notes.dt.in.th/api/recent.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title><![CDATA[Enabling access logging in Caddy]]></title>
+			<description
+			><![CDATA[<a href="https://notes.dt.in.th/CaddyAccessLogging">[Read on notes.dt.in.th]</a><!--[--><p>To configure basic <strong>access logging</strong> in <a href="Caddy">Caddy</a>, first <a href="https://caddyserver.com/docs/caddyfile/options#log">configure the default logger</a> in the global options:</p><pre><code>{
+  log {
+    output file /var/log/caddy/access.log
+    format console
+  }
+}
+</code></pre><p>then, in your site configuration, <a href="https://caddyserver.com/docs/caddyfile/directives/log">add the <code>log</code> directive</a> to each site you want to log:</p><pre><code>mydomain.tld {
+  log
+}
+</code></pre><p>By default, <a href="https://caddyserver.com/docs/caddyfile/directives/log#file">logs are rotated</a> as follows:</p><ul><li>Log files are rotated once they reach 100 MB</li><li>Rotated files are automatically compressed with gzip</li><li>Old log files are removed when either: <ul><li>They are older than 90 days, or</li><li>There are more than 10 newer log files</li></ul></li></ul><!--]-->]]></description>
+			<link>https://notes.dt.in.th/CaddyAccessLogging</link>
+			<guid isPermaLink="true">https://notes.dt.in.th/CaddyAccessLogging</guid>
+			<pubDate>Sun, 16 Feb 2025 00:00:00 GMT</pubDate>
+		</item>
 		<item>
 			<title><![CDATA[Deploying a Bun app to AWS App Runner]]></title>
 			<description
@@ -509,67 +526,6 @@ XXXXXXXX XXXXXXXX XXXXXX00
 			<link>https://notes.dt.in.th/OBZBarcodeScannerJS</link>
 			<guid isPermaLink="true">https://notes.dt.in.th/OBZBarcodeScannerJS</guid>
 			<pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
-		</item>
-		<item>
-			<title><![CDATA[Configuring Open WebUI and LiteLLM with Docker Compose to talk to OpenAI, Anthropic, and Gemini APIs]]></title>
-			<description
-			><![CDATA[<a href="https://notes.dt.in.th/OpenWebUILiteLLM">[Read on notes.dt.in.th]</a><!--[--><h1 id="configuring-open-webui-and-litellm-with-docker-compose-to-talk-to-openai-anthropic-gemini-and-perplexity-apis"><a aria-hidden="true" tabindex="-1" href="#configuring-open-webui-and-litellm-with-docker-compose-to-talk-to-openai-anthropic-gemini-and-perplexity-apis"><span class="icon icon-link"></span></a>Configuring Open WebUI and LiteLLM with Docker Compose to talk to OpenAI, Anthropic, Gemini, and Perplexity APIs</h1><p>I want to use a single UI to interact with <a href="LargeLanguageModel">LLMs</a> from different providers (OpenAI, Anthropic, Google, and Perplexity). I found that there is a way to do this now, but you have to self-host some software.</p><ol><li><a href="https://github.com/open-webui/open-webui"><strong>Open WebUI</strong></a> — A web-based LLM client that works Ollama and any OpenAI-compatible API.</li><li><a href="https://github.com/BerriAI/litellm"><strong>LiteLLM</strong></a> — A proxy server that exposes 100s of LLMs with a unified, OpenAI-compatible API.</li></ol><p><img src="https://im.dt.in.th/ipfs/bafybeiavabarskefnfaenl57lwkugoioswkapqaqvb46ovh3ric2jso4ga/image.webp" alt="A flowchart diagram showing the relationship between different components. It starts with &quot;Open WebUI&quot; on the left, which connects via a green arrow to &quot;LiteLLM&quot; in the center. From &quot;LiteLLM&quot;, three green arrows branch out to the right, connecting to &quot;Gemini API&quot;, &quot;OpenAI API&quot;, and &quot;Anthropic API&quot;. Each component is represented by a black rectangle with white text inside."></p><p>The UI is very flexible. You can choose which model to talk to, or talk to all of them at once:</p><p><img src="https://im.dt.in.th/ipfs/bafybeidw67od5gpxgmhlnjxhtnhmd4xih5xwznpjkl4t7bj2fzdjialxoy/image.webp" alt="A dark-themed chat interface showing conversations with three different AI models: claude-3-5-sonnet, gemini-1.5-pro-latest, and gpt-4o. The top of the screen displays these model names as selectable options. A user message &quot;hello world!&quot; appears in a speech bubble on the right. Below are three response boxes, one for each AI model. Each AI gives a friendly greeting and offers assistance. The interface includes icons for various actions like editing, copying, and liking messages beneath each response."></p><p>This is how I set it up:</p><ol><li><p><strong>Set up the environment variables.</strong> Put the API keys in a <code>.env</code> file.</p><pre><code>OPENAI_API_KEY=
-ANTHROPIC_API_KEY=
-GEMINI_API_KEY=
-PERPLEXITYAI_API_KEY=
-</code></pre></li><li><p><strong>Create a LiteLLM config file.</strong> Put the model names and API keys in a <code>litellm_config.yaml</code> file.</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#85E89D;">model_list</span><span style="color:#E1E4E8;">:</span></span>
-<span class="line"><span style="color:#E1E4E8;">  - </span><span style="color:#85E89D;">model_name</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">gpt-4o</span></span>
-<span class="line"><span style="color:#85E89D;">    litellm_params</span><span style="color:#E1E4E8;">:</span></span>
-<span class="line"><span style="color:#85E89D;">      model</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">openai/gpt-4o</span></span>
-<span class="line"><span style="color:#E1E4E8;">  - </span><span style="color:#85E89D;">model_name</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">claude-3-5-sonnet</span></span>
-<span class="line"><span style="color:#85E89D;">    litellm_params</span><span style="color:#E1E4E8;">:</span></span>
-<span class="line"><span style="color:#85E89D;">      model</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">anthropic/claude-3-5-sonnet-20240620</span></span>
-<span class="line"><span style="color:#E1E4E8;">  - </span><span style="color:#85E89D;">model_name</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">gemini-1.5-pro-latest</span></span>
-<span class="line"><span style="color:#85E89D;">    litellm_params</span><span style="color:#E1E4E8;">:</span></span>
-<span class="line"><span style="color:#85E89D;">      model</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">gemini/gemini-1.5-pro-latest</span></span>
-<span class="line"><span style="color:#85E89D;">      safety_settings</span><span style="color:#E1E4E8;">:</span></span>
-<span class="line"><span style="color:#E1E4E8;">        - </span><span style="color:#85E89D;">category</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">HARM_CATEGORY_HARASSMENT</span></span>
-<span class="line"><span style="color:#85E89D;">          threshold</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">BLOCK_NONE</span></span>
-<span class="line"><span style="color:#E1E4E8;">        - </span><span style="color:#85E89D;">category</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">HARM_CATEGORY_HATE_SPEECH</span></span>
-<span class="line"><span style="color:#85E89D;">          threshold</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">BLOCK_NONE</span></span>
-<span class="line"><span style="color:#E1E4E8;">        - </span><span style="color:#85E89D;">category</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">HARM_CATEGORY_SEXUALLY_EXPLICIT</span></span>
-<span class="line"><span style="color:#85E89D;">          threshold</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">BLOCK_NONE</span></span>
-<span class="line"><span style="color:#E1E4E8;">        - </span><span style="color:#85E89D;">category</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">HARM_CATEGORY_DANGEROUS_CONTENT</span></span>
-<span class="line"><span style="color:#85E89D;">          threshold</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">BLOCK_NONE</span></span>
-<span class="line"><span style="color:#E1E4E8;">  - </span><span style="color:#85E89D;">model_name</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">pplx-llama-3.1-sonar-huge</span></span>
-<span class="line"><span style="color:#85E89D;">    litellm_params</span><span style="color:#E1E4E8;">:</span></span>
-<span class="line"><span style="color:#85E89D;">      model</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">perplexity/llama-3.1-sonar-huge-128k-online</span></span></code></pre></li><li><p><strong>Create a Docker Compose project.</strong> Here’s the <code>docker-compose.yml</code> file that puts it all together:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#85E89D;">services</span><span style="color:#E1E4E8;">:</span></span>
-<span class="line"><span style="color:#85E89D;">  webui</span><span style="color:#E1E4E8;">:</span></span>
-<span class="line"><span style="color:#85E89D;">    image</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">ghcr.io/open-webui/open-webui:main</span></span>
-<span class="line"><span style="color:#85E89D;">    restart</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">unless-stopped</span></span>
-<span class="line"><span style="color:#85E89D;">    ports</span><span style="color:#E1E4E8;">:</span></span>
-<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">&#39;127.0.0.1:33371:8080&#39;</span></span>
-<span class="line"><span style="color:#85E89D;">    environment</span><span style="color:#E1E4E8;">:</span></span>
-<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">OPENAI_API_KEY=dummy</span></span>
-<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">OPENAI_API_BASE_URL=http://litellm:4000/v1</span></span>
-<span class="line"><span style="color:#85E89D;">    volumes</span><span style="color:#E1E4E8;">:</span></span>
-<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">open-webui:/app/backend/data</span></span>
-<span class="line"><span style="color:#85E89D;">  litellm</span><span style="color:#E1E4E8;">:</span></span>
-<span class="line"><span style="color:#85E89D;">    image</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">ghcr.io/berriai/litellm:main-latest</span></span>
-<span class="line"><span style="color:#85E89D;">    restart</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">unless-stopped</span></span>
-<span class="line"><span style="color:#85E89D;">    command</span><span style="color:#E1E4E8;">:</span></span>
-<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">&#39;--config=/litellm_config.yaml&#39;</span></span>
-<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">&#39;--detailed_debug&#39;</span></span>
-<span class="line"><span style="color:#85E89D;">    ports</span><span style="color:#E1E4E8;">:</span></span>
-<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">&#39;127.0.0.1:33372:4000&#39;</span></span>
-<span class="line"><span style="color:#85E89D;">    environment</span><span style="color:#E1E4E8;">:</span></span>
-<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">LITELLM_MASTER_KEY=dummy</span></span>
-<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">OPENAI_API_KEY</span></span>
-<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">GEMINI_API_KEY</span></span>
-<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">ANTHROPIC_API_KEY</span></span>
-<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">PERPLEXITYAI_API_KEY</span></span>
-<span class="line"><span style="color:#85E89D;">    volumes</span><span style="color:#E1E4E8;">:</span></span>
-<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">./litellm_config.yaml:/litellm_config.yaml</span></span>
-<span class="line"><span style="color:#85E89D;">volumes</span><span style="color:#E1E4E8;">:</span></span>
-<span class="line"><span style="color:#85E89D;">  open-webui</span><span style="color:#E1E4E8;">:</span></span></code></pre></li><li><p><strong>Start the project.</strong> Run <code>docker compose up -d</code> to start the project, then go to <code>http://localhost:33371/</code> and create an account there.</p></li></ol><!--]-->]]></description>
-			<link>https://notes.dt.in.th/OpenWebUILiteLLM</link>
-			<guid isPermaLink="true">https://notes.dt.in.th/OpenWebUILiteLLM</guid>
-			<pubDate>Mon, 15 Jul 2024 00:00:00 GMT</pubDate>
 		</item>
 		<follow_challenge>
 			<feedId>81341335623521281</feedId>

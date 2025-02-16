@@ -771,6 +771,15 @@
 				}
 			,	{	"link": "CaddyCompression"
 				}
+			,	{	"link": "CaddyAccessLogging"
+				}
+			]
+		}
+	,	"CaddyAccessLogging":
+		{	"title": "Enabling access logging in Caddy"
+		,	"links":
+			[	{	"link": "Caddy"
+				}
 			]
 		}
 	,	"CaddyCORS":
