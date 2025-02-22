@@ -1744,6 +1744,8 @@
 				}
 			,	{	"link": "20220204T170710Z2789"
 				}
+			,	{	"link": "LinuxZram"
+				}
 			,	{	"link": "Caddy"
 				}
 			,	{	"link": "Docker"
@@ -1756,6 +1758,13 @@
 		}
 	,	"LinuxAddUser":
 		{	"title": "“Which one to use, useradd or adduser?”"
+		,	"links":
+			[	{	"link": "Linux"
+				}
+			]
+		}
+	,	"LinuxZram":
+		{	"title": "Using ZRAM for compressed RAM-backed swap space in Linux"
 		,	"links":
 			[	{	"link": "Linux"
 				}

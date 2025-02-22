@@ -8,7 +8,8 @@
 <meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/CaddyAccessLogging" data-source="note">
 <meta property="og:image:width" content="1800" data-source="note">
 <meta property="og:image:height" content="1680" data-source="note">
-<link rel="canonical" href="https://notes.dt.in.th/CaddyAccessLogging" data-source="note">
+<link rel="canonical" href="https://notes.dt.in.th/CaddyAccessLogging" data-source="note"><style id="note-styles">/* layer: default */
+.filter[data-v-8c9498c0]{filter:var(--un-blur) var(--un-brightness) var(--un-contrast) var(--un-drop-shadow) var(--un-grayscale) var(--un-hue-rotate) var(--un-invert) var(--un-saturate) var(--un-sepia);}</style>
     <script
       async
       src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
@@ -48,16 +49,19 @@
     <div class="h-entry">
       <main class="bg-#353433" id="main">
         <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
-          <div class="prose e-content" id="noteContents"><!--[--><p>To configure basic <strong>access logging</strong> in <a href="Caddy">Caddy</a>, first <a href="https://caddyserver.com/docs/caddyfile/options#log">configure the default logger</a> in the global options:</p><pre><code>{
+          <div class="prose e-content" id="noteContents"><!--[--><p data-v-8c9498c0>To configure basic <strong data-v-8c9498c0>access logging</strong> in <a href="Caddy" data-v-8c9498c0>Caddy</a>, first <a href="https://caddyserver.com/docs/caddyfile/options#log" data-v-8c9498c0>configure the default logger</a> in the global options:</p><pre data-v-8c9498c0><code data-v-8c9498c0>{
   log {
     output file /var/log/caddy/access.log
-    format console
+    format filter {
+      request&gt;headers delete
+      resp_headers delete
+    }
   }
 }
-</code></pre><p>then, in your site configuration, <a href="https://caddyserver.com/docs/caddyfile/directives/log">add the <code>log</code> directive</a> to each site you want to log:</p><pre><code>mydomain.tld {
+</code></pre><p data-v-8c9498c0>then, in your site configuration, <a href="https://caddyserver.com/docs/caddyfile/directives/log" data-v-8c9498c0>add the <code data-v-8c9498c0>log</code> directive</a> to each site you want to log:</p><pre data-v-8c9498c0><code data-v-8c9498c0>mydomain.tld {
   log
 }
-</code></pre><p>By default, <a href="https://caddyserver.com/docs/caddyfile/directives/log#file">logs are rotated</a> as follows:</p><ul><li>Log files are rotated once they reach 100 MB</li><li>Rotated files are automatically compressed with gzip</li><li>Old log files are removed when either: <ul><li>They are older than 90 days, or</li><li>There are more than 10 newer log files</li></ul></li></ul><!--]--></div>
+</code></pre><p data-v-8c9498c0>By default, <a href="https://caddyserver.com/docs/caddyfile/directives/log#file" data-v-8c9498c0>logs are rotated</a> as follows:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Log files are rotated once they reach 100 MB</li><li data-v-8c9498c0>Rotated files are automatically compressed with gzip</li><li data-v-8c9498c0>Old log files are removed when either: <ul data-v-8c9498c0><li data-v-8c9498c0>They are older than 90 days, or</li><li data-v-8c9498c0>There are more than 10 newer log files</li></ul></li></ul><!--]--></div>
         </div>
       </main>
       <footer>
@@ -73,11 +77,13 @@
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
 
-const _hoisted_1 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<p>To configure basic <strong>access logging</strong> in <a href=\"Caddy\">Caddy</a>, first <a href=\"https://caddyserver.com/docs/caddyfile/options#log\">configure the default logger</a> in the global options:</p><pre><code>{\n  log {\n    output file /var/log/caddy/access.log\n    format console\n  }\n}\n</code></pre><p>then, in your site configuration, <a href=\"https://caddyserver.com/docs/caddyfile/directives/log\">add the <code>log</code> directive</a> to each site you want to log:</p><pre><code>mydomain.tld {\n  log\n}\n</code></pre><p>By default, <a href=\"https://caddyserver.com/docs/caddyfile/directives/log#file\">logs are rotated</a> as follows:</p><ul><li>Log files are rotated once they reach 100 MB</li><li>Rotated files are automatically compressed with gzip</li><li>Old log files are removed when either: <ul><li>They are older than 90 days, or</li><li>There are more than 10 newer log files</li></ul></li></ul>", 6)
+const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
+const _hoisted_1 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<p data-v-8c9498c0>To configure basic <strong data-v-8c9498c0>access logging</strong> in <a href=\"Caddy\" data-v-8c9498c0>Caddy</a>, first <a href=\"https://caddyserver.com/docs/caddyfile/options#log\" data-v-8c9498c0>configure the default logger</a> in the global options:</p><pre data-v-8c9498c0><code data-v-8c9498c0>{\n  log {\n    output file /var/log/caddy/access.log\n    format filter {\n      request&gt;headers delete\n      resp_headers delete\n    }\n  }\n}\n</code></pre><p data-v-8c9498c0>then, in your site configuration, <a href=\"https://caddyserver.com/docs/caddyfile/directives/log\" data-v-8c9498c0>add the <code data-v-8c9498c0>log</code> directive</a> to each site you want to log:</p><pre data-v-8c9498c0><code data-v-8c9498c0>mydomain.tld {\n  log\n}\n</code></pre><p data-v-8c9498c0>By default, <a href=\"https://caddyserver.com/docs/caddyfile/directives/log#file\" data-v-8c9498c0>logs are rotated</a> as follows:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Log files are rotated once they reach 100 MB</li><li data-v-8c9498c0>Rotated files are automatically compressed with gzip</li><li data-v-8c9498c0>Old log files are removed when either: <ul data-v-8c9498c0><li data-v-8c9498c0>They are older than 90 days, or</li><li data-v-8c9498c0>There are more than 10 newer log files</li></ul></li></ul>", 6)
 function render(_ctx, _cache) {
   return _hoisted_1
 }
 __sfc__.render = render
+__sfc__.__scopeId = "data-v-8c9498c0"
 __sfc__.__file = "Note.vue"
 exports. default = __sfc__};
 window.precompiledFrontMatter = {"public":true,"title":"Enabling access logging in Caddy"};

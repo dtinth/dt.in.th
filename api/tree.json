@@ -751,6 +751,10 @@
 		{	"title": "“Which one to use, useradd or adduser?”"
 		,	"parent": "Linux"
 		}
+	,	"LinuxZram":
+		{	"title": "Using ZRAM for compressed RAM-backed swap space in Linux"
+		,	"parent": "Linux"
+		}
 	,	"LocalTalkInternationalization":
 		{	"title": "Local talk internationalization"
 		,	"parent": "Recent"

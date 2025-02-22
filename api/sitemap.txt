@@ -186,6 +186,7 @@ https://notes.dt.in.th/Learning
 https://notes.dt.in.th/Linode
 https://notes.dt.in.th/Linux
 https://notes.dt.in.th/LinuxAddUser
+https://notes.dt.in.th/LinuxZram
 https://notes.dt.in.th/LocalTalkInternationalization
 https://notes.dt.in.th/MacOS
 https://notes.dt.in.th/MacOSOCR
