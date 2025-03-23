@@ -388,6 +388,10 @@
 		{	"title": "Azure (topic)"
 		,	"parent": "CloudPlatform"
 		}
+	,	"BrotherPTWebUSB":
+		{	"title": "A web-based printing tool for Brother P-touch series label printers"
+		,	"parent": "Recent"
+		}
 	,	"Bun":
 		{	"title": "Bun (topic)"
 		,	"parent": "JavaScript"

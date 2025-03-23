@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html data-precompiled=true lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A web-based printing tool for Brother P-touch series label printers | notes.dt.in.th</title><meta property="og:title" content="A web-based printing tool for Brother P-touch series label printers" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/BrotherPTWebUSB" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://notes.dt.in.th/BrotherPTWebUSB" data-source="note"><style id="note-styles">.n-preview:hover {
+    image-rendering: pixelated;
+}
+
+/* layer: default */
+.mb-0[data-v-8c9498c0]{margin-bottom:0;}
+.mt-0[data-v-8c9498c0]{margin-top:0;}
+.mt-4[data-v-8c9498c0]{margin-top:1rem;}
+.flex[data-v-8c9498c0]{display:flex;}
+.justify-center[data-v-8c9498c0]{justify-content:center;}
+.b[data-v-8c9498c0],
+.border[data-v-8c9498c0]{border-width:1px;}
+.text-\[\#8b8685\][data-v-8c9498c0]{--un-text-opacity:1;color:rgb(139 134 133 / var(--un-text-opacity));}
+.disabled\:opacity-50[data-v-8c9498c0]:disabled{opacity:0.5;}
+.ease[data-v-8c9498c0]{transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);}</style>
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
+      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
+      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" crossorigin src="/runtime/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
+    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+  </head>
+  <body class="bg-#252423 text-#e9e8e7 antialiased">
+    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
+      <div class="flex items-center pl-[18px] flex-none">
+        <a
+          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
+          href="/"
+          >notes.dt.in.th</a
+        >
+      </div>
+      <div
+        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
+        id="headerMiddle"
+      >
+        <div class="px-2 flex-none">›</div><div class="truncate"><a title="Recent writings" href="Recent">Recent writings</a></div>
+      </div>
+      <div
+        class="flex items-center px-[18px] flex-none gap-4"
+        id="headerToolbar"
+      ></div>
+    </header>
+    <div class="h-entry">
+      <main class="bg-#353433" id="main">
+        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><h1 id="a-web-based-printing-tool-for-brother-p-touch-series-label-printers" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#a-web-based-printing-tool-for-brother-p-touch-series-label-printers" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>A web-based printing tool for Brother P-touch series label printers</h1><div class="lead" data-v-8c9498c0><p data-v-8c9498c0>The Brother P-touch series of label printers are popular for their ease of use and portability, and Brother has made their <a href="https://download.brother.com/welcome/docp100064/cv_pte550wp750wp710bt_eng_raster_102.pdf" data-v-8c9498c0>printing protocol</a> publicly available, which allows developers to create custom software for these printers.</p></div><div class="notes-callout" data-type="Warning" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><!---->Warning</p><p data-v-8c9498c0>This tool has only been tested with the Brother PT-P710BT printer with tapes of size 18mm. Other printers and tape sizes are not supported. However, <a href="https://github.com/dtinth/p-touch-webusb/blob/main/brother-pt.js" data-v-8c9498c0>the code is open source</a>. If you manage to get it working with other printers or tape sizes, feel free to submit a pull request.</p></div><!----><div style="border-radius:1em;border:2px solid #656463;padding:1em;background:#252423;text-align:center;margin:2em 0;" data-v-8c9498c0><p class="mt-0" data-v-8c9498c0><!--[--> Please connect to the printer to get started. <!--]--></p><button class="btn disabled:opacity-50" disabled data-v-8c9498c0>Loading code</button><!----></div><!----><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div
+          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
+          id="footerContents"
+        >
+          <notes-page-footer></notes-page-footer>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});/* Analyzed bindings: {
+  "printerRef": "setup-maybe-ref",
+  "error": "setup-maybe-ref",
+  "connected": "setup-maybe-ref",
+  "connecting": "setup-maybe-ref",
+  "printing": "setup-maybe-ref",
+  "image": "setup-maybe-ref",
+  "preview": "setup-maybe-ref",
+  "mediaWidth": "setup-maybe-ref",
+  "printWidth": "setup-maybe-ref",
+  "tapeColors": "setup-const",
+  "textColors": "setup-const",
+  "tapeColor": "setup-maybe-ref",
+  "textColor": "setup-maybe-ref",
+  "handleImageFile": "setup-const",
+  "handleImageData": "setup-const",
+  "generatePreview": "setup-const",
+  "toColumns": "setup-const",
+  "onPaste": "setup-const",
+  "selectImage": "setup-const",
+  "btn": "setup-maybe-ref"
+} */
+var _vue = require('vue');
+
+const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
+const _hoisted_1 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<h1 id=\"a-web-based-printing-tool-for-brother-p-touch-series-label-printers\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#a-web-based-printing-tool-for-brother-p-touch-series-label-printers\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>A web-based printing tool for Brother P-touch series label printers</h1><div class=\"lead\" data-v-8c9498c0><p data-v-8c9498c0>The Brother P-touch series of label printers are popular for their ease of use and portability, and Brother has made their <a href=\"https://download.brother.com/welcome/docp100064/cv_pte550wp750wp710bt_eng_raster_102.pdf\" data-v-8c9498c0>printing protocol</a> publicly available, which allows developers to create custom software for these printers.</p></div>", 2)
+const _hoisted_3 = {
+  class: "notes-callout",
+  "data-type": "Warning"
+}
+const _hoisted_4 = { class: "notes-callout__label" }
+const _hoisted_5 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
+  /*#__PURE__*/_vue.createTextVNode.call(void 0, "This tool has only been tested with the Brother PT-P710BT printer with tapes of size 18mm. Other printers and tape sizes are not supported. However, "),
+  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://github.com/dtinth/p-touch-webusb/blob/main/brother-pt.js" }, "the code is open source"),
+  /*#__PURE__*/_vue.createTextVNode.call(void 0, ". If you manage to get it working with other printers or tape sizes, feel free to submit a pull request.")
+], -1 /* HOISTED */))
+const _hoisted_6 = {
+  key: 0,
+  class: "notes-callout",
+  "data-type": "Danger"
+}
+const _hoisted_7 = { class: "notes-callout__label" }
+const _hoisted_8 = { class: "mt-0" }
+const _hoisted_9 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "br", null, null, -1 /* HOISTED */))
+const _hoisted_10 = ["disabled"]
+const _hoisted_11 = {
+  key: 0,
+  class: "mb-0 mt-4 not-prose flex justify-center"
+}
+const _hoisted_12 = ["src"]
+const _hoisted_13 = {
+  key: 1,
+  class: "text-[#8b8685]"
+}
+const _hoisted_14 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", { class: "text-[#8b8685]" }, "Tip:", -1 /* HOISTED */))
+
+
+const __sfc__ = {
+  __name: 'Note',
+  setup(__props) {
+
+  const printerRef = Vue.ref()
+  const error = Vue.ref()
+  const connected = Vue.ref(false)
+  const connecting = Vue.ref(false)
+  const printing = Vue.ref(false)
+  const image = Vue.ref()
+  const preview = Vue.ref()
+  const mediaWidth = Vue.ref('…')
+  const printWidth = Vue.ref('…')
+
+  const tapeColors = [
+    { id: 0x01, color: '#FFFFFF', description: 'White' },
+    { id: 0x02, color: '#A1A1AA', description: 'Other' },
+    { id: 0x03, color: '#F0FDF4', description: 'Clear' },
+    { id: 0x04, color: '#EF4444', description: 'Red' },
+    { id: 0x05, color: '#3B82F6', description: 'Blue' },
+    { id: 0x06, color: '#FACC15', description: 'Yellow' },
+    { id: 0x07, color: '#22C55E', description: 'Green' },
+    { id: 0x08, color: '#171717', description: 'Black' },
+    { id: 0x09, color: '#F0FDF4', description: 'Clear (White text)' },
+    { id: 0x20, color: '#F5F5F5', description: 'Matte White' },
+    { id: 0x21, color: '#F0FDF4', description: 'Matte Clear' },
+    { id: 0x22, color: '#E5E7EB', description: 'Matte Silver' },
+    { id: 0x23, color: '#FEF3C7', description: 'Satin Gold' },
+    { id: 0x24, color: '#F3F4F6', description: 'Satin Silver' },
+    { id: 0x30, color: '#60A5FA', description: 'Blue (D)' },
+    { id: 0x31, color: '#F87171', description: 'Red (D)' },
+    { id: 0x40, color: '#FB923C', description: 'Fluorescent Orange' },
+    { id: 0x41, color: '#FDE047', description: 'Fluorescent Yellow' },
+    { id: 0x50, color: '#EC4899', description: 'Berry Pink (S)' },
+    { id: 0x51, color: '#D1D5DB', description: 'Light Gray (S)' },
+    { id: 0x52, color: '#86EFAC', description: 'Lime Green (S)' },
+    { id: 0x60, color: '#FEF08A', description: 'Yellow (F)' },
+    { id: 0x61, color: '#FCA5A5', description: 'Pink (F)' },
+    { id: 0x62, color: '#93C5FD', description: 'Blue (F)' },
+    { id: 0x70, color: '#FFFFFF', description: 'White (Heat-shrink Tube)' },
+    { id: 0x90, color: '#FFFFFF', description: 'White (Flex. ID)' },
+    { id: 0x91, color: '#FEF08A', description: 'Yellow (Flex. ID)' },
+    { id: 0xF0, color: '#E5E7EB', description: 'Clearning' },
+    { id: 0xF1, color: '#D1D5DB', description: 'Stencil' },
+    { id: 0xFF, color: '#DC2626', description: 'Incompatible' }
+  ];
+
+  const textColors = [
+    { id: 0x01, color: '#FFFFFF', description: 'White' },
+    { id: 0x04, color: '#EF4444', description: 'Red' },
+    { id: 0x05, color: '#3B82F6', description: 'Blue' },
+    { id: 0x08, color: '#171717', description: 'Black' },
+    { id: 0x0A, color: '#FEF3C7', description: 'Gold' },
+    { id: 0x62, color: '#93C5FD', description: 'Blue (F)' },
+    { id: 0xF0, color: '#E5E7EB', description: 'Cleaning' },
+    { id: 0xF1, color: '#D1D5DB', description: 'Stencil' },
+    { id: 0x02, color: '#A1A1AA', description: 'Other' },
+    { id: 0xFF, color: '#DC2626', description: 'Incompatible' }
+  ];
+
+  const tapeColor = Vue.ref(tapeColors[0]);
+  const textColor = Vue.ref(textColors[3]);
+
+  Vue.onMounted(async () => {
+    try {
+      const mod = await import('https://cdn.jsdelivr.net/gh/dtinth/p-touch-webusb@9d5c948c81bcc56e95e46fae947548c754ddba2f/brother-pt.js');
+      printerRef.value = new mod.BrotherPrinter();
+      printerRef.value.onstatus = status => {
+        console.log('status', status);
+      }
+    } catch (error) {
+      console.error(error);
+      error.value = String(error);
+    }
+  })
+
+  function handleImageFile (file) {
+    if (!file) return;
+    if (!file.type.startsWith('image/')) {
+      alert('Expected an image file.');
+      return;
+    }
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+      const imageData = ctx.getImageData(0, 0, img.width, img.height);
+      handleImageData(imageData)
+    }
+    img.onerror = () => {
+      alert('Failed to load the image.');
+    }
+    img.src = URL.createObjectURL(file);
+  }
+
+  function handleImageData(imageData) {
+    const shorter = Math.min(imageData.width, imageData.height);
+    const longer = Math.max(imageData.width, imageData.height);
+    if (longer < 174) {
+      alert('Image must be at least 174 pixels long.');
+      return;
+    }
+    if (shorter !== printWidth.value && shorter !== 128) {
+      alert(`Image must be exactly ${printWidth.value} pixels wide.`);
+      return;
+    }
+    image.value = [...toColumns(imageData, shorter)];
+    preview.value = generatePreview(image.value);
+  }
+
+  function generatePreview(columns) {
+    const length = columns.length;
+    const columnWidth = columns[0].length;
+    const canvas = document.createElement("canvas");
+    canvas.width = length;
+    canvas.height = columnWidth;
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = tapeColor.value.color;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = textColor.value.color;
+    columns.forEach((column, x) => {
+      column.forEach((pixel, y) => {
+        if (pixel) {
+          ctx.fillRect(x, y, 1, 1);
+        }
+      });
+    });
+    return canvas.toDataURL();
+  }
+
+  function* toColumns(imageData, columnWidth) {
+    const readPixel = (x, y) => {
+      const idx = (y * imageData.width + x) * 4;
+      const r = imageData.data[idx];
+      const g = imageData.data[idx + 1];
+      const b = imageData.data[idx + 2];
+      const a = imageData.data[idx + 3] / 255;
+      const luminance = (0.2126 * r + 0.7152 * g + 0.0722 * b) * a + 255 * (1 - a);
+      return luminance < 128 ? 255 : 0;
+    };
+    if (imageData.height === columnWidth) {
+      for (let x = 0; x < imageData.width; x++) {
+        yield Array.from({ length: columnWidth }, (_, y) =>
+          readPixel(x, y)
+        );
+      }
+    } else if (imageData.width === columnWidth) {
+      for (let y = 0; y < imageData.height; y++) {
+        yield Array.from({ length: columnWidth }, (_, x) =>
+          readPixel(columnWidth - x - 1, y)
+        );
+      }
+    } else {
+      throw new Error("Invalid image dimensions");
+    }
+    // Yield 6 blank columns afterwards to work around PT-P710BT's cutting inaccuracy
+    for (let i = 0; i < 6; i++) {
+      yield Array.from({ length: columnWidth }, () => 0);
+    }
+  }
+
+  const onPaste = (event) => {
+    const items = (event.clipboardData || event.originalEvent.clipboardData).items;
+    for (let index in items) {
+      const item = items[index];
+      if (item.kind === 'file') {
+        const blob = item.getAsFile();
+        if (blob.type.startsWith('image/')) {
+          handleImageFile(blob);
+          return
+        }
+      }
+    }
+  };
+  Vue.onMounted(() => {
+    document.addEventListener('paste', onPaste);
+  });
+  Vue.onUnmounted(() => {
+    document.removeEventListener('paste', onPaste);
+  });
+
+  async function selectImage () {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.onchange = async () => {
+      const file = input.files[0];
+      if (!file) return;
+      handleImageFile(file);
+    }
+    input.click();
+  }
+
+  const btn = Vue.computed(() => {
+    const printer = printerRef.value;
+    if (!printer) {
+      return {
+        text: 'Loading code',
+        enabled: false,
+      }
+    }
+    if (connecting.value) {
+      return {
+        text: 'Connecting to printer…',
+        enabled: false,
+      }
+    }
+    if (!connected.value) {
+      return {
+        text: 'Connect to printer',
+        enabled: true,
+        onclick: async () => {
+          connecting.value = true;
+          try {
+            await printer.connect();
+            mediaWidth.value = printer.mediaWidth === 4 ? 3.5 : printer.mediaWidth;
+            printWidth.value = printer.printWidth;
+            tapeColor.value = tapeColors.find((c) => c.id === printer.tapeColor) || tapeColor.value;
+            textColor.value = textColors.find((c) => c.id === printer.textColor) || textColor.value;
+            connected.value = true;
+          } catch (error) {
+            console.error(error);
+            error.value = String(error);
+          } finally {
+            connecting.value = false;
+          }
+        }
+      }
+    }
+    if (printing.value) {
+      return {
+        text: 'Printing…',
+        enabled: false,
+      }
+    }
+    if (!image.value) {
+      return {
+        text: 'Please load an image',
+        enabled: false,
+      }
+    }
+    return {
+      text: 'Print',
+      enabled: true,
+      onclick: async (e) => {
+        printing.value = true;
+        try {
+          await printer._updateStatus();
+          await printer.print(image.value);
+          // await printer.print(image.value, !e.altKey);
+        } catch (error) {
+          console.error(error);
+          error.value = String(error);
+        } finally {
+          printing.value = false;
+        }
+      }
+    }
+  })
+
+return (_ctx, _cache) => {
+  const _component_notes_callout_icon = _vue.resolveComponent.call(void 0, "notes-callout-icon")
+
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
+    _hoisted_1,
+    _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
+      _vue.createElementVNode.call(void 0, "p", _hoisted_4, [
+        _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Warning" }),
+        _vue.createTextVNode.call(void 0, "Warning")
+      ]),
+      _hoisted_5
+    ]),
+    (_vue.unref.call(void 0, error))
+      ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_6, [
+          _vue.createElementVNode.call(void 0, "p", _hoisted_7, [
+            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Danger" }),
+            _vue.createTextVNode.call(void 0, "Error")
+          ]),
+          _vue.createElementVNode.call(void 0, "p", null, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, error)), 1 /* TEXT */)
+        ]))
+      : _vue.createCommentVNode.call(void 0, "v-if", true),
+    _vue.createElementVNode.call(void 0, "div", {
+      style: {"border-radius":"1em","border":"2px solid #656463","padding":"1em","background":"#252423","text-align":"center","margin":"2em 0"},
+      onDragover: _cache[3] || (_cache[3] = _vue.withModifiers.call(void 0, () => {}, ["prevent"])),
+      onDrop: _cache[4] || (_cache[4] = _vue.withModifiers.call(void 0, $event => (handleImageFile($event.dataTransfer.files[0])), ["prevent"]))
+    }, [
+      _vue.createElementVNode.call(void 0, "p", _hoisted_8, [
+        (!_vue.unref.call(void 0, connected))
+          ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, { key: 0 }, [
+              _vue.createTextVNode.call(void 0, " Please connect to the printer to get started. ")
+            ], 64 /* STABLE_FRAGMENT */))
+          : (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, { key: 1 }, [
+              _vue.createTextVNode.call(void 0, " Tape width is " + _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, mediaWidth)) + "mm. Drop, paste, or ", 1 /* TEXT */),
+              _vue.createElementVNode.call(void 0, "a", {
+                href: "javascript://",
+                onClick: selectImage
+              }, "select an image"),
+              _vue.createTextVNode.call(void 0, " to print."),
+              _hoisted_9,
+              _vue.createTextVNode.call(void 0, " Image must be at least 174 pixels long and exactly " + _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, printWidth)) + " pixels wide. ", 1 /* TEXT */)
+            ], 64 /* STABLE_FRAGMENT */))
+      ]),
+      _vue.createElementVNode.call(void 0, "button", {
+        class: "btn disabled:opacity-50",
+        onClick: _cache[0] || (_cache[0] = $event => (_vue.unref.call(void 0, btn).onclick($event))),
+        onPointerdown: _cache[1] || (_cache[1] = (...args) => (_ctx.down && _ctx.down(...args))),
+        onPointerup: _cache[2] || (_cache[2] = (...args) => (_ctx.up && _ctx.up(...args))),
+        disabled: !_vue.unref.call(void 0, btn).enabled
+      }, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, btn).text), 41 /* TEXT, PROPS, NEED_HYDRATION */, _hoisted_10),
+      (_vue.unref.call(void 0, preview))
+        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "p", _hoisted_11, [
+            _vue.createElementVNode.call(void 0, "img", {
+              src: _vue.unref.call(void 0, preview),
+              alt: "Preview",
+              class: "n-preview"
+            }, null, 8 /* PROPS */, _hoisted_12)
+          ]))
+        : _vue.createCommentVNode.call(void 0, "v-if", true)
+    ], 32 /* NEED_HYDRATION */),
+    (_vue.unref.call(void 0, connected) && _vue.unref.call(void 0, image) && false)
+      ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "p", _hoisted_13, [
+          _hoisted_14,
+          _vue.createTextVNode.call(void 0, " Hold down the Alt key while clicking the Print button if there are more labels to print. This will make the printer not cut the tape until the next print job, saving tape. ")
+        ]))
+      : _vue.createCommentVNode.call(void 0, "v-if", true)
+  ], 64 /* STABLE_FRAGMENT */))
+}
+}
+
+}
+__sfc__.__scopeId = "data-v-8c9498c0"
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"title":"A web-based printing tool for Brother P-touch series label printers","public":true};
+</script>
+  </body>
+</html>
