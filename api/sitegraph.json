@@ -2588,6 +2588,10 @@
 				}
 			]
 		}
+	,	"Slip39Wordlist":
+		{	"title": "Random mnemonic code generator based on SLIP39 wordlist"
+		,	"links": []
+		}
 	,	"SoftwareEngineering":
 		{	"title": "Software Engineering (topic)"
 		,	"links":
@@ -2708,6 +2712,8 @@
 		{	"title": "Tools (topic)"
 		,	"links":
 			[	{	"link": "PianoMajorScaleTrainer"
+				}
+			,	{	"link": "Slip39Wordlist"
 				}
 			,	{	"link": "OklabVisualizer"
 				}

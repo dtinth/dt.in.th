@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html data-precompiled=true lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random mnemonic code generator based on SLIP39 wordlist | notes.dt.in.th</title><meta property="og:title" content="Random mnemonic code generator based on SLIP39 wordlist" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/Slip39Wordlist" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://notes.dt.in.th/Slip39Wordlist" data-source="note"><style id="note-styles">/* layer: default */
+.isolate[data-v-8c9498c0]{isolation:isolate;}
+.flex[data-v-8c9498c0]{display:flex;}
+.transform[data-v-8c9498c0]{transform:translateX(var(--un-translate-x)) translateY(var(--un-translate-y)) translateZ(var(--un-translate-z)) rotate(var(--un-rotate)) rotateX(var(--un-rotate-x)) rotateY(var(--un-rotate-y)) rotateZ(var(--un-rotate-z)) skewX(var(--un-skew-x)) skewY(var(--un-skew-y)) scaleX(var(--un-scale-x)) scaleY(var(--un-scale-y)) scaleZ(var(--un-scale-z));}
+.border[data-v-8c9498c0]{border-width:1px;}
+.shadow[data-v-8c9498c0]{--un-shadow:var(--un-shadow-inset) 0 1px 3px 0 var(--un-shadow-color, rgb(0 0 0 / 0.1)),var(--un-shadow-inset) 0 1px 2px -1px var(--un-shadow-color, rgb(0 0 0 / 0.1));box-shadow:var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);}
+.filter[data-v-8c9498c0]{filter:var(--un-blur) var(--un-brightness) var(--un-contrast) var(--un-drop-shadow) var(--un-grayscale) var(--un-hue-rotate) var(--un-invert) var(--un-saturate) var(--un-sepia);}</style>
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
+      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
+      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" crossorigin src="/runtime/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
+    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+  </head>
+  <body class="bg-#252423 text-#e9e8e7 antialiased">
+    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
+      <div class="flex items-center pl-[18px] flex-none">
+        <a
+          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
+          href="/"
+          >notes.dt.in.th</a
+        >
+      </div>
+      <div
+        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
+        id="headerMiddle"
+      >
+        <div class="px-2 flex-none">›</div><div class="truncate"><a title="Tools (topic)" href="Tools">Tools</a></div>
+      </div>
+      <div
+        class="flex items-center px-[18px] flex-none gap-4"
+        id="headerToolbar"
+      ></div>
+    </header>
+    <div class="h-entry">
+      <main class="bg-#353433" id="main">
+        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><div class="lead" data-v-8c9498c0><p data-v-8c9498c0>Random mnemonic code generator using the <a href="https://github.com/satoshilabs/slips/blob/master/slip-0039.md#wordlist" data-v-8c9498c0>SLIP39 wordlist</a>.</p></div><div style="border-radius:1em;border:2px solid #656463;padding:1em;background:#252423;text-align:center;margin:2em 0;" data-v-8c9498c0><div style="font-size:2em;margin:1rem 0;" data-v-8c9498c0>… <div style="font-size:1rem;color:#8b8685;" data-v-8c9498c0>seed: <button title="Click to set a manual seed" data-v-8c9498c0>…</button></div></div><div style="display:flex;justify-content:center;gap:0.5em;" data-v-8c9498c0><button class="btn" data-v-8c9498c0>Generate</button><select class="form-control" style="flex:0 0 8em;" data-v-8c9498c0><option value="1" data-v-8c9498c0>1 word</option><option value="2" data-v-8c9498c0 selected>2 words</option><option value="3" data-v-8c9498c0>3 words</option><option value="4" data-v-8c9498c0>4 words</option></select></div><p style="color:#8b8685;" data-v-8c9498c0>20 bits of entropy<br data-v-8c9498c0> 1048576 possible combinations</p></div><p data-v-8c9498c0>The SLIP39 wordlist, originally designed for <a href="https://github.com/satoshilabs/slips/blob/master/slip-0039.md#abstract" data-v-8c9498c0>sharing ‘master secrets’</a> in a human-friendly way, consists of 1024 common words. Each word is 4–8 letters long, with unique 4-letter prefixes to prevent ambiguity, designed to be easily distinguished from each other, both in spelling and pronunciation. Each randomly selected word contributes 10 bits of entropy to the generated phrase.</p><p style="font-size:0.8em;color:#8b8685;" data-v-8c9498c0><strong style="color:inherit;" data-v-8c9498c0>The words in the word list are:</strong> academic acid acne acquire acrobat activity actress adapt adequate adjust admit adorn adult advance advocate afraid again agency agree aide aircraft airline airport ajar alarm album alcohol alien alive alpha already alto aluminum always amazing ambition amount amuse analysis anatomy ancestor ancient angel angry animal answer antenna anxiety apart aquatic arcade arena argue armed artist artwork aspect auction august aunt average aviation avoid award away axis axle beam beard beaver become bedroom behavior being believe belong benefit best beyond bike biology birthday bishop black blanket blessing blimp blind blue body bolt boring born both boundary bracelet branch brave breathe briefing broken brother browser bucket budget building bulb bulge bumpy bundle burden burning busy buyer cage calcium camera campus canyon capacity capital capture carbon cards careful cargo carpet carve category cause ceiling center ceramic champion change charity check chemical chest chew chubby cinema civil class clay cleanup client climate clinic clock clogs closet clothes club cluster coal coastal coding column company corner costume counter course cover cowboy cradle craft crazy credit cricket criminal crisis critical crowd crucial crunch crush crystal cubic cultural curious curly custody cylinder daisy damage dance darkness database daughter deadline deal debris debut decent decision declare decorate decrease deliver demand density deny depart depend depict deploy describe desert desire desktop destroy detailed detect device devote diagnose dictate diet dilemma diminish dining diploma disaster discuss disease dish dismiss display distance dive divorce document domain domestic dominant dough downtown dragon dramatic dream dress drift drink drove drug dryer duckling duke duration dwarf dynamic early earth easel easy echo eclipse ecology edge editor educate either elbow elder election elegant element elephant elevator elite else email emerald emission emperor emphasis employer empty ending endless endorse enemy energy enforce engage enjoy enlarge entrance envelope envy epidemic episode equation equip eraser erode escape estate estimate evaluate evening evidence evil evoke exact example exceed exchange exclude excuse execute exercise exhaust exotic expand expect explain express extend extra eyebrow facility fact failure faint fake false family famous fancy fangs fantasy fatal fatigue favorite fawn fiber fiction filter finance findings finger firefly firm fiscal fishing fitness flame flash flavor flea flexible flip float floral fluff focus forbid force forecast forget formal fortune forward founder fraction fragment frequent freshman friar fridge friendly frost froth frozen fumes funding furl fused galaxy game garbage garden garlic gasoline gather general genius genre genuine geology gesture glad glance glasses glen glimpse goat golden graduate grant grasp gravity gray greatest grief grill grin grocery gross group grownup grumpy guard guest guilt guitar gums hairy hamster hand hanger harvest have havoc hawk hazard headset health hearing heat helpful herald herd hesitate hobo holiday holy home hormone hospital hour huge human humidity hunting husband hush husky hybrid idea identify idle image impact imply improve impulse include income increase index indicate industry infant inform inherit injury inmate insect inside install intend intimate invasion involve iris island isolate item ivory jacket jerky jewelry join judicial juice jump junction junior junk jury justice kernel keyboard kidney kind kitchen knife knit laden ladle ladybug lair lamp language large laser laundry lawsuit leader leaf learn leaves lecture legal legend legs lend length level liberty library license lift likely lilac lily lips liquid listen literary living lizard loan lobe location losing loud loyalty luck lunar lunch lungs luxury lying lyrics machine magazine maiden mailman main makeup making mama manager mandate mansion manual marathon march market marvel mason material math maximum mayor meaning medal medical member memory mental merchant merit method metric midst mild military mineral minister miracle mixed mixture mobile modern modify moisture moment morning mortgage mother mountain mouse move much mule multiple muscle museum music mustang nail national necklace negative nervous network news nuclear numb numerous nylon oasis obesity object observe obtain ocean often olympic omit oral orange orbit order ordinary organize ounce oven overall owner paces pacific package paid painting pajamas pancake pants papa paper parcel parking party patent patrol payment payroll peaceful peanut peasant pecan penalty pencil percent perfect permit petition phantom pharmacy photo phrase physics pickup picture piece pile pink pipeline pistol pitch plains plan plastic platform playoff pleasure plot plunge practice prayer preach predator pregnant premium prepare presence prevent priest primary priority prisoner privacy prize problem process profile program promise prospect provide prune public pulse pumps punish puny pupal purchase purple python quantity quarter quick quiet race racism radar railroad rainbow raisin random ranked rapids raspy reaction realize rebound rebuild recall receiver recover regret regular reject relate remember remind remove render repair repeat replace require rescue research resident response result retailer retreat reunion revenue review reward rhyme rhythm rich rival river robin rocky romantic romp roster round royal ruin ruler rumor sack safari salary salon salt satisfy satoshi saver says scandal scared scatter scene scholar science scout scramble screw script scroll seafood season secret security segment senior shadow shaft shame shaped sharp shelter sheriff short should shrimp sidewalk silent silver similar simple single sister skin skunk slap slavery sled slice slim slow slush smart smear smell smirk smith smoking smug snake snapshot sniff society software soldier solution soul source space spark speak species spelling spend spew spider spill spine spirit spit spray sprinkle square squeeze stadium staff standard starting station stay steady step stick stilt story strategy strike style subject submit sugar suitable sunlight superior surface surprise survive sweater swimming swing switch symbolic sympathy syndrome system tackle tactics tadpole talent task taste taught taxi teacher teammate teaspoon temple tenant tendency tension terminal testify texture thank that theater theory therapy thorn threaten thumb thunder ticket tidy timber timely ting tofu together tolerate total toxic tracks traffic training transfer trash traveler treat trend trial tricycle trip triumph trouble true trust twice twin type typical ugly ultimate umbrella uncover undergo unfair unfold unhappy union universe unkind unknown unusual unwrap upgrade upstairs username usher usual valid valuable vampire vanish various vegan velvet venture verdict verify very veteran vexed victim video view vintage violence viral visitor visual vitamins vocal voice volume voter voting walnut warmth warn watch wavy wealthy weapon webcam welcome welfare western width wildlife window wine wireless wisdom withdraw wits wolf woman work worthy wrap wrist writing wrote year yelp yield yoga zero</p><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div
+          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
+          id="footerContents"
+        >
+          <notes-page-footer></notes-page-footer>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});/* Analyzed bindings: {
+  "wordlist": "setup-maybe-ref",
+  "result": "setup-maybe-ref",
+  "seed": "setup-maybe-ref",
+  "style": "setup-maybe-ref",
+  "resultLength": "setup-maybe-ref",
+  "generateIndices": "setup-const",
+  "handleIndexList": "setup-const",
+  "display": "setup-const",
+  "randomize": "setup-const",
+  "setSeed": "setup-const",
+  "randomizeFrame": "setup-const",
+  "clear": "setup-let",
+  "down": "setup-const",
+  "up": "setup-const"
+} */
+var _vue = require('vue');
+
+const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
+const _hoisted_1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { class: "lead" }, [
+  /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
+    /*#__PURE__*/_vue.createTextVNode.call(void 0, "Random mnemonic code generator using the "),
+    /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://github.com/satoshilabs/slips/blob/master/slip-0039.md#wordlist" }, "SLIP39 wordlist"),
+    /*#__PURE__*/_vue.createTextVNode.call(void 0, ".")
+  ])
+], -1 /* HOISTED */))
+const _hoisted_2 = { style: {"font-size":"2em","margin":"1rem 0"} }
+const _hoisted_3 = { style: {"font-size":"1rem","color":"#8b8685"} }
+const _hoisted_4 = { style: {"display":"flex","justify-content":"center","gap":"0.5em"} }
+const _hoisted_5 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "option", { value: "1" }, "1 word", -1 /* HOISTED */))
+const _hoisted_6 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "option", { value: "2" }, "2 words", -1 /* HOISTED */))
+const _hoisted_7 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "option", { value: "3" }, "3 words", -1 /* HOISTED */))
+const _hoisted_8 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "option", { value: "4" }, "4 words", -1 /* HOISTED */))
+const _hoisted_9 = [
+  _hoisted_5,
+  _hoisted_6,
+  _hoisted_7,
+  _hoisted_8
+]
+const _hoisted_10 = { style: {"color":"#8b8685"} }
+const _hoisted_11 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "br", null, null, -1 /* HOISTED */))
+const _hoisted_12 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
+  /*#__PURE__*/_vue.createTextVNode.call(void 0, "The SLIP39 wordlist, originally designed for "),
+  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://github.com/satoshilabs/slips/blob/master/slip-0039.md#abstract" }, "sharing ‘master secrets’"),
+  /*#__PURE__*/_vue.createTextVNode.call(void 0, " in a human-friendly way, consists of 1024 common words. Each word is 4–8 letters long, with unique 4-letter prefixes to prevent ambiguity, designed to be easily distinguished from each other, both in spelling and pronunciation. Each randomly selected word contributes 10 bits of entropy to the generated phrase.")
+], -1 /* HOISTED */))
+const _hoisted_13 = { style: {"font-size":"0.8em","color":"#8b8685"} }
+const _hoisted_14 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", { style: {"color":"inherit"} }, "The words in the word list are:", -1 /* HOISTED */))
+
+
+const __sfc__ = {
+  __name: 'Note',
+  setup(__props) {
+
+  const wordlist = `
+  academic acid acne acquire acrobat activity actress adapt adequate adjust admit
+  adorn adult advance advocate afraid again agency agree aide aircraft airline
+  airport ajar alarm album alcohol alien alive alpha already alto aluminum always
+  amazing ambition amount amuse analysis anatomy ancestor ancient angel angry
+  animal answer antenna anxiety apart aquatic arcade arena argue armed artist
+  artwork aspect auction august aunt average aviation avoid award away axis axle
+  beam beard beaver become bedroom behavior being believe belong benefit best
+  beyond bike biology birthday bishop black blanket blessing blimp blind blue
+  body bolt boring born both boundary bracelet branch brave breathe briefing
+  broken brother browser bucket budget building bulb bulge bumpy bundle burden
+  burning busy buyer cage calcium camera campus canyon capacity capital capture
+  carbon cards careful cargo carpet carve category cause ceiling center ceramic
+  champion change charity check chemical chest chew chubby cinema civil class
+  clay cleanup client climate clinic clock clogs closet clothes club cluster coal
+  coastal coding column company corner costume counter course cover cowboy cradle
+  craft crazy credit cricket criminal crisis critical crowd crucial crunch crush
+  crystal cubic cultural curious curly custody cylinder daisy damage dance
+  darkness database daughter deadline deal debris debut decent decision declare
+  decorate decrease deliver demand density deny depart depend depict deploy
+  describe desert desire desktop destroy detailed detect device devote diagnose
+  dictate diet dilemma diminish dining diploma disaster discuss disease dish
+  dismiss display distance dive divorce document domain domestic dominant dough
+  downtown dragon dramatic dream dress drift drink drove drug dryer duckling duke
+  duration dwarf dynamic early earth easel easy echo eclipse ecology edge editor
+  educate either elbow elder election elegant element elephant elevator elite
+  else email emerald emission emperor emphasis employer empty ending endless
+  endorse enemy energy enforce engage enjoy enlarge entrance envelope envy
+  epidemic episode equation equip eraser erode escape estate estimate evaluate
+  evening evidence evil evoke exact example exceed exchange exclude excuse
+  execute exercise exhaust exotic expand expect explain express extend extra
+  eyebrow facility fact failure faint fake false family famous fancy fangs
+  fantasy fatal fatigue favorite fawn fiber fiction filter finance findings
+  finger firefly firm fiscal fishing fitness flame flash flavor flea flexible
+  flip float floral fluff focus forbid force forecast forget formal fortune
+  forward founder fraction fragment frequent freshman friar fridge friendly frost
+  froth frozen fumes funding furl fused galaxy game garbage garden garlic
+  gasoline gather general genius genre genuine geology gesture glad glance
+  glasses glen glimpse goat golden graduate grant grasp gravity gray greatest
+  grief grill grin grocery gross group grownup grumpy guard guest guilt guitar
+  gums hairy hamster hand hanger harvest have havoc hawk hazard headset health
+  hearing heat helpful herald herd hesitate hobo holiday holy home hormone
+  hospital hour huge human humidity hunting husband hush husky hybrid idea
+  identify idle image impact imply improve impulse include income increase index
+  indicate industry infant inform inherit injury inmate insect inside install
+  intend intimate invasion involve iris island isolate item ivory jacket jerky
+  jewelry join judicial juice jump junction junior junk jury justice kernel
+  keyboard kidney kind kitchen knife knit laden ladle ladybug lair lamp language
+  large laser laundry lawsuit leader leaf learn leaves lecture legal legend legs
+  lend length level liberty library license lift likely lilac lily lips liquid
+  listen literary living lizard loan lobe location losing loud loyalty luck lunar
+  lunch lungs luxury lying lyrics machine magazine maiden mailman main makeup
+  making mama manager mandate mansion manual marathon march market marvel mason
+  material math maximum mayor meaning medal medical member memory mental merchant
+  merit method metric midst mild military mineral minister miracle mixed mixture
+  mobile modern modify moisture moment morning mortgage mother mountain mouse
+  move much mule multiple muscle museum music mustang nail national necklace
+  negative nervous network news nuclear numb numerous nylon oasis obesity object
+  observe obtain ocean often olympic omit oral orange orbit order ordinary
+  organize ounce oven overall owner paces pacific package paid painting pajamas
+  pancake pants papa paper parcel parking party patent patrol payment payroll
+  peaceful peanut peasant pecan penalty pencil percent perfect permit petition
+  phantom pharmacy photo phrase physics pickup picture piece pile pink pipeline
+  pistol pitch plains plan plastic platform playoff pleasure plot plunge practice
+  prayer preach predator pregnant premium prepare presence prevent priest primary
+  priority prisoner privacy prize problem process profile program promise
+  prospect provide prune public pulse pumps punish puny pupal purchase purple
+  python quantity quarter quick quiet race racism radar railroad rainbow raisin
+  random ranked rapids raspy reaction realize rebound rebuild recall receiver
+  recover regret regular reject relate remember remind remove render repair
+  repeat replace require rescue research resident response result retailer
+  retreat reunion revenue review reward rhyme rhythm rich rival river robin rocky
+  romantic romp roster round royal ruin ruler rumor sack safari salary salon salt
+  satisfy satoshi saver says scandal scared scatter scene scholar science scout
+  scramble screw script scroll seafood season secret security segment senior
+  shadow shaft shame shaped sharp shelter sheriff short should shrimp sidewalk
+  silent silver similar simple single sister skin skunk slap slavery sled slice
+  slim slow slush smart smear smell smirk smith smoking smug snake snapshot sniff
+  society software soldier solution soul source space spark speak species
+  spelling spend spew spider spill spine spirit spit spray sprinkle square
+  squeeze stadium staff standard starting station stay steady step stick stilt
+  story strategy strike style subject submit sugar suitable sunlight superior
+  surface surprise survive sweater swimming swing switch symbolic sympathy
+  syndrome system tackle tactics tadpole talent task taste taught taxi teacher
+  teammate teaspoon temple tenant tendency tension terminal testify texture thank
+  that theater theory therapy thorn threaten thumb thunder ticket tidy timber
+  timely ting tofu together tolerate total toxic tracks traffic training transfer
+  trash traveler treat trend trial tricycle trip triumph trouble true trust twice
+  twin type typical ugly ultimate umbrella uncover undergo unfair unfold unhappy
+  union universe unkind unknown unusual unwrap upgrade upstairs username usher
+  usual valid valuable vampire vanish various vegan velvet venture verdict verify
+  very veteran vexed victim video view vintage violence viral visitor visual
+  vitamins vocal voice volume voter voting walnut warmth warn watch wavy wealthy
+  weapon webcam welcome welfare western width wildlife window wine wireless
+  wisdom withdraw wits wolf woman work worthy wrap wrist writing wrote year yelp
+  yield yoga zero
+  `.trim().split(/\s+/)
+
+  const result = Vue.ref('…')
+  const seed = Vue.ref('…')
+  const style = Vue.ref({})
+  const resultLength = Vue.ref(2)
+  const generateIndices = (n) => {
+    return Array.from({ length: n }, () => {
+      return crypto.getRandomValues(new Uint32Array(1))[0] % wordlist.length
+    })
+  }
+  const handleIndexList = (indices) => {
+    const words = indices.map((index) => wordlist[index])
+    let seed = 0
+    let seedBits = 0
+    for (const index of indices) {
+      seed *= wordlist.length
+      seed += index
+      seedBits += Math.ceil(Math.log2(wordlist.length))
+    }
+    display({ words: words.join(' '), seedBits, seed })
+  }
+  const display = (generated) => {
+    const seedDigits = Math.ceil(generated.seedBits / 4)
+    result.value = generated.words
+    seed.value = generated.seed.toString(16).padStart(seedDigits, '0')
+  }
+  const randomize = () => {
+    const generated = generateIndices(+resultLength.value)
+    handleIndexList(generated)
+  }
+  const setSeed = () => {
+    const seedInput = prompt('Enter seed (hexadecimal):', seed.value)
+    let seedValue = parseInt(seedInput, 16)
+    if (seedValue < 0 || isNaN(seedValue)) {
+      alert('Seed must be a non-negative integer.')
+      return
+    }
+    const indices = []
+    while (seedValue != 0) {
+      indices.unshift(seedValue % wordlist.length)
+      seedValue = Math.floor(seedValue / wordlist.length)
+    }
+    handleIndexList(indices.slice(0, +resultLength.value))
+  }
+  const randomizeFrame = () => {
+    randomize()
+    const r = () => Math.round(Math.random() * 4 - 2)
+    style.value = { transform: `translate(${r()}px, ${r()}px)`, }
+  }
+  let clear = null
+  const down = (e) => {
+    if (clear) clear()
+    const interval = setInterval(() => randomizeFrame(), 33)
+    clear = () => clearInterval(interval)
+  }
+  const up = (e) => {
+    if (clear) clear()
+    clear = null
+    style.value = { transform: `translate(0, 0)`, }
+  }
+  Vue.onMounted(() => {
+    randomize()
+  })
+
+return (_ctx, _cache) => {
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
+    _hoisted_1,
+    _vue.createElementVNode.call(void 0, "div", {
+      style: _vue.normalizeStyle.call(void 0, [{"border-radius":"1em","border":"2px solid #656463","padding":"1em","background":"#252423","text-align":"center","margin":"2em 0"}, _vue.unref.call(void 0, style)])
+    }, [
+      _vue.createElementVNode.call(void 0, "div", _hoisted_2, [
+        _vue.createTextVNode.call(void 0, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, result)) + " ", 1 /* TEXT */),
+        _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
+          _vue.createTextVNode.call(void 0, "seed: "),
+          _vue.createElementVNode.call(void 0, "button", {
+            onClick: setSeed,
+            title: "Click to set a manual seed"
+          }, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, seed)), 1 /* TEXT */)
+        ])
+      ]),
+      _vue.createElementVNode.call(void 0, "div", _hoisted_4, [
+        _vue.createElementVNode.call(void 0, "button", {
+          class: "btn",
+          onClick: randomize,
+          onPointerdown: down,
+          onPointerup: up
+        }, "Generate", 32 /* NEED_HYDRATION */),
+        _vue.withDirectives.call(void 0, _vue.createElementVNode.call(void 0, "select", {
+          class: "form-control",
+          style: {"flex":"0 0 8em"},
+          "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (_vue.isRef.call(void 0, resultLength) ? (resultLength).value = $event : null)),
+          onChange: randomize
+        }, [..._hoisted_9], 544 /* NEED_HYDRATION, NEED_PATCH */), [
+          [_vue.vModelSelect, _vue.unref.call(void 0, resultLength)]
+        ])
+      ]),
+      _vue.createElementVNode.call(void 0, "p", _hoisted_10, [
+        _vue.createTextVNode.call(void 0, _vue.toDisplayString.call(void 0, 10 * (+_vue.unref.call(void 0, resultLength))) + " bits of entropy", 1 /* TEXT */),
+        _hoisted_11,
+        _vue.createTextVNode.call(void 0, " " + _vue.toDisplayString.call(void 0, 1024 ** (+_vue.unref.call(void 0, resultLength))) + " possible " + _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, resultLength) == 1 ? 'words' : 'combinations'), 1 /* TEXT */)
+      ])
+    ], 4 /* STYLE */),
+    _hoisted_12,
+    _vue.createElementVNode.call(void 0, "p", _hoisted_13, [
+      _hoisted_14,
+      _vue.createTextVNode.call(void 0, " " + _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, wordlist).join(' ')), 1 /* TEXT */)
+    ])
+  ], 64 /* STABLE_FRAGMENT */))
+}
+}
+
+}
+__sfc__.__scopeId = "data-v-8c9498c0"
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"title":"Random mnemonic code generator based on SLIP39 wordlist","public":true};
+</script>
+  </body>
+</html>

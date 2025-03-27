@@ -390,7 +390,7 @@
 		}
 	,	"BrotherPTWebUSB":
 		{	"title": "A web-based printing tool for Brother P-touch series label printers"
-		,	"parent": "Recent"
+		,	"parent": "Tools"
 		}
 	,	"Bun":
 		{	"title": "Bun (topic)"
@@ -1102,6 +1102,10 @@
 	,	"ShortLivedMutability":
 		{	"title": "Short-lived mutability"
 		,	"parent": "JavaScript"
+		}
+	,	"Slip39Wordlist":
+		{	"title": "Random mnemonic code generator based on SLIP39 wordlist"
+		,	"parent": "Tools"
 		}
 	,	"SoftwareEngineering":
 		{	"title": "Software Engineering (topic)"

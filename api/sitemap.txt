@@ -274,6 +274,7 @@ https://notes.dt.in.th/SemgrepInJavaScriptProjects
 https://notes.dt.in.th/SemgrepSetup
 https://notes.dt.in.th/Shell
 https://notes.dt.in.th/ShortLivedMutability
+https://notes.dt.in.th/Slip39Wordlist
 https://notes.dt.in.th/SoftwareEngineering
 https://notes.dt.in.th/StableLibSnippets
 https://notes.dt.in.th/StructuredProcrastination
