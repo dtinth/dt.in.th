@@ -869,6 +869,8 @@
 				}
 			,	{	"link": "CodespacesCloudflared"
 				}
+			,	{	"link": "InstallGcloudCliOnCodespaces"
+				}
 			]
 		}
 	,	"CodespacesCloudflared":
@@ -1349,6 +1351,8 @@
 				}
 			,	{	"link": "InvokingGoogleCloudRunFromCloudflareWorkers"
 				}
+			,	{	"link": "InstallGcloudCliOnCodespaces"
+				}
 			,	{	"link": "NodeGoogleAPIsServiceAccount"
 				}
 			,	{	"link": "20220817T202304Z1234"
@@ -1521,6 +1525,10 @@
 			,	{	"link": "OpenWebUILiteLLM"
 				}
 			]
+		}
+	,	"InstallGcloudCliOnCodespaces":
+		{	"title": "Installing Google Cloud CLI on GitHub Codespaces"
+		,	"links": []
 		}
 	,	"InteractiveFootnotes":
 		{	"title": "Interactive footnotes"

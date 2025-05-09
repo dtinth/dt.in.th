@@ -5,8 +5,19 @@
 		<description><![CDATA[Thai Pangsakulyanont’s writings]]></description>
 		<link>https://dt.in.th</link>
 		<generator>RSS for Node</generator>
-		<lastBuildDate>Thu, 27 Mar 2025 15:39:49 GMT</lastBuildDate>
+		<lastBuildDate>Fri, 09 May 2025 09:36:22 GMT</lastBuildDate>
 		<atom:link href="https://notes.dt.in.th/api/recent.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title><![CDATA[Installing Google Cloud CLI on GitHub Codespaces]]></title>
+			<description
+			><![CDATA[<a href="https://notes.dt.in.th/InstallGcloudCliOnCodespaces">[Read on notes.dt.in.th]</a><!--[--><h1 id="installing-google-cloud-cli-on-github-codespaces"><a aria-hidden="true" tabindex="-1" href="#installing-google-cloud-cli-on-github-codespaces"><span class="icon icon-link"></span></a>Installing Google Cloud CLI on GitHub Codespaces</h1><p>Based on documentation in <a href="https://cloud.google.com/sdk/docs/install#deb">https://cloud.google.com/sdk/docs/install#deb</a> as of 2025-05-07.</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#B392F0;">sudo</span><span style="color:#9ECBFF;"> apt-get</span><span style="color:#9ECBFF;"> update</span><span style="color:#E1E4E8;"> &amp;&amp; </span><span style="color:#79B8FF;">\</span></span>
+<span class="line"><span style="color:#B392F0;">  curl</span><span style="color:#9ECBFF;"> https://packages.cloud.google.com/apt/doc/apt-key.gpg</span><span style="color:#F97583;"> |</span><span style="color:#B392F0;"> sudo</span><span style="color:#9ECBFF;"> gpg</span><span style="color:#79B8FF;"> --dearmor</span><span style="color:#79B8FF;"> -o</span><span style="color:#9ECBFF;"> /usr/share/keyrings/cloud.google.gpg</span><span style="color:#E1E4E8;"> &amp;&amp; </span><span style="color:#79B8FF;">\</span></span>
+<span class="line"><span style="color:#79B8FF;">  echo</span><span style="color:#9ECBFF;"> &quot;deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main&quot;</span><span style="color:#F97583;"> |</span><span style="color:#B392F0;"> sudo</span><span style="color:#9ECBFF;"> tee</span><span style="color:#79B8FF;"> -a</span><span style="color:#9ECBFF;"> /etc/apt/sources.list.d/google-cloud-sdk.list</span><span style="color:#E1E4E8;"> &amp;&amp; </span><span style="color:#79B8FF;">\</span></span>
+<span class="line"><span style="color:#B392F0;">  sudo</span><span style="color:#9ECBFF;"> apt-get</span><span style="color:#9ECBFF;"> update</span><span style="color:#E1E4E8;"> &amp;&amp; </span><span style="color:#B392F0;">sudo</span><span style="color:#9ECBFF;"> apt-get</span><span style="color:#9ECBFF;"> install</span><span style="color:#9ECBFF;"> google-cloud-cli</span></span></code></pre><!--]-->]]></description>
+			<link>https://notes.dt.in.th/InstallGcloudCliOnCodespaces</link>
+			<guid isPermaLink="true">https://notes.dt.in.th/InstallGcloudCliOnCodespaces</guid>
+			<pubDate>Fri, 09 May 2025 00:00:00 GMT</pubDate>
+		</item>
 		<item>
 			<title><![CDATA[Random mnemonic code generator based on SLIP39 wordlist]]></title>
 			<description
@@ -329,34 +340,6 @@ XXXXXXXX XXXXXXXX XXXXXX00
 			<link>https://notes.dt.in.th/PasteQR</link>
 			<guid isPermaLink="true">https://notes.dt.in.th/PasteQR</guid>
 			<pubDate>Wed, 11 Sep 2024 00:00:00 GMT</pubDate>
-		</item>
-		<item>
-			<title><![CDATA[Using Elysia in Node.js]]></title>
-			<description
-			><![CDATA[<a href="https://notes.dt.in.th/ElysiaNode">[Read on notes.dt.in.th]</a><!--[--><h1 id="using-elysia-in-nodejs"><a aria-hidden="true" tabindex="-1" href="#using-elysia-in-nodejs"><span class="icon icon-link"></span></a>Using <a href="Elysia">Elysia</a> in <a href="Nodejs">Node.js</a></h1><p><strong>tl;dr:</strong> Mount Elysia onto Hono and run using <code>tsx</code>. Also <a href="https://stackblitz.com/edit/elysia">available on StackBlitz</a>.</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#F97583;">import</span><span style="color:#E1E4E8;"> { Elysia, t } </span><span style="color:#F97583;">from</span><span style="color:#9ECBFF;"> &#39;elysia&#39;</span></span>
-<span class="line"><span style="color:#F97583;">import</span><span style="color:#E1E4E8;"> { serve } </span><span style="color:#F97583;">from</span><span style="color:#9ECBFF;"> &#39;@hono/node-server&#39;</span></span>
-<span class="line"><span style="color:#F97583;">import</span><span style="color:#E1E4E8;"> { Hono } </span><span style="color:#F97583;">from</span><span style="color:#9ECBFF;"> &#39;hono&#39;</span></span>
-<span class="line"><span style="color:#F97583;">import</span><span style="color:#E1E4E8;"> { logger } </span><span style="color:#F97583;">from</span><span style="color:#9ECBFF;"> &#39;hono/logger&#39;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583;">const</span><span style="color:#79B8FF;"> app</span><span style="color:#F97583;"> =</span><span style="color:#F97583;"> new</span><span style="color:#B392F0;"> Elysia</span><span style="color:#E1E4E8;">()</span></span>
-<span class="line"><span style="color:#E1E4E8;">  .</span><span style="color:#B392F0;">get</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;/&#39;</span><span style="color:#E1E4E8;">, </span><span style="color:#9ECBFF;">&#39;Hello Elysia&#39;</span><span style="color:#E1E4E8;">)</span></span>
-<span class="line"><span style="color:#E1E4E8;">  .</span><span style="color:#B392F0;">get</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;/user/:id&#39;</span><span style="color:#E1E4E8;">, ({ </span><span style="color:#FFAB70;">params</span><span style="color:#E1E4E8;">: { </span><span style="color:#FFAB70;">id</span><span style="color:#E1E4E8;"> } }) </span><span style="color:#F97583;">=&gt;</span><span style="color:#E1E4E8;"> id)</span></span>
-<span class="line"><span style="color:#E1E4E8;">  .</span><span style="color:#B392F0;">post</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;/form&#39;</span><span style="color:#E1E4E8;">, ({ </span><span style="color:#FFAB70;">body</span><span style="color:#E1E4E8;"> }) </span><span style="color:#F97583;">=&gt;</span><span style="color:#E1E4E8;"> body)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#B392F0;">serve</span><span style="color:#E1E4E8;">(</span></span>
-<span class="line"><span style="color:#E1E4E8;">  {</span></span>
-<span class="line"><span style="color:#E1E4E8;">    fetch: </span><span style="color:#F97583;">new</span><span style="color:#B392F0;"> Hono</span><span style="color:#E1E4E8;">().</span><span style="color:#B392F0;">use</span><span style="color:#E1E4E8;">(</span><span style="color:#B392F0;">logger</span><span style="color:#E1E4E8;">()).</span><span style="color:#B392F0;">mount</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;/&#39;</span><span style="color:#E1E4E8;">, app.fetch).fetch,</span></span>
-<span class="line"><span style="color:#E1E4E8;">    port: </span><span style="color:#F97583;">+</span><span style="color:#E1E4E8;">process.env.</span><span style="color:#79B8FF;">PORT</span><span style="color:#F97583;">!</span><span style="color:#F97583;"> ||</span><span style="color:#79B8FF;"> 3000</span><span style="color:#E1E4E8;">,</span></span>
-<span class="line"><span style="color:#E1E4E8;">  },</span></span>
-<span class="line"><span style="color:#E1E4E8;">  (</span><span style="color:#FFAB70;">info</span><span style="color:#E1E4E8;">) </span><span style="color:#F97583;">=&gt;</span><span style="color:#E1E4E8;"> console.</span><span style="color:#B392F0;">log</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">`http://${</span><span style="color:#E1E4E8;">info</span><span style="color:#9ECBFF;">.</span><span style="color:#E1E4E8;">address</span><span style="color:#9ECBFF;">}:${</span><span style="color:#E1E4E8;">info</span><span style="color:#9ECBFF;">.</span><span style="color:#E1E4E8;">port</span><span style="color:#9ECBFF;">}`</span><span style="color:#E1E4E8;">)</span></span>
-<span class="line"><span style="color:#E1E4E8;">)</span></span></code></pre><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#6A737D;"># Run the app</span></span>
-<span class="line"><span style="color:#B392F0;">tsx</span><span style="color:#9ECBFF;"> app.ts</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6A737D;"># Run the app in watch mode, restarting on file changes</span></span>
-<span class="line"><span style="color:#B392F0;">tsx</span><span style="color:#9ECBFF;"> watch</span><span style="color:#9ECBFF;"> app.ts</span></span></code></pre><!--]-->]]></description>
-			<link>https://notes.dt.in.th/ElysiaNode</link>
-			<guid isPermaLink="true">https://notes.dt.in.th/ElysiaNode</guid>
-			<pubDate>Sun, 01 Sep 2024 00:00:00 GMT</pubDate>
 		</item>
 		<follow_challenge>
 			<feedId>81341335623521281</feedId>

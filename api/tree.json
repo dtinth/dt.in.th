@@ -679,6 +679,10 @@
 		{	"title": "Reverse-engineering Insta360 Link Controller WebSockets protocol"
 		,	"parent": "Hardware"
 		}
+	,	"InstallGcloudCliOnCodespaces":
+		{	"title": "Installing Google Cloud CLI on GitHub Codespaces"
+		,	"parent": "Codespaces"
+		}
 	,	"InteractiveFootnotes":
 		{	"title": "Interactive footnotes"
 		,	"parent": "Markdown"

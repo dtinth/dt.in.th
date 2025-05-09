@@ -168,6 +168,7 @@ https://notes.dt.in.th/HomePage
 https://notes.dt.in.th/IconifyUsage
 https://notes.dt.in.th/IndieWeb
 https://notes.dt.in.th/Insta360LinkControllerWebSocketProtocol
+https://notes.dt.in.th/InstallGcloudCliOnCodespaces
 https://notes.dt.in.th/InteractiveFootnotes
 https://notes.dt.in.th/InvokingGoogleCloudRunFromCloudflareWorkers
 https://notes.dt.in.th/IpfsBlankFileUrl
