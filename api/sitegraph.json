@@ -1123,6 +1123,8 @@
 				}
 			,	{	"link": "ElysiaLogging"
 				}
+			,	{	"link": "ElysiaRemixSession"
+				}
 			]
 		}
 	,	"ElysiaDeno":
@@ -1155,6 +1157,13 @@
 			[	{	"link": "Elysia"
 				}
 			,	{	"link": "Nodejs"
+				}
+			]
+		}
+	,	"ElysiaRemixSession":
+		{	"title": "Session management in Elysia using Remix’s session storage"
+		,	"links":
+			[	{	"link": "Elysia"
 				}
 			]
 		}

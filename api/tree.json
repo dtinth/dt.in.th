@@ -556,6 +556,10 @@
 		{	"title": "Using Elysia in Node.js"
 		,	"parent": "Elysia"
 		}
+	,	"ElysiaRemixSession":
+		{	"title": "Session management in Elysia using Remix’s session storage"
+		,	"parent": "Elysia"
+		}
 	,	"ExcalidrawSurfacePen":
 		{	"title": "Hacking Surface Pen’s eraser support into Excalidraw"
 		,	"parent": "JavaScript"
