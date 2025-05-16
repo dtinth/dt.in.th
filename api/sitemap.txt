@@ -128,7 +128,7 @@ https://notes.dt.in.th/DiscordThaiCombiningMarks
 https://notes.dt.in.th/DiscordThaiMessage
 https://notes.dt.in.th/DiscordVoiceChannelTextNotifications
 https://notes.dt.in.th/Docker
-https://notes.dt.in.th/DockerComposeSnippets
+https://notes.dt.in.th/DockerCompose
 https://notes.dt.in.th/DockerInstall
 https://notes.dt.in.th/DockerMacOSColima
 https://notes.dt.in.th/DockerRetagImage
@@ -249,6 +249,7 @@ https://notes.dt.in.th/Pnpm
 https://notes.dt.in.th/PointerEventsTester
 https://notes.dt.in.th/PostgreSQL
 https://notes.dt.in.th/PostgresDevConfig
+https://notes.dt.in.th/PostgresDockerCompose
 https://notes.dt.in.th/PostgresMigrate
 https://notes.dt.in.th/Productivity
 https://notes.dt.in.th/PublishMarkdownPageWithoutBuildTool

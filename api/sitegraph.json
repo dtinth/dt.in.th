@@ -594,7 +594,7 @@
 		,	"links":
 			[	{	"link": "Database"
 				}
-			,	{	"link": "DockerComposeSnippets"
+			,	{	"link": "DockerCompose"
 				}
 			,	{	"link": "20230117T063739Z2762"
 				}
@@ -1039,18 +1039,22 @@
 				}
 			,	{	"link": "DockerMacOSColima"
 				}
-			,	{	"link": "DockerComposeSnippets"
-				}
 			,	{	"link": "20230117T061333Z2948"
 				}
 			,	{	"link": "Nixpacks"
 				}
+			,	{	"link": "DockerCompose"
+				}
 			]
 		}
-	,	"DockerComposeSnippets":
-		{	"title": "Docker Compose snippets"
+	,	"DockerCompose":
+		{	"title": "Docker Compose (topic)"
 		,	"links":
 			[	{	"link": "Docker"
+				}
+			,	{	"link": "GristDockerCompose"
+				}
+			,	{	"link": "PostgresDockerCompose"
 				}
 			]
 		}
@@ -2336,6 +2340,15 @@
 			[	{	"link": "#user-content-fn-faster"
 				}
 			,	{	"link": "#user-content-fnref-faster"
+				}
+			]
+		}
+	,	"PostgresDockerCompose":
+		{	"title": "Running PostgreSQL and pgAdmin with Docker Compose for Development"
+		,	"links":
+			[	{	"link": "PostgreSQL"
+				}
+			,	{	"link": "DockerCompose"
 				}
 			]
 		}

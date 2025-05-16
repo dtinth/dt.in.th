@@ -520,8 +520,8 @@
 		{	"title": "Docker (topic)"
 		,	"parent": "HomePage"
 		}
-	,	"DockerComposeSnippets":
-		{	"title": "Docker Compose snippets"
+	,	"DockerCompose":
+		{	"title": "Docker Compose (topic)"
 		,	"parent": "Docker"
 		}
 	,	"DockerInstall":
@@ -658,7 +658,7 @@
 		}
 	,	"GristDockerCompose":
 		{	"title": "Running Grist with Google Sign-In and External Storage on Docker Compose"
-		,	"parent": "Recent"
+		,	"parent": "DockerCompose"
 		}
 	,	"HDRQRCode":
 		{	"title": "HDR QR Code"
@@ -1002,6 +1002,10 @@
 	,	"PostgresDevConfig":
 		{	"title": "Faster PostgreSQL during development"
 		,	"parent": "PostgreSQL"
+		}
+	,	"PostgresDockerCompose":
+		{	"title": "Running PostgreSQL and pgAdmin with Docker Compose for Development"
+		,	"parent": "DockerCompose"
 		}
 	,	"PostgresMigrate":
 		{	"title": "Moving data from one PostgreSQL database to another"
