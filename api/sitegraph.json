@@ -1392,6 +1392,10 @@
 				}
 			]
 		}
+	,	"GristDockerCompose":
+		{	"title": "Running Grist with Google Sign-In and External Storage on Docker Compose"
+		,	"links": []
+		}
 	,	"HDRQRCode":
 		{	"title": "HDR QR Code"
 		,	"links":

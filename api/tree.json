@@ -656,6 +656,10 @@
 		{	"title": "Using Google Cloud Service Accounts to authenticate between your own services"
 		,	"parent": "GoogleCloud"
 		}
+	,	"GristDockerCompose":
+		{	"title": "Running Grist with Google Sign-In and External Storage on Docker Compose"
+		,	"parent": "Recent"
+		}
 	,	"HDRQRCode":
 		{	"title": "HDR QR Code"
 		,	"parent": "QRCode"
