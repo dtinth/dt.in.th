@@ -1257,7 +1257,10 @@
 		}
 	,	"Gemini25ProPreviewTTSThai":
 		{	"title": "Gemini 2.5 Pro Text-to-Speech Thai Voice Previews"
-		,	"links": []
+		,	"links":
+			[	{	"link": "#singing"
+				}
+			]
 		}
 	,	"GenerateFontWeights":
 		{	"title": "Generating more font weights"
