@@ -1255,6 +1255,10 @@
 				}
 			]
 		}
+	,	"Gemini25ProPreviewTTSThai":
+		{	"title": "Gemini 2.5 Pro Text-to-Speech Thai Voice Previews"
+		,	"links": []
+		}
 	,	"GenerateFontWeights":
 		{	"title": "Generating more font weights"
 		,	"links": []
@@ -1727,6 +1731,8 @@
 			[	{	"link": "ThaiLanguageLLMBenchmark"
 				}
 			,	{	"link": "OpenWebUILiteLLM"
+				}
+			,	{	"link": "Gemini25ProPreviewTTSThai"
 				}
 			]
 		}

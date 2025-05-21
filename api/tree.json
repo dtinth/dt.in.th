@@ -604,6 +604,10 @@
 		{	"title": "Simple front-end feature flags"
 		,	"parent": "JavaScript"
 		}
+	,	"Gemini25ProPreviewTTSThai":
+		{	"title": "Gemini 2.5 Pro Text-to-Speech Thai Voice Previews"
+		,	"parent": "LargeLanguageModel"
+		}
 	,	"GenerateFontWeights":
 		{	"title": "Generating more font weights"
 		,	"parent": "Typography"

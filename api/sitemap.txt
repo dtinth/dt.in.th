@@ -149,6 +149,7 @@ https://notes.dt.in.th/FocusMusic
 https://notes.dt.in.th/FreeTypeJSBlackWhiteText
 https://notes.dt.in.th/FreshAppFactory
 https://notes.dt.in.th/FrontendFeatureFlags
+https://notes.dt.in.th/Gemini25ProPreviewTTSThai
 https://notes.dt.in.th/GenerateFontWeights
 https://notes.dt.in.th/GitHub
 https://notes.dt.in.th/GitHubActions
