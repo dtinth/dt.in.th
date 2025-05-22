@@ -2072,6 +2072,15 @@
 				}
 			]
 		}
+	,	"Node22NativeTypeScript":
+		{	"title": "Using TypeScript natively in Node.js 22"
+		,	"links":
+			[	{	"link": "Nodejs"
+				}
+			,	{	"link": "TypeScript"
+				}
+			]
+		}
 	,	"NodeGoogleAPIsServiceAccount":
 		{	"title": "Using Google APIs in Node.js with a service account"
 		,	"links":
@@ -2138,6 +2147,8 @@
 			,	{	"link": "20201102T104426Z6417"
 				}
 			,	{	"link": "NodeGoogleAPIsServiceAccount"
+				}
+			,	{	"link": "Node22NativeTypeScript"
 				}
 			,	{	"link": "Elysia"
 				}
@@ -2795,6 +2806,8 @@
 			,	{	"link": "20201125T110802Z7306"
 				}
 			,	{	"link": "20201014T155147Z5685"
+				}
+			,	{	"link": "Node22NativeTypeScript"
 				}
 			]
 		}

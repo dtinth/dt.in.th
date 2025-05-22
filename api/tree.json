@@ -883,6 +883,10 @@
 		{	"title": "Nixpacks (topic)"
 		,	"parent": "Nix"
 		}
+	,	"Node22NativeTypeScript":
+		{	"title": "Using TypeScript natively in Node.js 22"
+		,	"parent": "TypeScript"
+		}
 	,	"NodeGoogleAPIsServiceAccount":
 		{	"title": "Using Google APIs in Node.js with a service account"
 		,	"parent": "GoogleCloud"

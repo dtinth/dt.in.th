@@ -219,6 +219,7 @@ https://notes.dt.in.th/NextServerSideSourceMaps
 https://notes.dt.in.th/NextTrpcError
 https://notes.dt.in.th/Nix
 https://notes.dt.in.th/Nixpacks
+https://notes.dt.in.th/Node22NativeTypeScript
 https://notes.dt.in.th/NodeGoogleAPIsServiceAccount
 https://notes.dt.in.th/NodeInDocker
 https://notes.dt.in.th/NodeMemoryLimit
