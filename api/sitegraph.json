@@ -1911,6 +1911,10 @@
 				}
 			]
 		}
+	,	"N8nVirtuozzoPaas":
+		{	"title": "Deploying n8n to Virtuozzo Application Platform"
+		,	"links": []
+		}
 	,	"Netlify":
 		{	"title": "Netlify (topic)"
 		,	"links":
