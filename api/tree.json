@@ -823,6 +823,10 @@
 		{	"title": "Music (topic)"
 		,	"parent": "HomePage"
 		}
+	,	"N8nVirtuozzoPaas":
+		{	"title": "Deploying n8n to Virtuozzo Application Platform"
+		,	"parent": "Recent"
+		}
 	,	"Netlify":
 		{	"title": "Netlify (topic)"
 		,	"parent": "CloudPlatform"
