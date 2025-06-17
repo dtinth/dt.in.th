@@ -1737,6 +1737,8 @@
 				}
 			,	{	"link": "Gemini25ProPreviewTTSThai"
 				}
+			,	{	"link": "NotebookLMSummarizationPrompt"
+				}
 			]
 		}
 	,	"LaunchingChromeForTesting":
@@ -2175,6 +2177,10 @@
 			,	{	"link": "20201015T185602Z2963"
 				}
 			]
+		}
+	,	"NotebookLMSummarizationPrompt":
+		{	"title": "My NotebookLM Summarization Prompt"
+		,	"links": []
 		}
 	,	"NotesInteractivity":
 		{	"title": "Adding some interactivity to my notes"

@@ -919,6 +919,10 @@
 		{	"title": "Node.js (topic)"
 		,	"parent": "JavaScript"
 		}
+	,	"NotebookLMSummarizationPrompt":
+		{	"title": "My NotebookLM Summarization Prompt"
+		,	"parent": "LargeLanguageModel"
+		}
 	,	"NotesInteractivity":
 		{	"title": "Adding some interactivity to my notes"
 		,	"parent": "AboutNotes"

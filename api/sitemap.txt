@@ -228,6 +228,7 @@ https://notes.dt.in.th/NodeNixpacks
 https://notes.dt.in.th/NodeParseArgsSnippets
 https://notes.dt.in.th/NodeWorkerThreadsESM
 https://notes.dt.in.th/Nodejs
+https://notes.dt.in.th/NotebookLMSummarizationPrompt
 https://notes.dt.in.th/NotesInteractivity
 https://notes.dt.in.th/Npm
 https://notes.dt.in.th/NpmCheckmark
