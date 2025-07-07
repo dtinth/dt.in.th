@@ -560,6 +560,10 @@
 		{	"title": "Session management in Elysia using Remix’s session storage"
 		,	"parent": "Elysia"
 		}
+	,	"ElysiaRenderHtml":
+		{	"title": "How I render HTML in Elysia"
+		,	"parent": "Elysia"
+		}
 	,	"ExcalidrawSurfacePen":
 		{	"title": "Hacking Surface Pen’s eraser support into Excalidraw"
 		,	"parent": "JavaScript"

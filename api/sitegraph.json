@@ -1129,6 +1129,8 @@
 				}
 			,	{	"link": "ElysiaRemixSession"
 				}
+			,	{	"link": "ElysiaRenderHtml"
+				}
 			]
 		}
 	,	"ElysiaDeno":
@@ -1166,6 +1168,13 @@
 		}
 	,	"ElysiaRemixSession":
 		{	"title": "Session management in Elysia using Remix’s session storage"
+		,	"links":
+			[	{	"link": "Elysia"
+				}
+			]
+		}
+	,	"ElysiaRenderHtml":
+		{	"title": "How I render HTML in Elysia"
 		,	"links":
 			[	{	"link": "Elysia"
 				}
