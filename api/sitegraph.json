@@ -977,6 +977,8 @@
 				}
 			,	{	"link": "ElysiaDeno"
 				}
+			,	{	"link": "ElysiaDenoDeploy"
+				}
 			]
 		}
 	,	"DependabotAutoMerge":
@@ -1131,6 +1133,8 @@
 				}
 			,	{	"link": "ElysiaRenderHtml"
 				}
+			,	{	"link": "ElysiaDenoDeploy"
+				}
 			]
 		}
 	,	"ElysiaDeno":
@@ -1139,6 +1143,15 @@
 			[	{	"link": "Elysia"
 				}
 			,	{	"link": "Deno"
+				}
+			]
+		}
+	,	"ElysiaDenoDeploy":
+		{	"title": "Quickly deploying API endpoints online with Elysia on Deno Deploy"
+		,	"links":
+			[	{	"link": "Elysia"
+				}
+			,	{	"link": "ElysiaDeno"
 				}
 			]
 		}

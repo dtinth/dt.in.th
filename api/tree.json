@@ -548,6 +548,10 @@
 		{	"title": "Using Elysia in Deno"
 		,	"parent": "Deno"
 		}
+	,	"ElysiaDenoDeploy":
+		{	"title": "Quickly deploying API endpoints online with Elysia on Deno Deploy"
+		,	"parent": "Deno"
+		}
 	,	"ElysiaLogging":
 		{	"title": "Request and response logging in Elysia"
 		,	"parent": "Elysia"

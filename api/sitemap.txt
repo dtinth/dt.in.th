@@ -135,6 +135,7 @@ https://notes.dt.in.th/DockerRetagImage
 https://notes.dt.in.th/Dotenv
 https://notes.dt.in.th/Elysia
 https://notes.dt.in.th/ElysiaDeno
+https://notes.dt.in.th/ElysiaDenoDeploy
 https://notes.dt.in.th/ElysiaLogging
 https://notes.dt.in.th/ElysiaNode
 https://notes.dt.in.th/ElysiaRemixSession
