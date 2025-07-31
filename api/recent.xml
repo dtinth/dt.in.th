@@ -5,8 +5,35 @@
 		<description><![CDATA[Thai Pangsakulyanont’s writings]]></description>
 		<link>https://dt.in.th</link>
 		<generator>RSS for Node</generator>
-		<lastBuildDate>Wed, 09 Jul 2025 10:05:16 GMT</lastBuildDate>
+		<lastBuildDate>Thu, 31 Jul 2025 14:15:26 GMT</lastBuildDate>
 		<atom:link href="https://notes.dt.in.th/api/recent.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title><![CDATA[Generating Presigned GET URLs for S3-Compatible Object Storage with Deno and Minio JS SDK]]></title>
+			<description
+			><![CDATA[<a href="https://notes.dt.in.th/DenoMinioPresignedGet">[Read on notes.dt.in.th]</a><!--[--><p>I had to generate <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html">presigned GET URLs</a> for S3-compatible object storage service. Here’s a quick way to do it with <a href="Deno">Deno</a> and the <a href="MinioJS">Minio JS</a> <a href="https://github.com/minio/minio-js/blob/master/docs/API.md">SDK</a>.</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#6A737D;">// generate.ts</span></span>
+<span class="line"><span style="color:#F97583;">import</span><span style="color:#E1E4E8;"> { Client } </span><span style="color:#F97583;">from</span><span style="color:#9ECBFF;"> &#39;npm:minio&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583;">const</span><span style="color:#79B8FF;"> minioClient</span><span style="color:#F97583;"> =</span><span style="color:#F97583;"> new</span><span style="color:#B392F0;"> Client</span><span style="color:#E1E4E8;">({</span></span>
+<span class="line"><span style="color:#E1E4E8;">  endPoint: Deno.env.</span><span style="color:#B392F0;">get</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;STORAGE_HOST&#39;</span><span style="color:#E1E4E8;">),</span></span>
+<span class="line"><span style="color:#E1E4E8;">  useSSL: </span><span style="color:#79B8FF;">true</span><span style="color:#E1E4E8;">,</span></span>
+<span class="line"><span style="color:#E1E4E8;">  accessKey: Deno.env.</span><span style="color:#B392F0;">get</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;STORAGE_AK&#39;</span><span style="color:#E1E4E8;">),</span></span>
+<span class="line"><span style="color:#E1E4E8;">  secretKey: Deno.env.</span><span style="color:#B392F0;">get</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;STORAGE_SK&#39;</span><span style="color:#E1E4E8;">),</span></span>
+<span class="line"><span style="color:#E1E4E8;">})</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583;">const</span><span style="color:#79B8FF;"> bucket</span><span style="color:#F97583;"> =</span><span style="color:#E1E4E8;"> Deno.env.</span><span style="color:#B392F0;">get</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;STORAGE_BUCKET&#39;</span><span style="color:#E1E4E8;">)</span></span>
+<span class="line"><span style="color:#F97583;">const</span><span style="color:#79B8FF;"> key</span><span style="color:#F97583;"> =</span><span style="color:#E1E4E8;"> Deno.args[</span><span style="color:#79B8FF;">0</span><span style="color:#E1E4E8;">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583;">const</span><span style="color:#79B8FF;"> url</span><span style="color:#F97583;"> =</span><span style="color:#F97583;"> await</span><span style="color:#E1E4E8;"> minioClient.</span><span style="color:#B392F0;">presignedGetObject</span><span style="color:#E1E4E8;">(bucket, key, </span><span style="color:#79B8FF;">3600</span><span style="color:#E1E4E8;">, {</span></span>
+<span class="line"><span style="color:#9ECBFF;">  &#39;response-content-disposition&#39;</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">`attachment; filename=&quot;${</span><span style="color:#E1E4E8;">key</span></span>
+<span class="line"><span style="color:#9ECBFF;">    .</span><span style="color:#B392F0;">split</span><span style="color:#9ECBFF;">(</span><span style="color:#9ECBFF;">&#39;/&#39;</span><span style="color:#9ECBFF;">)</span></span>
+<span class="line"><span style="color:#9ECBFF;">    .</span><span style="color:#B392F0;">pop</span><span style="color:#9ECBFF;">()</span><span style="color:#9ECBFF;">}&quot;`</span><span style="color:#E1E4E8;">,</span></span>
+<span class="line"><span style="color:#E1E4E8;">})</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8;">console.</span><span style="color:#B392F0;">log</span><span style="color:#E1E4E8;">(url)</span></span></code></pre><p>To run:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#B392F0;">deno</span><span style="color:#79B8FF;"> --env-file</span><span style="color:#79B8FF;"> --allow-net</span><span style="color:#79B8FF;"> --allow-env</span><span style="color:#9ECBFF;"> generate.ts</span><span style="color:#9ECBFF;"> hello.txt</span></span></code></pre><!--]-->]]></description>
+			<link>https://notes.dt.in.th/DenoMinioPresignedGet</link>
+			<guid isPermaLink="true">https://notes.dt.in.th/DenoMinioPresignedGet</guid>
+			<pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate>
+		</item>
 		<item>
 			<title><![CDATA[Quickly deploying API endpoints online with Elysia on Deno Deploy]]></title>
 			<description
@@ -423,23 +450,6 @@
 			<link>https://notes.dt.in.th/CaddyCompression</link>
 			<guid isPermaLink="true">https://notes.dt.in.th/CaddyCompression</guid>
 			<pubDate>Thu, 17 Oct 2024 00:00:00 GMT</pubDate>
-		</item>
-		<item>
-			<title><![CDATA[Using Elysia in Deno]]></title>
-			<description
-			><![CDATA[<a href="https://notes.dt.in.th/ElysiaDeno">[Read on notes.dt.in.th]</a><!--[--><h1 id="using-elysia-in-deno"><a aria-hidden="true" tabindex="-1" href="#using-elysia-in-deno"><span class="icon icon-link"></span></a>Using <a href="Elysia">Elysia</a> in <a href="Deno">Deno</a></h1><p><strong>tl;dr:</strong> <code>export default</code> the Elysia app and run it with <code>deno serve</code>.</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#F97583;">import</span><span style="color:#E1E4E8;"> { Elysia } </span><span style="color:#F97583;">from</span><span style="color:#9ECBFF;"> &#39;elysia&#39;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583;">export</span><span style="color:#F97583;"> default</span><span style="color:#F97583;"> new</span><span style="color:#B392F0;"> Elysia</span><span style="color:#E1E4E8;">()</span></span>
-<span class="line"><span style="color:#E1E4E8;">  .</span><span style="color:#B392F0;">get</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;/&#39;</span><span style="color:#E1E4E8;">, </span><span style="color:#9ECBFF;">&#39;Hello Elysia&#39;</span><span style="color:#E1E4E8;">)</span></span>
-<span class="line"><span style="color:#E1E4E8;">  .</span><span style="color:#B392F0;">get</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;/user/:id&#39;</span><span style="color:#E1E4E8;">, ({ </span><span style="color:#FFAB70;">params</span><span style="color:#E1E4E8;">: { </span><span style="color:#FFAB70;">id</span><span style="color:#E1E4E8;"> } }) </span><span style="color:#F97583;">=&gt;</span><span style="color:#E1E4E8;"> id)</span></span>
-<span class="line"><span style="color:#E1E4E8;">  .</span><span style="color:#B392F0;">post</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;/form&#39;</span><span style="color:#E1E4E8;">, ({ </span><span style="color:#FFAB70;">body</span><span style="color:#E1E4E8;"> }) </span><span style="color:#F97583;">=&gt;</span><span style="color:#E1E4E8;"> body)</span></span></code></pre><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#6A737D;"># Run the app</span></span>
-<span class="line"><span style="color:#B392F0;">deno</span><span style="color:#9ECBFF;"> serve</span><span style="color:#79B8FF;"> --allow-env</span><span style="color:#9ECBFF;"> main.ts</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6A737D;"># Run the app in watch mode, restarting on file changes</span></span>
-<span class="line"><span style="color:#B392F0;">deno</span><span style="color:#9ECBFF;"> serve</span><span style="color:#79B8FF;"> --watch</span><span style="color:#79B8FF;"> --allow-env</span><span style="color:#9ECBFF;"> main.ts</span></span></code></pre><!--]-->]]></description>
-			<link>https://notes.dt.in.th/ElysiaDeno</link>
-			<guid isPermaLink="true">https://notes.dt.in.th/ElysiaDeno</guid>
-			<pubDate>Thu, 10 Oct 2024 00:00:00 GMT</pubDate>
 		</item>
 		<follow_challenge>
 			<feedId>81341335623521281</feedId>

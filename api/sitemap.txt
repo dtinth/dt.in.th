@@ -122,6 +122,7 @@ https://notes.dt.in.th/CuWriterFonts
 https://notes.dt.in.th/DataDictionary
 https://notes.dt.in.th/Database
 https://notes.dt.in.th/Deno
+https://notes.dt.in.th/DenoMinioPresignedGet
 https://notes.dt.in.th/DependabotAutoMerge
 https://notes.dt.in.th/Discord
 https://notes.dt.in.th/DiscordThaiCombiningMarks

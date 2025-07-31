@@ -496,6 +496,10 @@
 		{	"title": "Deno (topic)"
 		,	"parent": "JavaScript"
 		}
+	,	"DenoMinioPresignedGet":
+		{	"title": "Generating Presigned GET URLs for S3-Compatible Object Storage with Deno and Minio JS SDK"
+		,	"parent": "Deno"
+		}
 	,	"DependabotAutoMerge":
 		{	"title": "Auto-merging dependabot PRs"
 		,	"parent": "GitHubActions"

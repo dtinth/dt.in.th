@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html data-precompiled=true lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generating Presigned GET URLs for S3-Compatible Object Storage with Deno and Minio JS SDK | notes.dt.in.th</title><meta property="og:title" content="Generating Presigned GET URLs for S3-Compatible Object Storage with Deno and Minio JS SDK" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/DenoMinioPresignedGet" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://notes.dt.in.th/DenoMinioPresignedGet" data-source="note">
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
+      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
+      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" crossorigin src="/runtime/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
+    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+  </head>
+  <body class="bg-#252423 text-#e9e8e7 antialiased">
+    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
+      <div class="flex items-center pl-[18px] flex-none">
+        <a
+          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
+          href="/"
+          >notes.dt.in.th</a
+        >
+      </div>
+      <div
+        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
+        id="headerMiddle"
+      >
+        <div class="px-2 flex-none">›</div><div class="truncate"><a title="JavaScript (topic)" href="JavaScript">JavaScript</a></div><div class="px-2 flex-none">›</div><div class="truncate"><a title="Deno (topic)" href="Deno">Deno</a></div>
+      </div>
+      <div
+        class="flex items-center px-[18px] flex-none gap-4"
+        id="headerToolbar"
+      ></div>
+    </header>
+    <div class="h-entry">
+      <main class="bg-#353433" id="main">
+        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><p>I had to generate <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html">presigned GET URLs</a> for S3-compatible object storage service. Here’s a quick way to do it with <a href="Deno">Deno</a> and the <a href="MinioJS">Minio JS</a> <a href="https://github.com/minio/minio-js/blob/master/docs/API.md">SDK</a>.</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#6A737D;">// generate.ts</span></span>
+<span class="line"><span style="color:#F97583;">import</span><span style="color:#E1E4E8;"> { Client } </span><span style="color:#F97583;">from</span><span style="color:#9ECBFF;"> &#39;npm:minio&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583;">const</span><span style="color:#79B8FF;"> minioClient</span><span style="color:#F97583;"> =</span><span style="color:#F97583;"> new</span><span style="color:#B392F0;"> Client</span><span style="color:#E1E4E8;">({</span></span>
+<span class="line"><span style="color:#E1E4E8;">  endPoint: Deno.env.</span><span style="color:#B392F0;">get</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;STORAGE_HOST&#39;</span><span style="color:#E1E4E8;">),</span></span>
+<span class="line"><span style="color:#E1E4E8;">  useSSL: </span><span style="color:#79B8FF;">true</span><span style="color:#E1E4E8;">,</span></span>
+<span class="line"><span style="color:#E1E4E8;">  accessKey: Deno.env.</span><span style="color:#B392F0;">get</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;STORAGE_AK&#39;</span><span style="color:#E1E4E8;">),</span></span>
+<span class="line"><span style="color:#E1E4E8;">  secretKey: Deno.env.</span><span style="color:#B392F0;">get</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;STORAGE_SK&#39;</span><span style="color:#E1E4E8;">),</span></span>
+<span class="line"><span style="color:#E1E4E8;">})</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583;">const</span><span style="color:#79B8FF;"> bucket</span><span style="color:#F97583;"> =</span><span style="color:#E1E4E8;"> Deno.env.</span><span style="color:#B392F0;">get</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;STORAGE_BUCKET&#39;</span><span style="color:#E1E4E8;">)</span></span>
+<span class="line"><span style="color:#F97583;">const</span><span style="color:#79B8FF;"> key</span><span style="color:#F97583;"> =</span><span style="color:#E1E4E8;"> Deno.args[</span><span style="color:#79B8FF;">0</span><span style="color:#E1E4E8;">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583;">const</span><span style="color:#79B8FF;"> url</span><span style="color:#F97583;"> =</span><span style="color:#F97583;"> await</span><span style="color:#E1E4E8;"> minioClient.</span><span style="color:#B392F0;">presignedGetObject</span><span style="color:#E1E4E8;">(bucket, key, </span><span style="color:#79B8FF;">3600</span><span style="color:#E1E4E8;">, {</span></span>
+<span class="line"><span style="color:#9ECBFF;">  &#39;response-content-disposition&#39;</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">`attachment; filename=&quot;${</span><span style="color:#E1E4E8;">key</span></span>
+<span class="line"><span style="color:#9ECBFF;">    .</span><span style="color:#B392F0;">split</span><span style="color:#9ECBFF;">(</span><span style="color:#9ECBFF;">&#39;/&#39;</span><span style="color:#9ECBFF;">)</span></span>
+<span class="line"><span style="color:#9ECBFF;">    .</span><span style="color:#B392F0;">pop</span><span style="color:#9ECBFF;">()</span><span style="color:#9ECBFF;">}&quot;`</span><span style="color:#E1E4E8;">,</span></span>
+<span class="line"><span style="color:#E1E4E8;">})</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8;">console.</span><span style="color:#B392F0;">log</span><span style="color:#E1E4E8;">(url)</span></span></code></pre><p>To run:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#B392F0;">deno</span><span style="color:#79B8FF;"> --env-file</span><span style="color:#79B8FF;"> --allow-net</span><span style="color:#79B8FF;"> --allow-env</span><span style="color:#9ECBFF;"> generate.ts</span><span style="color:#9ECBFF;"> hello.txt</span></span></code></pre><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div
+          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
+          id="footerContents"
+        >
+          <notes-page-footer></notes-page-footer>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+var _vue = require('vue');
+
+const _hoisted_1 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<p>I had to generate <a href=\"https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html\">presigned GET URLs</a> for S3-compatible object storage service. Here’s a quick way to do it with <a href=\"Deno\">Deno</a> and the <a href=\"MinioJS\">Minio JS</a> <a href=\"https://github.com/minio/minio-js/blob/master/docs/API.md\">SDK</a>.</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#6A737D;\">// generate.ts</span></span>\n<span class=\"line\"><span style=\"color:#F97583;\">import</span><span style=\"color:#E1E4E8;\"> { Client } </span><span style=\"color:#F97583;\">from</span><span style=\"color:#9ECBFF;\"> &#39;npm:minio&#39;</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#F97583;\">const</span><span style=\"color:#79B8FF;\"> minioClient</span><span style=\"color:#F97583;\"> =</span><span style=\"color:#F97583;\"> new</span><span style=\"color:#B392F0;\"> Client</span><span style=\"color:#E1E4E8;\">({</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  endPoint: Deno.env.</span><span style=\"color:#B392F0;\">get</span><span style=\"color:#E1E4E8;\">(</span><span style=\"color:#9ECBFF;\">&#39;STORAGE_HOST&#39;</span><span style=\"color:#E1E4E8;\">),</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  useSSL: </span><span style=\"color:#79B8FF;\">true</span><span style=\"color:#E1E4E8;\">,</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  accessKey: Deno.env.</span><span style=\"color:#B392F0;\">get</span><span style=\"color:#E1E4E8;\">(</span><span style=\"color:#9ECBFF;\">&#39;STORAGE_AK&#39;</span><span style=\"color:#E1E4E8;\">),</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  secretKey: Deno.env.</span><span style=\"color:#B392F0;\">get</span><span style=\"color:#E1E4E8;\">(</span><span style=\"color:#9ECBFF;\">&#39;STORAGE_SK&#39;</span><span style=\"color:#E1E4E8;\">),</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">})</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#F97583;\">const</span><span style=\"color:#79B8FF;\"> bucket</span><span style=\"color:#F97583;\"> =</span><span style=\"color:#E1E4E8;\"> Deno.env.</span><span style=\"color:#B392F0;\">get</span><span style=\"color:#E1E4E8;\">(</span><span style=\"color:#9ECBFF;\">&#39;STORAGE_BUCKET&#39;</span><span style=\"color:#E1E4E8;\">)</span></span>\n<span class=\"line\"><span style=\"color:#F97583;\">const</span><span style=\"color:#79B8FF;\"> key</span><span style=\"color:#F97583;\"> =</span><span style=\"color:#E1E4E8;\"> Deno.args[</span><span style=\"color:#79B8FF;\">0</span><span style=\"color:#E1E4E8;\">]</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#F97583;\">const</span><span style=\"color:#79B8FF;\"> url</span><span style=\"color:#F97583;\"> =</span><span style=\"color:#F97583;\"> await</span><span style=\"color:#E1E4E8;\"> minioClient.</span><span style=\"color:#B392F0;\">presignedGetObject</span><span style=\"color:#E1E4E8;\">(bucket, key, </span><span style=\"color:#79B8FF;\">3600</span><span style=\"color:#E1E4E8;\">, {</span></span>\n<span class=\"line\"><span style=\"color:#9ECBFF;\">  &#39;response-content-disposition&#39;</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">`attachment; filename=&quot;${</span><span style=\"color:#E1E4E8;\">key</span></span>\n<span class=\"line\"><span style=\"color:#9ECBFF;\">    .</span><span style=\"color:#B392F0;\">split</span><span style=\"color:#9ECBFF;\">(</span><span style=\"color:#9ECBFF;\">&#39;/&#39;</span><span style=\"color:#9ECBFF;\">)</span></span>\n<span class=\"line\"><span style=\"color:#9ECBFF;\">    .</span><span style=\"color:#B392F0;\">pop</span><span style=\"color:#9ECBFF;\">()</span><span style=\"color:#9ECBFF;\">}&quot;`</span><span style=\"color:#E1E4E8;\">,</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">})</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">console.</span><span style=\"color:#B392F0;\">log</span><span style=\"color:#E1E4E8;\">(url)</span></span></code></pre><p>To run:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#B392F0;\">deno</span><span style=\"color:#79B8FF;\"> --env-file</span><span style=\"color:#79B8FF;\"> --allow-net</span><span style=\"color:#79B8FF;\"> --allow-env</span><span style=\"color:#9ECBFF;\"> generate.ts</span><span style=\"color:#9ECBFF;\"> hello.txt</span></span></code></pre>", 4)
+function render(_ctx, _cache) {
+  return _hoisted_1
+}
+__sfc__.render = render
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"public":true,"title":"Generating Presigned GET URLs for S3-Compatible Object Storage with Deno and Minio JS SDK"};
+</script>
+  </body>
+</html>
