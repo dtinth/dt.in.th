@@ -164,6 +164,7 @@ https://notes.dt.in.th/GitOps
 https://notes.dt.in.th/GitOpsDiscord
 https://notes.dt.in.th/GitOpsInWeirdPlaces
 https://notes.dt.in.th/GoogleCloud
+https://notes.dt.in.th/GoogleCloudFreeTier
 https://notes.dt.in.th/GoogleCloudServiceAccount
 https://notes.dt.in.th/GoogleCloudServiceAccountIdToken
 https://notes.dt.in.th/GristDockerCompose
@@ -206,6 +207,7 @@ https://notes.dt.in.th/MiseEnv
 https://notes.dt.in.th/MongoDB
 https://notes.dt.in.th/MongoDBAuthSource
 https://notes.dt.in.th/Morse
+https://notes.dt.in.th/Mosh
 https://notes.dt.in.th/Music
 https://notes.dt.in.th/N8nVirtuozzoPaas
 https://notes.dt.in.th/Netlify

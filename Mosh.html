@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html data-precompiled=true lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mosh | notes.dt.in.th</title><meta property="og:title" content="Mosh" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/Mosh" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://notes.dt.in.th/Mosh" data-source="note">
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
+      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
+      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" crossorigin src="/runtime/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
+    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+  </head>
+  <body class="bg-#252423 text-#e9e8e7 antialiased">
+    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
+      <div class="flex items-center pl-[18px] flex-none">
+        <a
+          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
+          href="/"
+          >notes.dt.in.th</a
+        >
+      </div>
+      <div
+        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
+        id="headerMiddle"
+      >
+        <div class="px-2 flex-none">›</div><div class="truncate"><a title="Linux (topic)" href="Linux">Linux</a></div>
+      </div>
+      <div
+        class="flex items-center px-[18px] flex-none gap-4"
+        id="headerToolbar"
+      ></div>
+    </header>
+    <div class="h-entry">
+      <main class="bg-#353433" id="main">
+        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><div class="lead"><p><a href="https://mosh.org/">Mosh</a> is a mobile shell that provides better connectivity over unreliable networks. Here&#39;s how I install and configure it for better user experience.</p></div><h2 id="installation"><a aria-hidden="true" tabindex="-1" href="#installation"><span class="icon icon-link"></span></a>Installation</h2><p>To install mosh-server on a remote machine:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#B392F0;">sudo</span><span style="color:#9ECBFF;"> wget</span><span style="color:#79B8FF;"> -O</span><span style="color:#9ECBFF;"> /usr/local/bin/mosh-server</span><span style="color:#79B8FF;"> \</span></span>
+<span class="line"><span style="color:#9ECBFF;">  https://github.com/blinksh/mosh-static-multiarch/releases/download/1.4.0%2Bblink-17.3.0/mosh-server-1.4.0+blink-17.3.0-linux-amd64</span><span style="color:#79B8FF;"> \</span></span>
+<span class="line"><span style="color:#E1E4E8;">  &amp;&amp; </span><span style="color:#B392F0;">sudo</span><span style="color:#9ECBFF;"> chmod</span><span style="color:#9ECBFF;"> +x</span><span style="color:#9ECBFF;"> /usr/local/bin/mosh-server</span></span></code></pre><h2 id="configuration-for-better-ux"><a aria-hidden="true" tabindex="-1" href="#configuration-for-better-ux"><span class="icon icon-link"></span></a>Configuration for better UX</h2><p>For better user experience, I configure mosh with prediction settings. In <a href="https://fishshell.com/">fish</a> shell:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#79B8FF;">set</span><span style="color:#E1E4E8;"> -Ux MOSH_PREDICTION_DISPLAY always</span></span>
+<span class="line"><span style="color:#79B8FF;">set</span><span style="color:#E1E4E8;"> -Ux MOSH_PREDICTION_OVERWRITE yes</span></span></code></pre><p>These settings:</p><ul><li><code>MOSH_PREDICTION_DISPLAY always</code> - Always show local echo predictions</li><li><code>MOSH_PREDICTION_OVERWRITE yes</code> - Overwrite existing text instead of inserting before it</li></ul><p>From the man page, the <code>--predict</code> option controls speculative local echo:</p><ul><li><code>adaptive</code> (default) - Show predictions on slower links and smooth out network glitches</li><li><code>always</code> - Always show predictions when confident</li><li><code>never</code> - Never show predictions</li></ul><p>The <code>--predict-overwrite</code> option makes predictions overwrite existing text instead of inserting before it, which provides smoother typing experience.</p><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div
+          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
+          id="footerContents"
+        >
+          <notes-page-footer></notes-page-footer>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+var _vue = require('vue');
+
+const _hoisted_1 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<div class=\"lead\"><p><a href=\"https://mosh.org/\">Mosh</a> is a mobile shell that provides better connectivity over unreliable networks. Here&#39;s how I install and configure it for better user experience.</p></div><h2 id=\"installation\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#installation\"><span class=\"icon icon-link\"></span></a>Installation</h2><p>To install mosh-server on a remote machine:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#B392F0;\">sudo</span><span style=\"color:#9ECBFF;\"> wget</span><span style=\"color:#79B8FF;\"> -O</span><span style=\"color:#9ECBFF;\"> /usr/local/bin/mosh-server</span><span style=\"color:#79B8FF;\"> \\</span></span>\n<span class=\"line\"><span style=\"color:#9ECBFF;\">  https://github.com/blinksh/mosh-static-multiarch/releases/download/1.4.0%2Bblink-17.3.0/mosh-server-1.4.0+blink-17.3.0-linux-amd64</span><span style=\"color:#79B8FF;\"> \\</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  &amp;&amp; </span><span style=\"color:#B392F0;\">sudo</span><span style=\"color:#9ECBFF;\"> chmod</span><span style=\"color:#9ECBFF;\"> +x</span><span style=\"color:#9ECBFF;\"> /usr/local/bin/mosh-server</span></span></code></pre><h2 id=\"configuration-for-better-ux\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#configuration-for-better-ux\"><span class=\"icon icon-link\"></span></a>Configuration for better UX</h2><p>For better user experience, I configure mosh with prediction settings. In <a href=\"https://fishshell.com/\">fish</a> shell:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#79B8FF;\">set</span><span style=\"color:#E1E4E8;\"> -Ux MOSH_PREDICTION_DISPLAY always</span></span>\n<span class=\"line\"><span style=\"color:#79B8FF;\">set</span><span style=\"color:#E1E4E8;\"> -Ux MOSH_PREDICTION_OVERWRITE yes</span></span></code></pre><p>These settings:</p><ul><li><code>MOSH_PREDICTION_DISPLAY always</code> - Always show local echo predictions</li><li><code>MOSH_PREDICTION_OVERWRITE yes</code> - Overwrite existing text instead of inserting before it</li></ul><p>From the man page, the <code>--predict</code> option controls speculative local echo:</p><ul><li><code>adaptive</code> (default) - Show predictions on slower links and smooth out network glitches</li><li><code>always</code> - Always show predictions when confident</li><li><code>never</code> - Never show predictions</li></ul><p>The <code>--predict-overwrite</code> option makes predictions overwrite existing text instead of inserting before it, which provides smoother typing experience.</p>", 12)
+function render(_ctx, _cache) {
+  return _hoisted_1
+}
+__sfc__.render = render
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"title":"Mosh","public":true};
+</script>
+  </body>
+</html>

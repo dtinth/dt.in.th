@@ -664,6 +664,10 @@
 		{	"title": "Google Cloud (topic)"
 		,	"parent": "CloudPlatform"
 		}
+	,	"GoogleCloudFreeTier":
+		{	"title": "Creating a free Google Cloud Compute Engine VM in Google Cloud Shell"
+		,	"parent": "GoogleCloud"
+		}
 	,	"GoogleCloudServiceAccount":
 		{	"title": "Google Cloud Service Account"
 		,	"parent": "GoogleCloud"
@@ -830,6 +834,10 @@
 	,	"Morse":
 		{	"title": "How I memorize the morse code (without deliberate practice)"
 		,	"parent": "Recent"
+		}
+	,	"Mosh":
+		{	"title": "Mosh"
+		,	"parent": "Linux"
 		}
 	,	"Music":
 		{	"title": "Music (topic)"

@@ -1406,11 +1406,20 @@
 				}
 			,	{	"link": "InstallGcloudCliOnCodespaces"
 				}
+			,	{	"link": "GoogleCloudFreeTier"
+				}
 			,	{	"link": "NodeGoogleAPIsServiceAccount"
 				}
 			,	{	"link": "20220817T202304Z1234"
 				}
 			,	{	"link": "Firebase"
+				}
+			]
+		}
+	,	"GoogleCloudFreeTier":
+		{	"title": "Creating a free Google Cloud Compute Engine VM in Google Cloud Shell"
+		,	"links":
+			[	{	"link": "GoogleCloud"
 				}
 			]
 		}
@@ -1825,6 +1834,8 @@
 				}
 			,	{	"link": "Codespaces"
 				}
+			,	{	"link": "Mosh"
+				}
 			,	{	"link": "Tmux"
 				}
 			]
@@ -1940,6 +1951,10 @@
 			,	{	"link": "#user-content-fnref-fast"
 				}
 			]
+		}
+	,	"Mosh":
+		{	"title": "Mosh"
+		,	"links": []
 		}
 	,	"Music":
 		{	"title": "Music (topic)"
