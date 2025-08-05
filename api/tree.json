@@ -338,7 +338,7 @@
 		}
 	,	"20230117T061333Z2948":
 		{	"title": "Running pgAdmin in Docker Compose"
-		,	"parent": "PostgreSQL"
+		,	"parent": "Docker"
 		}
 	,	"20230117T063739Z2762":
 		{	"title": "pgAdmin 4 Version Compatibility Matrix"
@@ -590,7 +590,7 @@
 		}
 	,	"Firebase":
 		{	"title": "Firebase (topic)"
-		,	"parent": "Database"
+		,	"parent": "CloudPlatform"
 		}
 	,	"Fish":
 		{	"title": "Fish (topic)"
@@ -676,9 +676,21 @@
 		{	"title": "Using Google Cloud Service Accounts to authenticate between your own services"
 		,	"parent": "GoogleCloud"
 		}
+	,	"Grist":
+		{	"title": "Grist (topic)"
+		,	"parent": "HomePage"
+		}
 	,	"GristDockerCompose":
 		{	"title": "Running Grist with Google Sign-In and External Storage on Docker Compose"
-		,	"parent": "DockerCompose"
+		,	"parent": "Grist"
+		}
+	,	"GristSelfHostedBenchmark":
+		{	"title": "Self-hosted Grist benchmarks"
+		,	"parent": "Grist"
+		}
+	,	"GristUpsertN8n":
+		{	"title": "Upserting data into Grist using n8n"
+		,	"parent": "Grist"
 		}
 	,	"HDRQRCode":
 		{	"title": "HDR QR Code"
@@ -843,9 +855,13 @@
 		{	"title": "Music (topic)"
 		,	"parent": "HomePage"
 		}
+	,	"N8n":
+		{	"title": "n8n (topic)"
+		,	"parent": "Grist"
+		}
 	,	"N8nVirtuozzoPaas":
 		{	"title": "Deploying n8n to Virtuozzo Application Platform"
-		,	"parent": "Recent"
+		,	"parent": "N8n"
 		}
 	,	"Netlify":
 		{	"title": "Netlify (topic)"

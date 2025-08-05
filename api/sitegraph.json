@@ -962,6 +962,8 @@
 				}
 			,	{	"link": "Firebase"
 				}
+			,	{	"link": "Grist"
+				}
 			,	{	"link": "MongoDB"
 				}
 			,	{	"link": "PostgreSQL"
@@ -1445,9 +1447,51 @@
 				}
 			]
 		}
+	,	"Grist":
+		{	"title": "Grist (topic)"
+		,	"links":
+			[	{	"link": "GristDockerCompose"
+				}
+			,	{	"link": "GristSelfHostedBenchmark"
+				}
+			,	{	"link": "GristUpsertN8n"
+				}
+			,	{	"link": "Database"
+				}
+			,	{	"link": "N8n"
+				}
+			]
+		}
 	,	"GristDockerCompose":
 		{	"title": "Running Grist with Google Sign-In and External Storage on Docker Compose"
-		,	"links": []
+		,	"links":
+			[	{	"link": "Grist"
+				}
+			]
+		}
+	,	"GristSelfHostedBenchmark":
+		{	"title": "Self-hosted Grist benchmarks"
+		,	"links":
+			[	{	"link": "Grist"
+				}
+			,	{	"link": "#user-content-fn-1"
+				}
+			,	{	"link": "#user-content-fn-2"
+				}
+			,	{	"link": "#user-content-fnref-1"
+				}
+			,	{	"link": "#user-content-fnref-2"
+				}
+			]
+		}
+	,	"GristUpsertN8n":
+		{	"title": "Upserting data into Grist using n8n"
+		,	"links":
+			[	{	"link": "N8n"
+				}
+			,	{	"link": "Grist"
+				}
+			]
 		}
 	,	"HDRQRCode":
 		{	"title": "HDR QR Code"
@@ -1493,11 +1537,13 @@
 				}
 			,	{	"link": "Database"
 				}
-			,	{	"link": "Docker"
-				}
 			,	{	"link": "Discord"
 				}
+			,	{	"link": "Docker"
+				}
 			,	{	"link": "GitHub"
+				}
+			,	{	"link": "Grist"
 				}
 			,	{	"link": "Hardware"
 				}
@@ -1960,6 +2006,17 @@
 		{	"title": "Music (topic)"
 		,	"links":
 			[	{	"link": "PianoMajorScaleTrainer"
+				}
+			]
+		}
+	,	"N8n":
+		{	"title": "n8n (topic)"
+		,	"links":
+			[	{	"link": "GristUpsertN8n"
+				}
+			,	{	"link": "N8nVirtuozzoPaas"
+				}
+			,	{	"link": "Grist"
 				}
 			]
 		}
