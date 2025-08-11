@@ -95,6 +95,8 @@ https://notes.dt.in.th/AdventOfCode2021Day24
 https://notes.dt.in.th/AsdfSnippets
 https://notes.dt.in.th/AudioEncodingBenchmark
 https://notes.dt.in.th/Azure
+https://notes.dt.in.th/BlackBoxTestingStrategies
+https://notes.dt.in.th/BlackBoxTestingTalk
 https://notes.dt.in.th/BrotherPTWebUSB
 https://notes.dt.in.th/Bun
 https://notes.dt.in.th/BunAppRunner

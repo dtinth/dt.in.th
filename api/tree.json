@@ -388,6 +388,14 @@
 		{	"title": "Azure (topic)"
 		,	"parent": "CloudPlatform"
 		}
+	,	"BlackBoxTestingStrategies":
+		{	"title": "Strategies for Black-Box Testability (2024 talk)"
+		,	"parent": "PlaywrightPageObject"
+		}
+	,	"BlackBoxTestingTalk":
+		{	"title": "Move fast while maintaining quality with black box testing (talk)"
+		,	"parent": "BlackBoxTestingStrategies"
+		}
 	,	"BrotherPTWebUSB":
 		{	"title": "A web-based printing tool for Brother P-touch series label printers"
 		,	"parent": "Tools"
@@ -690,7 +698,7 @@
 		}
 	,	"GristUpsertN8n":
 		{	"title": "Upserting data into Grist using n8n"
-		,	"parent": "Grist"
+		,	"parent": "N8n"
 		}
 	,	"HDRQRCode":
 		{	"title": "HDR QR Code"
@@ -857,7 +865,7 @@
 		}
 	,	"N8n":
 		{	"title": "n8n (topic)"
-		,	"parent": "Grist"
+		,	"parent": "HomePage"
 		}
 	,	"N8nVirtuozzoPaas":
 		{	"title": "Deploying n8n to Virtuozzo Application Platform"

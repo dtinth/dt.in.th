@@ -702,6 +702,20 @@
 		{	"title": "Azure (topic)"
 		,	"links": []
 		}
+	,	"BlackBoxTestingStrategies":
+		{	"title": "Strategies for Black-Box Testability (2024 talk)"
+		,	"links":
+			[	{	"link": "BlackBoxTestingTalk"
+				}
+			]
+		}
+	,	"BlackBoxTestingTalk":
+		{	"title": "Move fast while maintaining quality with black box testing (talk)"
+		,	"links":
+			[	{	"link": "TestingInProduction"
+				}
+			]
+		}
 	,	"BrotherPTWebUSB":
 		{	"title": "A web-based printing tool for Brother P-touch series label printers"
 		,	"links": []
@@ -1566,6 +1580,8 @@
 			,	{	"link": "Markdown"
 				}
 			,	{	"link": "Music"
+				}
+			,	{	"link": "N8n"
 				}
 			,	{	"link": "Nix"
 				}
@@ -2439,6 +2455,8 @@
 		{	"title": "How I structure Playwright page objects"
 		,	"links":
 			[	{	"link": "Playwright"
+				}
+			,	{	"link": "BlackBoxTestingStrategies"
 				}
 			]
 		}
