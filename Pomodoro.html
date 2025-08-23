@@ -30,6 +30,7 @@
 .visible[data-v-8c9498c0]{visibility:visible;}
 .ms[data-v-8c9498c0]{margin-inline-start:1rem;}
 .hidden[data-v-8c9498c0]{display:none;}
+.flex[data-v-8c9498c0]{display:flex;}
 .tabular-nums[data-v-8c9498c0]{--un-numeric-spacing:tabular-nums;font-variant-numeric:var(--un-ordinal) var(--un-slashed-zero) var(--un-numeric-figure) var(--un-numeric-spacing) var(--un-numeric-fraction);}
 .transition[data-v-8c9498c0]{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}
 .ease[data-v-8c9498c0]{transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);}</style>
@@ -95,7 +96,8 @@ window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use s
   "running": "setup-maybe-ref",
   "colourClass": "setup-maybe-ref",
   "blinkStyle": "setup-maybe-ref",
-  "lengthLabel": "setup-maybe-ref"
+  "lengthLabel": "setup-maybe-ref",
+  "togglePip": "setup-maybe-ref"
 } */
 
 const __sfc__ = {
@@ -174,6 +176,7 @@ const __sfc__ = {
       stopInternal();
       remainingMs.value = currentLength.value;
       targetTime.value = null;
+      closePip();
     }
     function toggleLength() {
       const wasRunning = running.value;
@@ -181,6 +184,7 @@ const __sfc__ = {
       lengthIndex.value = (lengthIndex.value + 1) % lengths.length;
       remainingMs.value = currentLength.value;
       if (wasRunning) start();
+      updatePip();
     }
 
     // Formatters
@@ -211,7 +215,6 @@ const __sfc__ = {
       if (remainingMs.value < fiveMinutes && remainingMs.value > tenSeconds) {
         const sec = parseInt(ss.value, 10);
         if (sec === 59) {
-          // quick blink during those two seconds
           const visible = (remainingMs.value % 500) > 250; // hide first half each 500ms
           return { visibility: visible ? 'visible' : 'hidden' };
         }
@@ -220,6 +223,69 @@ const __sfc__ = {
     });
 
     const lengthLabel = Vue.computed(() => lengthIndex.value === 0 ? '25/5 ↺' : 'Break 5m');
+
+    // Picture-in-Picture (Document PiP) support
+    const pipWin = Vue.ref(null);
+    async function openPip() {
+      if (pipWin.value) return;
+      if (window.documentPictureInPicture && documentPictureInPicture.requestWindow) {
+        try {
+          const w = await documentPictureInPicture.requestWindow({ width: 260, height: 128 });
+          pipWin.value = w;
+          w.document.title = 'Pomodoro';
+          const style = w.document.createElement('style');
+          style.textContent = `
+            html, body {
+              margin: 0;
+              background: #000;
+              color: #ddd;
+              display: flex;
+              height: 90vh;
+              align-items: center;
+              justify-content: center;
+              font: 600 30vw system-ui;
+              font-variant-numeric: tabular-nums;
+            }
+            .yellow { color: #d4c34f; }
+            .red { color: #e05d48; }
+            .urgent { color: #ff3b30; }
+          `;
+          w.document.head.appendChild(style);
+          const div = w.document.createElement('div');
+          div.id = 'pipTime';
+          w.document.body.appendChild(div);
+          w.addEventListener('pagehide', closePip);
+          w.addEventListener('unload', closePip);
+          updatePip();
+        } catch (e) {
+          console.warn('PiP failed', e);
+        }
+      } else {
+        alert('Document Picture-in-Picture not supported in this browser yet.');
+      }
+    }
+    function closePip() {
+      if (pipWin.value && !pipWin.value.closed) {
+        try { pipWin.value.close(); } catch(_) {}
+      }
+      pipWin.value = null;
+    }
+    function togglePip() {
+      if (pipWin.value) closePip(); else openPip();
+    }
+    function pipColourClass() {
+      if (remainingMs.value <= tenSeconds) return 'urgent';
+      if (remainingMs.value <= oneMinute) return 'red';
+      if (remainingMs.value <= fiveMinutes) return 'yellow';
+      return '';
+    }
+    function updatePip() {
+      if (!pipWin.value) return;
+      const el = pipWin.value.document.getElementById('pipTime');
+      if (!el) return;
+      el.className = pipColourClass();
+      el.textContent = `${mm.value}:${ss.value}`;
+    }
 
     // Update document title once per second
     let titleInterval = null;
@@ -234,11 +300,12 @@ const __sfc__ = {
     function startTitleUpdates() {
       if (titleInterval) return;
       updateTitle();
-      titleInterval = setInterval(updateTitle, 1000);
+      titleInterval = setInterval(() => { updateTitle(); updatePip(); }, 1000);
     }
     function stopTitleUpdates() {
       if (titleInterval) { clearInterval(titleInterval); titleInterval = null; }
       updateTitle();
+      updatePip();
     }
 
     // Handle visibility (reacquire wake lock if needed)
@@ -252,12 +319,12 @@ const __sfc__ = {
     Vue.watch(running, (val) => {
       if (val) startTitleUpdates(); else stopTitleUpdates();
     }, { immediate: true });
-    Vue.watch(remainingMs, () => updateTitle());
+    Vue.watch(remainingMs, () => { updateTitle(); updatePip(); });
 
     // Initialize
     reset();
 
-    return { mm, ss, start, pause, reset, toggleLength, running, colourClass, blinkStyle, lengthLabel };
+    return { mm, ss, start, pause, reset, toggleLength, running, colourClass, blinkStyle, lengthLabel, togglePip };
   }
 }
 ;
@@ -282,7 +349,8 @@ const _hoisted_6 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElem
   /*#__PURE__*/_vue.createElementVNode.call(void 0, "summary", null, "About this tool"),
   /*#__PURE__*/_vue.createElementVNode.call(void 0, "ul", null, [
     /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, "A super minimal Pomodoro timer I can pop open in a tab."),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, "Keeps the screen awake while running.")
+    /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, "Keeps the screen awake while running."),
+    /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, "Double-click the time for a PiP window (if browser supports Document PiP).")
   ])
 ], -1 /* HOISTED */))
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -295,30 +363,32 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }, [
       _vue.createElementVNode.call(void 0, "div", {
         class: _vue.normalizeClass.call(void 0, ["time", $setup.colourClass]),
-        style: _vue.normalizeStyle.call(void 0, $setup.blinkStyle)
+        style: _vue.normalizeStyle.call(void 0, $setup.blinkStyle),
+        onDblclick: _cache[0] || (_cache[0] = (...args) => ($setup.togglePip && $setup.togglePip(...args))),
+        title: "Double click for PiP"
       }, [
         _vue.createTextVNode.call(void 0, _vue.toDisplayString.call(void 0, $setup.mm), 1 /* TEXT */),
         _hoisted_2,
         _vue.createTextVNode.call(void 0, _vue.toDisplayString.call(void 0, $setup.ss), 1 /* TEXT */)
-      ], 6 /* CLASS, STYLE */),
+      ], 38 /* CLASS, STYLE, NEED_HYDRATION */),
       _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
         _vue.createElementVNode.call(void 0, "button", {
           class: "btn",
-          onClick: _cache[0] || (_cache[0] = (...args) => ($setup.start && $setup.start(...args))),
+          onClick: _cache[1] || (_cache[1] = (...args) => ($setup.start && $setup.start(...args))),
           disabled: $setup.running
         }, "Start", 8 /* PROPS */, _hoisted_4),
         _vue.createElementVNode.call(void 0, "button", {
           class: "btn",
-          onClick: _cache[1] || (_cache[1] = (...args) => ($setup.pause && $setup.pause(...args))),
+          onClick: _cache[2] || (_cache[2] = (...args) => ($setup.pause && $setup.pause(...args))),
           disabled: !$setup.running
         }, "Pause", 8 /* PROPS */, _hoisted_5),
         _vue.createElementVNode.call(void 0, "button", {
           class: "btn",
-          onClick: _cache[2] || (_cache[2] = (...args) => ($setup.reset && $setup.reset(...args)))
+          onClick: _cache[3] || (_cache[3] = (...args) => ($setup.reset && $setup.reset(...args)))
         }, "Reset"),
         _vue.createElementVNode.call(void 0, "button", {
           class: "btn",
-          onClick: _cache[3] || (_cache[3] = (...args) => ($setup.toggleLength && $setup.toggleLength(...args)))
+          onClick: _cache[4] || (_cache[4] = (...args) => ($setup.toggleLength && $setup.toggleLength(...args)))
         }, _vue.toDisplayString.call(void 0, $setup.lengthLabel), 1 /* TEXT */)
       ])
     ], 2 /* CLASS */),
