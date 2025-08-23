@@ -1055,6 +1055,10 @@
 		{	"title": "Pointer events tester"
 		,	"parent": "Tools"
 		}
+	,	"Pomodoro":
+		{	"title": "Pomodoro Timer"
+		,	"parent": "Tools"
+		}
 	,	"PostgreSQL":
 		{	"title": "PostgreSQL (topic)"
 		,	"parent": "Database"

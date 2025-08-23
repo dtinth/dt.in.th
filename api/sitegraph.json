@@ -2476,6 +2476,10 @@
 				}
 			]
 		}
+	,	"Pomodoro":
+		{	"title": "Pomodoro Timer"
+		,	"links": []
+		}
 	,	"PostgreSQL":
 		{	"title": "PostgreSQL (topic)"
 		,	"links":
@@ -2913,6 +2917,8 @@
 			,	{	"link": "PasteImage"
 				}
 			,	{	"link": "RandomPort"
+				}
+			,	{	"link": "Pomodoro"
 				}
 			,	{	"link": "PointerEventsTester"
 				}

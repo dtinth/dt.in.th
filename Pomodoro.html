@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html data-precompiled=true lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro | notes.dt.in.th</title><style id="note-styles">#pomodoro .time[data-v-8c9498c0] {
+  font-size: 8rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  color: #888;
+  transition: color 0.2s ease;
+}
+#pomodoro button.btn[data-v-8c9498c0] {
+  padding: 0.3rem 0.5rem;
+}
+#pomodoro .time.yellow[data-v-8c9498c0] { color: #d4c34f;
+}
+#pomodoro .time.red[data-v-8c9498c0] { color: #e05d48;
+}
+#pomodoro .time.urgent[data-v-8c9498c0] { color: #ff3b30;
+}
+#pomodoro button.btn[data-v-8c9498c0]:disabled { opacity: 0.4; cursor: default;
+}
+#pomodoro .colon[data-v-8c9498c0] { opacity: 0.7;
+}
+
+/* layer: default */
+.visible[data-v-8c9498c0]{visibility:visible;}
+.ms[data-v-8c9498c0]{margin-inline-start:1rem;}
+.hidden[data-v-8c9498c0]{display:none;}
+.tabular-nums[data-v-8c9498c0]{--un-numeric-spacing:tabular-nums;font-variant-numeric:var(--un-ordinal) var(--un-slashed-zero) var(--un-numeric-figure) var(--un-numeric-spacing) var(--un-numeric-fraction);}
+.transition[data-v-8c9498c0]{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}
+.ease[data-v-8c9498c0]{transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);}</style>
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
+      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
+      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" crossorigin src="/runtime/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
+    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+  </head>
+  <body class="bg-#252423 text-#e9e8e7 antialiased">
+    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
+      <div class="flex items-center pl-[18px] flex-none">
+        <a
+          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
+          href="/"
+          >notes.dt.in.th</a
+        >
+      </div>
+      <div
+        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
+        id="headerMiddle"
+      >
+        <div class="px-2 flex-none">›</div><div class="truncate"><a title="Tools (topic)" href="Tools">Tools</a></div>
+      </div>
+      <div
+        class="flex items-center px-[18px] flex-none gap-4"
+        id="headerToolbar"
+      ></div>
+    </header>
+    <div class="h-entry">
+      <main class="bg-#353433" id="main">
+        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+          <div class="prose e-content" id="noteContents"><!-- Compilation unsuccessful --></div>
+        </div>
+      </main>
+      <footer>
+        <div
+          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
+          id="footerContents"
+        >
+          <notes-page-footer></notes-page-footer>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});/* Analyzed bindings: {
+  "mm": "setup-maybe-ref",
+  "ss": "setup-maybe-ref",
+  "start": "setup-maybe-ref",
+  "pause": "setup-maybe-ref",
+  "reset": "setup-maybe-ref",
+  "toggleLength": "setup-maybe-ref",
+  "running": "setup-maybe-ref",
+  "colourClass": "setup-maybe-ref",
+  "blinkStyle": "setup-maybe-ref",
+  "lengthLabel": "setup-maybe-ref"
+} */
+
+const __sfc__ = {
+  setup() {
+    // Configuration lengths (ms)
+    const lengths = [25 * 60 * 1000, 5 * 60 * 1000]; // focus, short break
+    const lengthIndex = Vue.ref(0);
+    const currentLength = Vue.computed(() => lengths[lengthIndex.value]);
+
+    // Reactive state
+    const targetTime = Vue.ref(null); // epoch ms when timer ends
+    const remainingMs = Vue.ref(currentLength.value);
+    const running = Vue.ref(false);
+    const wakeLock = Vue.ref(null);
+    let rafId = null;
+
+    const fiveMinutes = 5 * 60 * 1000;
+    const oneMinute = 60 * 1000;
+    const tenSeconds = 10 * 1000;
+
+    function computeRemaining() {
+      if (!running.value || !targetTime.value) return remainingMs.value;
+      const now = Date.now();
+      const remain = targetTime.value - now;
+      remainingMs.value = remain > 0 ? remain : 0;
+      if (remain <= 0) {
+        stopInternal();
+      }
+      return remainingMs.value;
+    }
+
+    function tick() {
+      computeRemaining();
+      if (running.value) {
+        rafId = requestAnimationFrame(tick); // smooth + low overhead
+      }
+    }
+
+    function requestWakeLock() {
+      if ('wakeLock' in navigator) {
+        navigator.wakeLock.request('screen').then(lock => {
+          wakeLock.value = lock;
+          lock.addEventListener('release', () => {
+            wakeLock.value = null;
+          });
+        }).catch(() => {});
+      }
+    }
+    function releaseWakeLock() {
+      if (wakeLock.value) {
+        wakeLock.value.release().catch(() => {});
+        wakeLock.value = null;
+      }
+    }
+
+    function start() {
+      if (running.value) return;
+      const base = remainingMs.value; // remaining from pause or full length
+      targetTime.value = Date.now() + base;
+      running.value = true;
+      requestWakeLock();
+      tick();
+    }
+    function stopInternal() {
+      running.value = false;
+      releaseWakeLock();
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = null;
+    }
+    function pause() {
+      if (!running.value) return;
+      computeRemaining();
+      stopInternal();
+    }
+    function reset() {
+      stopInternal();
+      remainingMs.value = currentLength.value;
+      targetTime.value = null;
+    }
+    function toggleLength() {
+      const wasRunning = running.value;
+      pause();
+      lengthIndex.value = (lengthIndex.value + 1) % lengths.length;
+      remainingMs.value = currentLength.value;
+      if (wasRunning) start();
+    }
+
+    // Formatters
+    const mm = Vue.computed(() => {
+      const m = Math.floor(remainingMs.value / 60000);
+      return String(m).padStart(2, '0');
+    });
+    const ss = Vue.computed(() => {
+      const s = Math.floor((remainingMs.value % 60000) / 1000);
+      return String(s).padStart(2, '0');
+    });
+
+    // Colour / style logic
+    const colourClass = Vue.computed(() => {
+      if (remainingMs.value <= tenSeconds) return 'urgent';
+      if (remainingMs.value <= oneMinute) return 'red';
+      if (remainingMs.value <= fiveMinutes) return 'yellow';
+      return 'normal';
+    });
+
+    const blinkStyle = Vue.computed(() => {
+      // Final 10s continuous blink
+      if (remainingMs.value <= tenSeconds && remainingMs.value > 0) {
+        const visible = Math.floor(remainingMs.value / 500) % 2 === 0;
+        return { visibility: visible ? 'visible' : 'hidden' };
+      }
+      // Every minute's :59 and :58 seconds below 5 minutes
+      if (remainingMs.value < fiveMinutes && remainingMs.value > tenSeconds) {
+        const sec = parseInt(ss.value, 10);
+        if (sec === 59) {
+          // quick blink during those two seconds
+          const visible = (remainingMs.value % 500) > 250; // hide first half each 500ms
+          return { visibility: visible ? 'visible' : 'hidden' };
+        }
+      }
+      return {};
+    });
+
+    const lengthLabel = Vue.computed(() => lengthIndex.value === 0 ? '25/5 ↺' : 'Break 5m');
+
+    // Update document title once per second
+    let titleInterval = null;
+    const updateTitle = () => {
+      if (remainingMs.value === 0) {
+        document.title = `Done · Pomodoro`;
+        return;
+      }
+      const label = `${mm.value}:${ss.value}`;
+      document.title = running.value ? `${label} · Pomodoro` : `⏸ ${label} · Pomodoro`;
+    };
+    function startTitleUpdates() {
+      if (titleInterval) return;
+      updateTitle();
+      titleInterval = setInterval(updateTitle, 1000);
+    }
+    function stopTitleUpdates() {
+      if (titleInterval) { clearInterval(titleInterval); titleInterval = null; }
+      updateTitle();
+    }
+
+    // Handle visibility (reacquire wake lock if needed)
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible' && running.value && !wakeLock.value) {
+        requestWakeLock();
+      }
+    });
+
+    // Watches
+    Vue.watch(running, (val) => {
+      if (val) startTitleUpdates(); else stopTitleUpdates();
+    }, { immediate: true });
+    Vue.watch(remainingMs, () => updateTitle());
+
+    // Initialize
+    reset();
+
+    return { mm, ss, start, pause, reset, toggleLength, running, colourClass, blinkStyle, lengthLabel };
+  }
+}
+;
+var _vue = require('vue');
+
+const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
+const _hoisted_1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "h1", { id: "pomodoro-timer" }, [
+  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
+    "aria-hidden": "true",
+    tabindex: "-1",
+    href: "#pomodoro-timer"
+  }, [
+    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+  ]),
+  /*#__PURE__*/_vue.createTextVNode.call(void 0, "Pomodoro Timer")
+], -1 /* HOISTED */))
+const _hoisted_2 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "colon" }, ":", -1 /* HOISTED */))
+const _hoisted_3 = { style: {"margin":"1rem 0","display":"flex","gap":"0.5rem","justify-content":"center","flex-wrap":"wrap"} }
+const _hoisted_4 = ["disabled"]
+const _hoisted_5 = ["disabled"]
+const _hoisted_6 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "details", null, [
+  /*#__PURE__*/_vue.createElementVNode.call(void 0, "summary", null, "About this tool"),
+  /*#__PURE__*/_vue.createElementVNode.call(void 0, "ul", null, [
+    /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, "A super minimal Pomodoro timer I can pop open in a tab."),
+    /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, "Keeps the screen awake while running.")
+  ])
+], -1 /* HOISTED */))
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
+    _hoisted_1,
+    _vue.createElementVNode.call(void 0, "div", {
+      id: "pomodoro",
+      class: _vue.normalizeClass.call(void 0, _ctx.stateClass),
+      style: {"text-align":"center","margin":"4rem 0 6rem"}
+    }, [
+      _vue.createElementVNode.call(void 0, "div", {
+        class: _vue.normalizeClass.call(void 0, ["time", $setup.colourClass]),
+        style: _vue.normalizeStyle.call(void 0, $setup.blinkStyle)
+      }, [
+        _vue.createTextVNode.call(void 0, _vue.toDisplayString.call(void 0, $setup.mm), 1 /* TEXT */),
+        _hoisted_2,
+        _vue.createTextVNode.call(void 0, _vue.toDisplayString.call(void 0, $setup.ss), 1 /* TEXT */)
+      ], 6 /* CLASS, STYLE */),
+      _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
+        _vue.createElementVNode.call(void 0, "button", {
+          class: "btn",
+          onClick: _cache[0] || (_cache[0] = (...args) => ($setup.start && $setup.start(...args))),
+          disabled: $setup.running
+        }, "Start", 8 /* PROPS */, _hoisted_4),
+        _vue.createElementVNode.call(void 0, "button", {
+          class: "btn",
+          onClick: _cache[1] || (_cache[1] = (...args) => ($setup.pause && $setup.pause(...args))),
+          disabled: !$setup.running
+        }, "Pause", 8 /* PROPS */, _hoisted_5),
+        _vue.createElementVNode.call(void 0, "button", {
+          class: "btn",
+          onClick: _cache[2] || (_cache[2] = (...args) => ($setup.reset && $setup.reset(...args)))
+        }, "Reset"),
+        _vue.createElementVNode.call(void 0, "button", {
+          class: "btn",
+          onClick: _cache[3] || (_cache[3] = (...args) => ($setup.toggleLength && $setup.toggleLength(...args)))
+        }, _vue.toDisplayString.call(void 0, $setup.lengthLabel), 1 /* TEXT */)
+      ])
+    ], 2 /* CLASS */),
+    _hoisted_6
+  ], 64 /* STABLE_FRAGMENT */))
+}
+__sfc__.render = render
+__sfc__.__scopeId = "data-v-8c9498c0"
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"title":"Pomodoro Timer","public":true};
+</script>
+  </body>
+</html>
