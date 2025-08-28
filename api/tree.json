@@ -1039,6 +1039,10 @@
 		{	"title": "Playwright (topic)"
 		,	"parent": "JavaScript"
 		}
+	,	"PlaywrightAccessibleTestReports":
+		{	"title": "Making Playwright test reports easily accessible from GitHub Actions"
+		,	"parent": "GitHubActions"
+		}
 	,	"PlaywrightOfflineFirstTest":
 		{	"title": "Testing that PWAs work offline using Playwright"
 		,	"parent": "PWA"

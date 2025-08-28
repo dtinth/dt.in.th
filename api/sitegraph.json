@@ -1337,6 +1337,8 @@
 				}
 			,	{	"link": "GitHub"
 				}
+			,	{	"link": "PlaywrightAccessibleTestReports"
+				}
 			,	{	"link": "GitHubActionsLinodeObjectStorageUpload"
 				}
 			,	{	"link": "GitHubActionsPushAsGitHubApp"
@@ -2432,13 +2434,28 @@
 	,	"Playwright":
 		{	"title": "Playwright (topic)"
 		,	"links":
-			[	{	"link": "PlaywrightOfflineFirstTest"
+			[	{	"link": "PlaywrightAccessibleTestReports"
+				}
+			,	{	"link": "PlaywrightOfflineFirstTest"
 				}
 			,	{	"link": "CodespacesDisplayServer"
 				}
 			,	{	"link": "Codespaces"
 				}
 			,	{	"link": "PlaywrightPageObject"
+				}
+			]
+		}
+	,	"PlaywrightAccessibleTestReports":
+		{	"title": "Making Playwright test reports easily accessible from GitHub Actions"
+		,	"links":
+			[	{	"link": "Playwright"
+				}
+			,	{	"link": "GitHubActions"
+				}
+			,	{	"link": "#user-content-fn-inconvenience"
+				}
+			,	{	"link": "#user-content-fnref-inconvenience"
 				}
 			]
 		}
