@@ -126,6 +126,7 @@ https://notes.dt.in.th/Database
 https://notes.dt.in.th/Deno
 https://notes.dt.in.th/DenoMinioPresignedGet
 https://notes.dt.in.th/DependabotAutoMerge
+https://notes.dt.in.th/DigitalGardening
 https://notes.dt.in.th/Discord
 https://notes.dt.in.th/DiscordThaiCombiningMarks
 https://notes.dt.in.th/DiscordThaiMessage
@@ -205,6 +206,7 @@ https://notes.dt.in.th/LocalTalkInternationalization
 https://notes.dt.in.th/MacOS
 https://notes.dt.in.th/MacOSOCR
 https://notes.dt.in.th/MacOSSmartQuotesInWindows
+https://notes.dt.in.th/ManagingKnowledgePublicly
 https://notes.dt.in.th/Markdown
 https://notes.dt.in.th/MinioJS
 https://notes.dt.in.th/Mise

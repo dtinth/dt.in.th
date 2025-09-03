@@ -1015,6 +1015,19 @@
 				}
 			]
 		}
+	,	"DigitalGardening":
+		{	"title": "Digital Gardening (topic)"
+		,	"links":
+			[	{	"link": "ManagingKnowledgePublicly"
+				}
+			,	{	"link": "IndieWeb"
+				}
+			,	{	"link": "Learning"
+				}
+			,	{	"link": "Productivity"
+				}
+			]
+		}
 	,	"Discord":
 		{	"title": "Discord (topic)"
 		,	"links":
@@ -1553,6 +1566,8 @@
 				}
 			,	{	"link": "Database"
 				}
+			,	{	"link": "DigitalGardening"
+				}
 			,	{	"link": "Discord"
 				}
 			,	{	"link": "Docker"
@@ -1642,6 +1657,8 @@
 			[	{	"link": "20210101T090414Z5626"
 				}
 			,	{	"link": "20201208T165017Z7657"
+				}
+			,	{	"link": "DigitalGardening"
 				}
 			]
 		}
@@ -1950,6 +1967,23 @@
 			,	{	"link": "#user-content-fn-nosmart"
 				}
 			,	{	"link": "#user-content-fnref-nosmart"
+				}
+			]
+		}
+	,	"ManagingKnowledgePublicly":
+		{	"title": "Managing Knowledge Publicly: Unlocking Unexpected Growth"
+		,	"links":
+			[	{	"link": "DigitalGardening"
+				}
+			,	{	"link": "AboutNotes"
+				}
+			,	{	"link": "HomePage"
+				}
+			,	{	"link": "MongoDBAuthSource"
+				}
+			,	{	"link": "InstallGcloudCliOnCodespaces"
+				}
+			,	{	"link": "NotebookLMSummarizationPrompt"
 				}
 			]
 		}

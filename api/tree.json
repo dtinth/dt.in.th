@@ -512,6 +512,10 @@
 		{	"title": "Auto-merging dependabot PRs"
 		,	"parent": "GitHubActions"
 		}
+	,	"DigitalGardening":
+		{	"title": "Digital Gardening (topic)"
+		,	"parent": "HomePage"
+		}
 	,	"Discord":
 		{	"title": "Discord (topic)"
 		,	"parent": "HomePage"
@@ -826,6 +830,10 @@
 	,	"MacOSSmartQuotesInWindows":
 		{	"title": "Using macOS's dashes and smart quotes shortcuts in Windows"
 		,	"parent": "MacOS"
+		}
+	,	"ManagingKnowledgePublicly":
+		{	"title": "Managing Knowledge Publicly: Unlocking Unexpected Growth"
+		,	"parent": "DigitalGardening"
 		}
 	,	"Markdown":
 		{	"title": "Markdown (topic)"
