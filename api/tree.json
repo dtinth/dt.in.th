@@ -304,10 +304,6 @@
 		{	"title": "Adding Bootstrap CSS to Next.js application"
 		,	"parent": "CSS"
 		}
-	,	"20220907T163410Z4258":
-		{	"title": "VS Code REST Client snippets"
-		,	"parent": "VSCode"
-		}
 	,	"20220923T125342Z4946":
 		{	"title": "Recording screen in Linux using ffmpeg"
 		,	"parent": "Linux"
@@ -823,6 +819,10 @@
 		{	"title": "Local talk internationalization"
 		,	"parent": "Recent"
 		}
+	,	"LowEffortMaintainability":
+		{	"title": "Low-effort things you can do today to improve code maintainability a year later."
+		,	"parent": "SoftwareEngineering"
+		}
 	,	"MacOS":
 		{	"title": "macOS (topic)"
 		,	"parent": "HomePage"
@@ -1047,6 +1047,10 @@
 		{	"title": "A logger module based on pino… Usually I put this in src/packlets/logger/index.ts"
 		,	"parent": "Pino"
 		}
+	,	"PlayByEar":
+		{	"title": "How I play music by ear"
+		,	"parent": "Music"
+		}
 	,	"Playwright":
 		{	"title": "Playwright (topic)"
 		,	"parent": "JavaScript"
@@ -1217,7 +1221,7 @@
 		}
 	,	"Svelte":
 		{	"title": "Svelte (topic)"
-		,	"parent": "HomePage"
+		,	"parent": "JavaScript"
 		}
 	,	"SvelteKitPureESM":
 		{	"title": "Fixing SvelteKit problem not able to require pure-ES module packages"
@@ -1293,6 +1297,10 @@
 		}
 	,	"VSCodeKeybindings":
 		{	"title": "My VS Code snippets keyboard shortcuts (keybindings)"
+		,	"parent": "VSCode"
+		}
+	,	"VSCodeREST":
+		{	"title": "VS Code REST Client snippets"
 		,	"parent": "VSCode"
 		}
 	,	"VanityEd25519SSHKey":

@@ -74,7 +74,6 @@ https://notes.dt.in.th/20220725T110808Z6212
 https://notes.dt.in.th/20220817T202304Z1234
 https://notes.dt.in.th/20220823T084141Z6586
 https://notes.dt.in.th/20220907T134709Z7128
-https://notes.dt.in.th/20220907T163410Z4258
 https://notes.dt.in.th/20220923T125342Z4946
 https://notes.dt.in.th/20221010T053934Z5044
 https://notes.dt.in.th/20221015T091530Z4968
@@ -204,6 +203,7 @@ https://notes.dt.in.th/Linux
 https://notes.dt.in.th/LinuxAddUser
 https://notes.dt.in.th/LinuxZram
 https://notes.dt.in.th/LocalTalkInternationalization
+https://notes.dt.in.th/LowEffortMaintainability
 https://notes.dt.in.th/MacOS
 https://notes.dt.in.th/MacOSOCR
 https://notes.dt.in.th/MacOSSmartQuotesInWindows
@@ -260,6 +260,7 @@ https://notes.dt.in.th/PersonalPuppeteer
 https://notes.dt.in.th/PianoMajorScaleTrainer
 https://notes.dt.in.th/Pino
 https://notes.dt.in.th/PinoLogger
+https://notes.dt.in.th/PlayByEar
 https://notes.dt.in.th/Playwright
 https://notes.dt.in.th/PlaywrightAccessibleTestReports
 https://notes.dt.in.th/PlaywrightOfflineFirstTest
@@ -322,6 +323,7 @@ https://notes.dt.in.th/Typography
 https://notes.dt.in.th/Uses
 https://notes.dt.in.th/VSCode
 https://notes.dt.in.th/VSCodeKeybindings
+https://notes.dt.in.th/VSCodeREST
 https://notes.dt.in.th/VanityEd25519SSHKey
 https://notes.dt.in.th/Vercel
 https://notes.dt.in.th/VirtualDesktop

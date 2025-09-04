@@ -535,13 +535,6 @@
 				}
 			]
 		}
-	,	"20220907T163410Z4258":
-		{	"title": "VS Code REST Client snippets"
-		,	"links":
-			[	{	"link": "VSCode"
-				}
-			]
-		}
 	,	"20220923T125342Z4946":
 		{	"title": "Recording screen in Linux using ffmpeg"
 		,	"links":
@@ -1629,8 +1622,6 @@
 				}
 			,	{	"link": "SoftwareEngineering"
 				}
-			,	{	"link": "Svelte"
-				}
 			,	{	"link": "Tools"
 				}
 			,	{	"link": "Typography"
@@ -1830,6 +1821,8 @@
 				}
 			,	{	"link": "React"
 				}
+			,	{	"link": "Svelte"
+				}
 			,	{	"link": "TypeScript"
 				}
 			,	{	"link": "Vite"
@@ -1958,6 +1951,25 @@
 		{	"title": "Local talk internationalization"
 		,	"links": []
 		}
+	,	"LowEffortMaintainability":
+		{	"title": "Low-effort things you can do today to improve code maintainability a year later."
+		,	"links":
+			[	{	"link": "SoftwareEngineering"
+				}
+			,	{	"link": "#user-content-fn-why-selenium"
+				}
+			,	{	"link": "#user-content-fn-tdd"
+				}
+			,	{	"link": "#user-content-fn-renderchart"
+				}
+			,	{	"link": "#user-content-fnref-why-selenium"
+				}
+			,	{	"link": "#user-content-fnref-tdd"
+				}
+			,	{	"link": "#user-content-fnref-renderchart"
+				}
+			]
+		}
 	,	"MacOS":
 		{	"title": "macOS (topic)"
 		,	"links":
@@ -2077,6 +2089,8 @@
 		{	"title": "Music (topic)"
 		,	"links":
 			[	{	"link": "PianoMajorScaleTrainer"
+				}
+			,	{	"link": "PlayByEar"
 				}
 			]
 		}
@@ -2484,6 +2498,19 @@
 				}
 			]
 		}
+	,	"PlayByEar":
+		{	"title": "How I play music by ear"
+		,	"links":
+			[	{	"link": "#user-content-fn-sightread"
+				}
+			,	{	"link": "#user-content-fn-melody"
+				}
+			,	{	"link": "#user-content-fnref-sightread"
+				}
+			,	{	"link": "#user-content-fnref-melody"
+				}
+			]
+		}
 	,	"Playwright":
 		{	"title": "Playwright (topic)"
 		,	"links":
@@ -2858,7 +2885,9 @@
 	,	"SoftwareEngineering":
 		{	"title": "Software Engineering (topic)"
 		,	"links":
-			[	{	"link": "ContinuousDelivery"
+			[	{	"link": "LowEffortMaintainability"
+				}
+			,	{	"link": "ContinuousDelivery"
 				}
 			,	{	"link": "ContinuousIntegration"
 				}
@@ -3075,12 +3104,19 @@
 				}
 			,	{	"link": "VSCodeKeybindings"
 				}
-			,	{	"link": "20220907T163410Z4258"
+			,	{	"link": "VSCodeREST"
 				}
 			]
 		}
 	,	"VSCodeKeybindings":
 		{	"title": "My VS Code snippets keyboard shortcuts (keybindings)"
+		,	"links":
+			[	{	"link": "VSCode"
+				}
+			]
+		}
+	,	"VSCodeREST":
+		{	"title": "VS Code REST Client snippets"
 		,	"links":
 			[	{	"link": "VSCode"
 				}
