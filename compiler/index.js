@@ -3,7 +3,7 @@ import { c as O, p as R } from "./unocss_BHFsKZqx.js";
 import { r as M, a as q, b as G, c as V } from "./rehype-plugins_BbrP8Grd.js";
 import { a as w } from "./sucrase_Vx5h13n5.js";
 import { r as W } from "./gray-matter_DUytiCZw.js";
-import { m as A, g as z, a as $, b as N, d as P, e as L, f as U, h as Y, i as Q } from "./micromark_CAniCe8D.js";
+import { m as A, g as $, a as z, b as N, d as P, e as L, f as U, h as Y, i as Q } from "./micromark_CAniCe8D.js";
 import { r as J } from "./rehype_CFsT5uBQ.js";
 import { l as X } from "./shiki-langs_DnE6IOY8.js";
 import { c as K, g as Z } from "./shiki_CE0IyDxo.js";
@@ -91,8 +91,8 @@ async function ue(o, r = () => {
       Q()
     ],
     htmlExtensions: [
-      z(),
       $(),
+      z(),
       N(),
       P({
         lead: function(e) {
@@ -137,6 +137,11 @@ async function ue(o, r = () => {
         danger: c("Danger"),
         details: function(e) {
           return e.type !== "containerDirective" ? !1 : (this.tag("<details>"), this.tag("<summary>"), this.raw(e.label || "Details"), this.tag("</summary>"), e.content && this.raw(e.content), this.tag("</details>"), !0);
+        },
+        figure: function(e) {
+          if (e.type !== "containerDirective") return !1;
+          let d = "";
+          return e.attributes?.class && (d += ` class="${e.attributes.class}"`), this.tag("<figure" + d + ">"), e.content && this.raw(e.content), e.label && (this.tag("<figcaption>"), this.raw(e.label), this.tag("</figcaption>")), this.tag("</figure>"), !0;
         },
         "*": function(e) {
           return e.content && this.raw(e.content), !0;
