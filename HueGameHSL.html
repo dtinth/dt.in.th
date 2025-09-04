@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html data-precompiled=true lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hue Game (HSL) | notes.dt.in.th</title><meta property="og:title" content="Hue Game (HSL)" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/HueGameHSL" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://notes.dt.in.th/HueGameHSL" data-source="note"><style id="note-styles">.n-huegame-cheatsheet-item[data-v-8c9498c0] {
+    color: hsl(var(--hue),64%,64%);
+    border: 1px solid hsl(var(--hue),64%,64%);
+    padding: 0.25em 0.5em;
+    font-weight: bold;
+}
+.n-huegame-question[data-v-8c9498c0] {
+    height: 128px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #252423;
+    border: 2px solid #656463;
+    position: relative;
+}
+.n-huegame-question.is-loaded[data-v-8c9498c0] {
+    background: hsl(var(--hue),100%,32%);
+    border: 2px solid hsl(var(--hue),64%,64%);
+}
+
+/* layer: default */
+.absolute[data-v-8c9498c0]{position:absolute;}
+.relative[data-v-8c9498c0]{position:relative;}
+.flex[data-v-8c9498c0]{display:flex;}
+.flex-wrap[data-v-8c9498c0]{flex-wrap:wrap;}
+.gap-2[data-v-8c9498c0]{gap:0.5rem;}
+.border[data-v-8c9498c0]{border-width:1px;}</style>
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><h1 id="hue-game-hsl" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#hue-game-hsl" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Hue Game (HSL)</h1><div class="lead" data-v-8c9498c0><p data-v-8c9498c0>It can be useful to have a mental mapping of <strong data-v-8c9498c0>what hue values correspond to what colors.</strong> This game is designed to help you learn that mapping.</p></div><details id="huegame-cheat-sheet" open data-v-8c9498c0><summary data-v-8c9498c0>How to play &amp; cheat sheet</summary><ul data-v-8c9498c0><li data-v-8c9498c0><p data-v-8c9498c0>Once you start the game, you will see a color. Guess the hue value of that color.</p></li><li data-v-8c9498c0><p data-v-8c9498c0>The hue values are in degrees, from 0 to 360. In this game, they are always multiples of 30. Therefore, there are 12 possible values:</p><div style="display:flex;flex-wrap:wrap;gap:0.5em;" data-v-8c9498c0><!--[--><span class="n-huegame-cheatsheet-item" style="--hue:0;" data-v-8c9498c0>0</span><span class="n-huegame-cheatsheet-item" style="--hue:30;" data-v-8c9498c0>30</span><span class="n-huegame-cheatsheet-item" style="--hue:60;" data-v-8c9498c0>60</span><span class="n-huegame-cheatsheet-item" style="--hue:90;" data-v-8c9498c0>90</span><span class="n-huegame-cheatsheet-item" style="--hue:120;" data-v-8c9498c0>120</span><span class="n-huegame-cheatsheet-item" style="--hue:150;" data-v-8c9498c0>150</span><span class="n-huegame-cheatsheet-item" style="--hue:180;" data-v-8c9498c0>180</span><span class="n-huegame-cheatsheet-item" style="--hue:210;" data-v-8c9498c0>210</span><span class="n-huegame-cheatsheet-item" style="--hue:240;" data-v-8c9498c0>240</span><span class="n-huegame-cheatsheet-item" style="--hue:270;" data-v-8c9498c0>270</span><span class="n-huegame-cheatsheet-item" style="--hue:300;" data-v-8c9498c0>300</span><span class="n-huegame-cheatsheet-item" style="--hue:330;" data-v-8c9498c0>330</span><!--]--></div></li></ul></details><!----><div class="n-huegame-question" data-v-8c9498c0><span data-v-8c9498c0><!----><!--[--> Loading... <!--]--></span></div><p data-v-8c9498c0><label data-v-8c9498c0><strong data-v-8c9498c0>Answer in the box below:</strong> <input id="huegame-answer-box" value="" class="form-control" data-v-8c9498c0></label></p><p data-v-8c9498c0> …or use these buttons: <span class="flex gap-2 flex-wrap" data-v-8c9498c0><!--[--><button class="btn" style="padding:10px 16px;" data-v-8c9498c0>0</button><button class="btn" style="padding:10px 16px;" data-v-8c9498c0>30</button><button class="btn" style="padding:10px 16px;" data-v-8c9498c0>60</button><button class="btn" style="padding:10px 16px;" data-v-8c9498c0>90</button><button class="btn" style="padding:10px 16px;" data-v-8c9498c0>120</button><button class="btn" style="padding:10px 16px;" data-v-8c9498c0>150</button><button class="btn" style="padding:10px 16px;" data-v-8c9498c0>180</button><button class="btn" style="padding:10px 16px;" data-v-8c9498c0>210</button><button class="btn" style="padding:10px 16px;" data-v-8c9498c0>240</button><button class="btn" style="padding:10px 16px;" data-v-8c9498c0>270</button><button class="btn" style="padding:10px 16px;" data-v-8c9498c0>300</button><button class="btn" style="padding:10px 16px;" data-v-8c9498c0>330</button><!--]--></span></p><p data-v-8c9498c0><progress max="24" value="0" style="box-sizing:border-box;width:100%;" data-v-8c9498c0></progress></p><h2 id="play-history" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#play-history" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Play history</h2><p data-v-8c9498c0>Your play history is shown below.</p><pre data-v-8c9498c0><code data-v-8c9498c0>Play history</code></pre><p class="flex gap-2 flex-wrap" data-v-8c9498c0><button class="btn" data-v-8c9498c0>Clear history</button><button class="btn" data-v-8c9498c0>Copy history to clipboard</button></p><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});/* Analyzed bindings: {
+  "question": "setup-maybe-ref",
+  "answer": "setup-maybe-ref",
+  "start": "setup-maybe-ref",
+  "loaded": "setup-maybe-ref",
+  "history": "setup-maybe-ref",
+  "hues": "setup-maybe-ref",
+  "clearHistory": "setup-maybe-ref",
+  "copyHistory": "setup-maybe-ref",
+  "progress": "setup-maybe-ref"
+} */
+
+  const __sfc__ = {
+    setup() {
+      let nextQuestionNumber = 1
+      const question = Vue.ref(null);
+      const answer = Vue.ref('');
+      const loaded = Vue.ref(false);
+      const progress = Vue.ref(0);
+      const history = Vue.ref('Play history')
+      const hues = Array.from({ length: 12 }, (_, i) => i * 30)
+      let playHistory
+      let bag = []
+      let lastTime
+      const randomHue = () => {
+        if (bag.length === 0) {
+          bag = Array.from({ length: 24 }, (_, i) => ({ hue: i * 30 % 360, score: Math.random() }))
+            .sort((a, b) => a.score - b.score)
+            .map((x) => x.hue)
+        }
+        return bag.shift()
+      };
+      const normalize = (value) => {
+        let n = +`${value}`.trim()
+        if (n < 0) n += 360
+        if (n >= 360) n -= 360
+        return n
+      }
+      const nextQuestion = () => {
+        if (lastTime) {
+          playHistory.log(question.value.num, lastTime, question.value.hue, Date.now())
+        }
+        question.value = { hue: randomHue(), num: nextQuestionNumber++ }
+        answer.value = ''
+        lastTime = Date.now()
+        progress.value = question.value.num === 1 ? 0 : ((question.value.num - 1) % 24) || 24
+      }
+      const createPlayHistory = () => {
+        let data = (localStorage.getItem('HueGameHSL:playHistory') || '').trim()
+        history.value = data || 'No history yet'
+        return {
+          log: (num, startTime, hue, endTime) => {
+            const time = endTime - startTime
+            const line = `num=${num} start=${startTime}, hue=${hue}, time=${time}`
+            data = `${line}\n${data}`.trim()
+            history.value = data
+            localStorage.setItem('HueGameHSL:playHistory', data)
+          }
+        }
+      }
+      const clearHistory = () => {
+        if (confirm('Your play history will be deleted. Are you sure?')) {
+          localStorage.removeItem('HueGameHSL:playHistory')
+          playHistory = createPlayHistory()
+        }
+      }
+      const copyHistory = async () => {
+        await navigator.clipboard.writeText(history.value)
+        alert('Copied to clipboard')
+      }
+      Vue.onMounted(() => {
+        loaded.value = true
+        playHistory = createPlayHistory()
+      });
+      Vue.watch(answer, (value) => {
+        if (value !== '' && normalize(value) === question.value.hue) {
+          nextQuestion()
+        }
+      });
+      const start = () => {
+        nextQuestion()
+        document.getElementById('huegame-answer-box').focus()
+        document.getElementById('huegame-cheat-sheet').open = false
+      }
+      return { question, answer, start, loaded, history, hues, clearHistory, copyHistory, progress }
+    }
+  }
+;
+var _vue = require('vue');
+
+const _hoisted_1 = {
+  id: "huegame-cheat-sheet",
+  open: ""
+}
+const _hoisted_2 = { style: {"display":"flex","flex-wrap":"wrap","gap":"0.5em"} }
+const _hoisted_3 = { style: {"position":"absolute","top":"4px","left":"8px","font-size":"75%"} }
+const _hoisted_4 = {
+  key: 1,
+  class: "n-huegame-question"
+}
+const _hoisted_5 = { class: "flex gap-2 flex-wrap" }
+const _hoisted_6 = ["onClick"]
+const _hoisted_7 = ["value"]
+const _hoisted_8 = { class: "flex gap-2 flex-wrap" }
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
+    _cache[11] || (_cache[11] = _vue.createElementVNode.call(void 0, "h1", { id: "hue-game-hsl" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#hue-game-hsl"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Hue Game (HSL)")
+    ], -1 /* CACHED */)),
+    _cache[12] || (_cache[12] = _vue.createElementVNode.call(void 0, "div", { class: "lead" }, [
+      _vue.createElementVNode.call(void 0, "p", null, [
+        _vue.createTextVNode.call(void 0, "It can be useful to have a mental mapping of "),
+        _vue.createElementVNode.call(void 0, "strong", null, "what hue values correspond to what colors."),
+        _vue.createTextVNode.call(void 0, " This game is designed to help you learn that mapping.")
+      ])
+    ], -1 /* CACHED */)),
+    _vue.createElementVNode.call(void 0, "details", _hoisted_1, [
+      _cache[6] || (_cache[6] = _vue.createElementVNode.call(void 0, "summary", null, "How to play & cheat sheet", -1 /* CACHED */)),
+      _vue.createElementVNode.call(void 0, "ul", null, [
+        _cache[5] || (_cache[5] = _vue.createElementVNode.call(void 0, "li", null, [
+          _vue.createElementVNode.call(void 0, "p", null, "Once you start the game, you will see a color. Guess the hue value of that color.")
+        ], -1 /* CACHED */)),
+        _vue.createElementVNode.call(void 0, "li", null, [
+          _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "p", null, "The hue values are in degrees, from 0 to 360. In this game, they are always multiples of 30. Therefore, there are 12 possible values:", -1 /* CACHED */)),
+          _vue.createElementVNode.call(void 0, "div", _hoisted_2, [
+            (_vue.openBlock.call(void 0, true), _vue.createElementBlock.call(void 0, _vue.Fragment, null, _vue.renderList.call(void 0, $setup.hues, (hue) => {
+              return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "span", {
+                class: "n-huegame-cheatsheet-item",
+                style: _vue.normalizeStyle.call(void 0, { '--hue': hue })
+              }, _vue.toDisplayString.call(void 0, hue), 5 /* TEXT, STYLE */))
+            }), 256 /* UNKEYED_FRAGMENT */))
+          ])
+        ])
+      ])
+    ]),
+    ($setup.question)
+      ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", {
+          key: 0,
+          class: "n-huegame-question is-loaded",
+          style: _vue.normalizeStyle.call(void 0, {'--hue': $setup.question.hue})
+        }, [
+          _vue.createElementVNode.call(void 0, "span", _hoisted_3, "Question no." + _vue.toDisplayString.call(void 0, $setup.question.num), 1 /* TEXT */)
+        ], 4 /* STYLE */))
+      : _vue.createCommentVNode.call(void 0, "v-if", true),
+    (!$setup.question)
+      ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_4, [
+          _vue.createElementVNode.call(void 0, "span", null, [
+            ($setup.loaded)
+              ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "button", {
+                  key: 0,
+                  onClick: _cache[0] || (_cache[0] = (...args) => ($setup.start && $setup.start(...args)))
+                }, [...(_cache[7] || (_cache[7] = [
+                  _vue.createElementVNode.call(void 0, "strong", null, "Start game", -1 /* CACHED */)
+                ]))]))
+              : _vue.createCommentVNode.call(void 0, "v-if", true),
+            (!$setup.loaded)
+              ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, { key: 1 }, [
+                  _vue.createTextVNode.call(void 0, " Loading... ")
+                ], 64 /* STABLE_FRAGMENT */))
+              : _vue.createCommentVNode.call(void 0, "v-if", true)
+          ])
+        ]))
+      : _vue.createCommentVNode.call(void 0, "v-if", true),
+    _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createElementVNode.call(void 0, "label", null, [
+        _cache[8] || (_cache[8] = _vue.createElementVNode.call(void 0, "strong", null, "Answer in the box below:", -1 /* CACHED */)),
+        _cache[9] || (_cache[9] = _vue.createTextVNode.call(void 0, )),
+        _vue.withDirectives.call(void 0, _vue.createElementVNode.call(void 0, "input", {
+          id: "huegame-answer-box",
+          "onUpdate:modelValue": _cache[1] || (_cache[1] = $event => (($setup.answer) = $event)),
+          class: "form-control"
+        }, null, 512 /* NEED_PATCH */), [
+          [_vue.vModelText, $setup.answer]
+        ])
+      ])
+    ]),
+    _vue.createElementVNode.call(void 0, "p", null, [
+      _cache[10] || (_cache[10] = _vue.createTextVNode.call(void 0, " …or use these buttons: ", -1 /* CACHED */)),
+      _vue.createElementVNode.call(void 0, "span", _hoisted_5, [
+        (_vue.openBlock.call(void 0, true), _vue.createElementBlock.call(void 0, _vue.Fragment, null, _vue.renderList.call(void 0, $setup.hues, (hue) => {
+          return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "button", {
+            class: "btn",
+            style: {"padding":"10px 16px"},
+            onClick: $event => ($setup.answer = String(hue))
+          }, _vue.toDisplayString.call(void 0, hue), 9 /* TEXT, PROPS */, _hoisted_6))
+        }), 256 /* UNKEYED_FRAGMENT */))
+      ])
+    ]),
+    _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createElementVNode.call(void 0, "progress", {
+        max: "24",
+        value: $setup.progress,
+        style: {"box-sizing":"border-box","width":"100%"}
+      }, null, 8 /* PROPS */, _hoisted_7)
+    ]),
+    _cache[13] || (_cache[13] = _vue.createElementVNode.call(void 0, "h2", { id: "play-history" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#play-history"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Play history")
+    ], -1 /* CACHED */)),
+    _cache[14] || (_cache[14] = _vue.createElementVNode.call(void 0, "p", null, "Your play history is shown below.", -1 /* CACHED */)),
+    _vue.createElementVNode.call(void 0, "pre", null, [
+      _vue.createElementVNode.call(void 0, "code", null, _vue.toDisplayString.call(void 0, $setup.history), 1 /* TEXT */)
+    ]),
+    _vue.createElementVNode.call(void 0, "p", _hoisted_8, [
+      _vue.createElementVNode.call(void 0, "button", {
+        class: "btn",
+        onClick: _cache[2] || (_cache[2] = (...args) => ($setup.clearHistory && $setup.clearHistory(...args)))
+      }, "Clear history"),
+      _vue.createElementVNode.call(void 0, "button", {
+        class: "btn",
+        onClick: _cache[3] || (_cache[3] = (...args) => ($setup.copyHistory && $setup.copyHistory(...args)))
+      }, "Copy history to clipboard")
+    ])
+  ], 64 /* STABLE_FRAGMENT */))
+}
+__sfc__.render = render
+__sfc__.__scopeId = "data-v-8c9498c0"
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"public":true,"title":"Hue Game (HSL)"};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

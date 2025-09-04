@@ -724,13 +724,20 @@
 				}
 			,	{	"link": "20230120T185403Z4057"
 				}
+			,	{	"link": "Colors"
+				}
 			,	{	"link": "TailwindCSS"
 				}
 			]
 		}
 	,	"CSSChangeColorOpacity":
 		{	"title": "Modifying the alpha channel of a color using CSS"
-		,	"links": []
+		,	"links":
+			[	{	"link": "Colors"
+				}
+			,	{	"link": "CSS"
+				}
+			]
 		}
 	,	"Caddy":
 		{	"title": "Caddy web server (topic)"
@@ -862,6 +869,21 @@
 			[	{	"link": "Codespaces"
 				}
 			,	{	"link": "CodespacesDisplayServer"
+				}
+			]
+		}
+	,	"Colors":
+		{	"title": "Colors (topic)"
+		,	"links":
+			[	{	"link": "OklchPlot"
+				}
+			,	{	"link": "OklabVisualizer"
+				}
+			,	{	"link": "HueGameHSL"
+				}
+			,	{	"link": "LCH"
+				}
+			,	{	"link": "CSSChangeColorOpacity"
 				}
 			]
 		}
@@ -1535,6 +1557,8 @@
 				}
 			,	{	"link": "CloudPlatform"
 				}
+			,	{	"link": "Colors"
+				}
 			,	{	"link": "CreativeCoding"
 				}
 			,	{	"link": "Creatorsgarten"
@@ -1600,6 +1624,10 @@
 			,	{	"link": "Windows"
 				}
 			]
+		}
+	,	"HueGameHSL":
+		{	"title": "Hue Game (HSL)"
+		,	"links": []
 		}
 	,	"IconifyUsage":
 		{	"title": "Using the Iconify Icon Web Component"

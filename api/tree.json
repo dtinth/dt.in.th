@@ -390,7 +390,7 @@
 		}
 	,	"CSSChangeColorOpacity":
 		{	"title": "Modifying the alpha channel of a color using CSS"
-		,	"parent": "CSS"
+		,	"parent": "Colors"
 		}
 	,	"Caddy":
 		{	"title": "Caddy web server (topic)"
@@ -443,6 +443,10 @@
 	,	"CodespacesGoogleChrome":
 		{	"title": "Installing Google Chrome on Codespaces (and also chromedriver)"
 		,	"parent": "Codespaces"
+		}
+	,	"Colors":
+		{	"title": "Colors (topic)"
+		,	"parent": "HomePage"
 		}
 	,	"ContinuousDelivery":
 		{	"title": "Continuous Delivery (topic)"
@@ -695,6 +699,10 @@
 	,	"HomePage":
 		{	"title": "notes.dt.in.th"
 		}
+	,	"HueGameHSL":
+		{	"title": "Hue Game (HSL)"
+		,	"parent": "Colors"
+		}
 	,	"IconifyUsage":
 		{	"title": "Using the Iconify Icon Web Component"
 		,	"parent": "WebComponents"
@@ -761,7 +769,7 @@
 		}
 	,	"LCH":
 		{	"title": "Using LCH colors"
-		,	"parent": "CreativeCoding"
+		,	"parent": "Colors"
 		}
 	,	"LargeLanguageModel":
 		{	"title": "Large Language Model (topic)"
@@ -981,11 +989,11 @@
 		}
 	,	"OklabVisualizer":
 		{	"title": "Oklab Visualizer"
-		,	"parent": "Tools"
+		,	"parent": "Colors"
 		}
 	,	"OklchPlot":
 		{	"title": "OKLCH Color Scale Plotter"
-		,	"parent": "Tools"
+		,	"parent": "Colors"
 		}
 	,	"OpenWebUILiteLLM":
 		{	"title": "Configuring Open WebUI and LiteLLM with Docker Compose to talk to OpenAI, Anthropic, Gemini, and Perplexity APIs"

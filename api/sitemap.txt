@@ -109,6 +109,7 @@ https://notes.dt.in.th/Codespaces
 https://notes.dt.in.th/CodespacesCloudflared
 https://notes.dt.in.th/CodespacesDisplayServer
 https://notes.dt.in.th/CodespacesGoogleChrome
+https://notes.dt.in.th/Colors
 https://notes.dt.in.th/ContinuousDelivery
 https://notes.dt.in.th/ContinuousIntegration
 https://notes.dt.in.th/CreativeCoding
@@ -172,6 +173,7 @@ https://notes.dt.in.th/HDRQRCode
 https://notes.dt.in.th/HTML
 https://notes.dt.in.th/Hardware
 https://notes.dt.in.th/HomePage
+https://notes.dt.in.th/HueGameHSL
 https://notes.dt.in.th/IconifyUsage
 https://notes.dt.in.th/IndieWeb
 https://notes.dt.in.th/Insta360LinkControllerWebSocketProtocol
