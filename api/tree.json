@@ -1,6 +1,10 @@
 
 {	"nodes":
-	{	"20180215T173000Z0223":
+	{	"422":
+		{	"title": 422
+		,	"parent": "Songs"
+		}
+	,	"20180215T173000Z0223":
 		{	"title": "ว่าด้วยเรื่องเป็นโปรแกรมเมอร์ทำงานหนัก จนไม่มีเวลาให้ตัวเองหรือคนอื่น"
 		,	"parent": "TypeScriptTestingInfrastructure"
 		}
@@ -348,6 +352,10 @@
 		{	"title": "Audio encoding benchmark with FFmpeg"
 		,	"parent": "Recent"
 		}
+	,	"AutoSynchro":
+		{	"title": "AUTO±SYNCHRO"
+		,	"parent": "Songs"
+		}
 	,	"Azure":
 		{	"title": "Azure (topic)"
 		,	"parent": "CloudPlatform"
@@ -364,6 +372,10 @@
 		{	"title": "A web-based printing tool for Brother P-touch series label printers"
 		,	"parent": "Tools"
 		}
+	,	"BubbleSortSong":
+		{	"title": "Bubble Sort Song"
+		,	"parent": "Songs"
+		}
 	,	"Bun":
 		{	"title": "Bun (topic)"
 		,	"parent": "JavaScript"
@@ -379,6 +391,22 @@
 	,	"BunQuickAndDirtyEndpoint":
 		{	"title": "Building a quick and dirty endpoint with Bun"
 		,	"parent": "Bun"
+		}
+	,	"BurstingMusicStar":
+		{	"title": "bursting☆music☆star"
+		,	"parent": "Songs"
+		}
+	,	"ButterFlyCoverCollab":
+		{	"title": "Butter-Fly (Digimon Tri Ver.) (Cover)"
+		,	"parent": "WebMIDICon"
+		}
+	,	"ByMySide":
+		{	"title": "BY☆MY☆SIDE"
+		,	"parent": "Songs"
+		}
+	,	"ByMySideAmbientHouseMix":
+		{	"title": "BY☆MY☆SIDE (Ambient House Mix)"
+		,	"parent": "Songs"
 		}
 	,	"CSS":
 		{	"title": "CSS (topic)"
@@ -528,6 +556,10 @@
 		{	"title": "How to retag a Docker image on a remote registry without pulling the image to local machine"
 		,	"parent": "Recent"
 		}
+	,	"DontWakeMeUpReRemix":
+		{	"title": "Don't Wake Me Up (iaht's Re-Remix)"
+		,	"parent": "Songs"
+		}
 	,	"Dotenv":
 		{	"title": ".env file"
 		,	"parent": "Shell"
@@ -559,6 +591,10 @@
 	,	"ElysiaRenderHtml":
 		{	"title": "How I render HTML in Elysia"
 		,	"parent": "Elysia"
+		}
+	,	"EverydayEvermore":
+		{	"title": "Everyday evermore"
+		,	"parent": "Songs"
 		}
 	,	"ExcalidrawSurfacePen":
 		{	"title": "Hacking Surface Pen’s eraser support into Excalidraw"
@@ -711,6 +747,10 @@
 		{	"title": "IndieWeb (topic)"
 		,	"parent": "HomePage"
 		}
+	,	"InsertionSortSong":
+		{	"title": "Insertion Sort Song"
+		,	"parent": "Songs"
+		}
 	,	"Insta360LinkControllerWebSocketProtocol":
 		{	"title": "Reverse-engineering Insta360 Link Controller WebSockets protocol"
 		,	"parent": "Hardware"
@@ -762,6 +802,10 @@
 	,	"JoseVerifyFirebaseIdToken":
 		{	"title": "Verifying Firebase ID tokens in Node.js without Firebase Admin SDK"
 		,	"parent": "Firebase"
+		}
+	,	"JustLookAtMyEyesBMS":
+		{	"title": "Just look at my eyes (bms edit)"
+		,	"parent": "Songs"
 		}
 	,	"KSortableUniqueID":
 		{	"title": "K-sortable unique ID formats (and generator)"
@@ -826,6 +870,10 @@
 	,	"Markdown":
 		{	"title": "Markdown (topic)"
 		,	"parent": "HomePage"
+		}
+	,	"MergeSortSong":
+		{	"title": "Merge Sort Song"
+		,	"parent": "Songs"
 		}
 	,	"MinioJS":
 		{	"title": "Minio JavaScript library snippets"
@@ -995,9 +1043,21 @@
 		{	"title": "OKLCH Color Scale Plotter"
 		,	"parent": "Colors"
 		}
+	,	"OnlyLoveRemix":
+		{	"title": "Only Love (Euphoric Trance Remix)"
+		,	"parent": "Songs"
+		}
+	,	"OpaqueSpace":
+		{	"title": "Opaque Space"
+		,	"parent": "Songs"
+		}
 	,	"OpenWebUILiteLLM":
 		{	"title": "Configuring Open WebUI and LiteLLM with Docker Compose to talk to OpenAI, Anthropic, Gemini, and Perplexity APIs"
 		,	"parent": "LargeLanguageModel"
+		}
+	,	"OverWhelmingJoy":
+		{	"title": "OVER-WHELMING JOY"
+		,	"parent": "Songs"
 		}
 	,	"PWA":
 		{	"title": "PWA (topic)"
@@ -1139,6 +1199,18 @@
 		{	"title": "Recent writings"
 		,	"parent": "HomePage"
 		}
+	,	"RecursiveDescentSong":
+		{	"title": "RECURSIVE DESCENT"
+		,	"parent": "Songs"
+		}
+	,	"Relive":
+		{	"title": "Relive"
+		,	"parent": "Songs"
+		}
+	,	"Reminiscentia":
+		{	"title": "Reminiscentia"
+		,	"parent": "Songs"
+		}
 	,	"ResticBackup":
 		{	"title": "Backing up a Linux cloud server with Restic"
 		,	"parent": "Recent"
@@ -1171,9 +1243,17 @@
 		{	"title": "Enumerable#take_while but inclusive"
 		,	"parent": "Ruby"
 		}
+	,	"RunningOut2015":
+		{	"title": "Running Out 2015"
+		,	"parent": "Songs"
+		}
 	,	"SDFTalk":
 		{	"title": "The power of signed distance functions (talk)"
 		,	"parent": "CreativeCoding"
+		}
+	,	"SawasdeeNewYear":
+		{	"title": "Sawasdee New Year"
+		,	"parent": "Songs"
 		}
 	,	"Semgrep":
 		{	"title": "Semgrep (topic)"
@@ -1206,6 +1286,10 @@
 	,	"SoftwareEngineering":
 		{	"title": "Software Engineering (topic)"
 		,	"parent": "HomePage"
+		}
+	,	"Songs":
+		{	"title": "Songs (topic)"
+		,	"parent": "ButterFlyCoverCollab"
 		}
 	,	"StableLibSnippets":
 		{	"title": "StableLib snippets"
@@ -1342,6 +1426,10 @@
 	,	"WebComponents":
 		{	"title": "Web Components (topic)"
 		,	"parent": "WebPlatform"
+		}
+	,	"WebMIDICon":
+		{	"title": "WebMIDICon"
+		,	"parent": "20210619T153544Z9312"
 		}
 	,	"WebPlatform":
 		{	"title": "Web Platform (topic)"

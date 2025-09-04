@@ -1,6 +1,15 @@
 
 {	"nodes":
-	{	"20180215T173000Z0223":
+	{	"422":
+		{	"title": 422
+		,	"links":
+			[	{	"link": "Songs"
+				}
+			,	{	"link": "EverydayEvermore"
+				}
+			]
+		}
+	,	"20180215T173000Z0223":
 		{	"title": "ว่าด้วยเรื่องเป็นโปรแกรมเมอร์ทำงานหนัก จนไม่มีเวลาให้ตัวเองหรือคนอื่น"
 		,	"links":
 			[	{	"link": "20210102T143748Z0407"
@@ -307,6 +316,8 @@
 		{	"title": "Thai’s online music jamming setup"
 		,	"links":
 			[	{	"link": "Jamulus"
+				}
+			,	{	"link": "WebMIDICon"
 				}
 			]
 		}
@@ -648,6 +659,13 @@
 		{	"title": "Audio encoding benchmark with FFmpeg"
 		,	"links": []
 		}
+	,	"AutoSynchro":
+		{	"title": "AUTO±SYNCHRO"
+		,	"links":
+			[	{	"link": "Songs"
+				}
+			]
+		}
 	,	"Azure":
 		{	"title": "Azure (topic)"
 		,	"links": []
@@ -669,6 +687,13 @@
 	,	"BrotherPTWebUSB":
 		{	"title": "A web-based printing tool for Brother P-touch series label printers"
 		,	"links": []
+		}
+	,	"BubbleSortSong":
+		{	"title": "Bubble Sort Song"
+		,	"links":
+			[	{	"link": "Songs"
+				}
+			]
 		}
 	,	"Bun":
 		{	"title": "Bun (topic)"
@@ -704,6 +729,40 @@
 		{	"title": "Building a quick and dirty endpoint with Bun"
 		,	"links":
 			[	{	"link": "Bun"
+				}
+			]
+		}
+	,	"BurstingMusicStar":
+		{	"title": "bursting☆music☆star"
+		,	"links":
+			[	{	"link": "Songs"
+				}
+			]
+		}
+	,	"ButterFlyCoverCollab":
+		{	"title": "Butter-Fly (Digimon Tri Ver.) (Cover)"
+		,	"links":
+			[	{	"link": "Songs"
+				}
+			,	{	"link": "WebMIDICon"
+				}
+			]
+		}
+	,	"ByMySide":
+		{	"title": "BY☆MY☆SIDE"
+		,	"links":
+			[	{	"link": "Songs"
+				}
+			,	{	"link": "ByMySideAmbientHouseMix"
+				}
+			]
+		}
+	,	"ByMySideAmbientHouseMix":
+		{	"title": "BY☆MY☆SIDE (Ambient House Mix)"
+		,	"links":
+			[	{	"link": "ByMySide"
+				}
+			,	{	"link": "Songs"
 				}
 			]
 		}
@@ -871,7 +930,9 @@
 	,	"Colors":
 		{	"title": "Colors (topic)"
 		,	"links":
-			[	{	"link": "OklchPlot"
+			[	{	"link": "HDRQRCode"
+				}
+			,	{	"link": "OklchPlot"
 				}
 			,	{	"link": "OklabVisualizer"
 				}
@@ -1127,6 +1188,13 @@
 				}
 			]
 		}
+	,	"DontWakeMeUpReRemix":
+		{	"title": "Don't Wake Me Up (iaht's Re-Remix)"
+		,	"links":
+			[	{	"link": "Songs"
+				}
+			]
+		}
 	,	"Dotenv":
 		{	"title": ".env file"
 		,	"links":
@@ -1226,6 +1294,15 @@
 		{	"title": "How I render HTML in Elysia"
 		,	"links":
 			[	{	"link": "Elysia"
+				}
+			]
+		}
+	,	"EverydayEvermore":
+		{	"title": "Everyday evermore"
+		,	"links":
+			[	{	"link": "Songs"
+				}
+			,	{	"link": "BurstingMusicStar"
 				}
 			]
 		}
@@ -1673,6 +1750,13 @@
 				}
 			]
 		}
+	,	"InsertionSortSong":
+		{	"title": "Insertion Sort Song"
+		,	"links":
+			[	{	"link": "Songs"
+				}
+			]
+		}
 	,	"Insta360LinkControllerWebSocketProtocol":
 		{	"title": "Reverse-engineering Insta360 Link Controller WebSockets protocol"
 		,	"links":
@@ -1858,6 +1942,13 @@
 				}
 			]
 		}
+	,	"JustLookAtMyEyesBMS":
+		{	"title": "Just look at my eyes (bms edit)"
+		,	"links":
+			[	{	"link": "Songs"
+				}
+			]
+		}
 	,	"KSortableUniqueID":
 		{	"title": "K-sortable unique ID formats (and generator)"
 		,	"links": []
@@ -2030,6 +2121,13 @@
 			[	{	"link": "PublishMarkdownPageWithoutBuildTool"
 				}
 			,	{	"link": "InteractiveFootnotes"
+				}
+			]
+		}
+	,	"MergeSortSong":
+		{	"title": "Merge Sort Song"
+		,	"links":
+			[	{	"link": "Songs"
 				}
 			]
 		}
@@ -2446,10 +2544,28 @@
 				}
 			]
 		}
+	,	"OnlyLoveRemix":
+		{	"title": "Only Love (Euphoric Trance Remix)"
+		,	"links":
+			[	{	"link": "Songs"
+				}
+			]
+		}
+	,	"OpaqueSpace":
+		{	"title": "Opaque Space"
+		,	"links": []
+		}
 	,	"OpenWebUILiteLLM":
 		{	"title": "Configuring Open WebUI and LiteLLM with Docker Compose to talk to OpenAI, Anthropic, Gemini, and Perplexity APIs"
 		,	"links":
 			[	{	"link": "LargeLanguageModel"
+				}
+			]
+		}
+	,	"OverWhelmingJoy":
+		{	"title": "OVER-WHELMING JOY"
+		,	"links":
+			[	{	"link": "Songs"
 				}
 			]
 		}
@@ -2753,6 +2869,24 @@
 				}
 			]
 		}
+	,	"RecursiveDescentSong":
+		{	"title": "RECURSIVE DESCENT"
+		,	"links": []
+		}
+	,	"Relive":
+		{	"title": "Relive"
+		,	"links":
+			[	{	"link": "Songs"
+				}
+			]
+		}
+	,	"Reminiscentia":
+		{	"title": "Reminiscentia"
+		,	"links":
+			[	{	"link": "Songs"
+				}
+			]
+		}
 	,	"ResticBackup":
 		{	"title": "Backing up a Linux cloud server with Restic"
 		,	"links":
@@ -2833,9 +2967,23 @@
 				}
 			]
 		}
+	,	"RunningOut2015":
+		{	"title": "Running Out 2015"
+		,	"links":
+			[	{	"link": "Songs"
+				}
+			]
+		}
 	,	"SDFTalk":
 		{	"title": "The power of signed distance functions (talk)"
 		,	"links": []
+		}
+	,	"SawasdeeNewYear":
+		{	"title": "Sawasdee New Year"
+		,	"links":
+			[	{	"link": "Songs"
+				}
+			]
 		}
 	,	"Semgrep":
 		{	"title": "Semgrep (topic)"
@@ -2925,6 +3073,51 @@
 			,	{	"link": "Observability"
 				}
 			,	{	"link": "TestingInProduction"
+				}
+			]
+		}
+	,	"Songs":
+		{	"title": "Songs (topic)"
+		,	"links":
+			[	{	"link": "InsertionSortSong"
+				}
+			,	{	"link": "MergeSortSong"
+				}
+			,	{	"link": "BubbleSortSong"
+				}
+			,	{	"link": "Relive"
+				}
+			,	{	"link": "422"
+				}
+			,	{	"link": "JustLookAtMyEyesBMS"
+				}
+			,	{	"link": "ButterFlyCoverCollab"
+				}
+			,	{	"link": "BurstingMusicStar"
+				}
+			,	{	"link": "OverWhelmingJoy"
+				}
+			,	{	"link": "EverydayEvermore"
+				}
+			,	{	"link": "RecursiveDescentSong"
+				}
+			,	{	"link": "RunningOut2015"
+				}
+			,	{	"link": "OnlyLoveRemix"
+				}
+			,	{	"link": "ByMySideAmbientHouseMix"
+				}
+			,	{	"link": "AutoSynchro"
+				}
+			,	{	"link": "Reminiscentia"
+				}
+			,	{	"link": "ByMySide"
+				}
+			,	{	"link": "SawasdeeNewYear"
+				}
+			,	{	"link": "DontWakeMeUpReRemix"
+				}
+			,	{	"link": "OpaqueSpace"
 				}
 			]
 		}
@@ -3242,6 +3435,13 @@
 			[	{	"link": "20200920T134111Z3753"
 				}
 			,	{	"link": "IconifyUsage"
+				}
+			]
+		}
+	,	"WebMIDICon":
+		{	"title": "WebMIDICon"
+		,	"links":
+			[	{	"link": "ButterFlyCoverCollab"
 				}
 			]
 		}
