@@ -2853,6 +2853,8 @@
 				}
 			,	{	"link": "SpringAnimationInCSS"
 				}
+			,	{	"link": "WebsiteHistory"
+				}
 			,	{	"link": "Gyroscratch"
 				}
 			,	{	"link": "Vx"
@@ -3706,6 +3708,17 @@
 		{	"title": "อัพเดตโปรเจควงแหวนเว็บ, integrate กับ Bluesky"
 		,	"links":
 			[	{	"link": "Webring"
+				}
+			]
+		}
+	,	"WebsiteHistory":
+		{	"title": "dt.in.th"
+		,	"links":
+			[	{	"link": "Projects"
+				}
+			,	{	"link": "Talks"
+				}
+			,	{	"link": "Songs"
 				}
 			]
 		}

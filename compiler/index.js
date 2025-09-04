@@ -1,6 +1,6 @@
 import { V as h, d as D, S as f, e as I, U as T, W as _, X as j } from "./vue_zazawFZq.js";
 import { c as O, p as R } from "./unocss_BHFsKZqx.js";
-import { v as M, r as q, a as G, b as V, c as $ } from "./rehype-plugins_BuBHLxS0.js";
+import { v as q, r as M, a as G, b as V, c as $ } from "./rehype-plugins_BuBHLxS0.js";
 import { a as w } from "./sucrase_Vx5h13n5.js";
 import { r as W } from "./gray-matter_DUytiCZw.js";
 import { m as A, g as z, a as N, b as P, d as L, e as U, f as Y, h as Q, i as J } from "./micromark_CAniCe8D.js";
@@ -37,7 +37,7 @@ const se = {};
 function de(o) {
   const r = o || se;
   return function(t) {
-    M(t, "comment", function(a, n, i) {
+    q(t, "comment", function(a, n, i) {
       if (typeof n == "number" && i && (r.removeConditional || !ie(a)) && (!r.test || !r.test(a.value)))
         return i.children.splice(n, 1), n;
     });
@@ -90,7 +90,7 @@ const fe = /* @__PURE__ */ w(ge), le = Object.freeze(JSON.parse('{"colors":{"act
     loadWasm: ee
   })
 );
-async function me(o, r = () => {
+async function be(o, r = () => {
 }) {
   r("markdownToVue started");
   const { content: t, data: a } = ne(o);
@@ -140,6 +140,9 @@ async function me(o, r = () => {
             `<soundcloud-embed track-id="${e.label}"></soundcloud-embed>`
           ), !0);
         },
+        tweet: function(e) {
+          return e.type !== "containerDirective" ? !1 : (this.tag('<blockquote class="twitter-tweet">'), e.content && this.raw(e.content), this.tag("</blockquote>"), !0);
+        },
         cta: function(e) {
           return e.type !== "leafDirective" ? !1 : (this.tag('<p class="notes-cta">'), this.tag(
             `<a class="notes-cta__link" href="${e.attributes?.href}">`
@@ -168,7 +171,7 @@ async function me(o, r = () => {
     ]
   });
   r("micromark processed");
-  const s = await X().data("settings", { fragment: !0 }).use(de).use(q).use(G).use(V, await pe(), {
+  const s = await X().data("settings", { fragment: !0 }).use(de).use(M).use(G).use(V, await pe(), {
     theme: "github-dark",
     colorReplacements: {
       "#24292e": "#252423"
@@ -184,7 +187,7 @@ function c(o) {
     return r.type !== "containerDirective" ? !1 : (this.tag(`<div class="notes-callout" data-type="${o}">`), this.tag('<p class="notes-callout__label">'), this.tag(`<notes-callout-icon type="${o}"></notes-callout-icon>`), this.raw(r.label || o), this.tag("</p>"), r.content && this.raw(r.content), this.tag("</div>"), !0);
   };
 }
-const be = O({
+const me = O({
   presets: [R({ preflight: !1 })],
   extendTheme: (o) => {
     o.fontFamily ??= {}, o.fontFamily.sans = [
@@ -213,10 +216,10 @@ async function xe(o, r) {
     t.log.push([performance.now(), n]);
   };
   try {
-    let { vueTemplate: n, frontMatter: i } = await me(o, a);
+    let { vueTemplate: n, frontMatter: i } = await be(o, a);
     t.debuggingInfo.vueTemplate = n, t.compiled.frontMatter = i;
     {
-      const u = await be.generate(n);
+      const u = await me.generate(n);
       u.css && (n += `
 <style scoped>${u.css}</style>`, t.debuggingInfo.vueTemplate = n), a("unocss processed");
     }
@@ -240,17 +243,17 @@ async function xe(o, r) {
       throw new Error("Failed to compile Vue SFC: " + g.join(", "));
     }
     t.debuggingInfo.ssrEsm = d.compiled.ssr, t.debuggingInfo.clientEsm = d.compiled.js, a("converting ssr");
-    const m = await y(d.compiled.ssr, a);
-    t.debuggingInfo.ssrCjs = m, a("converting js");
+    const b = await y(d.compiled.ssr, a);
+    t.debuggingInfo.ssrCjs = b, a("converting js");
     const F = await y(d.compiled.js, a);
     t.compiled.js = F;
     const S = d.compiled.css;
     t.compiled.css = S, a("executing ssr");
-    const H = te(m, {
+    const H = te(b, {
       "vue/server-renderer": T
-    }).default, b = _(H);
-    re(b);
-    const E = await j(b);
+    }).default, m = _(H);
+    re(m);
+    const E = await j(m);
     t.compiled.html = E, a("ssr executed"), i.wide && (t.compiled.dataset.layout = "wide"), i.title && (t.compiled.title = i.title);
     const x = `https://screenshot.source.in.th/image/_/notes/${r}`;
     t.compiled.head.push(
