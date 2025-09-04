@@ -7,10 +7,6 @@
 				}
 			]
 		}
-	,	"20180828T153800Z0775":
-		{	"title": "Gitthereum"
-		,	"links": []
-		}
 	,	"20181228T000000Z0000":
 		{	"title": "“มีมาตรวัดอะไรที่บอกว่าโปรแกรมเมอร์คนไหน ‘โค้ดได้’ หรือ ‘โค้ดเป็น’”"
 		,	"links": []
@@ -18,13 +14,6 @@
 	,	"20190803T094000Z2912":
 		{	"title": "ว่าด้วยเรื่องการใช้โจทย์อัลกอริธึมในการสัมภาษณ์งาน"
 		,	"links": []
-		}
-	,	"20200411T141700Z7725":
-		{	"title": "Test infrastructure ของโครงการ TypeScript"
-		,	"links":
-			[	{	"link": "20180215T173000Z0223"
-				}
-			]
 		}
 	,	"20200502T090200Z0000":
 		{	"title": "การเลือกใช้ระหว่าง React กับ Vue (May 2020)"
@@ -34,14 +23,6 @@
 			,	{	"link": "React"
 				}
 			]
-		}
-	,	"20200609T210456Z7886":
-		{	"title": "Using multiple refs in React"
-		,	"links": []
-		}
-	,	"20200612T133614Z5625":
-		{	"title": "Context provider pattern in React"
-		,	"links": []
 		}
 	,	"20200612T134702Z5627":
 		{	"title": "Ways to render Markdown in React"
@@ -123,15 +104,6 @@
 		{	"title": "On state management tools in React"
 		,	"links":
 			[	{	"link": "React"
-				}
-			]
-		}
-	,	"20201108T202126Z2125":
-		{	"title": "VS Code as a Markdown-based note-taking platform?"
-		,	"links":
-			[	{	"link": "VSCode"
-				}
-			,	{	"link": "AboutNotes"
 				}
 			]
 		}
@@ -357,10 +329,6 @@
 				}
 			]
 		}
-	,	"20211015T100140Z3969":
-		{	"title": "Custom elements available in notes.dt.in.th"
-		,	"links": []
-		}
 	,	"20211107T144129Z3745":
 		{	"title": "PlanetScale เป็นบริการ MySQL-compatible serverless database"
 		,	"links":
@@ -392,13 +360,6 @@
 	,	"20220123T204235Z1268":
 		{	"title": "npm package version management"
 		,	"links": []
-		}
-	,	"20220126T112639Z7327":
-		{	"title": "React 18’s StrictEffectMode"
-		,	"links":
-			[	{	"link": "React18RC"
-				}
-			]
 		}
 	,	"20220130T152100Z0000":
 		{	"title": "อัพเดตโปรเจควงแหวนเว็บ, เพิ่ม RSS feed"
@@ -628,7 +589,7 @@
 	,	"AboutNotes":
 		{	"title": "About notes.dt.in.th"
 		,	"links":
-			[	{	"link": "20201108T202126Z2125"
+			[	{	"link": "VSCodeNoteTaking"
 				}
 			,	{	"link": "20200905T174933Z7510"
 				}
@@ -652,7 +613,7 @@
 				}
 			,	{	"link": "InteractiveFootnotes"
 				}
-			,	{	"link": "20211015T100140Z3969"
+			,	{	"link": "Syntax"
 				}
 			,	{	"link": "NotesInteractivity"
 				}
@@ -1430,6 +1391,10 @@
 		}
 	,	"GitOpsInWeirdPlaces":
 		{	"title": "GitOps in weird places"
+		,	"links": []
+		}
+	,	"Gitthereum":
+		{	"title": "Gitthereum"
 		,	"links": []
 		}
 	,	"GoogleCloud":
@@ -2699,17 +2664,19 @@
 				}
 			,	{	"link": "React18RC"
 				}
-			,	{	"link": "20220126T112639Z7327"
+			,	{	"link": "ReactStrictEffectMode"
 				}
 			,	{	"link": "20201104T101354Z5519"
 				}
-			,	{	"link": "20200612T133614Z5625"
+			,	{	"link": "ReactContextProvider"
 				}
-			,	{	"link": "20200609T210456Z7886"
+			,	{	"link": "ReactMultipleRefs"
 				}
 			,	{	"link": "20200612T134702Z5627"
 				}
 			,	{	"link": "20200502T090200Z0000"
+				}
+			,	{	"link": "SmellsInReactApps"
 				}
 			,	{	"link": "Next"
 				}
@@ -2720,7 +2687,22 @@
 		,	"links":
 			[	{	"link": "React"
 				}
-			,	{	"link": "20220126T112639Z7327"
+			,	{	"link": "ReactStrictEffectMode"
+				}
+			]
+		}
+	,	"ReactContextProvider":
+		{	"title": "Context provider pattern in React"
+		,	"links": []
+		}
+	,	"ReactMultipleRefs":
+		{	"title": "Using multiple refs in React"
+		,	"links": []
+		}
+	,	"ReactStrictEffectMode":
+		{	"title": "React 18's StrictEffectMode"
+		,	"links":
+			[	{	"link": "React18RC"
 				}
 			]
 		}
@@ -2928,6 +2910,10 @@
 		{	"title": "Watching livestreams together in a synchronized manner"
 		,	"links": []
 		}
+	,	"Syntax":
+		{	"title": "Markdown syntax extensions and custom elements in notes.dt.in.th"
+		,	"links": []
+		}
 	,	"TRPC":
 		{	"title": "tRPC (topic)"
 		,	"links":
@@ -3039,6 +3025,8 @@
 		,	"links":
 			[	{	"link": "JavaScript"
 				}
+			,	{	"link": "TypeScriptTestingInfrastructure"
+				}
 			,	{	"link": "TypeScriptValuesAndTypesWithSameName"
 				}
 			,	{	"link": "20210706T092653Z8652"
@@ -3048,6 +3036,15 @@
 			,	{	"link": "20201014T155147Z5685"
 				}
 			,	{	"link": "Node22NativeTypeScript"
+				}
+			]
+		}
+	,	"TypeScriptTestingInfrastructure":
+		{	"title": "Test infrastructure ของโครงการ TypeScript"
+		,	"links":
+			[	{	"link": "TypeScript"
+				}
+			,	{	"link": "20180215T173000Z0223"
 				}
 			]
 		}
@@ -3096,7 +3093,7 @@
 		,	"links":
 			[	{	"link": "AboutNotes"
 				}
-			,	{	"link": "20201108T202126Z2125"
+			,	{	"link": "VSCodeNoteTaking"
 				}
 			,	{	"link": "20201208T104844Z2958"
 				}
@@ -3112,6 +3109,15 @@
 		{	"title": "My VS Code snippets keyboard shortcuts (keybindings)"
 		,	"links":
 			[	{	"link": "VSCode"
+				}
+			]
+		}
+	,	"VSCodeNoteTaking":
+		{	"title": "VS Code as a Markdown-based note-taking platform?"
+		,	"links":
+			[	{	"link": "VSCode"
+				}
+			,	{	"link": "AboutNotes"
 				}
 			]
 		}

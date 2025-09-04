@@ -22,7 +22,7 @@
     <div class="h-entry">
       <main id="main">
         <div id="mainContents">
-          <div class="prose e-content" id="noteContents"><!--[--><p data-v-8c9498c0><strong data-v-8c9498c0>How about some interactivity inside a <a href="AboutNotes" data-v-8c9498c0>note</a>?</strong></p><p data-v-8c9498c0><button disabled data-v-8c9498c0>0</button></p><p data-v-8c9498c0>...and here&#39;s the code that implements the above button:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#85E89D;" data-v-8c9498c0>p</span><span style="color:#E1E4E8;" data-v-8c9498c0>&gt;</span></span>
+          <div class="prose e-content" id="noteContents"><!--[--><p data-v-8c9498c0><strong data-v-8c9498c0>How about some interactivity inside a <a href="AboutNotes" data-v-8c9498c0>note</a>?</strong></p><p data-v-8c9498c0><button class="btn" disabled data-v-8c9498c0>0</button></p><p data-v-8c9498c0>...and here&#39;s the code that implements the above button:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#85E89D;" data-v-8c9498c0>p</span><span style="color:#E1E4E8;" data-v-8c9498c0>&gt;</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  &lt;</span><span style="color:#85E89D;" data-v-8c9498c0>button</span><span style="color:#B392F0;" data-v-8c9498c0> @click</span><span style="color:#E1E4E8;" data-v-8c9498c0>=</span><span style="color:#9ECBFF;" data-v-8c9498c0>&quot;count++&quot;</span><span style="color:#B392F0;" data-v-8c9498c0> :disabled</span><span style="color:#E1E4E8;" data-v-8c9498c0>=</span><span style="color:#9ECBFF;" data-v-8c9498c0>&quot;!mounted&quot;</span><span style="color:#E1E4E8;" data-v-8c9498c0>&gt;0&lt;/</span><span style="color:#85E89D;" data-v-8c9498c0>button</span><span style="color:#E1E4E8;" data-v-8c9498c0>&gt;</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;/</span><span style="color:#85E89D;" data-v-8c9498c0>p</span><span style="color:#E1E4E8;" data-v-8c9498c0>&gt;</span></span>
 <span class="line" data-v-8c9498c0></span>
@@ -85,6 +85,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     ], -1 /* CACHED */)),
     _vue.createElementVNode.call(void 0, "p", null, [
       _vue.createElementVNode.call(void 0, "button", {
+        class: "btn",
         onClick: _cache[0] || (_cache[0] = $event => ($setup.count++)),
         disabled: !$setup.mounted
       }, _vue.toDisplayString.call(void 0, $setup.count), 9 /* TEXT, PROPS */, _hoisted_1)
