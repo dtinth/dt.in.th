@@ -600,6 +600,10 @@
 		{	"title": "How I render HTML in Elysia"
 		,	"parent": "Elysia"
 		}
+	,	"EmbracingGradualTyping":
+		{	"title": "Embracing gradual typing"
+		,	"parent": "TypeScript"
+		}
 	,	"EverydayEvermore":
 		{	"title": "Everyday evermore"
 		,	"parent": "Songs"
@@ -651,6 +655,10 @@
 	,	"FrontendFeatureFlags":
 		{	"title": "Simple front-end feature flags"
 		,	"parent": "JavaScript"
+		}
+	,	"FunctionalReactiveProgrammingRxJSTalk":
+		{	"title": "Functional Reactive Programming using RxJS"
+		,	"parent": "Talks"
 		}
 	,	"Gemini25ProPreviewTTSThai":
 		{	"title": "Gemini 2.5 Pro Text-to-Speech Thai Voice Previews"
@@ -735,6 +743,10 @@
 	,	"GristUpsertN8n":
 		{	"title": "Upserting data into Grist using n8n"
 		,	"parent": "N8n"
+		}
+	,	"Gyroscratch":
+		{	"title": "Gyroscratch"
+		,	"parent": "Projects"
 		}
 	,	"HDRQRCode":
 		{	"title": "HDR QR Code"
@@ -1331,6 +1343,10 @@
 		{	"title": "Songs (topic)"
 		,	"parent": "Music"
 		}
+	,	"SpringAnimationInCSS":
+		{	"title": "CSS Spring Animation Using Physics and Calculus"
+		,	"parent": "Projects"
+		}
 	,	"StableLibSnippets":
 		{	"title": "StableLib snippets"
 		,	"parent": "JavaScript"
@@ -1355,6 +1371,10 @@
 		{	"title": "Markdown syntax extensions and custom elements in notes.dt.in.th"
 		,	"parent": "AboutNotes"
 		}
+	,	"TDDTalk":
+		{	"title": "A lecture about TDD"
+		,	"parent": "Talks"
+		}
 	,	"TRPC":
 		{	"title": "tRPC (topic)"
 		,	"parent": "NextTrpcError"
@@ -1374,6 +1394,10 @@
 	,	"Talks":
 		{	"title": "Talks by Thai Pangsakulyanont (topic)"
 		,	"parent": "HomePage"
+		}
+	,	"TaskworldReactTalk":
+		{	"title": "Taskworld and the Evolving Use of React.js"
+		,	"parent": "Talks"
 		}
 	,	"TestingInProduction":
 		{	"title": "Testing in production (topic)"
@@ -1451,6 +1475,10 @@
 		{	"title": "Vercel (topic)"
 		,	"parent": "CloudPlatform"
 		}
+	,	"VimTalk2013":
+		{	"title": "VIM tips, technique, scripts, plugins"
+		,	"parent": "Talks"
+		}
 	,	"VirtualDesktop":
 		{	"title": "Dockerized virtual desktop"
 		,	"parent": "Linux"
@@ -1482,6 +1510,10 @@
 	,	"WebMIDICon":
 		{	"title": "WebMIDICon"
 		,	"parent": "Projects"
+		}
+	,	"WebMIDITalk":
+		{	"title": "The amazing flexibility of Web MIDI API and its surrounding ecosystem"
+		,	"parent": "Talks"
 		}
 	,	"WebPlatform":
 		{	"title": "Web Platform (topic)"

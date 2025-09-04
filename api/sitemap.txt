@@ -148,6 +148,7 @@ https://notes.dt.in.th/ElysiaLogging
 https://notes.dt.in.th/ElysiaNode
 https://notes.dt.in.th/ElysiaRemixSession
 https://notes.dt.in.th/ElysiaRenderHtml
+https://notes.dt.in.th/EmbracingGradualTyping
 https://notes.dt.in.th/EverydayEvermore
 https://notes.dt.in.th/ExcalidrawSurfacePen
 https://notes.dt.in.th/FacebookPageLongLivedAccessToken
@@ -161,6 +162,7 @@ https://notes.dt.in.th/FreeTypeJSBlackWhiteText
 https://notes.dt.in.th/FreshAppFactory
 https://notes.dt.in.th/Frontend2015
 https://notes.dt.in.th/FrontendFeatureFlags
+https://notes.dt.in.th/FunctionalReactiveProgrammingRxJSTalk
 https://notes.dt.in.th/Gemini25ProPreviewTTSThai
 https://notes.dt.in.th/GenerateFontWeights
 https://notes.dt.in.th/GitHub
@@ -182,6 +184,7 @@ https://notes.dt.in.th/Grist
 https://notes.dt.in.th/GristDockerCompose
 https://notes.dt.in.th/GristSelfHostedBenchmark
 https://notes.dt.in.th/GristUpsertN8n
+https://notes.dt.in.th/Gyroscratch
 https://notes.dt.in.th/HDRQRCode
 https://notes.dt.in.th/HTML
 https://notes.dt.in.th/Hardware
@@ -331,17 +334,20 @@ https://notes.dt.in.th/ShortLivedMutability
 https://notes.dt.in.th/Slip39Wordlist
 https://notes.dt.in.th/SoftwareEngineering
 https://notes.dt.in.th/Songs
+https://notes.dt.in.th/SpringAnimationInCSS
 https://notes.dt.in.th/StableLibSnippets
 https://notes.dt.in.th/StructuredProcrastination
 https://notes.dt.in.th/Svelte
 https://notes.dt.in.th/SvelteKitPureESM
 https://notes.dt.in.th/SynchronizedLiveWatchParty
 https://notes.dt.in.th/Syntax
+https://notes.dt.in.th/TDDTalk
 https://notes.dt.in.th/TRPC
 https://notes.dt.in.th/TRPCFirebase
 https://notes.dt.in.th/TailwindCSS
 https://notes.dt.in.th/TailwindCSS4Alpha14Notes
 https://notes.dt.in.th/Talks
+https://notes.dt.in.th/TaskworldReactTalk
 https://notes.dt.in.th/TestingInProduction
 https://notes.dt.in.th/ThaiLanguageLLMBenchmark
 https://notes.dt.in.th/ThaiWordSegmentationInJavaScript
@@ -361,6 +367,7 @@ https://notes.dt.in.th/VSCodeNoteTaking
 https://notes.dt.in.th/VSCodeREST
 https://notes.dt.in.th/VanityEd25519SSHKey
 https://notes.dt.in.th/Vercel
+https://notes.dt.in.th/VimTalk2013
 https://notes.dt.in.th/VirtualDesktop
 https://notes.dt.in.th/Vite
 https://notes.dt.in.th/ViteBundleSize
@@ -369,6 +376,7 @@ https://notes.dt.in.th/Vx
 https://notes.dt.in.th/WSL
 https://notes.dt.in.th/WebComponents
 https://notes.dt.in.th/WebMIDICon
+https://notes.dt.in.th/WebMIDITalk
 https://notes.dt.in.th/WebPlatform
 https://notes.dt.in.th/Webring
 https://notes.dt.in.th/WebringBsky

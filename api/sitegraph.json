@@ -789,6 +789,8 @@
 		,	"links":
 			[	{	"link": "WebPlatform"
 				}
+			,	{	"link": "SpringAnimationInCSS"
+				}
 			,	{	"link": "CSSChangeColorOpacity"
 				}
 			,	{	"link": "DiscoveringLCH"
@@ -1315,6 +1317,15 @@
 				}
 			]
 		}
+	,	"EmbracingGradualTyping":
+		{	"title": "Embracing gradual typing"
+		,	"links":
+			[	{	"link": "Talks"
+				}
+			,	{	"link": "Projects"
+				}
+			]
+		}
 	,	"EverydayEvermore":
 		{	"title": "Everyday evermore"
 		,	"links":
@@ -1412,6 +1423,13 @@
 		{	"title": "Simple front-end feature flags"
 		,	"links":
 			[	{	"link": "JavaScript"
+				}
+			]
+		}
+	,	"FunctionalReactiveProgrammingRxJSTalk":
+		{	"title": "Functional Reactive Programming using RxJS"
+		,	"links":
+			[	{	"link": "Talks"
 				}
 			]
 		}
@@ -1625,6 +1643,13 @@
 			[	{	"link": "N8n"
 				}
 			,	{	"link": "Grist"
+				}
+			]
+		}
+	,	"Gyroscratch":
+		{	"title": "Gyroscratch"
+		,	"links":
+			[	{	"link": "Projects"
 				}
 			]
 		}
@@ -2826,6 +2851,10 @@
 				}
 			,	{	"link": "BangkokIpsum"
 				}
+			,	{	"link": "SpringAnimationInCSS"
+				}
+			,	{	"link": "Gyroscratch"
+				}
 			,	{	"link": "Vx"
 				}
 			,	{	"link": "WebMIDICon"
@@ -3214,6 +3243,15 @@
 				}
 			]
 		}
+	,	"SpringAnimationInCSS":
+		{	"title": "CSS Spring Animation Using Physics and Calculus"
+		,	"links":
+			[	{	"link": "Talks"
+				}
+			,	{	"link": "Projects"
+				}
+			]
+		}
 	,	"StableLibSnippets":
 		{	"title": "StableLib snippets"
 		,	"links":
@@ -3246,6 +3284,13 @@
 	,	"Syntax":
 		{	"title": "Markdown syntax extensions and custom elements in notes.dt.in.th"
 		,	"links": []
+		}
+	,	"TDDTalk":
+		{	"title": "A lecture about TDD"
+		,	"links":
+			[	{	"link": "Talks"
+				}
+			]
 		}
 	,	"TRPC":
 		{	"title": "tRPC (topic)"
@@ -3289,6 +3334,8 @@
 				}
 			,	{	"link": "BlackBoxTestingTalk"
 				}
+			,	{	"link": "WebMIDITalk"
+				}
 			,	{	"link": "PersonalAssistantTalk"
 				}
 			,	{	"link": "GradualTypingTalk"
@@ -3301,7 +3348,24 @@
 				}
 			,	{	"link": "HigherOrderComponentsAndRecomposeTalk"
 				}
+			,	{	"link": "TaskworldReactTalk"
+				}
+			,	{	"link": "TDDTalk"
+				}
 			,	{	"link": "Frontend2015"
+				}
+			,	{	"link": "SpringAnimationInCSS"
+				}
+			,	{	"link": "FunctionalReactiveProgrammingRxJSTalk"
+				}
+			,	{	"link": "VimTalk2013"
+				}
+			]
+		}
+	,	"TaskworldReactTalk":
+		{	"title": "Taskworld and the Evolving Use of React.js"
+		,	"links":
+			[	{	"link": "Talks"
 				}
 			]
 		}
@@ -3390,6 +3454,8 @@
 			,	{	"link": "TypeScriptValuesAndTypesWithSameName"
 				}
 			,	{	"link": "20210706T092653Z8652"
+				}
+			,	{	"link": "EmbracingGradualTyping"
 				}
 			,	{	"link": "20201125T110802Z7306"
 				}
@@ -3512,6 +3578,13 @@
 				}
 			]
 		}
+	,	"VimTalk2013":
+		{	"title": "VIM tips, technique, scripts, plugins"
+		,	"links":
+			[	{	"link": "Talks"
+				}
+			]
+		}
 	,	"VirtualDesktop":
 		{	"title": "Dockerized virtual desktop"
 		,	"links":
@@ -3577,6 +3650,17 @@
 		{	"title": "WebMIDICon"
 		,	"links":
 			[	{	"link": "ButterFlyCoverCollab"
+				}
+			]
+		}
+	,	"WebMIDITalk":
+		{	"title": "The amazing flexibility of Web MIDI API and its surrounding ecosystem"
+		,	"links":
+			[	{	"link": "Talks"
+				}
+			,	{	"link": "WebMIDICon"
+				}
+			,	{	"link": "Gyroscratch"
 				}
 			]
 		}
