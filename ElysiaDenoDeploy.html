@@ -2,7 +2,7 @@
 <html data-precompiled=true lang="en" data-dtinth="true">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quickly deploying API endpoints online with Elysia on Deno Deploy | notes.dt.in.th</title><meta property="og:title" content="Quickly deploying API endpoints online with Elysia on Deno Deploy" data-source="note">
 <meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/ElysiaDenoDeploy" data-source="note">
@@ -10,45 +10,17 @@
 <meta property="og:image:height" content="1680" data-source="note">
 <link rel="canonical" href="https://notes.dt.in.th/ElysiaDenoDeploy" data-source="note"><style id="note-styles">/* layer: default */
 .ease[data-v-8c9498c0]{transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);}</style>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
-      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
-      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" crossorigin src="/runtime/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
-    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
   </head>
-  <body class="bg-#252423 text-#e9e8e7 antialiased">
-    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
-      <div class="flex items-center pl-[18px] flex-none">
-        <a
-          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
-          href="/"
-          >notes.dt.in.th</a
-        >
-      </div>
-      <div
-        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
-        id="headerMiddle"
-      >
-        <div class="px-2 flex-none">›</div><div class="truncate"><a title="JavaScript (topic)" href="JavaScript">JavaScript</a></div><div class="px-2 flex-none">›</div><div class="truncate"><a title="Deno (topic)" href="Deno">Deno</a></div>
-      </div>
-      <div
-        class="flex items-center px-[18px] flex-none gap-4"
-        id="headerToolbar"
-      ></div>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
     </header>
     <div class="h-entry">
-      <main class="bg-#353433" id="main">
-        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+      <main id="main">
+        <div id="mainContents">
           <div class="prose e-content" id="noteContents"><!--[--><p data-v-8c9498c0>Sometimes I need to quickly deploy a small API endpoint without the overhead of setting up a full server. <a href="https://deno.com/deploy" data-v-8c9498c0><strong data-v-8c9498c0>Deno Deploy</strong></a> is perfect for this. Upon logging in, you create a <strong data-v-8c9498c0>New Playground</strong>, which lets you write and test your code directly in the browser.</p><p data-v-8c9498c0><img src="https://im.dt.in.th/ipfs/bafybeig6bw7wgnj5tvjenprou6oc4mzlxlmfrhuhau3dgrylehqy4c4jsm/image.webp" alt="Deno Deploy user dashboard showing the user&#39;s name, user ID, and navigation tabs for Overview, Projects, and Settings. Two large buttons on the right labeled New Playground and New Project, with New Playground highlighted by a blue hand-drawn circle. The interface is clean and modern, designed for ease of use." data-v-8c9498c0></p><p data-v-8c9498c0>To use <a href="Elysia" data-v-8c9498c0>Elysia</a>, just <code data-v-8c9498c0>import { Elysia } from &#39;npm:elysia&#39;</code> and <code data-v-8c9498c0>export default</code> your Elysia app. <a href="ElysiaDeno" data-v-8c9498c0>Deno automatically detects the <code data-v-8c9498c0>export default</code> and runs your app.</a></p><p data-v-8c9498c0><img src="https://im.dt.in.th/ipfs/bafybeibagn7adm3k3rg6gt6l7ydwzjdcg7mf7jzulbfpzq4gvkajq7etzq/image.webp" alt="Code editor in Deno Deploy with Elysia API code. The left side displays TypeScript code for API endpoints, including import statements and route definitions. The right side shows a black terminal-like output area with the text Hello Elysia." data-v-8c9498c0></p><p data-v-8c9498c0>Here’s a simple example:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>import</span><span style="color:#E1E4E8;" data-v-8c9498c0> { Elysia } </span><span style="color:#F97583;" data-v-8c9498c0>from</span><span style="color:#9ECBFF;" data-v-8c9498c0> &#39;npm:elysia&#39;</span></span>
 <span class="line" data-v-8c9498c0></span>
 <span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>export</span><span style="color:#F97583;" data-v-8c9498c0> default</span><span style="color:#F97583;" data-v-8c9498c0> new</span><span style="color:#B392F0;" data-v-8c9498c0> Elysia</span><span style="color:#E1E4E8;" data-v-8c9498c0>()</span></span>
@@ -58,11 +30,8 @@
         </div>
       </main>
       <footer>
-        <div
-          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
-          id="footerContents"
-        >
-          <notes-page-footer></notes-page-footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
         </div>
       </footer>
     </div>
@@ -81,5 +50,7 @@ __sfc__.__file = "Note.vue"
 exports. default = __sfc__};
 window.precompiledFrontMatter = {"public":true,"title":"Quickly deploying API endpoints online with Elysia on Deno Deploy"};
 </script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

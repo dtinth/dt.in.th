@@ -2,7 +2,7 @@
 <html data-precompiled=true lang="en" data-dtinth="true">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Backing up a Linux cloud server with Restic | notes.dt.in.th</title><meta property="og:title" content="Backing up a Linux cloud server with Restic" data-source="note">
 <meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/ResticBackup" data-source="note">
@@ -12,45 +12,17 @@
 .sr-only[data-v-8c9498c0]{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0;}
 .static[data-v-8c9498c0]{position:static;}
 .me[data-v-8c9498c0]{margin-inline-end:1rem;}</style>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
-      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
-      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" crossorigin src="/runtime/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
-    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
   </head>
-  <body class="bg-#252423 text-#e9e8e7 antialiased">
-    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
-      <div class="flex items-center pl-[18px] flex-none">
-        <a
-          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
-          href="/"
-          >notes.dt.in.th</a
-        >
-      </div>
-      <div
-        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
-        id="headerMiddle"
-      >
-        <div class="px-2 flex-none">›</div><div class="truncate"><a title="Recent writings" href="Recent">Recent writings</a></div>
-      </div>
-      <div
-        class="flex items-center px-[18px] flex-none gap-4"
-        id="headerToolbar"
-      ></div>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
     </header>
     <div class="h-entry">
-      <main class="bg-#353433" id="main">
-        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+      <main id="main">
+        <div id="mainContents">
           <div class="prose e-content" id="noteContents"><!--[--><h1 id="backing-up-a-linux-cloud-server-with-restic" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#backing-up-a-linux-cloud-server-with-restic" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Backing up a Linux cloud server with Restic</h1><p data-v-8c9498c0>To save on cloud costs, I want to decommission some old cloud servers. But before I do that, just to be safe, I wanted to back up the data on the it. Unfortunately, many cloud providers doesn’t let you download the snapshot of the VM.</p><p data-v-8c9498c0><a href="https://restic.readthedocs.io/en/stable/" data-v-8c9498c0><strong data-v-8c9498c0>Restic</strong></a> is a modern backup tool <em data-v-8c9498c0>(“Backups done right!”)</em><sup data-v-8c9498c0><a href="#user-content-fn-discovery" id="user-content-fnref-discovery" data-footnote-ref="" aria-describedby="footnote-label" data-v-8c9498c0>1</a></sup>. It is shipped as a static binary, so it can run on an old <a href="Linux" data-v-8c9498c0>Linux</a> cloud server<sup data-v-8c9498c0><a href="#user-content-fn-old" id="user-content-fnref-old" data-footnote-ref="" aria-describedby="footnote-label" data-v-8c9498c0>2</a></sup>.</p><h2 id="downloading-the-binary" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#downloading-the-binary" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Downloading the binary</h2><p data-v-8c9498c0>The latest release can be found at <a href="https://github.com/restic/restic/releases" data-v-8c9498c0>https://github.com/restic/restic/releases</a>.</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0># Make sure to replace the version number and CPU architecture in the URL.</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>wget</span><span style="color:#9ECBFF;" data-v-8c9498c0> https://github.com/restic/restic/releases/download/v0.17.1/restic_0.17.1_linux_amd64.bz2</span><span style="color:#79B8FF;" data-v-8c9498c0> -O</span><span style="color:#9ECBFF;" data-v-8c9498c0> restic.bz2</span></span>
 <span class="line" data-v-8c9498c0></span>
@@ -84,11 +56,8 @@
         </div>
       </main>
       <footer>
-        <div
-          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
-          id="footerContents"
-        >
-          <notes-page-footer></notes-page-footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
         </div>
       </footer>
     </div>
@@ -107,5 +76,7 @@ __sfc__.__file = "Note.vue"
 exports. default = __sfc__};
 window.precompiledFrontMatter = {"public":true,"title":"Backing up a Linux cloud server with Restic"};
 </script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

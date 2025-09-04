@@ -2,7 +2,7 @@
 <html data-precompiled=true lang="en" data-dtinth="true">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Faster PostgreSQL during development | notes.dt.in.th</title><meta property="og:title" content="Faster PostgreSQL during development" data-source="note">
 <meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/PostgresDevConfig" data-source="note">
@@ -11,45 +11,17 @@
 <link rel="canonical" href="https://notes.dt.in.th/PostgresDevConfig" data-source="note"><style id="note-styles">/* layer: default */
 .sr-only[data-v-8c9498c0]{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0;}
 .my[data-v-8c9498c0]{margin-top:1rem;margin-bottom:1rem;}</style>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
-      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
-      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" crossorigin src="/runtime/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
-    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
   </head>
-  <body class="bg-#252423 text-#e9e8e7 antialiased">
-    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
-      <div class="flex items-center pl-[18px] flex-none">
-        <a
-          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
-          href="/"
-          >notes.dt.in.th</a
-        >
-      </div>
-      <div
-        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
-        id="headerMiddle"
-      >
-        <div class="px-2 flex-none">›</div><div class="truncate"><a title="Database (topic)" href="Database">Database</a></div><div class="px-2 flex-none">›</div><div class="truncate"><a title="PostgreSQL (topic)" href="PostgreSQL">PostgreSQL</a></div>
-      </div>
-      <div
-        class="flex items-center px-[18px] flex-none gap-4"
-        id="headerToolbar"
-      ></div>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
     </header>
     <div class="h-entry">
-      <main class="bg-#353433" id="main">
-        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+      <main id="main">
+        <div id="mainContents">
           <div class="prose e-content" id="noteContents"><!--[--><h1 id="faster-postgresql-during-development" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#faster-postgresql-during-development" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Faster PostgreSQL during development</h1><div class="lead" data-v-8c9498c0><p data-v-8c9498c0>You can change a few PostgreSQL settings in your development environment to make it run faster. Based on my testing, database operations are <strong data-v-8c9498c0>3.2x faster</strong>.<sup data-v-8c9498c0><a href="#user-content-fn-faster" id="user-content-fnref-faster" data-footnote-ref="" aria-describedby="footnote-label" data-v-8c9498c0>1</a></sup></p></div><p data-v-8c9498c0>Buried in PostgreSQL’s documentation is this chapter: <a href="https://www.postgresql.org/docs/15/non-durability.html" data-v-8c9498c0>Non-Durable Settings</a>. To quote:</p><blockquote data-v-8c9498c0><p data-v-8c9498c0>Durability is a database feature that guarantees the recording of committed transactions even if the server crashes or loses power. However, <strong data-v-8c9498c0>durability adds significant database overhead</strong>, so if your site does not require such a guarantee, PostgreSQL can be configured to run much faster.</p></blockquote><p data-v-8c9498c0>In your development environment, you probably don’t need that guarantee.</p><h2 id="settings" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#settings" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Settings</h2><p data-v-8c9498c0>Adjust these settings:</p><pre data-v-8c9498c0><code data-v-8c9498c0>fsync = off
 full_page_writes = off
 synchronous_commit = off
@@ -83,11 +55,8 @@ synchronous_commit = off
         </div>
       </main>
       <footer>
-        <div
-          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
-          id="footerContents"
-        >
-          <notes-page-footer></notes-page-footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
         </div>
       </footer>
     </div>
@@ -106,5 +75,7 @@ __sfc__.__file = "Note.vue"
 exports. default = __sfc__};
 window.precompiledFrontMatter = {"title":"Faster PostgreSQL during development","public":true};
 </script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

@@ -2,7 +2,7 @@
 <html data-precompiled=true lang="en" data-dtinth="true">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Extracting text from image in macOS from the CLI | notes.dt.in.th</title><meta property="og:title" content="Extracting text from image in macOS from the CLI" data-source="note">
 <meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/MacOSOCR" data-source="note">
@@ -11,54 +11,23 @@
 <link rel="canonical" href="https://notes.dt.in.th/MacOSOCR" data-source="note"><style id="note-styles">/* layer: default */
 .me[data-v-8c9498c0]{margin-inline-end:1rem;}
 .tab[data-v-8c9498c0]{-moz-tab-size:4;-o-tab-size:4;tab-size:4;}</style>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
-      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
-      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" crossorigin src="/runtime/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
-    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
   </head>
-  <body class="bg-#252423 text-#e9e8e7 antialiased">
-    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
-      <div class="flex items-center pl-[18px] flex-none">
-        <a
-          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
-          href="/"
-          >notes.dt.in.th</a
-        >
-      </div>
-      <div
-        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
-        id="headerMiddle"
-      >
-        <div class="px-2 flex-none">›</div><div class="truncate"><a title="macOS (topic)" href="MacOS">macOS</a></div>
-      </div>
-      <div
-        class="flex items-center px-[18px] flex-none gap-4"
-        id="headerToolbar"
-      ></div>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
     </header>
     <div class="h-entry">
-      <main class="bg-#353433" id="main">
-        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+      <main id="main">
+        <div id="mainContents">
           <div class="prose e-content" id="noteContents"><!--[--><h1 id="extracting-text-from-image-in-macos-from-the-cli" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#extracting-text-from-image-in-macos-from-the-cli" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Extracting text from image in macOS from the CLI</h1><p data-v-8c9498c0>Newer versions of <a href="MacOS" data-v-8c9498c0>macOS</a> has the <a href="https://developer.apple.com/documentation/vision/vnrecognizetextrequest" data-v-8c9498c0>VNRecognizeTextRequest</a> API. However, I can&#39;t find an easy-to-install tool that lets me use this API in a command line. However, this can be worked around thanks to the fact that:</p><ul data-v-8c9498c0><li data-v-8c9498c0>The <a href="https://support.apple.com/guide/shortcuts-mac/intro-to-shortcuts-apdf22b0444c/mac" data-v-8c9498c0>Shortcuts app</a> offers the &quot;Extract text from image&quot; action.</li><li data-v-8c9498c0><a href="https://support.apple.com/guide/shortcuts-mac/run-shortcuts-from-the-command-line-apd455c82f02/mac" data-v-8c9498c0>Shortcuts can be run from the command line</a> and can output its result via stdout.</li></ul><h2 id="setting-up-a-shortcut" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#setting-up-a-shortcut" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Setting up a shortcut</h2><p data-v-8c9498c0>First, create a shortcut like this:</p><p data-v-8c9498c0><img src="https://im.dt.in.th/ipfs/bafybeibofd4xjxkwlsj46uvc6l3dvkaihstazocy6h2wigsg45ntybitia/image.webp" alt="A screenshot of the macOS Shortcuts app, displaying the configuration settings for a shortcut named &quot;Extract Text.&quot; The shortcut is designed to receive images as input, likely from other apps or Quick Actions. The left side of the window shows the workflow steps: receiving images, extracting text, and outputting the result. Options for handling missing input (no image) are also visible, including a &quot;Stop and Respond&quot; action and a &quot;No image given!&quot; message. The right side of the window displays various settings under the &quot;Details,&quot; &quot;Privacy,&quot; and &quot;Setup&quot; tabs. The &quot;Details&quot; tab is currently selected, showing options such as &quot;Use as Quick Action&quot; (checked) and &quot;Provide Output&quot; (checked)." data-v-8c9498c0></p><ul data-v-8c9498c0><li data-v-8c9498c0>Name the shortcut <strong data-v-8c9498c0>Extract Text</strong></li><li data-v-8c9498c0>At the right, under <strong data-v-8c9498c0>Details</strong>, check the following boxes: <ul data-v-8c9498c0><li data-v-8c9498c0><strong data-v-8c9498c0>Use as Quick Action</strong></li><li data-v-8c9498c0><strong data-v-8c9498c0>Provide Output</strong></li></ul></li><li data-v-8c9498c0>In the workflow, add the following actions: <ul data-v-8c9498c0><li data-v-8c9498c0>Receive <strong data-v-8c9498c0>Images</strong> input from <strong data-v-8c9498c0>Quick Actions</strong></li><li data-v-8c9498c0>Extract text from <strong data-v-8c9498c0>Shortcut Input</strong></li><li data-v-8c9498c0>Stop and output <strong data-v-8c9498c0>Text from Image</strong></li></ul></li></ul><h2 id="invoking-the-shortcut" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#invoking-the-shortcut" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Invoking the shortcut</h2><p data-v-8c9498c0>Then, run the shortcut like this:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>shortcuts</span><span style="color:#9ECBFF;" data-v-8c9498c0> run</span><span style="color:#9ECBFF;" data-v-8c9498c0> &#39;Extract Text&#39;</span><span style="color:#79B8FF;" data-v-8c9498c0> -i</span><span style="color:#F97583;" data-v-8c9498c0> &lt;</span><span style="color:#9ECBFF;" data-v-8c9498c0>path/to/image.pn</span><span style="color:#E1E4E8;" data-v-8c9498c0>g</span><span style="color:#F97583;" data-v-8c9498c0>&gt;</span><span style="color:#F97583;" data-v-8c9498c0> |</span><span style="color:#B392F0;" data-v-8c9498c0> cat</span></span></code></pre><p data-v-8c9498c0>The <code data-v-8c9498c0>| cat</code> is required to make the shortcuts CLI output the result to stdout. Otherwise, it will not output anything.</p><!--]--></div>
         </div>
       </main>
       <footer>
-        <div
-          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
-          id="footerContents"
-        >
-          <notes-page-footer></notes-page-footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
         </div>
       </footer>
     </div>
@@ -77,5 +46,7 @@ __sfc__.__file = "Note.vue"
 exports. default = __sfc__};
 window.precompiledFrontMatter = {"public":true,"title":"Extracting text from image in macOS from the CLI"};
 </script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

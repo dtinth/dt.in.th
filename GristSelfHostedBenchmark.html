@@ -2,7 +2,7 @@
 <html data-precompiled=true lang="en" data-dtinth="true">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Self-hosted Grist benchmarks | notes.dt.in.th</title><meta property="og:title" content="Self-hosted Grist benchmarks" data-source="note">
 <meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/GristSelfHostedBenchmark" data-source="note">
@@ -10,54 +10,23 @@
 <meta property="og:image:height" content="1680" data-source="note">
 <link rel="canonical" href="https://notes.dt.in.th/GristSelfHostedBenchmark" data-source="note"><style id="note-styles">/* layer: default */
 .sr-only[data-v-8c9498c0]{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0;}</style>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
-      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
-      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" crossorigin src="/runtime/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
-    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
   </head>
-  <body class="bg-#252423 text-#e9e8e7 antialiased">
-    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
-      <div class="flex items-center pl-[18px] flex-none">
-        <a
-          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
-          href="/"
-          >notes.dt.in.th</a
-        >
-      </div>
-      <div
-        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
-        id="headerMiddle"
-      >
-        <div class="px-2 flex-none">›</div><div class="truncate"><a title="Grist (topic)" href="Grist">Grist</a></div>
-      </div>
-      <div
-        class="flex items-center px-[18px] flex-none gap-4"
-        id="headerToolbar"
-      ></div>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
     </header>
     <div class="h-entry">
-      <main class="bg-#353433" id="main">
-        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+      <main id="main">
+        <div id="mainContents">
           <div class="prose e-content" id="noteContents"><!--[--><h1 id="self-hosted-grist-benchmarks" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#self-hosted-grist-benchmarks" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Self-hosted Grist benchmarks</h1><p data-v-8c9498c0><a href="Grist" data-v-8c9498c0>Grist</a> is a spreadsheet-like database that can be self-hosted. I was considering if it was practical to use Grist as a backend instead of a database.</p><p data-v-8c9498c0>The <strong data-v-8c9498c0>hosted</strong> version of Grist has a <a href="https://support.getgrist.com/limits/#api-limits" data-v-8c9498c0>rate limit</a> of 5 requests per second and 5000 requests per day for the free plan. However, its documentation does not mention any rate limits for the <strong data-v-8c9498c0>self-hosted</strong> version, so I decided to test it. Here are the results. On the self-hosted version:</p><ul data-v-8c9498c0><li data-v-8c9498c0>There is no rate limit per second.</li><li data-v-8c9498c0>There is no rate limit per day.</li><li data-v-8c9498c0>There is a <a href="https://support.getgrist.com/limits/#:~:text=Separately%2C%20there%20is%20a%20concurrency%20limit%20of%2010%20for%20all%20plans" data-v-8c9498c0>concurrency limit of 10 active requests per document</a> which is <a href="https://github.com/gristlabs/grist-core/blob/fcc1f34159424fc89adecc00e5a508adbecaa1f8/app/server/lib/DocApi.ts#L112" data-v-8c9498c0>hardcoded</a> and applies to everyone.</li><li data-v-8c9498c0>There is no limit on the number of rows.</li></ul><p data-v-8c9498c0>I also ran some performance tests. The self-hosted Grist was running on a $10/mo Linode instance which is also used for other services. With that, I was able to make:</p><ul data-v-8c9498c0><li data-v-8c9498c0>70 GET requests per second.</li><li data-v-8c9498c0>40 POST requests per second.</li></ul><p data-v-8c9498c0>This shows that Grist is a viable option for using as a backend, with a few considerations:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Use an in-memory asynchronous task queue such as <a href="https://www.npmjs.com/package/p-queue" data-v-8c9498c0>p-queue</a> to avoid hitting the concurrency limit, if you will have a sudden surge in requests. Importantly, set a cap on the queue size to prevent excessive queuing<sup data-v-8c9498c0><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref="" aria-describedby="footnote-label" data-v-8c9498c0>1</a></sup>. This helps maintain responsiveness and avoids wasting resources on potentially stale requests<sup data-v-8c9498c0><a href="#user-content-fn-2" id="user-content-fnref-2" data-footnote-ref="" aria-describedby="footnote-label" data-v-8c9498c0>2</a></sup>. Note that the app may still hit the concurrency limit anyways especially if it is serverless or runs in multiple processes, so they must still be prepared to handle the occasional 429 responses.</li><li data-v-8c9498c0>If there&#39;s a surge of users, then requests may start queuing up. If most users are making the same request, consider using an in-memory cache that coalesces requests, such as <a href="https://www.npmjs.com/package/async-cache-dedupe" data-v-8c9498c0>async-cache-dedupe</a>.</li></ul><section data-footnotes="" class="footnotes" data-v-8c9498c0><h2 id="footnote-label" class="sr-only" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#footnote-label" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Footnotes</h2><ol data-v-8c9498c0><li id="user-content-fn-1" data-v-8c9498c0><p data-v-8c9498c0>A bounded queue prevents scenarios where requests wait an unreasonably long time, potentially exceeding client timeout limits. <a href="#user-content-fnref-1" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref" data-v-8c9498c0>↩</a></p></li><li id="user-content-fn-2" data-v-8c9498c0><p data-v-8c9498c0>Alternative approaches, such as retracting timed-out requests from the queue, are possible but more complex to implement. A simple queue size cap offers a good balance between implementation simplicity and effective resource management. <a href="#user-content-fnref-2" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref" data-v-8c9498c0>↩</a></p></li></ol></section><!--]--></div>
         </div>
       </main>
       <footer>
-        <div
-          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
-          id="footerContents"
-        >
-          <notes-page-footer></notes-page-footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
         </div>
       </footer>
     </div>
@@ -76,5 +45,7 @@ __sfc__.__file = "Note.vue"
 exports. default = __sfc__};
 window.precompiledFrontMatter = {"public":true,"title":"Self-hosted Grist benchmarks"};
 </script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

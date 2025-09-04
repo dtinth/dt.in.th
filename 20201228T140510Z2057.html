@@ -2,7 +2,7 @@
 <html data-precompiled=true lang="en" data-dtinth="true">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tmp.spacet.me devlog part 2 | notes.dt.in.th</title><meta property="og:title" content="tmp.spacet.me devlog part 2" data-source="note">
 <meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/20201228T140510Z2057" data-source="note">
@@ -10,45 +10,17 @@
 <meta property="og:image:height" content="1680" data-source="note">
 <link rel="canonical" href="https://notes.dt.in.th/20201228T140510Z2057" data-source="note"><style id="note-styles">/* layer: default */
 .static[data-v-8c9498c0]{position:static;}</style>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
-      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
-      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" crossorigin src="/runtime/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
-    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
   </head>
-  <body class="bg-#252423 text-#e9e8e7 antialiased">
-    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
-      <div class="flex items-center pl-[18px] flex-none">
-        <a
-          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
-          href="/"
-          >notes.dt.in.th</a
-        >
-      </div>
-      <div
-        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
-        id="headerMiddle"
-      >
-        <div class="px-2 flex-none">›</div><div class="truncate"><a title="Web Platform (topic)" href="WebPlatform">Web Platform</a></div><div class="px-2 flex-none">›</div><div class="truncate"><a title="A local file storage for the web and interopearability layer for web-based apps (submission)" href="20210109T141458Z5537">A local file storage for the web and interopearability layer for web-based apps (submission)</a></div>
-      </div>
-      <div
-        class="flex items-center px-[18px] flex-none gap-4"
-        id="headerToolbar"
-      ></div>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
     </header>
     <div class="h-entry">
-      <main class="bg-#353433" id="main">
-        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+      <main id="main">
+        <div id="mainContents">
           <div class="prose e-content" id="noteContents"><!--[--><p data-v-8c9498c0>Now that the core is usable, I want to tackle a first use case — opening a file in an external viewer.</p><p data-v-8c9498c0>To simplify this task, for now I will use a hardcoded list of external integrations. Making this list customizable will come later.</p><p data-v-8c9498c0><strong data-v-8c9498c0>postMessage protocol:</strong> The messaging protocol I decided to use is based on <a href="https://www.jsonrpc.org/specification" data-v-8c9498c0>JSON-RPC</a> specification, following how <a href="https://microsoft.github.io/language-server-protocol/specifications/specification-current/" data-v-8c9498c0>Microsoft also uses it in its Language Server Protocol Specification</a>.</p><h2 id="results" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#results" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Results</h2><p data-v-8c9498c0>I implemented integrations for these:</p><ul data-v-8c9498c0><li data-v-8c9498c0><a href="https://json.spacet.me" data-v-8c9498c0>json.spacet.me</a> - JSON viewer</li><li data-v-8c9498c0><a href="https://vdo.glitch.me" data-v-8c9498c0>vdo.glitch.me</a> - Video player</li></ul><p data-v-8c9498c0><img src="https://static.dt.in.th/uploads/2020/12/28/external-viewer.png" alt="External viewer" data-v-8c9498c0></p><p data-v-8c9498c0><strong data-v-8c9498c0>How it works:</strong> When opening a file with an external viewer, tmp.spacet.me opens up a new window, passing along a session ID. Once the viewer loads and detects the session ID, it makes a JSON-RPC call to the opener to obtain the file contents.</p><p data-v-8c9498c0><img src="https://static.dt.in.th/uploads/2020/12/28/tmp-communication.png" alt="Communication" data-v-8c9498c0></p><h2 id="implementation-and-refactoring" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#implementation-and-refactoring" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Implementation and refactoring</h2><p data-v-8c9498c0>I started by <a href="http://wiki.c2.com/?DoTheSimplestThingThatCouldPossiblyWork" data-v-8c9498c0>doing the simplest thing that could possibly work</a> and hardcoded the <code data-v-8c9498c0>postMessage</code> handling code. Here the code is infested with type assertions just to make TypeScript compiler happy. When experimenting, I think this is a good thing to do, just don&#39;t forget to clean it up later, which is coming up right next.</p><p data-v-8c9498c0>You don&#39;t need to understand the whole code here, just look at the code around the comments:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>window.</span><span style="color:#B392F0;" data-v-8c9498c0>addEventListener</span><span style="color:#E1E4E8;" data-v-8c9498c0>(</span><span style="color:#9ECBFF;" data-v-8c9498c0>&#39;message&#39;</span><span style="color:#E1E4E8;" data-v-8c9498c0>, </span><span style="color:#F97583;" data-v-8c9498c0>async</span><span style="color:#E1E4E8;" data-v-8c9498c0> (</span><span style="color:#FFAB70;" data-v-8c9498c0>e</span><span style="color:#E1E4E8;" data-v-8c9498c0>) </span><span style="color:#F97583;" data-v-8c9498c0>=&gt;</span><span style="color:#E1E4E8;" data-v-8c9498c0> {</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>  const</span><span style="color:#79B8FF;" data-v-8c9498c0> fromWindow</span><span style="color:#F97583;" data-v-8c9498c0> =</span><span style="color:#E1E4E8;" data-v-8c9498c0> (e.source </span><span style="color:#F97583;" data-v-8c9498c0>as</span><span style="color:#79B8FF;" data-v-8c9498c0> unknown</span><span style="color:#E1E4E8;" data-v-8c9498c0>) </span><span style="color:#F97583;" data-v-8c9498c0>as</span><span style="color:#B392F0;" data-v-8c9498c0> Window</span></span>
 <span class="line" data-v-8c9498c0></span>
@@ -179,11 +151,8 @@
         </div>
       </main>
       <footer>
-        <div
-          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
-          id="footerContents"
-        >
-          <notes-page-footer></notes-page-footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
         </div>
       </footer>
     </div>
@@ -202,5 +171,7 @@ __sfc__.__file = "Note.vue"
 exports. default = __sfc__};
 window.precompiledFrontMatter = {"title":"tmp.spacet.me devlog part 2","tags":"dohackathon","series":"tmp.spacet.me devlog","public":true,"devto":"https://dev.to/dtinth/tmp-spacet-me-devlog-part-2-34hi"};
 </script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

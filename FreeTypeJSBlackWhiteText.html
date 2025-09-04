@@ -2,7 +2,7 @@
 <html data-precompiled=true lang="en" data-dtinth="true">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Drawing low resolution monochrome text with freetype-wasm | notes.dt.in.th</title><meta property="og:title" content="Drawing low resolution monochrome text with freetype-wasm" data-source="note">
 <meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/FreeTypeJSBlackWhiteText" data-source="note">
@@ -23,45 +23,17 @@
 .flex[data-v-8c9498c0]{display:flex;}
 .gap-2[data-v-8c9498c0]{gap:0.5rem;}
 .border[data-v-8c9498c0]{border-width:1px;}</style>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
-      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
-      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" crossorigin src="/runtime/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
-    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
   </head>
-  <body class="bg-#252423 text-#e9e8e7 antialiased">
-    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
-      <div class="flex items-center pl-[18px] flex-none">
-        <a
-          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
-          href="/"
-          >notes.dt.in.th</a
-        >
-      </div>
-      <div
-        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
-        id="headerMiddle"
-      >
-        <div class="px-2 flex-none">›</div><div class="truncate"><a title="Typography (topic)" href="Typography">Typography</a></div>
-      </div>
-      <div
-        class="flex items-center px-[18px] flex-none gap-4"
-        id="headerToolbar"
-      ></div>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
     </header>
     <div class="h-entry">
-      <main class="bg-#353433" id="main">
-        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+      <main id="main">
+        <div id="mainContents">
           <div class="prose e-content" id="noteContents"><!--[--><h1 id="drawing-low-resolution-monochrome-text-with-freetype-wasm" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#drawing-low-resolution-monochrome-text-with-freetype-wasm" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Drawing low resolution monochrome text with freetype-wasm</h1><p data-v-8c9498c0>I recently got myself a <a href="https://www.brother-usa.com/ptouch/cube-plus/home" data-v-8c9498c0>label printer</a>, which can only print pixels in monochrome (black or white, no grayscale). Separately, earlier this year I bought this gorgeous monospace font <a href="https://berkeleygraphics.com/typefaces/berkeley-mono/" data-v-8c9498c0>Berkeley Mono</a>. It looks great on my terminal… Now I want to print labels using this same font… but the result looks like the first image below:</p><!----><p data-v-8c9498c0>To get a better printout (second image), I need to find an alternative way to render text — one that can render small text as monochrome pixels well. That’s when I found <a href="https://freetype.org/autohinting/hinter.html" data-v-8c9498c0><strong data-v-8c9498c0>The FreeType Auto-Hinter</strong></a>.</p><p data-v-8c9498c0>Now I need a way to use it to generate a monochrome bitmap image. As I’m a <a href="WebPlatform" data-v-8c9498c0>web</a> developer, I want something that I can use in a web browser. That’s when I found <a href="https://github.com/Ciantic/freetype-wasm" data-v-8c9498c0><strong data-v-8c9498c0>freetype-wasm</strong></a>.</p><p data-v-8c9498c0>Lastly, the <a href="https://developer.chrome.com/docs/capabilities/web-apis/local-fonts" data-v-8c9498c0><strong data-v-8c9498c0>Local Font Access API</strong></a> lets web applications directly access locally-installed fonts like a desktop font rather than a web font.</p><h2 id="try-it-out" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#try-it-out" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Try it out!</h2><p data-v-8c9498c0>First, we need access to your fonts:</p><p data-v-8c9498c0><button class="btn" data-v-8c9498c0>Query fonts</button></p><p data-v-8c9498c0>Pick a font and size below:</p><p class="flex gap-2" data-v-8c9498c0><select class="form-control" style="width:300px;" disabled data-v-8c9498c0><option disabled data-v-8c9498c0>Please click the above button first.</option><!--[--><!--]--></select><input class="form-control" disabled type="number" min="1" value="12" style="width:64px;" data-v-8c9498c0></p><p data-v-8c9498c0>Enter some text to render it:</p><p data-v-8c9498c0><input class="form-control" disabled type="text" value="A quick brown fox jumps over the lazy dog" placeholder="Enter text to render" style="box-sizing:border-box;width:100%;" data-v-8c9498c0></p><p style="min-height:96px;" data-v-8c9498c0><canvas width="320" height="48" style="border:1px solid black;background:white;" data-v-8c9498c0></canvas></p><h2 id="the-freetype-renderer" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#the-freetype-renderer" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>The FreeType renderer</h2><p data-v-8c9498c0>This function initializes the FreeType library and provides a way to load fonts and render text.</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>import</span><span style="color:#E1E4E8;" data-v-8c9498c0> FreeTypeInit </span><span style="color:#F97583;" data-v-8c9498c0>from</span><span style="color:#9ECBFF;" data-v-8c9498c0> &#39;https://cdn.jsdelivr.net/npm/freetype-wasm@0/dist/freetype.js&#39;</span></span>
 <span class="line" data-v-8c9498c0></span>
 <span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>// Based on https://github.com/Ciantic/freetype-wasm/blob/master/example/example.js</span></span>
@@ -213,11 +185,8 @@
         </div>
       </main>
       <footer>
-        <div
-          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
-          id="footerContents"
-        >
-          <notes-page-footer></notes-page-footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
         </div>
       </footer>
     </div>
@@ -582,5 +551,7 @@ __sfc__.__file = "Note.vue"
 exports. default = __sfc__};
 window.precompiledFrontMatter = {"title":"Drawing low resolution monochrome text with freetype-wasm","public":true};
 </script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

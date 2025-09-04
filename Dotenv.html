@@ -2,7 +2,7 @@
 <html data-precompiled=true lang="en" data-dtinth="true">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>.env file | notes.dt.in.th</title><meta property="og:title" content=".env file" data-source="note">
 <meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/Dotenv" data-source="note">
@@ -12,45 +12,17 @@
 .sr-only[data-v-8c9498c0]{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0;}
 .my[data-v-8c9498c0]{margin-top:1rem;margin-bottom:1rem;}
 .contents[data-v-8c9498c0]{display:contents;}</style>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
-      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
-      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" crossorigin src="/runtime/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
-    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
   </head>
-  <body class="bg-#252423 text-#e9e8e7 antialiased">
-    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
-      <div class="flex items-center pl-[18px] flex-none">
-        <a
-          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
-          href="/"
-          >notes.dt.in.th</a
-        >
-      </div>
-      <div
-        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
-        id="headerMiddle"
-      >
-        <div class="px-2 flex-none">›</div><div class="truncate"><a title="Shell (topic)" href="Shell">Shell</a></div>
-      </div>
-      <div
-        class="flex items-center px-[18px] flex-none gap-4"
-        id="headerToolbar"
-      ></div>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
     </header>
     <div class="h-entry">
-      <main class="bg-#353433" id="main">
-        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+      <main id="main">
+        <div id="mainContents">
           <div class="prose e-content" id="noteContents"><!--[--><p data-v-8c9498c0><strong data-v-8c9498c0>The <code data-v-8c9498c0>.env</code> file</strong> is a text file that contains environment variables, commonly used store configuration settings for an application. It is written in a key-value pair format similar to a shell script.</p><div class="notes-callout" data-type="Note" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><!---->Why doesn’t my application see the environment variables in the <code data-v-8c9498c0>.env</code> file?</p><p data-v-8c9498c0>By default, a shell does not load the <code data-v-8c9498c0>.env</code> file. This means that when you create a <code data-v-8c9498c0>.env</code> file, your application may not be able to access the environment variables defined in it, unless something causes the <code data-v-8c9498c0>.env</code> file to be loaded into your application’s environment.</p></div><ul data-v-8c9498c0><li data-v-8c9498c0><p data-v-8c9498c0><strong data-v-8c9498c0>Some runtimes loads .env files automatically.</strong></p><ul data-v-8c9498c0><li data-v-8c9498c0><p data-v-8c9498c0><a href="Vite" data-v-8c9498c0>Vite</a> <a href="https://vitejs.dev/guide/env-and-mode" data-v-8c9498c0>loads <code data-v-8c9498c0>.env</code> files automatically</a>, making them available as <code data-v-8c9498c0>import.meta.env</code>. As a result, frameworks based on Vite also inherit this behavior, such as <a href="https://docs.astro.build/en/guides/environment-variables/" data-v-8c9498c0>Astro</a> and <a href="https://kit.svelte.dev/docs/adapter-node#environment-variables" data-v-8c9498c0>SvelteKit</a>. Do note that for these frameworks, environment variables may be evaluated at build time or runtime<sup data-v-8c9498c0><a href="#user-content-fn-buildvsrun" id="user-content-fnref-buildvsrun" data-footnote-ref="" aria-describedby="footnote-label" data-v-8c9498c0>1</a></sup> and behavior can be different between development and production environments, so refer to the documentation for specifics.</p></li><li data-v-8c9498c0><p data-v-8c9498c0><a href="https://glitch.com/" data-v-8c9498c0>Glitch</a>, a platform for building web applications, <a href="https://support.glitch.com/t/how-do-i-set-environment-variables/3921" data-v-8c9498c0>automatically loads <code data-v-8c9498c0>.env</code> files</a> in a project as a normal environment variable.</p></li><li data-v-8c9498c0><p data-v-8c9498c0><a href="Docker" data-v-8c9498c0>Docker</a> Compose <a href="https://docs.docker.com/compose/environment-variables/variable-interpolation/" data-v-8c9498c0>automatically loads <code data-v-8c9498c0>.env</code> files for the purpose of interpolation</a> into the <code data-v-8c9498c0>docker-compose.yml</code> file. Note that this does not make the environment variables available to the containers managed by Docker Compose.</p><details data-v-8c9498c0><summary data-v-8c9498c0>More details for Docker Compose</summary><p data-v-8c9498c0>To make the environment variables available to the containers, specify the environment variable names in the <code data-v-8c9498c0>environment</code> section of the <code data-v-8c9498c0>docker-compose.yml</code> file. For example:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#85E89D;" data-v-8c9498c0>services</span><span style="color:#E1E4E8;" data-v-8c9498c0>:</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#85E89D;" data-v-8c9498c0>  myservice</span><span style="color:#E1E4E8;" data-v-8c9498c0>:</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#85E89D;" data-v-8c9498c0>    image</span><span style="color:#E1E4E8;" data-v-8c9498c0>: </span><span style="color:#9ECBFF;" data-v-8c9498c0>myimage</span></span>
@@ -59,11 +31,8 @@
         </div>
       </main>
       <footer>
-        <div
-          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
-          id="footerContents"
-        >
-          <notes-page-footer></notes-page-footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
         </div>
       </footer>
     </div>
@@ -119,5 +88,7 @@ __sfc__.__file = "Note.vue"
 exports. default = __sfc__};
 window.precompiledFrontMatter = {"public":true,"title":".env file"};
 </script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

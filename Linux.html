@@ -2,7 +2,7 @@
 <html data-precompiled=true lang="en" data-dtinth="true">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linux | notes.dt.in.th</title><meta property="og:title" content="Linux" data-source="note">
 <meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/Linux" data-source="note">
@@ -25,54 +25,23 @@
 @media (min-width: 1536px){
 .container[data-v-8c9498c0]{max-width:1536px;}
 }</style>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
-      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
-      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" crossorigin src="/runtime/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
-    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
   </head>
-  <body class="bg-#252423 text-#e9e8e7 antialiased">
-    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
-      <div class="flex items-center pl-[18px] flex-none">
-        <a
-          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
-          href="/"
-          >notes.dt.in.th</a
-        >
-      </div>
-      <div
-        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
-        id="headerMiddle"
-      >
-        
-      </div>
-      <div
-        class="flex items-center px-[18px] flex-none gap-4"
-        id="headerToolbar"
-      ></div>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
     </header>
     <div class="h-entry">
-      <main class="bg-#353433" id="main">
-        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+      <main id="main">
+        <div id="mainContents">
           <div class="prose e-content" id="noteContents"><!--[--><p data-v-8c9498c0>Notes on working with a <strong data-v-8c9498c0>Linux</strong> system.</p><ul data-v-8c9498c0><li data-v-8c9498c0><a href="DockerInstall" data-v-8c9498c0>Installing Docker on Linux</a></li><li data-v-8c9498c0><a href="VirtualDesktop" data-v-8c9498c0>Dockerized virtual desktop</a></li><li data-v-8c9498c0><a href="20220923T125342Z4946" data-v-8c9498c0>Recording screen in Linux using ffmpeg</a></li><li data-v-8c9498c0><a href="Codebox" data-v-8c9498c0>Codespaces-like development container setup</a></li><li data-v-8c9498c0><a href="20221015T091530Z4968" data-v-8c9498c0>Adding a Desktop environment to a Debian/Ubuntu server</a></li><li data-v-8c9498c0><a href="LinuxAddUser" data-v-8c9498c0>Which one to use, useradd or adduser?</a></li><li data-v-8c9498c0><a href="20221209T090307Z6968" data-v-8c9498c0>Creating encrypted directories with gocryptfs</a></li><li data-v-8c9498c0><a href="AsdfSnippets" data-v-8c9498c0>My asdf snippets</a></li><li data-v-8c9498c0><a href="20220204T170710Z2789" data-v-8c9498c0>TIL: pgrep and pkill</a></li><li data-v-8c9498c0><a href="LinuxZram" data-v-8c9498c0>Using ZRAM for compressed RAM-backed swap space in Linux</a></li></ul><h2 id="related-topics" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#related-topics" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Related topics</h2><ul data-v-8c9498c0><li data-v-8c9498c0><a href="Caddy" data-v-8c9498c0>Caddy web server</a></li><li data-v-8c9498c0><a href="Docker" data-v-8c9498c0>Docker</a></li><li data-v-8c9498c0><a href="Codespaces" data-v-8c9498c0>GitHub Codespaces</a></li><li data-v-8c9498c0><a href="Mosh" data-v-8c9498c0>Mosh</a></li><li data-v-8c9498c0><a href="Tmux" data-v-8c9498c0>tmux</a></li></ul><!--]--></div>
         </div>
       </main>
       <footer>
-        <div
-          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
-          id="footerContents"
-        >
-          <notes-page-footer></notes-page-footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
         </div>
       </footer>
     </div>
@@ -91,5 +60,7 @@ __sfc__.__file = "Note.vue"
 exports. default = __sfc__};
 window.precompiledFrontMatter = {"topic":true,"public":true,"title":"Linux"};
 </script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

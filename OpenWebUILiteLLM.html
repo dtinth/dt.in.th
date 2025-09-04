@@ -2,52 +2,24 @@
 <html data-precompiled=true lang="en" data-dtinth="true">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OpenWebUILiteLLM | notes.dt.in.th</title><meta property="og:title" content="OpenWebUILiteLLM" data-source="note">
 <meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/OpenWebUILiteLLM" data-source="note">
 <meta property="og:image:width" content="1800" data-source="note">
 <meta property="og:image:height" content="1680" data-source="note">
 <link rel="canonical" href="https://notes.dt.in.th/OpenWebUILiteLLM" data-source="note">
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
-      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
-      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" crossorigin src="/runtime/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
-    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
   </head>
-  <body class="bg-#252423 text-#e9e8e7 antialiased">
-    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
-      <div class="flex items-center pl-[18px] flex-none">
-        <a
-          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
-          href="/"
-          >notes.dt.in.th</a
-        >
-      </div>
-      <div
-        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
-        id="headerMiddle"
-      >
-        <div class="px-2 flex-none">›</div><div class="truncate"><a title="Large Language Model (topic)" href="LargeLanguageModel">Large Language Model</a></div>
-      </div>
-      <div
-        class="flex items-center px-[18px] flex-none gap-4"
-        id="headerToolbar"
-      ></div>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
     </header>
     <div class="h-entry">
-      <main class="bg-#353433" id="main">
-        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+      <main id="main">
+        <div id="mainContents">
           <div class="prose e-content" id="noteContents"><!--[--><h1 id="configuring-open-webui-and-litellm-with-docker-compose-to-talk-to-openai-anthropic-gemini-and-perplexity-apis"><a aria-hidden="true" tabindex="-1" href="#configuring-open-webui-and-litellm-with-docker-compose-to-talk-to-openai-anthropic-gemini-and-perplexity-apis"><span class="icon icon-link"></span></a>Configuring Open WebUI and LiteLLM with Docker Compose to talk to OpenAI, Anthropic, Gemini, and Perplexity APIs</h1><p>I want to use a single UI to interact with <a href="LargeLanguageModel">LLMs</a> from different providers (OpenAI, Anthropic, Google, and Perplexity). I found that there is a way to do this now, but you have to self-host some software.</p><ol><li><a href="https://github.com/open-webui/open-webui"><strong>Open WebUI</strong></a> — A web-based LLM client that works Ollama and any OpenAI-compatible API.</li><li><a href="https://github.com/BerriAI/litellm"><strong>LiteLLM</strong></a> — A proxy server that exposes 100s of LLMs with a unified, OpenAI-compatible API.</li></ol><p><img src="https://im.dt.in.th/ipfs/bafybeiavabarskefnfaenl57lwkugoioswkapqaqvb46ovh3ric2jso4ga/image.webp" alt="A flowchart diagram showing the relationship between different components. It starts with &quot;Open WebUI&quot; on the left, which connects via a green arrow to &quot;LiteLLM&quot; in the center. From &quot;LiteLLM&quot;, three green arrows branch out to the right, connecting to &quot;Gemini API&quot;, &quot;OpenAI API&quot;, and &quot;Anthropic API&quot;. Each component is represented by a black rectangle with white text inside."></p><p>The UI is very flexible. You can choose which model to talk to, or talk to all of them at once:</p><p><img src="https://im.dt.in.th/ipfs/bafybeidw67od5gpxgmhlnjxhtnhmd4xih5xwznpjkl4t7bj2fzdjialxoy/image.webp" alt="A dark-themed chat interface showing conversations with three different AI models: claude-3-5-sonnet, gemini-1.5-pro-latest, and gpt-4o. The top of the screen displays these model names as selectable options. A user message &quot;hello world!&quot; appears in a speech bubble on the right. Below are three response boxes, one for each AI model. Each AI gives a friendly greeting and offers assistance. The interface includes icons for various actions like editing, copying, and liking messages beneath each response."></p><p>This is how I set it up:</p><ol><li><p><strong>Set up the environment variables.</strong> Put the API keys in a <code>.env</code> file.</p><pre><code>OPENAI_API_KEY=
 ANTHROPIC_API_KEY=
 GEMINI_API_KEY=
@@ -105,11 +77,8 @@ PERPLEXITYAI_API_KEY=
         </div>
       </main>
       <footer>
-        <div
-          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
-          id="footerContents"
-        >
-          <notes-page-footer></notes-page-footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
         </div>
       </footer>
     </div>
@@ -126,5 +95,7 @@ __sfc__.__file = "Note.vue"
 exports. default = __sfc__};
 window.precompiledFrontMatter = {"public":true};
 </script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

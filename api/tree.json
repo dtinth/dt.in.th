@@ -488,6 +488,10 @@
 		{	"title": "Creative Coding (topic)"
 		,	"parent": "HomePage"
 		}
+	,	"Creatorsgarten":
+		{	"title": "Creatorsgarten (topic)"
+		,	"parent": "HomePage"
+		}
 	,	"CuWriterFonts":
 		{	"title": "All the fonts from CU Writer"
 		,	"parent": "Typography"
@@ -670,7 +674,7 @@
 		}
 	,	"GitOpsInWeirdPlaces":
 		{	"title": "GitOps in weird places"
-		,	"parent": "GitOps"
+		,	"parent": "Creatorsgarten"
 		}
 	,	"GoogleCloud":
 		{	"title": "Google Cloud (topic)"

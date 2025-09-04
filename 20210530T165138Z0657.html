@@ -2,61 +2,30 @@
 <html data-precompiled=true lang="en" data-dtinth="true">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ปริภูมิสี LCH (color space) | notes.dt.in.th</title><meta property="og:title" content="ปริภูมิสี LCH (color space)" data-source="note">
 <meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/20210530T165138Z0657" data-source="note">
 <meta property="og:image:width" content="1800" data-source="note">
 <meta property="og:image:height" content="1680" data-source="note">
 <link rel="canonical" href="https://notes.dt.in.th/20210530T165138Z0657" data-source="note">
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
-      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
-      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" crossorigin src="/runtime/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
-    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
   </head>
-  <body class="bg-#252423 text-#e9e8e7 antialiased">
-    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
-      <div class="flex items-center pl-[18px] flex-none">
-        <a
-          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
-          href="/"
-          >notes.dt.in.th</a
-        >
-      </div>
-      <div
-        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
-        id="headerMiddle"
-      >
-        <div class="px-2 flex-none">›</div><div class="truncate"><a title="Creative Coding (topic)" href="CreativeCoding">Creative Coding</a></div>
-      </div>
-      <div
-        class="flex items-center px-[18px] flex-none gap-4"
-        id="headerToolbar"
-      ></div>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
     </header>
     <div class="h-entry">
-      <main class="bg-#353433" id="main">
-        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+      <main id="main">
+        <div id="mainContents">
           <div class="prose e-content" id="noteContents"><!--[--><p><img src="https://static.dt.in.th/uploads/2021/05/30/gamut.png" alt=""></p><p>อ่านบทความนี้แล้วเปิดโลกเกี่ยวกับเรื่อง “สี” ไม่น้อยเลยทีเดียว</p><ul><li><a href="https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/">🔖 LCH colors in CSS: what, why, and how? – Lea Verou</a></li></ul><p>คือการเป็นนักพัฒนาเว็บเรามักจะคุ้นชินกับพวกสี RGB ที่มีค่าของแต่ละแชนแนลอยู่ในช่วง 0–255 (00–ff)</p><p>แต่ปัจจุบัน หน้าจอยุคใหม่ๆ สามารถแสดงสีต่างๆ ได้เยอะขึ้น ทำให้ได้สีสันที่สดขึ้น… แต่ถ้าเกิดหน้าจอต่างๆ ปรับช่วงสีให้กว้างขึ้นโดยคงช่วงเลขไว้แบบเดิม จะส่งผลทำให้การแสดงสีต่างๆ เพี้ยน กลายเป็นปัญหาว่าหน้าจอต่างๆ แสดงภาพด้วยสีสันไม่เท่ากัน จึงเกิดเป็น Color space ต่างๆ ที่กว้างกว่า sRGB ขึ้นมา</p><p>ก็หมายความว่าในโลกของเว็บที่ยังใช้สีในช่วง sRGB ธรรมดากันอยู่ จะสามารถใช้สีได้แค่ประมาณ 2/3 ของสีทั้งหมดที่หน้าจอสามารถแสดงผลได้เท่านั้น… ซึ่งถ้าเป็นแบบนี้ต่อไป ยิ่งเทคโนโลยีหน้าจอสามารถแสดงสีได้สดมากขึ้นเท่าไหร่ สีบนโลกของเว็บก็จะยิ่งหม่นลงเท่านั้น</p><p>ปัจจุบันในโลกของ CSS มีการเสนอ syntax สีที่สามารถระบุค่าสีนอกช่วงของ sRGB ได้ (ตัวอย่างในรูป, ปัจจุบันใช้ได้เฉพาะใน Safari เท่านั้น) — รวมถึงมีการเสนอ Color space แบบใหม่ที่ชื่อว่า LCH ซึ่งได้ออกแบบไว้เผื่อสำหรับอนาคตไว้แล้ว (ยังไม่มีเบราเซอร์ซัพพอร์ต)</p><ul><li><a href="https://webkit.org/blog/6682/improving-color-on-the-web/">🔖 Improving Color on the Web | WebKit</a></li><li><a href="https://css-tricks.com/the-expanding-gamut-of-color-on-the-web/">🔖 The Expanding Gamut of Color on the Web | CSS-Tricks</a></li></ul><p>สำหรับตอนนี้ ถ้าอยากให้เว็บของตัวเองมีสีที่สดกว่าเว็บชาวบ้าน (บนจอที่สามารถแสดงสีสดๆ ได้) วิธีนึงคือสร้างไฟล์ PNG ที่มี Color profile ที่กว้างกว่า sRGB แล้วเอามาใช้เป็น background-image</p><ul><li><a href="https://twitter.com/panic/status/1106633444157607936">🔖 Panic on Twitter: ❇️ A short story about the color green. (thread)</a></li></ul><!--]--></div>
         </div>
       </main>
       <footer>
-        <div
-          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
-          id="footerContents"
-        >
-          <notes-page-footer></notes-page-footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
         </div>
       </footer>
     </div>
@@ -73,5 +42,7 @@ __sfc__.__file = "Note.vue"
 exports. default = __sfc__};
 window.precompiledFrontMatter = {"public":true,"facebook":"https://www.facebook.com/dtinth/posts/10216823547575184","title":"ปริภูมิสี LCH (color space)"};
 </script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

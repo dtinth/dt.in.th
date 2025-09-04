@@ -2,7 +2,7 @@
 <html data-precompiled=true lang="en" data-dtinth="true">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Using ZRAM for compressed RAM-backed swap space in Linux | notes.dt.in.th</title><meta property="og:title" content="Using ZRAM for compressed RAM-backed swap space in Linux" data-source="note">
 <meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/LinuxZram" data-source="note">
@@ -11,45 +11,17 @@
 <link rel="canonical" href="https://notes.dt.in.th/LinuxZram" data-source="note"><style id="note-styles">/* layer: default */
 .my[data-v-8c9498c0]{margin-top:1rem;margin-bottom:1rem;}
 .block[data-v-8c9498c0]{display:block;}</style>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
-      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
-      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" crossorigin src="/runtime/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
-    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
   </head>
-  <body class="bg-#252423 text-#e9e8e7 antialiased">
-    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
-      <div class="flex items-center pl-[18px] flex-none">
-        <a
-          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
-          href="/"
-          >notes.dt.in.th</a
-        >
-      </div>
-      <div
-        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
-        id="headerMiddle"
-      >
-        <div class="px-2 flex-none">›</div><div class="truncate"><a title="Linux (topic)" href="Linux">Linux</a></div>
-      </div>
-      <div
-        class="flex items-center px-[18px] flex-none gap-4"
-        id="headerToolbar"
-      ></div>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
     </header>
     <div class="h-entry">
-      <main class="bg-#353433" id="main">
-        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+      <main id="main">
+        <div id="mainContents">
           <div class="prose e-content" id="noteContents"><!--[--><h1 id="using-zram-for-compressed-ram-backed-swap-space-in-linux" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#using-zram-for-compressed-ram-backed-swap-space-in-linux" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Using ZRAM for compressed RAM-backed swap space in Linux</h1><div class="lead" data-v-8c9498c0><p data-v-8c9498c0><strong data-v-8c9498c0>When using a cheap VPS, available RAM is often limited.</strong> While <a href="https://www.digitalocean.com/community/tutorial-collections/how-to-add-swap-space" data-v-8c9498c0>adding a disk-backed swap space</a> can help, it&#39;s much slower than RAM.</p></div><p data-v-8c9498c0><strong data-v-8c9498c0><a href="https://en.wikipedia.org/wiki/Zram" data-v-8c9498c0>ZRAM</a></strong> is a <a href="Linux" data-v-8c9498c0>Linux</a> kernel feature that creates a compressed block device in RAM that can be used as swap space. When memory is swapped to and from the ZRAM device, it is compressed and decompressed on-the-fly.</p><p data-v-8c9498c0>In my case, 1.1 GB of swap data is being compressed down to just 93 MB using the zstd compression algorithm:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>$</span><span style="color:#9ECBFF;" data-v-8c9498c0> /sbin/zramctl</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>NAME</span><span style="color:#9ECBFF;" data-v-8c9498c0>       ALGORITHM</span><span style="color:#9ECBFF;" data-v-8c9498c0> DISKSIZE</span><span style="color:#9ECBFF;" data-v-8c9498c0>  DATA</span><span style="color:#9ECBFF;" data-v-8c9498c0> COMPR</span><span style="color:#9ECBFF;" data-v-8c9498c0> TOTAL</span><span style="color:#9ECBFF;" data-v-8c9498c0> STREAMS</span><span style="color:#9ECBFF;" data-v-8c9498c0> MOUNTPOINT</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>/dev/zram0</span><span style="color:#9ECBFF;" data-v-8c9498c0> zstd</span><span style="color:#9ECBFF;" data-v-8c9498c0>            4G</span><span style="color:#9ECBFF;" data-v-8c9498c0>  1.1G</span><span style="color:#9ECBFF;" data-v-8c9498c0>   93M</span><span style="color:#9ECBFF;" data-v-8c9498c0> 98.4M</span><span style="color:#79B8FF;" data-v-8c9498c0>       2</span><span style="color:#E1E4E8;" data-v-8c9498c0> [SWAP]</span></span></code></pre><p data-v-8c9498c0>This compression ratio of over 10:1 means you can effectively get more usable memory without upgrading your VPS plan. ZRAM is particularly effective because many applications nowadays allocate memory without fully utilizing it, making it highly compressible.</p><p data-v-8c9498c0>The simplest way to enable ZRAM on a modern Linux system is to use the <a href="https://github.com/systemd/zram-generator" data-v-8c9498c0><code data-v-8c9498c0>systemd-zram-generator</code></a> package:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>sudo</span><span style="color:#9ECBFF;" data-v-8c9498c0> apt</span><span style="color:#9ECBFF;" data-v-8c9498c0> install</span><span style="color:#9ECBFF;" data-v-8c9498c0> systemd-zram-generator</span></span></code></pre><p data-v-8c9498c0>Then create a configuration file to specify the ZRAM device size and compression algorithm:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0># /etc/systemd/zram-generator.conf</span></span>
@@ -61,11 +33,8 @@
         </div>
       </main>
       <footer>
-        <div
-          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
-          id="footerContents"
-        >
-          <notes-page-footer></notes-page-footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
         </div>
       </footer>
     </div>
@@ -84,5 +53,7 @@ __sfc__.__file = "Note.vue"
 exports. default = __sfc__};
 window.precompiledFrontMatter = {"public":true,"title":"Using ZRAM for compressed RAM-backed swap space in Linux"};
 </script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

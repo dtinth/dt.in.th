@@ -2,7 +2,7 @@
 <html data-precompiled=true lang="en" data-dtinth="true">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Capturing screenshots of translucent windows with shadows in Windows | notes.dt.in.th</title><meta property="og:title" content="Capturing screenshots of translucent windows with shadows in Windows" data-source="note">
 <meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/20201117T201556Z6214" data-source="note">
@@ -55,45 +55,17 @@ to { transform: translateX(-512px);
 .transform[data-v-8c9498c0]{transform:translateX(var(--un-translate-x)) translateY(var(--un-translate-y)) translateZ(var(--un-translate-z)) rotate(var(--un-rotate)) rotateX(var(--un-rotate-x)) rotateY(var(--un-rotate-y)) rotateZ(var(--un-rotate-z)) skewX(var(--un-skew-x)) skewY(var(--un-skew-y)) scaleX(var(--un-scale-x)) scaleY(var(--un-scale-y)) scaleZ(var(--un-scale-z));}
 .border[data-v-8c9498c0]{border-width:1px;}
 .shadow[data-v-8c9498c0]{--un-shadow:var(--un-shadow-inset) 0 1px 3px 0 var(--un-shadow-color, rgb(0 0 0 / 0.1)),var(--un-shadow-inset) 0 1px 2px -1px var(--un-shadow-color, rgb(0 0 0 / 0.1));box-shadow:var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);}</style>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
-      integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js"
-      integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ="
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" crossorigin src="/runtime/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/supabase-CjkNZD6A.js">
-    <link rel="stylesheet" crossorigin href="/runtime/index.css">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
   </head>
-  <body class="bg-#252423 text-#e9e8e7 antialiased">
-    <header class="h-[58px] bg-#090807 border-b border-#454443 z-20 flex">
-      <div class="flex items-center pl-[18px] flex-none">
-        <a
-          class="flex items-center text-#8b8685 hover:text-#ffffbb text-lg"
-          href="/"
-          >notes.dt.in.th</a
-        >
-      </div>
-      <div
-        class="flex-1 flex items-center text-#8b8685 [&_a:hover]:text-#ffffbb overflow-hidden"
-        id="headerMiddle"
-      >
-        <div class="px-2 flex-none">›</div><div class="truncate"><a title="Windows (topic)" href="Windows">Windows</a></div>
-      </div>
-      <div
-        class="flex items-center px-[18px] flex-none gap-4"
-        id="headerToolbar"
-      ></div>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
     </header>
     <div class="h-entry">
-      <main class="bg-#353433" id="main">
-        <div class="notes-layout-container mx-auto p-6 py-12" id="mainContents">
+      <main id="main">
+        <div id="mainContents">
           <div class="prose e-content" id="noteContents"><!--[--><p data-v-8c9498c0><strong data-v-8c9498c0>Despite many new great features in recent <a href="Windows" data-v-8c9498c0>Windows</a> editions, one thing you still can’t do natively in Windows is taking a window screenshot with transparency.</strong> To this day, <a href="https://superuser.com/questions/237784/copying-png-with-transparency-from-browser-shows-a-black-background-instead" data-v-8c9498c0>Windows clipboard still doesn’t support alpha channels</a>.</p><p data-v-8c9498c0>Many tutorials on the internet about taking screenshots with shadows in Windows 10 tells you to use a photo editor to add in fake shadows<sup data-v-8c9498c0><a href="#user-content-fn-shadowref" id="user-content-fnref-shadowref" data-footnote-ref="" aria-describedby="footnote-label" data-v-8c9498c0>1</a></sup>.</p><p data-v-8c9498c0>But with today’s web technology and some maths, it’s possible to capture translucent windows with real shadows in Windows. Try it out → <a href="https://alphashot.glitch.me/" data-v-8c9498c0>https://alphashot.glitch.me/</a></p><div class="post-example" data-v-8c9498c0><img src="https://static.dt.in.th/uploads/2020/11/18/calc.png" width="341" height="552.5" data-v-8c9498c0></div><p data-v-8c9498c0>The idea is to capture 2 screenshots: One picture on black, one picture on white, and then use some maths to generate a combined screenshot with an alpha channel.</p><p data-v-8c9498c0>For example, a transparent pixel is <code data-v-8c9498c0>#555555</code> (<strong data-v-8c9498c0>rgb(85, 85, 85)</strong>) on white and <code data-v-8c9498c0>#1a1a1a</code> (<strong data-v-8c9498c0>rgb(26, 26, 26)</strong>) on black. What color satisfies this criteria? This results in a system of equation.</p><!--
 \begin{align}
 & \text{On black:}  & x\alpha &= 26 & (1) \\
@@ -112,11 +84,8 @@ to { transform: translateX(-512px);
         </div>
       </main>
       <footer>
-        <div
-          class="notes-layout-container mx-auto py-4 px-6 text-#8b8685 text-right text-sm"
-          id="footerContents"
-        >
-          <notes-page-footer></notes-page-footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
         </div>
       </footer>
     </div>
@@ -160,5 +129,7 @@ __sfc__.__file = "Note.vue"
 exports. default = __sfc__};
 window.precompiledFrontMatter = {"title":"Capturing screenshots of translucent windows with shadows in Windows","public":true};
 </script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>
