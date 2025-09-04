@@ -37,10 +37,8 @@
     <script>
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
-
-const _hoisted_1 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<p>This is a rough way to measure CPU speed, by using FFmpeg to encode white noise into Opus.</p><ul><li><p>Install ffmpeg locally using npm</p><pre><code>npm install @ffmpeg-installer/ffmpeg\n</code></pre></li><li><p>Obtain binary path:</p><pre><code>FFMPEG=$(node -p &#39;require(&quot;@ffmpeg-installer/ffmpeg&quot;).path&#39;)\n</code></pre></li><li><p>Run ffmpeg</p><pre><code>$FFMPEG -t 300 -f lavfi -vn -i &#39;anoisesrc=color=white&#39; -f ogg -c:a libopus -b:a 96K /dev/null -y\n</code></pre></li></ul><p>Check the speed on the progress output line:</p><pre><code>size=    3154kB time=00:05:00.01 bitrate=  86.1kbits/s speed=  60x\n                                                               ^^^\n</code></pre>", 4)
 function render(_ctx, _cache) {
-  return _hoisted_1
+  return _cache[0] || (_cache[0] = _vue.createStaticVNode.call(void 0, "<p>This is a rough way to measure CPU speed, by using FFmpeg to encode white noise into Opus.</p><ul><li><p>Install ffmpeg locally using npm</p><pre><code>npm install @ffmpeg-installer/ffmpeg\n</code></pre></li><li><p>Obtain binary path:</p><pre><code>FFMPEG=$(node -p &#39;require(&quot;@ffmpeg-installer/ffmpeg&quot;).path&#39;)\n</code></pre></li><li><p>Run ffmpeg</p><pre><code>$FFMPEG -t 300 -f lavfi -vn -i &#39;anoisesrc=color=white&#39; -f ogg -c:a libopus -b:a 96K /dev/null -y\n</code></pre></li></ul><p>Check the speed on the progress output line:</p><pre><code>size=    3154kB time=00:05:00.01 bitrate=  86.1kbits/s speed=  60x\n                                                               ^^^\n</code></pre>", 4))
 }
 __sfc__.render = render
 __sfc__.__file = "Note.vue"

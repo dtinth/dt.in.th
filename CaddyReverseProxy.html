@@ -86,304 +86,21 @@
     <script>
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
-
-const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
-const _hoisted_1 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<p data-v-8c9498c0><strong data-v-8c9498c0>The most boring thing about setting up a web server on a new cloud server for me is the initial configuration.</strong> From <a href=\"https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04\" data-v-8c9498c0>installing</a> and <a href=\"https://nginxconfig.io/\" data-v-8c9498c0>configuring nginx</a> to <a href=\"https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04\" data-v-8c9498c0>setting up Let&#39;s Encrypt with certbot</a><sup data-v-8c9498c0><a href=\"#user-content-fn-certbot-notes\" id=\"user-content-fnref-certbot-notes\" data-footnote-ref=\"\" aria-describedby=\"footnote-label\" data-v-8c9498c0>1</a></sup>. There are so many steps involved and so much boilerplate code in the config<sup data-v-8c9498c0><a href=\"#user-content-fn-boilerplate\" id=\"user-content-fnref-boilerplate\" data-footnote-ref=\"\" aria-describedby=\"footnote-label\" data-v-8c9498c0>2</a></sup>.</p>", 1)
-const _hoisted_2 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "This has changed now that "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "Caddy" }, "Caddy"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " exists. It is an open source web server written in Go that has built-in Let's Encrypt support. And "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "it has the simplest config file format I've ever seen"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " for a web server:")
-], -1 /* HOISTED */))
-const _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "Before: nginx.conf")
-  ]),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", {
-    style: {"font-size":"0.5em"},
-    class: "post-limit-size"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "pre", {
-      class: "shiki github-dark",
-      style: {"background-color":"#252423","color":"#e1e4e8"},
-      tabindex: "0"
-    }, [
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#6A737D"} }, "# HTTP -> HTTPS")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "server"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " {")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  listen"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, "       80"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  listen"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "       [::]:80;")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  server_name"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  vps.dt.in.th"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  location"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " ^~"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /.well-known/acme-challenge/"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " {")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    root"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /var/www/html"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  }")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  location"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " {")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#F97583"} }, "    return"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, " 301"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " https://vps.dt.in.th"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "$request_uri;")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  }")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "}")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#6A737D"} }, "# HTTPS server")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "server"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " {")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  listen"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, "       443"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " ssl"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " http2"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  listen"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "       [::]:443 ssl http2;")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  server_name"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  vps.dt.in.th"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  root"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "         /var/www/html"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  ssl_certificate"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "          /etc/letsencrypt/live/vps.dt.in.th/fullchain.pem"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  ssl_certificate_key"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "      /etc/letsencrypt/live/vps.dt.in.th/privkey.pem"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  ssl_trusted_certificate"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  /etc/letsencrypt/live/vps.dt.in.th/chain.pem"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  location"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /api"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " {")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_pass"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " http://api:8080/api"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_http_version"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, "  1.1"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_cache_bypass"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  $http_upgrade;")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  Upgrade"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "            $http_upgrade;")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  Connection"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "         \"upgrade\""),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  Host"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "               $host;")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  X-Real-IP"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "          $remote_addr;")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  X-Forwarded-For"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "    $proxy_add_x_forwarded_for;")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  X-Forwarded-Proto"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  $scheme;")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  X-Forwarded-Host"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "   $host;")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  X-Forwarded-Port"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "   $server_port;")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_connect_timeout"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  60s"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_send_timeout"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "     60s"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_read_timeout"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "     60s"),
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  }")
-        ]),
-        /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-          /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "}")
-        ])
-      ])
-    ])
-  ])
-], -1 /* HOISTED */))
-const _hoisted_4 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, " ", -1 /* HOISTED */))
-const _hoisted_5 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { style: {"text-align":"center","font-size":"2em","color":"#d7fc70","font-weight":"bold"} }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "→")
-], -1 /* HOISTED */))
-const _hoisted_6 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "After: Caddyfile")
-  ]),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "pre", {
-    class: "shiki github-dark",
-    style: {"background-color":"#252423","color":"#e1e4e8"},
-    tabindex: "0"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, [
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#6A737D"} }, "# ingress/Caddyfile")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "vps.dt.in.th")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "root"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, " *"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /var/www/html")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "file_server")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "reverse_proxy"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /api/"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, "*"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " api:8080")
-      ])
-    ])
-  ])
-], -1 /* HOISTED */))
-const _hoisted_7 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<p data-v-8c9498c0>Built with Go, it is available as a <a href=\"https://github.com/caddyserver/caddy/releases\" data-v-8c9498c0>standalone binary</a>. <a href=\"https://caddyserver.com/docs/download\" data-v-8c9498c0>Packages for popular package managers</a> are available. And there is also a ready-to-use <a href=\"https://hub.docker.com/_/caddy\" data-v-8c9498c0>Docker image</a>.</p><h2 id=\"usage-with-docker-compose\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#usage-with-docker-compose\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Usage with <a href=\"Docker\" data-v-8c9498c0>Docker</a> Compose</h2><p data-v-8c9498c0>Here&#39;s a basic docker-compose file that runs Caddy:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0># ingress/docker-compose.yml</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>version</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;3.7&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>services</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  caddy</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    image</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>caddy</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    restart</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>unless-stopped</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    ports</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;80:80&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;443:443&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    volumes</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>./Caddyfile:/etc/caddy/Caddyfile</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>./public:/var/www/html</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>caddy_data:/data</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>caddy_config:/config</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>volumes</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  caddy_data</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  caddy_config</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span></code></pre><p data-v-8c9498c0>Now when I run <code data-v-8c9498c0>docker-compose up -d</code>, Caddy starts up and:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Listens to port 80 and 443.</li><li data-v-8c9498c0>Obtains a Let&#39;s Encrypt certificate for domain <code data-v-8c9498c0>vps.dt.in.th</code>.</li><li data-v-8c9498c0>Sets up HTTP to HTTPS redirection on port 80.</li><li data-v-8c9498c0>Serves files from <code data-v-8c9498c0>public</code> folder (mounted to <code data-v-8c9498c0>/var/www/html</code> inside container).</li><li data-v-8c9498c0>Proxies requests to <code data-v-8c9498c0>/api/</code> to the <code data-v-8c9498c0>api</code> hostname.</li></ul><h3 id=\"configuring-docker-networks-for-reverse-proxy\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#configuring-docker-networks-for-reverse-proxy\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Configuring Docker networks for reverse proxy</h3><p data-v-8c9498c0>Now, other projects I run on this VPS have their own <code data-v-8c9498c0>docker-compose</code> file. We need to make the container join Caddy&#39;s Docker network for Caddy to be able to look it up via hostname.</p><p data-v-8c9498c0>This can be done by joining an external network and setting a network alias for that network.</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0># api/docker-compose.yml</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>version</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;3.8&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>services</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  server</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    restart</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>unless-stopped</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    build</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#79B8FF;\" data-v-8c9498c0>.</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    networks</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>      default</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>      ingress</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>        aliases</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>          - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>api</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>networks</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  ingress</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    external</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#79B8FF;\" data-v-8c9498c0>true</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    name</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>ingress_default</span></span></code></pre><section data-footnotes=\"\" class=\"footnotes\" data-v-8c9498c0><h2 id=\"footnote-label\" class=\"sr-only\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#footnote-label\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Footnotes</h2><ol data-v-8c9498c0><li id=\"user-content-fn-certbot-notes\" data-v-8c9498c0><p data-v-8c9498c0><a href=\"https://web.facebook.com/dtinth/posts/10215797763731229\" data-v-8c9498c0>A commenter</a> recommended me try out <a href=\"https://github.com/acmesh-official/acme.sh\" data-v-8c9498c0>acme.sh</a> should I need to use nginx again. <a href=\"#user-content-fnref-certbot-notes\" data-footnote-backref=\"\" aria-label=\"Back to reference 1\" class=\"data-footnote-backref\" data-v-8c9498c0>↩</a></p></li><li id=\"user-content-fn-boilerplate\" data-v-8c9498c0><p data-v-8c9498c0>Boilerplate include but not limited to:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Creating a file in <code data-v-8c9498c0>sites-available</code>.</li><li data-v-8c9498c0>Setting up a server block.</li><li data-v-8c9498c0>Setting up redirect from HTTP to HTTPS.</li><li data-v-8c9498c0>Setting up the path to the SSL certificate file.</li><li data-v-8c9498c0>Setting up HTTP headers for the reverse proxy, such as <code data-v-8c9498c0>Host</code>, <code data-v-8c9498c0>X-Real-IP</code>, <code data-v-8c9498c0>X-Forwarded-For</code>.</li><li data-v-8c9498c0>Setting up WebSocket support.</li><li data-v-8c9498c0>Symlinking the file to <code data-v-8c9498c0>sites-enabled</code>.</li></ul><a href=\"#user-content-fnref-boilerplate\" data-footnote-backref=\"\" aria-label=\"Back to reference 2\" class=\"data-footnote-backref\" data-v-8c9498c0>↩</a></li></ol></section>", 11)
 function render(_ctx, _cache) {
   const _component_r_cell = _vue.resolveComponent.call(void 0, "r-cell")
   const _component_r_grid = _vue.resolveComponent.call(void 0, "r-grid")
 
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
+    _cache[3] || (_cache[3] = _vue.createStaticVNode.call(void 0, "<p data-v-8c9498c0><strong data-v-8c9498c0>The most boring thing about setting up a web server on a new cloud server for me is the initial configuration.</strong> From <a href=\"https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04\" data-v-8c9498c0>installing</a> and <a href=\"https://nginxconfig.io/\" data-v-8c9498c0>configuring nginx</a> to <a href=\"https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04\" data-v-8c9498c0>setting up Let&#39;s Encrypt with certbot</a><sup data-v-8c9498c0><a href=\"#user-content-fn-certbot-notes\" id=\"user-content-fnref-certbot-notes\" data-footnote-ref=\"\" aria-describedby=\"footnote-label\" data-v-8c9498c0>1</a></sup>. There are so many steps involved and so much boilerplate code in the config<sup data-v-8c9498c0><a href=\"#user-content-fn-boilerplate\" id=\"user-content-fnref-boilerplate\" data-footnote-ref=\"\" aria-describedby=\"footnote-label\" data-v-8c9498c0>2</a></sup>.</p>", 1)),
     _vue.createCommentVNode.call(void 0, " prettier-ignore-start "),
     _vue.createCommentVNode.call(void 0, " prettier-ignore-end "),
-    _hoisted_2,
+    _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createTextVNode.call(void 0, "This has changed now that "),
+      _vue.createElementVNode.call(void 0, "a", { href: "Caddy" }, "Caddy"),
+      _vue.createTextVNode.call(void 0, " exists. It is an open source web server written in Go that has built-in Let's Encrypt support. And "),
+      _vue.createElementVNode.call(void 0, "strong", null, "it has the simplest config file format I've ever seen"),
+      _vue.createTextVNode.call(void 0, " for a web server:")
+    ], -1 /* CACHED */)),
     _vue.createElementVNode.call(void 0, "div", null, [
       _vue.createVNode.call(void 0, _component_r_grid, { columns: "24" }, {
         default: _vue.withCtx.call(void 0, () => [
@@ -391,32 +108,306 @@ function render(_ctx, _cache) {
             span: "11",
             "span-s": "row"
           }, {
-            default: _vue.withCtx.call(void 0, () => [
-              _hoisted_3
-            ]),
+            default: _vue.withCtx.call(void 0, () => [...(_cache[0] || (_cache[0] = [
+              _vue.createElementVNode.call(void 0, "div", null, [
+                _vue.createElementVNode.call(void 0, "p", null, [
+                  _vue.createElementVNode.call(void 0, "strong", null, "Before: nginx.conf")
+                ]),
+                _vue.createElementVNode.call(void 0, "div", {
+                  style: {"font-size":"0.5em"},
+                  class: "post-limit-size"
+                }, [
+                  _vue.createElementVNode.call(void 0, "pre", {
+                    class: "shiki github-dark",
+                    style: {"background-color":"#252423","color":"#e1e4e8"},
+                    tabindex: "0"
+                  }, [
+                    _vue.createElementVNode.call(void 0, "code", null, [
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#6A737D"} }, "# HTTP -> HTTPS")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "server"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " {")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  listen"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, "       80"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  listen"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "       [::]:80;")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  server_name"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  vps.dt.in.th"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  location"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " ^~"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /.well-known/acme-challenge/"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " {")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    root"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /var/www/html"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  }")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  location"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " {")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#F97583"} }, "    return"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, " 301"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " https://vps.dt.in.th"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "$request_uri;")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  }")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "}")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#6A737D"} }, "# HTTPS server")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "server"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " {")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  listen"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, "       443"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " ssl"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " http2"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  listen"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "       [::]:443 ssl http2;")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  server_name"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  vps.dt.in.th"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  root"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "         /var/www/html"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  ssl_certificate"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "          /etc/letsencrypt/live/vps.dt.in.th/fullchain.pem"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  ssl_certificate_key"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "      /etc/letsencrypt/live/vps.dt.in.th/privkey.pem"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  ssl_trusted_certificate"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  /etc/letsencrypt/live/vps.dt.in.th/chain.pem"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  location"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /api"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " {")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_pass"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " http://api:8080/api"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_http_version"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, "  1.1"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_cache_bypass"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  $http_upgrade;")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  Upgrade"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "            $http_upgrade;")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  Connection"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "         \"upgrade\""),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  Host"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "               $host;")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  X-Real-IP"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "          $remote_addr;")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  X-Forwarded-For"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "    $proxy_add_x_forwarded_for;")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  X-Forwarded-Proto"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  $scheme;")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  X-Forwarded-Host"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "   $host;")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  X-Forwarded-Port"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "   $server_port;")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_connect_timeout"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  60s"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_send_timeout"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "     60s"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_read_timeout"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "     60s"),
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  }")
+                      ]),
+                      _vue.createTextVNode.call(void 0, "\n"),
+                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "}")
+                      ])
+                    ])
+                  ])
+                ])
+              ], -1 /* CACHED */)
+            ]))]),
             _: 1 /* STABLE */
           }),
           _vue.createVNode.call(void 0, _component_r_cell, { span: "2" }, {
-            default: _vue.withCtx.call(void 0, () => [
-              _hoisted_4,
-              _hoisted_5
-            ]),
+            default: _vue.withCtx.call(void 0, () => [...(_cache[1] || (_cache[1] = [
+              _vue.createElementVNode.call(void 0, "p", null, " ", -1 /* CACHED */),
+              _vue.createElementVNode.call(void 0, "div", { style: {"text-align":"center","font-size":"2em","color":"#d7fc70","font-weight":"bold"} }, [
+                _vue.createElementVNode.call(void 0, "p", null, "→")
+              ], -1 /* CACHED */)
+            ]))]),
             _: 1 /* STABLE */
           }),
           _vue.createVNode.call(void 0, _component_r_cell, {
             span: "11",
             "span-s": "22"
           }, {
-            default: _vue.withCtx.call(void 0, () => [
-              _hoisted_6
-            ]),
+            default: _vue.withCtx.call(void 0, () => [...(_cache[2] || (_cache[2] = [
+              _vue.createElementVNode.call(void 0, "div", null, [
+                _vue.createElementVNode.call(void 0, "p", null, [
+                  _vue.createElementVNode.call(void 0, "strong", null, "After: Caddyfile")
+                ]),
+                _vue.createElementVNode.call(void 0, "pre", {
+                  class: "shiki github-dark",
+                  style: {"background-color":"#252423","color":"#e1e4e8"},
+                  tabindex: "0"
+                }, [
+                  _vue.createElementVNode.call(void 0, "code", null, [
+                    _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#6A737D"} }, "# ingress/Caddyfile")
+                    ]),
+                    _vue.createTextVNode.call(void 0, "\n"),
+                    _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "vps.dt.in.th")
+                    ]),
+                    _vue.createTextVNode.call(void 0, "\n"),
+                    _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "root"),
+                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, " *"),
+                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /var/www/html")
+                    ]),
+                    _vue.createTextVNode.call(void 0, "\n"),
+                    _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "file_server")
+                    ]),
+                    _vue.createTextVNode.call(void 0, "\n"),
+                    _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
+                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "reverse_proxy"),
+                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /api/"),
+                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, "*"),
+                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " api:8080")
+                    ])
+                  ])
+                ])
+              ], -1 /* CACHED */)
+            ]))]),
             _: 1 /* STABLE */
           })
         ]),
         _: 1 /* STABLE */
       })
     ]),
-    _hoisted_7
+    _cache[5] || (_cache[5] = _vue.createStaticVNode.call(void 0, "<p data-v-8c9498c0>Built with Go, it is available as a <a href=\"https://github.com/caddyserver/caddy/releases\" data-v-8c9498c0>standalone binary</a>. <a href=\"https://caddyserver.com/docs/download\" data-v-8c9498c0>Packages for popular package managers</a> are available. And there is also a ready-to-use <a href=\"https://hub.docker.com/_/caddy\" data-v-8c9498c0>Docker image</a>.</p><h2 id=\"usage-with-docker-compose\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#usage-with-docker-compose\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Usage with <a href=\"Docker\" data-v-8c9498c0>Docker</a> Compose</h2><p data-v-8c9498c0>Here&#39;s a basic docker-compose file that runs Caddy:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0># ingress/docker-compose.yml</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>version</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;3.7&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>services</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  caddy</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    image</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>caddy</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    restart</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>unless-stopped</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    ports</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;80:80&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;443:443&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    volumes</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>./Caddyfile:/etc/caddy/Caddyfile</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>./public:/var/www/html</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>caddy_data:/data</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>caddy_config:/config</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>volumes</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  caddy_data</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  caddy_config</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span></code></pre><p data-v-8c9498c0>Now when I run <code data-v-8c9498c0>docker-compose up -d</code>, Caddy starts up and:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Listens to port 80 and 443.</li><li data-v-8c9498c0>Obtains a Let&#39;s Encrypt certificate for domain <code data-v-8c9498c0>vps.dt.in.th</code>.</li><li data-v-8c9498c0>Sets up HTTP to HTTPS redirection on port 80.</li><li data-v-8c9498c0>Serves files from <code data-v-8c9498c0>public</code> folder (mounted to <code data-v-8c9498c0>/var/www/html</code> inside container).</li><li data-v-8c9498c0>Proxies requests to <code data-v-8c9498c0>/api/</code> to the <code data-v-8c9498c0>api</code> hostname.</li></ul><h3 id=\"configuring-docker-networks-for-reverse-proxy\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#configuring-docker-networks-for-reverse-proxy\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Configuring Docker networks for reverse proxy</h3><p data-v-8c9498c0>Now, other projects I run on this VPS have their own <code data-v-8c9498c0>docker-compose</code> file. We need to make the container join Caddy&#39;s Docker network for Caddy to be able to look it up via hostname.</p><p data-v-8c9498c0>This can be done by joining an external network and setting a network alias for that network.</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0># api/docker-compose.yml</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>version</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;3.8&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>services</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  server</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    restart</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>unless-stopped</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    build</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#79B8FF;\" data-v-8c9498c0>.</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    networks</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>      default</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>      ingress</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>        aliases</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>          - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>api</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>networks</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  ingress</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    external</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#79B8FF;\" data-v-8c9498c0>true</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    name</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>ingress_default</span></span></code></pre><section data-footnotes=\"\" class=\"footnotes\" data-v-8c9498c0><h2 id=\"footnote-label\" class=\"sr-only\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#footnote-label\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Footnotes</h2><ol data-v-8c9498c0><li id=\"user-content-fn-certbot-notes\" data-v-8c9498c0><p data-v-8c9498c0><a href=\"https://web.facebook.com/dtinth/posts/10215797763731229\" data-v-8c9498c0>A commenter</a> recommended me try out <a href=\"https://github.com/acmesh-official/acme.sh\" data-v-8c9498c0>acme.sh</a> should I need to use nginx again. <a href=\"#user-content-fnref-certbot-notes\" data-footnote-backref=\"\" aria-label=\"Back to reference 1\" class=\"data-footnote-backref\" data-v-8c9498c0>↩</a></p></li><li id=\"user-content-fn-boilerplate\" data-v-8c9498c0><p data-v-8c9498c0>Boilerplate include but not limited to:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Creating a file in <code data-v-8c9498c0>sites-available</code>.</li><li data-v-8c9498c0>Setting up a server block.</li><li data-v-8c9498c0>Setting up redirect from HTTP to HTTPS.</li><li data-v-8c9498c0>Setting up the path to the SSL certificate file.</li><li data-v-8c9498c0>Setting up HTTP headers for the reverse proxy, such as <code data-v-8c9498c0>Host</code>, <code data-v-8c9498c0>X-Real-IP</code>, <code data-v-8c9498c0>X-Forwarded-For</code>.</li><li data-v-8c9498c0>Setting up WebSocket support.</li><li data-v-8c9498c0>Symlinking the file to <code data-v-8c9498c0>sites-enabled</code>.</li></ul><a href=\"#user-content-fnref-boilerplate\" data-footnote-backref=\"\" aria-label=\"Back to reference 2\" class=\"data-footnote-backref\" data-v-8c9498c0>↩</a></li></ol></section>", 11))
   ], 64 /* STABLE_FRAGMENT */))
 }
 __sfc__.render = render

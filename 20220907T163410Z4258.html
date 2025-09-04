@@ -22,7 +22,32 @@
     <div class="h-entry">
       <main id="main">
         <div id="mainContents">
-          <div class="prose e-content" id="noteContents"><!--[--><p data-v-8c9498c0>The <a href="https://marketplace.visualstudio.com/items?itemName=humao.rest-client" data-v-8c9498c0><strong data-v-8c9498c0>REST Client</strong></a> <a href="VSCode" data-v-8c9498c0>VS Code</a> extension provides a nice and lightweight way to send HTTP requests. I usually use this as an alternative to <a href="https://www.postman.com/" data-v-8c9498c0>Postman</a> when I don&#39;t need the full power of Postman. This note contains some snippets that I use in my REST Client files.</p><h2 id="documenting-http-requests-in-markdown-files" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#documenting-http-requests-in-markdown-files" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Documenting HTTP requests in Markdown files</h2><!----><h2 id="form-post" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#form-post" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Form post</h2><!----><h2 id="graphql" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#graphql" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>GraphQL</h2><!----><h2 id="referencing-environment-variables-in-env-files" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#referencing-environment-variables-in-env-files" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Referencing environment variables in <code data-v-8c9498c0>.env</code> files</h2><!----><h2 id="prefixing" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#prefixing" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Prefixing</h2><!----><!--]--></div>
+          <div class="prose e-content" id="noteContents"><!--[--><p data-v-8c9498c0>The <a href="https://marketplace.visualstudio.com/items?itemName=humao.rest-client" data-v-8c9498c0><strong data-v-8c9498c0>REST Client</strong></a> <a href="VSCode" data-v-8c9498c0>VS Code</a> extension provides a nice and lightweight way to send HTTP requests. I usually use this as an alternative to <a href="https://www.postman.com/" data-v-8c9498c0>Postman</a> when I don&#39;t need the full power of Postman. This note contains some snippets that I use in my REST Client files.</p><h2 id="documenting-http-requests-in-markdown-files" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#documenting-http-requests-in-markdown-files" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Documenting HTTP requests in Markdown files</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>In Markdown files, it is possible to document HTTP requests using the fenced code block with the language <code data-v-8c9498c0>http</code>. The extension will add a “Send Request” button to the Markdown file which allows easily sending a request!</p><div slot="right" data-v-8c9498c0><pre data-v-8c9498c0><code data-v-8c9498c0>```http
+GET https://api.example.com/users
+```
+</code></pre></div></div><div class="d-split__right"></div></div><h2 id="form-post" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#form-post" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Form post</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>To send a form post, set: <code data-v-8c9498c0>Content-Type: application/x-www-form-urlencoded</code>. In the request body, each field can be on its own line.</p><div slot="right" data-v-8c9498c0><pre data-v-8c9498c0><code data-v-8c9498c0>POST https://api.example.com/login HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+name=foo
+&amp;password=bar
+</code></pre></div></div><div class="d-split__right"></div></div><h2 id="graphql" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#graphql" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>GraphQL</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>To send GraphQL request, set: <code data-v-8c9498c0>X-REQUEST-TYPE: GraphQL</code> then put the GraphQL query in the next section, followed by JSON representation of the variables to send along with the query.</p><div slot="right" data-v-8c9498c0><pre data-v-8c9498c0><code data-v-8c9498c0>POST https://api.github.com/graphql
+Content-Type: application/json
+Authorization: Bearer xxx
+X-REQUEST-TYPE: GraphQL
+
+query (…) {
+  …
+}
+
+{
+  /* variables here */
+}
+</code></pre></div></div><div class="d-split__right"></div></div><h2 id="referencing-environment-variables-in-env-files" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#referencing-environment-variables-in-env-files" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Referencing environment variables in <code data-v-8c9498c0>.env</code> files</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>You can use <code data-v-8c9498c0>{{$dotenv ____}}</code> to reference the environment value stored in the <code data-v-8c9498c0>.env</code> file in the same directory.</p><div slot="right" data-v-8c9498c0><div data-v-8c9498c0><pre data-v-8c9498c0><code data-v-8c9498c0>GET https://api.github.com/user
+Authorization: Bearer {{$dotenv GITHUB_TOKEN}}
+</code></pre></div></div></div><div class="d-split__right"></div></div><h2 id="prefixing" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#prefixing" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Prefixing</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>To not repeat the same URL over and over, variables can be used.</p><ul data-v-8c9498c0><li data-v-8c9498c0>Define variables with <code data-v-8c9498c0>@name = value</code></li><li data-v-8c9498c0>Reference variables with <span data-v-8c9498c0><code data-v-8c9498c0>{{ name }}</code></span></li></ul><div slot="right" data-v-8c9498c0><div data-v-8c9498c0><pre data-v-8c9498c0><code data-v-8c9498c0>@base = https://api.example.com
+
+GET {{base}}/user
+</code></pre></div></div></div><div class="d-split__right"></div></div><!--]--></div>
         </div>
       </main>
       <footer>
@@ -34,158 +59,140 @@
     <script>
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
-
-const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
-const _hoisted_1 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<p data-v-8c9498c0>The <a href=\"https://marketplace.visualstudio.com/items?itemName=humao.rest-client\" data-v-8c9498c0><strong data-v-8c9498c0>REST Client</strong></a> <a href=\"VSCode\" data-v-8c9498c0>VS Code</a> extension provides a nice and lightweight way to send HTTP requests. I usually use this as an alternative to <a href=\"https://www.postman.com/\" data-v-8c9498c0>Postman</a> when I don&#39;t need the full power of Postman. This note contains some snippets that I use in my REST Client files.</p><h2 id=\"documenting-http-requests-in-markdown-files\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#documenting-http-requests-in-markdown-files\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Documenting HTTP requests in Markdown files</h2>", 2)
-const _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "In Markdown files, it is possible to document HTTP requests using the fenced code block with the language "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, "http"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, ". The extension will add a “Send Request” button to the Markdown file which allows easily sending a request!")
-], -1 /* HOISTED */))
-const _hoisted_4 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { slot: "right" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "pre", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, "```http\nGET https://api.example.com/users\n```\n")
-  ])
-], -1 /* HOISTED */))
-const _hoisted_5 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "h2", { id: "form-post" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-    "aria-hidden": "true",
-    tabindex: "-1",
-    href: "#form-post"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "Form post")
-], -1 /* HOISTED */))
-const _hoisted_6 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "To send a form post, set: "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, "Content-Type: application/x-www-form-urlencoded"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, ". In the request body, each field can be on its own line.")
-], -1 /* HOISTED */))
-const _hoisted_7 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { slot: "right" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "pre", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, "POST https://api.example.com/login HTTP/1.1\nContent-Type: application/x-www-form-urlencoded\n\nname=foo\n&password=bar\n")
-  ])
-], -1 /* HOISTED */))
-const _hoisted_8 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "h2", { id: "graphql" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-    "aria-hidden": "true",
-    tabindex: "-1",
-    href: "#graphql"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "GraphQL")
-], -1 /* HOISTED */))
-const _hoisted_9 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "To send GraphQL request, set: "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, "X-REQUEST-TYPE: GraphQL"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " then put the GraphQL query in the next section, followed by JSON representation of the variables to send along with the query.")
-], -1 /* HOISTED */))
-const _hoisted_10 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { slot: "right" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "pre", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, "POST https://api.github.com/graphql\nContent-Type: application/json\nAuthorization: Bearer xxx\nX-REQUEST-TYPE: GraphQL\n\nquery (…) {\n  …\n}\n\n{\n  /* variables here */\n}\n")
-  ])
-], -1 /* HOISTED */))
-const _hoisted_11 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "h2", { id: "referencing-environment-variables-in-env-files" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-    "aria-hidden": "true",
-    tabindex: "-1",
-    href: "#referencing-environment-variables-in-env-files"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "Referencing environment variables in "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, ".env"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " files")
-], -1 /* HOISTED */))
-const _hoisted_12 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "You can use "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, "{{$dotenv ____}}"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " to reference the environment value stored in the "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, ".env"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " file in the same directory.")
-], -1 /* HOISTED */))
-const _hoisted_13 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { slot: "right" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "pre", null, [
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, "GET https://api.github.com/user\nAuthorization: Bearer {{$dotenv GITHUB_TOKEN}}\n")
-    ])
-  ])
-], -1 /* HOISTED */))
-const _hoisted_14 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "h2", { id: "prefixing" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-    "aria-hidden": "true",
-    tabindex: "-1",
-    href: "#prefixing"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "Prefixing")
-], -1 /* HOISTED */))
-const _hoisted_15 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "To not repeat the same URL over and over, variables can be used.", -1 /* HOISTED */))
-const _hoisted_16 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "ul", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, [
-    /*#__PURE__*/_vue.createTextVNode.call(void 0, "Define variables with "),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, "@name = value")
-  ]),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, [
-    /*#__PURE__*/_vue.createTextVNode.call(void 0, "Reference variables with "),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", null, [
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, "{{ name }}")
-    ])
-  ])
-], -1 /* HOISTED */))
-const _hoisted_17 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { slot: "right" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "pre", null, [
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, "@base = https://api.example.com\n\nGET {{base}}/user\n")
-    ])
-  ])
-], -1 /* HOISTED */))
 function render(_ctx, _cache) {
   const _component_d_split = _vue.resolveComponent.call(void 0, "d-split")
 
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
+    _cache[5] || (_cache[5] = _vue.createStaticVNode.call(void 0, "<p data-v-8c9498c0>The <a href=\"https://marketplace.visualstudio.com/items?itemName=humao.rest-client\" data-v-8c9498c0><strong data-v-8c9498c0>REST Client</strong></a> <a href=\"VSCode\" data-v-8c9498c0>VS Code</a> extension provides a nice and lightweight way to send HTTP requests. I usually use this as an alternative to <a href=\"https://www.postman.com/\" data-v-8c9498c0>Postman</a> when I don&#39;t need the full power of Postman. This note contains some snippets that I use in my REST Client files.</p><h2 id=\"documenting-http-requests-in-markdown-files\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#documenting-http-requests-in-markdown-files\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Documenting HTTP requests in Markdown files</h2>", 2)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      default: _vue.withCtx.call(void 0, () => [
-        _hoisted_3,
-        _hoisted_4
-      ]),
+      default: _vue.withCtx.call(void 0, () => [...(_cache[0] || (_cache[0] = [
+        _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createTextVNode.call(void 0, "In Markdown files, it is possible to document HTTP requests using the fenced code block with the language "),
+          _vue.createElementVNode.call(void 0, "code", null, "http"),
+          _vue.createTextVNode.call(void 0, ". The extension will add a “Send Request” button to the Markdown file which allows easily sending a request!")
+        ], -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "div", { slot: "right" }, [
+          _vue.createElementVNode.call(void 0, "pre", null, [
+            _vue.createElementVNode.call(void 0, "code", null, "```http\nGET https://api.example.com/users\n```\n")
+          ])
+        ], -1 /* CACHED */)
+      ]))]),
       _: 1 /* STABLE */
     }),
-    _hoisted_5,
-    _vue.createVNode.call(void 0, _component_d_split, null, {
-      default: _vue.withCtx.call(void 0, () => [
-        _hoisted_6,
-        _hoisted_7
+    _cache[6] || (_cache[6] = _vue.createElementVNode.call(void 0, "h2", { id: "form-post" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#form-post"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
       ]),
+      _vue.createTextVNode.call(void 0, "Form post")
+    ], -1 /* CACHED */)),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      default: _vue.withCtx.call(void 0, () => [...(_cache[1] || (_cache[1] = [
+        _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createTextVNode.call(void 0, "To send a form post, set: "),
+          _vue.createElementVNode.call(void 0, "code", null, "Content-Type: application/x-www-form-urlencoded"),
+          _vue.createTextVNode.call(void 0, ". In the request body, each field can be on its own line.")
+        ], -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "div", { slot: "right" }, [
+          _vue.createElementVNode.call(void 0, "pre", null, [
+            _vue.createElementVNode.call(void 0, "code", null, "POST https://api.example.com/login HTTP/1.1\nContent-Type: application/x-www-form-urlencoded\n\nname=foo\n&password=bar\n")
+          ])
+        ], -1 /* CACHED */)
+      ]))]),
       _: 1 /* STABLE */
     }),
-    _hoisted_8,
-    _vue.createVNode.call(void 0, _component_d_split, null, {
-      default: _vue.withCtx.call(void 0, () => [
-        _hoisted_9,
-        _hoisted_10
+    _cache[7] || (_cache[7] = _vue.createElementVNode.call(void 0, "h2", { id: "graphql" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#graphql"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
       ]),
+      _vue.createTextVNode.call(void 0, "GraphQL")
+    ], -1 /* CACHED */)),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      default: _vue.withCtx.call(void 0, () => [...(_cache[2] || (_cache[2] = [
+        _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createTextVNode.call(void 0, "To send GraphQL request, set: "),
+          _vue.createElementVNode.call(void 0, "code", null, "X-REQUEST-TYPE: GraphQL"),
+          _vue.createTextVNode.call(void 0, " then put the GraphQL query in the next section, followed by JSON representation of the variables to send along with the query.")
+        ], -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "div", { slot: "right" }, [
+          _vue.createElementVNode.call(void 0, "pre", null, [
+            _vue.createElementVNode.call(void 0, "code", null, "POST https://api.github.com/graphql\nContent-Type: application/json\nAuthorization: Bearer xxx\nX-REQUEST-TYPE: GraphQL\n\nquery (…) {\n  …\n}\n\n{\n  /* variables here */\n}\n")
+          ])
+        ], -1 /* CACHED */)
+      ]))]),
       _: 1 /* STABLE */
     }),
-    _hoisted_11,
-    _vue.createVNode.call(void 0, _component_d_split, null, {
-      default: _vue.withCtx.call(void 0, () => [
-        _hoisted_12,
-        _hoisted_13
+    _cache[8] || (_cache[8] = _vue.createElementVNode.call(void 0, "h2", { id: "referencing-environment-variables-in-env-files" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#referencing-environment-variables-in-env-files"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
       ]),
+      _vue.createTextVNode.call(void 0, "Referencing environment variables in "),
+      _vue.createElementVNode.call(void 0, "code", null, ".env"),
+      _vue.createTextVNode.call(void 0, " files")
+    ], -1 /* CACHED */)),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      default: _vue.withCtx.call(void 0, () => [...(_cache[3] || (_cache[3] = [
+        _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createTextVNode.call(void 0, "You can use "),
+          _vue.createElementVNode.call(void 0, "code", null, "{{$dotenv ____}}"),
+          _vue.createTextVNode.call(void 0, " to reference the environment value stored in the "),
+          _vue.createElementVNode.call(void 0, "code", null, ".env"),
+          _vue.createTextVNode.call(void 0, " file in the same directory.")
+        ], -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "div", { slot: "right" }, [
+          _vue.createElementVNode.call(void 0, "div", null, [
+            _vue.createElementVNode.call(void 0, "pre", null, [
+              _vue.createElementVNode.call(void 0, "code", null, "GET https://api.github.com/user\nAuthorization: Bearer {{$dotenv GITHUB_TOKEN}}\n")
+            ])
+          ])
+        ], -1 /* CACHED */)
+      ]))]),
       _: 1 /* STABLE */
     }),
-    _hoisted_14,
-    _vue.createVNode.call(void 0, _component_d_split, null, {
-      default: _vue.withCtx.call(void 0, () => [
-        _hoisted_15,
-        _hoisted_16,
-        _hoisted_17
+    _cache[9] || (_cache[9] = _vue.createElementVNode.call(void 0, "h2", { id: "prefixing" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#prefixing"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
       ]),
+      _vue.createTextVNode.call(void 0, "Prefixing")
+    ], -1 /* CACHED */)),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      default: _vue.withCtx.call(void 0, () => [...(_cache[4] || (_cache[4] = [
+        _vue.createElementVNode.call(void 0, "p", null, "To not repeat the same URL over and over, variables can be used.", -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "ul", null, [
+          _vue.createElementVNode.call(void 0, "li", null, [
+            _vue.createTextVNode.call(void 0, "Define variables with "),
+            _vue.createElementVNode.call(void 0, "code", null, "@name = value")
+          ]),
+          _vue.createElementVNode.call(void 0, "li", null, [
+            _vue.createTextVNode.call(void 0, "Reference variables with "),
+            _vue.createElementVNode.call(void 0, "span", null, [
+              _vue.createElementVNode.call(void 0, "code", null, "{{ name }}")
+            ])
+          ])
+        ], -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "div", { slot: "right" }, [
+          _vue.createElementVNode.call(void 0, "div", null, [
+            _vue.createElementVNode.call(void 0, "pre", null, [
+              _vue.createElementVNode.call(void 0, "code", null, "@base = https://api.example.com\n\nGET {{base}}/user\n")
+            ])
+          ])
+        ], -1 /* CACHED */)
+      ]))]),
       _: 1 /* STABLE */
     })
   ], 64 /* STABLE_FRAGMENT */))

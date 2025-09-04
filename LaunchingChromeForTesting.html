@@ -67,30 +67,24 @@ const __sfc__ = {
 ;
 var _vue = require('vue');
 
-const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
-const _hoisted_1 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<h1 id=\"how-to-launch-chrome-for-testing\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#how-to-launch-chrome-for-testing\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>How to launch Chrome for Testing</h1><div class=\"lead\" data-v-8c9498c0><p data-v-8c9498c0>Use the <a href=\"https://pptr.dev/browsers-api\" data-v-8c9498c0>@puppeteer/browsers CLI</a> to launch <a href=\"https://developer.chrome.com/blog/chrome-for-testing/\" data-v-8c9498c0>Chrome for Testing</a></p></div>", 2)
-const _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "Install Chrome for Testing", -1 /* HOISTED */))
-const _hoisted_4 = { key: 0 }
-const _hoisted_5 = ["value"]
-const _hoisted_6 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "Launch Chrome for Testing")
-], -1 /* HOISTED */))
+const _hoisted_1 = { key: 0 }
+const _hoisted_2 = ["value"]
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
+    _cache[6] || (_cache[6] = _vue.createStaticVNode.call(void 0, "<h1 id=\"how-to-launch-chrome-for-testing\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#how-to-launch-chrome-for-testing\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>How to launch Chrome for Testing</h1><div class=\"lead\" data-v-8c9498c0><p data-v-8c9498c0>Use the <a href=\"https://pptr.dev/browsers-api\" data-v-8c9498c0>@puppeteer/browsers CLI</a> to launch <a href=\"https://developer.chrome.com/blog/chrome-for-testing/\" data-v-8c9498c0>Chrome for Testing</a></p></div>", 2)),
     _vue.createElementVNode.call(void 0, "ol", null, [
       _vue.createElementVNode.call(void 0, "li", null, [
         _vue.createElementVNode.call(void 0, "p", null, [
-          _hoisted_3,
+          _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "strong", null, "Install Chrome for Testing", -1 /* CACHED */)),
           ($setup.channels.length)
-            ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "span", _hoisted_4, [
-                _vue.createTextVNode.call(void 0, " — "),
+            ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "span", _hoisted_1, [
+                _cache[1] || (_cache[1] = _vue.createTextVNode.call(void 0, " — ", -1 /* CACHED */)),
                 _vue.withDirectives.call(void 0, _vue.createElementVNode.call(void 0, "select", {
                   "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($setup.channel) = $event)),
                   style: {"display":"inline-block"}
                 }, [
                   (_vue.openBlock.call(void 0, true), _vue.createElementBlock.call(void 0, _vue.Fragment, null, _vue.renderList.call(void 0, $setup.channels, (ch) => {
-                    return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "option", { value: ch }, _vue.toDisplayString.call(void 0, ch) + " (" + _vue.toDisplayString.call(void 0, $setup.getVersion(ch)) + ")", 9 /* TEXT, PROPS */, _hoisted_5))
+                    return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "option", { value: ch }, _vue.toDisplayString.call(void 0, ch) + " (" + _vue.toDisplayString.call(void 0, $setup.getVersion(ch)) + ")", 9 /* TEXT, PROPS */, _hoisted_2))
                   }), 256 /* UNKEYED_FRAGMENT */))
                 ], 512 /* NEED_PATCH */), [
                   [_vue.vModelSelect, $setup.channel]
@@ -100,7 +94,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         ]),
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", null, [
-            _vue.createTextVNode.call(void 0, "npx @puppeteer/browsers install chrome@"),
+            _cache[3] || (_cache[3] = _vue.createTextVNode.call(void 0, "npx @puppeteer/browsers install chrome@", -1 /* CACHED */)),
             _vue.createElementVNode.call(void 0, "strong", null, _vue.toDisplayString.call(void 0, $setup.version), 1 /* TEXT */)
           ])
         ]),
@@ -109,10 +103,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         ])
       ]),
       _vue.createElementVNode.call(void 0, "li", null, [
-        _hoisted_6,
+        _cache[5] || (_cache[5] = _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createElementVNode.call(void 0, "strong", null, "Launch Chrome for Testing")
+        ], -1 /* CACHED */)),
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", null, [
-            _vue.createTextVNode.call(void 0, "npx @puppeteer/browsers launch chrome@"),
+            _cache[4] || (_cache[4] = _vue.createTextVNode.call(void 0, "npx @puppeteer/browsers launch chrome@", -1 /* CACHED */)),
             _vue.createElementVNode.call(void 0, "strong", null, _vue.toDisplayString.call(void 0, $setup.version), 1 /* TEXT */)
           ])
         ])

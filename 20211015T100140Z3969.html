@@ -22,7 +22,65 @@
     <div class="h-entry">
       <main id="main">
         <div id="mainContents">
-          <div class="prose e-content" id="noteContents"><!--[--><div class="lead" data-v-8c9498c0><p data-v-8c9498c0>Custom elements available in this website (this is just for my own reference):</p></div><h2 id="two-column-layout" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#two-column-layout" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Two-column layout</h2><!----><!----><h2 id="grid-system" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#grid-system" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Grid system</h2><!----><h2 id="callouts" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#callouts" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Callouts</h2><!----><h2 id="youtube-embed" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#youtube-embed" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>YouTube embed</h2><!----><h2 id="chat-bubbles" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#chat-bubbles" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Chat bubbles</h2><!----><h2 id="thoughts" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#thoughts" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Thoughts</h2><!----><!--]--></div>
+          <div class="prose e-content" id="noteContents"><!--[--><div class="lead" data-v-8c9498c0><p data-v-8c9498c0>Custom elements available in this website (this is just for my own reference):</p></div><h2 id="two-column-layout" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#two-column-layout" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Two-column layout</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>A <code data-v-8c9498c0>&lt;d-split&gt;</code> element splits the contents into left and right side. This allows side-by-side presentation of content.</p></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-html" data-v-8c9498c0>&lt;d-split&gt;
+  Left contents
+  &lt;div slot=&quot;right&quot;&gt;Right contents&lt;/div&gt;
+&lt;/d-split&gt;
+</code></pre></div></div><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>The <code data-v-8c9498c0>split</code> and <code data-v-8c9498c0>aside</code> <a href="https://talk.commonmark.org/t/generic-directives-plugins-syntax/444" data-v-8c9498c0>directive</a> can be used.</p></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-markdown" data-v-8c9498c0>::::split
+Left contents
+
+:::aside
+Right contents
+:::
+::::
+</code></pre></div></div><h2 id="grid-system" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#grid-system" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Grid system</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>Grid system powered by <a href="https://rsms.me/raster/" data-v-8c9498c0>Raster</a> allows for more flexible layout.</p><r-grid columns="3" data-v-8c9498c0><r-cell data-v-8c9498c0>One</r-cell><r-cell data-v-8c9498c0>Two</r-cell><r-cell data-v-8c9498c0>Three</r-cell></r-grid></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-html" data-v-8c9498c0>&lt;r-grid columns=&quot;3&quot;&gt;
+  &lt;r-cell&gt;One&lt;/r-cell&gt;
+  &lt;r-cell&gt;Two&lt;/r-cell&gt;
+  &lt;r-cell&gt;Three&lt;/r-cell&gt;
+&lt;/r-grid&gt;
+</code></pre></div></div><h2 id="callouts" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#callouts" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Callouts</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><div class="notes-callout" data-type="Info" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><notes-callout-icon type="Info" data-v-8c9498c0></notes-callout-icon>Info</p><p data-v-8c9498c0>This is an info box</p></div><div class="notes-callout" data-type="Warning" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><notes-callout-icon type="Warning" data-v-8c9498c0></notes-callout-icon>Warning</p><p data-v-8c9498c0>This is a warning box</p></div><div class="notes-callout" data-type="Tip" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><notes-callout-icon type="Tip" data-v-8c9498c0></notes-callout-icon>Tip</p><p data-v-8c9498c0>This is a tip box</p></div><div class="notes-callout" data-type="Success" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><notes-callout-icon type="Success" data-v-8c9498c0></notes-callout-icon>Success</p><p data-v-8c9498c0>This is a success box</p></div><div class="notes-callout" data-type="Important" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><notes-callout-icon type="Important" data-v-8c9498c0></notes-callout-icon>Important</p><p data-v-8c9498c0>This is an important box</p></div><div class="notes-callout" data-type="Danger" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><notes-callout-icon type="Danger" data-v-8c9498c0></notes-callout-icon>BE CAREFUL</p><p data-v-8c9498c0>This is a danger box</p></div><div class="notes-callout" data-type="Caution" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><notes-callout-icon type="Caution" data-v-8c9498c0></notes-callout-icon>Caution</p><p data-v-8c9498c0>This is a caution box</p></div><details data-v-8c9498c0><summary data-v-8c9498c0>Details</summary><p data-v-8c9498c0>This is a details box</p></details></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-markdown" data-v-8c9498c0>:::info
+This is an info box
+:::
+
+:::warning
+This is a warning box
+:::
+
+:::tip
+This is a tip box
+:::
+
+:::success
+This is a success box
+:::
+
+:::important
+This is an important box
+:::
+
+:::danger[BE CAREFUL]
+This is a danger box
+:::
+
+:::caution
+This is a caution box
+:::
+
+:::details
+This is a details box
+:::
+</code></pre></div></div><h2 id="youtube-embed" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#youtube-embed" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>YouTube embed</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><youtube-embed video-id="chuBHB0rRQo" data-v-8c9498c0></youtube-embed></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-markdown" data-v-8c9498c0>::youtube[chuBHB0rRQo]
+</code></pre></div></div><h2 id="chat-bubbles" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#chat-bubbles" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Chat bubbles</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><div class="notes-bubble" data-author-position="right" data-v-8c9498c0><div class="notes-bubble__author" data-v-8c9498c0><span class="notes-bubble__me" data-v-8c9498c0>Me:</span></div><div class="notes-bubble__message" data-v-8c9498c0><p data-v-8c9498c0>hi!</p></div></div><div class="notes-bubble" data-author-position="left" data-v-8c9498c0><div class="notes-bubble__author" data-v-8c9498c0><notes-bubble-author author="ChatGPT" data-v-8c9498c0></notes-bubble-author></div><div class="notes-bubble__message" data-v-8c9498c0><p data-v-8c9498c0>Hi there! How&#39;s it going?</p></div></div></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-markdown" data-v-8c9498c0>:::me
+hi!
+:::
+
+:::bubble[ChatGPT]
+Hi there! How&#39;s it going?
+:::
+</code></pre></div></div><h2 id="thoughts" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#thoughts" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Thoughts</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><div class="notes-bubble" data-author-position="right" data-v-8c9498c0><div class="notes-bubble__message" data-v-8c9498c0><p data-v-8c9498c0>But what about this case?</p></div></div></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-markdown" data-v-8c9498c0>:::thought
+But what about this case?
+:::
+</code></pre></div></div><!--]--></div>
         </div>
       </main>
       <footer>
@@ -35,473 +93,46 @@
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
 
-const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
-const _hoisted_1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { class: "lead" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "Custom elements available in this website (this is just for my own reference):")
-], -1 /* HOISTED */))
-const _hoisted_2 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "h2", { id: "two-column-layout" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-    "aria-hidden": "true",
-    tabindex: "-1",
-    href: "#two-column-layout"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "Two-column layout")
-], -1 /* HOISTED */))
-const _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "A "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, "<d-split>"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " element splits the contents into left and right side. This allows side-by-side presentation of content.")
-], -1 /* HOISTED */))
-const _hoisted_4 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { slot: "right" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "pre", {
-    class: "shiki github-dark",
-    style: {"background-color":"#252423","color":"#e1e4e8"},
-    tabindex: "0"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, [
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "<"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "d-split"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ">")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  Left contents")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  <"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "div"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, " slot"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "="),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "\"right\""),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ">Right contents</"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "div"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ">")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "</"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "d-split"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ">")
-      ])
-    ])
-  ])
-], -1 /* HOISTED */))
-const _hoisted_5 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "The "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, "split"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " and "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, "aside"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, ),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://talk.commonmark.org/t/generic-directives-plugins-syntax/444" }, "directive"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " can be used.")
-], -1 /* HOISTED */))
-const _hoisted_6 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { slot: "right" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "pre", {
-    class: "shiki github-dark",
-    style: {"background-color":"#252423","color":"#e1e4e8"},
-    tabindex: "0"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, [
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "::::split")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "Left contents")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::aside")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "Right contents")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "::::")
-      ])
-    ])
-  ])
-], -1 /* HOISTED */))
-const _hoisted_7 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "h2", { id: "grid-system" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-    "aria-hidden": "true",
-    tabindex: "-1",
-    href: "#grid-system"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "Grid system")
-], -1 /* HOISTED */))
-const _hoisted_8 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "Grid system powered by "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://rsms.me/raster/" }, "Raster"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " allows for more flexible layout.")
-], -1 /* HOISTED */))
-const _hoisted_9 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { slot: "right" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "pre", {
-    class: "shiki github-dark",
-    style: {"background-color":"#252423","color":"#e1e4e8"},
-    tabindex: "0"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, [
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "<"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "r-grid"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, " columns"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "="),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "\"3\""),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ">")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  <"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "r-cell"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ">One</"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "r-cell"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ">")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  <"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "r-cell"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ">Two</"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "r-cell"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ">")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  <"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "r-cell"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ">Three</"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "r-cell"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ">")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "</"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "r-grid"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ">")
-      ])
-    ])
-  ])
-], -1 /* HOISTED */))
-const _hoisted_10 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "h2", { id: "callouts" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-    "aria-hidden": "true",
-    tabindex: "-1",
-    href: "#callouts"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "Callouts")
-], -1 /* HOISTED */))
-const _hoisted_11 = {
+const _hoisted_1 = {
   class: "notes-callout",
   "data-type": "Info"
 }
-const _hoisted_12 = { class: "notes-callout__label" }
-const _hoisted_13 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "This is an info box", -1 /* HOISTED */))
-const _hoisted_14 = {
+const _hoisted_2 = { class: "notes-callout__label" }
+const _hoisted_3 = {
   class: "notes-callout",
   "data-type": "Warning"
 }
-const _hoisted_15 = { class: "notes-callout__label" }
-const _hoisted_16 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "This is a warning box", -1 /* HOISTED */))
-const _hoisted_17 = {
+const _hoisted_4 = { class: "notes-callout__label" }
+const _hoisted_5 = {
   class: "notes-callout",
   "data-type": "Tip"
 }
-const _hoisted_18 = { class: "notes-callout__label" }
-const _hoisted_19 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "This is a tip box", -1 /* HOISTED */))
-const _hoisted_20 = {
+const _hoisted_6 = { class: "notes-callout__label" }
+const _hoisted_7 = {
   class: "notes-callout",
   "data-type": "Success"
 }
-const _hoisted_21 = { class: "notes-callout__label" }
-const _hoisted_22 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "This is a success box", -1 /* HOISTED */))
-const _hoisted_23 = {
+const _hoisted_8 = { class: "notes-callout__label" }
+const _hoisted_9 = {
   class: "notes-callout",
   "data-type": "Important"
 }
-const _hoisted_24 = { class: "notes-callout__label" }
-const _hoisted_25 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "This is an important box", -1 /* HOISTED */))
-const _hoisted_26 = {
+const _hoisted_10 = { class: "notes-callout__label" }
+const _hoisted_11 = {
   class: "notes-callout",
   "data-type": "Danger"
 }
-const _hoisted_27 = { class: "notes-callout__label" }
-const _hoisted_28 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "This is a danger box", -1 /* HOISTED */))
-const _hoisted_29 = {
+const _hoisted_12 = { class: "notes-callout__label" }
+const _hoisted_13 = {
   class: "notes-callout",
   "data-type": "Caution"
 }
-const _hoisted_30 = { class: "notes-callout__label" }
-const _hoisted_31 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "This is a caution box", -1 /* HOISTED */))
-const _hoisted_32 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "details", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "summary", null, "Details"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "This is a details box")
-], -1 /* HOISTED */))
-const _hoisted_33 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { slot: "right" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "pre", {
-    class: "shiki github-dark",
-    style: {"background-color":"#252423","color":"#e1e4e8"},
-    tabindex: "0"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, [
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::info")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "This is an info box")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::warning")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "This is a warning box")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::tip")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "This is a tip box")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::success")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "This is a success box")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::important")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "This is an important box")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::danger[BE CAREFUL]")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "This is a danger box")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::caution")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "This is a caution box")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::details")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "This is a details box")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::")
-      ])
-    ])
-  ])
-], -1 /* HOISTED */))
-const _hoisted_34 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "h2", { id: "youtube-embed" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-    "aria-hidden": "true",
-    tabindex: "-1",
-    href: "#youtube-embed"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "YouTube embed")
-], -1 /* HOISTED */))
-const _hoisted_35 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { slot: "right" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "pre", {
-    class: "shiki github-dark",
-    style: {"background-color":"#252423","color":"#e1e4e8"},
-    tabindex: "0"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, [
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "::youtube["),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#DBEDFF","text-decoration":"underline"} }, "chuBHB0rRQo"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "]")
-      ])
-    ])
-  ])
-], -1 /* HOISTED */))
-const _hoisted_36 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "h2", { id: "chat-bubbles" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-    "aria-hidden": "true",
-    tabindex: "-1",
-    href: "#chat-bubbles"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "Chat bubbles")
-], -1 /* HOISTED */))
-const _hoisted_37 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", {
-  class: "notes-bubble",
-  "data-author-position": "right"
-}, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { class: "notes-bubble__author" }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "notes-bubble__me" }, "Me:")
-  ]),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { class: "notes-bubble__message" }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "hi!")
-  ])
-], -1 /* HOISTED */))
-const _hoisted_38 = {
+const _hoisted_14 = { class: "notes-callout__label" }
+const _hoisted_15 = {
   class: "notes-bubble",
   "data-author-position": "left"
 }
-const _hoisted_39 = { class: "notes-bubble__author" }
-const _hoisted_40 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { class: "notes-bubble__message" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "Hi there! How's it going?")
-], -1 /* HOISTED */))
-const _hoisted_41 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { slot: "right" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "pre", {
-    class: "shiki github-dark",
-    style: {"background-color":"#252423","color":"#e1e4e8"},
-    tabindex: "0"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, [
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::me")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "hi!")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::bubble["),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#DBEDFF","text-decoration":"underline"} }, "ChatGPT"),
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "]")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "Hi there! How's it going?")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::")
-      ])
-    ])
-  ])
-], -1 /* HOISTED */))
-const _hoisted_42 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "h2", { id: "thoughts" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-    "aria-hidden": "true",
-    tabindex: "-1",
-    href: "#thoughts"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "Thoughts")
-], -1 /* HOISTED */))
-const _hoisted_43 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", {
-  class: "notes-bubble",
-  "data-author-position": "right"
-}, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { class: "notes-bubble__message" }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "But what about this case?")
-  ])
-], -1 /* HOISTED */))
-const _hoisted_44 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { slot: "right" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "pre", {
-    class: "shiki github-dark",
-    style: {"background-color":"#252423","color":"#e1e4e8"},
-    tabindex: "0"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, [
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::thought")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "But what about this case?")
-      ]),
-      /*#__PURE__*/_vue.createTextVNode.call(void 0, "\n"),
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":::")
-      ])
-    ])
-  ])
-], -1 /* HOISTED */))
+const _hoisted_16 = { class: "notes-bubble__author" }
 function render(_ctx, _cache) {
   const _component_d_split = _vue.resolveComponent.call(void 0, "d-split")
   const _component_r_cell = _vue.resolveComponent.call(void 0, "r-cell")
@@ -511,137 +142,259 @@ function render(_ctx, _cache) {
   const _component_notes_bubble_author = _vue.resolveComponent.call(void 0, "notes-bubble-author")
 
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _hoisted_2,
+    _cache[31] || (_cache[31] = _vue.createElementVNode.call(void 0, "div", { class: "lead" }, [
+      _vue.createElementVNode.call(void 0, "p", null, "Custom elements available in this website (this is just for my own reference):")
+    ], -1 /* CACHED */)),
+    _cache[32] || (_cache[32] = _vue.createElementVNode.call(void 0, "h2", { id: "two-column-layout" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#two-column-layout"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Two-column layout")
+    ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[0] || (_cache[0] = [
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-html" }, "<d-split>\n  Left contents\n  <div slot=\"right\">Right contents</div>\n</d-split>\n")
+        ], -1 /* CACHED */)
+      ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _hoisted_3,
-        _hoisted_4
+        _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createTextVNode.call(void 0, "A "),
+          _vue.createElementVNode.call(void 0, "code", null, "<d-split>"),
+          _vue.createTextVNode.call(void 0, " element splits the contents into left and right side. This allows side-by-side presentation of content.")
+        ], -1 /* CACHED */))
       ]),
       _: 1 /* STABLE */
     }),
     _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[2] || (_cache[2] = [
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, "::::split\nLeft contents\n\n:::aside\nRight contents\n:::\n::::\n")
+        ], -1 /* CACHED */)
+      ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _hoisted_5,
-        _hoisted_6
+        _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createTextVNode.call(void 0, "The "),
+          _vue.createElementVNode.call(void 0, "code", null, "split"),
+          _vue.createTextVNode.call(void 0, " and "),
+          _vue.createElementVNode.call(void 0, "code", null, "aside"),
+          _vue.createTextVNode.call(void 0, ),
+          _vue.createElementVNode.call(void 0, "a", { href: "https://talk.commonmark.org/t/generic-directives-plugins-syntax/444" }, "directive"),
+          _vue.createTextVNode.call(void 0, " can be used.")
+        ], -1 /* CACHED */))
       ]),
       _: 1 /* STABLE */
     }),
-    _hoisted_7,
+    _cache[33] || (_cache[33] = _vue.createElementVNode.call(void 0, "h2", { id: "grid-system" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#grid-system"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Grid system")
+    ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[7] || (_cache[7] = [
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-html" }, "<r-grid columns=\"3\">\n  <r-cell>One</r-cell>\n  <r-cell>Two</r-cell>\n  <r-cell>Three</r-cell>\n</r-grid>\n")
+        ], -1 /* CACHED */)
+      ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _hoisted_8,
+        _cache[8] || (_cache[8] = _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createTextVNode.call(void 0, "Grid system powered by "),
+          _vue.createElementVNode.call(void 0, "a", { href: "https://rsms.me/raster/" }, "Raster"),
+          _vue.createTextVNode.call(void 0, " allows for more flexible layout.")
+        ], -1 /* CACHED */)),
         _vue.createVNode.call(void 0, _component_r_grid, { columns: "3" }, {
           default: _vue.withCtx.call(void 0, () => [
             _vue.createVNode.call(void 0, _component_r_cell, null, {
-              default: _vue.withCtx.call(void 0, () => [
-                _vue.createTextVNode.call(void 0, "One")
-              ]),
+              default: _vue.withCtx.call(void 0, () => [...(_cache[4] || (_cache[4] = [
+                _vue.createTextVNode.call(void 0, "One", -1 /* CACHED */)
+              ]))]),
               _: 1 /* STABLE */
             }),
             _vue.createVNode.call(void 0, _component_r_cell, null, {
-              default: _vue.withCtx.call(void 0, () => [
-                _vue.createTextVNode.call(void 0, "Two")
-              ]),
+              default: _vue.withCtx.call(void 0, () => [...(_cache[5] || (_cache[5] = [
+                _vue.createTextVNode.call(void 0, "Two", -1 /* CACHED */)
+              ]))]),
               _: 1 /* STABLE */
             }),
             _vue.createVNode.call(void 0, _component_r_cell, null, {
-              default: _vue.withCtx.call(void 0, () => [
-                _vue.createTextVNode.call(void 0, "Three")
-              ]),
+              default: _vue.withCtx.call(void 0, () => [...(_cache[6] || (_cache[6] = [
+                _vue.createTextVNode.call(void 0, "Three", -1 /* CACHED */)
+              ]))]),
               _: 1 /* STABLE */
             })
           ]),
           _: 1 /* STABLE */
-        }),
-        _hoisted_9
+        })
       ]),
       _: 1 /* STABLE */
     }),
-    _hoisted_10,
+    _cache[34] || (_cache[34] = _vue.createElementVNode.call(void 0, "h2", { id: "callouts" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#callouts"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Callouts")
+    ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[23] || (_cache[23] = [
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::info\nThis is an info box\n:::\n\n:::warning\nThis is a warning box\n:::\n\n:::tip\nThis is a tip box\n:::\n\n:::success\nThis is a success box\n:::\n\n:::important\nThis is an important box\n:::\n\n:::danger[BE CAREFUL]\nThis is a danger box\n:::\n\n:::caution\nThis is a caution box\n:::\n\n:::details\nThis is a details box\n:::\n")
+        ], -1 /* CACHED */)
+      ]))]),
       default: _vue.withCtx.call(void 0, () => [
+        _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
+          _vue.createElementVNode.call(void 0, "p", _hoisted_2, [
+            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Info" }),
+            _cache[9] || (_cache[9] = _vue.createTextVNode.call(void 0, "Info", -1 /* CACHED */))
+          ]),
+          _cache[10] || (_cache[10] = _vue.createElementVNode.call(void 0, "p", null, "This is an info box", -1 /* CACHED */))
+        ]),
+        _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
+          _vue.createElementVNode.call(void 0, "p", _hoisted_4, [
+            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Warning" }),
+            _cache[11] || (_cache[11] = _vue.createTextVNode.call(void 0, "Warning", -1 /* CACHED */))
+          ]),
+          _cache[12] || (_cache[12] = _vue.createElementVNode.call(void 0, "p", null, "This is a warning box", -1 /* CACHED */))
+        ]),
+        _vue.createElementVNode.call(void 0, "div", _hoisted_5, [
+          _vue.createElementVNode.call(void 0, "p", _hoisted_6, [
+            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Tip" }),
+            _cache[13] || (_cache[13] = _vue.createTextVNode.call(void 0, "Tip", -1 /* CACHED */))
+          ]),
+          _cache[14] || (_cache[14] = _vue.createElementVNode.call(void 0, "p", null, "This is a tip box", -1 /* CACHED */))
+        ]),
+        _vue.createElementVNode.call(void 0, "div", _hoisted_7, [
+          _vue.createElementVNode.call(void 0, "p", _hoisted_8, [
+            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Success" }),
+            _cache[15] || (_cache[15] = _vue.createTextVNode.call(void 0, "Success", -1 /* CACHED */))
+          ]),
+          _cache[16] || (_cache[16] = _vue.createElementVNode.call(void 0, "p", null, "This is a success box", -1 /* CACHED */))
+        ]),
+        _vue.createElementVNode.call(void 0, "div", _hoisted_9, [
+          _vue.createElementVNode.call(void 0, "p", _hoisted_10, [
+            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Important" }),
+            _cache[17] || (_cache[17] = _vue.createTextVNode.call(void 0, "Important", -1 /* CACHED */))
+          ]),
+          _cache[18] || (_cache[18] = _vue.createElementVNode.call(void 0, "p", null, "This is an important box", -1 /* CACHED */))
+        ]),
         _vue.createElementVNode.call(void 0, "div", _hoisted_11, [
           _vue.createElementVNode.call(void 0, "p", _hoisted_12, [
-            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Info" }),
-            _vue.createTextVNode.call(void 0, "Info")
-          ]),
-          _hoisted_13
-        ]),
-        _vue.createElementVNode.call(void 0, "div", _hoisted_14, [
-          _vue.createElementVNode.call(void 0, "p", _hoisted_15, [
-            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Warning" }),
-            _vue.createTextVNode.call(void 0, "Warning")
-          ]),
-          _hoisted_16
-        ]),
-        _vue.createElementVNode.call(void 0, "div", _hoisted_17, [
-          _vue.createElementVNode.call(void 0, "p", _hoisted_18, [
-            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Tip" }),
-            _vue.createTextVNode.call(void 0, "Tip")
-          ]),
-          _hoisted_19
-        ]),
-        _vue.createElementVNode.call(void 0, "div", _hoisted_20, [
-          _vue.createElementVNode.call(void 0, "p", _hoisted_21, [
-            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Success" }),
-            _vue.createTextVNode.call(void 0, "Success")
-          ]),
-          _hoisted_22
-        ]),
-        _vue.createElementVNode.call(void 0, "div", _hoisted_23, [
-          _vue.createElementVNode.call(void 0, "p", _hoisted_24, [
-            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Important" }),
-            _vue.createTextVNode.call(void 0, "Important")
-          ]),
-          _hoisted_25
-        ]),
-        _vue.createElementVNode.call(void 0, "div", _hoisted_26, [
-          _vue.createElementVNode.call(void 0, "p", _hoisted_27, [
             _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Danger" }),
-            _vue.createTextVNode.call(void 0, "BE CAREFUL")
+            _cache[19] || (_cache[19] = _vue.createTextVNode.call(void 0, "BE CAREFUL", -1 /* CACHED */))
           ]),
-          _hoisted_28
+          _cache[20] || (_cache[20] = _vue.createElementVNode.call(void 0, "p", null, "This is a danger box", -1 /* CACHED */))
         ]),
-        _vue.createElementVNode.call(void 0, "div", _hoisted_29, [
-          _vue.createElementVNode.call(void 0, "p", _hoisted_30, [
+        _vue.createElementVNode.call(void 0, "div", _hoisted_13, [
+          _vue.createElementVNode.call(void 0, "p", _hoisted_14, [
             _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Caution" }),
-            _vue.createTextVNode.call(void 0, "Caution")
+            _cache[21] || (_cache[21] = _vue.createTextVNode.call(void 0, "Caution", -1 /* CACHED */))
           ]),
-          _hoisted_31
+          _cache[22] || (_cache[22] = _vue.createElementVNode.call(void 0, "p", null, "This is a caution box", -1 /* CACHED */))
         ]),
-        _hoisted_32,
-        _hoisted_33
+        _cache[24] || (_cache[24] = _vue.createElementVNode.call(void 0, "details", null, [
+          _vue.createElementVNode.call(void 0, "summary", null, "Details"),
+          _vue.createElementVNode.call(void 0, "p", null, "This is a details box")
+        ], -1 /* CACHED */))
       ]),
       _: 1 /* STABLE */
     }),
-    _hoisted_34,
+    _cache[35] || (_cache[35] = _vue.createElementVNode.call(void 0, "h2", { id: "youtube-embed" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#youtube-embed"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "YouTube embed")
+    ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[25] || (_cache[25] = [
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, "::youtube[chuBHB0rRQo]\n")
+        ], -1 /* CACHED */)
+      ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _vue.createVNode.call(void 0, _component_youtube_embed, { "video-id": "chuBHB0rRQo" }),
-        _hoisted_35
+        _vue.createVNode.call(void 0, _component_youtube_embed, { "video-id": "chuBHB0rRQo" })
       ]),
       _: 1 /* STABLE */
     }),
-    _hoisted_36,
+    _cache[36] || (_cache[36] = _vue.createElementVNode.call(void 0, "h2", { id: "chat-bubbles" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#chat-bubbles"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Chat bubbles")
+    ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[27] || (_cache[27] = [
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::me\nhi!\n:::\n\n:::bubble[ChatGPT]\nHi there! How's it going?\n:::\n")
+        ], -1 /* CACHED */)
+      ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _hoisted_37,
-        _vue.createElementVNode.call(void 0, "div", _hoisted_38, [
-          _vue.createElementVNode.call(void 0, "div", _hoisted_39, [
+        _cache[28] || (_cache[28] = _vue.createElementVNode.call(void 0, "div", {
+          class: "notes-bubble",
+          "data-author-position": "right"
+        }, [
+          _vue.createElementVNode.call(void 0, "div", { class: "notes-bubble__author" }, [
+            _vue.createElementVNode.call(void 0, "span", { class: "notes-bubble__me" }, "Me:")
+          ]),
+          _vue.createElementVNode.call(void 0, "div", { class: "notes-bubble__message" }, [
+            _vue.createElementVNode.call(void 0, "p", null, "hi!")
+          ])
+        ], -1 /* CACHED */)),
+        _vue.createElementVNode.call(void 0, "div", _hoisted_15, [
+          _vue.createElementVNode.call(void 0, "div", _hoisted_16, [
             _vue.createVNode.call(void 0, _component_notes_bubble_author, { author: "ChatGPT" })
           ]),
-          _hoisted_40
-        ]),
-        _hoisted_41
+          _cache[26] || (_cache[26] = _vue.createElementVNode.call(void 0, "div", { class: "notes-bubble__message" }, [
+            _vue.createElementVNode.call(void 0, "p", null, "Hi there! How's it going?")
+          ], -1 /* CACHED */))
+        ])
       ]),
       _: 1 /* STABLE */
     }),
-    _hoisted_42,
+    _cache[37] || (_cache[37] = _vue.createElementVNode.call(void 0, "h2", { id: "thoughts" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#thoughts"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Thoughts")
+    ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[29] || (_cache[29] = [
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::thought\nBut what about this case?\n:::\n")
+        ], -1 /* CACHED */)
+      ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _hoisted_43,
-        _hoisted_44
+        _cache[30] || (_cache[30] = _vue.createElementVNode.call(void 0, "div", {
+          class: "notes-bubble",
+          "data-author-position": "right"
+        }, [
+          _vue.createElementVNode.call(void 0, "div", { class: "notes-bubble__message" }, [
+            _vue.createElementVNode.call(void 0, "p", null, "But what about this case?")
+          ])
+        ], -1 /* CACHED */))
       ]),
       _: 1 /* STABLE */
     })

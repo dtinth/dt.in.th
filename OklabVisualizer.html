@@ -89,33 +89,28 @@ window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use s
 ;
 var _vue = require('vue');
 
-const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
-const _hoisted_1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "h1", { id: "oklab-visualizer" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-    "aria-hidden": "true",
-    tabindex: "-1",
-    href: "#oklab-visualizer"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "Oklab Visualizer")
-], -1 /* HOISTED */))
-const _hoisted_2 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "This little visualizer shows the A-B plane of the Oklab color space that lies within the sRGB gamut, given a fixed lightness value.", -1 /* HOISTED */))
-const _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "Lightness:", -1 /* HOISTED */))
-const _hoisted_4 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "br", null, null, -1 /* HOISTED */))
-const _hoisted_5 = {
+const _hoisted_1 = {
   width: "256",
   height: "256",
   ref: "canvasRef"
 }
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _hoisted_2,
+    _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "h1", { id: "oklab-visualizer" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#oklab-visualizer"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Oklab Visualizer")
+    ], -1 /* CACHED */)),
+    _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "p", null, "This little visualizer shows the A-B plane of the Oklab color space that lies within the sRGB gamut, given a fixed lightness value.", -1 /* CACHED */)),
     _vue.createElementVNode.call(void 0, "p", null, [
-      _hoisted_3,
+      _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "strong", null, "Lightness:", -1 /* CACHED */)),
       _vue.createTextVNode.call(void 0, " " + _vue.toDisplayString.call(void 0, ($setup.lightness * 100).toFixed(0)) + "% ", 1 /* TEXT */),
-      _hoisted_4,
+      _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "br", null, null, -1 /* CACHED */)),
       _vue.withDirectives.call(void 0, _vue.createElementVNode.call(void 0, "input", {
         type: "range",
         min: "0",
@@ -128,7 +123,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       ])
     ]),
     _vue.createElementVNode.call(void 0, "p", null, [
-      _vue.createElementVNode.call(void 0, "canvas", _hoisted_5, null, 512 /* NEED_PATCH */)
+      _vue.createElementVNode.call(void 0, "canvas", _hoisted_1, null, 512 /* NEED_PATCH */)
     ])
   ], 64 /* STABLE_FRAGMENT */))
 }

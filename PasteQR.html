@@ -43,54 +43,47 @@ window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use s
 } */
 var _vue = require('vue');
 
-const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
-const _hoisted_1 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<h1 id=\"paste-image-to-decode-qr-code\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#paste-image-to-decode-qr-code\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Paste image to decode QR code</h1><p data-v-8c9498c0><strong data-v-8c9498c0>Found a QR code on your screen and don’t want to take out your phone to scan it? Paste the image here to decode it.</strong> This little tool uses the <a href=\"https://developer.chrome.com/docs/capabilities/shape-detection#barcodedetector\" data-v-8c9498c0>BarcodeDetector</a> API to detect QR codes in images. <a href=\"https://caniuse.com/mdn-api_barcodedetector\" data-v-8c9498c0>See browser support.</a></p>", 2)
-const _hoisted_3 = { style: {"min-height":"160px"} }
-const _hoisted_4 = {
+const _hoisted_1 = { style: {"min-height":"160px"} }
+const _hoisted_2 = {
   key: 0,
   class: "notes-callout",
   "data-type": "Warning"
 }
-const _hoisted_5 = { class: "notes-callout__label" }
-const _hoisted_6 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "Please wait, this page is loading…", -1 /* HOISTED */))
-const _hoisted_7 = {
+const _hoisted_3 = { class: "notes-callout__label" }
+const _hoisted_4 = {
   key: 1,
   class: "notes-callout",
   "data-type": "Warning"
 }
-const _hoisted_8 = { class: "notes-callout__label" }
-const _hoisted_9 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "Please wait, processing the image…", -1 /* HOISTED */))
-const _hoisted_10 = {
+const _hoisted_5 = { class: "notes-callout__label" }
+const _hoisted_6 = {
   key: 2,
   class: "notes-callout",
   "data-type": "Danger"
 }
-const _hoisted_11 = { class: "notes-callout__label" }
-const _hoisted_12 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "Sorry, your browser does not support the BarcodeDetector API. Please use a browser that supports it.", -1 /* HOISTED */))
-const _hoisted_13 = {
+const _hoisted_7 = { class: "notes-callout__label" }
+const _hoisted_8 = {
   key: 3,
   class: "notes-callout",
   "data-type": "Note"
 }
-const _hoisted_14 = { class: "notes-callout__label" }
-const _hoisted_15 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "Paste an image on this page to decode the QR code.", -1 /* HOISTED */))
-const _hoisted_16 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "br", null, null, -1 /* HOISTED */))
-const _hoisted_17 = { class: "block mt-1" }
-const _hoisted_18 = {
+const _hoisted_9 = { class: "notes-callout__label" }
+const _hoisted_10 = { class: "block mt-1" }
+const _hoisted_11 = {
   key: 4,
   class: "notes-callout",
   "data-type": "Danger"
 }
-const _hoisted_19 = { class: "notes-callout__label" }
-const _hoisted_20 = { class: "block mt-1" }
-const _hoisted_21 = {
+const _hoisted_12 = { class: "notes-callout__label" }
+const _hoisted_13 = { class: "block mt-1" }
+const _hoisted_14 = {
   key: 5,
   class: "notes-callout",
   "data-type": "Success"
 }
-const _hoisted_22 = { class: "notes-callout__label" }
-const _hoisted_23 = ["value"]
-const _hoisted_24 = { class: "block mt-1" }
+const _hoisted_15 = { class: "notes-callout__label" }
+const _hoisted_16 = ["value"]
+const _hoisted_17 = { class: "block mt-1" }
 
 
 const __sfc__ = {
@@ -177,46 +170,46 @@ return (_ctx, _cache) => {
   const _component_iconify_icon = _vue.resolveComponent.call(void 0, "iconify-icon")
 
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
+    _cache[17] || (_cache[17] = _vue.createStaticVNode.call(void 0, "<h1 id=\"paste-image-to-decode-qr-code\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#paste-image-to-decode-qr-code\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Paste image to decode QR code</h1><p data-v-8c9498c0><strong data-v-8c9498c0>Found a QR code on your screen and don’t want to take out your phone to scan it? Paste the image here to decode it.</strong> This little tool uses the <a href=\"https://developer.chrome.com/docs/capabilities/shape-detection#barcodedetector\" data-v-8c9498c0>BarcodeDetector</a> API to detect QR codes in images. <a href=\"https://caniuse.com/mdn-api_barcodedetector\" data-v-8c9498c0>See browser support.</a></p>", 2)),
+    _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
       (_vue.unref.call(void 0, state).type == 'loading')
-        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_4, [
-            _vue.createElementVNode.call(void 0, "p", _hoisted_5, [
+        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_2, [
+            _vue.createElementVNode.call(void 0, "p", _hoisted_3, [
               _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Warning" }),
-              _vue.createTextVNode.call(void 0, "Loading…")
+              _cache[0] || (_cache[0] = _vue.createTextVNode.call(void 0, "Loading…", -1 /* CACHED */))
             ]),
-            _hoisted_6
+            _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "p", null, "Please wait, this page is loading…", -1 /* CACHED */))
           ]))
         : _vue.createCommentVNode.call(void 0, "v-if", true),
       (_vue.unref.call(void 0, state).type == 'working')
-        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_7, [
-            _vue.createElementVNode.call(void 0, "p", _hoisted_8, [
+        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_4, [
+            _vue.createElementVNode.call(void 0, "p", _hoisted_5, [
               _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Warning" }),
-              _vue.createTextVNode.call(void 0, "Processing…")
+              _cache[2] || (_cache[2] = _vue.createTextVNode.call(void 0, "Processing…", -1 /* CACHED */))
             ]),
-            _hoisted_9
+            _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "p", null, "Please wait, processing the image…", -1 /* CACHED */))
           ]))
         : _vue.createCommentVNode.call(void 0, "v-if", true),
       (_vue.unref.call(void 0, state).type == 'unsupported')
-        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_10, [
-            _vue.createElementVNode.call(void 0, "p", _hoisted_11, [
+        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_6, [
+            _vue.createElementVNode.call(void 0, "p", _hoisted_7, [
               _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Danger" }),
-              _vue.createTextVNode.call(void 0, "Browser not supported")
+              _cache[4] || (_cache[4] = _vue.createTextVNode.call(void 0, "Browser not supported", -1 /* CACHED */))
             ]),
-            _hoisted_12
+            _cache[5] || (_cache[5] = _vue.createElementVNode.call(void 0, "p", null, "Sorry, your browser does not support the BarcodeDetector API. Please use a browser that supports it.", -1 /* CACHED */))
           ]))
         : _vue.createCommentVNode.call(void 0, "v-if", true),
       (_vue.unref.call(void 0, state).type == 'ready')
-        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_13, [
-            _vue.createElementVNode.call(void 0, "p", _hoisted_14, [
+        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_8, [
+            _vue.createElementVNode.call(void 0, "p", _hoisted_9, [
               _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Note" }),
-              _vue.createTextVNode.call(void 0, "Ready")
+              _cache[6] || (_cache[6] = _vue.createTextVNode.call(void 0, "Ready", -1 /* CACHED */))
             ]),
             _vue.createElementVNode.call(void 0, "p", null, [
-              _hoisted_15,
-              _hoisted_16,
-              _vue.createTextVNode.call(void 0, "All processing is done on your device; no data is sent anywhere. "),
-              _vue.createElementVNode.call(void 0, "span", _hoisted_17, [
+              _cache[9] || (_cache[9] = _vue.createElementVNode.call(void 0, "strong", null, "Paste an image on this page to decode the QR code.", -1 /* CACHED */)),
+              _cache[10] || (_cache[10] = _vue.createElementVNode.call(void 0, "br", null, null, -1 /* CACHED */)),
+              _cache[11] || (_cache[11] = _vue.createTextVNode.call(void 0, "All processing is done on your device; no data is sent anywhere. ", -1 /* CACHED */)),
+              _vue.createElementVNode.call(void 0, "span", _hoisted_10, [
                 _vue.createElementVNode.call(void 0, "button", {
                   onClick: paste,
                   class: "btn py-0.5 px-1.5"
@@ -225,22 +218,22 @@ return (_ctx, _cache) => {
                     icon: "octicon:paste-16",
                     inline: ""
                   }),
-                  _vue.createTextVNode.call(void 0, " Click here to paste")
+                  _cache[7] || (_cache[7] = _vue.createTextVNode.call(void 0, " Click here to paste", -1 /* CACHED */))
                 ]),
-                _vue.createTextVNode.call(void 0, " or use the usual keyboard shortcut.")
+                _cache[8] || (_cache[8] = _vue.createTextVNode.call(void 0, " or use the usual keyboard shortcut.", -1 /* CACHED */))
               ])
             ])
           ]))
         : _vue.createCommentVNode.call(void 0, "v-if", true),
       (_vue.unref.call(void 0, state).type == 'error')
-        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_18, [
-            _vue.createElementVNode.call(void 0, "p", _hoisted_19, [
+        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_11, [
+            _vue.createElementVNode.call(void 0, "p", _hoisted_12, [
               _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Danger" }),
-              _vue.createTextVNode.call(void 0, "Error")
+              _cache[12] || (_cache[12] = _vue.createTextVNode.call(void 0, "Error", -1 /* CACHED */))
             ]),
             _vue.createElementVNode.call(void 0, "p", null, [
               _vue.createTextVNode.call(void 0, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, state).error) + " ", 1 /* TEXT */),
-              _vue.createElementVNode.call(void 0, "span", _hoisted_20, [
+              _vue.createElementVNode.call(void 0, "span", _hoisted_13, [
                 _vue.createElementVNode.call(void 0, "button", {
                   onClick: paste,
                   class: "btn py-0.5 px-1.5"
@@ -249,18 +242,18 @@ return (_ctx, _cache) => {
                     icon: "octicon:paste-16",
                     inline: ""
                   }),
-                  _vue.createTextVNode.call(void 0, " Click here to paste")
+                  _cache[13] || (_cache[13] = _vue.createTextVNode.call(void 0, " Click here to paste", -1 /* CACHED */))
                 ]),
-                _vue.createTextVNode.call(void 0, " or use the usual keyboard shortcut.")
+                _cache[14] || (_cache[14] = _vue.createTextVNode.call(void 0, " or use the usual keyboard shortcut.", -1 /* CACHED */))
               ])
             ])
           ]))
         : _vue.createCommentVNode.call(void 0, "v-if", true),
       (_vue.unref.call(void 0, state).type == 'success')
-        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_21, [
-            _vue.createElementVNode.call(void 0, "p", _hoisted_22, [
+        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_14, [
+            _vue.createElementVNode.call(void 0, "p", _hoisted_15, [
               _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Success" }),
-              _vue.createTextVNode.call(void 0, "Decoded data in QR code")
+              _cache[15] || (_cache[15] = _vue.createTextVNode.call(void 0, "Decoded data in QR code", -1 /* CACHED */))
             ]),
             _vue.createElementVNode.call(void 0, "textarea", {
               class: "form-control",
@@ -268,8 +261,8 @@ return (_ctx, _cache) => {
               readonly: "",
               ref_key: "decodedData",
               ref: decodedData
-            }, null, 8 /* PROPS */, _hoisted_23),
-            _vue.createElementVNode.call(void 0, "span", _hoisted_24, [
+            }, null, 8 /* PROPS */, _hoisted_16),
+            _vue.createElementVNode.call(void 0, "span", _hoisted_17, [
               _vue.createElementVNode.call(void 0, "button", {
                 onClick: copy,
                 class: "btn py-0.5 px-1.5"
@@ -278,7 +271,7 @@ return (_ctx, _cache) => {
                   icon: "octicon:copy-16",
                   inline: ""
                 }),
-                _vue.createTextVNode.call(void 0, " Copy to clipboard")
+                _cache[16] || (_cache[16] = _vue.createTextVNode.call(void 0, " Copy to clipboard", -1 /* CACHED */))
               ])
             ])
           ]))

@@ -52,39 +52,14 @@ window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use s
 } */
 var _vue = require('vue');
 
-const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
-const _hoisted_1 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<h1 id=\"gemini-25-pro-tts-thai-voice-previews\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#gemini-25-pro-tts-thai-voice-previews\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Gemini 2.5 Pro TTS Thai Voice Previews</h1><div class=\"lead\" data-v-8c9498c0><p data-v-8c9498c0>In <strong data-v-8c9498c0>May 20, 2025</strong>, <a href=\"https://blog.google/technology/google-deepmind/google-gemini-updates-io-2025/#new-capabilities\" data-v-8c9498c0>Google announced native audio output capabilities</a> and <a href=\"https://ai.google.dev/gemini-api/docs/speech-generation\" data-v-8c9498c0>text-to-speech API</a> for Gemini 2.5 models.</p></div>", 2)
-const _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "#singing" }, "The Gemini 2.5 Flash model also has the variant also has the ability to sing.", -1 /* HOISTED */))
-const _hoisted_4 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "thead", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "tr", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "th", null, "Voice"),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "th", null, "Description"),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "th", null, "Preview")
-  ])
-], -1 /* HOISTED */))
+const _hoisted_1 = { class: "align-middle" }
+const _hoisted_2 = { class: "align-middle" }
+const _hoisted_3 = { class: "align-middle" }
+const _hoisted_4 = ["src"]
 const _hoisted_5 = { class: "align-middle" }
 const _hoisted_6 = { class: "align-middle" }
 const _hoisted_7 = { class: "align-middle" }
 const _hoisted_8 = ["src"]
-const _hoisted_9 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "Your browser does not support the audio element.", -1 /* HOISTED */))
-const _hoisted_10 = [
-  _hoisted_9
-]
-const _hoisted_11 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<h2 id=\"prompt\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#prompt\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Prompt</h2><p data-v-8c9498c0>This is the prompt sent to the model:</p><pre data-v-8c9498c0><code data-v-8c9498c0>เป็นมนุษย์สุดประเสริฐเลิศคุณค่า\t\tกว่าบรรดาฝูงสัตว์เดรัจฉาน\nจงฝ่าฟันพัฒนาวิชาการ\t\tอย่าล้างผลาญฤๅเข่นฆ่าบีฑาใคร\nไม่ถือโทษโกรธแช่งซัดฮึดฮัดด่า\t\tหัดอภัยเหมือนกีฬาอัชฌาสัย\nปฏิบัติประพฤติกฎกำหนดใจ\t\tพูดจาให้จ๊ะ ๆ จ๋า น่าฟังเอยฯ\n</code></pre><p data-v-8c9498c0>It is a Thai pangram (<a href=\"https://th.wikipedia.org/wiki/%E0%B9%81%E0%B8%9E%E0%B8%99%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%A1#%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2\" data-v-8c9498c0>source</a>)</p><h2 id=\"my-observations\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#my-observations\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>My observations</h2><ul data-v-8c9498c0><li data-v-8c9498c0>Generated audio is mono with 24kHz sample rate.</li><li data-v-8c9498c0>Due to it being a language model, there is still a risk of hallucination. <ul data-v-8c9498c0><li data-v-8c9498c0>The examples above are generated with <strong data-v-8c9498c0>Temperature</strong> set to 1 (default). With this setting, some words are read incorrectly. For example, in Pulcherrima’s output, &quot;จงฝ่าฟันพัฒนาวิชาการ&quot; is sometimes read as &quot;<em data-v-8c9498c0>อย่า</em>ฝ่าฟันพัฒนาวิชาการ&quot; which reversed the meaning.</li><li data-v-8c9498c0>I tried setting the <strong data-v-8c9498c0>Temperature</strong> to 0, and sometimes this threw the model into an infinite loop, never finishing the generation.</li></ul></li></ul><h2 id=\"singing\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#singing\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Singing</h2><p data-v-8c9498c0>I tried this prompt:</p><pre data-v-8c9498c0><code data-v-8c9498c0>sing the following lyrics expressively as if in an opera\n\n&lt;lyrics&gt;\nเป็นมนุษย์สุดประเสริฐเลิศคุณค่า\t\tกว่าบรรดาฝูงสัตว์เดรัจฉาน\nจงฝ่าฟันพัฒนาวิชาการ\t\tอย่าล้างผลาญฤๅเข่นฆ่าบีฑาใคร\nไม่ถือโทษโกรธแช่งซัดฮึดฮัดด่า\t\tหัดอภัยเหมือนกีฬาอัชฌาสัย\nปฏิบัติประพฤติกฎกำหนดใจ\t\tพูดจาให้จ๊ะ ๆ จ๋า น่าฟังเอยฯ\n&lt;/lyrics&gt;\n</code></pre><p data-v-8c9498c0>Gemini 2.5 Pro refuses to sing and just reads the poem normally, but Gemini 2.5 Flash can sing (albeit not very well)…</p>", 10)
-const _hoisted_21 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "thead", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "tr", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "th", null, "Voice"),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "th", null, "Preview")
-  ])
-], -1 /* HOISTED */))
-const _hoisted_22 = { class: "align-middle" }
-const _hoisted_23 = { class: "align-middle" }
-const _hoisted_24 = { class: "align-middle" }
-const _hoisted_25 = ["src"]
-const _hoisted_26 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "Your browser does not support the audio element.", -1 /* HOISTED */))
-const _hoisted_27 = [
-  _hoisted_26
-]
 
 
 const __sfc__ = {
@@ -185,15 +160,57 @@ const __sfc__ = {
 
 return (_ctx, _cache) => {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
+    _cache[5] || (_cache[5] = _vue.createStaticVNode.call(void 0, "<h1 id=\"gemini-25-pro-tts-thai-voice-previews\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#gemini-25-pro-tts-thai-voice-previews\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Gemini 2.5 Pro TTS Thai Voice Previews</h1><div class=\"lead\" data-v-8c9498c0><p data-v-8c9498c0>In <strong data-v-8c9498c0>May 20, 2025</strong>, <a href=\"https://blog.google/technology/google-deepmind/google-gemini-updates-io-2025/#new-capabilities\" data-v-8c9498c0>Google announced native audio output capabilities</a> and <a href=\"https://ai.google.dev/gemini-api/docs/speech-generation\" data-v-8c9498c0>text-to-speech API</a> for Gemini 2.5 models.</p></div>", 2)),
     _vue.createElementVNode.call(void 0, "p", null, [
       _vue.createTextVNode.call(void 0, "It can generate high-quality audio in Thai language, and comes with " + _vue.toDisplayString.call(void 0, voices.length) + " different voices. ", 1 /* TEXT */),
-      _hoisted_3
+      _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "a", { href: "#singing" }, "The Gemini 2.5 Flash model also has the variant also has the ability to sing.", -1 /* CACHED */))
     ]),
     _vue.createElementVNode.call(void 0, "table", null, [
-      _hoisted_4,
+      _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "thead", null, [
+        _vue.createElementVNode.call(void 0, "tr", null, [
+          _vue.createElementVNode.call(void 0, "th", null, "Voice"),
+          _vue.createElementVNode.call(void 0, "th", null, "Description"),
+          _vue.createElementVNode.call(void 0, "th", null, "Preview")
+        ])
+      ], -1 /* CACHED */)),
       _vue.createElementVNode.call(void 0, "tbody", null, [
         (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, _vue.renderList.call(void 0, voices, (voice) => {
+          return _vue.createElementVNode.call(void 0, "tr", {
+            key: voice.name
+          }, [
+            _vue.createElementVNode.call(void 0, "td", _hoisted_1, [
+              _vue.createElementVNode.call(void 0, "strong", {
+                class: _vue.normalizeClass.call(void 0, voice.type === 'M' ? 'text-blue-300' : 'text-pink-300')
+              }, _vue.toDisplayString.call(void 0, voice.name), 3 /* TEXT, CLASS */)
+            ]),
+            _vue.createElementVNode.call(void 0, "td", _hoisted_2, _vue.toDisplayString.call(void 0, voice.description), 1 /* TEXT */),
+            _vue.createElementVNode.call(void 0, "td", _hoisted_3, [
+              (voice.preview)
+                ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "audio", {
+                    key: 0,
+                    controls: "",
+                    src: voice.preview,
+                    preload: "auto"
+                  }, [...(_cache[1] || (_cache[1] = [
+                    _vue.createElementVNode.call(void 0, "p", null, "Your browser does not support the audio element.", -1 /* CACHED */)
+                  ]))], 8 /* PROPS */, _hoisted_4))
+                : _vue.createCommentVNode.call(void 0, "v-if", true)
+            ])
+          ])
+        }), 64 /* STABLE_FRAGMENT */))
+      ])
+    ]),
+    _vue.createCommentVNode.call(void 0, " text-blue-300 text-pink-300 "),
+    _cache[6] || (_cache[6] = _vue.createStaticVNode.call(void 0, "<h2 id=\"prompt\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#prompt\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Prompt</h2><p data-v-8c9498c0>This is the prompt sent to the model:</p><pre data-v-8c9498c0><code data-v-8c9498c0>เป็นมนุษย์สุดประเสริฐเลิศคุณค่า\t\tกว่าบรรดาฝูงสัตว์เดรัจฉาน\nจงฝ่าฟันพัฒนาวิชาการ\t\tอย่าล้างผลาญฤๅเข่นฆ่าบีฑาใคร\nไม่ถือโทษโกรธแช่งซัดฮึดฮัดด่า\t\tหัดอภัยเหมือนกีฬาอัชฌาสัย\nปฏิบัติประพฤติกฎกำหนดใจ\t\tพูดจาให้จ๊ะ ๆ จ๋า น่าฟังเอยฯ\n</code></pre><p data-v-8c9498c0>It is a Thai pangram (<a href=\"https://th.wikipedia.org/wiki/%E0%B9%81%E0%B8%9E%E0%B8%99%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%A1#%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2\" data-v-8c9498c0>source</a>)</p><h2 id=\"my-observations\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#my-observations\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>My observations</h2><ul data-v-8c9498c0><li data-v-8c9498c0>Generated audio is mono with 24kHz sample rate.</li><li data-v-8c9498c0>Due to it being a language model, there is still a risk of hallucination. <ul data-v-8c9498c0><li data-v-8c9498c0>The examples above are generated with <strong data-v-8c9498c0>Temperature</strong> set to 1 (default). With this setting, some words are read incorrectly. For example, in Pulcherrima’s output, &quot;จงฝ่าฟันพัฒนาวิชาการ&quot; is sometimes read as &quot;<em data-v-8c9498c0>อย่า</em>ฝ่าฟันพัฒนาวิชาการ&quot; which reversed the meaning.</li><li data-v-8c9498c0>I tried setting the <strong data-v-8c9498c0>Temperature</strong> to 0, and sometimes this threw the model into an infinite loop, never finishing the generation.</li></ul></li></ul><h2 id=\"singing\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#singing\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Singing</h2><p data-v-8c9498c0>I tried this prompt:</p><pre data-v-8c9498c0><code data-v-8c9498c0>sing the following lyrics expressively as if in an opera\n\n&lt;lyrics&gt;\nเป็นมนุษย์สุดประเสริฐเลิศคุณค่า\t\tกว่าบรรดาฝูงสัตว์เดรัจฉาน\nจงฝ่าฟันพัฒนาวิชาการ\t\tอย่าล้างผลาญฤๅเข่นฆ่าบีฑาใคร\nไม่ถือโทษโกรธแช่งซัดฮึดฮัดด่า\t\tหัดอภัยเหมือนกีฬาอัชฌาสัย\nปฏิบัติประพฤติกฎกำหนดใจ\t\tพูดจาให้จ๊ะ ๆ จ๋า น่าฟังเอยฯ\n&lt;/lyrics&gt;\n</code></pre><p data-v-8c9498c0>Gemini 2.5 Pro refuses to sing and just reads the poem normally, but Gemini 2.5 Flash can sing (albeit not very well)…</p>", 10)),
+    _vue.createElementVNode.call(void 0, "table", null, [
+      _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "thead", null, [
+        _vue.createElementVNode.call(void 0, "tr", null, [
+          _vue.createElementVNode.call(void 0, "th", null, "Voice"),
+          _vue.createElementVNode.call(void 0, "th", null, "Preview")
+        ])
+      ], -1 /* CACHED */)),
+      _vue.createElementVNode.call(void 0, "tbody", null, [
+        (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, _vue.renderList.call(void 0, singingVoices, (voice) => {
           return _vue.createElementVNode.call(void 0, "tr", {
             key: voice.name
           }, [
@@ -210,36 +227,9 @@ return (_ctx, _cache) => {
                     controls: "",
                     src: voice.preview,
                     preload: "auto"
-                  }, [..._hoisted_10], 8 /* PROPS */, _hoisted_8))
-                : _vue.createCommentVNode.call(void 0, "v-if", true)
-            ])
-          ])
-        }), 64 /* STABLE_FRAGMENT */))
-      ])
-    ]),
-    _vue.createCommentVNode.call(void 0, " text-blue-300 text-pink-300 "),
-    _hoisted_11,
-    _vue.createElementVNode.call(void 0, "table", null, [
-      _hoisted_21,
-      _vue.createElementVNode.call(void 0, "tbody", null, [
-        (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, _vue.renderList.call(void 0, singingVoices, (voice) => {
-          return _vue.createElementVNode.call(void 0, "tr", {
-            key: voice.name
-          }, [
-            _vue.createElementVNode.call(void 0, "td", _hoisted_22, [
-              _vue.createElementVNode.call(void 0, "strong", {
-                class: _vue.normalizeClass.call(void 0, voice.type === 'M' ? 'text-blue-300' : 'text-pink-300')
-              }, _vue.toDisplayString.call(void 0, voice.name), 3 /* TEXT, CLASS */)
-            ]),
-            _vue.createElementVNode.call(void 0, "td", _hoisted_23, _vue.toDisplayString.call(void 0, voice.description), 1 /* TEXT */),
-            _vue.createElementVNode.call(void 0, "td", _hoisted_24, [
-              (voice.preview)
-                ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "audio", {
-                    key: 0,
-                    controls: "",
-                    src: voice.preview,
-                    preload: "auto"
-                  }, [..._hoisted_27], 8 /* PROPS */, _hoisted_25))
+                  }, [...(_cache[3] || (_cache[3] = [
+                    _vue.createElementVNode.call(void 0, "p", null, "Your browser does not support the audio element.", -1 /* CACHED */)
+                  ]))], 8 /* PROPS */, _hoisted_8))
                 : _vue.createCommentVNode.call(void 0, "v-if", true)
             ])
           ])

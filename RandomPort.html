@@ -72,51 +72,27 @@ window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use s
 ;
 var _vue = require('vue');
 
-const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
-const _hoisted_1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "h1", { id: "port-number-randomizer" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-    "aria-hidden": "true",
-    tabindex: "-1",
-    href: "#port-number-randomizer"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "Port number randomizer")
-], -1 /* HOISTED */))
-const _hoisted_2 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { class: "lead" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "Need a random port number for your next project? You can get one here.")
-], -1 /* HOISTED */))
-const _hoisted_3 = { style: {"font-size":"4em","margin":"1rem 0"} }
-const _hoisted_4 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "h2", { id: "configuration-cheat-sheet" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-    "aria-hidden": "true",
-    tabindex: "-1",
-    href: "#configuration-cheat-sheet"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "Configuration cheat sheet")
-], -1 /* HOISTED */))
-const _hoisted_5 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "Next" }, "Next.js")
-  ])
-], -1 /* HOISTED */))
-const _hoisted_6 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "Vite" }, "Vite")
-  ])
-], -1 /* HOISTED */))
-const _hoisted_7 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "br", null, null, -1 /* HOISTED */))
+const _hoisted_1 = { style: {"font-size":"4em","margin":"1rem 0"} }
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _hoisted_2,
+    _cache[7] || (_cache[7] = _vue.createElementVNode.call(void 0, "h1", { id: "port-number-randomizer" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#port-number-randomizer"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Port number randomizer")
+    ], -1 /* CACHED */)),
+    _cache[8] || (_cache[8] = _vue.createElementVNode.call(void 0, "div", { class: "lead" }, [
+      _vue.createElementVNode.call(void 0, "p", null, "Need a random port number for your next project? You can get one here.")
+    ], -1 /* CACHED */)),
     _vue.createElementVNode.call(void 0, "div", {
       style: _vue.normalizeStyle.call(void 0, [{"border-radius":"1em","border":"2px solid #656463","padding":"1em","background":"#252423","text-align":"center","margin":"2em 0"}, $setup.style])
     }, [
-      _vue.createTextVNode.call(void 0, " Your randomized port number is… "),
-      _vue.createElementVNode.call(void 0, "div", _hoisted_3, _vue.toDisplayString.call(void 0, $setup.port), 1 /* TEXT */),
+      _cache[3] || (_cache[3] = _vue.createTextVNode.call(void 0, " Your randomized port number is… ", -1 /* CACHED */)),
+      _vue.createElementVNode.call(void 0, "div", _hoisted_1, _vue.toDisplayString.call(void 0, $setup.port), 1 /* TEXT */),
       _vue.createElementVNode.call(void 0, "button", {
         class: "btn",
         onClick: _cache[0] || (_cache[0] = (...args) => ($setup.randomizePort && $setup.randomizePort(...args))),
@@ -124,20 +100,37 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         onPointerup: _cache[2] || (_cache[2] = (...args) => ($setup.up && $setup.up(...args)))
       }, "Randomize port number", 32 /* NEED_HYDRATION */)
     ], 4 /* STYLE */),
-    _hoisted_4,
+    _cache[9] || (_cache[9] = _vue.createElementVNode.call(void 0, "h2", { id: "configuration-cheat-sheet" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#configuration-cheat-sheet"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Configuration cheat sheet")
+    ], -1 /* CACHED */)),
     _vue.createElementVNode.call(void 0, "ul", null, [
       _vue.createElementVNode.call(void 0, "li", null, [
-        _hoisted_5,
+        _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createElementVNode.call(void 0, "strong", null, [
+            _vue.createElementVNode.call(void 0, "a", { href: "Next" }, "Next.js")
+          ])
+        ], -1 /* CACHED */)),
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", null, "  \"dev\": \"next dev -p ${PORT:-" + _vue.toDisplayString.call(void 0, $setup.port) + "}\",", 1 /* TEXT */)
         ])
       ]),
       _vue.createElementVNode.call(void 0, "li", null, [
-        _hoisted_6,
+        _cache[6] || (_cache[6] = _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createElementVNode.call(void 0, "strong", null, [
+            _vue.createElementVNode.call(void 0, "a", { href: "Vite" }, "Vite")
+          ])
+        ], -1 /* CACHED */)),
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", null, [
             _vue.createTextVNode.call(void 0, "  \"dev\": \"vite --port ${PORT:-" + _vue.toDisplayString.call(void 0, $setup.port) + "}\",", 1 /* TEXT */),
-            _hoisted_7,
+            _cache[5] || (_cache[5] = _vue.createElementVNode.call(void 0, "br", null, null, -1 /* CACHED */)),
             _vue.createTextVNode.call(void 0, "  \"preview\": \"vite preview --port ${PORT:-" + _vue.toDisplayString.call(void 0, $setup.port) + "}\",", 1 /* TEXT */)
           ])
         ])

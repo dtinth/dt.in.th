@@ -68,37 +68,28 @@ window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use s
 } */
 var _vue = require('vue');
 
-const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
-const _hoisted_1 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<h1 id=\"a-web-based-printing-tool-for-brother-p-touch-series-label-printers\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#a-web-based-printing-tool-for-brother-p-touch-series-label-printers\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>A web-based printing tool for Brother P-touch series label printers</h1><div class=\"lead\" data-v-8c9498c0><p data-v-8c9498c0>The Brother P-touch series of label printers are popular for their ease of use and portability, and Brother has made their <a href=\"https://download.brother.com/welcome/docp100064/cv_pte550wp750wp710bt_eng_raster_102.pdf\" data-v-8c9498c0>printing protocol</a> publicly available, which allows developers to create custom software for these printers.</p></div>", 2)
-const _hoisted_3 = {
+const _hoisted_1 = {
   class: "notes-callout",
   "data-type": "Warning"
 }
-const _hoisted_4 = { class: "notes-callout__label" }
-const _hoisted_5 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "This tool has only been tested with the Brother PT-P710BT printer with tapes of size 18mm. Other printers and tape sizes are not supported. However, "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://github.com/dtinth/p-touch-webusb/blob/main/brother-pt.js" }, "the code is open source"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, ". If you manage to get it working with other printers or tape sizes, feel free to submit a pull request.")
-], -1 /* HOISTED */))
-const _hoisted_6 = {
+const _hoisted_2 = { class: "notes-callout__label" }
+const _hoisted_3 = {
   key: 0,
   class: "notes-callout",
   "data-type": "Danger"
 }
-const _hoisted_7 = { class: "notes-callout__label" }
-const _hoisted_8 = { class: "mt-0" }
-const _hoisted_9 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "br", null, null, -1 /* HOISTED */))
-const _hoisted_10 = ["disabled"]
-const _hoisted_11 = {
+const _hoisted_4 = { class: "notes-callout__label" }
+const _hoisted_5 = { class: "mt-0" }
+const _hoisted_6 = ["disabled"]
+const _hoisted_7 = {
   key: 0,
   class: "mb-0 mt-4 not-prose flex justify-center"
 }
-const _hoisted_12 = ["src"]
-const _hoisted_13 = {
+const _hoisted_8 = ["src"]
+const _hoisted_9 = {
   key: 1,
   class: "text-[#8b8685]"
 }
-const _hoisted_14 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", { class: "text-[#8b8685]" }, "Tip:", -1 /* HOISTED */))
 
 
 const __sfc__ = {
@@ -368,19 +359,23 @@ return (_ctx, _cache) => {
   const _component_notes_callout_icon = _vue.resolveComponent.call(void 0, "notes-callout-icon")
 
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
-      _vue.createElementVNode.call(void 0, "p", _hoisted_4, [
+    _cache[11] || (_cache[11] = _vue.createStaticVNode.call(void 0, "<h1 id=\"a-web-based-printing-tool-for-brother-p-touch-series-label-printers\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#a-web-based-printing-tool-for-brother-p-touch-series-label-printers\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>A web-based printing tool for Brother P-touch series label printers</h1><div class=\"lead\" data-v-8c9498c0><p data-v-8c9498c0>The Brother P-touch series of label printers are popular for their ease of use and portability, and Brother has made their <a href=\"https://download.brother.com/welcome/docp100064/cv_pte550wp750wp710bt_eng_raster_102.pdf\" data-v-8c9498c0>printing protocol</a> publicly available, which allows developers to create custom software for these printers.</p></div>", 2)),
+    _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
+      _vue.createElementVNode.call(void 0, "p", _hoisted_2, [
         _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Warning" }),
-        _vue.createTextVNode.call(void 0, "Warning")
+        _cache[5] || (_cache[5] = _vue.createTextVNode.call(void 0, "Warning", -1 /* CACHED */))
       ]),
-      _hoisted_5
+      _cache[6] || (_cache[6] = _vue.createElementVNode.call(void 0, "p", null, [
+        _vue.createTextVNode.call(void 0, "This tool has only been tested with the Brother PT-P710BT printer with tapes of size 18mm. Other printers and tape sizes are not supported. However, "),
+        _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/dtinth/p-touch-webusb/blob/main/brother-pt.js" }, "the code is open source"),
+        _vue.createTextVNode.call(void 0, ". If you manage to get it working with other printers or tape sizes, feel free to submit a pull request.")
+      ], -1 /* CACHED */))
     ]),
     (_vue.unref.call(void 0, error))
-      ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_6, [
-          _vue.createElementVNode.call(void 0, "p", _hoisted_7, [
+      ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_3, [
+          _vue.createElementVNode.call(void 0, "p", _hoisted_4, [
             _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Danger" }),
-            _vue.createTextVNode.call(void 0, "Error")
+            _cache[7] || (_cache[7] = _vue.createTextVNode.call(void 0, "Error", -1 /* CACHED */))
           ]),
           _vue.createElementVNode.call(void 0, "p", null, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, error)), 1 /* TEXT */)
         ]))
@@ -390,7 +385,7 @@ return (_ctx, _cache) => {
       onDragover: _cache[3] || (_cache[3] = _vue.withModifiers.call(void 0, () => {}, ["prevent"])),
       onDrop: _cache[4] || (_cache[4] = _vue.withModifiers.call(void 0, $event => (handleImageFile($event.dataTransfer.files[0])), ["prevent"]))
     }, [
-      _vue.createElementVNode.call(void 0, "p", _hoisted_8, [
+      _vue.createElementVNode.call(void 0, "p", _hoisted_5, [
         (!_vue.unref.call(void 0, connected))
           ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, { key: 0 }, [
               _vue.createTextVNode.call(void 0, " Please connect to the printer to get started. ")
@@ -401,8 +396,8 @@ return (_ctx, _cache) => {
                 href: "javascript://",
                 onClick: selectImage
               }, "select an image"),
-              _vue.createTextVNode.call(void 0, " to print."),
-              _hoisted_9,
+              _cache[8] || (_cache[8] = _vue.createTextVNode.call(void 0, " to print.", -1 /* CACHED */)),
+              _cache[9] || (_cache[9] = _vue.createElementVNode.call(void 0, "br", null, null, -1 /* CACHED */)),
               _vue.createTextVNode.call(void 0, " Image must be at least 174 pixels long and exactly " + _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, printWidth)) + " pixels wide. ", 1 /* TEXT */)
             ], 64 /* STABLE_FRAGMENT */))
       ]),
@@ -412,22 +407,22 @@ return (_ctx, _cache) => {
         onPointerdown: _cache[1] || (_cache[1] = (...args) => (_ctx.down && _ctx.down(...args))),
         onPointerup: _cache[2] || (_cache[2] = (...args) => (_ctx.up && _ctx.up(...args))),
         disabled: !_vue.unref.call(void 0, btn).enabled
-      }, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, btn).text), 41 /* TEXT, PROPS, NEED_HYDRATION */, _hoisted_10),
+      }, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, btn).text), 41 /* TEXT, PROPS, NEED_HYDRATION */, _hoisted_6),
       (_vue.unref.call(void 0, preview))
-        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "p", _hoisted_11, [
+        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "p", _hoisted_7, [
             _vue.createElementVNode.call(void 0, "img", {
               src: _vue.unref.call(void 0, preview),
               alt: "Preview",
               class: "n-preview"
-            }, null, 8 /* PROPS */, _hoisted_12)
+            }, null, 8 /* PROPS */, _hoisted_8)
           ]))
         : _vue.createCommentVNode.call(void 0, "v-if", true)
     ], 32 /* NEED_HYDRATION */),
     (_vue.unref.call(void 0, connected) && _vue.unref.call(void 0, image) && false)
-      ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "p", _hoisted_13, [
-          _hoisted_14,
-          _vue.createTextVNode.call(void 0, " Hold down the Alt key while clicking the Print button if there are more labels to print. This will make the printer not cut the tape until the next print job, saving tape. ")
-        ]))
+      ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "p", _hoisted_9, [...(_cache[10] || (_cache[10] = [
+          _vue.createElementVNode.call(void 0, "strong", { class: "text-[#8b8685]" }, "Tip:", -1 /* CACHED */),
+          _vue.createTextVNode.call(void 0, " Hold down the Alt key while clicking the Print button if there are more labels to print. This will make the printer not cut the tape until the next print job, saving tape. ", -1 /* CACHED */)
+        ]))]))
       : _vue.createCommentVNode.call(void 0, "v-if", true)
   ], 64 /* STABLE_FRAGMENT */))
 }

@@ -29,111 +29,35 @@
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
 
-const _hoisted_1 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "GitHubActions" }, "GitHub Actions"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " workflow to save files to "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "Linode" }, "Linode"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " Object Storage")
-], -1 /* HOISTED */)
-const _hoisted_2 = {
+const _hoisted_1 = {
   class: "shiki github-dark",
   style: {"background-color":"#252423","color":"#e1e4e8"},
   tabindex: "0"
 }
-const _hoisted_3 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, "on"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":")
-], -1 /* HOISTED */)
-const _hoisted_4 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "  push"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":")
-], -1 /* HOISTED */)
-const _hoisted_5 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "    branches"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ": "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "master")
-], -1 /* HOISTED */)
-const _hoisted_6 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "name"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ": "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "Deploy")
-], -1 /* HOISTED */)
-const _hoisted_7 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "jobs"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":")
-], -1 /* HOISTED */)
-const _hoisted_8 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "  deploy"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":")
-], -1 /* HOISTED */)
-const _hoisted_9 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "    runs-on"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ": "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "ubuntu-20.04")
-], -1 /* HOISTED */)
-const _hoisted_10 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "    steps"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":")
-], -1 /* HOISTED */)
-const _hoisted_11 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#85E89D;\">uses</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">actions/checkout@v2</span></span>", 1)
-const _hoisted_12 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#85E89D;\">run</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">pip install s3cmd</span></span>", 1)
-const _hoisted_13 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#85E89D;\">run</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">s3cmd --host=&#39;https://ap-south-1.linodeobjects.com&#39; --host-bucket=&#39;https://%(bucket)s.ap-south-1.linodeobjects.com&#39; put index.json s3://music4.bemuse.ninja/server/index.json --acl-public --add-header=&#39;cache-control:public,max-age=60,s-maxage=60&#39;</span></span>", 1)
-const _hoisted_14 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "        env"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":")
-], -1 /* HOISTED */)
-const _hoisted_15 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "          AWS_ACCESS_KEY_ID"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ": "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "0C3CA3AOYYPEI0B2ZJ1Y")
-], -1 /* HOISTED */)
-const _hoisted_16 = { class: "line" }
-const _hoisted_17 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "          AWS_SECRET_ACCESS_KEY", -1 /* HOISTED */)
-const _hoisted_18 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ": ", -1 /* HOISTED */)
-const _hoisted_19 = { style: {"color":"#9ECBFF"} }
-const _hoisted_20 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "Source: "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://github.com/bemusic/bemuse-official-music-server/blob/master/.github/workflows/deploy.yml" }, "https://github.com/bemusic/bemuse-official-music-server/blob/master/.github/workflows/deploy.yml")
-], -1 /* HOISTED */)
+const _hoisted_2 = { class: "line" }
+const _hoisted_3 = { style: {"color":"#9ECBFF"} }
 function render(_ctx, _cache) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _vue.createElementVNode.call(void 0, "pre", _hoisted_2, [
+    _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createElementVNode.call(void 0, "a", { href: "GitHubActions" }, "GitHub Actions"),
+      _vue.createTextVNode.call(void 0, " workflow to save files to "),
+      _vue.createElementVNode.call(void 0, "a", { href: "Linode" }, "Linode"),
+      _vue.createTextVNode.call(void 0, " Object Storage")
+    ], -1 /* CACHED */)),
+    _vue.createElementVNode.call(void 0, "pre", _hoisted_1, [
       _vue.createElementVNode.call(void 0, "code", null, [
-        _hoisted_3,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_4,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_5,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_6,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_7,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_8,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_9,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_10,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_11,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_12,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_13,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_14,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_15,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _vue.createElementVNode.call(void 0, "span", _hoisted_16, [
-          _hoisted_17,
-          _hoisted_18,
-          _vue.createElementVNode.call(void 0, "span", _hoisted_19, "$" + _vue.toDisplayString.call(void 0, _ctx.secrets.SECRET_0C3CA3AOYYPEI0B2ZJ1Y), 1 /* TEXT */)
+        _cache[2] || (_cache[2] = _vue.createStaticVNode.call(void 0, "<span class=\"line\"><span style=\"color:#79B8FF;\">on</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">  push</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    branches</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">master</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">name</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">Deploy</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">jobs</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">  deploy</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    runs-on</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">ubuntu-20.04</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    steps</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#85E89D;\">uses</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">actions/checkout@v2</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#85E89D;\">run</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">pip install s3cmd</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#85E89D;\">run</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">s3cmd --host=&#39;https://ap-south-1.linodeobjects.com&#39; --host-bucket=&#39;https://%(bucket)s.ap-south-1.linodeobjects.com&#39; put index.json s3://music4.bemuse.ninja/server/index.json --acl-public --add-header=&#39;cache-control:public,max-age=60,s-maxage=60&#39;</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">        env</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">          AWS_ACCESS_KEY_ID</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">0C3CA3AOYYPEI0B2ZJ1Y</span></span>\n", 26)),
+        _vue.createElementVNode.call(void 0, "span", _hoisted_2, [
+          _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "          AWS_SECRET_ACCESS_KEY", -1 /* CACHED */)),
+          _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ": ", -1 /* CACHED */)),
+          _vue.createElementVNode.call(void 0, "span", _hoisted_3, "$" + _vue.toDisplayString.call(void 0, _ctx.secrets.SECRET_0C3CA3AOYYPEI0B2ZJ1Y), 1 /* TEXT */)
         ])
       ])
     ]),
-    _hoisted_20
+    _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createTextVNode.call(void 0, "Source: "),
+      _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/bemusic/bemuse-official-music-server/blob/master/.github/workflows/deploy.yml" }, "https://github.com/bemusic/bemuse-official-music-server/blob/master/.github/workflows/deploy.yml")
+    ], -1 /* CACHED */))
   ], 64 /* STABLE_FRAGMENT */))
 }
 __sfc__.render = render

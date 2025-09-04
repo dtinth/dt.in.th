@@ -32,31 +32,27 @@
     <script>
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
-
-const _hoisted_1 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "My notes on "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "learning…")
-], -1 /* HOISTED */)
-const _hoisted_2 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "h2", { id: "related-topics" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-    "aria-hidden": "true",
-    tabindex: "-1",
-    href: "#related-topics"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "Related topics")
-], -1 /* HOISTED */)
-const _hoisted_3 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "ul", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "20201210T062029Z2069" }, "Koans")
-  ])
-], -1 /* HOISTED */)
 function render(_ctx, _cache) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _hoisted_2,
-    _hoisted_3
+    _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createTextVNode.call(void 0, "My notes on "),
+      _vue.createElementVNode.call(void 0, "strong", null, "learning…")
+    ], -1 /* CACHED */)),
+    _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "h2", { id: "related-topics" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#related-topics"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Related topics")
+    ], -1 /* CACHED */)),
+    _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "ul", null, [
+      _vue.createElementVNode.call(void 0, "li", null, [
+        _vue.createElementVNode.call(void 0, "a", { href: "20201210T062029Z2069" }, "Koans")
+      ])
+    ], -1 /* CACHED */))
   ], 64 /* STABLE_FRAGMENT */))
 }
 __sfc__.render = render

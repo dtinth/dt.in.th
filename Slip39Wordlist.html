@@ -54,36 +54,11 @@ window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use s
 } */
 var _vue = require('vue');
 
-const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
-const _hoisted_1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { class: "lead" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-    /*#__PURE__*/_vue.createTextVNode.call(void 0, "Random mnemonic code generator using the "),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://github.com/satoshilabs/slips/blob/master/slip-0039.md#wordlist" }, "SLIP39 wordlist"),
-    /*#__PURE__*/_vue.createTextVNode.call(void 0, ".")
-  ])
-], -1 /* HOISTED */))
-const _hoisted_2 = { style: {"font-size":"2em","margin":"1rem 0"} }
-const _hoisted_3 = { style: {"font-size":"1rem","color":"#8b8685"} }
-const _hoisted_4 = { style: {"display":"flex","justify-content":"center","gap":"0.5em"} }
-const _hoisted_5 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "option", { value: "1" }, "1 word", -1 /* HOISTED */))
-const _hoisted_6 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "option", { value: "2" }, "2 words", -1 /* HOISTED */))
-const _hoisted_7 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "option", { value: "3" }, "3 words", -1 /* HOISTED */))
-const _hoisted_8 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "option", { value: "4" }, "4 words", -1 /* HOISTED */))
-const _hoisted_9 = [
-  _hoisted_5,
-  _hoisted_6,
-  _hoisted_7,
-  _hoisted_8
-]
-const _hoisted_10 = { style: {"color":"#8b8685"} }
-const _hoisted_11 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "br", null, null, -1 /* HOISTED */))
-const _hoisted_12 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "The SLIP39 wordlist, originally designed for "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://github.com/satoshilabs/slips/blob/master/slip-0039.md#abstract" }, "sharing ‘master secrets’"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " in a human-friendly way, consists of 1024 common words. Each word is 4–8 letters long, with unique 4-letter prefixes to prevent ambiguity, designed to be easily distinguished from each other, both in spelling and pronunciation. Each randomly selected word contributes 10 bits of entropy to the generated phrase.")
-], -1 /* HOISTED */))
-const _hoisted_13 = { style: {"font-size":"0.8em","color":"#8b8685"} }
-const _hoisted_14 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", { style: {"color":"inherit"} }, "The words in the word list are:", -1 /* HOISTED */))
+const _hoisted_1 = { style: {"font-size":"2em","margin":"1rem 0"} }
+const _hoisted_2 = { style: {"font-size":"1rem","color":"#8b8685"} }
+const _hoisted_3 = { style: {"display":"flex","justify-content":"center","gap":"0.5em"} }
+const _hoisted_4 = { style: {"color":"#8b8685"} }
+const _hoisted_5 = { style: {"font-size":"0.8em","color":"#8b8685"} }
 
 
 const __sfc__ = {
@@ -253,21 +228,27 @@ const __sfc__ = {
 
 return (_ctx, _cache) => {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
+    _cache[5] || (_cache[5] = _vue.createElementVNode.call(void 0, "div", { class: "lead" }, [
+      _vue.createElementVNode.call(void 0, "p", null, [
+        _vue.createTextVNode.call(void 0, "Random mnemonic code generator using the "),
+        _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/satoshilabs/slips/blob/master/slip-0039.md#wordlist" }, "SLIP39 wordlist"),
+        _vue.createTextVNode.call(void 0, ".")
+      ])
+    ], -1 /* CACHED */)),
     _vue.createElementVNode.call(void 0, "div", {
       style: _vue.normalizeStyle.call(void 0, [{"border-radius":"1em","border":"2px solid #656463","padding":"1em","background":"#252423","text-align":"center","margin":"2em 0"}, _vue.unref.call(void 0, style)])
     }, [
-      _vue.createElementVNode.call(void 0, "div", _hoisted_2, [
+      _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
         _vue.createTextVNode.call(void 0, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, result)) + " ", 1 /* TEXT */),
-        _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
-          _vue.createTextVNode.call(void 0, "seed: "),
+        _vue.createElementVNode.call(void 0, "div", _hoisted_2, [
+          _cache[1] || (_cache[1] = _vue.createTextVNode.call(void 0, "seed: ", -1 /* CACHED */)),
           _vue.createElementVNode.call(void 0, "button", {
             onClick: setSeed,
             title: "Click to set a manual seed"
           }, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, seed)), 1 /* TEXT */)
         ])
       ]),
-      _vue.createElementVNode.call(void 0, "div", _hoisted_4, [
+      _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
         _vue.createElementVNode.call(void 0, "button", {
           class: "btn",
           onClick: randomize,
@@ -279,19 +260,28 @@ return (_ctx, _cache) => {
           style: {"flex":"0 0 8em"},
           "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (_vue.isRef.call(void 0, resultLength) ? (resultLength).value = $event : null)),
           onChange: randomize
-        }, [..._hoisted_9], 544 /* NEED_HYDRATION, NEED_PATCH */), [
+        }, [...(_cache[2] || (_cache[2] = [
+          _vue.createElementVNode.call(void 0, "option", { value: "1" }, "1 word", -1 /* CACHED */),
+          _vue.createElementVNode.call(void 0, "option", { value: "2" }, "2 words", -1 /* CACHED */),
+          _vue.createElementVNode.call(void 0, "option", { value: "3" }, "3 words", -1 /* CACHED */),
+          _vue.createElementVNode.call(void 0, "option", { value: "4" }, "4 words", -1 /* CACHED */)
+        ]))], 544 /* NEED_HYDRATION, NEED_PATCH */), [
           [_vue.vModelSelect, _vue.unref.call(void 0, resultLength)]
         ])
       ]),
-      _vue.createElementVNode.call(void 0, "p", _hoisted_10, [
+      _vue.createElementVNode.call(void 0, "p", _hoisted_4, [
         _vue.createTextVNode.call(void 0, _vue.toDisplayString.call(void 0, 10 * (+_vue.unref.call(void 0, resultLength))) + " bits of entropy", 1 /* TEXT */),
-        _hoisted_11,
+        _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "br", null, null, -1 /* CACHED */)),
         _vue.createTextVNode.call(void 0, " " + _vue.toDisplayString.call(void 0, 1024 ** (+_vue.unref.call(void 0, resultLength))) + " possible " + _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, resultLength) == 1 ? 'words' : 'combinations'), 1 /* TEXT */)
       ])
     ], 4 /* STYLE */),
-    _hoisted_12,
-    _vue.createElementVNode.call(void 0, "p", _hoisted_13, [
-      _hoisted_14,
+    _cache[6] || (_cache[6] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createTextVNode.call(void 0, "The SLIP39 wordlist, originally designed for "),
+      _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/satoshilabs/slips/blob/master/slip-0039.md#abstract" }, "sharing ‘master secrets’"),
+      _vue.createTextVNode.call(void 0, " in a human-friendly way, consists of 1024 common words. Each word is 4–8 letters long, with unique 4-letter prefixes to prevent ambiguity, designed to be easily distinguished from each other, both in spelling and pronunciation. Each randomly selected word contributes 10 bits of entropy to the generated phrase.")
+    ], -1 /* CACHED */)),
+    _vue.createElementVNode.call(void 0, "p", _hoisted_5, [
+      _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "strong", { style: {"color":"inherit"} }, "The words in the word list are:", -1 /* CACHED */)),
       _vue.createTextVNode.call(void 0, " " + _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, wordlist).join(' ')), 1 /* TEXT */)
     ])
   ], 64 /* STABLE_FRAGMENT */))

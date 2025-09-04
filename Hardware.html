@@ -32,20 +32,17 @@
     <script>
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
-
-const _hoisted_1 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "My notes related to hardware hacking projects (I’m a noob at it):", -1 /* HOISTED */)
-const _hoisted_2 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "ul", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "OBZBarcodeScannerJS" }, "Reading data from OBZ Barcode Reader on the web using Web Serial API")
-  ]),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "Insta360LinkControllerWebSocketProtocol" }, "Reverse-engineering Insta360 Link Controller WebSockets protocol")
-  ])
-], -1 /* HOISTED */)
 function render(_ctx, _cache) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _hoisted_2
+    _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "p", null, "My notes related to hardware hacking projects (I’m a noob at it):", -1 /* CACHED */)),
+    _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "ul", null, [
+      _vue.createElementVNode.call(void 0, "li", null, [
+        _vue.createElementVNode.call(void 0, "a", { href: "OBZBarcodeScannerJS" }, "Reading data from OBZ Barcode Reader on the web using Web Serial API")
+      ]),
+      _vue.createElementVNode.call(void 0, "li", null, [
+        _vue.createElementVNode.call(void 0, "a", { href: "Insta360LinkControllerWebSocketProtocol" }, "Reverse-engineering Insta360 Link Controller WebSockets protocol")
+      ])
+    ], -1 /* CACHED */))
   ], 64 /* STABLE_FRAGMENT */))
 }
 __sfc__.render = render

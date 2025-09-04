@@ -83,58 +83,16 @@ window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use s
 ;
 var _vue = require('vue');
 
-const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
-const _hoisted_1 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<h1 id=\"hdr-qr-code\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#hdr-qr-code\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>HDR QR Code</h1><div class=\"lead\" data-v-8c9498c0><p data-v-8c9498c0><strong data-v-8c9498c0>Here’s an HDR <a href=\"QRCode\" data-v-8c9498c0>QR Code</a>.</strong> If you’re viewing this on an Apple device’s built-in display, it should work. If the big QR code is brighter than the smaller one, it works.</p></div>", 2)
-const _hoisted_3 = {
+const _hoisted_1 = {
   style: {"display":"flex","flex-wrap":"wrap","gap":"1em","align-items":"flex-end"},
   class: "not-prose"
 }
-const _hoisted_4 = { style: {"position":"relative","background":"black","width":"240px","height":"240px"} }
-const _hoisted_5 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "img", {
-  style: {"display":"block","position":"absolute","top":"0","left":"0","width":"100%","height":"100%"},
-  src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAHgAQMAAABHGizWAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAZQTFRFAAAAAAAApWe5zwAAAAJ0Uk5TAP9bkSK1AAABqElEQVR4nO3aQXKEIBBA0XY1x/CocFSO4UoStGlAsGRmKln9v7E0PHaUDkGEiIiIiIiIiP4nF0tB3C6vdIlxS39Ld6UdDAZPYXuUlCx5pOHQjwSDwQ/4da43XYuxmqN5CAaDv8DutF7AYPDXOA1YY+7NJQkGgxVr+qWYpvJLHv7WtycYDD4exZINry8lMBg8hbvq993EcDAYfE2XpJd6EXoR/Yrc8pDx5yMYDB6sseV3gI5bq82NLf99zVP53oLB4DsseSPe2+VYi7YNchcYDB7i9BbTXDzvlnLRAhgMnsVStjOCbXzoV+RS341XJhgM7lrqL8XYnh5s1N2PMjAY3OGUt0OEW5nRNVP53oLB4AF2e1FrPorRTny/JMFg8OhdlSo7h/pfrmo/vgQGg+ex5c7d+WhvOBFbtXdLEgwGd8OtkB5cjzuF6icaGAyewfZIvyJjN9ztl5FgMPgB215hyL/NvJ3P0DYwGPwh1jvfLlCdAQwGf47juePh+/O6YDB4Bms67kjfd9VZwtBTMBg8xrEUqg1E2/goPe2TgMFgIiIiIiIiIvrDfgCHetV+sEUfrQAAAABJRU5ErkJggg==",
-  alt: "Reference"
-}, null, -1 /* HOISTED */))
-const _hoisted_6 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { style: {"width":"120px"} }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "small", { style: {"display":"block","line-height":"1.25","margin-bottom":"1ex"} }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "normal qr code"),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "br"),
-    /*#__PURE__*/_vue.createTextVNode.call(void 0, "for reference")
-  ]),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "img", {
-    style: {"background":"white","display":"block"},
-    src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAHgAQMAAABHGizWAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAZQTFRFAAAAAAAApWe5zwAAAAJ0Uk5TAP9bkSK1AAABqElEQVR4nO3aQXKEIBBA0XY1x/CocFSO4UoStGlAsGRmKln9v7E0PHaUDkGEiIiIiIiIiP4nF0tB3C6vdIlxS39Ld6UdDAZPYXuUlCx5pOHQjwSDwQ/4da43XYuxmqN5CAaDv8DutF7AYPDXOA1YY+7NJQkGgxVr+qWYpvJLHv7WtycYDD4exZINry8lMBg8hbvq993EcDAYfE2XpJd6EXoR/Yrc8pDx5yMYDB6sseV3gI5bq82NLf99zVP53oLB4DsseSPe2+VYi7YNchcYDB7i9BbTXDzvlnLRAhgMnsVStjOCbXzoV+RS341XJhgM7lrqL8XYnh5s1N2PMjAY3OGUt0OEW5nRNVP53oLB4AF2e1FrPorRTny/JMFg8OhdlSo7h/pfrmo/vgQGg+ex5c7d+WhvOBFbtXdLEgwGd8OtkB5cjzuF6icaGAyewfZIvyJjN9ztl5FgMPgB215hyL/NvJ3P0DYwGPwh1jvfLlCdAQwGf47juePh+/O6YDB4Bms67kjfd9VZwtBTMBg8xrEUqg1E2/goPe2TgMFgIiIiIiIiIvrDfgCHetV+sEUfrQAAAABJRU5ErkJggg==",
-    alt: "Reference",
-    width: "120"
-  })
-], -1 /* HOISTED */))
-const _hoisted_7 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "For the example to work, your platform, your browser, and your display must support displaying HDR content. Also, low-power mode must be turned off. These setups have been tested to work:", -1 /* HOISTED */))
-const _hoisted_8 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "ul", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, "iPad Pro (M2), built-in display"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, "iPhone 13, built-in display"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, "MacBook Pro (M1), built-in display")
-], -1 /* HOISTED */))
-const _hoisted_9 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, [
-    /*#__PURE__*/_vue.createTextVNode.call(void 0, "On a recent iPhone/iPad device, it appears to be "),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://twitter.com/dtinth/status/1670438696871501825" }, "roughly ~7 times brighter")
-  ]),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "sup", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-      href: "#user-content-fn-brighter",
-      id: "user-content-fnref-brighter",
-      "data-footnote-ref": "",
-      "aria-describedby": "footnote-label"
-    }, "1")
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, ".")
-], -1 /* HOISTED */))
-const _hoisted_10 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<h2 id=\"how-it-works\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#how-it-works\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>How it works</h2><p data-v-8c9498c0>It works by displaying a color whose brightness is <em data-v-8c9498c0>way</em> outside the standard range of sRGB color space.</p><p data-v-8c9498c0>Unfortunately, this color cannot be represented with CSS colors (<code data-v-8c9498c0>rgb(999,999,999)</code> doesn’t work) or any of the widely-supported image formats. However, an HDR video can represent this color.</p><p data-v-8c9498c0><strong data-v-8c9498c0>Therefore, the QR code you see above is actually a <code data-v-8c9498c0>&lt;video&gt;</code> containing very bright white pixels with a QR code overlaid on top.</strong></p><p data-v-8c9498c0>See: <a href=\"https://github.com/dtinth/superwhite\" data-v-8c9498c0>https://github.com/dtinth/superwhite</a></p><section data-footnotes=\"\" class=\"footnotes\" data-v-8c9498c0><h2 id=\"footnote-label\" class=\"sr-only\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#footnote-label\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Footnotes</h2><ol data-v-8c9498c0><li id=\"user-content-fn-brighter\" data-v-8c9498c0><p data-v-8c9498c0>This is probably a flawed way to measure it, but I get this number by using a camera to take a photo of the screen. I set the ISO setting to be very low, so both QR codes appear as a shade of gray. I then compared the brightness of the two QR codes to obtain the ratio. <a href=\"#user-content-fnref-brighter\" data-footnote-backref=\"\" aria-label=\"Back to reference 1\" class=\"data-footnote-backref\" data-v-8c9498c0>↩</a></p></li></ol></section>", 6)
+const _hoisted_2 = { style: {"position":"relative","background":"black","width":"240px","height":"240px"} }
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
-      _vue.createElementVNode.call(void 0, "div", _hoisted_4, [
+    _cache[3] || (_cache[3] = _vue.createStaticVNode.call(void 0, "<h1 id=\"hdr-qr-code\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#hdr-qr-code\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>HDR QR Code</h1><div class=\"lead\" data-v-8c9498c0><p data-v-8c9498c0><strong data-v-8c9498c0>Here’s an HDR <a href=\"QRCode\" data-v-8c9498c0>QR Code</a>.</strong> If you’re viewing this on an Apple device’s built-in display, it should work. If the big QR code is brighter than the smaller one, it works.</p></div>", 2)),
+    _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
+      _vue.createElementVNode.call(void 0, "div", _hoisted_2, [
         _vue.createElementVNode.call(void 0, "video", {
           ref: "vid",
           onCanplaythrough: _cache[0] || (_cache[0] = (...args) => ($setup.loaded && $setup.loaded(...args))),
@@ -145,16 +103,50 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           playsinline: "",
           style: {"position":"absolute","top":"0","left":"0","width":"100%","height":"100%"}
         }, null, 544 /* NEED_HYDRATION, NEED_PATCH */),
-        _hoisted_5
+        _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "img", {
+          style: {"display":"block","position":"absolute","top":"0","left":"0","width":"100%","height":"100%"},
+          src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAHgAQMAAABHGizWAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAZQTFRFAAAAAAAApWe5zwAAAAJ0Uk5TAP9bkSK1AAABqElEQVR4nO3aQXKEIBBA0XY1x/CocFSO4UoStGlAsGRmKln9v7E0PHaUDkGEiIiIiIiIiP4nF0tB3C6vdIlxS39Ld6UdDAZPYXuUlCx5pOHQjwSDwQ/4da43XYuxmqN5CAaDv8DutF7AYPDXOA1YY+7NJQkGgxVr+qWYpvJLHv7WtycYDD4exZINry8lMBg8hbvq993EcDAYfE2XpJd6EXoR/Yrc8pDx5yMYDB6sseV3gI5bq82NLf99zVP53oLB4DsseSPe2+VYi7YNchcYDB7i9BbTXDzvlnLRAhgMnsVStjOCbXzoV+RS341XJhgM7lrqL8XYnh5s1N2PMjAY3OGUt0OEW5nRNVP53oLB4AF2e1FrPorRTny/JMFg8OhdlSo7h/pfrmo/vgQGg+ex5c7d+WhvOBFbtXdLEgwGd8OtkB5cjzuF6icaGAyewfZIvyJjN9ztl5FgMPgB215hyL/NvJ3P0DYwGPwh1jvfLlCdAQwGf47juePh+/O6YDB4Bms67kjfd9VZwtBTMBg8xrEUqg1E2/goPe2TgMFgIiIiIiIiIvrDfgCHetV+sEUfrQAAAABJRU5ErkJggg==",
+          alt: "Reference"
+        }, null, -1 /* CACHED */))
       ]),
-      _hoisted_6
+      _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "div", { style: {"width":"120px"} }, [
+        _vue.createElementVNode.call(void 0, "small", { style: {"display":"block","line-height":"1.25","margin-bottom":"1ex"} }, [
+          _vue.createElementVNode.call(void 0, "strong", null, "normal qr code"),
+          _vue.createElementVNode.call(void 0, "br"),
+          _vue.createTextVNode.call(void 0, "for reference")
+        ]),
+        _vue.createElementVNode.call(void 0, "img", {
+          style: {"background":"white","display":"block"},
+          src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAHgAQMAAABHGizWAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAZQTFRFAAAAAAAApWe5zwAAAAJ0Uk5TAP9bkSK1AAABqElEQVR4nO3aQXKEIBBA0XY1x/CocFSO4UoStGlAsGRmKln9v7E0PHaUDkGEiIiIiIiIiP4nF0tB3C6vdIlxS39Ld6UdDAZPYXuUlCx5pOHQjwSDwQ/4da43XYuxmqN5CAaDv8DutF7AYPDXOA1YY+7NJQkGgxVr+qWYpvJLHv7WtycYDD4exZINry8lMBg8hbvq993EcDAYfE2XpJd6EXoR/Yrc8pDx5yMYDB6sseV3gI5bq82NLf99zVP53oLB4DsseSPe2+VYi7YNchcYDB7i9BbTXDzvlnLRAhgMnsVStjOCbXzoV+RS341XJhgM7lrqL8XYnh5s1N2PMjAY3OGUt0OEW5nRNVP53oLB4AF2e1FrPorRTny/JMFg8OhdlSo7h/pfrmo/vgQGg+ex5c7d+WhvOBFbtXdLEgwGd8OtkB5cjzuF6icaGAyewfZIvyJjN9ztl5FgMPgB215hyL/NvJ3P0DYwGPwh1jvfLlCdAQwGf47juePh+/O6YDB4Bms67kjfd9VZwtBTMBg8xrEUqg1E2/goPe2TgMFgIiIiIiIiIvrDfgCHetV+sEUfrQAAAABJRU5ErkJggg==",
+          alt: "Reference",
+          width: "120"
+        })
+      ], -1 /* CACHED */))
     ]),
-    _hoisted_7,
-    _hoisted_8,
-    _hoisted_9,
+    _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "p", null, "For the example to work, your platform, your browser, and your display must support displaying HDR content. Also, low-power mode must be turned off. These setups have been tested to work:", -1 /* CACHED */)),
+    _cache[5] || (_cache[5] = _vue.createElementVNode.call(void 0, "ul", null, [
+      _vue.createElementVNode.call(void 0, "li", null, "iPad Pro (M2), built-in display"),
+      _vue.createElementVNode.call(void 0, "li", null, "iPhone 13, built-in display"),
+      _vue.createElementVNode.call(void 0, "li", null, "MacBook Pro (M1), built-in display")
+    ], -1 /* CACHED */)),
+    _cache[6] || (_cache[6] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createElementVNode.call(void 0, "strong", null, [
+        _vue.createTextVNode.call(void 0, "On a recent iPhone/iPad device, it appears to be "),
+        _vue.createElementVNode.call(void 0, "a", { href: "https://twitter.com/dtinth/status/1670438696871501825" }, "roughly ~7 times brighter")
+      ]),
+      _vue.createElementVNode.call(void 0, "sup", null, [
+        _vue.createElementVNode.call(void 0, "a", {
+          href: "#user-content-fn-brighter",
+          id: "user-content-fnref-brighter",
+          "data-footnote-ref": "",
+          "aria-describedby": "footnote-label"
+        }, "1")
+      ]),
+      _vue.createTextVNode.call(void 0, ".")
+    ], -1 /* CACHED */)),
     _vue.createCommentVNode.call(void 0, " <div :style=\"{visibility:surveySrc?'visible':'hidden'}\">\nDoes it work on your device? <a :href=\"surveySrc\">Take a survey.</a>\n</div> "),
     _vue.createCommentVNode.call(void 0, "\n\n## Survey\n\nDoes it work on your device? Please fill out this survey:\n\n<div style=\"height:800px;position:relative;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 5px #e9e8e7\">\n  <iframe :src=\"surveySrc\" v-if=\"surveySrc\" style=\"width:100%;height:100%;border:none;position:absolute;top:0;left:0\"></iframe>\n  <div v-if=\"!surveySrc\">(Loading survey...)</div>\n</div>\n\n"),
-    _hoisted_10
+    _cache[7] || (_cache[7] = _vue.createStaticVNode.call(void 0, "<h2 id=\"how-it-works\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#how-it-works\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>How it works</h2><p data-v-8c9498c0>It works by displaying a color whose brightness is <em data-v-8c9498c0>way</em> outside the standard range of sRGB color space.</p><p data-v-8c9498c0>Unfortunately, this color cannot be represented with CSS colors (<code data-v-8c9498c0>rgb(999,999,999)</code> doesn’t work) or any of the widely-supported image formats. However, an HDR video can represent this color.</p><p data-v-8c9498c0><strong data-v-8c9498c0>Therefore, the QR code you see above is actually a <code data-v-8c9498c0>&lt;video&gt;</code> containing very bright white pixels with a QR code overlaid on top.</strong></p><p data-v-8c9498c0>See: <a href=\"https://github.com/dtinth/superwhite\" data-v-8c9498c0>https://github.com/dtinth/superwhite</a></p><section data-footnotes=\"\" class=\"footnotes\" data-v-8c9498c0><h2 id=\"footnote-label\" class=\"sr-only\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#footnote-label\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Footnotes</h2><ol data-v-8c9498c0><li id=\"user-content-fn-brighter\" data-v-8c9498c0><p data-v-8c9498c0>This is probably a flawed way to measure it, but I get this number by using a camera to take a photo of the screen. I set the ISO setting to be very low, so both QR codes appear as a shade of gray. I then compared the brightness of the two QR codes to obtain the ratio. <a href=\"#user-content-fnref-brighter\" data-footnote-backref=\"\" aria-label=\"Back to reference 1\" class=\"data-footnote-backref\" data-v-8c9498c0>↩</a></p></li></ol></section>", 6))
   ], 64 /* STABLE_FRAGMENT */))
 }
 __sfc__.render = render

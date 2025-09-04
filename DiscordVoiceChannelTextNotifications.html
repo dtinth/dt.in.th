@@ -32,22 +32,19 @@
     <script>
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
-
-const _hoisted_1 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "In "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "Discord" }, "Discord"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, ", when you send a "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://support.discord.com/hc/en-us/articles/4412085582359-Text-Channels-Text-Chat-In-Voice-Channels#h_01FMJT3SP072ZFJCZWR0EW6CJ1" }, "text message in a voice channel"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, ", people will get a notification if:")
-], -1 /* HOISTED */)
-const _hoisted_2 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "ul", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, "they are connected to the voice channel (including deafened), or"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, "they are directly mentioned in the message, even if they are not connected to the voice channel.")
-], -1 /* HOISTED */)
 function render(_ctx, _cache) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _hoisted_2
+    _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createTextVNode.call(void 0, "In "),
+      _vue.createElementVNode.call(void 0, "a", { href: "Discord" }, "Discord"),
+      _vue.createTextVNode.call(void 0, ", when you send a "),
+      _vue.createElementVNode.call(void 0, "a", { href: "https://support.discord.com/hc/en-us/articles/4412085582359-Text-Channels-Text-Chat-In-Voice-Channels#h_01FMJT3SP072ZFJCZWR0EW6CJ1" }, "text message in a voice channel"),
+      _vue.createTextVNode.call(void 0, ", people will get a notification if:")
+    ], -1 /* CACHED */)),
+    _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "ul", null, [
+      _vue.createElementVNode.call(void 0, "li", null, "they are connected to the voice channel (including deafened), or"),
+      _vue.createElementVNode.call(void 0, "li", null, "they are directly mentioned in the message, even if they are not connected to the voice channel.")
+    ], -1 /* CACHED */))
   ], 64 /* STABLE_FRAGMENT */))
 }
 __sfc__.render = render

@@ -53,43 +53,38 @@ window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use s
 ;
 var _vue = require('vue');
 
-const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
-const _hoisted_1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "When generating colors of various hues, using the "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "LCH"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " color space generally produces a nicer result than using the "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "HSL"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " color space.")
-], -1 /* HOISTED */))
-const _hoisted_2 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "LCH")
-], -1 /* HOISTED */))
-const _hoisted_3 = { style: {"display":"flex","flex-wrap":"wrap","gap":"8px"} }
-const _hoisted_4 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "HSL")
-], -1 /* HOISTED */))
-const _hoisted_5 = { style: {"display":"flex","flex-wrap":"wrap","gap":"8px"} }
-const _hoisted_6 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<h2 id=\"using-colord-to-convert-lch-to-rgb\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#using-colord-to-convert-lch-to-rgb\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Using <code data-v-8c9498c0>colord</code> to convert LCH to RGB</h2><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>// colord.ts</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>import</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> { Plugin, colord, extend } </span><span style=\"color:#F97583;\" data-v-8c9498c0>from</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> &#39;colord&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>import</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> lchPlugin </span><span style=\"color:#F97583;\" data-v-8c9498c0>from</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> &#39;colord/plugins/lch&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>extend</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>([(lchPlugin </span><span style=\"color:#F97583;\" data-v-8c9498c0>as</span><span style=\"color:#79B8FF;\" data-v-8c9498c0> unknown</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>) </span><span style=\"color:#F97583;\" data-v-8c9498c0>as</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Plugin</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>])</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>export</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> { colord }</span></span></code></pre><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>colord</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>({ h: hue, c: </span><span style=\"color:#79B8FF;\" data-v-8c9498c0>72</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>, l: </span><span style=\"color:#79B8FF;\" data-v-8c9498c0>80</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> }).</span><span style=\"color:#B392F0;\" data-v-8c9498c0>toRgbString</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>()</span></span></code></pre>", 3)
+const _hoisted_1 = { style: {"display":"flex","flex-wrap":"wrap","gap":"8px"} }
+const _hoisted_2 = { style: {"display":"flex","flex-wrap":"wrap","gap":"8px"} }
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _hoisted_2,
-    _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
+    _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createTextVNode.call(void 0, "When generating colors of various hues, using the "),
+      _vue.createElementVNode.call(void 0, "strong", null, "LCH"),
+      _vue.createTextVNode.call(void 0, " color space generally produces a nicer result than using the "),
+      _vue.createElementVNode.call(void 0, "strong", null, "HSL"),
+      _vue.createTextVNode.call(void 0, " color space.")
+    ], -1 /* CACHED */)),
+    _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createElementVNode.call(void 0, "strong", null, "LCH")
+    ], -1 /* CACHED */)),
+    _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
       (_vue.openBlock.call(void 0, true), _vue.createElementBlock.call(void 0, _vue.Fragment, null, _vue.renderList.call(void 0, $setup.hues, (hue) => {
         return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", {
           style: _vue.normalizeStyle.call(void 0, { color: `lch(80% 72 ${hue})` })
         }, _vue.toDisplayString.call(void 0, hue), 5 /* TEXT, STYLE */))
       }), 256 /* UNKEYED_FRAGMENT */))
     ]),
-    _hoisted_4,
-    _vue.createElementVNode.call(void 0, "div", _hoisted_5, [
+    _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createElementVNode.call(void 0, "strong", null, "HSL")
+    ], -1 /* CACHED */)),
+    _vue.createElementVNode.call(void 0, "div", _hoisted_2, [
       (_vue.openBlock.call(void 0, true), _vue.createElementBlock.call(void 0, _vue.Fragment, null, _vue.renderList.call(void 0, $setup.hues, (hue) => {
         return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", {
           style: _vue.normalizeStyle.call(void 0, { color: `hsl(${hue},90%,70%)` })
         }, _vue.toDisplayString.call(void 0, hue), 5 /* TEXT, STYLE */))
       }), 256 /* UNKEYED_FRAGMENT */))
     ]),
-    _hoisted_6
+    _cache[3] || (_cache[3] = _vue.createStaticVNode.call(void 0, "<h2 id=\"using-colord-to-convert-lch-to-rgb\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#using-colord-to-convert-lch-to-rgb\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Using <code data-v-8c9498c0>colord</code> to convert LCH to RGB</h2><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>// colord.ts</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>import</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> { Plugin, colord, extend } </span><span style=\"color:#F97583;\" data-v-8c9498c0>from</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> &#39;colord&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>import</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> lchPlugin </span><span style=\"color:#F97583;\" data-v-8c9498c0>from</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> &#39;colord/plugins/lch&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>extend</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>([(lchPlugin </span><span style=\"color:#F97583;\" data-v-8c9498c0>as</span><span style=\"color:#79B8FF;\" data-v-8c9498c0> unknown</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>) </span><span style=\"color:#F97583;\" data-v-8c9498c0>as</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Plugin</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>])</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>export</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> { colord }</span></span></code></pre><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>colord</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>({ h: hue, c: </span><span style=\"color:#79B8FF;\" data-v-8c9498c0>72</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>, l: </span><span style=\"color:#79B8FF;\" data-v-8c9498c0>80</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> }).</span><span style=\"color:#B392F0;\" data-v-8c9498c0>toRgbString</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>()</span></span></code></pre>", 3))
   ], 64 /* STABLE_FRAGMENT */))
 }
 __sfc__.render = render

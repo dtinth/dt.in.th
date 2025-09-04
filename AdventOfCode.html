@@ -34,34 +34,31 @@
     <script>
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
-
-const _hoisted_1 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://adventofcode.com/" }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "Advent of Code")
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " is a yearly event in each December with 50 programming puzzles.")
-], -1 /* HOISTED */)
-const _hoisted_2 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "ul", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://github.com/dtinth/advent-of-code-2017" }, "My 2017 solutions on GitHub")
-  ]),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://github.com/dtinth/advent-of-code-2021" }, "My 2021 solutions on GitHub"),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "ul", null, [
-      /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, [
-        /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "AdventOfCode2021Day24" }, "Advent of Code 2021: Day 24")
-      ])
-    ])
-  ]),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://github.com/dtinth/advent-of-code-2022" }, "My 2022 solutions on GitHub")
-  ])
-], -1 /* HOISTED */)
 function render(_ctx, _cache) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
+    _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createElementVNode.call(void 0, "a", { href: "https://adventofcode.com/" }, [
+        _vue.createElementVNode.call(void 0, "strong", null, "Advent of Code")
+      ]),
+      _vue.createTextVNode.call(void 0, " is a yearly event in each December with 50 programming puzzles.")
+    ], -1 /* CACHED */)),
     _vue.createCommentVNode.call(void 0, "\n- [My leaderboard rankings](AdventOfCodeRankings)\n"),
-    _hoisted_2
+    _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "ul", null, [
+      _vue.createElementVNode.call(void 0, "li", null, [
+        _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/dtinth/advent-of-code-2017" }, "My 2017 solutions on GitHub")
+      ]),
+      _vue.createElementVNode.call(void 0, "li", null, [
+        _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/dtinth/advent-of-code-2021" }, "My 2021 solutions on GitHub"),
+        _vue.createElementVNode.call(void 0, "ul", null, [
+          _vue.createElementVNode.call(void 0, "li", null, [
+            _vue.createElementVNode.call(void 0, "a", { href: "AdventOfCode2021Day24" }, "Advent of Code 2021: Day 24")
+          ])
+        ])
+      ]),
+      _vue.createElementVNode.call(void 0, "li", null, [
+        _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/dtinth/advent-of-code-2022" }, "My 2022 solutions on GitHub")
+      ])
+    ], -1 /* CACHED */))
   ], 64 /* STABLE_FRAGMENT */))
 }
 __sfc__.render = render

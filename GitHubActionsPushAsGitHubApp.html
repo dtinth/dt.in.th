@@ -29,94 +29,36 @@
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
 
-const _hoisted_1 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "GitHubActions" }, "GitHub Actions"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, ": Push commit as GitHub App")
-], -1 /* HOISTED */)
-const _hoisted_2 = {
+const _hoisted_1 = {
   class: "shiki github-dark",
   style: {"background-color":"#252423","color":"#e1e4e8"},
   tabindex: "0"
 }
-const _hoisted_3 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "steps"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":")
-], -1 /* HOISTED */)
-const _hoisted_4 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<span class=\"line\"><span style=\"color:#E1E4E8;\">  - </span><span style=\"color:#85E89D;\">name</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">Get workflow token</span></span>", 1)
-const _hoisted_5 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "    id"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ": "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "get_workflow_token")
-], -1 /* HOISTED */)
-const _hoisted_6 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "    uses"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ": "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "peter-murray/workflow-application-token-action@v1")
-], -1 /* HOISTED */)
-const _hoisted_7 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "    with"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":")
-], -1 /* HOISTED */)
-const _hoisted_8 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "      application_id"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ": "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "___")
-], -1 /* HOISTED */)
-const _hoisted_9 = { class: "line" }
-const _hoisted_10 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "      application_private_key", -1 /* HOISTED */)
-const _hoisted_11 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ": ", -1 /* HOISTED */)
-const _hoisted_12 = { style: {"color":"#9ECBFF"} }
-const _hoisted_13 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<span class=\"line\"><span style=\"color:#E1E4E8;\">  - </span><span style=\"color:#85E89D;\">uses</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">actions/checkout@v2</span></span>", 1)
-const _hoisted_14 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "    with"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ":")
-], -1 /* HOISTED */)
-const _hoisted_15 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "      fetch-depth"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ": "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, "0")
-], -1 /* HOISTED */)
-const _hoisted_16 = { class: "line" }
-const _hoisted_17 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "      token", -1 /* HOISTED */)
-const _hoisted_18 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ": ", -1 /* HOISTED */)
-const _hoisted_19 = { style: {"color":"#9ECBFF"} }
-const _hoisted_20 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<span class=\"line\"><span style=\"color:#E1E4E8;\">  - </span><span style=\"color:#85E89D;\">run</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#6A737D;\"># ...</span></span>", 1)
+const _hoisted_2 = { class: "line" }
+const _hoisted_3 = { style: {"color":"#9ECBFF"} }
+const _hoisted_4 = { class: "line" }
+const _hoisted_5 = { style: {"color":"#9ECBFF"} }
 function render(_ctx, _cache) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _vue.createElementVNode.call(void 0, "pre", _hoisted_2, [
+    _cache[7] || (_cache[7] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createElementVNode.call(void 0, "a", { href: "GitHubActions" }, "GitHub Actions"),
+      _vue.createTextVNode.call(void 0, ": Push commit as GitHub App")
+    ], -1 /* CACHED */)),
+    _vue.createElementVNode.call(void 0, "pre", _hoisted_1, [
       _vue.createElementVNode.call(void 0, "code", null, [
-        _hoisted_3,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_4,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_5,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_6,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_7,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_8,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _vue.createElementVNode.call(void 0, "span", _hoisted_9, [
-          _hoisted_10,
-          _hoisted_11,
-          _vue.createElementVNode.call(void 0, "span", _hoisted_12, "$" + _vue.toDisplayString.call(void 0, _ctx.secrets.APPLICATION_PRIVATE_KEY), 1 /* TEXT */)
+        _cache[4] || (_cache[4] = _vue.createStaticVNode.call(void 0, "<span class=\"line\"><span style=\"color:#85E89D;\">steps</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  - </span><span style=\"color:#85E89D;\">name</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">Get workflow token</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    id</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">get_workflow_token</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    uses</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">peter-murray/workflow-application-token-action@v1</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    with</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      application_id</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">___</span></span>\n", 12)),
+        _vue.createElementVNode.call(void 0, "span", _hoisted_2, [
+          _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "      application_private_key", -1 /* CACHED */)),
+          _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ": ", -1 /* CACHED */)),
+          _vue.createElementVNode.call(void 0, "span", _hoisted_3, "$" + _vue.toDisplayString.call(void 0, _ctx.secrets.APPLICATION_PRIVATE_KEY), 1 /* TEXT */)
         ]),
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_13,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_14,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_15,
-        _vue.createTextVNode.call(void 0, "\n"),
-        _vue.createElementVNode.call(void 0, "span", _hoisted_16, [
-          _hoisted_17,
-          _hoisted_18,
-          _vue.createElementVNode.call(void 0, "span", _hoisted_19, "'$" + _vue.toDisplayString.call(void 0, _ctx.steps.get_workflow_token.outputs.token) + "'", 1 /* TEXT */)
+        _cache[5] || (_cache[5] = _vue.createStaticVNode.call(void 0, "\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  - </span><span style=\"color:#85E89D;\">uses</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">actions/checkout@v2</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    with</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      fetch-depth</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#79B8FF;\">0</span></span>\n", 7)),
+        _vue.createElementVNode.call(void 0, "span", _hoisted_4, [
+          _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "      token", -1 /* CACHED */)),
+          _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ": ", -1 /* CACHED */)),
+          _vue.createElementVNode.call(void 0, "span", _hoisted_5, "'$" + _vue.toDisplayString.call(void 0, _ctx.steps.get_workflow_token.outputs.token) + "'", 1 /* TEXT */)
         ]),
-        _vue.createTextVNode.call(void 0, "\n"),
-        _hoisted_20
+        _cache[6] || (_cache[6] = _vue.createStaticVNode.call(void 0, "\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  - </span><span style=\"color:#85E89D;\">run</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#6A737D;\"># ...</span></span>", 2))
       ])
     ])
   ], 64 /* STABLE_FRAGMENT */))

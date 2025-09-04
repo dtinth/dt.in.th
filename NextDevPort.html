@@ -70,32 +70,28 @@ window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use s
 ;
 var _vue = require('vue');
 
-const _hoisted_1 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "By default, "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "Next" }, "Next.js"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " development server runs on port 3000.")
-], -1 /* HOISTED */)
-const _hoisted_2 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, "package.json", -1 /* HOISTED */)
-const _hoisted_3 = { ref: "div" }
-const _hoisted_4 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#E1E4E8;\">{</span></span>\n<span class=\"line\"><span style=\"color:#79B8FF;\">  &quot;scripts&quot;</span><span style=\"color:#E1E4E8;\">: {</span></span>\n<span class=\"line\"><span style=\"color:#79B8FF;\">    &quot;dev&quot;</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">&quot;next dev -p ${PORT:-__PORT__}&quot;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  }</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">}</span></span></code></pre><p>A <code>yq</code> command to update the <code>package.json</code>:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#B392F0;\">yq</span><span style=\"color:#9ECBFF;\"> eval</span><span style=\"color:#9ECBFF;\"> &#39;.scripts.dev = &quot;next dev -p ${PORT:-__PORT__}&quot;&#39;</span><span style=\"color:#9ECBFF;\"> package.json</span><span style=\"color:#79B8FF;\"> -i</span><span style=\"color:#79B8FF;\"> -P</span><span style=\"color:#79B8FF;\"> -o</span><span style=\"color:#9ECBFF;\"> json</span></span></code></pre>", 3)
-const _hoisted_7 = [
-  _hoisted_4
-]
+const _hoisted_1 = { ref: "div" }
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
+    _cache[7] || (_cache[7] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createTextVNode.call(void 0, "By default, "),
+      _vue.createElementVNode.call(void 0, "a", { href: "Next" }, "Next.js"),
+      _vue.createTextVNode.call(void 0, " development server runs on port 3000.")
+    ], -1 /* CACHED */)),
     _vue.createElementVNode.call(void 0, "p", null, [
-      _vue.createTextVNode.call(void 0, "If you want to change the port to, e.g. "),
+      _cache[2] || (_cache[2] = _vue.createTextVNode.call(void 0, "If you want to change the port to, e.g. ", -1 /* CACHED */)),
       _vue.createElementVNode.call(void 0, "strong", {
         title: "Click to change",
         onClick: _cache[0] || (_cache[0] = (...args) => ($setup.updatePort && $setup.updatePort(...args))),
         style: {"border-bottom":"1px dotted","cursor":"pointer","color":"#ffa"}
       }, _vue.toDisplayString.call(void 0, $setup.port), 1 /* TEXT */),
-      _vue.createTextVNode.call(void 0, ", update the "),
-      _hoisted_2,
-      _vue.createTextVNode.call(void 0, ":")
+      _cache[3] || (_cache[3] = _vue.createTextVNode.call(void 0, ", update the ", -1 /* CACHED */)),
+      _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "code", null, "package.json", -1 /* CACHED */)),
+      _cache[5] || (_cache[5] = _vue.createTextVNode.call(void 0, ":", -1 /* CACHED */))
     ]),
-    _vue.createElementVNode.call(void 0, "div", _hoisted_3, [..._hoisted_7], 512 /* NEED_PATCH */),
+    _vue.createElementVNode.call(void 0, "div", _hoisted_1, [...(_cache[6] || (_cache[6] = [
+      _vue.createStaticVNode.call(void 0, "<pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#E1E4E8;\">{</span></span>\n<span class=\"line\"><span style=\"color:#79B8FF;\">  &quot;scripts&quot;</span><span style=\"color:#E1E4E8;\">: {</span></span>\n<span class=\"line\"><span style=\"color:#79B8FF;\">    &quot;dev&quot;</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">&quot;next dev -p ${PORT:-__PORT__}&quot;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  }</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">}</span></span></code></pre><p>A <code>yq</code> command to update the <code>package.json</code>:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#B392F0;\">yq</span><span style=\"color:#9ECBFF;\"> eval</span><span style=\"color:#9ECBFF;\"> &#39;.scripts.dev = &quot;next dev -p ${PORT:-__PORT__}&quot;&#39;</span><span style=\"color:#9ECBFF;\"> package.json</span><span style=\"color:#79B8FF;\"> -i</span><span style=\"color:#79B8FF;\"> -P</span><span style=\"color:#79B8FF;\"> -o</span><span style=\"color:#9ECBFF;\"> json</span></span></code></pre>", 3)
+    ]))], 512 /* NEED_PATCH */),
     _vue.createElementVNode.call(void 0, "p", null, [
       _vue.createElementVNode.call(void 0, "button", {
         onClick: _cache[1] || (_cache[1] = (...args) => ($setup.randomizePort && $setup.randomizePort(...args)))

@@ -592,82 +592,64 @@ window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use s
 ;
 var _vue = require('vue');
 
-const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
-const _hoisted_1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "h1", { id: "oklch-color-scale-plotter" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-    "aria-hidden": "true",
-    tabindex: "-1",
-    href: "#oklch-color-scale-plotter"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "OKLCH Color Scale Plotter")
-], -1 /* HOISTED */))
-const _hoisted_2 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "This little tool plots colors on two planes: LC and LH. It may be useful for visualizing color scales.", -1 /* HOISTED */))
-const _hoisted_3 = { style: {"display":"flex","gap":"1em","flex-wrap":"wrap"} }
-const _hoisted_4 = { class: "n-plot-container" }
-const _hoisted_5 = { class: "n-plot" }
-const _hoisted_6 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { class: "n-axis is-y-axis" }, "Lightness (0–100%)", -1 /* HOISTED */))
-const _hoisted_7 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { class: "n-axis is-x-axis" }, "Chroma (0–0.4)", -1 /* HOISTED */))
-const _hoisted_8 = { class: "n-color-text" }
-const _hoisted_9 = { class: "n-plot-container" }
-const _hoisted_10 = { class: "n-plot" }
-const _hoisted_11 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { class: "n-axis is-y-axis" }, "Lightness (0–100%)", -1 /* HOISTED */))
-const _hoisted_12 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { class: "n-axis is-x-axis" }, "Hue (0–360°)", -1 /* HOISTED */))
-const _hoisted_13 = { class: "n-color-text" }
-const _hoisted_14 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "label", { for: "n-colors" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "Colors")
-], -1 /* HOISTED */))
-const _hoisted_15 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "Select a preset", -1 /* HOISTED */))
-const _hoisted_16 = { style: {"display":"flex","gap":"0.5em","flex-wrap":"wrap"} }
-const _hoisted_17 = ["onClick"]
-const _hoisted_18 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "thead", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "tr", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "th", null, "Name"),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "th", null, "Hex"),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "th", null, "Lightness"),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "th", null, "Chroma"),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "th", null, "Hue")
-  ])
-], -1 /* HOISTED */))
+const _hoisted_1 = { style: {"display":"flex","gap":"1em","flex-wrap":"wrap"} }
+const _hoisted_2 = { class: "n-plot-container" }
+const _hoisted_3 = { class: "n-plot" }
+const _hoisted_4 = { class: "n-color-text" }
+const _hoisted_5 = { class: "n-plot-container" }
+const _hoisted_6 = { class: "n-plot" }
+const _hoisted_7 = { class: "n-color-text" }
+const _hoisted_8 = { style: {"display":"flex","gap":"0.5em","flex-wrap":"wrap"} }
+const _hoisted_9 = ["onClick"]
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _hoisted_2,
-    _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
-      _vue.createElementVNode.call(void 0, "div", _hoisted_4, [
-        _vue.createElementVNode.call(void 0, "div", _hoisted_5, [
-          _hoisted_6,
-          _hoisted_7,
+    _cache[8] || (_cache[8] = _vue.createElementVNode.call(void 0, "h1", { id: "oklch-color-scale-plotter" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#oklch-color-scale-plotter"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "OKLCH Color Scale Plotter")
+    ], -1 /* CACHED */)),
+    _cache[9] || (_cache[9] = _vue.createElementVNode.call(void 0, "p", null, "This little tool plots colors on two planes: LC and LH. It may be useful for visualizing color scales.", -1 /* CACHED */)),
+    _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
+      _vue.createElementVNode.call(void 0, "div", _hoisted_2, [
+        _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
+          _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "div", { class: "n-axis is-y-axis" }, "Lightness (0–100%)", -1 /* CACHED */)),
+          _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "div", { class: "n-axis is-x-axis" }, "Chroma (0–0.4)", -1 /* CACHED */)),
           (_vue.openBlock.call(void 0, true), _vue.createElementBlock.call(void 0, _vue.Fragment, null, _vue.renderList.call(void 0, $setup.plotLC, (color) => {
             return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", {
               class: "n-color",
               style: _vue.normalizeStyle.call(void 0, color.style),
               tabindex: "0"
             }, [
-              _vue.createElementVNode.call(void 0, "div", _hoisted_8, _vue.toDisplayString.call(void 0, color.text), 1 /* TEXT */)
+              _vue.createElementVNode.call(void 0, "div", _hoisted_4, _vue.toDisplayString.call(void 0, color.text), 1 /* TEXT */)
             ], 4 /* STYLE */))
           }), 256 /* UNKEYED_FRAGMENT */))
         ])
       ]),
-      _vue.createElementVNode.call(void 0, "div", _hoisted_9, [
-        _vue.createElementVNode.call(void 0, "div", _hoisted_10, [
-          _hoisted_11,
-          _hoisted_12,
+      _vue.createElementVNode.call(void 0, "div", _hoisted_5, [
+        _vue.createElementVNode.call(void 0, "div", _hoisted_6, [
+          _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "div", { class: "n-axis is-y-axis" }, "Lightness (0–100%)", -1 /* CACHED */)),
+          _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "div", { class: "n-axis is-x-axis" }, "Hue (0–360°)", -1 /* CACHED */)),
           (_vue.openBlock.call(void 0, true), _vue.createElementBlock.call(void 0, _vue.Fragment, null, _vue.renderList.call(void 0, $setup.plotLH, (color) => {
             return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", {
               class: "n-color",
               style: _vue.normalizeStyle.call(void 0, color.style),
               tabindex: "0"
             }, [
-              _vue.createElementVNode.call(void 0, "div", _hoisted_13, _vue.toDisplayString.call(void 0, color.text), 1 /* TEXT */)
+              _vue.createElementVNode.call(void 0, "div", _hoisted_7, _vue.toDisplayString.call(void 0, color.text), 1 /* TEXT */)
             ], 4 /* STYLE */))
           }), 256 /* UNKEYED_FRAGMENT */))
         ])
       ])
     ]),
     _vue.createElementVNode.call(void 0, "p", null, [
-      _hoisted_14,
+      _cache[5] || (_cache[5] = _vue.createElementVNode.call(void 0, "label", { for: "n-colors" }, [
+        _vue.createElementVNode.call(void 0, "strong", null, "Colors")
+      ], -1 /* CACHED */)),
       _vue.withDirectives.call(void 0, _vue.createElementVNode.call(void 0, "textarea", {
         id: "n-colors",
         "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($setup.colors) = $event)),
@@ -677,18 +659,26 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       ])
     ]),
     _vue.createElementVNode.call(void 0, "p", null, [
-      _hoisted_15,
-      _vue.createElementVNode.call(void 0, "span", _hoisted_16, [
+      _cache[6] || (_cache[6] = _vue.createElementVNode.call(void 0, "strong", null, "Select a preset", -1 /* CACHED */)),
+      _vue.createElementVNode.call(void 0, "span", _hoisted_8, [
         (_vue.openBlock.call(void 0, true), _vue.createElementBlock.call(void 0, _vue.Fragment, null, _vue.renderList.call(void 0, $setup.presets, (preset) => {
           return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "button", {
             onClick: preset.onclick,
             class: "btn"
-          }, _vue.toDisplayString.call(void 0, preset.name), 9 /* TEXT, PROPS */, _hoisted_17))
+          }, _vue.toDisplayString.call(void 0, preset.name), 9 /* TEXT, PROPS */, _hoisted_9))
         }), 256 /* UNKEYED_FRAGMENT */))
       ])
     ]),
     _vue.createElementVNode.call(void 0, "table", null, [
-      _hoisted_18,
+      _cache[7] || (_cache[7] = _vue.createElementVNode.call(void 0, "thead", null, [
+        _vue.createElementVNode.call(void 0, "tr", null, [
+          _vue.createElementVNode.call(void 0, "th", null, "Name"),
+          _vue.createElementVNode.call(void 0, "th", null, "Hex"),
+          _vue.createElementVNode.call(void 0, "th", null, "Lightness"),
+          _vue.createElementVNode.call(void 0, "th", null, "Chroma"),
+          _vue.createElementVNode.call(void 0, "th", null, "Hue")
+        ])
+      ], -1 /* CACHED */)),
       _vue.createElementVNode.call(void 0, "tbody", null, [
         (_vue.openBlock.call(void 0, true), _vue.createElementBlock.call(void 0, _vue.Fragment, null, _vue.renderList.call(void 0, $setup.plots.colors, (color) => {
           return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "tr", null, [

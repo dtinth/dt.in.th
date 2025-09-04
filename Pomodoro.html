@@ -32,7 +32,7 @@
 .hidden[data-v-8c9498c0]{display:none;}
 .flex[data-v-8c9498c0]{display:flex;}
 .tabular-nums[data-v-8c9498c0]{--un-numeric-spacing:tabular-nums;font-variant-numeric:var(--un-ordinal) var(--un-slashed-zero) var(--un-numeric-figure) var(--un-numeric-spacing) var(--un-numeric-fraction);}
-.transition[data-v-8c9498c0]{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}
+.transition[data-v-8c9498c0]{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}
 .ease[data-v-8c9498c0]{transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);}</style>
     <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
     <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
@@ -299,32 +299,21 @@ const __sfc__ = {
 ;
 var _vue = require('vue');
 
-const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
-const _hoisted_1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "h1", { id: "pomodoro-timer" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-    "aria-hidden": "true",
-    tabindex: "-1",
-    href: "#pomodoro-timer"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "Pomodoro Timer")
-], -1 /* HOISTED */))
-const _hoisted_2 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "colon" }, ":", -1 /* HOISTED */))
-const _hoisted_3 = { style: {"margin":"1rem 0","display":"flex","gap":"0.5rem","justify-content":"center","flex-wrap":"wrap"} }
-const _hoisted_4 = ["disabled"]
-const _hoisted_5 = ["disabled"]
-const _hoisted_6 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "details", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "summary", null, "About this tool"),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "ul", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, "A super minimal Pomodoro timer I can pop open in a tab."),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, "Keeps the screen awake while running."),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, "Double-click the time for a PiP window (if browser supports Document PiP).")
-  ])
-], -1 /* HOISTED */))
+const _hoisted_1 = { style: {"margin":"1rem 0","display":"flex","gap":"0.5rem","justify-content":"center","flex-wrap":"wrap"} }
+const _hoisted_2 = ["disabled"]
+const _hoisted_3 = ["disabled"]
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
+    _cache[6] || (_cache[6] = _vue.createElementVNode.call(void 0, "h1", { id: "pomodoro-timer" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#pomodoro-timer"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Pomodoro Timer")
+    ], -1 /* CACHED */)),
     _vue.createElementVNode.call(void 0, "div", {
       id: "pomodoro",
       class: _vue.normalizeClass.call(void 0, _ctx.stateClass),
@@ -337,20 +326,20 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         title: "Double click for PiP"
       }, [
         _vue.createTextVNode.call(void 0, _vue.toDisplayString.call(void 0, $setup.mm), 1 /* TEXT */),
-        _hoisted_2,
+        _cache[5] || (_cache[5] = _vue.createElementVNode.call(void 0, "span", { class: "colon" }, ":", -1 /* CACHED */)),
         _vue.createTextVNode.call(void 0, _vue.toDisplayString.call(void 0, $setup.ss), 1 /* TEXT */)
       ], 38 /* CLASS, STYLE, NEED_HYDRATION */),
-      _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
+      _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
         _vue.createElementVNode.call(void 0, "button", {
           class: "btn",
           onClick: _cache[1] || (_cache[1] = (...args) => ($setup.start && $setup.start(...args))),
           disabled: $setup.running
-        }, "Start", 8 /* PROPS */, _hoisted_4),
+        }, "Start", 8 /* PROPS */, _hoisted_2),
         _vue.createElementVNode.call(void 0, "button", {
           class: "btn",
           onClick: _cache[2] || (_cache[2] = (...args) => ($setup.pause && $setup.pause(...args))),
           disabled: !$setup.running
-        }, "Pause", 8 /* PROPS */, _hoisted_5),
+        }, "Pause", 8 /* PROPS */, _hoisted_3),
         _vue.createElementVNode.call(void 0, "button", {
           class: "btn",
           onClick: _cache[3] || (_cache[3] = (...args) => ($setup.reset && $setup.reset(...args)))
@@ -361,7 +350,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         }, _vue.toDisplayString.call(void 0, $setup.lengthLabel), 1 /* TEXT */)
       ])
     ], 2 /* CLASS */),
-    _hoisted_6
+    _cache[7] || (_cache[7] = _vue.createElementVNode.call(void 0, "details", null, [
+      _vue.createElementVNode.call(void 0, "summary", null, "About this tool"),
+      _vue.createElementVNode.call(void 0, "ul", null, [
+        _vue.createElementVNode.call(void 0, "li", null, "A super minimal Pomodoro timer I can pop open in a tab."),
+        _vue.createElementVNode.call(void 0, "li", null, "Keeps the screen awake while running."),
+        _vue.createElementVNode.call(void 0, "li", null, "Double-click the time for a PiP window (if browser supports Document PiP).")
+      ])
+    ], -1 /* CACHED */))
   ], 64 /* STABLE_FRAGMENT */))
 }
 __sfc__.render = render

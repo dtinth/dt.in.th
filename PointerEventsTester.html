@@ -99,15 +99,9 @@ const __sfc__ = {
 }
 ;
 var _vue = require('vue');
-
-const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
-const _hoisted_1 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<h1 id=\"pointer-events-tester\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#pointer-events-tester\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Pointer events tester</h1><p data-v-8c9498c0>You can use this little tool to test <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent\" data-v-8c9498c0>pointer events</a> on your browser. To inspect the latest pointer event, type <code data-v-8c9498c0>lastPointerEvent</code> into the <a href=\"JavaScript\" data-v-8c9498c0>JavaScript</a> console.</p>", 2)
-const _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "br", null, null, -1 /* HOISTED */))
-const _hoisted_4 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "br", null, null, -1 /* HOISTED */))
-const _hoisted_5 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "Test area", -1 /* HOISTED */))
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
+    _cache[14] || (_cache[14] = _vue.createStaticVNode.call(void 0, "<h1 id=\"pointer-events-tester\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#pointer-events-tester\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Pointer events tester</h1><p data-v-8c9498c0>You can use this little tool to test <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent\" data-v-8c9498c0>pointer events</a> on your browser. To inspect the latest pointer event, type <code data-v-8c9498c0>lastPointerEvent</code> into the <a href=\"JavaScript\" data-v-8c9498c0>JavaScript</a> console.</p>", 2)),
     _vue.createElementVNode.call(void 0, "p", null, [
       _vue.createElementVNode.call(void 0, "label", null, [
         _vue.withDirectives.call(void 0, _vue.createElementVNode.call(void 0, "input", {
@@ -116,10 +110,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         }, null, 512 /* NEED_PATCH */), [
           [_vue.vModelCheckbox, $setup.downEnabled]
         ]),
-        _vue.createTextVNode.call(void 0, " Down")
+        _cache[6] || (_cache[6] = _vue.createTextVNode.call(void 0, " Down", -1 /* CACHED */))
       ]),
-      _vue.createTextVNode.call(void 0, ),
-      _hoisted_3,
+      _cache[9] || (_cache[9] = _vue.createTextVNode.call(void 0, )),
+      _cache[10] || (_cache[10] = _vue.createElementVNode.call(void 0, "br", null, null, -1 /* CACHED */)),
       _vue.createElementVNode.call(void 0, "label", null, [
         _vue.withDirectives.call(void 0, _vue.createElementVNode.call(void 0, "input", {
           type: "checkbox",
@@ -127,10 +121,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         }, null, 512 /* NEED_PATCH */), [
           [_vue.vModelCheckbox, $setup.moveEnabled]
         ]),
-        _vue.createTextVNode.call(void 0, " Move")
+        _cache[7] || (_cache[7] = _vue.createTextVNode.call(void 0, " Move", -1 /* CACHED */))
       ]),
-      _vue.createTextVNode.call(void 0, ),
-      _hoisted_4,
+      _cache[11] || (_cache[11] = _vue.createTextVNode.call(void 0, )),
+      _cache[12] || (_cache[12] = _vue.createElementVNode.call(void 0, "br", null, null, -1 /* CACHED */)),
       _vue.createElementVNode.call(void 0, "label", null, [
         _vue.withDirectives.call(void 0, _vue.createElementVNode.call(void 0, "input", {
           type: "checkbox",
@@ -138,7 +132,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         }, null, 512 /* NEED_PATCH */), [
           [_vue.vModelCheckbox, $setup.upEnabled]
         ]),
-        _vue.createTextVNode.call(void 0, " Up")
+        _cache[8] || (_cache[8] = _vue.createTextVNode.call(void 0, " Up", -1 /* CACHED */))
       ])
     ]),
     _vue.createElementVNode.call(void 0, "div", {
@@ -147,7 +141,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       onPointerdown: _cache[4] || (_cache[4] = $event => ($setup.onpointer($event))),
       onPointerup: _cache[5] || (_cache[5] = $event => ($setup.onpointer($event)))
     }, [
-      _hoisted_5,
+      _cache[13] || (_cache[13] = _vue.createElementVNode.call(void 0, "strong", null, "Test area", -1 /* CACHED */)),
       _vue.createElementVNode.call(void 0, "pre", null, [
         _vue.createElementVNode.call(void 0, "code", null, _vue.toDisplayString.call(void 0, $setup.info), 1 /* TEXT */)
       ])

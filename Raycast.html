@@ -32,18 +32,15 @@
     <script>
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
-
-const _hoisted_1 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://www.raycast.com/" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "Raycast")
-], -1 /* HOISTED */)
-const _hoisted_2 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "MacOS" }, "macOS", -1 /* HOISTED */)
 function render(_ctx, _cache) {
-  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "p", null, [
-    _hoisted_1,
-    _vue.createTextVNode.call(void 0, " is an extensible command launcher for "),
-    _hoisted_2,
-    _vue.createTextVNode.call(void 0, ".")
-  ]))
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "p", null, [...(_cache[0] || (_cache[0] = [
+    _vue.createElementVNode.call(void 0, "a", { href: "https://www.raycast.com/" }, [
+      _vue.createElementVNode.call(void 0, "strong", null, "Raycast")
+    ], -1 /* CACHED */),
+    _vue.createTextVNode.call(void 0, " is an extensible command launcher for ", -1 /* CACHED */),
+    _vue.createElementVNode.call(void 0, "a", { href: "MacOS" }, "macOS", -1 /* CACHED */),
+    _vue.createTextVNode.call(void 0, ".", -1 /* CACHED */)
+  ]))]))
 }
 __sfc__.render = render
 __sfc__.__file = "Note.vue"

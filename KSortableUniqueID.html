@@ -48,48 +48,6 @@ window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use s
 } */
 var _vue = require('vue');
 
-const _withScopeId = n => (_vue.pushScopeId.call(void 0, "data-v-8c9498c0"),n=n(),_vue.popScopeId.call(void 0, ),n)
-const _hoisted_1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "div", { class: "lead" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-    /*#__PURE__*/_vue.createTextVNode.call(void 0, "There are many ways to "),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "generate unique IDs"),
-    /*#__PURE__*/_vue.createTextVNode.call(void 0, " in a "),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "sortable"),
-    /*#__PURE__*/_vue.createTextVNode.call(void 0, " manner. Here are some of them:")
-  ])
-], -1 /* HOISTED */))
-const _hoisted_2 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "thead", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "tr", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "th", null, "Format"),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "th", null, "Example")
-  ])
-], -1 /* HOISTED */))
-const _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "td", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://www.rfc-editor.org/rfc/rfc9562#name-uuid-version-7" }, "UUIDv7")
-], -1 /* HOISTED */))
-const _hoisted_4 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "td", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://github.com/segmentio/ksuid" }, "KSUID")
-], -1 /* HOISTED */))
-const _hoisted_5 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "td", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://github.com/ulid/spec" }, "ULID")
-], -1 /* HOISTED */))
-const _hoisted_6 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "td", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://www.mongodb.com/docs/manual/reference/bson-types/#std-label-objectid" }, "MongoDB ObjectId")
-], -1 /* HOISTED */))
-const _hoisted_7 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "td", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://firebase.blog/posts/2015/02/the-2120-ways-to-ensure-unique_68" }, "Firebase Push ID")
-], -1 /* HOISTED */))
-const _hoisted_8 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "td", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://github.com/sony/sonyflake" }, "Sonyflake")
-], -1 /* HOISTED */))
-const _hoisted_9 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "td", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://discord.com/developers/docs/reference#snowflakes" }, "Discord Snowflake")
-], -1 /* HOISTED */))
-const _hoisted_10 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "td", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://github.com/twitter-archive/snowflake/tree/snowflake-2010" }, "Twitter Snowflake")
-], -1 /* HOISTED */))
-const _hoisted_11 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "Click on the code to copy it to the clipboard.", -1 /* HOISTED */))
-
 
 const __sfc__ = {
   __name: 'Note',
@@ -136,64 +94,93 @@ const __sfc__ = {
 
 return (_ctx, _cache) => {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
+    _cache[9] || (_cache[9] = _vue.createElementVNode.call(void 0, "div", { class: "lead" }, [
+      _vue.createElementVNode.call(void 0, "p", null, [
+        _vue.createTextVNode.call(void 0, "There are many ways to "),
+        _vue.createElementVNode.call(void 0, "strong", null, "generate unique IDs"),
+        _vue.createTextVNode.call(void 0, " in a "),
+        _vue.createElementVNode.call(void 0, "strong", null, "sortable"),
+        _vue.createTextVNode.call(void 0, " manner. Here are some of them:")
+      ])
+    ], -1 /* CACHED */)),
     _vue.createElementVNode.call(void 0, "table", {
       onClick: onClick,
       class: "n-code-copyable"
     }, [
-      _hoisted_2,
+      _cache[8] || (_cache[8] = _vue.createElementVNode.call(void 0, "thead", null, [
+        _vue.createElementVNode.call(void 0, "tr", null, [
+          _vue.createElementVNode.call(void 0, "th", null, "Format"),
+          _vue.createElementVNode.call(void 0, "th", null, "Example")
+        ])
+      ], -1 /* CACHED */)),
       _vue.createElementVNode.call(void 0, "tbody", null, [
         _vue.createElementVNode.call(void 0, "tr", null, [
-          _hoisted_3,
+          _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "td", null, [
+            _vue.createElementVNode.call(void 0, "a", { href: "https://www.rfc-editor.org/rfc/rfc9562#name-uuid-version-7" }, "UUIDv7")
+          ], -1 /* CACHED */)),
           _vue.createElementVNode.call(void 0, "td", null, [
             _vue.createElementVNode.call(void 0, "code", null, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, uuidv7)), 1 /* TEXT */)
           ])
         ]),
         _vue.createElementVNode.call(void 0, "tr", null, [
-          _hoisted_4,
+          _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "td", null, [
+            _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/segmentio/ksuid" }, "KSUID")
+          ], -1 /* CACHED */)),
           _vue.createElementVNode.call(void 0, "td", null, [
             _vue.createElementVNode.call(void 0, "code", null, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, ksuid)), 1 /* TEXT */)
           ])
         ]),
         _vue.createElementVNode.call(void 0, "tr", null, [
-          _hoisted_5,
+          _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "td", null, [
+            _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/ulid/spec" }, "ULID")
+          ], -1 /* CACHED */)),
           _vue.createElementVNode.call(void 0, "td", null, [
             _vue.createElementVNode.call(void 0, "code", null, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, ulid)), 1 /* TEXT */)
           ])
         ]),
         _vue.createElementVNode.call(void 0, "tr", null, [
-          _hoisted_6,
+          _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "td", null, [
+            _vue.createElementVNode.call(void 0, "a", { href: "https://www.mongodb.com/docs/manual/reference/bson-types/#std-label-objectid" }, "MongoDB ObjectId")
+          ], -1 /* CACHED */)),
           _vue.createElementVNode.call(void 0, "td", null, [
             _vue.createElementVNode.call(void 0, "code", null, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, bson)), 1 /* TEXT */)
           ])
         ]),
         _vue.createElementVNode.call(void 0, "tr", null, [
-          _hoisted_7,
+          _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "td", null, [
+            _vue.createElementVNode.call(void 0, "a", { href: "https://firebase.blog/posts/2015/02/the-2120-ways-to-ensure-unique_68" }, "Firebase Push ID")
+          ], -1 /* CACHED */)),
           _vue.createElementVNode.call(void 0, "td", null, [
             _vue.createElementVNode.call(void 0, "code", null, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, firebase)), 1 /* TEXT */)
           ])
         ]),
         _vue.createElementVNode.call(void 0, "tr", null, [
-          _hoisted_8,
+          _cache[5] || (_cache[5] = _vue.createElementVNode.call(void 0, "td", null, [
+            _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/sony/sonyflake" }, "Sonyflake")
+          ], -1 /* CACHED */)),
           _vue.createElementVNode.call(void 0, "td", null, [
             _vue.createElementVNode.call(void 0, "code", null, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, sonyflake)), 1 /* TEXT */)
           ])
         ]),
         _vue.createElementVNode.call(void 0, "tr", null, [
-          _hoisted_9,
+          _cache[6] || (_cache[6] = _vue.createElementVNode.call(void 0, "td", null, [
+            _vue.createElementVNode.call(void 0, "a", { href: "https://discord.com/developers/docs/reference#snowflakes" }, "Discord Snowflake")
+          ], -1 /* CACHED */)),
           _vue.createElementVNode.call(void 0, "td", null, [
             _vue.createElementVNode.call(void 0, "code", null, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, discord)), 1 /* TEXT */)
           ])
         ]),
         _vue.createElementVNode.call(void 0, "tr", null, [
-          _hoisted_10,
+          _cache[7] || (_cache[7] = _vue.createElementVNode.call(void 0, "td", null, [
+            _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/twitter-archive/snowflake/tree/snowflake-2010" }, "Twitter Snowflake")
+          ], -1 /* CACHED */)),
           _vue.createElementVNode.call(void 0, "td", null, [
             _vue.createElementVNode.call(void 0, "code", null, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, twitter)), 1 /* TEXT */)
           ])
         ])
       ])
     ]),
-    _hoisted_11
+    _cache[10] || (_cache[10] = _vue.createElementVNode.call(void 0, "p", null, "Click on the code to copy it to the clipboard.", -1 /* CACHED */))
   ], 64 /* STABLE_FRAGMENT */))
 }
 }

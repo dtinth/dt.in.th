@@ -32,24 +32,21 @@
     <script>
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
-
-const _hoisted_1 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://rubyonrails.org/" }, "Ruby on Rails")
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " is “a web-app framework that includes everything needed to create database-backed web applications according to the Model-View-Controller (MVC) pattern” using the "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "Ruby" }, "Ruby"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " programming language.")
-], -1 /* HOISTED */)
-const _hoisted_2 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "ul", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "RailsVersion" }, "Detecting Rails version at runtime")
-  ])
-], -1 /* HOISTED */)
 function render(_ctx, _cache) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _hoisted_2
+    _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createElementVNode.call(void 0, "strong", null, [
+        _vue.createElementVNode.call(void 0, "a", { href: "https://rubyonrails.org/" }, "Ruby on Rails")
+      ]),
+      _vue.createTextVNode.call(void 0, " is “a web-app framework that includes everything needed to create database-backed web applications according to the Model-View-Controller (MVC) pattern” using the "),
+      _vue.createElementVNode.call(void 0, "a", { href: "Ruby" }, "Ruby"),
+      _vue.createTextVNode.call(void 0, " programming language.")
+    ], -1 /* CACHED */)),
+    _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "ul", null, [
+      _vue.createElementVNode.call(void 0, "li", null, [
+        _vue.createElementVNode.call(void 0, "a", { href: "RailsVersion" }, "Detecting Rails version at runtime")
+      ])
+    ], -1 /* CACHED */))
   ], 64 /* STABLE_FRAGMENT */))
 }
 __sfc__.render = render

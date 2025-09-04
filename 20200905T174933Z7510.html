@@ -38,8 +38,6 @@ const _hoisted_1 = {
   "data-type": "Caution"
 }
 const _hoisted_2 = { class: "notes-callout__label" }
-const _hoisted_3 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "On this site, notes now have meaningful filenames; only journal entries are named with timestamp-based IDs.", -1 /* HOISTED */)
-const _hoisted_4 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<p>I am thinking of an idea for a lightweight way to do some private journaling with rich data (custom <a href=\"CSS\">CSS</a>, <a href=\"NotesInteractivity\">interactivity</a>). All data is stored as <a href=\"Markdown\">Markdown</a> files named with meaningless ID. They are flat and there is no organization.</p><p>File name scheme is: <code>YYMMDD &quot;T&quot; HHMMSS &quot;Z&quot; RRRR &quot;.md&quot;</code>. RRRR means 4 digits of random number to reduce the chance of collision and guessability.</p><p>Some extra tools will have to be created to allow easy editing and searching. I also want to eventually be able to <a href=\"AboutNotes\">publish some entries to the public web</a>.</p>", 3)
 function render(_ctx, _cache) {
   const _component_notes_callout_icon = _vue.resolveComponent.call(void 0, "notes-callout-icon")
 
@@ -47,11 +45,11 @@ function render(_ctx, _cache) {
     _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
       _vue.createElementVNode.call(void 0, "p", _hoisted_2, [
         _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Caution" }),
-        _vue.createTextVNode.call(void 0, "Outdated")
+        _cache[0] || (_cache[0] = _vue.createTextVNode.call(void 0, "Outdated", -1 /* CACHED */))
       ]),
-      _hoisted_3
+      _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "p", null, "On this site, notes now have meaningful filenames; only journal entries are named with timestamp-based IDs.", -1 /* CACHED */))
     ]),
-    _hoisted_4
+    _cache[2] || (_cache[2] = _vue.createStaticVNode.call(void 0, "<p>I am thinking of an idea for a lightweight way to do some private journaling with rich data (custom <a href=\"CSS\">CSS</a>, <a href=\"NotesInteractivity\">interactivity</a>). All data is stored as <a href=\"Markdown\">Markdown</a> files named with meaningless ID. They are flat and there is no organization.</p><p>File name scheme is: <code>YYMMDD &quot;T&quot; HHMMSS &quot;Z&quot; RRRR &quot;.md&quot;</code>. RRRR means 4 digits of random number to reduce the chance of collision and guessability.</p><p>Some extra tools will have to be created to allow easy editing and searching. I also want to eventually be able to <a href=\"AboutNotes\">publish some entries to the public web</a>.</p>", 3))
   ], 64 /* STABLE_FRAGMENT */))
 }
 __sfc__.render = render

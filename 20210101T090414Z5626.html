@@ -32,24 +32,21 @@
     <script>
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
-
-const _hoisted_1 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, [
-    /*#__PURE__*/_vue.createTextVNode.call(void 0, "For "),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "IndieWeb" }, "IndieWeb"),
-    /*#__PURE__*/_vue.createTextVNode.call(void 0, "s, to link to syndicated copies in POSSE'd posts,")
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " use the "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://indieweb.org/u-syndication" }, "u-syndication"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " class.")
-], -1 /* HOISTED */)
-const _hoisted_2 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "blockquote", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, "u-syndication is a way to discoverably link from your original posts to syndicated copies on other sites like social media silos.")
-], -1 /* HOISTED */)
 function render(_ctx, _cache) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _hoisted_2
+    _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createElementVNode.call(void 0, "strong", null, [
+        _vue.createTextVNode.call(void 0, "For "),
+        _vue.createElementVNode.call(void 0, "a", { href: "IndieWeb" }, "IndieWeb"),
+        _vue.createTextVNode.call(void 0, "s, to link to syndicated copies in POSSE'd posts,")
+      ]),
+      _vue.createTextVNode.call(void 0, " use the "),
+      _vue.createElementVNode.call(void 0, "a", { href: "https://indieweb.org/u-syndication" }, "u-syndication"),
+      _vue.createTextVNode.call(void 0, " class.")
+    ], -1 /* CACHED */)),
+    _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "blockquote", null, [
+      _vue.createElementVNode.call(void 0, "p", null, "u-syndication is a way to discoverably link from your original posts to syndicated copies on other sites like social media silos.")
+    ], -1 /* CACHED */))
   ], 64 /* STABLE_FRAGMENT */))
 }
 __sfc__.render = render

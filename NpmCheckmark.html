@@ -46,38 +46,35 @@
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
 
-const _hoisted_1 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "h1", { id: "npm-checkmark" }, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", {
-    "aria-hidden": "true",
-    tabindex: "-1",
-    href: "#npm-checkmark"
-  }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "npm checkmark")
-], -1 /* HOISTED */)
-const _hoisted_2 = { class: "lead" }
-const _hoisted_3 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "GitHubActions" }, "GitHub Actions", -1 /* HOISTED */)
-const _hoisted_4 = /*#__PURE__*/_vue.createStaticVNode.call(void 0, "<p><a href=\"https://www.npmjs.com/package/@(-.-)/env\"><img width=\"388\" alt=\"image\" src=\"https://user-images.githubusercontent.com/193136/233458617-d7931d76-55db-430a-ac7d-ee7bd724d9b3.png\"></a></p><ol><li><p>In <code>package.json</code>, make sure <code>repository.url</code> is set to your repository’s URL.</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#9ECBFF;\">  &quot;repository&quot;</span><span style=\"color:#E1E4E8;\">: {</span></span>\n<span class=\"line\"><span style=\"color:#79B8FF;\">    &quot;url&quot;</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">&quot;git+https://github.com/dtinth/-.-&quot;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  }</span></span></code></pre></li><li><p>Update your GitHub Actions workflow job.</p><ul><li>Make sure it has the <code>id-token: write</code> permission.</li><li>Set environment variable <code>NPM_CONFIG_PROVENANCE=true</code>.</li></ul><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#85E89D;\">jobs</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">  release</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    name</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">Release</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    runs-on</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">ubuntu-latest</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    permissions</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      id-token</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">write</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      contents</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">write</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      packages</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">write</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      pull-requests</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">write</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      issues</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">read</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    env</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      NPM_CONFIG_PROVENANCE</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#79B8FF;\">true</span></span></code></pre></li></ol><h2 id=\"further-reading\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#further-reading\"><span class=\"icon icon-link\"></span></a>Further reading</h2><ul><li><a href=\"https://github.blog/2023-04-19-introducing-npm-package-provenance/\">Brian DeHamer, Philip Harrison (2023). “Introducing npm package provenance.” <em>GitHub Blog.</em></a></li><li><a href=\"https://docs.npmjs.com/generating-provenance-statements\">“Generating provenance statements.” <em>npm Docs.</em></a></li></ul>", 4)
+const _hoisted_1 = { class: "lead" }
 function render(_ctx, _cache) {
   const _component_iconify_icon = _vue.resolveComponent.call(void 0, "iconify-icon")
 
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _vue.createElementVNode.call(void 0, "div", _hoisted_2, [
+    _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "h1", { id: "npm-checkmark" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#npm-checkmark"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "npm checkmark")
+    ], -1 /* CACHED */)),
+    _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
       _vue.createElementVNode.call(void 0, "p", null, [
-        _vue.createTextVNode.call(void 0, "You can get a "),
+        _cache[0] || (_cache[0] = _vue.createTextVNode.call(void 0, "You can get a ", -1 /* CACHED */)),
         _vue.createVNode.call(void 0, _component_iconify_icon, {
           style: {"color":"#d7fc70"},
           inline: "",
           icon: "octicon:verified-24"
         }),
-        _vue.createTextVNode.call(void 0, " verified checkmark on your npm package if you build and publish it from "),
-        _hoisted_3,
-        _vue.createTextVNode.call(void 0, ".")
+        _cache[1] || (_cache[1] = _vue.createTextVNode.call(void 0, " verified checkmark on your npm package if you build and publish it from ", -1 /* CACHED */)),
+        _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "a", { href: "GitHubActions" }, "GitHub Actions", -1 /* CACHED */)),
+        _cache[3] || (_cache[3] = _vue.createTextVNode.call(void 0, ".", -1 /* CACHED */))
       ])
     ]),
-    _hoisted_4
+    _cache[5] || (_cache[5] = _vue.createStaticVNode.call(void 0, "<p><a href=\"https://www.npmjs.com/package/@(-.-)/env\"><img width=\"388\" alt=\"image\" src=\"https://user-images.githubusercontent.com/193136/233458617-d7931d76-55db-430a-ac7d-ee7bd724d9b3.png\"></a></p><ol><li><p>In <code>package.json</code>, make sure <code>repository.url</code> is set to your repository’s URL.</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#9ECBFF;\">  &quot;repository&quot;</span><span style=\"color:#E1E4E8;\">: {</span></span>\n<span class=\"line\"><span style=\"color:#79B8FF;\">    &quot;url&quot;</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">&quot;git+https://github.com/dtinth/-.-&quot;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  }</span></span></code></pre></li><li><p>Update your GitHub Actions workflow job.</p><ul><li>Make sure it has the <code>id-token: write</code> permission.</li><li>Set environment variable <code>NPM_CONFIG_PROVENANCE=true</code>.</li></ul><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#85E89D;\">jobs</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">  release</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    name</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">Release</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    runs-on</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">ubuntu-latest</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    permissions</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      id-token</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">write</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      contents</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">write</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      packages</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">write</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      pull-requests</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">write</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      issues</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">read</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    env</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      NPM_CONFIG_PROVENANCE</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#79B8FF;\">true</span></span></code></pre></li></ol><h2 id=\"further-reading\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#further-reading\"><span class=\"icon icon-link\"></span></a>Further reading</h2><ul><li><a href=\"https://github.blog/2023-04-19-introducing-npm-package-provenance/\">Brian DeHamer, Philip Harrison (2023). “Introducing npm package provenance.” <em>GitHub Blog.</em></a></li><li><a href=\"https://docs.npmjs.com/generating-provenance-statements\">“Generating provenance statements.” <em>npm Docs.</em></a></li></ul>", 4))
   ], 64 /* STABLE_FRAGMENT */))
 }
 __sfc__.render = render

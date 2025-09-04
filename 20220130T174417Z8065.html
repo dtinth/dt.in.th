@@ -32,29 +32,26 @@
     <script>
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
-
-const _hoisted_1 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://developer.chrome.com/docs/extensions/" }, [
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "strong", null, "Chrome Extensions")
-  ]),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " are “software programs, built on web technologies (such as HTML, CSS, and "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "JavaScript" }, "JavaScript"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, ") that enable users to customize the Chrome browsing experience.”")
-], -1 /* HOISTED */)
-const _hoisted_2 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "ul", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, [
-    /*#__PURE__*/_vue.createTextVNode.call(void 0, "2021-11-11: "),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "20211111T053935Z7474" }, "Reloading content script without reloading the extension when developing Chrome extensions")
-  ]),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "li", null, [
-    /*#__PURE__*/_vue.createTextVNode.call(void 0, "2021-01-22: "),
-    /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "20210122T221126Z3124" }, "Using async functions with chrome.runtime.onMessage")
-  ])
-], -1 /* HOISTED */)
 function render(_ctx, _cache) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _hoisted_2
+    _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createElementVNode.call(void 0, "a", { href: "https://developer.chrome.com/docs/extensions/" }, [
+        _vue.createElementVNode.call(void 0, "strong", null, "Chrome Extensions")
+      ]),
+      _vue.createTextVNode.call(void 0, " are “software programs, built on web technologies (such as HTML, CSS, and "),
+      _vue.createElementVNode.call(void 0, "a", { href: "JavaScript" }, "JavaScript"),
+      _vue.createTextVNode.call(void 0, ") that enable users to customize the Chrome browsing experience.”")
+    ], -1 /* CACHED */)),
+    _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "ul", null, [
+      _vue.createElementVNode.call(void 0, "li", null, [
+        _vue.createTextVNode.call(void 0, "2021-11-11: "),
+        _vue.createElementVNode.call(void 0, "a", { href: "20211111T053935Z7474" }, "Reloading content script without reloading the extension when developing Chrome extensions")
+      ]),
+      _vue.createElementVNode.call(void 0, "li", null, [
+        _vue.createTextVNode.call(void 0, "2021-01-22: "),
+        _vue.createElementVNode.call(void 0, "a", { href: "20210122T221126Z3124" }, "Using async functions with chrome.runtime.onMessage")
+      ])
+    ], -1 /* CACHED */))
   ], 64 /* STABLE_FRAGMENT */))
 }
 __sfc__.render = render

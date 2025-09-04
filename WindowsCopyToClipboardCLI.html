@@ -33,28 +33,24 @@
     <script>
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
-
-const _hoisted_1 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "In macOS you have the "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, "pbcopy"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " command to copy stdin to clipboard. On "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "Windows" }, "Windows"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " and "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "WSL" }, "WSL"),
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, " you can use:")
-], -1 /* HOISTED */)
-const _hoisted_2 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "pre", null, [
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "code", null, "echo hi | clip.exe\n")
-], -1 /* HOISTED */)
-const _hoisted_3 = /*#__PURE__*/_vue.createElementVNode.call(void 0, "p", null, [
-  /*#__PURE__*/_vue.createTextVNode.call(void 0, "via: "),
-  /*#__PURE__*/_vue.createElementVNode.call(void 0, "a", { href: "https://www.raymondcamden.com/2017/10/19/copying-to-clipboard-with-windows-subsystem-for-linux" }, "https://www.raymondcamden.com/2017/10/19/copying-to-clipboard-with-windows-subsystem-for-linux")
-], -1 /* HOISTED */)
 function render(_ctx, _cache) {
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _hoisted_1,
-    _hoisted_2,
-    _hoisted_3
+    _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createTextVNode.call(void 0, "In macOS you have the "),
+      _vue.createElementVNode.call(void 0, "code", null, "pbcopy"),
+      _vue.createTextVNode.call(void 0, " command to copy stdin to clipboard. On "),
+      _vue.createElementVNode.call(void 0, "a", { href: "Windows" }, "Windows"),
+      _vue.createTextVNode.call(void 0, " and "),
+      _vue.createElementVNode.call(void 0, "a", { href: "WSL" }, "WSL"),
+      _vue.createTextVNode.call(void 0, " you can use:")
+    ], -1 /* CACHED */)),
+    _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "pre", null, [
+      _vue.createElementVNode.call(void 0, "code", null, "echo hi | clip.exe\n")
+    ], -1 /* CACHED */)),
+    _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createTextVNode.call(void 0, "via: "),
+      _vue.createElementVNode.call(void 0, "a", { href: "https://www.raymondcamden.com/2017/10/19/copying-to-clipboard-with-windows-subsystem-for-linux" }, "https://www.raymondcamden.com/2017/10/19/copying-to-clipboard-with-windows-subsystem-for-linux")
+    ], -1 /* CACHED */))
   ], 64 /* STABLE_FRAGMENT */))
 }
 __sfc__.render = render
