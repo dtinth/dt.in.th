@@ -1,7 +1,7 @@
 
 {	"nodes":
 	{	"422":
-		{	"title": 422
+		{	"title": "422"
 		,	"parent": "Songs"
 		}
 	,	"20180215T173000Z0223":
@@ -359,6 +359,10 @@
 	,	"Azure":
 		{	"title": "Azure (topic)"
 		,	"parent": "CloudPlatform"
+		}
+	,	"BangkokIpsum":
+		{	"title": "Bangkok Ipsum"
+		,	"parent": "Projects"
 		}
 	,	"BlackBoxTestingStrategies":
 		{	"title": "Strategies for Black-Box Testability (2024 talk)"
@@ -1143,6 +1147,10 @@
 		{	"title": "Productivity (topic)"
 		,	"parent": "HomePage"
 		}
+	,	"Projects":
+		{	"title": "Projects (topic)"
+		,	"parent": "Tools"
+		}
 	,	"PublishMarkdownPageWithoutBuildTool":
 		{	"title": "Quickly publish a Markdown page without build tool"
 		,	"parent": "Markdown"
@@ -1419,6 +1427,10 @@
 		{	"title": "Vue.js (topic)"
 		,	"parent": "JavaScript"
 		}
+	,	"Vx":
+		{	"title": "vx (project)"
+		,	"parent": "Projects"
+		}
 	,	"WSL":
 		{	"title": "WSL (topic)"
 		,	"parent": "Windows"
@@ -1429,7 +1441,7 @@
 		}
 	,	"WebMIDICon":
 		{	"title": "WebMIDICon"
-		,	"parent": "20210619T153544Z9312"
+		,	"parent": "Projects"
 		}
 	,	"WebPlatform":
 		{	"title": "Web Platform (topic)"

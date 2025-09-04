@@ -1,7 +1,7 @@
 
 {	"nodes":
 	{	"422":
-		{	"title": 422
+		{	"title": "422"
 		,	"links":
 			[	{	"link": "Songs"
 				}
@@ -669,6 +669,17 @@
 	,	"Azure":
 		{	"title": "Azure (topic)"
 		,	"links": []
+		}
+	,	"BangkokIpsum":
+		{	"title": "Bangkok Ipsum"
+		,	"links":
+			[	{	"link": "Projects"
+				}
+			,	{	"link": "Songs"
+				}
+			,	{	"link": "#"
+				}
+			]
 		}
 	,	"BlackBoxTestingStrategies":
 		{	"title": "Strategies for Black-Box Testability (2024 talk)"
@@ -2756,6 +2767,21 @@
 				}
 			]
 		}
+	,	"Projects":
+		{	"title": "Projects (topic)"
+		,	"links":
+			[	{	"link": "Tools"
+				}
+			,	{	"link": "BangkokIpsum"
+				}
+			,	{	"link": "Vx"
+				}
+			,	{	"link": "WebMIDICon"
+				}
+			,	{	"link": "Webring"
+				}
+			]
+		}
 	,	"PublishMarkdownPageWithoutBuildTool":
 		{	"title": "Quickly publish a Markdown page without build tool"
 		,	"links":
@@ -3421,6 +3447,17 @@
 			[	{	"link": "20201121T193504Z7144"
 				}
 			,	{	"link": "20200502T090200Z0000"
+				}
+			]
+		}
+	,	"Vx":
+		{	"title": "vx (project)"
+		,	"links":
+			[	{	"link": "#vxcli"
+				}
+			,	{	"link": "#vxtron"
+				}
+			,	{	"link": "#vxchrome"
 				}
 			]
 		}

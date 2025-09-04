@@ -88,6 +88,7 @@ https://notes.dt.in.th/AsdfSnippets
 https://notes.dt.in.th/AudioEncodingBenchmark
 https://notes.dt.in.th/AutoSynchro
 https://notes.dt.in.th/Azure
+https://notes.dt.in.th/BangkokIpsum
 https://notes.dt.in.th/BlackBoxTestingStrategies
 https://notes.dt.in.th/BlackBoxTestingTalk
 https://notes.dt.in.th/BrotherPTWebUSB
@@ -284,6 +285,7 @@ https://notes.dt.in.th/PostgresDevConfig
 https://notes.dt.in.th/PostgresDockerCompose
 https://notes.dt.in.th/PostgresMigrate
 https://notes.dt.in.th/Productivity
+https://notes.dt.in.th/Projects
 https://notes.dt.in.th/PublishMarkdownPageWithoutBuildTool
 https://notes.dt.in.th/QRCode
 https://notes.dt.in.th/QRScan
@@ -353,6 +355,7 @@ https://notes.dt.in.th/VirtualDesktop
 https://notes.dt.in.th/Vite
 https://notes.dt.in.th/ViteBundleSize
 https://notes.dt.in.th/Vue
+https://notes.dt.in.th/Vx
 https://notes.dt.in.th/WSL
 https://notes.dt.in.th/WebComponents
 https://notes.dt.in.th/WebMIDICon

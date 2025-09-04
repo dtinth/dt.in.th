@@ -20,7 +20,7 @@
     <div class="h-entry">
       <main id="main">
         <div id="mainContents">
-          <div class="prose e-content" id="noteContents"><ul><li><a href="PianoMajorScaleTrainer">Major scale practice trainer</a></li><li><a href="PlayByEar">How I play music by ear</a></li><li><a href="Songs">My songs</a></li></ul></div>
+          <div class="prose e-content" id="noteContents"><!--[--><p>My notes about <strong>music</strong>:</p><ul><li><a href="PianoMajorScaleTrainer">Major scale practice trainer</a></li><li><a href="PlayByEar">How I play music by ear</a></li></ul><h2 id="related-topics"><a aria-hidden="true" tabindex="-1" href="#related-topics"><span class="icon icon-link"></span></a>Related topics</h2><ul><li><a href="Songs">Songs</a></li></ul><!--]--></div>
         </div>
       </main>
       <footer>
@@ -33,17 +33,7 @@
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
 function render(_ctx, _cache) {
-  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "ul", null, [...(_cache[0] || (_cache[0] = [
-    _vue.createElementVNode.call(void 0, "li", null, [
-      _vue.createElementVNode.call(void 0, "a", { href: "PianoMajorScaleTrainer" }, "Major scale practice trainer")
-    ], -1 /* CACHED */),
-    _vue.createElementVNode.call(void 0, "li", null, [
-      _vue.createElementVNode.call(void 0, "a", { href: "PlayByEar" }, "How I play music by ear")
-    ], -1 /* CACHED */),
-    _vue.createElementVNode.call(void 0, "li", null, [
-      _vue.createElementVNode.call(void 0, "a", { href: "Songs" }, "My songs")
-    ], -1 /* CACHED */)
-  ]))]))
+  return _cache[0] || (_cache[0] = _vue.createStaticVNode.call(void 0, "<p>My notes about <strong>music</strong>:</p><ul><li><a href=\"PianoMajorScaleTrainer\">Major scale practice trainer</a></li><li><a href=\"PlayByEar\">How I play music by ear</a></li></ul><h2 id=\"related-topics\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#related-topics\"><span class=\"icon icon-link\"></span></a>Related topics</h2><ul><li><a href=\"Songs\">Songs</a></li></ul>", 4))
 }
 __sfc__.render = render
 __sfc__.__file = "Note.vue"
