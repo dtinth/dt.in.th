@@ -39,7 +39,6 @@ https://notes.dt.in.th/20210118T185145Z4677
 https://notes.dt.in.th/20210122T221126Z3124
 https://notes.dt.in.th/20210201T194432Z7472
 https://notes.dt.in.th/20210205T200327Z3667
-https://notes.dt.in.th/20210530T165138Z0657
 https://notes.dt.in.th/20210619T153544Z9312
 https://notes.dt.in.th/20210706T092653Z8652
 https://notes.dt.in.th/20210713T053650Z2214
@@ -125,6 +124,7 @@ https://notes.dt.in.th/Discord
 https://notes.dt.in.th/DiscordThaiCombiningMarks
 https://notes.dt.in.th/DiscordThaiMessage
 https://notes.dt.in.th/DiscordVoiceChannelTextNotifications
+https://notes.dt.in.th/DiscoveringLCH
 https://notes.dt.in.th/Docker
 https://notes.dt.in.th/DockerCompose
 https://notes.dt.in.th/DockerInstall

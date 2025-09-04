@@ -164,10 +164,6 @@
 		{	"title": "Time to buy a new Mac?"
 		,	"parent": "Recent"
 		}
-	,	"20210530T165138Z0657":
-		{	"title": "ปริภูมิสี LCH (color space)"
-		,	"parent": "CreativeCoding"
-		}
 	,	"20210619T153544Z9312":
 		{	"title": "Thai’s online music jamming setup"
 		,	"parent": "Jamulus"
@@ -508,6 +504,10 @@
 		{	"title": "Discord text chat in voice channels notifications behavior"
 		,	"parent": "Discord"
 		}
+	,	"DiscoveringLCH":
+		{	"title": "ปริภูมิสี LCH (color space)"
+		,	"parent": "CreativeCoding"
+		}
 	,	"Docker":
 		{	"title": "Docker (topic)"
 		,	"parent": "HomePage"
@@ -769,7 +769,7 @@
 		}
 	,	"LCH":
 		{	"title": "Using LCH colors"
-		,	"parent": "Colors"
+		,	"parent": "CreativeCoding"
 		}
 	,	"LargeLanguageModel":
 		{	"title": "Large Language Model (topic)"
