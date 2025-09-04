@@ -356,6 +356,10 @@
 		{	"title": "AUTO±SYNCHRO"
 		,	"parent": "Songs"
 		}
+	,	"Automatron":
+		{	"title": "automatron"
+		,	"parent": "PersonalAssistantTalk"
+		}
 	,	"Azure":
 		{	"title": "Azure (topic)"
 		,	"parent": "CloudPlatform"
@@ -366,11 +370,11 @@
 		}
 	,	"BlackBoxTestingStrategies":
 		{	"title": "Strategies for Black-Box Testability (2024 talk)"
-		,	"parent": "PlaywrightPageObject"
+		,	"parent": "Talks"
 		}
 	,	"BlackBoxTestingTalk":
 		{	"title": "Move fast while maintaining quality with black box testing (talk)"
-		,	"parent": "BlackBoxTestingStrategies"
+		,	"parent": "Talks"
 		}
 	,	"BrotherPTWebUSB":
 		{	"title": "A web-based printing tool for Brother P-touch series label printers"
@@ -640,6 +644,10 @@
 		{	"title": "Freshly-baked apps every midnight"
 		,	"parent": "GitHub"
 		}
+	,	"Frontend2015":
+		{	"title": "Frontend Web Development in 2015"
+		,	"parent": "Talks"
+		}
 	,	"FrontendFeatureFlags":
 		{	"title": "Simple front-end feature flags"
 		,	"parent": "JavaScript"
@@ -708,6 +716,10 @@
 		{	"title": "Using Google Cloud Service Accounts to authenticate between your own services"
 		,	"parent": "GoogleCloud"
 		}
+	,	"GradualTypingTalk":
+		{	"title": "Embracing gradual typing (talk)"
+		,	"parent": "Talks"
+		}
 	,	"Grist":
 		{	"title": "Grist (topic)"
 		,	"parent": "HomePage"
@@ -735,6 +747,10 @@
 	,	"Hardware":
 		{	"title": "Hardware (topic)"
 		,	"parent": "HomePage"
+		}
+	,	"HigherOrderComponentsAndRecomposeTalk":
+		{	"title": "Higher-Order Components and Recompose"
+		,	"parent": "Talks"
 		}
 	,	"HomePage":
 		{	"title": "notes.dt.in.th"
@@ -794,6 +810,10 @@
 	,	"JavaScript":
 		{	"title": "JavaScript (topic)"
 		,	"parent": "HomePage"
+		}
+	,	"JavaScriptBangkokTalk2024":
+		{	"title": "What I use and what I build to make my life easier this year (2024 talk)"
+		,	"parent": "Talks"
 		}
 	,	"JestESM":
 		{	"title": "Setting up Jest in ESM projects"
@@ -1079,6 +1099,10 @@
 		{	"title": "Paste image to decode QR code"
 		,	"parent": "Tools"
 		}
+	,	"PersonalAssistantTalk":
+		{	"title": "Let’s build a personal assistant and level-up your coding skills!"
+		,	"parent": "Talks"
+		}
 	,	"PersonalPuppeteer":
 		{	"title": "Building a personal but multi-tenant web page screenshotting service with Puppeteer and Vercel"
 		,	"parent": "Vercel"
@@ -1149,7 +1173,7 @@
 		}
 	,	"Projects":
 		{	"title": "Projects (topic)"
-		,	"parent": "Tools"
+		,	"parent": "HomePage"
 		}
 	,	"PublishMarkdownPageWithoutBuildTool":
 		{	"title": "Quickly publish a Markdown page without build tool"
@@ -1162,6 +1186,10 @@
 	,	"QRScan":
 		{	"title": "Adding a QR code scanner to a web app"
 		,	"parent": "QRCode"
+		}
+	,	"RaceConditionsInJSApps":
+		{	"title": "Race Conditions in JS Apps"
+		,	"parent": "Talks"
 		}
 	,	"Rails":
 		{	"title": "Ruby on Rails (topic)"
@@ -1190,6 +1218,10 @@
 	,	"React18RC":
 		{	"title": "Notes about React 18 RC.0"
 		,	"parent": "React"
+		}
+	,	"ReactBKK2LiveCoding":
+		{	"title": "React Bangkok 2.0.0: Live coding / mob programming session"
+		,	"parent": "Talks"
 		}
 	,	"ReactContextProvider":
 		{	"title": "Context provider pattern in React"
@@ -1339,6 +1371,10 @@
 		{	"title": "Getting Tailwind CSS 4 (alpha 14) to run in the browser"
 		,	"parent": "TailwindCSS"
 		}
+	,	"Talks":
+		{	"title": "Talks by Thai Pangsakulyanont (topic)"
+		,	"parent": "HomePage"
+		}
 	,	"TestingInProduction":
 		{	"title": "Testing in production (topic)"
 		,	"parent": "SoftwareEngineering"
@@ -1378,6 +1414,10 @@
 	,	"TypeScriptValuesAndTypesWithSameName":
 		{	"title": "Creating types and values with the same name in TypeScript"
 		,	"parent": "Semgrep"
+		}
+	,	"TypeYourTextHere":
+		{	"title": "TYPE YOUR TEXT HERE"
+		,	"parent": "Songs"
 		}
 	,	"Typography":
 		{	"title": "Typography (topic)"

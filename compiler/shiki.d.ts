@@ -1,1 +1,1 @@
-export declare const getHighlighter: any;
+export declare const getHighlighter: () => Promise<import('shiki').HighlighterCore>;

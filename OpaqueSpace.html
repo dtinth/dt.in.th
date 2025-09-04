@@ -20,7 +20,7 @@
     <div class="h-entry">
       <main id="main">
         <div id="mainContents">
-          <div class="prose e-content" id="noteContents"><!--[--><h1 id="opaque-space"><a aria-hidden="true" tabindex="-1" href="#opaque-space"><span class="icon icon-link"></span></a>Opaque Space</h1><p>Old work from 2010. Part of <em>Free Your Tune</em> album by dB Team.</p><!--]--></div>
+          <div class="prose e-content" id="noteContents"><!--[--><h1 id="opaque-space"><a aria-hidden="true" tabindex="-1" href="#opaque-space"><span class="icon icon-link"></span></a>Opaque Space</h1><p>Old work from 2010. Part of <em>Free Your Tune</em> album by dB Team.</p><!----><!--]--></div>
         </div>
       </main>
       <footer>
@@ -33,6 +33,8 @@
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
 function render(_ctx, _cache) {
+  const _component_soundcloud_embed = _vue.resolveComponent.call(void 0, "soundcloud-embed")
+
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
     _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "h1", { id: "opaque-space" }, [
       _vue.createElementVNode.call(void 0, "a", {
@@ -48,7 +50,8 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "Old work from 2010. Part of "),
       _vue.createElementVNode.call(void 0, "em", null, "Free Your Tune"),
       _vue.createTextVNode.call(void 0, " album by dB Team.")
-    ], -1 /* CACHED */))
+    ], -1 /* CACHED */)),
+    _vue.createVNode.call(void 0, _component_soundcloud_embed, { "track-id": "182770407" })
   ], 64 /* STABLE_FRAGMENT */))
 }
 __sfc__.render = render

@@ -87,6 +87,7 @@ https://notes.dt.in.th/AdventOfCode2021Day24
 https://notes.dt.in.th/AsdfSnippets
 https://notes.dt.in.th/AudioEncodingBenchmark
 https://notes.dt.in.th/AutoSynchro
+https://notes.dt.in.th/Automatron
 https://notes.dt.in.th/Azure
 https://notes.dt.in.th/BangkokIpsum
 https://notes.dt.in.th/BlackBoxTestingStrategies
@@ -158,6 +159,7 @@ https://notes.dt.in.th/FlutterMacOS
 https://notes.dt.in.th/FocusMusic
 https://notes.dt.in.th/FreeTypeJSBlackWhiteText
 https://notes.dt.in.th/FreshAppFactory
+https://notes.dt.in.th/Frontend2015
 https://notes.dt.in.th/FrontendFeatureFlags
 https://notes.dt.in.th/Gemini25ProPreviewTTSThai
 https://notes.dt.in.th/GenerateFontWeights
@@ -175,6 +177,7 @@ https://notes.dt.in.th/GoogleCloud
 https://notes.dt.in.th/GoogleCloudFreeTier
 https://notes.dt.in.th/GoogleCloudServiceAccount
 https://notes.dt.in.th/GoogleCloudServiceAccountIdToken
+https://notes.dt.in.th/GradualTypingTalk
 https://notes.dt.in.th/Grist
 https://notes.dt.in.th/GristDockerCompose
 https://notes.dt.in.th/GristSelfHostedBenchmark
@@ -182,6 +185,7 @@ https://notes.dt.in.th/GristUpsertN8n
 https://notes.dt.in.th/HDRQRCode
 https://notes.dt.in.th/HTML
 https://notes.dt.in.th/Hardware
+https://notes.dt.in.th/HigherOrderComponentsAndRecomposeTalk
 https://notes.dt.in.th/HomePage
 https://notes.dt.in.th/HueGameHSL
 https://notes.dt.in.th/IconifyUsage
@@ -197,6 +201,7 @@ https://notes.dt.in.th/JWTStorageInClientSideSDKs
 https://notes.dt.in.th/Jamulus
 https://notes.dt.in.th/JamulusProtocolStudyNotes
 https://notes.dt.in.th/JavaScript
+https://notes.dt.in.th/JavaScriptBangkokTalk2024
 https://notes.dt.in.th/JestESM
 https://notes.dt.in.th/JoseCookbook
 https://notes.dt.in.th/JoseVerifyFirebaseIdToken
@@ -268,6 +273,7 @@ https://notes.dt.in.th/PWA
 https://notes.dt.in.th/PackletsSetup
 https://notes.dt.in.th/PasteImage
 https://notes.dt.in.th/PasteQR
+https://notes.dt.in.th/PersonalAssistantTalk
 https://notes.dt.in.th/PersonalPuppeteer
 https://notes.dt.in.th/PianoMajorScaleTrainer
 https://notes.dt.in.th/Pino
@@ -289,6 +295,7 @@ https://notes.dt.in.th/Projects
 https://notes.dt.in.th/PublishMarkdownPageWithoutBuildTool
 https://notes.dt.in.th/QRCode
 https://notes.dt.in.th/QRScan
+https://notes.dt.in.th/RaceConditionsInJSApps
 https://notes.dt.in.th/Rails
 https://notes.dt.in.th/RailsVersion
 https://notes.dt.in.th/RandomHexPasswordBcrypt
@@ -296,6 +303,7 @@ https://notes.dt.in.th/RandomPort
 https://notes.dt.in.th/Raycast
 https://notes.dt.in.th/React
 https://notes.dt.in.th/React18RC
+https://notes.dt.in.th/ReactBKK2LiveCoding
 https://notes.dt.in.th/ReactContextProvider
 https://notes.dt.in.th/ReactMultipleRefs
 https://notes.dt.in.th/ReactStrictEffectMode
@@ -333,6 +341,7 @@ https://notes.dt.in.th/TRPC
 https://notes.dt.in.th/TRPCFirebase
 https://notes.dt.in.th/TailwindCSS
 https://notes.dt.in.th/TailwindCSS4Alpha14Notes
+https://notes.dt.in.th/Talks
 https://notes.dt.in.th/TestingInProduction
 https://notes.dt.in.th/ThaiLanguageLLMBenchmark
 https://notes.dt.in.th/ThaiWordSegmentationInJavaScript
@@ -343,6 +352,7 @@ https://notes.dt.in.th/TsCommandLine
 https://notes.dt.in.th/TypeScript
 https://notes.dt.in.th/TypeScriptTestingInfrastructure
 https://notes.dt.in.th/TypeScriptValuesAndTypesWithSameName
+https://notes.dt.in.th/TypeYourTextHere
 https://notes.dt.in.th/Typography
 https://notes.dt.in.th/Uses
 https://notes.dt.in.th/VSCode

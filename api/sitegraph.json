@@ -666,6 +666,13 @@
 				}
 			]
 		}
+	,	"Automatron":
+		{	"title": "automatron"
+		,	"links":
+			[	{	"link": "PersonalAssistantTalk"
+				}
+			]
+		}
 	,	"Azure":
 		{	"title": "Azure (topic)"
 		,	"links": []
@@ -1394,6 +1401,13 @@
 				}
 			]
 		}
+	,	"Frontend2015":
+		{	"title": "Frontend Web Development in 2015"
+		,	"links":
+			[	{	"link": "Talks"
+				}
+			]
+		}
 	,	"FrontendFeatureFlags":
 		{	"title": "Simple front-end feature flags"
 		,	"links":
@@ -1564,6 +1578,10 @@
 				}
 			]
 		}
+	,	"GradualTypingTalk":
+		{	"title": "Embracing gradual typing (talk)"
+		,	"links": []
+		}
 	,	"Grist":
 		{	"title": "Grist (topic)"
 		,	"links":
@@ -1643,6 +1661,13 @@
 				}
 			]
 		}
+	,	"HigherOrderComponentsAndRecomposeTalk":
+		{	"title": "Higher-Order Components and Recompose"
+		,	"links":
+			[	{	"link": "Talks"
+				}
+			]
+		}
 	,	"HomePage":
 		{	"title": "notes.dt.in.th"
 		,	"links":
@@ -1698,6 +1723,8 @@
 				}
 			,	{	"link": "Productivity"
 				}
+			,	{	"link": "Projects"
+				}
 			,	{	"link": "QRCode"
 				}
 			,	{	"link": "Ruby"
@@ -1705,6 +1732,8 @@
 			,	{	"link": "Shell"
 				}
 			,	{	"link": "SoftwareEngineering"
+				}
+			,	{	"link": "Talks"
 				}
 			,	{	"link": "Tools"
 				}
@@ -1929,6 +1958,17 @@
 				}
 			]
 		}
+	,	"JavaScriptBangkokTalk2024":
+		{	"title": "What I use and what I build to make my life easier this year (2024 talk)"
+		,	"links":
+			[	{	"link": "/"
+				}
+			,	{	"link": "OpenWebUILiteLLM"
+				}
+			,	{	"link": "Grist"
+				}
+			]
+		}
 	,	"JestESM":
 		{	"title": "Setting up Jest in ESM projects"
 		,	"links": []
@@ -2057,7 +2097,10 @@
 		}
 	,	"LocalTalkInternationalization":
 		{	"title": "Local talk internationalization"
-		,	"links": []
+		,	"links":
+			[	{	"link": "HigherOrderComponentsAndRecomposeTalk"
+				}
+			]
 		}
 	,	"LowEffortMaintainability":
 		{	"title": "Low-effort things you can do today to improve code maintainability a year later."
@@ -2612,6 +2655,15 @@
 		{	"title": "Paste image to decode QR code"
 		,	"links": []
 		}
+	,	"PersonalAssistantTalk":
+		{	"title": "Let’s build a personal assistant and level-up your coding skills!"
+		,	"links":
+			[	{	"link": "automatron.html"
+				}
+			,	{	"link": "Automatron"
+				}
+			]
+		}
 	,	"PersonalPuppeteer":
 		{	"title": "Building a personal but multi-tenant web page screenshotting service with Puppeteer and Vercel"
 		,	"links":
@@ -2813,6 +2865,10 @@
 				}
 			]
 		}
+	,	"RaceConditionsInJSApps":
+		{	"title": "Race Conditions in JS Apps"
+		,	"links": []
+		}
 	,	"Rails":
 		{	"title": "Ruby on Rails (topic)"
 		,	"links":
@@ -2879,6 +2935,13 @@
 			[	{	"link": "React"
 				}
 			,	{	"link": "ReactStrictEffectMode"
+				}
+			]
+		}
+	,	"ReactBKK2LiveCoding":
+		{	"title": "React Bangkok 2.0.0: Live coding / mob programming session"
+		,	"links":
+			[	{	"link": "Projects"
 				}
 			]
 		}
@@ -3145,6 +3208,8 @@
 				}
 			,	{	"link": "DontWakeMeUpReRemix"
 				}
+			,	{	"link": "TypeYourTextHere"
+				}
 			,	{	"link": "OpaqueSpace"
 				}
 			]
@@ -3210,6 +3275,33 @@
 		{	"title": "Getting Tailwind CSS 4 (alpha 14) to run in the browser"
 		,	"links":
 			[	{	"link": "TailwindCSS"
+				}
+			]
+		}
+	,	"Talks":
+		{	"title": "Talks by Thai Pangsakulyanont (topic)"
+		,	"links":
+			[	{	"link": "BlackBoxTestingStrategies"
+				}
+			,	{	"link": "JavaScriptBangkokTalk2024"
+				}
+			,	{	"link": "WhenMathsStrikeBack"
+				}
+			,	{	"link": "BlackBoxTestingTalk"
+				}
+			,	{	"link": "PersonalAssistantTalk"
+				}
+			,	{	"link": "GradualTypingTalk"
+				}
+			,	{	"link": "RaceConditionsInJSApps"
+				}
+			,	{	"link": "SmellsInReactApps"
+				}
+			,	{	"link": "ReactBKK2LiveCoding"
+				}
+			,	{	"link": "HigherOrderComponentsAndRecomposeTalk"
+				}
+			,	{	"link": "Frontend2015"
 				}
 			]
 		}
@@ -3338,6 +3430,10 @@
 			,	{	"link": "#user-content-fnref-enum-x"
 				}
 			]
+		}
+	,	"TypeYourTextHere":
+		{	"title": "TYPE YOUR TEXT HERE"
+		,	"links": []
 		}
 	,	"Typography":
 		{	"title": "Typography (topic)"

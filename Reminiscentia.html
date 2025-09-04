@@ -20,7 +20,7 @@
     <div class="h-entry">
       <main id="main">
         <div id="mainContents">
-          <div class="prose e-content" id="noteContents"><!--[--><h1 id="reminiscentia"><a aria-hidden="true" tabindex="-1" href="#reminiscentia"><span class="icon icon-link"></span></a>Reminiscentia</h1><p>I&#39;ve always wanted to try making some classical music, but somehow, this one ended up as a trance <a href="Songs">song</a>.</p><p>Enjoy!</p><!--]--></div>
+          <div class="prose e-content" id="noteContents"><!--[--><h1 id="reminiscentia"><a aria-hidden="true" tabindex="-1" href="#reminiscentia"><span class="icon icon-link"></span></a>Reminiscentia</h1><p>I&#39;ve always wanted to try making some classical music, but somehow, this one ended up as a trance <a href="Songs">song</a>.</p><!----><p>Enjoy!</p><!--]--></div>
         </div>
       </main>
       <footer>
@@ -33,6 +33,8 @@
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
 function render(_ctx, _cache) {
+  const _component_soundcloud_embed = _vue.resolveComponent.call(void 0, "soundcloud-embed")
+
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
     _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "h1", { id: "reminiscentia" }, [
       _vue.createElementVNode.call(void 0, "a", {
@@ -49,6 +51,7 @@ function render(_ctx, _cache) {
       _vue.createElementVNode.call(void 0, "a", { href: "Songs" }, "song"),
       _vue.createTextVNode.call(void 0, ".")
     ], -1 /* CACHED */)),
+    _vue.createVNode.call(void 0, _component_soundcloud_embed, { "track-id": "171200575" }),
     _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "p", null, "Enjoy!", -1 /* CACHED */))
   ], 64 /* STABLE_FRAGMENT */))
 }
