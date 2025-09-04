@@ -398,7 +398,7 @@
 		}
 	,	"ButterFlyCoverCollab":
 		{	"title": "Butter-Fly (Digimon Tri Ver.) (Cover)"
-		,	"parent": "WebMIDICon"
+		,	"parent": "Songs"
 		}
 	,	"ByMySide":
 		{	"title": "BY☆MY☆SIDE"
@@ -1289,7 +1289,7 @@
 		}
 	,	"Songs":
 		{	"title": "Songs (topic)"
-		,	"parent": "ButterFlyCoverCollab"
+		,	"parent": "Music"
 		}
 	,	"StableLibSnippets":
 		{	"title": "StableLib snippets"
