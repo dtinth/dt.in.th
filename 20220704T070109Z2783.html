@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="GitHubActionsPushAsGitHubApp" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHubActionsPushAsGitHubApp | notes.dt.in.th</title>
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!-- Compilation unsuccessful --></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+var _vue = require('vue');
+
+const _hoisted_1 = {
+  class: "shiki github-dark",
+  style: {"background-color":"#252423","color":"#e1e4e8"},
+  tabindex: "0"
+}
+const _hoisted_2 = { class: "line" }
+const _hoisted_3 = { style: {"color":"#9ECBFF"} }
+const _hoisted_4 = { class: "line" }
+const _hoisted_5 = { style: {"color":"#9ECBFF"} }
+function render(_ctx, _cache) {
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
+    _cache[7] || (_cache[7] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createElementVNode.call(void 0, "a", { href: "GitHubActions" }, "GitHub Actions"),
+      _vue.createTextVNode.call(void 0, ": Push commit as GitHub App")
+    ], -1 /* CACHED */)),
+    _vue.createElementVNode.call(void 0, "pre", _hoisted_1, [
+      _vue.createElementVNode.call(void 0, "code", null, [
+        _cache[4] || (_cache[4] = _vue.createStaticVNode.call(void 0, "<span class=\"line\"><span style=\"color:#85E89D;\">steps</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  - </span><span style=\"color:#85E89D;\">name</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">Get workflow token</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    id</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">get_workflow_token</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    uses</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">peter-murray/workflow-application-token-action@v1</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    with</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      application_id</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">___</span></span>\n", 12)),
+        _vue.createElementVNode.call(void 0, "span", _hoisted_2, [
+          _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "      application_private_key", -1 /* CACHED */)),
+          _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ": ", -1 /* CACHED */)),
+          _vue.createElementVNode.call(void 0, "span", _hoisted_3, "$" + _vue.toDisplayString.call(void 0, _ctx.secrets.APPLICATION_PRIVATE_KEY), 1 /* TEXT */)
+        ]),
+        _cache[5] || (_cache[5] = _vue.createStaticVNode.call(void 0, "\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  - </span><span style=\"color:#85E89D;\">uses</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">actions/checkout@v2</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    with</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      fetch-depth</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#79B8FF;\">0</span></span>\n", 7)),
+        _vue.createElementVNode.call(void 0, "span", _hoisted_4, [
+          _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "      token", -1 /* CACHED */)),
+          _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ": ", -1 /* CACHED */)),
+          _vue.createElementVNode.call(void 0, "span", _hoisted_5, "'$" + _vue.toDisplayString.call(void 0, _ctx.steps.get_workflow_token.outputs.token) + "'", 1 /* TEXT */)
+        ]),
+        _cache[6] || (_cache[6] = _vue.createStaticVNode.call(void 0, "\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  - </span><span style=\"color:#85E89D;\">run</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#6A737D;\"># ...</span></span>", 2))
+      ])
+    ])
+  ], 64 /* STABLE_FRAGMENT */))
+}
+__sfc__.render = render
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"public":true,"title":"GitHub Actions: Push commit as GitHub App","aliases":["20220704T070109Z2783"]};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

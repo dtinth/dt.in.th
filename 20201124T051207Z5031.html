@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="Caddy" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caddy web server | notes.dt.in.th</title><meta property="og:title" content="Caddy web server" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/Caddy" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://notes.dt.in.th/Caddy" data-source="note">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><p><strong><a href="https://caddyserver.com/">Caddy</a></strong> is &quot;a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go&quot;</p><ul><li><a href="CaddyReverseProxy">Setting up a reverse proxy using Caddy</a></li><li><a href="CaddyCORS">Setting up CORS in Caddy</a></li><li><a href="CaddySelfSigned">Making Caddy use a self-signed SSL certificate</a></li><li><a href="CaddyCompression">Enabling gzip/zstd compression in Caddy</a></li><li><a href="CaddyAccessLogging">Enabling access logging in Caddy</a></li></ul><h2 id="installation-script-on-debianubuntu"><a aria-hidden="true" tabindex="-1" href="#installation-script-on-debianubuntu"><span class="icon icon-link"></span></a>Installation script on Debian/Ubuntu</h2><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#B392F0;">sudo</span><span style="color:#9ECBFF;"> apt</span><span style="color:#9ECBFF;"> install</span><span style="color:#79B8FF;"> -y</span><span style="color:#9ECBFF;"> debian-keyring</span><span style="color:#9ECBFF;"> debian-archive-keyring</span><span style="color:#9ECBFF;"> apt-transport-https</span><span style="color:#9ECBFF;"> curl</span></span>
+<span class="line"><span style="color:#B392F0;">curl</span><span style="color:#79B8FF;"> -1sLf</span><span style="color:#9ECBFF;"> &#39;https://dl.cloudsmith.io/public/caddy/stable/gpg.key&#39;</span><span style="color:#F97583;"> |</span><span style="color:#B392F0;"> sudo</span><span style="color:#9ECBFF;"> gpg</span><span style="color:#79B8FF;"> --dearmor</span><span style="color:#79B8FF;"> -o</span><span style="color:#9ECBFF;"> /usr/share/keyrings/caddy-stable-archive-keyring.gpg</span></span>
+<span class="line"><span style="color:#B392F0;">curl</span><span style="color:#79B8FF;"> -1sLf</span><span style="color:#9ECBFF;"> &#39;https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt&#39;</span><span style="color:#F97583;"> |</span><span style="color:#B392F0;"> sudo</span><span style="color:#9ECBFF;"> tee</span><span style="color:#9ECBFF;"> /etc/apt/sources.list.d/caddy-stable.list</span></span>
+<span class="line"><span style="color:#B392F0;">sudo</span><span style="color:#9ECBFF;"> apt</span><span style="color:#9ECBFF;"> update</span></span>
+<span class="line"><span style="color:#B392F0;">sudo</span><span style="color:#9ECBFF;"> apt</span><span style="color:#9ECBFF;"> install</span><span style="color:#9ECBFF;"> caddy</span></span></code></pre><h2 id="handle-and-handle_path"><a aria-hidden="true" tabindex="-1" href="#handle-and-handle_path"><span class="icon icon-link"></span></a><code>handle</code> and <code>handle_path</code></h2><p>The <a href="https://caddyserver.com/docs/caddyfile/directives/handle"><code>handle</code></a> and <a href="https://caddyserver.com/docs/caddyfile/directives/handle_path"><code>handle_path</code></a> directives are similar. However, <code>handle_path</code> will strip the path prefix from the request when matched.</p><pre><code>handle_path /foo/* {
+	# The path has the &quot;/foo&quot; prefix stripped
+}
+
+handle /bar/* {
+	# The path still retains &quot;/bar&quot;
+}
+</code></pre><h2 id="further-reading"><a aria-hidden="true" tabindex="-1" href="#further-reading"><span class="icon icon-link"></span></a>Further reading</h2><ul><li><a href="https://caddyserver.com/docs/caddyfile/directives/redir"><code>redir</code></a> for redirects.</li><li><a href="https://caddyserver.com/docs/caddyfile/directives/reverse_proxy"><code>reverse_proxy</code></a> for <a href="CaddyReverseProxy">proxying</a> requests to another server.</li></ul><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+var _vue = require('vue');
+function render(_ctx, _cache) {
+  return _cache[0] || (_cache[0] = _vue.createStaticVNode.call(void 0, "<p><strong><a href=\"https://caddyserver.com/\">Caddy</a></strong> is &quot;a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go&quot;</p><ul><li><a href=\"CaddyReverseProxy\">Setting up a reverse proxy using Caddy</a></li><li><a href=\"CaddyCORS\">Setting up CORS in Caddy</a></li><li><a href=\"CaddySelfSigned\">Making Caddy use a self-signed SSL certificate</a></li><li><a href=\"CaddyCompression\">Enabling gzip/zstd compression in Caddy</a></li><li><a href=\"CaddyAccessLogging\">Enabling access logging in Caddy</a></li></ul><h2 id=\"installation-script-on-debianubuntu\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#installation-script-on-debianubuntu\"><span class=\"icon icon-link\"></span></a>Installation script on Debian/Ubuntu</h2><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#B392F0;\">sudo</span><span style=\"color:#9ECBFF;\"> apt</span><span style=\"color:#9ECBFF;\"> install</span><span style=\"color:#79B8FF;\"> -y</span><span style=\"color:#9ECBFF;\"> debian-keyring</span><span style=\"color:#9ECBFF;\"> debian-archive-keyring</span><span style=\"color:#9ECBFF;\"> apt-transport-https</span><span style=\"color:#9ECBFF;\"> curl</span></span>\n<span class=\"line\"><span style=\"color:#B392F0;\">curl</span><span style=\"color:#79B8FF;\"> -1sLf</span><span style=\"color:#9ECBFF;\"> &#39;https://dl.cloudsmith.io/public/caddy/stable/gpg.key&#39;</span><span style=\"color:#F97583;\"> |</span><span style=\"color:#B392F0;\"> sudo</span><span style=\"color:#9ECBFF;\"> gpg</span><span style=\"color:#79B8FF;\"> --dearmor</span><span style=\"color:#79B8FF;\"> -o</span><span style=\"color:#9ECBFF;\"> /usr/share/keyrings/caddy-stable-archive-keyring.gpg</span></span>\n<span class=\"line\"><span style=\"color:#B392F0;\">curl</span><span style=\"color:#79B8FF;\"> -1sLf</span><span style=\"color:#9ECBFF;\"> &#39;https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt&#39;</span><span style=\"color:#F97583;\"> |</span><span style=\"color:#B392F0;\"> sudo</span><span style=\"color:#9ECBFF;\"> tee</span><span style=\"color:#9ECBFF;\"> /etc/apt/sources.list.d/caddy-stable.list</span></span>\n<span class=\"line\"><span style=\"color:#B392F0;\">sudo</span><span style=\"color:#9ECBFF;\"> apt</span><span style=\"color:#9ECBFF;\"> update</span></span>\n<span class=\"line\"><span style=\"color:#B392F0;\">sudo</span><span style=\"color:#9ECBFF;\"> apt</span><span style=\"color:#9ECBFF;\"> install</span><span style=\"color:#9ECBFF;\"> caddy</span></span></code></pre><h2 id=\"handle-and-handle_path\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#handle-and-handle_path\"><span class=\"icon icon-link\"></span></a><code>handle</code> and <code>handle_path</code></h2><p>The <a href=\"https://caddyserver.com/docs/caddyfile/directives/handle\"><code>handle</code></a> and <a href=\"https://caddyserver.com/docs/caddyfile/directives/handle_path\"><code>handle_path</code></a> directives are similar. However, <code>handle_path</code> will strip the path prefix from the request when matched.</p><pre><code>handle_path /foo/* {\n\t# The path has the &quot;/foo&quot; prefix stripped\n}\n\nhandle /bar/* {\n\t# The path still retains &quot;/bar&quot;\n}\n</code></pre><h2 id=\"further-reading\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#further-reading\"><span class=\"icon icon-link\"></span></a>Further reading</h2><ul><li><a href=\"https://caddyserver.com/docs/caddyfile/directives/redir\"><code>redir</code></a> for redirects.</li><li><a href=\"https://caddyserver.com/docs/caddyfile/directives/reverse_proxy\"><code>reverse_proxy</code></a> for <a href=\"CaddyReverseProxy\">proxying</a> requests to another server.</li></ul>", 9))
+}
+__sfc__.render = render
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"public":true,"topic":true,"title":"Caddy web server","aliases":["20201124T051207Z5031"]};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

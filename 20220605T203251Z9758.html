@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="GitHubActionsLinodeObjectStorageUpload" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHubActionsLinodeObjectStorageUpload | notes.dt.in.th</title>
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!-- Compilation unsuccessful --></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+var _vue = require('vue');
+
+const _hoisted_1 = {
+  class: "shiki github-dark",
+  style: {"background-color":"#252423","color":"#e1e4e8"},
+  tabindex: "0"
+}
+const _hoisted_2 = { class: "line" }
+const _hoisted_3 = { style: {"color":"#9ECBFF"} }
+function render(_ctx, _cache) {
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
+    _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createElementVNode.call(void 0, "a", { href: "GitHubActions" }, "GitHub Actions"),
+      _vue.createTextVNode.call(void 0, " workflow to save files to "),
+      _vue.createElementVNode.call(void 0, "a", { href: "Linode" }, "Linode"),
+      _vue.createTextVNode.call(void 0, " Object Storage")
+    ], -1 /* CACHED */)),
+    _vue.createElementVNode.call(void 0, "pre", _hoisted_1, [
+      _vue.createElementVNode.call(void 0, "code", null, [
+        _cache[2] || (_cache[2] = _vue.createStaticVNode.call(void 0, "<span class=\"line\"><span style=\"color:#79B8FF;\">on</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">  push</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    branches</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">master</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">name</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">Deploy</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">jobs</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">  deploy</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    runs-on</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">ubuntu-20.04</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    steps</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#85E89D;\">uses</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">actions/checkout@v2</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#85E89D;\">run</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">pip install s3cmd</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#85E89D;\">run</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">s3cmd --host=&#39;https://ap-south-1.linodeobjects.com&#39; --host-bucket=&#39;https://%(bucket)s.ap-south-1.linodeobjects.com&#39; put index.json s3://music4.bemuse.ninja/server/index.json --acl-public --add-header=&#39;cache-control:public,max-age=60,s-maxage=60&#39;</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">        env</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">          AWS_ACCESS_KEY_ID</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">0C3CA3AOYYPEI0B2ZJ1Y</span></span>\n", 26)),
+        _vue.createElementVNode.call(void 0, "span", _hoisted_2, [
+          _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "span", { style: {"color":"#85E89D"} }, "          AWS_SECRET_ACCESS_KEY", -1 /* CACHED */)),
+          _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ": ", -1 /* CACHED */)),
+          _vue.createElementVNode.call(void 0, "span", _hoisted_3, "$" + _vue.toDisplayString.call(void 0, _ctx.secrets.SECRET_0C3CA3AOYYPEI0B2ZJ1Y), 1 /* TEXT */)
+        ])
+      ])
+    ]),
+    _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createTextVNode.call(void 0, "Source: "),
+      _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/bemusic/bemuse-official-music-server/blob/master/.github/workflows/deploy.yml" }, "https://github.com/bemusic/bemuse-official-music-server/blob/master/.github/workflows/deploy.yml")
+    ], -1 /* CACHED */))
+  ], 64 /* STABLE_FRAGMENT */))
+}
+__sfc__.render = render
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"public":true,"aliases":["20220605T203251Z9758"],"title":"A GitHub Actions workflow to save files to Linode Object Storage"};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

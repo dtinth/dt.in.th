@@ -724,10 +724,6 @@
 		{	"title": "Using Google Cloud Service Accounts to authenticate between your own services"
 		,	"parent": "GoogleCloud"
 		}
-	,	"GradualTypingTalk":
-		{	"title": "Embracing gradual typing (talk)"
-		,	"parent": "Talks"
-		}
 	,	"Grist":
 		{	"title": "Grist (topic)"
 		,	"parent": "HomePage"

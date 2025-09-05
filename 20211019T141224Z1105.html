@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="LowEffortMaintainability" data-layout="wide" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Low-effort things you can do today to improve code maintainability a year later. | notes.dt.in.th</title><meta property="og:title" content="Low-effort things you can do today to improve code maintainability a year later." data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/LowEffortMaintainability" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://notes.dt.in.th/LowEffortMaintainability" data-source="note"><style id="note-styles">h1[data-v-8c9498c0] {
+    max-width: 24em;
+}
+
+/* layer: default */
+.sr-only[data-v-8c9498c0]{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0;}
+.my[data-v-8c9498c0]{margin-top:1rem;margin-bottom:1rem;}
+.me[data-v-8c9498c0]{margin-inline-end:1rem;}
+.h1[data-v-8c9498c0]{height:0.25rem;}</style>
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><h1 id="low-effort-things-you-can-do-today-to-improve-code-maintainability-a-year-later" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#low-effort-things-you-can-do-today-to-improve-code-maintainability-a-year-later" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Low-effort things you can do today to improve code maintainability a year later</h1><p data-v-8c9498c0>When it comes to <strong data-v-8c9498c0>code maintainability</strong> in the long run, one has to strike a balance and avoid:</p><ul data-v-8c9498c0><li data-v-8c9498c0><strong data-v-8c9498c0>Over-<a href="SoftwareEngineering" data-v-8c9498c0>engineering</a></strong> — spending a lot of time upfront designing things that turn out to be unnecessarily complex (or just unnecessary).</li><li data-v-8c9498c0><strong data-v-8c9498c0>Under-<a href="SoftwareEngineering" data-v-8c9498c0>engineering</a></strong> — writing spaghetti code to ship fast, and paying for the technical debt later, suffering through bug-ridden untestable code and painful restructurings and/or rewrites.</li></ul><p data-v-8c9498c0>In this note, I will list a few practices that takes <em data-v-8c9498c0>minimal up-front effort</em> to do, but end up saving a lot of time down the line. Each section will also feature a few examples from real-world code. I will assume that you already have a basic level of code hygiene, e.g. using linters and formatting your code in a consistent style.</p><hr data-v-8c9498c0><h2 id="own-your-interface" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#own-your-interface" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Own your interface</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0><strong data-v-8c9498c0>Instead of depending on external libraries’ API, consider owning the API yourself.</strong></p><p data-v-8c9498c0>You don’t have to design the API by yourself. The easiest low-effort approach is to steal the API from external modules by re-exporting them in your own modules. Make your application code depend only on <em data-v-8c9498c0>your</em> API instead of external APIs.</p><p data-v-8c9498c0>When I follow this guideline, it lets me insulate myself from:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Breaking changes when upgrading the external library.</li><li data-v-8c9498c0>Rewriting a lot of code when I want to switch to a new library.</li><li data-v-8c9498c0>Adding features not provided by the third-party library.</li></ul></div><div class="d-split__right"><p data-v-8c9498c0>Before:</p><pre data-v-8c9498c0><code class="language-ts" data-v-8c9498c0>// app.js
+import { Button } from &#39;semantic-ui-react&#39;
+</code></pre><p data-v-8c9498c0>After:</p><pre data-v-8c9498c0><code class="language-ts" data-v-8c9498c0>// ui.js
+export { Button } from &#39;semantic-ui-react&#39;
+
+// app.js
+import { Button } from &#39;@/ui&#39;
+</code></pre></div></div><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>If, for example, one year later I decide to switch to <a href="https://mui.com/" data-v-8c9498c0>MUI</a>, I can do so while keeping most of my code intact.</p><p data-v-8c9498c0>At this point, the project will probably have 100 files that imports the Button component. That little re-export I did 1 year ago would have saved the effort of having to change 100 files.</p><p data-v-8c9498c0>Some people call this an <a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/anti-corruption-layer" data-v-8c9498c0>anti-corruption layer</a>. TypeScript’s structural typing makes building such layers very lightweight.</p></div><div class="d-split__right"><p data-v-8c9498c0>Switch to MUI:</p><pre data-v-8c9498c0><code class="language-ts" data-v-8c9498c0>// ui.js
+import Button from &#39;@mui/material/Button&#39;
+
+export function Button(props) {
+  const variant = props.primary
+    ? &#39;contained&#39;
+    : props.secondary
+    ? &#39;outlined&#39;
+    : &#39;text&#39;
+  return (
+    &lt;Button onClick={props.onClick} variant={variant}&gt;
+      {props.children}
+    &lt;/Button&gt;
+  )
+}
+</code></pre></div></div><h3 id="real-world-examples" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#real-world-examples" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Real-world examples</h3><div class="d-split" data-v-8c9498c0><div class="d-split__left"><ul data-v-8c9498c0><li data-v-8c9498c0><p data-v-8c9498c0>By <a href="https://github.com/dtinth/evalaas/blob/c83d3b3420d680ab97da977bfe3acda547be8384/types.d.ts#L17-L25" data-v-8c9498c0>owning the <code data-v-8c9498c0>Storage</code> interface</a> which is derived from a <em data-v-8c9498c0>strict minimal subset</em> of Google Cloud Storage’s JavaScript API…</p><ul data-v-8c9498c0><li data-v-8c9498c0><p data-v-8c9498c0><a href="https://github.com/dtinth/evalaas/blob/c83d3b3420d680ab97da977bfe3acda547be8384/server.js#L131-L149" data-v-8c9498c0>It becomes trivial to create a mock storage for testing purposes.</a></p></li><li data-v-8c9498c0><p data-v-8c9498c0>A <code data-v-8c9498c0>new gcs.Storage()</code> can be used where our <code data-v-8c9498c0>Storage</code> is expected without having to write any abstraction layer, thanks to TypeScript’s structural typing.</p></li></ul></li></ul></div><div class="d-split__right"><p data-v-8c9498c0>Types:</p><pre data-v-8c9498c0><code class="language-ts" data-v-8c9498c0>type Storage = {
+  bucket: (bucketName: string) =&gt; Bucket
+}
+type Bucket = {
+  file: (key: string) =&gt; File
+}
+type File = {
+  download: () =&gt; Promise&lt;[Buffer]&gt;
+}
+</code></pre><p data-v-8c9498c0>App:</p><pre data-v-8c9498c0><code class="language-ts" data-v-8c9498c0>import * as gcs from &#39;@google-cloud/storage&#39;
+const storage: Storage = new gcs.Storage()
+</code></pre><hr data-v-8c9498c0></div></div><div class="d-split" data-v-8c9498c0><div class="d-split__left"><ul data-v-8c9498c0><li data-v-8c9498c0><p data-v-8c9498c0>Sometimes doing acceptance tests against UIs requires using a lot of helper libraries to set up the component hierarchy. This can easily lead to import hell. By owning the interface for the helper libraries…</p><ul data-v-8c9498c0><li data-v-8c9498c0>I can use all helpers in my tests without having to importing them from each npm package; the package where each helper comes from now becomes just an <em data-v-8c9498c0>implementation detail.</em></li><li data-v-8c9498c0>I can also create more idiomatic helpers (such as <code data-v-8c9498c0>renderInTestWrapper</code>) leading to cleaner tests and less boilerplate, without having to add more import statements.</li></ul></li><li data-v-8c9498c0><p data-v-8c9498c0>At <a href="https://taskworld.com/" data-v-8c9498c0>Taskworld</a>, using the same technique, we were able to…</p><ul data-v-8c9498c0><li data-v-8c9498c0>migrate from <a href="https://webdriver.io/" data-v-8c9498c0>WebdriverIO library</a> (v4)</li><li data-v-8c9498c0>…to <a href="https://www.npmjs.com/package/selenium-webdriver" data-v-8c9498c0>Selenium’s official JavaScript API</a> in 2019<sup data-v-8c9498c0><a href="#user-content-fn-why-selenium" id="user-content-fnref-why-selenium" data-footnote-ref aria-describedby="footnote-label" data-v-8c9498c0>1</a></sup>, and</li><li data-v-8c9498c0>…to <a href="https://www.npmjs.com/package/playwright" data-v-8c9498c0>Playwright</a> in 2021,</li><li data-v-8c9498c0>with very little changes to the test scripts.</li></ul></li></ul></div><div class="d-split__right"><p data-v-8c9498c0>Before:</p><pre data-v-8c9498c0><code class="language-ts" data-v-8c9498c0>import { setupWorker, rest } from &#39;msw&#39;
+import { Provider } from &#39;react-redux&#39;
+import { DndProvider } from &#39;react-dnd&#39;
+import { HTML5Backend } from &#39;react-dnd-html5-backend&#39;
+import { QueryClient, QueryClientProvider } from &#39;react-query&#39;
+import {
+  render,
+  findByText,
+  fireEvent,
+  waitFor,
+  act,
+} from &#39;@testing-library/react&#39;
+import { renderHook } from &#39;@testing-library/react-hooks&#39;
+import userEvent from &#39;@testing-library/user-event&#39;
+import { ThemeProvider } from &#39;@mui/material/styles&#39;
+import { simulateDragAndDrop, retry } from &#39;@/test-utils&#39;
+import { theme } from &#39;@/app-design&#39;
+</code></pre><p data-v-8c9498c0>After:</p><pre data-v-8c9498c0><code class="language-ts" data-v-8c9498c0>import {
+  mockEndpoints,
+  renderInTestWrapper,
+  renderHook,
+  findByText,
+  actions,
+  waitFor,
+  act,
+  retry,
+} from &#39;@/test-utils&#39;
+</code></pre><hr data-v-8c9498c0></div></div><h3 id="applicability" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#applicability" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Applicability</h3><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>I use this principle with:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Common UI components.</li><li data-v-8c9498c0>Common infrastructure without a standardized interface e.g. logging.</li><li data-v-8c9498c0>Testing utilities.</li><li data-v-8c9498c0>Third-party SDKs.</li></ul></div><div class="d-split__right"><p data-v-8c9498c0>I don’t use this principle with:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Standard libraries, e.g. Array, Set, Map.</li><li data-v-8c9498c0>Common infrastructure with a standardized interface e.g. OpenTelemetry.</li><li data-v-8c9498c0>Very stable libraries e.g. Lodash.</li><li data-v-8c9498c0>Base frameworks, e.g. React.</li></ul></div></div><hr data-v-8c9498c0><h2 id="dependency-inject-io-functions" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#dependency-inject-io-functions" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Dependency-inject IO functions</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>One rule of thumb that works really well for me is to <strong data-v-8c9498c0>perform dependency-injection on most IO operations.</strong></p><ul data-v-8c9498c0><li data-v-8c9498c0><p data-v-8c9498c0>Since I wanted the instant gratification of seeing my app working in the shortest amount of time possible, I didn’t bother doing test-driven development<sup data-v-8c9498c0><a href="#user-content-fn-tdd" id="user-content-fnref-tdd" data-footnote-ref aria-describedby="footnote-label" data-v-8c9498c0>2</a></sup>, because that would take me longer time until my app is usable. <em data-v-8c9498c0>I want to see that report already!</em></p></li><li data-v-8c9498c0><p data-v-8c9498c0>Still, I follow the above rule of thumb and made sure all IO operations are dependency-injected.</p></li></ul><hr data-v-8c9498c0><p data-v-8c9498c0>Another rule of thumb that I follow is to <strong data-v-8c9498c0>make every function that involves IO <code data-v-8c9498c0>async</code> from the start</strong> — even if it doesn’t use <code data-v-8c9498c0>await</code> at first.</p><ul data-v-8c9498c0><li data-v-8c9498c0>This way, should this function ever need to perform any async operation, I can just use <code data-v-8c9498c0>await</code> without introducing any breaking changes or costly refactors.</li></ul><hr data-v-8c9498c0><p data-v-8c9498c0>Now that I get the gratification of seeing that my app is working, I realized <em data-v-8c9498c0>“what a big mess of code I just created.”</em> I needed to refactor — and that’s when I have a need to test my code…</p></div><div class="d-split__right"><p data-v-8c9498c0>Before:</p><pre data-v-8c9498c0><code class="language-js" data-v-8c9498c0>export async function generateReport() {
+  const views = parseCSV(fs.readFileSync(&#39;views.csv&#39;))
+  const events = parseCSV(fs.readFileSync(&#39;events.csv&#39;))
+  // ...
+  fs.writeFileSync(&#39;engagement.csv&#39;, toCSV(engagement))
+  fs.writeFileSync(&#39;revenue.csv&#39;, toCSV(revenue))
+  console.log(&#39;Completed!&#39;)
+}
+</code></pre><p data-v-8c9498c0>After:</p><pre data-v-8c9498c0><code class="language-js" data-v-8c9498c0>export async function generateReport({
+  fs: { readFileSync, writeFileSync } = fs,
+  logger: { log } = console,
+} = {}) {
+  const views = parseCSV(readFileSync(&#39;views.csv&#39;))
+  const events = parseCSV(readFileSync(&#39;events.csv&#39;))
+  // ...
+  writeFileSync(&#39;engagement.csv&#39;, toCSV(engagement))
+  writeFileSync(&#39;revenue.csv&#39;, toCSV(revenue))
+  log(&#39;Completed!&#39;)
+}
+</code></pre></div></div><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>Thanks to the above rule, when I write tests,</p><ul data-v-8c9498c0><li data-v-8c9498c0>I can <strong data-v-8c9498c0>inject mock implementations</strong> of the IO functions, which lets me test my functions without stubbing or spying required.</li><li data-v-8c9498c0>I can easily write <strong data-v-8c9498c0>acceptance tests</strong> that covers the whole process and <a href="https://www.youtube.com/watch?v=AJ7u_Z-TS-A" data-v-8c9498c0><strong data-v-8c9498c0>still runs fast</strong></a>. These acceptance tests can provide more fidelity and confidence than unit tests.</li><li data-v-8c9498c0>Also, since dependency is injected from the outside, it also makes writing unit tests easier.</li></ul></div><div class="d-split__right"><p data-v-8c9498c0>Tests:</p><pre data-v-8c9498c0><code class="language-js" data-v-8c9498c0>describe(&#39;the engagement report&#39;, () =&gt; {
+  it(&#39;...&#39;, async () =&gt; {
+    const fs = new FakeFS(fixtures)
+    await generateReport({ fs })
+    expect(fs.readFileSync(&#39;engagement.csv&#39;)).toMatchSnapshot()
+  })
+})
+</code></pre></div></div><h3 id="real-world-examples-1" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#real-world-examples-1" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Real-world examples</h3><div class="d-split" data-v-8c9498c0><div class="d-split__left"><ul data-v-8c9498c0><li data-v-8c9498c0><p data-v-8c9498c0>The <a href="https://github.com/bemusic/song-workshop/blob/6d75baacf08b5c7127b6b6149e3a9c75973c1ec4/src/SongRender.ts#L52" data-v-8c9498c0><code data-v-8c9498c0>renderChart</code></a> function takes a musical score and bundles of sound files, and renders it into an OGG audio file<sup data-v-8c9498c0><a href="#user-content-fn-renderchart" id="user-content-fnref-renderchart" data-footnote-ref aria-describedby="footnote-label" data-v-8c9498c0>3</a></sup>.</p><ul data-v-8c9498c0><li data-v-8c9498c0>Since everything related to IO is injected into the function, I can <a href="https://github.com/bemusic/song-workshop/blob/6d75baacf08b5c7127b6b6149e3a9c75973c1ec4/src/SongRender.spec.ts#L9-L27" data-v-8c9498c0>trivially write a smoke test for it.</a></li></ul></li></ul></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-ts" data-v-8c9498c0>export type RenderOptions = {
+  soundAssetsMetadata: SoundAssetsMetadata
+  chartData: ArrayBuffer
+  chartFilename: string
+  loadBemusepack: (path: string) =&gt; Promise&lt;ArrayBuffer&gt;
+  log?: (text: string) =&gt; void
+}
+
+export async function renderChart(options: RenderOptions)
+</code></pre><hr data-v-8c9498c0></div></div><div class="d-split" data-v-8c9498c0><div class="d-split__left"><ul data-v-8c9498c0><li data-v-8c9498c0><p data-v-8c9498c0>The <a href="https://github.com/bemusic/bemuse/blob/5c4c3206b90ea7c05635da380f65508f4fff55aa/bemuse/src/omni-input/index.js#L29" data-v-8c9498c0><code data-v-8c9498c0>OmniInput</code></a> class handles all supported input for the game (keyboard, gamepad, MIDI controller).</p><ul data-v-8c9498c0><li data-v-8c9498c0>The <code data-v-8c9498c0>window</code> instance is injected through its constructor, <a href="https://github.com/bemusic/bemuse/blob/5c4c3206b90ea7c05635da380f65508f4fff55aa/bemuse/src/omni-input/index.spec.js#L72-L146" data-v-8c9498c0>it becomes trivial to write unit tests for these input devices without any stubbing.</a></li></ul></li></ul></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-ts" data-v-8c9498c0>export class OmniInput {
+  constructor(private _window = window, options = {}) {
+    // ...
+  }
+  // ...
+}
+</code></pre></div></div><section data-footnotes="" class="footnotes" data-v-8c9498c0><h2 id="footnote-label" class="sr-only" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#footnote-label" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Footnotes</h2><ol data-v-8c9498c0><li id="user-content-fn-why-selenium" data-v-8c9498c0><p data-v-8c9498c0><strong data-v-8c9498c0>Why did we switch from WebdriverIO to Selenium?</strong> At that time, we found a few problems with WebdriverIO:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Sometimes it would error out with messages like “an unknown server-side error occurred” without showing the response from Selenium server.</li><li data-v-8c9498c0>Upgrading to WebdriverIO v5 is painful due to <a href="https://github.com/webdriverio/webdriverio/blob/v5/CHANGELOG.md#v500-2018-12-20" data-v-8c9498c0>a lot of breaking changes</a>.</li><li data-v-8c9498c0>WebdriverIO v5 ships with built-in type definitions, but the types were inaccurate and inconsistent with its actual API.</li></ul><p data-v-8c9498c0>As of writing, WebdriverIO is at v7. Meanwhile, since 2019 selenium-webdriver’s API is much more stable and contains very little breaking changes. <a href="#user-content-fnref-why-selenium" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref" data-v-8c9498c0>↩</a></p></li><li id="user-content-fn-tdd" data-v-8c9498c0><p data-v-8c9498c0>When I was just starting out, TDD was an excellent tool. By forcing me to write tests before I write actual code, it teaches me <strong data-v-8c9498c0>how to write testable code.</strong> Religiously applying TDD was a very useful experience for me, because I did not know how to write testable code before.</p><p data-v-8c9498c0>But now I know how to write testable code. Without any test, I can write code knowing exactly how I would test it later when I need to. Do I still need TDD? Well, <em data-v-8c9498c0>sometimes.</em></p><p data-v-8c9498c0>Nowadays I do TDD when it is apparent that writing tests first would save me more time. I also try to write tests first when dealing with software regressions and legacy code. <a href="#user-content-fnref-tdd" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref" data-v-8c9498c0>↩</a></p></li><li id="user-content-fn-renderchart" data-v-8c9498c0><p data-v-8c9498c0>It uses Web Audio API and ffmpeg.wasm, but that’s an implementation detail <a href="#user-content-fnref-renderchart" data-footnote-backref="" aria-label="Back to reference 3" class="data-footnote-backref" data-v-8c9498c0>↩</a></p></li></ol></section><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+var _vue = require('vue');
+function render(_ctx, _cache) {
+  const _component_d_split = _vue.resolveComponent.call(void 0, "d-split")
+
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
+    _cache[31] || (_cache[31] = _vue.createStaticVNode.call(void 0, "<h1 id=\"low-effort-things-you-can-do-today-to-improve-code-maintainability-a-year-later\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#low-effort-things-you-can-do-today-to-improve-code-maintainability-a-year-later\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Low-effort things you can do today to improve code maintainability a year later</h1><p data-v-8c9498c0>When it comes to <strong data-v-8c9498c0>code maintainability</strong> in the long run, one has to strike a balance and avoid:</p><ul data-v-8c9498c0><li data-v-8c9498c0><strong data-v-8c9498c0>Over-<a href=\"SoftwareEngineering\" data-v-8c9498c0>engineering</a></strong> — spending a lot of time upfront designing things that turn out to be unnecessarily complex (or just unnecessary).</li><li data-v-8c9498c0><strong data-v-8c9498c0>Under-<a href=\"SoftwareEngineering\" data-v-8c9498c0>engineering</a></strong> — writing spaghetti code to ship fast, and paying for the technical debt later, suffering through bug-ridden untestable code and painful restructurings and/or rewrites.</li></ul><p data-v-8c9498c0>In this note, I will list a few practices that takes <em data-v-8c9498c0>minimal up-front effort</em> to do, but end up saving a lot of time down the line. Each section will also feature a few examples from real-world code. I will assume that you already have a basic level of code hygiene, e.g. using linters and formatting your code in a consistent style.</p><hr data-v-8c9498c0><h2 id=\"own-your-interface\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#own-your-interface\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Own your interface</h2>", 6)),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[0] || (_cache[0] = [
+        _vue.createElementVNode.call(void 0, "p", null, "Before:", -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-ts" }, "// app.js\nimport { Button } from 'semantic-ui-react'\n")
+        ], -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "p", null, "After:", -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-ts" }, "// ui.js\nexport { Button } from 'semantic-ui-react'\n\n// app.js\nimport { Button } from '@/ui'\n")
+        ], -1 /* CACHED */)
+      ]))]),
+      default: _vue.withCtx.call(void 0, () => [
+        _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createElementVNode.call(void 0, "strong", null, "Instead of depending on external libraries’ API, consider owning the API yourself.")
+        ], -1 /* CACHED */)),
+        _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createTextVNode.call(void 0, "You don’t have to design the API by yourself. The easiest low-effort approach is to steal the API from external modules by re-exporting them in your own modules. Make your application code depend only on "),
+          _vue.createElementVNode.call(void 0, "em", null, "your"),
+          _vue.createTextVNode.call(void 0, " API instead of external APIs.")
+        ], -1 /* CACHED */)),
+        _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "p", null, "When I follow this guideline, it lets me insulate myself from:", -1 /* CACHED */)),
+        _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "ul", null, [
+          _vue.createElementVNode.call(void 0, "li", null, "Breaking changes when upgrading the external library."),
+          _vue.createElementVNode.call(void 0, "li", null, "Rewriting a lot of code when I want to switch to a new library."),
+          _vue.createElementVNode.call(void 0, "li", null, "Adding features not provided by the third-party library.")
+        ], -1 /* CACHED */))
+      ]),
+      _: 1 /* STABLE */
+    }),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[5] || (_cache[5] = [
+        _vue.createElementVNode.call(void 0, "p", null, "Switch to MUI:", -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-ts" }, "// ui.js\nimport Button from '@mui/material/Button'\n\nexport function Button(props) {\n  const variant = props.primary\n    ? 'contained'\n    : props.secondary\n    ? 'outlined'\n    : 'text'\n  return (\n    <Button onClick={props.onClick} variant={variant}>\n      {props.children}\n    </Button>\n  )\n}\n")
+        ], -1 /* CACHED */)
+      ]))]),
+      default: _vue.withCtx.call(void 0, () => [
+        _cache[6] || (_cache[6] = _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createTextVNode.call(void 0, "If, for example, one year later I decide to switch to "),
+          _vue.createElementVNode.call(void 0, "a", { href: "https://mui.com/" }, "MUI"),
+          _vue.createTextVNode.call(void 0, ", I can do so while keeping most of my code intact.")
+        ], -1 /* CACHED */)),
+        _cache[7] || (_cache[7] = _vue.createElementVNode.call(void 0, "p", null, "At this point, the project will probably have 100 files that imports the Button component. That little re-export I did 1 year ago would have saved the effort of having to change 100 files.", -1 /* CACHED */)),
+        _cache[8] || (_cache[8] = _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createTextVNode.call(void 0, "Some people call this an "),
+          _vue.createElementVNode.call(void 0, "a", { href: "https://learn.microsoft.com/en-us/azure/architecture/patterns/anti-corruption-layer" }, "anti-corruption layer"),
+          _vue.createTextVNode.call(void 0, ". TypeScript’s structural typing makes building such layers very lightweight.")
+        ], -1 /* CACHED */))
+      ]),
+      _: 1 /* STABLE */
+    }),
+    _cache[32] || (_cache[32] = _vue.createElementVNode.call(void 0, "h3", { id: "real-world-examples" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#real-world-examples"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Real-world examples")
+    ], -1 /* CACHED */)),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[9] || (_cache[9] = [
+        _vue.createElementVNode.call(void 0, "p", null, "Types:", -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-ts" }, "type Storage = {\n  bucket: (bucketName: string) => Bucket\n}\ntype Bucket = {\n  file: (key: string) => File\n}\ntype File = {\n  download: () => Promise<[Buffer]>\n}\n")
+        ], -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "p", null, "App:", -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-ts" }, "import * as gcs from '@google-cloud/storage'\nconst storage: Storage = new gcs.Storage()\n")
+        ], -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "hr", null, null, -1 /* CACHED */)
+      ]))]),
+      default: _vue.withCtx.call(void 0, () => [
+        _cache[10] || (_cache[10] = _vue.createElementVNode.call(void 0, "ul", null, [
+          _vue.createElementVNode.call(void 0, "li", null, [
+            _vue.createElementVNode.call(void 0, "p", null, [
+              _vue.createTextVNode.call(void 0, "By "),
+              _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/dtinth/evalaas/blob/c83d3b3420d680ab97da977bfe3acda547be8384/types.d.ts#L17-L25" }, [
+                _vue.createTextVNode.call(void 0, "owning the "),
+                _vue.createElementVNode.call(void 0, "code", null, "Storage"),
+                _vue.createTextVNode.call(void 0, " interface")
+              ]),
+              _vue.createTextVNode.call(void 0, " which is derived from a "),
+              _vue.createElementVNode.call(void 0, "em", null, "strict minimal subset"),
+              _vue.createTextVNode.call(void 0, " of Google Cloud Storage’s JavaScript API…")
+            ]),
+            _vue.createElementVNode.call(void 0, "ul", null, [
+              _vue.createElementVNode.call(void 0, "li", null, [
+                _vue.createElementVNode.call(void 0, "p", null, [
+                  _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/dtinth/evalaas/blob/c83d3b3420d680ab97da977bfe3acda547be8384/server.js#L131-L149" }, "It becomes trivial to create a mock storage for testing purposes.")
+                ])
+              ]),
+              _vue.createElementVNode.call(void 0, "li", null, [
+                _vue.createElementVNode.call(void 0, "p", null, [
+                  _vue.createTextVNode.call(void 0, "A "),
+                  _vue.createElementVNode.call(void 0, "code", null, "new gcs.Storage()"),
+                  _vue.createTextVNode.call(void 0, " can be used where our "),
+                  _vue.createElementVNode.call(void 0, "code", null, "Storage"),
+                  _vue.createTextVNode.call(void 0, " is expected without having to write any abstraction layer, thanks to TypeScript’s structural typing.")
+                ])
+              ])
+            ])
+          ])
+        ], -1 /* CACHED */))
+      ]),
+      _: 1 /* STABLE */
+    }),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[11] || (_cache[11] = [
+        _vue.createElementVNode.call(void 0, "p", null, "Before:", -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-ts" }, "import { setupWorker, rest } from 'msw'\nimport { Provider } from 'react-redux'\nimport { DndProvider } from 'react-dnd'\nimport { HTML5Backend } from 'react-dnd-html5-backend'\nimport { QueryClient, QueryClientProvider } from 'react-query'\nimport {\n  render,\n  findByText,\n  fireEvent,\n  waitFor,\n  act,\n} from '@testing-library/react'\nimport { renderHook } from '@testing-library/react-hooks'\nimport userEvent from '@testing-library/user-event'\nimport { ThemeProvider } from '@mui/material/styles'\nimport { simulateDragAndDrop, retry } from '@/test-utils'\nimport { theme } from '@/app-design'\n")
+        ], -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "p", null, "After:", -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-ts" }, "import {\n  mockEndpoints,\n  renderInTestWrapper,\n  renderHook,\n  findByText,\n  actions,\n  waitFor,\n  act,\n  retry,\n} from '@/test-utils'\n")
+        ], -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "hr", null, null, -1 /* CACHED */)
+      ]))]),
+      default: _vue.withCtx.call(void 0, () => [
+        _cache[12] || (_cache[12] = _vue.createElementVNode.call(void 0, "ul", null, [
+          _vue.createElementVNode.call(void 0, "li", null, [
+            _vue.createElementVNode.call(void 0, "p", null, "Sometimes doing acceptance tests against UIs requires using a lot of helper libraries to set up the component hierarchy. This can easily lead to import hell. By owning the interface for the helper libraries…"),
+            _vue.createElementVNode.call(void 0, "ul", null, [
+              _vue.createElementVNode.call(void 0, "li", null, [
+                _vue.createTextVNode.call(void 0, "I can use all helpers in my tests without having to importing them from each npm package; the package where each helper comes from now becomes just an "),
+                _vue.createElementVNode.call(void 0, "em", null, "implementation detail.")
+              ]),
+              _vue.createElementVNode.call(void 0, "li", null, [
+                _vue.createTextVNode.call(void 0, "I can also create more idiomatic helpers (such as "),
+                _vue.createElementVNode.call(void 0, "code", null, "renderInTestWrapper"),
+                _vue.createTextVNode.call(void 0, ") leading to cleaner tests and less boilerplate, without having to add more import statements.")
+              ])
+            ])
+          ]),
+          _vue.createElementVNode.call(void 0, "li", null, [
+            _vue.createElementVNode.call(void 0, "p", null, [
+              _vue.createTextVNode.call(void 0, "At "),
+              _vue.createElementVNode.call(void 0, "a", { href: "https://taskworld.com/" }, "Taskworld"),
+              _vue.createTextVNode.call(void 0, ", using the same technique, we were able to…")
+            ]),
+            _vue.createElementVNode.call(void 0, "ul", null, [
+              _vue.createElementVNode.call(void 0, "li", null, [
+                _vue.createTextVNode.call(void 0, "migrate from "),
+                _vue.createElementVNode.call(void 0, "a", { href: "https://webdriver.io/" }, "WebdriverIO library"),
+                _vue.createTextVNode.call(void 0, " (v4)")
+              ]),
+              _vue.createElementVNode.call(void 0, "li", null, [
+                _vue.createTextVNode.call(void 0, "…to "),
+                _vue.createElementVNode.call(void 0, "a", { href: "https://www.npmjs.com/package/selenium-webdriver" }, "Selenium’s official JavaScript API"),
+                _vue.createTextVNode.call(void 0, " in 2019"),
+                _vue.createElementVNode.call(void 0, "sup", null, [
+                  _vue.createElementVNode.call(void 0, "a", {
+                    href: "#user-content-fn-why-selenium",
+                    id: "user-content-fnref-why-selenium",
+                    "data-footnote-ref": "",
+                    "aria-describedby": "footnote-label"
+                  }, "1")
+                ]),
+                _vue.createTextVNode.call(void 0, ", and")
+              ]),
+              _vue.createElementVNode.call(void 0, "li", null, [
+                _vue.createTextVNode.call(void 0, "…to "),
+                _vue.createElementVNode.call(void 0, "a", { href: "https://www.npmjs.com/package/playwright" }, "Playwright"),
+                _vue.createTextVNode.call(void 0, " in 2021,")
+              ]),
+              _vue.createElementVNode.call(void 0, "li", null, "with very little changes to the test scripts.")
+            ])
+          ])
+        ], -1 /* CACHED */))
+      ]),
+      _: 1 /* STABLE */
+    }),
+    _cache[33] || (_cache[33] = _vue.createElementVNode.call(void 0, "h3", { id: "applicability" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#applicability"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Applicability")
+    ], -1 /* CACHED */)),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[13] || (_cache[13] = [
+        _vue.createElementVNode.call(void 0, "p", null, "I don’t use this principle with:", -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "ul", null, [
+          _vue.createElementVNode.call(void 0, "li", null, "Standard libraries, e.g. Array, Set, Map."),
+          _vue.createElementVNode.call(void 0, "li", null, "Common infrastructure with a standardized interface e.g. OpenTelemetry."),
+          _vue.createElementVNode.call(void 0, "li", null, "Very stable libraries e.g. Lodash."),
+          _vue.createElementVNode.call(void 0, "li", null, "Base frameworks, e.g. React.")
+        ], -1 /* CACHED */)
+      ]))]),
+      default: _vue.withCtx.call(void 0, () => [
+        _cache[14] || (_cache[14] = _vue.createElementVNode.call(void 0, "p", null, "I use this principle with:", -1 /* CACHED */)),
+        _cache[15] || (_cache[15] = _vue.createElementVNode.call(void 0, "ul", null, [
+          _vue.createElementVNode.call(void 0, "li", null, "Common UI components."),
+          _vue.createElementVNode.call(void 0, "li", null, "Common infrastructure without a standardized interface e.g. logging."),
+          _vue.createElementVNode.call(void 0, "li", null, "Testing utilities."),
+          _vue.createElementVNode.call(void 0, "li", null, "Third-party SDKs.")
+        ], -1 /* CACHED */))
+      ]),
+      _: 1 /* STABLE */
+    }),
+    _cache[34] || (_cache[34] = _vue.createElementVNode.call(void 0, "hr", null, null, -1 /* CACHED */)),
+    _cache[35] || (_cache[35] = _vue.createElementVNode.call(void 0, "h2", { id: "dependency-inject-io-functions" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#dependency-inject-io-functions"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Dependency-inject IO functions")
+    ], -1 /* CACHED */)),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[16] || (_cache[16] = [
+        _vue.createElementVNode.call(void 0, "p", null, "Before:", -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-js" }, "export async function generateReport() {\n  const views = parseCSV(fs.readFileSync('views.csv'))\n  const events = parseCSV(fs.readFileSync('events.csv'))\n  // ...\n  fs.writeFileSync('engagement.csv', toCSV(engagement))\n  fs.writeFileSync('revenue.csv', toCSV(revenue))\n  console.log('Completed!')\n}\n")
+        ], -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "p", null, "After:", -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-js" }, "export async function generateReport({\n  fs: { readFileSync, writeFileSync } = fs,\n  logger: { log } = console,\n} = {}) {\n  const views = parseCSV(readFileSync('views.csv'))\n  const events = parseCSV(readFileSync('events.csv'))\n  // ...\n  writeFileSync('engagement.csv', toCSV(engagement))\n  writeFileSync('revenue.csv', toCSV(revenue))\n  log('Completed!')\n}\n")
+        ], -1 /* CACHED */)
+      ]))]),
+      default: _vue.withCtx.call(void 0, () => [
+        _cache[17] || (_cache[17] = _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createTextVNode.call(void 0, "One rule of thumb that works really well for me is to "),
+          _vue.createElementVNode.call(void 0, "strong", null, "perform dependency-injection on most IO operations.")
+        ], -1 /* CACHED */)),
+        _cache[18] || (_cache[18] = _vue.createElementVNode.call(void 0, "ul", null, [
+          _vue.createElementVNode.call(void 0, "li", null, [
+            _vue.createElementVNode.call(void 0, "p", null, [
+              _vue.createTextVNode.call(void 0, "Since I wanted the instant gratification of seeing my app working in the shortest amount of time possible, I didn’t bother doing test-driven development"),
+              _vue.createElementVNode.call(void 0, "sup", null, [
+                _vue.createElementVNode.call(void 0, "a", {
+                  href: "#user-content-fn-tdd",
+                  id: "user-content-fnref-tdd",
+                  "data-footnote-ref": "",
+                  "aria-describedby": "footnote-label"
+                }, "2")
+              ]),
+              _vue.createTextVNode.call(void 0, ", because that would take me longer time until my app is usable. "),
+              _vue.createElementVNode.call(void 0, "em", null, "I want to see that report already!")
+            ])
+          ]),
+          _vue.createElementVNode.call(void 0, "li", null, [
+            _vue.createElementVNode.call(void 0, "p", null, "Still, I follow the above rule of thumb and made sure all IO operations are dependency-injected.")
+          ])
+        ], -1 /* CACHED */)),
+        _cache[19] || (_cache[19] = _vue.createElementVNode.call(void 0, "hr", null, null, -1 /* CACHED */)),
+        _cache[20] || (_cache[20] = _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createTextVNode.call(void 0, "Another rule of thumb that I follow is to "),
+          _vue.createElementVNode.call(void 0, "strong", null, [
+            _vue.createTextVNode.call(void 0, "make every function that involves IO "),
+            _vue.createElementVNode.call(void 0, "code", null, "async"),
+            _vue.createTextVNode.call(void 0, " from the start")
+          ]),
+          _vue.createTextVNode.call(void 0, " — even if it doesn’t use "),
+          _vue.createElementVNode.call(void 0, "code", null, "await"),
+          _vue.createTextVNode.call(void 0, " at first.")
+        ], -1 /* CACHED */)),
+        _cache[21] || (_cache[21] = _vue.createElementVNode.call(void 0, "ul", null, [
+          _vue.createElementVNode.call(void 0, "li", null, [
+            _vue.createTextVNode.call(void 0, "This way, should this function ever need to perform any async operation, I can just use "),
+            _vue.createElementVNode.call(void 0, "code", null, "await"),
+            _vue.createTextVNode.call(void 0, " without introducing any breaking changes or costly refactors.")
+          ])
+        ], -1 /* CACHED */)),
+        _cache[22] || (_cache[22] = _vue.createElementVNode.call(void 0, "hr", null, null, -1 /* CACHED */)),
+        _cache[23] || (_cache[23] = _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createTextVNode.call(void 0, "Now that I get the gratification of seeing that my app is working, I realized "),
+          _vue.createElementVNode.call(void 0, "em", null, "“what a big mess of code I just created.”"),
+          _vue.createTextVNode.call(void 0, " I needed to refactor — and that’s when I have a need to test my code…")
+        ], -1 /* CACHED */))
+      ]),
+      _: 1 /* STABLE */
+    }),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[24] || (_cache[24] = [
+        _vue.createElementVNode.call(void 0, "p", null, "Tests:", -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-js" }, "describe('the engagement report', () => {\n  it('...', async () => {\n    const fs = new FakeFS(fixtures)\n    await generateReport({ fs })\n    expect(fs.readFileSync('engagement.csv')).toMatchSnapshot()\n  })\n})\n")
+        ], -1 /* CACHED */)
+      ]))]),
+      default: _vue.withCtx.call(void 0, () => [
+        _cache[25] || (_cache[25] = _vue.createElementVNode.call(void 0, "p", null, "Thanks to the above rule, when I write tests,", -1 /* CACHED */)),
+        _cache[26] || (_cache[26] = _vue.createElementVNode.call(void 0, "ul", null, [
+          _vue.createElementVNode.call(void 0, "li", null, [
+            _vue.createTextVNode.call(void 0, "I can "),
+            _vue.createElementVNode.call(void 0, "strong", null, "inject mock implementations"),
+            _vue.createTextVNode.call(void 0, " of the IO functions, which lets me test my functions without stubbing or spying required.")
+          ]),
+          _vue.createElementVNode.call(void 0, "li", null, [
+            _vue.createTextVNode.call(void 0, "I can easily write "),
+            _vue.createElementVNode.call(void 0, "strong", null, "acceptance tests"),
+            _vue.createTextVNode.call(void 0, " that covers the whole process and "),
+            _vue.createElementVNode.call(void 0, "a", { href: "https://www.youtube.com/watch?v=AJ7u_Z-TS-A" }, [
+              _vue.createElementVNode.call(void 0, "strong", null, "still runs fast")
+            ]),
+            _vue.createTextVNode.call(void 0, ". These acceptance tests can provide more fidelity and confidence than unit tests.")
+          ]),
+          _vue.createElementVNode.call(void 0, "li", null, "Also, since dependency is injected from the outside, it also makes writing unit tests easier.")
+        ], -1 /* CACHED */))
+      ]),
+      _: 1 /* STABLE */
+    }),
+    _cache[36] || (_cache[36] = _vue.createElementVNode.call(void 0, "h3", { id: "real-world-examples-1" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#real-world-examples-1"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Real-world examples")
+    ], -1 /* CACHED */)),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[27] || (_cache[27] = [
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-ts" }, "export type RenderOptions = {\n  soundAssetsMetadata: SoundAssetsMetadata\n  chartData: ArrayBuffer\n  chartFilename: string\n  loadBemusepack: (path: string) => Promise<ArrayBuffer>\n  log?: (text: string) => void\n}\n\nexport async function renderChart(options: RenderOptions)\n")
+        ], -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "hr", null, null, -1 /* CACHED */)
+      ]))]),
+      default: _vue.withCtx.call(void 0, () => [
+        _cache[28] || (_cache[28] = _vue.createElementVNode.call(void 0, "ul", null, [
+          _vue.createElementVNode.call(void 0, "li", null, [
+            _vue.createElementVNode.call(void 0, "p", null, [
+              _vue.createTextVNode.call(void 0, "The "),
+              _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/bemusic/song-workshop/blob/6d75baacf08b5c7127b6b6149e3a9c75973c1ec4/src/SongRender.ts#L52" }, [
+                _vue.createElementVNode.call(void 0, "code", null, "renderChart")
+              ]),
+              _vue.createTextVNode.call(void 0, " function takes a musical score and bundles of sound files, and renders it into an OGG audio file"),
+              _vue.createElementVNode.call(void 0, "sup", null, [
+                _vue.createElementVNode.call(void 0, "a", {
+                  href: "#user-content-fn-renderchart",
+                  id: "user-content-fnref-renderchart",
+                  "data-footnote-ref": "",
+                  "aria-describedby": "footnote-label"
+                }, "3")
+              ]),
+              _vue.createTextVNode.call(void 0, ".")
+            ]),
+            _vue.createElementVNode.call(void 0, "ul", null, [
+              _vue.createElementVNode.call(void 0, "li", null, [
+                _vue.createTextVNode.call(void 0, "Since everything related to IO is injected into the function, I can "),
+                _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/bemusic/song-workshop/blob/6d75baacf08b5c7127b6b6149e3a9c75973c1ec4/src/SongRender.spec.ts#L9-L27" }, "trivially write a smoke test for it.")
+              ])
+            ])
+          ])
+        ], -1 /* CACHED */))
+      ]),
+      _: 1 /* STABLE */
+    }),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[29] || (_cache[29] = [
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-ts" }, "export class OmniInput {\n  constructor(private _window = window, options = {}) {\n    // ...\n  }\n  // ...\n}\n")
+        ], -1 /* CACHED */)
+      ]))]),
+      default: _vue.withCtx.call(void 0, () => [
+        _cache[30] || (_cache[30] = _vue.createElementVNode.call(void 0, "ul", null, [
+          _vue.createElementVNode.call(void 0, "li", null, [
+            _vue.createElementVNode.call(void 0, "p", null, [
+              _vue.createTextVNode.call(void 0, "The "),
+              _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/bemusic/bemuse/blob/5c4c3206b90ea7c05635da380f65508f4fff55aa/bemuse/src/omni-input/index.js#L29" }, [
+                _vue.createElementVNode.call(void 0, "code", null, "OmniInput")
+              ]),
+              _vue.createTextVNode.call(void 0, " class handles all supported input for the game (keyboard, gamepad, MIDI controller).")
+            ]),
+            _vue.createElementVNode.call(void 0, "ul", null, [
+              _vue.createElementVNode.call(void 0, "li", null, [
+                _vue.createTextVNode.call(void 0, "The "),
+                _vue.createElementVNode.call(void 0, "code", null, "window"),
+                _vue.createTextVNode.call(void 0, " instance is injected through its constructor, "),
+                _vue.createElementVNode.call(void 0, "a", { href: "https://github.com/bemusic/bemuse/blob/5c4c3206b90ea7c05635da380f65508f4fff55aa/bemuse/src/omni-input/index.spec.js#L72-L146" }, "it becomes trivial to write unit tests for these input devices without any stubbing.")
+              ])
+            ])
+          ])
+        ], -1 /* CACHED */))
+      ]),
+      _: 1 /* STABLE */
+    }),
+    _cache[37] || (_cache[37] = _vue.createStaticVNode.call(void 0, "<section data-footnotes=\"\" class=\"footnotes\" data-v-8c9498c0><h2 id=\"footnote-label\" class=\"sr-only\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#footnote-label\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Footnotes</h2><ol data-v-8c9498c0><li id=\"user-content-fn-why-selenium\" data-v-8c9498c0><p data-v-8c9498c0><strong data-v-8c9498c0>Why did we switch from WebdriverIO to Selenium?</strong> At that time, we found a few problems with WebdriverIO:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Sometimes it would error out with messages like “an unknown server-side error occurred” without showing the response from Selenium server.</li><li data-v-8c9498c0>Upgrading to WebdriverIO v5 is painful due to <a href=\"https://github.com/webdriverio/webdriverio/blob/v5/CHANGELOG.md#v500-2018-12-20\" data-v-8c9498c0>a lot of breaking changes</a>.</li><li data-v-8c9498c0>WebdriverIO v5 ships with built-in type definitions, but the types were inaccurate and inconsistent with its actual API.</li></ul><p data-v-8c9498c0>As of writing, WebdriverIO is at v7. Meanwhile, since 2019 selenium-webdriver’s API is much more stable and contains very little breaking changes. <a href=\"#user-content-fnref-why-selenium\" data-footnote-backref=\"\" aria-label=\"Back to reference 1\" class=\"data-footnote-backref\" data-v-8c9498c0>↩</a></p></li><li id=\"user-content-fn-tdd\" data-v-8c9498c0><p data-v-8c9498c0>When I was just starting out, TDD was an excellent tool. By forcing me to write tests before I write actual code, it teaches me <strong data-v-8c9498c0>how to write testable code.</strong> Religiously applying TDD was a very useful experience for me, because I did not know how to write testable code before.</p><p data-v-8c9498c0>But now I know how to write testable code. Without any test, I can write code knowing exactly how I would test it later when I need to. Do I still need TDD? Well, <em data-v-8c9498c0>sometimes.</em></p><p data-v-8c9498c0>Nowadays I do TDD when it is apparent that writing tests first would save me more time. I also try to write tests first when dealing with software regressions and legacy code. <a href=\"#user-content-fnref-tdd\" data-footnote-backref=\"\" aria-label=\"Back to reference 2\" class=\"data-footnote-backref\" data-v-8c9498c0>↩</a></p></li><li id=\"user-content-fn-renderchart\" data-v-8c9498c0><p data-v-8c9498c0>It uses Web Audio API and ffmpeg.wasm, but that’s an implementation detail <a href=\"#user-content-fnref-renderchart\" data-footnote-backref=\"\" aria-label=\"Back to reference 3\" class=\"data-footnote-backref\" data-v-8c9498c0>↩</a></p></li></ol></section>", 1))
+  ], 64 /* STABLE_FRAGMENT */))
+}
+__sfc__.render = render
+__sfc__.__scopeId = "data-v-8c9498c0"
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"public":true,"title":"Low-effort things you can do today to improve code maintainability a year later.","wide":true,"aliases":["20211019T141224Z1105"]};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

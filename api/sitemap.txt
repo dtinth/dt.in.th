@@ -179,7 +179,6 @@ https://notes.dt.in.th/GoogleCloud
 https://notes.dt.in.th/GoogleCloudFreeTier
 https://notes.dt.in.th/GoogleCloudServiceAccount
 https://notes.dt.in.th/GoogleCloudServiceAccountIdToken
-https://notes.dt.in.th/GradualTypingTalk
 https://notes.dt.in.th/Grist
 https://notes.dt.in.th/GristDockerCompose
 https://notes.dt.in.th/GristSelfHostedBenchmark

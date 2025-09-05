@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html data-precompiled=true data-layout="wide" lang="en" data-dtinth="true">
+<html data-precompiled=true data-slug="Syntax" data-layout="wide" lang="en" data-dtinth="true">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/static/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Custom elements available in notes.dt.in.th | notes.dt.in.th</title><meta property="og:title" content="Custom elements available in notes.dt.in.th" data-source="note">
-<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/20211015T100140Z3969" data-source="note">
+    <title>Markdown syntax extensions and custom elements in notes.dt.in.th | notes.dt.in.th</title><meta property="og:title" content="Markdown syntax extensions and custom elements in notes.dt.in.th" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/Syntax" data-source="note">
 <meta property="og:image:width" content="1800" data-source="note">
 <meta property="og:image:height" content="1680" data-source="note">
-<link rel="canonical" href="https://notes.dt.in.th/20211015T100140Z3969" data-source="note"><style id="note-styles">/* layer: default */
+<link rel="canonical" href="https://notes.dt.in.th/Syntax" data-source="note"><style id="note-styles">/* layer: default */
 .my[data-v-8c9498c0]{margin-top:1rem;margin-bottom:1rem;}
-.contents[data-v-8c9498c0]{display:contents;}</style>
+.contents[data-v-8c9498c0]{display:contents;}
+.border[data-v-8c9498c0]{border-width:1px;}</style>
     <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
     <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/runtime/entry/index.css" />
@@ -22,13 +23,13 @@
     <div class="h-entry">
       <main id="main">
         <div id="mainContents">
-          <div class="prose e-content" id="noteContents"><!--[--><div class="lead" data-v-8c9498c0><p data-v-8c9498c0>Custom elements available in this website (this is just for my own reference):</p></div><h2 id="two-column-layout" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#two-column-layout" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Two-column layout</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>The <code data-v-8c9498c0>split</code> and <code data-v-8c9498c0>aside</code> <a href="https://talk.commonmark.org/t/generic-directives-plugins-syntax/444" data-v-8c9498c0>directive</a> can be used.</p></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-markdown" data-v-8c9498c0>::::split
+          <div class="prose e-content" id="noteContents"><!--[--><p data-v-8c9498c0>Markdown syntax extensions and custom elements available in this website (for my own reference):</p><h2 id="two-column-layout" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#two-column-layout" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Two-column layout</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>The <code data-v-8c9498c0>split</code> and <code data-v-8c9498c0>aside</code> <a href="https://talk.commonmark.org/t/generic-directives-plugins-syntax/444" data-v-8c9498c0>directive</a> can be used.</p></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-markdown" data-v-8c9498c0>:::::split
 Left contents
 
-:::aside
+::::aside
 Right contents
-:::
 ::::
+:::::
 </code></pre></div></div><h2 id="grid-system" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#grid-system" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Grid system</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>Grid system powered by <a href="https://rsms.me/raster/" data-v-8c9498c0>Raster</a> allows for more flexible layout.</p><r-grid columns="3" data-v-8c9498c0><r-cell data-v-8c9498c0>One</r-cell><r-cell data-v-8c9498c0>Two</r-cell><r-cell data-v-8c9498c0>Three</r-cell></r-grid></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-html" data-v-8c9498c0>&lt;r-grid columns=&quot;3&quot;&gt;
   &lt;r-cell&gt;One&lt;/r-cell&gt;
   &lt;r-cell&gt;Two&lt;/r-cell&gt;
@@ -66,7 +67,10 @@ This is a caution box
 This is a details box
 :::
 </code></pre></div></div><h2 id="youtube-embed" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#youtube-embed" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>YouTube embed</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><youtube-embed video-id="chuBHB0rRQo" data-v-8c9498c0></youtube-embed></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-markdown" data-v-8c9498c0>::youtube[chuBHB0rRQo]
-</code></pre></div></div><h2 id="chat-bubbles" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#chat-bubbles" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Chat bubbles</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><div class="notes-bubble" data-author-position="right" data-v-8c9498c0><div class="notes-bubble__author" data-v-8c9498c0><span class="notes-bubble__me" data-v-8c9498c0>Me:</span></div><div class="notes-bubble__message" data-v-8c9498c0><p data-v-8c9498c0>hi!</p></div></div><div class="notes-bubble" data-author-position="left" data-v-8c9498c0><div class="notes-bubble__author" data-v-8c9498c0><notes-bubble-author author="ChatGPT" data-v-8c9498c0></notes-bubble-author></div><div class="notes-bubble__message" data-v-8c9498c0><p data-v-8c9498c0>Hi there! How&#39;s it going?</p></div></div></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-markdown" data-v-8c9498c0>:::me
+</code></pre></div></div><h2 id="figures" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#figures" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Figures</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><figure class="framed" data-v-8c9498c0><p data-v-8c9498c0><img src="https://im.dt.in.th/ipfs/bafybeigltieu33eda3ux2uprgua5haczvev5ownguordyfgds5qrexdlbq/image.webp" alt="Network graph visualization showing hundreds of small nodes" data-v-8c9498c0></p><figcaption data-v-8c9498c0>Linked notes can form a network of knowledge</figcaption></figure></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-markdown" data-v-8c9498c0>:::figure[Linked notes can form a network of knowledge]{.framed}
+![Network graph visualization showing hundreds of small nodes](https://im.dt.in.th/ipfs/bafybeigltieu33eda3ux2uprgua5haczvev5ownguordyfgds5qrexdlbq/image.webp)
+:::
+</code></pre><p data-v-8c9498c0>Classes available:</p><ul data-v-8c9498c0><li data-v-8c9498c0><code data-v-8c9498c0>.framed</code> - adds border around images</li></ul></div></div><h2 id="chat-bubbles" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#chat-bubbles" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Chat bubbles</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><div class="notes-bubble" data-author-position="right" data-v-8c9498c0><div class="notes-bubble__author" data-v-8c9498c0><span class="notes-bubble__me" data-v-8c9498c0>Me:</span></div><div class="notes-bubble__message" data-v-8c9498c0><p data-v-8c9498c0>hi!</p></div></div><div class="notes-bubble" data-author-position="left" data-v-8c9498c0><div class="notes-bubble__author" data-v-8c9498c0><notes-bubble-author author="ChatGPT" data-v-8c9498c0></notes-bubble-author></div><div class="notes-bubble__message" data-v-8c9498c0><p data-v-8c9498c0>Hi there! How&#39;s it going?</p></div></div></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-markdown" data-v-8c9498c0>:::me
 hi!
 :::
 
@@ -75,6 +79,12 @@ Hi there! How&#39;s it going?
 :::
 </code></pre></div></div><h2 id="thoughts" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#thoughts" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Thoughts</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><div class="notes-bubble" data-author-position="right" data-v-8c9498c0><div class="notes-bubble__message" data-v-8c9498c0><p data-v-8c9498c0>But what about this case?</p></div></div></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-markdown" data-v-8c9498c0>:::thought
 But what about this case?
+:::
+</code></pre></div></div><h2 id="call-to-action" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#call-to-action" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Call to action</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p class="notes-cta" data-v-8c9498c0><a class="notes-cta__link" href="https://github.com/dtinth/notes" data-v-8c9498c0><span class="notes-cta__title" data-v-8c9498c0>View on GitHub</span><span class="notes-cta__url" data-v-8c9498c0>https://github.com/dtinth/notes</span></a></p></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-markdown" data-v-8c9498c0>::cta[View on GitHub]{href=&quot;https://github.com/dtinth/notes&quot;}
+</code></pre></div></div><h2 id="twitter-embeds" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#twitter-embeds" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Twitter embeds</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p lang="en" dir="ltr" data-v-8c9498c0>Proudly storing JWT auth token in localStorage in 2024 🥇 <a href="https://t.co/fhfzJZqIsZ" data-v-8c9498c0>https://t.co/fhfzJZqIsZ</a></p>— LiveOverflow 🔴 (@LiveOverflow) <a href="https://twitter.com/LiveOverflow/status/1817500071312699720?ref_src=twsrc%5Etfw" data-v-8c9498c0>July 28, 2024</a></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-markdown" data-v-8c9498c0>:::tweet
+
+&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Proudly storing JWT auth token in localStorage in 2024 🥇 &lt;a href=&quot;https://t.co/fhfzJZqIsZ&quot;&gt;https://t.co/fhfzJZqIsZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; LiveOverflow 🔴 (@LiveOverflow) &lt;a href=&quot;https://twitter.com/LiveOverflow/status/1817500071312699720?ref_src=twsrc%5Etfw&quot;&gt;July 28, 2024&lt;/a&gt;
+
 :::
 </code></pre></div></div><!--]--></div>
         </div>
@@ -138,10 +148,8 @@ function render(_ctx, _cache) {
   const _component_notes_bubble_author = _vue.resolveComponent.call(void 0, "notes-bubble-author")
 
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _cache[29] || (_cache[29] = _vue.createElementVNode.call(void 0, "div", { class: "lead" }, [
-      _vue.createElementVNode.call(void 0, "p", null, "Custom elements available in this website (this is just for my own reference):")
-    ], -1 /* CACHED */)),
-    _cache[30] || (_cache[30] = _vue.createElementVNode.call(void 0, "h2", { id: "two-column-layout" }, [
+    _cache[37] || (_cache[37] = _vue.createElementVNode.call(void 0, "p", null, "Markdown syntax extensions and custom elements available in this website (for my own reference):", -1 /* CACHED */)),
+    _cache[38] || (_cache[38] = _vue.createElementVNode.call(void 0, "h2", { id: "two-column-layout" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -154,7 +162,7 @@ function render(_ctx, _cache) {
     _vue.createVNode.call(void 0, _component_d_split, null, {
       right: _vue.withCtx.call(void 0, () => [...(_cache[0] || (_cache[0] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
-          _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, "::::split\nLeft contents\n\n:::aside\nRight contents\n:::\n::::\n")
+          _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::::split\nLeft contents\n\n::::aside\nRight contents\n::::\n:::::\n")
         ], -1 /* CACHED */)
       ]))]),
       default: _vue.withCtx.call(void 0, () => [
@@ -170,7 +178,7 @@ function render(_ctx, _cache) {
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[31] || (_cache[31] = _vue.createElementVNode.call(void 0, "h2", { id: "grid-system" }, [
+    _cache[39] || (_cache[39] = _vue.createElementVNode.call(void 0, "h2", { id: "grid-system" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -218,7 +226,7 @@ function render(_ctx, _cache) {
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[32] || (_cache[32] = _vue.createElementVNode.call(void 0, "h2", { id: "callouts" }, [
+    _cache[40] || (_cache[40] = _vue.createElementVNode.call(void 0, "h2", { id: "callouts" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -291,7 +299,7 @@ function render(_ctx, _cache) {
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[33] || (_cache[33] = _vue.createElementVNode.call(void 0, "h2", { id: "youtube-embed" }, [
+    _cache[41] || (_cache[41] = _vue.createElementVNode.call(void 0, "h2", { id: "youtube-embed" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -312,7 +320,43 @@ function render(_ctx, _cache) {
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[34] || (_cache[34] = _vue.createElementVNode.call(void 0, "h2", { id: "chat-bubbles" }, [
+    _cache[42] || (_cache[42] = _vue.createElementVNode.call(void 0, "h2", { id: "figures" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#figures"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Figures")
+    ], -1 /* CACHED */)),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[24] || (_cache[24] = [
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::figure[Linked notes can form a network of knowledge]{.framed}\n![Network graph visualization showing hundreds of small nodes](https://im.dt.in.th/ipfs/bafybeigltieu33eda3ux2uprgua5haczvev5ownguordyfgds5qrexdlbq/image.webp)\n:::\n")
+        ], -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "p", null, "Classes available:", -1 /* CACHED */),
+        _vue.createElementVNode.call(void 0, "ul", null, [
+          _vue.createElementVNode.call(void 0, "li", null, [
+            _vue.createElementVNode.call(void 0, "code", null, ".framed"),
+            _vue.createTextVNode.call(void 0, " - adds border around images")
+          ])
+        ], -1 /* CACHED */)
+      ]))]),
+      default: _vue.withCtx.call(void 0, () => [
+        _cache[25] || (_cache[25] = _vue.createElementVNode.call(void 0, "figure", { class: "framed" }, [
+          _vue.createElementVNode.call(void 0, "p", null, [
+            _vue.createElementVNode.call(void 0, "img", {
+              src: "https://im.dt.in.th/ipfs/bafybeigltieu33eda3ux2uprgua5haczvev5ownguordyfgds5qrexdlbq/image.webp",
+              alt: "Network graph visualization showing hundreds of small nodes"
+            })
+          ]),
+          _vue.createElementVNode.call(void 0, "figcaption", null, "Linked notes can form a network of knowledge")
+        ], -1 /* CACHED */))
+      ]),
+      _: 1 /* STABLE */
+    }),
+    _cache[43] || (_cache[43] = _vue.createElementVNode.call(void 0, "h2", { id: "chat-bubbles" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -323,13 +367,13 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "Chat bubbles")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      right: _vue.withCtx.call(void 0, () => [...(_cache[25] || (_cache[25] = [
+      right: _vue.withCtx.call(void 0, () => [...(_cache[27] || (_cache[27] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::me\nhi!\n:::\n\n:::bubble[ChatGPT]\nHi there! How's it going?\n:::\n")
         ], -1 /* CACHED */)
       ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _cache[26] || (_cache[26] = _vue.createElementVNode.call(void 0, "div", {
+        _cache[28] || (_cache[28] = _vue.createElementVNode.call(void 0, "div", {
           class: "notes-bubble",
           "data-author-position": "right"
         }, [
@@ -344,14 +388,14 @@ function render(_ctx, _cache) {
           _vue.createElementVNode.call(void 0, "div", _hoisted_16, [
             _vue.createVNode.call(void 0, _component_notes_bubble_author, { author: "ChatGPT" })
           ]),
-          _cache[24] || (_cache[24] = _vue.createElementVNode.call(void 0, "div", { class: "notes-bubble__message" }, [
+          _cache[26] || (_cache[26] = _vue.createElementVNode.call(void 0, "div", { class: "notes-bubble__message" }, [
             _vue.createElementVNode.call(void 0, "p", null, "Hi there! How's it going?")
           ], -1 /* CACHED */))
         ])
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[35] || (_cache[35] = _vue.createElementVNode.call(void 0, "h2", { id: "thoughts" }, [
+    _cache[44] || (_cache[44] = _vue.createElementVNode.call(void 0, "h2", { id: "thoughts" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -362,13 +406,13 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "Thoughts")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      right: _vue.withCtx.call(void 0, () => [...(_cache[27] || (_cache[27] = [
+      right: _vue.withCtx.call(void 0, () => [...(_cache[29] || (_cache[29] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::thought\nBut what about this case?\n:::\n")
         ], -1 /* CACHED */)
       ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _cache[28] || (_cache[28] = _vue.createElementVNode.call(void 0, "div", {
+        _cache[30] || (_cache[30] = _vue.createElementVNode.call(void 0, "div", {
           class: "notes-bubble",
           "data-author-position": "right"
         }, [
@@ -378,6 +422,64 @@ function render(_ctx, _cache) {
         ], -1 /* CACHED */))
       ]),
       _: 1 /* STABLE */
+    }),
+    _cache[45] || (_cache[45] = _vue.createElementVNode.call(void 0, "h2", { id: "call-to-action" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#call-to-action"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Call to action")
+    ], -1 /* CACHED */)),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[31] || (_cache[31] = [
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, "::cta[View on GitHub]{href=\"https://github.com/dtinth/notes\"}\n")
+        ], -1 /* CACHED */)
+      ]))]),
+      default: _vue.withCtx.call(void 0, () => [
+        _cache[32] || (_cache[32] = _vue.createElementVNode.call(void 0, "p", { class: "notes-cta" }, [
+          _vue.createElementVNode.call(void 0, "a", {
+            class: "notes-cta__link",
+            href: "https://github.com/dtinth/notes"
+          }, [
+            _vue.createElementVNode.call(void 0, "span", { class: "notes-cta__title" }, "View on GitHub"),
+            _vue.createElementVNode.call(void 0, "span", { class: "notes-cta__url" }, "https://github.com/dtinth/notes")
+          ])
+        ], -1 /* CACHED */))
+      ]),
+      _: 1 /* STABLE */
+    }),
+    _cache[46] || (_cache[46] = _vue.createElementVNode.call(void 0, "h2", { id: "twitter-embeds" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#twitter-embeds"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Twitter embeds")
+    ], -1 /* CACHED */)),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[33] || (_cache[33] = [
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::tweet\n\n<p lang=\"en\" dir=\"ltr\">Proudly storing JWT auth token in localStorage in 2024 🥇 <a href=\"https://t.co/fhfzJZqIsZ\">https://t.co/fhfzJZqIsZ</a></p>&mdash; LiveOverflow 🔴 (@LiveOverflow) <a href=\"https://twitter.com/LiveOverflow/status/1817500071312699720?ref_src=twsrc%5Etfw\">July 28, 2024</a>\n\n:::\n")
+        ], -1 /* CACHED */)
+      ]))]),
+      default: _vue.withCtx.call(void 0, () => [
+        _cache[34] || (_cache[34] = _vue.createElementVNode.call(void 0, "p", {
+          lang: "en",
+          dir: "ltr"
+        }, [
+          _vue.createTextVNode.call(void 0, "Proudly storing JWT auth token in localStorage in 2024 🥇 "),
+          _vue.createElementVNode.call(void 0, "a", { href: "https://t.co/fhfzJZqIsZ" }, "https://t.co/fhfzJZqIsZ")
+        ], -1 /* CACHED */)),
+        _cache[35] || (_cache[35] = _vue.createTextVNode.call(void 0, "— LiveOverflow 🔴 (@LiveOverflow) ", -1 /* CACHED */)),
+        _cache[36] || (_cache[36] = _vue.createElementVNode.call(void 0, "a", { href: "https://twitter.com/LiveOverflow/status/1817500071312699720?ref_src=twsrc%5Etfw" }, "July 28, 2024", -1 /* CACHED */))
+      ]),
+      _: 1 /* STABLE */
     })
   ], 64 /* STABLE_FRAGMENT */))
 }
@@ -385,7 +487,7 @@ __sfc__.render = render
 __sfc__.__scopeId = "data-v-8c9498c0"
 __sfc__.__file = "Note.vue"
 exports. default = __sfc__};
-window.precompiledFrontMatter = {"public":true,"wide":true,"title":"Custom elements available in notes.dt.in.th"};
+window.precompiledFrontMatter = {"public":true,"wide":true,"title":"Markdown syntax extensions and custom elements in notes.dt.in.th","created":"2021-10-15T00:00:00.000Z","aliases":["20211015T100140Z3969"]};
 </script>
     <script type="module" src="/runtime/entry/index.js"></script>
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->

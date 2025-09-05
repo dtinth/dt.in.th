@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="PublishMarkdownPageWithoutBuildTool" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quickly publish a Markdown page without build tool | notes.dt.in.th</title><meta property="og:title" content="Quickly publish a Markdown page without build tool" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/PublishMarkdownPageWithoutBuildTool" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://notes.dt.in.th/PublishMarkdownPageWithoutBuildTool" data-source="note">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><p>Sometimes, I wanted to create an <a href="HTML">HTML</a> file with some contents. I do not intend to upload it anywhere, just display it locally. I want to use <a href="Markdown">Markdown</a> for some of the contents, but I don’t want to use any build tool. I just want an edit-save-reload workflow.</p><p>Here’s a boilerplate for that:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#E1E4E8;">&lt;!</span><span style="color:#85E89D;">DOCTYPE</span><span style="color:#B392F0;"> html</span><span style="color:#E1E4E8;">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">&lt;</span><span style="color:#85E89D;">html</span><span style="color:#E1E4E8;">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">  &lt;</span><span style="color:#85E89D;">head</span><span style="color:#E1E4E8;">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">    &lt;</span><span style="color:#85E89D;">meta</span><span style="color:#B392F0;"> http-equiv</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;X-UA-Compatible&quot;</span><span style="color:#B392F0;"> content</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;IE=edge,chrome=1&quot;</span><span style="color:#E1E4E8;"> /&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">    &lt;</span><span style="color:#85E89D;">meta</span><span style="color:#B392F0;"> name</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;viewport&quot;</span><span style="color:#B392F0;"> content</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;width=device-width,initial-scale=1&quot;</span><span style="color:#E1E4E8;"> /&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">    &lt;</span><span style="color:#85E89D;">meta</span><span style="color:#B392F0;"> charset</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;UTF-8&quot;</span><span style="color:#E1E4E8;"> /&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">  &lt;/</span><span style="color:#85E89D;">head</span><span style="color:#E1E4E8;">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">  &lt;</span><span style="color:#85E89D;">body</span><span style="color:#E1E4E8;">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">    &lt;</span><span style="color:#85E89D;">div</span><span style="color:#B392F0;"> id</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;app&quot;</span><span style="color:#E1E4E8;">&gt;&lt;/</span><span style="color:#85E89D;">div</span><span style="color:#E1E4E8;">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">    &lt;</span><span style="color:#85E89D;">script</span></span>
+<span class="line"><span style="color:#B392F0;">      src</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js&quot;</span></span>
+<span class="line"><span style="color:#B392F0;">      crossorigin</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;anonymous&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8;">    &gt;&lt;/</span><span style="color:#85E89D;">script</span><span style="color:#E1E4E8;">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">    &lt;</span><span style="color:#85E89D;">script</span><span style="color:#E1E4E8;">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">      app.innerHTML </span><span style="color:#F97583;">=</span><span style="color:#B392F0;"> markdownit</span><span style="color:#E1E4E8;">().</span><span style="color:#B392F0;">render</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">`</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF;"># Hello!</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF;">Put your Markdown content here.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF;">`</span><span style="color:#E1E4E8;">)</span></span>
+<span class="line"><span style="color:#E1E4E8;">    &lt;/</span><span style="color:#85E89D;">script</span><span style="color:#E1E4E8;">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">  &lt;/</span><span style="color:#85E89D;">body</span><span style="color:#E1E4E8;">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">&lt;/</span><span style="color:#85E89D;">html</span><span style="color:#E1E4E8;">&gt;</span></span></code></pre><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+var _vue = require('vue');
+function render(_ctx, _cache) {
+  return _cache[0] || (_cache[0] = _vue.createStaticVNode.call(void 0, "<p>Sometimes, I wanted to create an <a href=\"HTML\">HTML</a> file with some contents. I do not intend to upload it anywhere, just display it locally. I want to use <a href=\"Markdown\">Markdown</a> for some of the contents, but I don’t want to use any build tool. I just want an edit-save-reload workflow.</p><p>Here’s a boilerplate for that:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#E1E4E8;\">&lt;!</span><span style=\"color:#85E89D;\">DOCTYPE</span><span style=\"color:#B392F0;\"> html</span><span style=\"color:#E1E4E8;\">&gt;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">&lt;</span><span style=\"color:#85E89D;\">html</span><span style=\"color:#E1E4E8;\">&gt;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  &lt;</span><span style=\"color:#85E89D;\">head</span><span style=\"color:#E1E4E8;\">&gt;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">    &lt;</span><span style=\"color:#85E89D;\">meta</span><span style=\"color:#B392F0;\"> http-equiv</span><span style=\"color:#E1E4E8;\">=</span><span style=\"color:#9ECBFF;\">&quot;X-UA-Compatible&quot;</span><span style=\"color:#B392F0;\"> content</span><span style=\"color:#E1E4E8;\">=</span><span style=\"color:#9ECBFF;\">&quot;IE=edge,chrome=1&quot;</span><span style=\"color:#E1E4E8;\"> /&gt;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">    &lt;</span><span style=\"color:#85E89D;\">meta</span><span style=\"color:#B392F0;\"> name</span><span style=\"color:#E1E4E8;\">=</span><span style=\"color:#9ECBFF;\">&quot;viewport&quot;</span><span style=\"color:#B392F0;\"> content</span><span style=\"color:#E1E4E8;\">=</span><span style=\"color:#9ECBFF;\">&quot;width=device-width,initial-scale=1&quot;</span><span style=\"color:#E1E4E8;\"> /&gt;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">    &lt;</span><span style=\"color:#85E89D;\">meta</span><span style=\"color:#B392F0;\"> charset</span><span style=\"color:#E1E4E8;\">=</span><span style=\"color:#9ECBFF;\">&quot;UTF-8&quot;</span><span style=\"color:#E1E4E8;\"> /&gt;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  &lt;/</span><span style=\"color:#85E89D;\">head</span><span style=\"color:#E1E4E8;\">&gt;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  &lt;</span><span style=\"color:#85E89D;\">body</span><span style=\"color:#E1E4E8;\">&gt;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">    &lt;</span><span style=\"color:#85E89D;\">div</span><span style=\"color:#B392F0;\"> id</span><span style=\"color:#E1E4E8;\">=</span><span style=\"color:#9ECBFF;\">&quot;app&quot;</span><span style=\"color:#E1E4E8;\">&gt;&lt;/</span><span style=\"color:#85E89D;\">div</span><span style=\"color:#E1E4E8;\">&gt;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">    &lt;</span><span style=\"color:#85E89D;\">script</span></span>\n<span class=\"line\"><span style=\"color:#B392F0;\">      src</span><span style=\"color:#E1E4E8;\">=</span><span style=\"color:#9ECBFF;\">&quot;https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js&quot;</span></span>\n<span class=\"line\"><span style=\"color:#B392F0;\">      crossorigin</span><span style=\"color:#E1E4E8;\">=</span><span style=\"color:#9ECBFF;\">&quot;anonymous&quot;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">    &gt;&lt;/</span><span style=\"color:#85E89D;\">script</span><span style=\"color:#E1E4E8;\">&gt;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">    &lt;</span><span style=\"color:#85E89D;\">script</span><span style=\"color:#E1E4E8;\">&gt;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">      app.innerHTML </span><span style=\"color:#F97583;\">=</span><span style=\"color:#B392F0;\"> markdownit</span><span style=\"color:#E1E4E8;\">().</span><span style=\"color:#B392F0;\">render</span><span style=\"color:#E1E4E8;\">(</span><span style=\"color:#9ECBFF;\">`</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#9ECBFF;\"># Hello!</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#9ECBFF;\">Put your Markdown content here.</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#9ECBFF;\">`</span><span style=\"color:#E1E4E8;\">)</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">    &lt;/</span><span style=\"color:#85E89D;\">script</span><span style=\"color:#E1E4E8;\">&gt;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  &lt;/</span><span style=\"color:#85E89D;\">body</span><span style=\"color:#E1E4E8;\">&gt;</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">&lt;/</span><span style=\"color:#85E89D;\">html</span><span style=\"color:#E1E4E8;\">&gt;</span></span></code></pre>", 3))
+}
+__sfc__.render = render
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"public":true,"title":"Quickly publish a Markdown page without build tool","aliases":["20220617T052637Z0285"]};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
