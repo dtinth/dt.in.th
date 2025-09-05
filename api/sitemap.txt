@@ -190,6 +190,7 @@ https://notes.dt.in.th/Hardware
 https://notes.dt.in.th/HigherOrderComponentsAndRecomposeTalk
 https://notes.dt.in.th/HomePage
 https://notes.dt.in.th/HueGameHSL
+https://notes.dt.in.th/IPedal
 https://notes.dt.in.th/IconifyUsage
 https://notes.dt.in.th/IndieWeb
 https://notes.dt.in.th/InsertionSortSong
@@ -219,6 +220,7 @@ https://notes.dt.in.th/LinuxAddUser
 https://notes.dt.in.th/LinuxZram
 https://notes.dt.in.th/LocalTalkInternationalization
 https://notes.dt.in.th/LowEffortMaintainability
+https://notes.dt.in.th/MIDILightSwitch
 https://notes.dt.in.th/MacOS
 https://notes.dt.in.th/MacOSOCR
 https://notes.dt.in.th/MacOSSmartQuotesInWindows
@@ -269,12 +271,14 @@ https://notes.dt.in.th/OklabVisualizer
 https://notes.dt.in.th/OklchPlot
 https://notes.dt.in.th/OnlyLoveRemix
 https://notes.dt.in.th/OpaqueSpace
+https://notes.dt.in.th/OpenSourceWorkshop2017
 https://notes.dt.in.th/OpenWebUILiteLLM
 https://notes.dt.in.th/OverWhelmingJoy
 https://notes.dt.in.th/PWA
 https://notes.dt.in.th/PackletsSetup
 https://notes.dt.in.th/PasteImage
 https://notes.dt.in.th/PasteQR
+https://notes.dt.in.th/Pastebox
 https://notes.dt.in.th/PersonalAssistantTalk
 https://notes.dt.in.th/PersonalPuppeteer
 https://notes.dt.in.th/PianoMajorScaleTrainer
@@ -295,6 +299,7 @@ https://notes.dt.in.th/PostgresMigrate
 https://notes.dt.in.th/Productivity
 https://notes.dt.in.th/Projects
 https://notes.dt.in.th/PublishMarkdownPageWithoutBuildTool
+https://notes.dt.in.th/PythonRecursionIntro
 https://notes.dt.in.th/QRCode
 https://notes.dt.in.th/QRScan
 https://notes.dt.in.th/RaceConditionsInJSApps
@@ -307,6 +312,7 @@ https://notes.dt.in.th/React
 https://notes.dt.in.th/React18RC
 https://notes.dt.in.th/ReactBKK2LiveCoding
 https://notes.dt.in.th/ReactContextProvider
+https://notes.dt.in.th/ReactFieryTalk2019
 https://notes.dt.in.th/ReactMultipleRefs
 https://notes.dt.in.th/ReactStrictEffectMode
 https://notes.dt.in.th/Recent
@@ -336,6 +342,7 @@ https://notes.dt.in.th/Songs
 https://notes.dt.in.th/SpringAnimationInCSS
 https://notes.dt.in.th/StableLibSnippets
 https://notes.dt.in.th/StructuredProcrastination
+https://notes.dt.in.th/SuperSillyVortex
 https://notes.dt.in.th/Svelte
 https://notes.dt.in.th/SvelteKitPureESM
 https://notes.dt.in.th/SynchronizedLiveWatchParty
@@ -349,6 +356,7 @@ https://notes.dt.in.th/Talks
 https://notes.dt.in.th/TaskworldReactTalk
 https://notes.dt.in.th/TestingInProduction
 https://notes.dt.in.th/ThaiLanguageLLMBenchmark
+https://notes.dt.in.th/ThaiWitter
 https://notes.dt.in.th/ThaiWordSegmentationInJavaScript
 https://notes.dt.in.th/Tmux
 https://notes.dt.in.th/TmuxProgrammatic
@@ -371,6 +379,7 @@ https://notes.dt.in.th/VirtualDesktop
 https://notes.dt.in.th/Vite
 https://notes.dt.in.th/ViteBundleSize
 https://notes.dt.in.th/Vue
+https://notes.dt.in.th/Vuetoy3
 https://notes.dt.in.th/Vx
 https://notes.dt.in.th/WSL
 https://notes.dt.in.th/WebComponents

@@ -1777,6 +1777,15 @@
 				}
 			]
 		}
+	,	"IPedal":
+		{	"title": "iPedal"
+		,	"links":
+			[	{	"link": "NodeJS"
+				}
+			,	{	"link": "VimTalk2013"
+				}
+			]
+		}
 	,	"IconifyUsage":
 		{	"title": "Using the Iconify Icon Web Component"
 		,	"links":
@@ -2141,6 +2150,10 @@
 			,	{	"link": "#user-content-fnref-renderchart"
 				}
 			]
+		}
+	,	"MIDILightSwitch":
+		{	"title": "MIDI Light Switch"
+		,	"links": []
 		}
 	,	"MacOS":
 		{	"title": "macOS (topic)"
@@ -2632,6 +2645,10 @@
 		{	"title": "Opaque Space"
 		,	"links": []
 		}
+	,	"OpenSourceWorkshop2017":
+		{	"title": "Let's Start Contributing to Open Source!"
+		,	"links": []
+		}
 	,	"OpenWebUILiteLLM":
 		{	"title": "Configuring Open WebUI and LiteLLM with Docker Compose to talk to OpenAI, Anthropic, Gemini, and Perplexity APIs"
 		,	"links":
@@ -2674,6 +2691,10 @@
 		}
 	,	"PasteQR":
 		{	"title": "Paste image to decode QR code"
+		,	"links": []
+		}
+	,	"Pastebox":
+		{	"title": "pastebox: Paste in an image, drag it out as a file"
 		,	"links": []
 		}
 	,	"PersonalAssistantTalk":
@@ -2853,6 +2874,18 @@
 				}
 			,	{	"link": "Gyroscratch"
 				}
+			,	{	"link": "IPedal"
+				}
+			,	{	"link": "MIDILightSwitch"
+				}
+			,	{	"link": "Pastebox"
+				}
+			,	{	"link": "SuperSillyVortex"
+				}
+			,	{	"link": "ThaiWitter"
+				}
+			,	{	"link": "Vuetoy3"
+				}
 			,	{	"link": "Vx"
 				}
 			,	{	"link": "WebMIDICon"
@@ -2869,6 +2902,10 @@
 			,	{	"link": "Markdown"
 				}
 			]
+		}
+	,	"PythonRecursionIntro":
+		{	"title": "Introduction to Recursion (Python)"
+		,	"links": []
 		}
 	,	"QRCode":
 		{	"title": "QR Code (topic)"
@@ -2974,6 +3011,10 @@
 		}
 	,	"ReactContextProvider":
 		{	"title": "Context provider pattern in React"
+		,	"links": []
+		}
+	,	"ReactFieryTalk2019":
+		{	"title": "Rapid application development with React, Firebase, Hooks, Suspense and Error Boundaries with fiery"
 		,	"links": []
 		}
 	,	"ReactMultipleRefs":
@@ -3261,6 +3302,10 @@
 		{	"title": "Structured procrastination"
 		,	"links": []
 		}
+	,	"SuperSillyVortex":
+		{	"title": "super-silly-vortex"
+		,	"links": []
+		}
 	,	"Svelte":
 		{	"title": "Svelte (topic)"
 		,	"links":
@@ -3336,11 +3381,15 @@
 				}
 			,	{	"link": "PersonalAssistantTalk"
 				}
-			,	{	"link": "GradualTypingTalk"
+			,	{	"link": "EmbracingGradualTyping"
 				}
 			,	{	"link": "RaceConditionsInJSApps"
 				}
+			,	{	"link": "ReactFieryTalk2019"
+				}
 			,	{	"link": "SmellsInReactApps"
+				}
+			,	{	"link": "OpenSourceWorkshop2017"
 				}
 			,	{	"link": "ReactBKK2LiveCoding"
 				}
@@ -3357,6 +3406,8 @@
 			,	{	"link": "FunctionalReactiveProgrammingRxJSTalk"
 				}
 			,	{	"link": "VimTalk2013"
+				}
+			,	{	"link": "PythonRecursionIntro"
 				}
 			]
 		}
@@ -3384,6 +3435,10 @@
 			[	{	"link": "LargeLanguageModel"
 				}
 			]
+		}
+	,	"ThaiWitter":
+		{	"title": "thaiWitter"
+		,	"links": []
 		}
 	,	"ThaiWordSegmentationInJavaScript":
 		{	"title": "ตัดคำภาษาไทยใน Node.js (หรือใน Browser) โดยใช้ API Intl ของ JavaScript"
@@ -3581,6 +3636,8 @@
 		,	"links":
 			[	{	"link": "Talks"
 				}
+			,	{	"link": "IPedal"
+				}
 			]
 		}
 	,	"VirtualDesktop":
@@ -3616,6 +3673,10 @@
 			,	{	"link": "20200502T090200Z0000"
 				}
 			]
+		}
+	,	"Vuetoy3":
+		{	"title": "vuetoy3"
+		,	"links": []
 		}
 	,	"Vx":
 		{	"title": "vx (project)"

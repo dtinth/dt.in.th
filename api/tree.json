@@ -602,7 +602,7 @@
 		}
 	,	"EmbracingGradualTyping":
 		{	"title": "Embracing gradual typing"
-		,	"parent": "TypeScript"
+		,	"parent": "Talks"
 		}
 	,	"EverydayEvermore":
 		{	"title": "Everyday evermore"
@@ -767,6 +767,10 @@
 		{	"title": "Hue Game (HSL)"
 		,	"parent": "Colors"
 		}
+	,	"IPedal":
+		{	"title": "iPedal"
+		,	"parent": "Projects"
+		}
 	,	"IconifyUsage":
 		{	"title": "Using the Iconify Icon Web Component"
 		,	"parent": "WebComponents"
@@ -882,6 +886,10 @@
 	,	"LowEffortMaintainability":
 		{	"title": "Low-effort things you can do today to improve code maintainability a year later."
 		,	"parent": "SoftwareEngineering"
+		}
+	,	"MIDILightSwitch":
+		{	"title": "MIDI Light Switch"
+		,	"parent": "Projects"
 		}
 	,	"MacOS":
 		{	"title": "macOS (topic)"
@@ -1083,6 +1091,10 @@
 		{	"title": "Opaque Space"
 		,	"parent": "Songs"
 		}
+	,	"OpenSourceWorkshop2017":
+		{	"title": "Let's Start Contributing to Open Source!"
+		,	"parent": "Talks"
+		}
 	,	"OpenWebUILiteLLM":
 		{	"title": "Configuring Open WebUI and LiteLLM with Docker Compose to talk to OpenAI, Anthropic, Gemini, and Perplexity APIs"
 		,	"parent": "LargeLanguageModel"
@@ -1106,6 +1118,10 @@
 	,	"PasteQR":
 		{	"title": "Paste image to decode QR code"
 		,	"parent": "Tools"
+		}
+	,	"Pastebox":
+		{	"title": "pastebox: Paste in an image, drag it out as a file"
+		,	"parent": "Projects"
 		}
 	,	"PersonalAssistantTalk":
 		{	"title": "Let’s build a personal assistant and level-up your coding skills!"
@@ -1187,6 +1203,10 @@
 		{	"title": "Quickly publish a Markdown page without build tool"
 		,	"parent": "Markdown"
 		}
+	,	"PythonRecursionIntro":
+		{	"title": "Introduction to Recursion (Python)"
+		,	"parent": "Talks"
+		}
 	,	"QRCode":
 		{	"title": "QR Code (topic)"
 		,	"parent": "HomePage"
@@ -1234,6 +1254,10 @@
 	,	"ReactContextProvider":
 		{	"title": "Context provider pattern in React"
 		,	"parent": "React"
+		}
+	,	"ReactFieryTalk2019":
+		{	"title": "Rapid application development with React, Firebase, Hooks, Suspense and Error Boundaries with fiery"
+		,	"parent": "Talks"
 		}
 	,	"ReactMultipleRefs":
 		{	"title": "Using multiple refs in React"
@@ -1351,6 +1375,10 @@
 		{	"title": "Structured procrastination"
 		,	"parent": "Productivity"
 		}
+	,	"SuperSillyVortex":
+		{	"title": "super-silly-vortex"
+		,	"parent": "Projects"
+		}
 	,	"Svelte":
 		{	"title": "Svelte (topic)"
 		,	"parent": "JavaScript"
@@ -1402,6 +1430,10 @@
 	,	"ThaiLanguageLLMBenchmark":
 		{	"title": "LLM กับข้อสอบ O-NET ม.6"
 		,	"parent": "LargeLanguageModel"
+		}
+	,	"ThaiWitter":
+		{	"title": "thaiWitter"
+		,	"parent": "Projects"
 		}
 	,	"ThaiWordSegmentationInJavaScript":
 		{	"title": "ตัดคำภาษาไทยใน Node.js (หรือใน Browser) โดยใช้ API Intl ของ JavaScript"
@@ -1490,6 +1522,10 @@
 	,	"Vue":
 		{	"title": "Vue.js (topic)"
 		,	"parent": "JavaScript"
+		}
+	,	"Vuetoy3":
+		{	"title": "vuetoy3"
+		,	"parent": "Projects"
 		}
 	,	"Vx":
 		{	"title": "vx (project)"
