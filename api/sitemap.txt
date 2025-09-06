@@ -90,6 +90,7 @@ https://notes.dt.in.th/AutoSynchro
 https://notes.dt.in.th/Automatron
 https://notes.dt.in.th/Azure
 https://notes.dt.in.th/BangkokIpsum
+https://notes.dt.in.th/Bemuse
 https://notes.dt.in.th/BlackBoxTestingStrategies
 https://notes.dt.in.th/BlackBoxTestingTalk
 https://notes.dt.in.th/BrotherPTWebUSB

@@ -368,6 +368,10 @@
 		{	"title": "Bangkok Ipsum"
 		,	"parent": "Projects"
 		}
+	,	"Bemuse":
+		{	"title": "Bemuse"
+		,	"parent": "Projects"
+		}
 	,	"BlackBoxTestingStrategies":
 		{	"title": "Strategies for Black-Box Testability (2024 talk)"
 		,	"parent": "Talks"

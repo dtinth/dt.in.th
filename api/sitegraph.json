@@ -664,6 +664,8 @@
 		,	"links":
 			[	{	"link": "Songs"
 				}
+			,	{	"link": "Bemuse"
+				}
 			]
 		}
 	,	"Automatron":
@@ -685,6 +687,17 @@
 			,	{	"link": "Songs"
 				}
 			,	{	"link": "#"
+				}
+			]
+		}
+	,	"Bemuse":
+		{	"title": "Bemuse"
+		,	"links":
+			[	{	"link": "ByMySide"
+				}
+			,	{	"link": "ByMySideAmbientHouseMix"
+				}
+			,	{	"link": "AutoSynchro"
 				}
 			]
 		}
@@ -771,6 +784,8 @@
 		,	"links":
 			[	{	"link": "Songs"
 				}
+			,	{	"link": "Bemuse"
+				}
 			,	{	"link": "ByMySideAmbientHouseMix"
 				}
 			]
@@ -781,6 +796,8 @@
 			[	{	"link": "ByMySide"
 				}
 			,	{	"link": "Songs"
+				}
+			,	{	"link": "Bemuse"
 				}
 			]
 		}
@@ -2868,6 +2885,8 @@
 				}
 			,	{	"link": "BangkokIpsum"
 				}
+			,	{	"link": "Bemuse"
+				}
 			,	{	"link": "SpringAnimationInCSS"
 				}
 			,	{	"link": "WebsiteHistory"
@@ -3438,7 +3457,10 @@
 		}
 	,	"ThaiWitter":
 		{	"title": "thaiWitter"
-		,	"links": []
+		,	"links":
+			[	{	"link": "Projects"
+				}
+			]
 		}
 	,	"ThaiWordSegmentationInJavaScript":
 		{	"title": "ตัดคำภาษาไทยใน Node.js (หรือใน Browser) โดยใช้ API Intl ของ JavaScript"
