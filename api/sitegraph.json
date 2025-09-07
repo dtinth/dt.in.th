@@ -604,6 +604,8 @@
 				}
 			,	{	"link": "20220724T170613Z0326"
 				}
+			,	{	"link": "Supabase"
+				}
 			,	{	"link": "VSCode"
 				}
 			,	{	"link": "GitHubDeployKeySSHConfig"
@@ -905,6 +907,8 @@
 			,	{	"link": "GoogleCloud"
 				}
 			,	{	"link": "Netlify"
+				}
+			,	{	"link": "Supabase"
 				}
 			,	{	"link": "Vercel"
 				}
@@ -3320,6 +3324,24 @@
 	,	"StructuredProcrastination":
 		{	"title": "Structured procrastination"
 		,	"links": []
+		}
+	,	"Supabase":
+		{	"title": "Supabase (topic)"
+		,	"links":
+			[	{	"link": "ItDepends"
+				}
+			,	{	"link": "SupabaseAuthNotes"
+				}
+			,	{	"link": "AboutNotes"
+				}
+			]
+		}
+	,	"SupabaseAuthNotes":
+		{	"title": "Some notes on Supabase Auth"
+		,	"links":
+			[	{	"link": "Supabase"
+				}
+			]
 		}
 	,	"SuperSillyVortex":
 		{	"title": "super-silly-vortex"

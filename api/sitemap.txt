@@ -343,6 +343,8 @@ https://notes.dt.in.th/Songs
 https://notes.dt.in.th/SpringAnimationInCSS
 https://notes.dt.in.th/StableLibSnippets
 https://notes.dt.in.th/StructuredProcrastination
+https://notes.dt.in.th/Supabase
+https://notes.dt.in.th/SupabaseAuthNotes
 https://notes.dt.in.th/SuperSillyVortex
 https://notes.dt.in.th/Svelte
 https://notes.dt.in.th/SvelteKitPureESM

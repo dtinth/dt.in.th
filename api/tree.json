@@ -630,7 +630,7 @@
 		}
 	,	"Firebase":
 		{	"title": "Firebase (topic)"
-		,	"parent": "CloudPlatform"
+		,	"parent": "Database"
 		}
 	,	"Fish":
 		{	"title": "Fish (topic)"
@@ -1378,6 +1378,14 @@
 	,	"StructuredProcrastination":
 		{	"title": "Structured procrastination"
 		,	"parent": "Productivity"
+		}
+	,	"Supabase":
+		{	"title": "Supabase (topic)"
+		,	"parent": "CloudPlatform"
+		}
+	,	"SupabaseAuthNotes":
+		{	"title": "Some notes on Supabase Auth"
+		,	"parent": "Supabase"
 		}
 	,	"SuperSillyVortex":
 		{	"title": "super-silly-vortex"
