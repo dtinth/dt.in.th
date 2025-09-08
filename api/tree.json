@@ -700,6 +700,10 @@
 		{	"title": "Cloning private GitHub projects onto a new worker Linux box"
 		,	"parent": "AboutNotes"
 		}
+	,	"GitHubToJSDelivr":
+		{	"title": "GitHub to JSDelivr link converter"
+		,	"parent": "Tools"
+		}
 	,	"GitOps":
 		{	"title": "GitOps (topic)"
 		,	"parent": "SoftwareEngineering"

@@ -1550,6 +1550,15 @@
 				}
 			]
 		}
+	,	"GitHubToJSDelivr":
+		{	"title": "GitHub to JSDelivr link converter"
+		,	"links":
+			[	{	"link": "Tools"
+				}
+			,	{	"link": "GitHub"
+				}
+			]
+		}
 	,	"GitOps":
 		{	"title": "GitOps (topic)"
 		,	"links":
@@ -3568,7 +3577,9 @@
 	,	"Tools":
 		{	"title": "Tools (topic)"
 		,	"links":
-			[	{	"link": "PianoMajorScaleTrainer"
+			[	{	"link": "GitHubToJSDelivr"
+				}
+			,	{	"link": "PianoMajorScaleTrainer"
 				}
 			,	{	"link": "Slip39Wordlist"
 				}

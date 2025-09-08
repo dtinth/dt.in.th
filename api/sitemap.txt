@@ -173,6 +173,7 @@ https://notes.dt.in.th/GitHubActionsCompositeBoilerplate
 https://notes.dt.in.th/GitHubActionsLinodeObjectStorageUpload
 https://notes.dt.in.th/GitHubActionsPushAsGitHubApp
 https://notes.dt.in.th/GitHubDeployKeySSHConfig
+https://notes.dt.in.th/GitHubToJSDelivr
 https://notes.dt.in.th/GitOps
 https://notes.dt.in.th/GitOpsDiscord
 https://notes.dt.in.th/GitOpsInWeirdPlaces

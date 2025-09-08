@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="GitHubToJSDelivr" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub to JSDelivr link converter | notes.dt.in.th</title><meta property="og:title" content="GitHub to JSDelivr link converter" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/GitHubToJSDelivr" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://notes.dt.in.th/GitHubToJSDelivr" data-source="note"><style id="note-styles">/* layer: default */
+.mb-1[data-v-8c9498c0]{margin-bottom:0.25rem;}
+.block[data-v-8c9498c0]{display:block;}
+.flex[data-v-8c9498c0]{display:flex;}
+.flex-1[data-v-8c9498c0]{flex:1 1 0%;}
+.gap-2[data-v-8c9498c0]{gap:0.5rem;}
+.space-y-4[data-v-8c9498c0]>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(1rem * var(--un-space-y-reverse));}
+.text-sm[data-v-8c9498c0]{font-size:0.875rem;line-height:1.25rem;}
+.font-medium[data-v-8c9498c0]{font-weight:500;}</style>
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><p data-v-8c9498c0>This little <a href="Tools" data-v-8c9498c0>tool</a> converts <a href="GitHub" data-v-8c9498c0>GitHub</a> file links to <a href="https://www.jsdelivr.com/" data-v-8c9498c0>JSDelivr</a> CDN links.</p><div class="space-y-4" data-v-8c9498c0><div data-v-8c9498c0><label class="block text-sm font-medium mb-1" data-v-8c9498c0>GitHub URL:</label><input type="text" value="" placeholder="https://github.com/user/repo/blob/main/file.js" class="form-control" data-v-8c9498c0></div><div data-v-8c9498c0><label class="block text-sm font-medium mb-1" data-v-8c9498c0>JSDelivr URL:</label><div class="flex gap-2" data-v-8c9498c0><input type="text" value="" placeholder="https://cdn.jsdelivr.net/gh/user/repo@branch/file.js" readonly class="form-control flex-1" data-v-8c9498c0><button disabled class="btn" data-v-8c9498c0> Copy </button></div></div><!----></div><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});/* Analyzed bindings: {
+  "githubUrl": "setup-maybe-ref",
+  "jsDelivrUrl": "setup-maybe-ref",
+  "error": "setup-maybe-ref",
+  "copyToClipboard": "setup-maybe-ref"
+} */
+
+const __sfc__ = {
+  setup() {
+    const githubUrl = Vue.ref('')
+    const jsDelivrUrl = Vue.ref('')
+    const error = Vue.ref('')
+
+    const convertUrl = () => {
+      error.value = ''
+      jsDelivrUrl.value = ''
+      
+      if (!githubUrl.value) return
+      
+      try {
+        // Match GitHub URL pattern: https://github.com/user/repo/blob/branch/path
+        const match = githubUrl.value.match(/https:\/\/github\.com\/([^\/]+)\/([^\/]+)\/blob\/([^\/]+)\/(.+)/)
+        
+        if (!match) {
+          error.value = 'Please enter a valid GitHub blob URL (https://github.com/user/repo/blob/branch/file.ext)'
+          return
+        }
+        
+        const [, user, repo, branch, path] = match
+        jsDelivrUrl.value = `https://cdn.jsdelivr.net/gh/${user}/${repo}@${branch}/${path}`
+      } catch (e) {
+        error.value = 'Invalid URL format'
+      }
+    }
+
+    const copyToClipboard = async () => {
+      try {
+        await navigator.clipboard.writeText(jsDelivrUrl.value)
+      } catch (err) {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea')
+        textArea.value = jsDelivrUrl.value
+        document.body.appendChild(textArea)
+        textArea.select()
+        document.execCommand('copy')
+        document.body.removeChild(textArea)
+      }
+    }
+
+    Vue.watch(githubUrl, convertUrl)
+
+    return { 
+      githubUrl, 
+      jsDelivrUrl, 
+      error, 
+      copyToClipboard 
+    }
+  }
+}
+;
+var _vue = require('vue');
+
+const _hoisted_1 = { class: "space-y-4" }
+const _hoisted_2 = { class: "flex gap-2" }
+const _hoisted_3 = ["value"]
+const _hoisted_4 = ["disabled"]
+const _hoisted_5 = { key: 0 }
+const _hoisted_6 = {
+  class: "notes-callout",
+  "data-type": "Danger"
+}
+const _hoisted_7 = { class: "notes-callout__label" }
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  const _component_notes_callout_icon = _vue.resolveComponent.call(void 0, "notes-callout-icon")
+
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
+    _cache[5] || (_cache[5] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createTextVNode.call(void 0, "This little "),
+      _vue.createElementVNode.call(void 0, "a", { href: "Tools" }, "tool"),
+      _vue.createTextVNode.call(void 0, " converts "),
+      _vue.createElementVNode.call(void 0, "a", { href: "GitHub" }, "GitHub"),
+      _vue.createTextVNode.call(void 0, " file links to "),
+      _vue.createElementVNode.call(void 0, "a", { href: "https://www.jsdelivr.com/" }, "JSDelivr"),
+      _vue.createTextVNode.call(void 0, " CDN links.")
+    ], -1 /* CACHED */)),
+    _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
+      _vue.createElementVNode.call(void 0, "div", null, [
+        _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "label", { class: "block text-sm font-medium mb-1" }, "GitHub URL:", -1 /* CACHED */)),
+        _vue.withDirectives.call(void 0, _vue.createElementVNode.call(void 0, "input", {
+          type: "text",
+          "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($setup.githubUrl) = $event)),
+          placeholder: "https://github.com/user/repo/blob/main/file.js",
+          class: "form-control"
+        }, null, 512 /* NEED_PATCH */), [
+          [_vue.vModelText, $setup.githubUrl]
+        ])
+      ]),
+      _vue.createElementVNode.call(void 0, "div", null, [
+        _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "label", { class: "block text-sm font-medium mb-1" }, "JSDelivr URL:", -1 /* CACHED */)),
+        _vue.createElementVNode.call(void 0, "div", _hoisted_2, [
+          _vue.createElementVNode.call(void 0, "input", {
+            type: "text",
+            value: $setup.jsDelivrUrl,
+            placeholder: "https://cdn.jsdelivr.net/gh/user/repo@branch/file.js",
+            readonly: "",
+            class: "form-control flex-1"
+          }, null, 8 /* PROPS */, _hoisted_3),
+          _vue.createElementVNode.call(void 0, "button", {
+            onClick: _cache[1] || (_cache[1] = (...args) => ($setup.copyToClipboard && $setup.copyToClipboard(...args))),
+            disabled: !$setup.jsDelivrUrl,
+            class: "btn"
+          }, " Copy ", 8 /* PROPS */, _hoisted_4)
+        ])
+      ]),
+      ($setup.error)
+        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_5, [
+            _vue.createElementVNode.call(void 0, "div", _hoisted_6, [
+              _vue.createElementVNode.call(void 0, "p", _hoisted_7, [
+                _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Danger" }),
+                _cache[4] || (_cache[4] = _vue.createTextVNode.call(void 0, "Error", -1 /* CACHED */))
+              ]),
+              _vue.createElementVNode.call(void 0, "p", null, _vue.toDisplayString.call(void 0, $setup.error), 1 /* TEXT */)
+            ])
+          ]))
+        : _vue.createCommentVNode.call(void 0, "v-if", true)
+    ])
+  ], 64 /* STABLE_FRAGMENT */))
+}
+__sfc__.render = render
+__sfc__.__scopeId = "data-v-8c9498c0"
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"public":true,"title":"GitHub to JSDelivr link converter"};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
