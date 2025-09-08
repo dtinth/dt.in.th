@@ -706,7 +706,9 @@
 	,	"BlackBoxTestingStrategies":
 		{	"title": "Strategies for Black-Box Testability (2024 talk)"
 		,	"links":
-			[	{	"link": "BlackBoxTestingTalk"
+			[	{	"link": "Firebase"
+				}
+			,	{	"link": "BlackBoxTestingTalk"
 				}
 			]
 		}
@@ -890,6 +892,13 @@
 		{	"title": "Making Caddy use a self-signed SSL certificate"
 		,	"links":
 			[	{	"link": "Caddy"
+				}
+			]
+		}
+	,	"ChucKSong4":
+		{	"title": "ChucK The Fourth Time"
+		,	"links":
+			[	{	"link": "ProgrammaticMusic"
 				}
 			]
 		}
@@ -1308,6 +1317,8 @@
 			,	{	"link": "Elysia"
 				}
 			,	{	"link": "#user-content-fn-otel"
+				}
+			,	{	"link": "Firebase"
 				}
 			,	{	"link": "#user-content-fnref-loggers"
 				}
@@ -1841,6 +1852,13 @@
 				}
 			]
 		}
+	,	"InfinitelyDescendingChord":
+		{	"title": "Infinitely Descending Chord"
+		,	"links":
+			[	{	"link": "ProgrammaticMusic"
+				}
+			]
+		}
 	,	"InsertionSortSong":
 		{	"title": "Insertion Sort Song"
 		,	"links":
@@ -2305,7 +2323,17 @@
 				}
 			,	{	"link": "PlayByEar"
 				}
+			,	{	"link": "WebMIDICon"
+				}
+			,	{	"link": "Jamulus"
+				}
+			,	{	"link": "ProgrammaticMusic"
+				}
 			,	{	"link": "Songs"
+				}
+			,	{	"link": "WebAudio"
+				}
+			,	{	"link": "WebMIDI"
 				}
 			]
 		}
@@ -2882,6 +2910,27 @@
 				}
 			]
 		}
+	,	"ProgrammaticMusic":
+		{	"title": "Programmatic Music (topic)"
+		,	"links":
+			[	{	"link": "Music"
+				}
+			,	{	"link": "InsertionSortSong"
+				}
+			,	{	"link": "MergeSortSong"
+				}
+			,	{	"link": "HBDJS2019"
+				}
+			,	{	"link": "InfinitelyDescendingChord"
+				}
+			,	{	"link": "ChucKSong4"
+				}
+			,	{	"link": "Songs"
+				}
+			,	{	"link": "WebAudio"
+				}
+			]
+		}
 	,	"Projects":
 		{	"title": "Projects (topic)"
 		,	"links":
@@ -3328,7 +3377,7 @@
 	,	"Supabase":
 		{	"title": "Supabase (topic)"
 		,	"links":
-			[	{	"link": "ItDepends"
+			[	{	"link": "PostgreSQL"
 				}
 			,	{	"link": "SupabaseAuthNotes"
 				}
@@ -3740,6 +3789,21 @@
 				}
 			]
 		}
+	,	"WebAudio":
+		{	"title": "Web Audio API (topic)"
+		,	"links":
+			[	{	"link": "WebPlatform"
+				}
+			,	{	"link": "PianoMajorScaleTrainer"
+				}
+			,	{	"link": "Music"
+				}
+			,	{	"link": "ProgrammaticMusic"
+				}
+			,	{	"link": "WebMIDI"
+				}
+			]
+		}
 	,	"WebComponents":
 		{	"title": "Web Components (topic)"
 		,	"links":
@@ -3749,17 +3813,40 @@
 				}
 			]
 		}
+	,	"WebMIDI":
+		{	"title": "Web MIDI API (topic)"
+		,	"links":
+			[	{	"link": "WebPlatform"
+				}
+			,	{	"link": "PianoMajorScaleTrainer"
+				}
+			,	{	"link": "WebMIDITalk"
+				}
+			,	{	"link": "WebMIDICon"
+				}
+			,	{	"link": "Music"
+				}
+			,	{	"link": "WebAudio"
+				}
+			]
+		}
 	,	"WebMIDICon":
 		{	"title": "WebMIDICon"
 		,	"links":
-			[	{	"link": "ButterFlyCoverCollab"
+			[	{	"link": "WebMIDI"
+				}
+			,	{	"link": "Music"
+				}
+			,	{	"link": "WebPlatform"
+				}
+			,	{	"link": "ButterFlyCoverCollab"
 				}
 			]
 		}
 	,	"WebMIDITalk":
 		{	"title": "The amazing flexibility of Web MIDI API and its surrounding ecosystem"
 		,	"links":
-			[	{	"link": "Talks"
+			[	{	"link": "WebPlatform"
 				}
 			,	{	"link": "WebMIDICon"
 				}
@@ -3782,7 +3869,11 @@
 				}
 			,	{	"link": "PWA"
 				}
+			,	{	"link": "WebAudio"
+				}
 			,	{	"link": "WebComponents"
+				}
+			,	{	"link": "WebMIDI"
 				}
 			,	{	"link": "20210109T141458Z5537"
 				}

@@ -274,7 +274,7 @@
 		}
 	,	"20220907T134709Z7128":
 		{	"title": "Adding Bootstrap CSS to Next.js application"
-		,	"parent": "CSS"
+		,	"parent": "Next"
 		}
 	,	"20220923T125342Z4946":
 		{	"title": "Recording screen in Linux using ffmpeg"
@@ -451,6 +451,10 @@
 	,	"CaddySelfSigned":
 		{	"title": "Making Caddy use a self-signed SSL certificate"
 		,	"parent": "Caddy"
+		}
+	,	"ChucKSong4":
+		{	"title": "ChucK The Fourth Time"
+		,	"parent": "ProgrammaticMusic"
 		}
 	,	"CircleCIDummyConfig":
 		{	"title": "CircleCI Dummy Config"
@@ -783,9 +787,13 @@
 		{	"title": "IndieWeb (topic)"
 		,	"parent": "HomePage"
 		}
+	,	"InfinitelyDescendingChord":
+		{	"title": "Infinitely Descending Chord"
+		,	"parent": "ProgrammaticMusic"
+		}
 	,	"InsertionSortSong":
 		{	"title": "Insertion Sort Song"
-		,	"parent": "Songs"
+		,	"parent": "ProgrammaticMusic"
 		}
 	,	"Insta360LinkControllerWebSocketProtocol":
 		{	"title": "Reverse-engineering Insta360 Link Controller WebSockets protocol"
@@ -917,7 +925,7 @@
 		}
 	,	"MergeSortSong":
 		{	"title": "Merge Sort Song"
-		,	"parent": "Songs"
+		,	"parent": "ProgrammaticMusic"
 		}
 	,	"MinioJS":
 		{	"title": "Minio JavaScript library snippets"
@@ -1198,6 +1206,10 @@
 	,	"Productivity":
 		{	"title": "Productivity (topic)"
 		,	"parent": "HomePage"
+		}
+	,	"ProgrammaticMusic":
+		{	"title": "Programmatic Music (topic)"
+		,	"parent": "Music"
 		}
 	,	"Projects":
 		{	"title": "Projects (topic)"
@@ -1547,17 +1559,25 @@
 		{	"title": "WSL (topic)"
 		,	"parent": "Windows"
 		}
+	,	"WebAudio":
+		{	"title": "Web Audio API (topic)"
+		,	"parent": "Music"
+		}
 	,	"WebComponents":
 		{	"title": "Web Components (topic)"
 		,	"parent": "WebPlatform"
 		}
+	,	"WebMIDI":
+		{	"title": "Web MIDI API (topic)"
+		,	"parent": "Music"
+		}
 	,	"WebMIDICon":
 		{	"title": "WebMIDICon"
-		,	"parent": "Projects"
+		,	"parent": "Music"
 		}
 	,	"WebMIDITalk":
 		{	"title": "The amazing flexibility of Web MIDI API and its surrounding ecosystem"
-		,	"parent": "Talks"
+		,	"parent": "WebMIDI"
 		}
 	,	"WebPlatform":
 		{	"title": "Web Platform (topic)"

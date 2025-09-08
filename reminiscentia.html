@@ -20,7 +20,23 @@
     <div class="h-entry">
       <main id="main">
         <div id="mainContents">
-          <div class="prose e-content" id="noteContents"><!--[--><h1 id="reminiscentia"><a aria-hidden="true" tabindex="-1" href="#reminiscentia"><span class="icon icon-link"></span></a>Reminiscentia</h1><p>I&#39;ve always wanted to try making some classical music, but somehow, this one ended up as a trance <a href="Songs">song</a>.</p><!----><p>Enjoy!</p><!--]--></div>
+          <div class="prose e-content" id="noteContents"><!--[--><h1 id="reminiscentia"><a aria-hidden="true" tabindex="-1" href="#reminiscentia"><span class="icon icon-link"></span></a>Reminiscentia</h1><p>I&#39;ve always wanted to try making some classical music, but somehow, this one ended up as a trance <a href="Songs">song</a>.</p><!----><p>Enjoy!</p><hr><p>When I got inspired to make this song, I noted this down in a text file:</p><pre><code>|----+----+----+----|----+----+----+----|----+----+----+----|----+----+----+----|
+|                                                                 Mi   DO   Ti  | Violin
+|                                                                               | String
+|                                                             [E]               | Chord
+|----+----+----+----|----+----+----+----|----+----+----+----|----+----+----+----|
+| Mi                       Mi   DO   Ti   Li                      La   Sol  Fa  |
+| mi                  si                  sol                 mi                |
+| [Am]                [E]                 [Gm]                [C]               |
+|----+----+----+----|----+----+----+----|----+----+----+----|----+----+----+----|
+| Mi                       Re   la   Re   Mi                      Mi   DO   Ti  |
+| mi                  fi                  la                  Si                |
+| [F]                 [D/F#]              [E]                                   |
+|----+----+----+----|----+----+----+----|----+----+----+----|----+----+----+----|
+| Mi                       ti   Do   Re   Mi                                    |
+| [F]
+|----+----+----+----|----+----+----+----|----+----+----+----|----+----+----+----|
+</code></pre><!--]--></div>
         </div>
       </main>
       <footer>
@@ -52,7 +68,12 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, ".")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_soundcloud_embed, { "track-id": "171200575" }),
-    _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "p", null, "Enjoy!", -1 /* CACHED */))
+    _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "p", null, "Enjoy!", -1 /* CACHED */)),
+    _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "hr", null, null, -1 /* CACHED */)),
+    _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "p", null, "When I got inspired to make this song, I noted this down in a text file:", -1 /* CACHED */)),
+    _cache[5] || (_cache[5] = _vue.createElementVNode.call(void 0, "pre", null, [
+      _vue.createElementVNode.call(void 0, "code", null, "|----+----+----+----|----+----+----+----|----+----+----+----|----+----+----+----|\n|                                                                 Mi   DO   Ti  | Violin\n|                                                                               | String\n|                                                             [E]               | Chord\n|----+----+----+----|----+----+----+----|----+----+----+----|----+----+----+----|\n| Mi                       Mi   DO   Ti   Li                      La   Sol  Fa  |\n| mi                  si                  sol                 mi                |\n| [Am]                [E]                 [Gm]                [C]               |\n|----+----+----+----|----+----+----+----|----+----+----+----|----+----+----+----|\n| Mi                       Re   la   Re   Mi                      Mi   DO   Ti  |\n| mi                  fi                  la                  Si                |\n| [F]                 [D/F#]              [E]                                   |\n|----+----+----+----|----+----+----+----|----+----+----+----|----+----+----+----|\n| Mi                       ti   Do   Re   Mi                                    |\n| [F]\n|----+----+----+----|----+----+----+----|----+----+----+----|----+----+----+----|\n")
+    ], -1 /* CACHED */))
   ], 64 /* STABLE_FRAGMENT */))
 }
 __sfc__.render = render

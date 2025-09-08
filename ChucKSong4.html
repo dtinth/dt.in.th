@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="ChucKSong4" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChucK The Fourth Time | notes.dt.in.th</title><meta property="og:title" content="ChucK The Fourth Time" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/ChucKSong4" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://notes.dt.in.th/ChucKSong4" data-source="note">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><p>Just playing around with <a href="https://chuck.stanford.edu/">ChucK</a>, a “strongly-timed music programming language,” in 2009. This <a href="ProgrammaticMusic">piece</a> contains:</p><ul><li>An arp using a StifKarp.</li><li>A random melody.</li><li>A kick drum made with a sweeping sine wave.</li><li>A bassline track made with a sine wave.</li><li>Some feedback delay lines.</li></ul><p class="notes-cta"><a class="notes-cta__link" href="https://patchies.app/?id=6wjvo38hcycyou6"><span class="notes-cta__title">Try on Patchies</span><span class="notes-cta__url">https://patchies.app/?id=6wjvo38hcycyou6</span></a></p><pre><code>// Master BPM
+float bpm;
+(140) =&gt; bpm;
+
+// Each step
+int step;
+
+dur each;
+((60 / bpm) / 48)::second =&gt; each;
+
+// Master Track
+Gain master;
+master =&gt; dac;
+(0.5) =&gt; master.gain;
+
+// Synth Track
+Gain synth;
+Delay synth_d;
+Gain synth_g;
+synth =&gt; master;
+synth =&gt; synth_d;
+synth_d =&gt; synth_g;
+synth_g =&gt; synth_d;
+synth_g =&gt; master;
+(each * 36) =&gt; synth_d.max;
+(each * 36) =&gt; synth_d.delay;
+(0.5) =&gt; synth_g.gain;
+
+// Bass Track
+Gain bass;
+bass =&gt; master;
+(0.6) =&gt; bass.gain;
+
+// Random Melody
+Gain melody;
+Delay melody_d;
+Gain melody_g;
+melody =&gt; master;
+melody =&gt; melody_d;
+melody_d =&gt; melody_g;
+melody_g =&gt; melody_d;
+melody_g =&gt; master;
+(0.5) =&gt; melody_g.gain;
+(each * 60) =&gt; melody_d.max;
+(each * 60) =&gt; melody_d.delay;
+
+// Percussion
+Gain percussion;
+percussion =&gt; master;
+
+// Instrument Class
+class Trig {
+    (1)    =&gt; int freq;
+    (0)    =&gt; int left;
+    (0)    =&gt; int num;
+    fun void next() {
+        (left - 1) =&gt; left;
+        if (left &lt;= 0) {
+            (freq) =&gt; left;
+            () =&gt; trigger;
+            (num + 1) =&gt; num;
+        }
+    }
+    fun void setFreq(int newFreq) {
+        int del;
+        (newFreq - freq) =&gt; del;
+        (freq + del) =&gt; freq;
+        (left + del) =&gt; left;
+    }
+    fun void trigger() {
+    }
+}
+
+// Channel Arp
+StifKarp arp;
+arp =&gt; synth;
+class Pattern1 extends Trig {
+    [
+        9,  4, 4, 9,  4, 4, 9,  4,
+        9,  4, 4, 9,  4, 4, 9,  4,
+        11, 4, 4, 11, 4, 4, 11, 4,
+        12, 4, 4, 12, 4, 4, 14, 16,
+
+        9,  4, 4, 9,  4, 4, 9,  4,
+        9,  4, 4, 9,  4, 4, 9,  4,
+        11, 4, 4, 11, 4, 4, 11, 4,
+        12, 4, 4, 12, 4, 4, 14, 16,
+
+        9,  5, 5, 9,  5, 5, 9,  5,
+        9,  5, 5, 9,  5, 5, 9,  5,
+        11, 5, 5, 11, 5, 5, 11, 5,
+        12, 5, 5, 12, 5, 5, 14, 16,
+
+        9,  2, 2, 9,  2, 2, 9,  2,
+        11, 2, 2, 11, 2, 2, 11, 2,
+        12, 2, 2, 12, 2, 2, 12, 2,
+        14, 2, 2, 14, 2, 2, 16, 17
+    ] @=&gt; int noteNum[];
+    fun void trigger() {
+        (noteNum[num % 128] + 60) $ float =&gt; Std.mtof =&gt; arp.freq;
+        (1) =&gt; arp.noteOn;
+    }
+}
+Pattern1 arp_t;
+(12) =&gt; arp_t.freq;
+
+// Channel Bass
+SinOsc basssynth =&gt; bass;
+class Pattern2 extends Trig {
+    [9, 9, 6, 6, 2, 2, 7, 8] @=&gt; int noteNum[];
+    fun void trigger() {
+        (noteNum[num % 8] + 36) $ float =&gt; Std.mtof =&gt; basssynth.freq;
+    }
+}
+Pattern2 basssynth_t;
+(192) =&gt; basssynth_t.freq;
+
+// Channel Melody
+Mandolin mel =&gt; melody;
+class Pattern3 extends Trig {
+    [
+        [0, 4, 9, 11, 12],
+        [4, 9, 11, 12, 16],
+        [0, 4, 6, 9, 12, 16],
+        [4, 6, 9, 12, 16, 18],
+        [2, 4, 5, 9, 11, 12],
+        [4, 5, 9, 11, 12, 17],
+        [2, 7, 11, 14, 17, 19],
+        [2, 4, 8, 11, 14, 16, 19]
+    ] @=&gt; int notes[][];
+    int last;
+    fun void trigger() {
+        int cur;
+        int l[];
+        if (step % 768 &gt;= 720) {
+            setFreq (12);
+        } else {
+            setFreq (24 - 12 * (num % 2));
+        }
+        (notes[(step / 192) % notes.cap()]) @=&gt; l;
+        do {
+            (Std.rand2(0, l.cap() - 1)) =&gt; cur;
+        } while (last == cur);
+        cur =&gt; last;
+        (l[cur] + 48) =&gt; Std.mtof =&gt; mel.freq;
+        (1) =&gt; mel.noteOn;
+    }
+}
+Pattern3 mel_t;
+(24) =&gt; mel_t.freq;
+
+// Bass Drum
+SinOsc bd =&gt; ADSR bd_c =&gt; percussion;
+(1::ms, 0::ms, 1, 20::ms) =&gt; bd_c.set;
+800 =&gt; bd.freq;
+fun void bd_s() {
+    (step % 48) =&gt; int cst;
+    400 * Math.pow(1 - ((cst $ float) / 48), 20) =&gt; bd.freq;
+    if (cst == 0) {
+        bd_c.keyOn ();
+    }
+    if (cst == 20) {
+        bd_c.keyOff ();
+    }
+}
+(0.5) =&gt; synth.gain;
+
+// Main Loop
+(0) =&gt; step;
+() =&gt; arp_t.next;
+() =&gt; basssynth_t.next;
+while (1) {
+
+    () =&gt; arp_t.next;
+    () =&gt; basssynth_t.next;
+    () =&gt; mel_t.next;
+    () =&gt; bd_s;
+    (1 + step) =&gt; step;
+    (each) =&gt; now;
+}
+</code></pre><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+var _vue = require('vue');
+function render(_ctx, _cache) {
+  return _cache[0] || (_cache[0] = _vue.createStaticVNode.call(void 0, "<p>Just playing around with <a href=\"https://chuck.stanford.edu/\">ChucK</a>, a “strongly-timed music programming language,” in 2009. This <a href=\"ProgrammaticMusic\">piece</a> contains:</p><ul><li>An arp using a StifKarp.</li><li>A random melody.</li><li>A kick drum made with a sweeping sine wave.</li><li>A bassline track made with a sine wave.</li><li>Some feedback delay lines.</li></ul><p class=\"notes-cta\"><a class=\"notes-cta__link\" href=\"https://patchies.app/?id=6wjvo38hcycyou6\"><span class=\"notes-cta__title\">Try on Patchies</span><span class=\"notes-cta__url\">https://patchies.app/?id=6wjvo38hcycyou6</span></a></p><pre><code>// Master BPM\nfloat bpm;\n(140) =&gt; bpm;\n\n// Each step\nint step;\n\ndur each;\n((60 / bpm) / 48)::second =&gt; each;\n\n// Master Track\nGain master;\nmaster =&gt; dac;\n(0.5) =&gt; master.gain;\n\n// Synth Track\nGain synth;\nDelay synth_d;\nGain synth_g;\nsynth =&gt; master;\nsynth =&gt; synth_d;\nsynth_d =&gt; synth_g;\nsynth_g =&gt; synth_d;\nsynth_g =&gt; master;\n(each * 36) =&gt; synth_d.max;\n(each * 36) =&gt; synth_d.delay;\n(0.5) =&gt; synth_g.gain;\n\n// Bass Track\nGain bass;\nbass =&gt; master;\n(0.6) =&gt; bass.gain;\n\n// Random Melody\nGain melody;\nDelay melody_d;\nGain melody_g;\nmelody =&gt; master;\nmelody =&gt; melody_d;\nmelody_d =&gt; melody_g;\nmelody_g =&gt; melody_d;\nmelody_g =&gt; master;\n(0.5) =&gt; melody_g.gain;\n(each * 60) =&gt; melody_d.max;\n(each * 60) =&gt; melody_d.delay;\n\n// Percussion\nGain percussion;\npercussion =&gt; master;\n\n// Instrument Class\nclass Trig {\n    (1)    =&gt; int freq;\n    (0)    =&gt; int left;\n    (0)    =&gt; int num;\n    fun void next() {\n        (left - 1) =&gt; left;\n        if (left &lt;= 0) {\n            (freq) =&gt; left;\n            () =&gt; trigger;\n            (num + 1) =&gt; num;\n        }\n    }\n    fun void setFreq(int newFreq) {\n        int del;\n        (newFreq - freq) =&gt; del;\n        (freq + del) =&gt; freq;\n        (left + del) =&gt; left;\n    }\n    fun void trigger() {\n    }\n}\n\n// Channel Arp\nStifKarp arp;\narp =&gt; synth;\nclass Pattern1 extends Trig {\n    [\n        9,  4, 4, 9,  4, 4, 9,  4,\n        9,  4, 4, 9,  4, 4, 9,  4,\n        11, 4, 4, 11, 4, 4, 11, 4,\n        12, 4, 4, 12, 4, 4, 14, 16,\n\n        9,  4, 4, 9,  4, 4, 9,  4,\n        9,  4, 4, 9,  4, 4, 9,  4,\n        11, 4, 4, 11, 4, 4, 11, 4,\n        12, 4, 4, 12, 4, 4, 14, 16,\n\n        9,  5, 5, 9,  5, 5, 9,  5,\n        9,  5, 5, 9,  5, 5, 9,  5,\n        11, 5, 5, 11, 5, 5, 11, 5,\n        12, 5, 5, 12, 5, 5, 14, 16,\n\n        9,  2, 2, 9,  2, 2, 9,  2,\n        11, 2, 2, 11, 2, 2, 11, 2,\n        12, 2, 2, 12, 2, 2, 12, 2,\n        14, 2, 2, 14, 2, 2, 16, 17\n    ] @=&gt; int noteNum[];\n    fun void trigger() {\n        (noteNum[num % 128] + 60) $ float =&gt; Std.mtof =&gt; arp.freq;\n        (1) =&gt; arp.noteOn;\n    }\n}\nPattern1 arp_t;\n(12) =&gt; arp_t.freq;\n\n// Channel Bass\nSinOsc basssynth =&gt; bass;\nclass Pattern2 extends Trig {\n    [9, 9, 6, 6, 2, 2, 7, 8] @=&gt; int noteNum[];\n    fun void trigger() {\n        (noteNum[num % 8] + 36) $ float =&gt; Std.mtof =&gt; basssynth.freq;\n    }\n}\nPattern2 basssynth_t;\n(192) =&gt; basssynth_t.freq;\n\n// Channel Melody\nMandolin mel =&gt; melody;\nclass Pattern3 extends Trig {\n    [\n        [0, 4, 9, 11, 12],\n        [4, 9, 11, 12, 16],\n        [0, 4, 6, 9, 12, 16],\n        [4, 6, 9, 12, 16, 18],\n        [2, 4, 5, 9, 11, 12],\n        [4, 5, 9, 11, 12, 17],\n        [2, 7, 11, 14, 17, 19],\n        [2, 4, 8, 11, 14, 16, 19]\n    ] @=&gt; int notes[][];\n    int last;\n    fun void trigger() {\n        int cur;\n        int l[];\n        if (step % 768 &gt;= 720) {\n            setFreq (12);\n        } else {\n            setFreq (24 - 12 * (num % 2));\n        }\n        (notes[(step / 192) % notes.cap()]) @=&gt; l;\n        do {\n            (Std.rand2(0, l.cap() - 1)) =&gt; cur;\n        } while (last == cur);\n        cur =&gt; last;\n        (l[cur] + 48) =&gt; Std.mtof =&gt; mel.freq;\n        (1) =&gt; mel.noteOn;\n    }\n}\nPattern3 mel_t;\n(24) =&gt; mel_t.freq;\n\n// Bass Drum\nSinOsc bd =&gt; ADSR bd_c =&gt; percussion;\n(1::ms, 0::ms, 1, 20::ms) =&gt; bd_c.set;\n800 =&gt; bd.freq;\nfun void bd_s() {\n    (step % 48) =&gt; int cst;\n    400 * Math.pow(1 - ((cst $ float) / 48), 20) =&gt; bd.freq;\n    if (cst == 0) {\n        bd_c.keyOn ();\n    }\n    if (cst == 20) {\n        bd_c.keyOff ();\n    }\n}\n(0.5) =&gt; synth.gain;\n\n// Main Loop\n(0) =&gt; step;\n() =&gt; arp_t.next;\n() =&gt; basssynth_t.next;\nwhile (1) {\n\n    () =&gt; arp_t.next;\n    () =&gt; basssynth_t.next;\n    () =&gt; mel_t.next;\n    () =&gt; bd_s;\n    (1 + step) =&gt; step;\n    (each) =&gt; now;\n}\n</code></pre>", 4))
+}
+__sfc__.render = render
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"public":true,"title":"ChucK The Fourth Time","created":"2009-05-02T00:00:00.000Z","updated":"2025-09-08T00:00:00.000Z"};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

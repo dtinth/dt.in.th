@@ -111,6 +111,7 @@ https://notes.dt.in.th/CaddyCORS
 https://notes.dt.in.th/CaddyCompression
 https://notes.dt.in.th/CaddyReverseProxy
 https://notes.dt.in.th/CaddySelfSigned
+https://notes.dt.in.th/ChucKSong4
 https://notes.dt.in.th/CircleCIDummyConfig
 https://notes.dt.in.th/CloudPlatform
 https://notes.dt.in.th/Codebox
@@ -194,6 +195,7 @@ https://notes.dt.in.th/HueGameHSL
 https://notes.dt.in.th/IPedal
 https://notes.dt.in.th/IconifyUsage
 https://notes.dt.in.th/IndieWeb
+https://notes.dt.in.th/InfinitelyDescendingChord
 https://notes.dt.in.th/InsertionSortSong
 https://notes.dt.in.th/Insta360LinkControllerWebSocketProtocol
 https://notes.dt.in.th/InstallGcloudCliOnCodespaces
@@ -298,6 +300,7 @@ https://notes.dt.in.th/PostgresDevConfig
 https://notes.dt.in.th/PostgresDockerCompose
 https://notes.dt.in.th/PostgresMigrate
 https://notes.dt.in.th/Productivity
+https://notes.dt.in.th/ProgrammaticMusic
 https://notes.dt.in.th/Projects
 https://notes.dt.in.th/PublishMarkdownPageWithoutBuildTool
 https://notes.dt.in.th/PythonRecursionIntro
@@ -385,7 +388,9 @@ https://notes.dt.in.th/Vue
 https://notes.dt.in.th/Vuetoy3
 https://notes.dt.in.th/Vx
 https://notes.dt.in.th/WSL
+https://notes.dt.in.th/WebAudio
 https://notes.dt.in.th/WebComponents
+https://notes.dt.in.th/WebMIDI
 https://notes.dt.in.th/WebMIDICon
 https://notes.dt.in.th/WebMIDITalk
 https://notes.dt.in.th/WebPlatform
