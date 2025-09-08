@@ -752,6 +752,10 @@
 		{	"title": "Gyroscratch"
 		,	"parent": "Projects"
 		}
+	,	"HBDJS2019":
+		{	"title": "Happy Birthday Song in Obfuscated JS"
+		,	"parent": "ProgrammaticMusic"
+		}
 	,	"HDRQRCode":
 		{	"title": "HDR QR Code"
 		,	"parent": "QRCode"
@@ -825,7 +829,7 @@
 		}
 	,	"Jamulus":
 		{	"title": "Jamulus (topic)"
-		,	"parent": "HomePage"
+		,	"parent": "Music"
 		}
 	,	"JamulusProtocolStudyNotes":
 		{	"title": "Jamulus protocol study notes"

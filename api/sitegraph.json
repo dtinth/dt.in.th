@@ -1681,6 +1681,15 @@
 				}
 			]
 		}
+	,	"HBDJS2019":
+		{	"title": "Happy Birthday Song in Obfuscated JS"
+		,	"links":
+			[	{	"link": "ProgrammaticMusic"
+				}
+			,	{	"link": "JavaScript"
+				}
+			]
+		}
 	,	"HDRQRCode":
 		{	"title": "HDR QR Code"
 		,	"links":
@@ -1755,8 +1764,6 @@
 			,	{	"link": "LargeLanguageModel"
 				}
 			,	{	"link": "Linux"
-				}
-			,	{	"link": "Jamulus"
 				}
 			,	{	"link": "JavaScript"
 				}
@@ -1946,7 +1953,9 @@
 	,	"Jamulus":
 		{	"title": "Jamulus (topic)"
 		,	"links":
-			[	{	"link": "JamulusProtocolStudyNotes"
+			[	{	"link": "Music"
+				}
+			,	{	"link": "JamulusProtocolStudyNotes"
 				}
 			,	{	"link": "20210920T171647Z1352"
 				}
