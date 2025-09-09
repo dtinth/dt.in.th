@@ -262,7 +262,7 @@ async function xe(o, r) {
       ["meta", { property: "og:image:width", content: "1800" }],
       ["meta", { property: "og:image:height", content: "1680" }]
     );
-    const C = `https://notes.dt.in.th/${r}`;
+    const C = `https://dt.in.th/${r}`;
     t.compiled.head.push([
       "link",
       { rel: "canonical", href: C }
