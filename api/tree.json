@@ -955,6 +955,10 @@
 		{	"title": "MongoDB in Docker: ‘Authentication Failed’ when logging in to a non-default database name"
 		,	"parent": "MongoDB"
 		}
+	,	"MongoDBDockerCompose":
+		{	"title": "Running MongoDB and Mongo Express with Docker Compose for Development"
+		,	"parent": "MongoDB"
+		}
 	,	"Morse":
 		{	"title": "How I memorize the morse code (without deliberate practice)"
 		,	"parent": "Recent"

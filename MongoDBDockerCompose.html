@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="MongoDBDockerCompose" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Running MongoDB and Mongo Express with Docker Compose for Development | notes.dt.in.th</title><meta property="og:title" content="Running MongoDB and Mongo Express with Docker Compose for Development" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/MongoDBDockerCompose" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://notes.dt.in.th/MongoDBDockerCompose" data-source="note">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">notes.dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><h1 id="running-mongodb-and-mongo-express-with-docker-compose-for-development"><a aria-hidden="true" tabindex="-1" href="#running-mongodb-and-mongo-express-with-docker-compose-for-development"><span class="icon icon-link"></span></a>Running MongoDB and Mongo Express with Docker Compose for Development</h1><p>This is how I run <a href="MongoDB">MongoDB</a> and <a href="https://github.com/mongo-express/mongo-express">Mongo Express</a> with <a href="DockerCompose">Docker Compose</a> for development.</p><p><code>docker-compose.yml</code></p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#85E89D;">services</span><span style="color:#E1E4E8;">:</span></span>
+<span class="line"><span style="color:#85E89D;">  mongo</span><span style="color:#E1E4E8;">:</span></span>
+<span class="line"><span style="color:#85E89D;">    image</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">mongo</span></span>
+<span class="line"><span style="color:#85E89D;">    restart</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">unless-stopped</span></span>
+<span class="line"><span style="color:#85E89D;">    environment</span><span style="color:#E1E4E8;">:</span></span>
+<span class="line"><span style="color:#85E89D;">      MONGO_INITDB_ROOT_USERNAME</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">root</span></span>
+<span class="line"><span style="color:#85E89D;">      MONGO_INITDB_ROOT_PASSWORD</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">root</span></span>
+<span class="line"><span style="color:#85E89D;">    ports</span><span style="color:#E1E4E8;">:</span></span>
+<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">${LISTEN_HOST}:27017:27017</span></span>
+<span class="line"><span style="color:#85E89D;">    volumes</span><span style="color:#E1E4E8;">:</span></span>
+<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">db:/data/db</span></span>
+<span class="line"><span style="color:#85E89D;">  mongo-express</span><span style="color:#E1E4E8;">:</span></span>
+<span class="line"><span style="color:#85E89D;">    image</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">mongo-express</span></span>
+<span class="line"><span style="color:#85E89D;">    restart</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">unless-stopped</span></span>
+<span class="line"><span style="color:#85E89D;">    ports</span><span style="color:#E1E4E8;">:</span></span>
+<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">${LISTEN_HOST}:28017:8081</span></span>
+<span class="line"><span style="color:#85E89D;">    environment</span><span style="color:#E1E4E8;">:</span></span>
+<span class="line"><span style="color:#85E89D;">      ME_CONFIG_MONGODB_URL</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">mongodb://root:root@mongo:27017/</span></span>
+<span class="line"><span style="color:#85E89D;">volumes</span><span style="color:#E1E4E8;">:</span></span>
+<span class="line"><span style="color:#85E89D;">  db</span><span style="color:#E1E4E8;">:</span></span></code></pre><p><code>stack.env</code></p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#6A737D;"># Listen on only specific IP address</span></span>
+<span class="line"><span style="color:#E1E4E8;">LISTEN_HOST</span><span style="color:#F97583;">=</span><span style="color:#9ECBFF;">127.0.0.1</span></span></code></pre><p>Default user and password to access mongo-express is:</p><ul><li>Username: <code>admin</code></li><li>Password: <code>pass</code></li></ul><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+var _vue = require('vue');
+function render(_ctx, _cache) {
+  return _cache[0] || (_cache[0] = _vue.createStaticVNode.call(void 0, "<h1 id=\"running-mongodb-and-mongo-express-with-docker-compose-for-development\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#running-mongodb-and-mongo-express-with-docker-compose-for-development\"><span class=\"icon icon-link\"></span></a>Running MongoDB and Mongo Express with Docker Compose for Development</h1><p>This is how I run <a href=\"MongoDB\">MongoDB</a> and <a href=\"https://github.com/mongo-express/mongo-express\">Mongo Express</a> with <a href=\"DockerCompose\">Docker Compose</a> for development.</p><p><code>docker-compose.yml</code></p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#85E89D;\">services</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">  mongo</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    image</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">mongo</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    restart</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">unless-stopped</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    environment</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      MONGO_INITDB_ROOT_USERNAME</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">root</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      MONGO_INITDB_ROOT_PASSWORD</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">root</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    ports</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#9ECBFF;\">${LISTEN_HOST}:27017:27017</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    volumes</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#9ECBFF;\">db:/data/db</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">  mongo-express</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    image</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">mongo-express</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    restart</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">unless-stopped</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    ports</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#9ECBFF;\">${LISTEN_HOST}:28017:8081</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    environment</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">      ME_CONFIG_MONGODB_URL</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">mongodb://root:root@mongo:27017/</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">volumes</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">  db</span><span style=\"color:#E1E4E8;\">:</span></span></code></pre><p><code>stack.env</code></p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#6A737D;\"># Listen on only specific IP address</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">LISTEN_HOST</span><span style=\"color:#F97583;\">=</span><span style=\"color:#9ECBFF;\">127.0.0.1</span></span></code></pre><p>Default user and password to access mongo-express is:</p><ul><li>Username: <code>admin</code></li><li>Password: <code>pass</code></li></ul>", 8))
+}
+__sfc__.render = render
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"public":true,"title":"Running MongoDB and Mongo Express with Docker Compose for Development"};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
