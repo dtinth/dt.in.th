@@ -845,7 +845,7 @@
 		}
 	,	"JavaScriptBangkokTalk2024":
 		{	"title": "What I use and what I build to make my life easier this year (2024 talk)"
-		,	"parent": "Talks"
+		,	"parent": "LargeLanguageModel"
 		}
 	,	"JestESM":
 		{	"title": "Setting up Jest in ESM projects"

@@ -2050,7 +2050,9 @@
 	,	"JavaScriptBangkokTalk2024":
 		{	"title": "What I use and what I build to make my life easier this year (2024 talk)"
 		,	"links":
-			[	{	"link": "/"
+			[	{	"link": "Talks"
+				}
+			,	{	"link": "/"
 				}
 			,	{	"link": "OpenWebUILiteLLM"
 				}
@@ -2110,6 +2112,8 @@
 			,	{	"link": "Gemini25ProPreviewTTSThai"
 				}
 			,	{	"link": "NotebookLMSummarizationPrompt"
+				}
+			,	{	"link": "JavaScriptBangkokTalk2024"
 				}
 			]
 		}
