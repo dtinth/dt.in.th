@@ -1383,6 +1383,10 @@
 		{	"title": "Random mnemonic code generator based on SLIP39 wordlist"
 		,	"parent": "Tools"
 		}
+	,	"SmellsInReactApps":
+		{	"title": "Smells in React Apps (talk)"
+		,	"parent": "Talks"
+		}
 	,	"SoftwareEngineering":
 		{	"title": "Software Engineering (topic)"
 		,	"parent": "HomePage"
@@ -1397,6 +1401,10 @@
 		}
 	,	"StableLibSnippets":
 		{	"title": "StableLib snippets"
+		,	"parent": "JavaScript"
+		}
+	,	"StringByteLength":
+		{	"title": "JavaScript - Check a string's length in bytes"
 		,	"parent": "JavaScript"
 		}
 	,	"StructuredProcrastination":
@@ -1429,7 +1437,7 @@
 		}
 	,	"Syntax":
 		{	"title": "Markdown syntax extensions and custom elements in notes.dt.in.th"
-		,	"parent": "AboutNotes"
+		,	"parent": "Markdown"
 		}
 	,	"TDDTalk":
 		{	"title": "A lecture about TDD"

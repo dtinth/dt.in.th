@@ -1981,7 +1981,9 @@
 	,	"JavaScript":
 		{	"title": "JavaScript (topic)"
 		,	"links":
-			[	{	"link": "20200502T090200Z0000"
+			[	{	"link": "StringByteLength"
+				}
+			,	{	"link": "20200502T090200Z0000"
 				}
 			,	{	"link": "ShortLivedMutability"
 				}
@@ -2266,6 +2268,8 @@
 			[	{	"link": "PublishMarkdownPageWithoutBuildTool"
 				}
 			,	{	"link": "InteractiveFootnotes"
+				}
+			,	{	"link": "Syntax"
 				}
 			]
 		}
@@ -3319,6 +3323,10 @@
 		{	"title": "Random mnemonic code generator based on SLIP39 wordlist"
 		,	"links": []
 		}
+	,	"SmellsInReactApps":
+		{	"title": "Smells in React Apps (talk)"
+		,	"links": []
+		}
 	,	"SoftwareEngineering":
 		{	"title": "Software Engineering (topic)"
 		,	"links":
@@ -3399,6 +3407,13 @@
 				}
 			]
 		}
+	,	"StringByteLength":
+		{	"title": "JavaScript - Check a string's length in bytes"
+		,	"links":
+			[	{	"link": "JavaScript"
+				}
+			]
+		}
 	,	"StructuredProcrastination":
 		{	"title": "Structured procrastination"
 		,	"links": []
@@ -3445,7 +3460,10 @@
 		}
 	,	"Syntax":
 		{	"title": "Markdown syntax extensions and custom elements in notes.dt.in.th"
-		,	"links": []
+		,	"links":
+			[	{	"link": "Markdown"
+				}
+			]
 		}
 	,	"TDDTalk":
 		{	"title": "A lecture about TDD"

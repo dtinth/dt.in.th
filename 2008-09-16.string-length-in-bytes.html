@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="StringByteLength" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript - Check a string&#39;s length in bytes | dt.in.th</title><meta property="og:title" content="JavaScript - Check a string&#39;s length in bytes" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/StringByteLength" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://dt.in.th/StringByteLength" data-source="note"><style id="note-styles">/* layer: default */
+.fixed[data-v-8c9498c0]{position:fixed;}
+.my[data-v-8c9498c0]{margin-top:1rem;margin-bottom:1rem;}</style>
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><div class="notes-callout" data-type="Tip" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><!---->From the old blog archive</p><p data-v-8c9498c0>This article is archived from my old blog. The original post date is September 16, 2008.</p></div><div class="notes-callout" data-type="Warning" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><!---->Outdated</p><p data-v-8c9498c0>This article is now way outdated since its original publication in 2008. Most websites now handles UTF-8 inputs properly, and since 2014, we now have <code data-v-8c9498c0>TextEncoder</code> which provides a more direct way to measure a string’s byte length. The same code could be written: <code data-v-8c9498c0>const byteLengthOfString = (s) =&gt; new TextEncoder().encode(s).length</code>. Also, adding to a global prototype is now considered as an anti-pattern by most people.</p></div><h1 id="checking-a-strings-byte-length-in-javascript" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#checking-a-strings-byte-length-in-javascript" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Checking a string&#39;s byte length in JavaScript</h1><p data-v-8c9498c0>We can tell the length of a string by <code data-v-8c9498c0>(&#39;something&#39;).length</code>. That is the number of characters, not bytes.</p><p data-v-8c9498c0>Some sites may limit a fixed numbers of characters accepted into an input box. At most times they limit it by number of bytes. In <a href="JavaScript" data-v-8c9498c0>JavaScript</a>, each character adds the length property by one.</p><p data-v-8c9498c0>But for unicode characters, say, UTF-8, each Thai letter takes 3 bytes. When its length is checked by a server-side script it may return an error.</p><p data-v-8c9498c0>To find a length of a string object in bytes, I made this function:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#79B8FF;" data-v-8c9498c0>String</span><span style="color:#E1E4E8;" data-v-8c9498c0>.</span><span style="color:#79B8FF;" data-v-8c9498c0>prototype</span><span style="color:#E1E4E8;" data-v-8c9498c0>.</span><span style="color:#B392F0;" data-v-8c9498c0>getBytes</span><span style="color:#F97583;" data-v-8c9498c0> =</span><span style="color:#F97583;" data-v-8c9498c0> function</span><span style="color:#E1E4E8;" data-v-8c9498c0> () {</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>  return</span><span style="color:#B392F0;" data-v-8c9498c0> encodeURIComponent</span><span style="color:#E1E4E8;" data-v-8c9498c0>(</span><span style="color:#79B8FF;" data-v-8c9498c0>this</span><span style="color:#E1E4E8;" data-v-8c9498c0>).</span><span style="color:#B392F0;" data-v-8c9498c0>replace</span><span style="color:#E1E4E8;" data-v-8c9498c0>(</span><span style="color:#9ECBFF;" data-v-8c9498c0>/</span><span style="color:#DBEDFF;" data-v-8c9498c0>%</span><span style="color:#79B8FF;" data-v-8c9498c0>..</span><span style="color:#9ECBFF;" data-v-8c9498c0>/</span><span style="color:#F97583;" data-v-8c9498c0>g</span><span style="color:#E1E4E8;" data-v-8c9498c0>, </span><span style="color:#9ECBFF;" data-v-8c9498c0>&#39;x&#39;</span><span style="color:#E1E4E8;" data-v-8c9498c0>).</span><span style="color:#79B8FF;" data-v-8c9498c0>length</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>}</span></span></code></pre><p data-v-8c9498c0>This returns the bytes taken if the string is encoded in UTF-8. For example, an English character takes 1 byte while Thai characters take 3 bytes. This function should accurately return the number of bytes.</p><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+var _vue = require('vue');
+
+const _hoisted_1 = {
+  class: "notes-callout",
+  "data-type": "Tip"
+}
+const _hoisted_2 = { class: "notes-callout__label" }
+const _hoisted_3 = {
+  class: "notes-callout",
+  "data-type": "Warning"
+}
+const _hoisted_4 = { class: "notes-callout__label" }
+function render(_ctx, _cache) {
+  const _component_notes_callout_icon = _vue.resolveComponent.call(void 0, "notes-callout-icon")
+
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
+    _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
+      _vue.createElementVNode.call(void 0, "p", _hoisted_2, [
+        _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Tip" }),
+        _cache[0] || (_cache[0] = _vue.createTextVNode.call(void 0, "From the old blog archive", -1 /* CACHED */))
+      ]),
+      _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "p", null, "This article is archived from my old blog. The original post date is September 16, 2008.", -1 /* CACHED */))
+    ]),
+    _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
+      _vue.createElementVNode.call(void 0, "p", _hoisted_4, [
+        _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Warning" }),
+        _cache[2] || (_cache[2] = _vue.createTextVNode.call(void 0, "Outdated", -1 /* CACHED */))
+      ]),
+      _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "p", null, [
+        _vue.createTextVNode.call(void 0, "This article is now way outdated since its original publication in 2008. Most websites now handles UTF-8 inputs properly, and since 2014, we now have "),
+        _vue.createElementVNode.call(void 0, "code", null, "TextEncoder"),
+        _vue.createTextVNode.call(void 0, " which provides a more direct way to measure a string’s byte length. The same code could be written: "),
+        _vue.createElementVNode.call(void 0, "code", null, "const byteLengthOfString = (s) => new TextEncoder().encode(s).length"),
+        _vue.createTextVNode.call(void 0, ". Also, adding to a global prototype is now considered as an anti-pattern by most people.")
+      ], -1 /* CACHED */))
+    ]),
+    _cache[4] || (_cache[4] = _vue.createStaticVNode.call(void 0, "<h1 id=\"checking-a-strings-byte-length-in-javascript\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#checking-a-strings-byte-length-in-javascript\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Checking a string&#39;s byte length in JavaScript</h1><p data-v-8c9498c0>We can tell the length of a string by <code data-v-8c9498c0>(&#39;something&#39;).length</code>. That is the number of characters, not bytes.</p><p data-v-8c9498c0>Some sites may limit a fixed numbers of characters accepted into an input box. At most times they limit it by number of bytes. In <a href=\"JavaScript\" data-v-8c9498c0>JavaScript</a>, each character adds the length property by one.</p><p data-v-8c9498c0>But for unicode characters, say, UTF-8, each Thai letter takes 3 bytes. When its length is checked by a server-side script it may return an error.</p><p data-v-8c9498c0>To find a length of a string object in bytes, I made this function:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#79B8FF;\" data-v-8c9498c0>String</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>.</span><span style=\"color:#79B8FF;\" data-v-8c9498c0>prototype</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>.</span><span style=\"color:#B392F0;\" data-v-8c9498c0>getBytes</span><span style=\"color:#F97583;\" data-v-8c9498c0> =</span><span style=\"color:#F97583;\" data-v-8c9498c0> function</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> () {</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>  return</span><span style=\"color:#B392F0;\" data-v-8c9498c0> encodeURIComponent</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>(</span><span style=\"color:#79B8FF;\" data-v-8c9498c0>this</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>).</span><span style=\"color:#B392F0;\" data-v-8c9498c0>replace</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>(</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>/</span><span style=\"color:#DBEDFF;\" data-v-8c9498c0>%</span><span style=\"color:#79B8FF;\" data-v-8c9498c0>..</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>/</span><span style=\"color:#F97583;\" data-v-8c9498c0>g</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>, </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;x&#39;</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>).</span><span style=\"color:#79B8FF;\" data-v-8c9498c0>length</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>}</span></span></code></pre><p data-v-8c9498c0>This returns the bytes taken if the string is encoded in UTF-8. For example, an English character takes 1 byte while Thai characters take 3 bytes. This function should accurately return the number of bytes.</p>", 7))
+  ], 64 /* STABLE_FRAGMENT */))
+}
+__sfc__.render = render
+__sfc__.__scopeId = "data-v-8c9498c0"
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"title":"JavaScript - Check a string's length in bytes","public":true,"created":"2008-09-16T00:00:00.000Z","aliases":["2008-09-16.string-length-in-bytes"]};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
