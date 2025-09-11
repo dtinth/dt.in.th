@@ -8,7 +8,7 @@ aliases:
 
 **[Vue.js](https://vuejs.org/)** is "The Progressive JavaScript Framework".
 
-- [VuePress](20201121T193504Z7144)
+- [VuePress](VuePress)
 - [Choosing between React and Vue (May 2020)](20200502T090200Z0000)
 
 ## Links

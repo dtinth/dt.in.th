@@ -15,6 +15,7 @@ wide: true
 |:--- |:--- |:--- |
 | [Strategies for Black-Box Testability](BlackBoxTestingStrategies) | National Coding Day 2024 | 2024-12-12 |
 | [What I use and what I build to make my life easier this year](JavaScriptBangkokTalk2024) | JavaScript Bangkok 2.0.0 | 2024-11-17 |
+| [สร้างเว็บแหล่งความรู้สวยๆ ด้วย VitePress](VitePressTalk) | BKK.JS #19 | 2024-01-27 |
 | [When Maths Strike Back: Behind the 3D QR code effect in ppqr.app](WhenMathsStrikeBack) | National Coding Day 2023 | 2023-09-09 |
 | [Move fast while maintaining quality with black box testing](BlackBoxTestingTalk) | Bkk.js #17 | 2022-09-29 |
 | [The amazing flexibility of Web MIDI API and its surrounding ecosystem](WebMIDITalk) | CityJS | 2022-07-29 |

@@ -72,10 +72,6 @@
 		{	"title": "Ed25519 (topic)"
 		,	"parent": "20220225T065443Z1811"
 		}
-	,	"20201121T193504Z7144":
-		{	"title": "VuePress (topic)"
-		,	"parent": "Vue"
-		}
 	,	"20201125T110802Z7306":
 		{	"title": "JavaScript powered by TypeScript (project Salsa) (topic)"
 		,	"parent": "TypeScript"
@@ -1567,9 +1563,21 @@
 		{	"title": "Analyzing and optimizing Vite bundle size"
 		,	"parent": "Vite"
 		}
+	,	"VitePress":
+		{	"title": "VitePress (topic)"
+		,	"parent": "VuePress"
+		}
+	,	"VitePressTalk":
+		{	"title": "สร้างเว็บแหล่งความรู้สวยๆ ด้วย VitePress"
+		,	"parent": "Talks"
+		}
 	,	"Vue":
 		{	"title": "Vue.js (topic)"
 		,	"parent": "JavaScript"
+		}
+	,	"VuePress":
+		{	"title": "VuePress (topic)"
+		,	"parent": "Vue"
 		}
 	,	"Vuetoy3":
 		{	"title": "vuetoy3"

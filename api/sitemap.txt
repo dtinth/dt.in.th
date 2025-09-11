@@ -16,7 +16,6 @@ https://dt.in.th/20201102T104426Z6417
 https://dt.in.th/20201104T101354Z5519
 https://dt.in.th/20201117T201556Z6214
 https://dt.in.th/20201118T224459Z5304
-https://dt.in.th/20201121T193504Z7144
 https://dt.in.th/20201125T110802Z7306
 https://dt.in.th/20201208T104844Z2958
 https://dt.in.th/20201208T165017Z7657
@@ -390,7 +389,10 @@ https://dt.in.th/VimTalk2013
 https://dt.in.th/VirtualDesktop
 https://dt.in.th/Vite
 https://dt.in.th/ViteBundleSize
+https://dt.in.th/VitePress
+https://dt.in.th/VitePressTalk
 https://dt.in.th/Vue
+https://dt.in.th/VuePress
 https://dt.in.th/Vuetoy3
 https://dt.in.th/Vx
 https://dt.in.th/WSL

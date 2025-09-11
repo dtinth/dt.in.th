@@ -66,7 +66,7 @@
 		,	"links":
 			[	{	"link": "AboutNotes"
 				}
-			,	{	"link": "20201121T193504Z7144"
+			,	{	"link": "VuePress"
 				}
 			]
 		}
@@ -138,13 +138,6 @@
 				}
 			]
 		}
-	,	"20201121T193504Z7144":
-		{	"title": "VuePress (topic)"
-		,	"links":
-			[	{	"link": "Vue"
-				}
-			]
-		}
 	,	"20201125T110802Z7306":
 		{	"title": "JavaScript powered by TypeScript (project Salsa) (topic)"
 		,	"links":
@@ -166,7 +159,7 @@
 				}
 			,	{	"link": "Markdown"
 				}
-			,	{	"link": "20201121T193504Z7144"
+			,	{	"link": "VuePress"
 				}
 			]
 		}
@@ -1918,7 +1911,7 @@
 				}
 			,	{	"link": "AboutNotes"
 				}
-			,	{	"link": "20201121T193504Z7144"
+			,	{	"link": "VuePress"
 				}
 			,	{	"link": "#user-content-fnref-example"
 				}
@@ -3528,6 +3521,8 @@
 				}
 			,	{	"link": "JavaScriptBangkokTalk2024"
 				}
+			,	{	"link": "VitePressTalk"
+				}
 			,	{	"link": "WhenMathsStrikeBack"
 				}
 			,	{	"link": "BlackBoxTestingTalk"
@@ -3825,12 +3820,47 @@
 				}
 			]
 		}
+	,	"VitePress":
+		{	"title": "VitePress (topic)"
+		,	"links":
+			[	{	"link": "Vue"
+				}
+			,	{	"link": "VuePress"
+				}
+			,	{	"link": "Markdown"
+				}
+			]
+		}
+	,	"VitePressTalk":
+		{	"title": "สร้างเว็บแหล่งความรู้สวยๆ ด้วย VitePress"
+		,	"links":
+			[	{	"link": "Talks"
+				}
+			,	{	"link": "VitePress"
+				}
+			,	{	"link": "VuePress"
+				}
+			,	{	"link": "VitePress#websites-i-built-with-vitepress"
+				}
+			]
+		}
 	,	"Vue":
 		{	"title": "Vue.js (topic)"
 		,	"links":
-			[	{	"link": "20201121T193504Z7144"
+			[	{	"link": "VuePress"
 				}
 			,	{	"link": "20200502T090200Z0000"
+				}
+			]
+		}
+	,	"VuePress":
+		{	"title": "VuePress (topic)"
+		,	"links":
+			[	{	"link": "Vue"
+				}
+			,	{	"link": "VitePress"
+				}
+			,	{	"link": "AboutNotes"
 				}
 			]
 		}

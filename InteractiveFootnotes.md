@@ -15,7 +15,7 @@ aliases:
 - [mango.pdf.zone blog post _When you browse Instagram and find former Australian Prime Minister Tony Abbott's passport number_](https://mango.pdf.zone/finding-former-australian-prime-minister-tony-abbotts-passport-number-on-instagram). Implemented with [littlefoot.js](https://github.com/goblindegook/littlefoot) which is a bigfoot.js fork that does not require jQuery.
 - This [notes](AboutNotes) server uses it too, obviously.
 
-## Setting this up in [VuePress](20201121T193504Z7144)
+## Setting this up in [VuePress](VuePress)
 
 **Note:** This solution is hacky and not clean but it works well enough for me.
 
