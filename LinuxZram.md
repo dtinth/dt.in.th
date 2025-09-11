@@ -1,0 +1,56 @@
+---
+public: true
+title: Using ZRAM for compressed RAM-backed swap space in Linux
+---
+
+# Using ZRAM for compressed RAM-backed swap space in Linux
+
+:::lead
+**When using a cheap VPS, available RAM is often limited.** While [adding a disk-backed swap space][swap] can help, it's much slower than RAM.
+:::
+
+**[ZRAM][zram]** is a [Linux](Linux) kernel feature that creates a compressed block device in RAM that can be used as swap space. When memory is swapped to and from the ZRAM device, it is compressed and decompressed on-the-fly.
+
+[swap]: https://www.digitalocean.com/community/tutorial-collections/how-to-add-swap-space
+[zram]: https://en.wikipedia.org/wiki/Zram
+[szg]: https://github.com/systemd/zram-generator
+
+In my case, 1.1 GB of swap data is being compressed down to just 93 MB using the zstd compression algorithm:
+
+```sh
+$ /sbin/zramctl
+NAME       ALGORITHM DISKSIZE  DATA COMPR TOTAL STREAMS MOUNTPOINT
+/dev/zram0 zstd            4G  1.1G   93M 98.4M       2 [SWAP]
+```
+
+This compression ratio of over 10:1 means you can effectively get more usable memory without upgrading your VPS plan. ZRAM is particularly effective because many applications nowadays allocate memory without fully utilizing it, making it highly compressible.
+
+The simplest way to enable ZRAM on a modern Linux system is to use the [`systemd-zram-generator`][szg] package:
+
+```sh
+sudo apt install systemd-zram-generator
+```
+
+Then create a configuration file to specify the ZRAM device size and compression algorithm:
+
+```ini
+# /etc/systemd/zram-generator.conf
+[zram0]
+zram-size = 4096
+compression-algorithm = zstd
+```
+
+After rebooting, you should see the ZRAM device created and mounted as swap space.
+
+```sh
+$ cat /proc/swaps
+Filename     Type       Size     Used     Priority
+/dev/zram0   partition  4194300  1170944  100
+```
+
+References:
+
+- [Debian Wiki - ZRAM](https://wiki.debian.org/ZRam)
+- [Reddit discussion on ZRAM performance benefits](https://www.reddit.com/r/lowendgaming/comments/13d5brx/enable_zram_on_low_end_linux_machines_for_a_free/)
+- [Arch Wiki - ZRAM](https://wiki.archlinux.org/title/Zram)
+- [ZRAM article on _Make Debian Fun Again And Learn How To Do Other Cool Stuff Too_](https://makedebianfunagainandlearnhowtodoothercoolstufftoo.computer/doku.php?id=start:zramswap)
