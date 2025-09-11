@@ -14,6 +14,18 @@ verified checkmark on your npm package if you build and publish it from [GitHub 
 
 [<img width="388" alt="image" src="https://user-images.githubusercontent.com/193136/233458617-d7931d76-55db-430a-ac7d-ee7bd724d9b3.png">](<https://www.npmjs.com/package/@(-.-)/env>)
 
+## Using trusted publishing
+
+In July 2025, [npm trusted publishing became generally available](https://github.blog/changelog/2025-07-31-npm-trusted-publishing-with-oidc-is-generally-available/), and is now the preferred way to publish a _verified_ package to npm.
+
+::cta[Docs]{href="https://docs.npmjs.com/trusted-publishers"}
+
+## Using package provenance
+
+:::warning[Outdated 2025]
+The preferred way to publish a _verified_ package to npm now is to use **trusted publishing**.
+:::
+
 1. In `package.json`, make sure `repository.url` is set to your repository’s URL.
 
    ```json

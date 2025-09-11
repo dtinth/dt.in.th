@@ -1981,6 +1981,8 @@
 				}
 			,	{	"link": "ReactVSVue2020"
 				}
+			,	{	"link": "RaceConditionsInJSApps"
+				}
 			,	{	"link": "ShortLivedMutability"
 				}
 			,	{	"link": "FrontendFeatureFlags"
