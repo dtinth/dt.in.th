@@ -15,7 +15,7 @@ aliases:
 - [Context provider pattern in React](ReactContextProvider)
 - [Using multiple refs in React](ReactMultipleRefs)
 - [Ways to render Markdown in React](20200612T134702Z5627)
-- [Choosing between React and Vue (May 2020)](20200502T090200Z0000)
+- [Choosing between React and Vue (May 2020)](ReactVSVue2020)
 - [Smells in React Apps (JSConf.Asia 2018 Talk)](SmellsInReactApps)
 
 ## Related topics

@@ -24,15 +24,6 @@
 		{	"title": "ว่าด้วยเรื่องการใช้โจทย์อัลกอริธึมในการสัมภาษณ์งาน"
 		,	"links": []
 		}
-	,	"20200502T090200Z0000":
-		{	"title": "การเลือกใช้ระหว่าง React กับ Vue (May 2020)"
-		,	"links":
-			[	{	"link": "Vue"
-				}
-			,	{	"link": "React"
-				}
-			]
-		}
 	,	"20200612T134702Z5627":
 		{	"title": "Ways to render Markdown in React"
 		,	"links": []
@@ -1988,7 +1979,7 @@
 		,	"links":
 			[	{	"link": "StringByteLength"
 				}
-			,	{	"link": "20200502T090200Z0000"
+			,	{	"link": "ReactVSVue2020"
 				}
 			,	{	"link": "ShortLivedMutability"
 				}
@@ -3101,7 +3092,7 @@
 				}
 			,	{	"link": "20200612T134702Z5627"
 				}
-			,	{	"link": "20200502T090200Z0000"
+			,	{	"link": "ReactVSVue2020"
 				}
 			,	{	"link": "SmellsInReactApps"
 				}
@@ -3141,6 +3132,15 @@
 		{	"title": "React 18's StrictEffectMode"
 		,	"links":
 			[	{	"link": "React18RC"
+				}
+			]
+		}
+	,	"ReactVSVue2020":
+		{	"title": "การเลือกใช้ระหว่าง React กับ Vue (May 2020)"
+		,	"links":
+			[	{	"link": "Vue"
+				}
+			,	{	"link": "React"
 				}
 			]
 		}
@@ -3853,9 +3853,11 @@
 	,	"Vue":
 		{	"title": "Vue.js (topic)"
 		,	"links":
-			[	{	"link": "VuePress"
+			[	{	"link": "ReactVSVue2020"
 				}
-			,	{	"link": "20200502T090200Z0000"
+			,	{	"link": "VuePress"
+				}
+			,	{	"link": "VitePress"
 				}
 			]
 		}

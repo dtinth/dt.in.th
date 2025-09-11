@@ -196,7 +196,7 @@ Here are my recent writings:
 - 2020-06-12: [Ways to render Markdown in React](20200612T134702Z5627)
 - 2020-06-12: [Context provider pattern in React](ReactContextProvider)
 - 2020-06-09: [Using multiple refs in React](ReactMultipleRefs)
-- 2020-05-02: [การเลือกใช้ระหว่าง Vue กับ React (May 2020)](20200502T090200Z0000)
+- 2020-05-02: [การเลือกใช้ระหว่าง Vue กับ React (May 2020)](ReactVSVue2020)
 - 2020-04-11: [Test infrastructure ของโครงการ TypeScript](TypeScriptTestingInfrastructure)
 - 2019-08-03: [ว่าด้วยเรื่องการใช้โจทย์อัลกอริธึมในการสัมภาษณ์งาน](20190803T094000Z2912)
 - 2018-12-28: [“มีมาตรวัดอะไรที่บอกว่าโปรแกรมเมอร์คนไหน ‘โค้ดได้’ หรือ ‘โค้ดเป็น’”](20181228T000000Z0000)

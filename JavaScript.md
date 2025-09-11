@@ -11,8 +11,8 @@ aliases:
 ## Notes
 
 - [Checking a string's byte length in JavaScript (outdated)](StringByteLength)
-- [Choosing between React and Vue (May 2020)](20200502T090200Z0000)
-- [Race Conditions in JS Apps (JSConf.Asia 2019 Talk)](https://dt.in.th/race-conditions-in-js-apps.html)
+- [Choosing between React and Vue (May 2020)](ReactVSVue2020)
+- [Race Conditions in JS Apps (JSConf.Asia 2019 Talk)](RaceConditionsInJSApps)
 - [Short-lived mutability](ShortLivedMutability)
 - [Simple front-end feature flags](FrontendFeatureFlags)
 - [Pointer events tester](PointerEventsTester)
@@ -28,10 +28,7 @@ aliases:
 - [Setting up packlets](PackletsSetup)
 - [Reading data from OBZ Barcode Reader on the web using Web Serial API](OBZBarcodeScannerJS)
 - [Reverse-engineering Insta360 Link Controller WebSockets protocol](Insta360LinkControllerWebSocketProtocol)
-
-## Userscripts
-
-- [Hacking Surface Pen’s eraser support into Excalidraw](ExcalidrawSurfacePen)
+- [Hacking Surface Pen’s eraser support into Excalidraw (userscript)](ExcalidrawSurfacePen)
 
 ## Related topics
 

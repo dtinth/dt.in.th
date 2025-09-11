@@ -16,10 +16,6 @@
 		{	"title": "ว่าด้วยเรื่องการใช้โจทย์อัลกอริธึมในการสัมภาษณ์งาน"
 		,	"parent": "Recent"
 		}
-	,	"20200502T090200Z0000":
-		{	"title": "การเลือกใช้ระหว่าง React กับ Vue (May 2020)"
-		,	"parent": "React"
-		}
 	,	"20200612T134702Z5627":
 		{	"title": "Ways to render Markdown in React"
 		,	"parent": "React"
@@ -1295,6 +1291,10 @@
 		{	"title": "React 18's StrictEffectMode"
 		,	"parent": "React"
 		}
+	,	"ReactVSVue2020":
+		{	"title": "การเลือกใช้ระหว่าง React กับ Vue (May 2020)"
+		,	"parent": "React"
+		}
 	,	"Recent":
 		{	"title": "Recent writings"
 		,	"parent": "HomePage"
@@ -1565,7 +1565,7 @@
 		}
 	,	"VitePress":
 		{	"title": "VitePress (topic)"
-		,	"parent": "Vite"
+		,	"parent": "Vue"
 		}
 	,	"VitePressTalk":
 		{	"title": "สร้างเว็บแหล่งความรู้สวยๆ ด้วย VitePress"
