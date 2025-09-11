@@ -679,7 +679,17 @@
 		}
 	,	"Azure":
 		{	"title": "Azure (topic)"
-		,	"links": []
+		,	"links":
+			[	{	"link": "AzureStaticWebAppsSPA"
+				}
+			]
+		}
+	,	"AzureStaticWebAppsSPA":
+		{	"title": "Deploying modern Single Page Applications to Azure Static Web Apps"
+		,	"links":
+			[	{	"link": "Azure"
+				}
+			]
 		}
 	,	"BangkokIpsum":
 		{	"title": "Bangkok Ipsum"
@@ -1425,6 +1435,8 @@
 			[	{	"link": "Productivity"
 				}
 			,	{	"link": "#user-content-fn-junkie"
+				}
+			,	{	"link": "Music"
 				}
 			,	{	"link": "#user-content-fnref-junkie"
 				}
@@ -2359,6 +2371,8 @@
 			[	{	"link": "PianoMajorScaleTrainer"
 				}
 			,	{	"link": "PlayByEar"
+				}
+			,	{	"link": "FocusMusic"
 				}
 			,	{	"link": "WebMIDICon"
 				}

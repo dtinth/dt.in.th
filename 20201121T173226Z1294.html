@@ -8,7 +8,7 @@
 <meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/CaddyReverseProxy" data-source="note">
 <meta property="og:image:width" content="1800" data-source="note">
 <meta property="og:image:height" content="1680" data-source="note">
-<link rel="canonical" href="https://notes.dt.in.th/CaddyReverseProxy" data-source="note"><style id="note-styles">.post-limit-size pre > code {
+<link rel="canonical" href="https://dt.in.th/CaddyReverseProxy" data-source="note"><style id="note-styles">.post-limit-size pre > code {
   overflow-y: auto;
   max-height: 24rem;
 }
@@ -32,7 +32,21 @@
 }
 /* layer: default */
 .sr-only[data-v-8c9498c0]{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0;}
-.me[data-v-8c9498c0]{margin-inline-end:1rem;}</style>
+.grid[data-v-8c9498c0]{display:grid;}
+.grid-cols-1[data-v-8c9498c0]{grid-template-columns:repeat(1,minmax(0,1fr));}
+.me[data-v-8c9498c0]{margin-inline-end:1rem;}
+.hidden[data-v-8c9498c0]{display:none;}
+.gap-2[data-v-8c9498c0]{gap:0.5rem;}
+.text-center[data-v-8c9498c0]{text-align:center;}
+.text-2xl[data-v-8c9498c0]{font-size:1.5rem;line-height:2rem;}
+.text-\[\#d7fc70\][data-v-8c9498c0]{--un-text-opacity:1;color:rgb(215 252 112 / var(--un-text-opacity));}
+.font-bold[data-v-8c9498c0]{font-weight:700;}
+@media (min-width: 1024px){
+.lg\:col-span-11[data-v-8c9498c0]{grid-column:span 11/span 11;}
+.lg\:col-span-2[data-v-8c9498c0]{grid-column:span 2/span 2;}
+.lg\:grid-cols-24[data-v-8c9498c0]{grid-template-columns:repeat(24,minmax(0,1fr));}
+.lg\:block[data-v-8c9498c0]{display:block;}
+}</style>
     <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
     <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/runtime/entry/index.css" />
@@ -44,7 +58,51 @@
     <div class="h-entry">
       <main id="main">
         <div id="mainContents">
-          <div class="prose e-content" id="noteContents"><!--[--><p data-v-8c9498c0><strong data-v-8c9498c0>The most boring thing about setting up a web server on a new cloud server for me is the initial configuration.</strong> From <a href="https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04" data-v-8c9498c0>installing</a> and <a href="https://nginxconfig.io/" data-v-8c9498c0>configuring nginx</a> to <a href="https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04" data-v-8c9498c0>setting up Let&#39;s Encrypt with certbot</a><sup data-v-8c9498c0><a href="#user-content-fn-certbot-notes" id="user-content-fnref-certbot-notes" data-footnote-ref="" aria-describedby="footnote-label" data-v-8c9498c0>1</a></sup>. There are so many steps involved and so much boilerplate code in the config<sup data-v-8c9498c0><a href="#user-content-fn-boilerplate" id="user-content-fnref-boilerplate" data-footnote-ref="" aria-describedby="footnote-label" data-v-8c9498c0>2</a></sup>.</p><p data-v-8c9498c0>This has changed now that <a href="Caddy" data-v-8c9498c0>Caddy</a> exists. It is an open source web server written in Go that has built-in Let&#39;s Encrypt support. And <strong data-v-8c9498c0>it has the simplest config file format I&#39;ve ever seen</strong> for a web server:</p><div data-v-8c9498c0><!----></div><p data-v-8c9498c0>Built with Go, it is available as a <a href="https://github.com/caddyserver/caddy/releases" data-v-8c9498c0>standalone binary</a>. <a href="https://caddyserver.com/docs/download" data-v-8c9498c0>Packages for popular package managers</a> are available. And there is also a ready-to-use <a href="https://hub.docker.com/_/caddy" data-v-8c9498c0>Docker image</a>.</p><h2 id="usage-with-docker-compose" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#usage-with-docker-compose" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Usage with <a href="Docker" data-v-8c9498c0>Docker</a> Compose</h2><p data-v-8c9498c0>Here&#39;s a basic docker-compose file that runs Caddy:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0># ingress/docker-compose.yml</span></span>
+          <div class="prose e-content" id="noteContents"><!--[--><p data-v-8c9498c0><strong data-v-8c9498c0>The most boring thing about setting up a web server on a new cloud server for me is the initial configuration.</strong> From <a href="https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04" data-v-8c9498c0>installing</a> and <a href="https://nginxconfig.io/" data-v-8c9498c0>configuring nginx</a> to <a href="https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04" data-v-8c9498c0>setting up Let&#39;s Encrypt with certbot</a><sup data-v-8c9498c0><a href="#user-content-fn-certbot-notes" id="user-content-fnref-certbot-notes" data-footnote-ref="" aria-describedby="footnote-label" data-v-8c9498c0>1</a></sup>. There are so many steps involved and so much boilerplate code in the config<sup data-v-8c9498c0><a href="#user-content-fn-boilerplate" id="user-content-fnref-boilerplate" data-footnote-ref="" aria-describedby="footnote-label" data-v-8c9498c0>2</a></sup>.</p><p data-v-8c9498c0>This has changed now that <a href="Caddy" data-v-8c9498c0>Caddy</a> exists. It is an open source web server written in Go that has built-in Let&#39;s Encrypt support. And <strong data-v-8c9498c0>it has the simplest config file format I&#39;ve ever seen</strong> for a web server:</p><div class="grid grid-cols-1 lg:grid-cols-24 gap-2" data-v-8c9498c0><div class="lg:col-span-11" data-v-8c9498c0><p data-v-8c9498c0><strong data-v-8c9498c0>Before: nginx.conf</strong></p><div style="font-size:0.5em;" class="post-limit-size" data-v-8c9498c0><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0># HTTP -&gt; HTTPS</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>server</span><span style="color:#9ECBFF;" data-v-8c9498c0> {</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  listen</span><span style="color:#79B8FF;" data-v-8c9498c0>       80</span><span style="color:#E1E4E8;" data-v-8c9498c0>;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  listen</span><span style="color:#E1E4E8;" data-v-8c9498c0>       [::]:80;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  server_name</span><span style="color:#9ECBFF;" data-v-8c9498c0>  vps.dt.in.th</span><span style="color:#E1E4E8;" data-v-8c9498c0>;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  location</span><span style="color:#9ECBFF;" data-v-8c9498c0> ^~</span><span style="color:#9ECBFF;" data-v-8c9498c0> /.well-known/acme-challenge/</span><span style="color:#9ECBFF;" data-v-8c9498c0> {</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>    root</span><span style="color:#9ECBFF;" data-v-8c9498c0> /var/www/html</span><span style="color:#E1E4E8;" data-v-8c9498c0>;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  }</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  location</span><span style="color:#9ECBFF;" data-v-8c9498c0> /</span><span style="color:#9ECBFF;" data-v-8c9498c0> {</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>    return</span><span style="color:#79B8FF;" data-v-8c9498c0> 301</span><span style="color:#9ECBFF;" data-v-8c9498c0> https://vps.dt.in.th</span><span style="color:#E1E4E8;" data-v-8c9498c0>$request_uri;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  }</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>}</span></span>
+<span class="line" data-v-8c9498c0></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0># HTTPS server</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>server</span><span style="color:#9ECBFF;" data-v-8c9498c0> {</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  listen</span><span style="color:#79B8FF;" data-v-8c9498c0>       443</span><span style="color:#9ECBFF;" data-v-8c9498c0> ssl</span><span style="color:#9ECBFF;" data-v-8c9498c0> http2</span><span style="color:#E1E4E8;" data-v-8c9498c0>;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  listen</span><span style="color:#E1E4E8;" data-v-8c9498c0>       [::]:443 ssl http2;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  server_name</span><span style="color:#9ECBFF;" data-v-8c9498c0>  vps.dt.in.th</span><span style="color:#E1E4E8;" data-v-8c9498c0>;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  root</span><span style="color:#9ECBFF;" data-v-8c9498c0>         /var/www/html</span><span style="color:#E1E4E8;" data-v-8c9498c0>;</span></span>
+<span class="line" data-v-8c9498c0></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  ssl_certificate</span><span style="color:#9ECBFF;" data-v-8c9498c0>          /etc/letsencrypt/live/vps.dt.in.th/fullchain.pem</span><span style="color:#E1E4E8;" data-v-8c9498c0>;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  ssl_certificate_key</span><span style="color:#9ECBFF;" data-v-8c9498c0>      /etc/letsencrypt/live/vps.dt.in.th/privkey.pem</span><span style="color:#E1E4E8;" data-v-8c9498c0>;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  ssl_trusted_certificate</span><span style="color:#9ECBFF;" data-v-8c9498c0>  /etc/letsencrypt/live/vps.dt.in.th/chain.pem</span><span style="color:#E1E4E8;" data-v-8c9498c0>;</span></span>
+<span class="line" data-v-8c9498c0></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  location</span><span style="color:#9ECBFF;" data-v-8c9498c0> /api</span><span style="color:#9ECBFF;" data-v-8c9498c0> {</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>    proxy_pass</span><span style="color:#9ECBFF;" data-v-8c9498c0> http://api:8080/api</span><span style="color:#E1E4E8;" data-v-8c9498c0>;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>    proxy_http_version</span><span style="color:#79B8FF;" data-v-8c9498c0>  1.1</span><span style="color:#E1E4E8;" data-v-8c9498c0>;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>    proxy_cache_bypass</span><span style="color:#E1E4E8;" data-v-8c9498c0>  $http_upgrade;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>    proxy_set_header</span><span style="color:#9ECBFF;" data-v-8c9498c0>  Upgrade</span><span style="color:#E1E4E8;" data-v-8c9498c0>            $http_upgrade;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>    proxy_set_header</span><span style="color:#9ECBFF;" data-v-8c9498c0>  Connection</span><span style="color:#9ECBFF;" data-v-8c9498c0>         &quot;upgrade&quot;</span><span style="color:#E1E4E8;" data-v-8c9498c0>;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>    proxy_set_header</span><span style="color:#9ECBFF;" data-v-8c9498c0>  Host</span><span style="color:#E1E4E8;" data-v-8c9498c0>               $host;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>    proxy_set_header</span><span style="color:#9ECBFF;" data-v-8c9498c0>  X-Real-IP</span><span style="color:#E1E4E8;" data-v-8c9498c0>          $remote_addr;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>    proxy_set_header</span><span style="color:#9ECBFF;" data-v-8c9498c0>  X-Forwarded-For</span><span style="color:#E1E4E8;" data-v-8c9498c0>    $proxy_add_x_forwarded_for;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>    proxy_set_header</span><span style="color:#9ECBFF;" data-v-8c9498c0>  X-Forwarded-Proto</span><span style="color:#E1E4E8;" data-v-8c9498c0>  $scheme;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>    proxy_set_header</span><span style="color:#9ECBFF;" data-v-8c9498c0>  X-Forwarded-Host</span><span style="color:#E1E4E8;" data-v-8c9498c0>   $host;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>    proxy_set_header</span><span style="color:#9ECBFF;" data-v-8c9498c0>  X-Forwarded-Port</span><span style="color:#E1E4E8;" data-v-8c9498c0>   $server_port;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>    proxy_connect_timeout</span><span style="color:#9ECBFF;" data-v-8c9498c0>  60s</span><span style="color:#E1E4E8;" data-v-8c9498c0>;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>    proxy_send_timeout</span><span style="color:#9ECBFF;" data-v-8c9498c0>     60s</span><span style="color:#E1E4E8;" data-v-8c9498c0>;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>    proxy_read_timeout</span><span style="color:#9ECBFF;" data-v-8c9498c0>     60s</span><span style="color:#E1E4E8;" data-v-8c9498c0>;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  }</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>}</span></span></code></pre></div></div><div class="lg:col-span-2 text-center text-2xl text-[#d7fc70] font-bold hidden lg:block" data-v-8c9498c0><p data-v-8c9498c0> </p><p data-v-8c9498c0>→</p></div><div class="lg:col-span-11" data-v-8c9498c0><p data-v-8c9498c0><strong data-v-8c9498c0>After: Caddyfile</strong></p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0># ingress/Caddyfile</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>vps.dt.in.th</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>root</span><span style="color:#79B8FF;" data-v-8c9498c0> *</span><span style="color:#9ECBFF;" data-v-8c9498c0> /var/www/html</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>file_server</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>reverse_proxy</span><span style="color:#9ECBFF;" data-v-8c9498c0> /api/</span><span style="color:#79B8FF;" data-v-8c9498c0>*</span><span style="color:#9ECBFF;" data-v-8c9498c0> api:8080</span></span></code></pre></div></div><p data-v-8c9498c0>Built with Go, it is available as a <a href="https://github.com/caddyserver/caddy/releases" data-v-8c9498c0>standalone binary</a>. <a href="https://caddyserver.com/docs/download" data-v-8c9498c0>Packages for popular package managers</a> are available. And there is also a ready-to-use <a href="https://hub.docker.com/_/caddy" data-v-8c9498c0>Docker image</a>.</p><h2 id="usage-with-docker-compose" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#usage-with-docker-compose" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Usage with <a href="Docker" data-v-8c9498c0>Docker</a> Compose</h2><p data-v-8c9498c0>Here&#39;s a basic docker-compose file that runs Caddy:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0># ingress/docker-compose.yml</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#85E89D;" data-v-8c9498c0>version</span><span style="color:#E1E4E8;" data-v-8c9498c0>: </span><span style="color:#9ECBFF;" data-v-8c9498c0>&#39;3.7&#39;</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#85E89D;" data-v-8c9498c0>services</span><span style="color:#E1E4E8;" data-v-8c9498c0>:</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#85E89D;" data-v-8c9498c0>  caddy</span><span style="color:#E1E4E8;" data-v-8c9498c0>:</span></span>
@@ -87,319 +145,7 @@
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
 function render(_ctx, _cache) {
-  const _component_r_cell = _vue.resolveComponent.call(void 0, "r-cell")
-  const _component_r_grid = _vue.resolveComponent.call(void 0, "r-grid")
-
-  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _cache[3] || (_cache[3] = _vue.createStaticVNode.call(void 0, "<p data-v-8c9498c0><strong data-v-8c9498c0>The most boring thing about setting up a web server on a new cloud server for me is the initial configuration.</strong> From <a href=\"https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04\" data-v-8c9498c0>installing</a> and <a href=\"https://nginxconfig.io/\" data-v-8c9498c0>configuring nginx</a> to <a href=\"https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04\" data-v-8c9498c0>setting up Let&#39;s Encrypt with certbot</a><sup data-v-8c9498c0><a href=\"#user-content-fn-certbot-notes\" id=\"user-content-fnref-certbot-notes\" data-footnote-ref=\"\" aria-describedby=\"footnote-label\" data-v-8c9498c0>1</a></sup>. There are so many steps involved and so much boilerplate code in the config<sup data-v-8c9498c0><a href=\"#user-content-fn-boilerplate\" id=\"user-content-fnref-boilerplate\" data-footnote-ref=\"\" aria-describedby=\"footnote-label\" data-v-8c9498c0>2</a></sup>.</p><p data-v-8c9498c0>This has changed now that <a href=\"Caddy\" data-v-8c9498c0>Caddy</a> exists. It is an open source web server written in Go that has built-in Let&#39;s Encrypt support. And <strong data-v-8c9498c0>it has the simplest config file format I&#39;ve ever seen</strong> for a web server:</p>", 2)),
-    _vue.createElementVNode.call(void 0, "div", null, [
-      _vue.createVNode.call(void 0, _component_r_grid, { columns: "24" }, {
-        default: _vue.withCtx.call(void 0, () => [
-          _vue.createVNode.call(void 0, _component_r_cell, {
-            span: "11",
-            "span-s": "row"
-          }, {
-            default: _vue.withCtx.call(void 0, () => [...(_cache[0] || (_cache[0] = [
-              _vue.createElementVNode.call(void 0, "div", null, [
-                _vue.createElementVNode.call(void 0, "p", null, [
-                  _vue.createElementVNode.call(void 0, "strong", null, "Before: nginx.conf")
-                ]),
-                _vue.createElementVNode.call(void 0, "div", {
-                  style: {"font-size":"0.5em"},
-                  class: "post-limit-size"
-                }, [
-                  _vue.createElementVNode.call(void 0, "pre", {
-                    class: "shiki github-dark",
-                    style: {"background-color":"#252423","color":"#e1e4e8"},
-                    tabindex: "0"
-                  }, [
-                    _vue.createElementVNode.call(void 0, "code", null, [
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#6A737D"} }, "# HTTP -> HTTPS")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "server"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " {")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  listen"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, "       80"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  listen"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "       [::]:80;")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  server_name"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  vps.dt.in.th"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  location"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " ^~"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /.well-known/acme-challenge/"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " {")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    root"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /var/www/html"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  }")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  location"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " {")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#F97583"} }, "    return"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, " 301"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " https://vps.dt.in.th"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "$request_uri;")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  }")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "}")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#6A737D"} }, "# HTTPS server")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "server"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " {")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  listen"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, "       443"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " ssl"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " http2"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  listen"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "       [::]:443 ssl http2;")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  server_name"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  vps.dt.in.th"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  root"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "         /var/www/html"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  ssl_certificate"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "          /etc/letsencrypt/live/vps.dt.in.th/fullchain.pem"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  ssl_certificate_key"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "      /etc/letsencrypt/live/vps.dt.in.th/privkey.pem"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  ssl_trusted_certificate"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  /etc/letsencrypt/live/vps.dt.in.th/chain.pem"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "  location"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /api"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " {")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_pass"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " http://api:8080/api"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_http_version"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, "  1.1"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_cache_bypass"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  $http_upgrade;")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  Upgrade"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "            $http_upgrade;")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  Connection"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "         \"upgrade\""),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  Host"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "               $host;")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  X-Real-IP"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "          $remote_addr;")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  X-Forwarded-For"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "    $proxy_add_x_forwarded_for;")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  X-Forwarded-Proto"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  $scheme;")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  X-Forwarded-Host"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "   $host;")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_set_header"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  X-Forwarded-Port"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "   $server_port;")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_connect_timeout"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "  60s"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_send_timeout"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "     60s"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "    proxy_read_timeout"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, "     60s"),
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, ";")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "  }")
-                      ]),
-                      _vue.createTextVNode.call(void 0, "\n"),
-                      _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                        _vue.createElementVNode.call(void 0, "span", { style: {"color":"#E1E4E8"} }, "}")
-                      ])
-                    ])
-                  ])
-                ])
-              ], -1 /* CACHED */)
-            ]))]),
-            _: 1 /* STABLE */
-          }),
-          _vue.createVNode.call(void 0, _component_r_cell, { span: "2" }, {
-            default: _vue.withCtx.call(void 0, () => [...(_cache[1] || (_cache[1] = [
-              _vue.createElementVNode.call(void 0, "p", null, " ", -1 /* CACHED */),
-              _vue.createElementVNode.call(void 0, "div", { style: {"text-align":"center","font-size":"2em","color":"#d7fc70","font-weight":"bold"} }, [
-                _vue.createElementVNode.call(void 0, "p", null, "→")
-              ], -1 /* CACHED */)
-            ]))]),
-            _: 1 /* STABLE */
-          }),
-          _vue.createVNode.call(void 0, _component_r_cell, {
-            span: "11",
-            "span-s": "22"
-          }, {
-            default: _vue.withCtx.call(void 0, () => [...(_cache[2] || (_cache[2] = [
-              _vue.createElementVNode.call(void 0, "div", null, [
-                _vue.createElementVNode.call(void 0, "p", null, [
-                  _vue.createElementVNode.call(void 0, "strong", null, "After: Caddyfile")
-                ]),
-                _vue.createElementVNode.call(void 0, "pre", {
-                  class: "shiki github-dark",
-                  style: {"background-color":"#252423","color":"#e1e4e8"},
-                  tabindex: "0"
-                }, [
-                  _vue.createElementVNode.call(void 0, "code", null, [
-                    _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#6A737D"} }, "# ingress/Caddyfile")
-                    ]),
-                    _vue.createTextVNode.call(void 0, "\n"),
-                    _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "vps.dt.in.th")
-                    ]),
-                    _vue.createTextVNode.call(void 0, "\n"),
-                    _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "root"),
-                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, " *"),
-                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /var/www/html")
-                    ]),
-                    _vue.createTextVNode.call(void 0, "\n"),
-                    _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "file_server")
-                    ]),
-                    _vue.createTextVNode.call(void 0, "\n"),
-                    _vue.createElementVNode.call(void 0, "span", { class: "line" }, [
-                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#B392F0"} }, "reverse_proxy"),
-                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " /api/"),
-                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#79B8FF"} }, "*"),
-                      _vue.createElementVNode.call(void 0, "span", { style: {"color":"#9ECBFF"} }, " api:8080")
-                    ])
-                  ])
-                ])
-              ], -1 /* CACHED */)
-            ]))]),
-            _: 1 /* STABLE */
-          })
-        ]),
-        _: 1 /* STABLE */
-      })
-    ]),
-    _cache[4] || (_cache[4] = _vue.createStaticVNode.call(void 0, "<p data-v-8c9498c0>Built with Go, it is available as a <a href=\"https://github.com/caddyserver/caddy/releases\" data-v-8c9498c0>standalone binary</a>. <a href=\"https://caddyserver.com/docs/download\" data-v-8c9498c0>Packages for popular package managers</a> are available. And there is also a ready-to-use <a href=\"https://hub.docker.com/_/caddy\" data-v-8c9498c0>Docker image</a>.</p><h2 id=\"usage-with-docker-compose\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#usage-with-docker-compose\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Usage with <a href=\"Docker\" data-v-8c9498c0>Docker</a> Compose</h2><p data-v-8c9498c0>Here&#39;s a basic docker-compose file that runs Caddy:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0># ingress/docker-compose.yml</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>version</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;3.7&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>services</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  caddy</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    image</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>caddy</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    restart</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>unless-stopped</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    ports</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;80:80&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;443:443&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    volumes</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>./Caddyfile:/etc/caddy/Caddyfile</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>./public:/var/www/html</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>caddy_data:/data</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>caddy_config:/config</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>volumes</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  caddy_data</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  caddy_config</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span></code></pre><p data-v-8c9498c0>Now when I run <code data-v-8c9498c0>docker-compose up -d</code>, Caddy starts up and:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Listens to port 80 and 443.</li><li data-v-8c9498c0>Obtains a Let&#39;s Encrypt certificate for domain <code data-v-8c9498c0>vps.dt.in.th</code>.</li><li data-v-8c9498c0>Sets up HTTP to HTTPS redirection on port 80.</li><li data-v-8c9498c0>Serves files from <code data-v-8c9498c0>public</code> folder (mounted to <code data-v-8c9498c0>/var/www/html</code> inside container).</li><li data-v-8c9498c0>Proxies requests to <code data-v-8c9498c0>/api/</code> to the <code data-v-8c9498c0>api</code> hostname.</li></ul><h3 id=\"configuring-docker-networks-for-reverse-proxy\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#configuring-docker-networks-for-reverse-proxy\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Configuring Docker networks for reverse proxy</h3><p data-v-8c9498c0>Now, other projects I run on this VPS have their own <code data-v-8c9498c0>docker-compose</code> file. We need to make the container join Caddy&#39;s Docker network for Caddy to be able to look it up via hostname.</p><p data-v-8c9498c0>This can be done by joining an external network and setting a network alias for that network.</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0># api/docker-compose.yml</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>version</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;3.8&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>services</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  server</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    restart</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>unless-stopped</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    build</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#79B8FF;\" data-v-8c9498c0>.</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    networks</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>      default</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>      ingress</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>        aliases</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>          - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>api</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>networks</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  ingress</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    external</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#79B8FF;\" data-v-8c9498c0>true</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    name</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>ingress_default</span></span></code></pre><section data-footnotes=\"\" class=\"footnotes\" data-v-8c9498c0><h2 id=\"footnote-label\" class=\"sr-only\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#footnote-label\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Footnotes</h2><ol data-v-8c9498c0><li id=\"user-content-fn-certbot-notes\" data-v-8c9498c0><p data-v-8c9498c0><a href=\"https://web.facebook.com/dtinth/posts/10215797763731229\" data-v-8c9498c0>A commenter</a> recommended me try out <a href=\"https://github.com/acmesh-official/acme.sh\" data-v-8c9498c0>acme.sh</a> should I need to use nginx again. <a href=\"#user-content-fnref-certbot-notes\" data-footnote-backref=\"\" aria-label=\"Back to reference 1\" class=\"data-footnote-backref\" data-v-8c9498c0>↩</a></p></li><li id=\"user-content-fn-boilerplate\" data-v-8c9498c0><p data-v-8c9498c0>Boilerplate include but not limited to:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Creating a file in <code data-v-8c9498c0>sites-available</code>.</li><li data-v-8c9498c0>Setting up a server block.</li><li data-v-8c9498c0>Setting up redirect from HTTP to HTTPS.</li><li data-v-8c9498c0>Setting up the path to the SSL certificate file.</li><li data-v-8c9498c0>Setting up HTTP headers for the reverse proxy, such as <code data-v-8c9498c0>Host</code>, <code data-v-8c9498c0>X-Real-IP</code>, <code data-v-8c9498c0>X-Forwarded-For</code>.</li><li data-v-8c9498c0>Setting up WebSocket support.</li><li data-v-8c9498c0>Symlinking the file to <code data-v-8c9498c0>sites-enabled</code>.</li></ul><a href=\"#user-content-fnref-boilerplate\" data-footnote-backref=\"\" aria-label=\"Back to reference 2\" class=\"data-footnote-backref\" data-v-8c9498c0>↩</a></li></ol></section>", 11))
-  ], 64 /* STABLE_FRAGMENT */))
+  return _cache[0] || (_cache[0] = _vue.createStaticVNode.call(void 0, "<p data-v-8c9498c0><strong data-v-8c9498c0>The most boring thing about setting up a web server on a new cloud server for me is the initial configuration.</strong> From <a href=\"https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04\" data-v-8c9498c0>installing</a> and <a href=\"https://nginxconfig.io/\" data-v-8c9498c0>configuring nginx</a> to <a href=\"https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04\" data-v-8c9498c0>setting up Let&#39;s Encrypt with certbot</a><sup data-v-8c9498c0><a href=\"#user-content-fn-certbot-notes\" id=\"user-content-fnref-certbot-notes\" data-footnote-ref=\"\" aria-describedby=\"footnote-label\" data-v-8c9498c0>1</a></sup>. There are so many steps involved and so much boilerplate code in the config<sup data-v-8c9498c0><a href=\"#user-content-fn-boilerplate\" id=\"user-content-fnref-boilerplate\" data-footnote-ref=\"\" aria-describedby=\"footnote-label\" data-v-8c9498c0>2</a></sup>.</p><p data-v-8c9498c0>This has changed now that <a href=\"Caddy\" data-v-8c9498c0>Caddy</a> exists. It is an open source web server written in Go that has built-in Let&#39;s Encrypt support. And <strong data-v-8c9498c0>it has the simplest config file format I&#39;ve ever seen</strong> for a web server:</p><div class=\"grid grid-cols-1 lg:grid-cols-24 gap-2\" data-v-8c9498c0><div class=\"lg:col-span-11\" data-v-8c9498c0><p data-v-8c9498c0><strong data-v-8c9498c0>Before: nginx.conf</strong></p><div style=\"font-size:0.5em;\" class=\"post-limit-size\" data-v-8c9498c0><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0># HTTP -&gt; HTTPS</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>server</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> {</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  listen</span><span style=\"color:#79B8FF;\" data-v-8c9498c0>       80</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  listen</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>       [::]:80;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  server_name</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>  vps.dt.in.th</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  location</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> ^~</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> /.well-known/acme-challenge/</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> {</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>    root</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> /var/www/html</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>  }</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  location</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> /</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> {</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>    return</span><span style=\"color:#79B8FF;\" data-v-8c9498c0> 301</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> https://vps.dt.in.th</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>$request_uri;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>  }</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>}</span></span>\n<span class=\"line\" data-v-8c9498c0></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0># HTTPS server</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>server</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> {</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  listen</span><span style=\"color:#79B8FF;\" data-v-8c9498c0>       443</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> ssl</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> http2</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  listen</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>       [::]:443 ssl http2;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  server_name</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>  vps.dt.in.th</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  root</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>         /var/www/html</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>;</span></span>\n<span class=\"line\" data-v-8c9498c0></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  ssl_certificate</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>          /etc/letsencrypt/live/vps.dt.in.th/fullchain.pem</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  ssl_certificate_key</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>      /etc/letsencrypt/live/vps.dt.in.th/privkey.pem</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  ssl_trusted_certificate</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>  /etc/letsencrypt/live/vps.dt.in.th/chain.pem</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>;</span></span>\n<span class=\"line\" data-v-8c9498c0></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  location</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> /api</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> {</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>    proxy_pass</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> http://api:8080/api</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>    proxy_http_version</span><span style=\"color:#79B8FF;\" data-v-8c9498c0>  1.1</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>    proxy_cache_bypass</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>  $http_upgrade;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>    proxy_set_header</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>  Upgrade</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>            $http_upgrade;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>    proxy_set_header</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>  Connection</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>         &quot;upgrade&quot;</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>    proxy_set_header</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>  Host</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>               $host;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>    proxy_set_header</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>  X-Real-IP</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>          $remote_addr;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>    proxy_set_header</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>  X-Forwarded-For</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>    $proxy_add_x_forwarded_for;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>    proxy_set_header</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>  X-Forwarded-Proto</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>  $scheme;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>    proxy_set_header</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>  X-Forwarded-Host</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>   $host;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>    proxy_set_header</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>  X-Forwarded-Port</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>   $server_port;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>    proxy_connect_timeout</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>  60s</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>    proxy_send_timeout</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>     60s</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>    proxy_read_timeout</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>     60s</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>  }</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>}</span></span></code></pre></div></div><div class=\"lg:col-span-2 text-center text-2xl text-[#d7fc70] font-bold hidden lg:block\" data-v-8c9498c0><p data-v-8c9498c0> </p><p data-v-8c9498c0>→</p></div><div class=\"lg:col-span-11\" data-v-8c9498c0><p data-v-8c9498c0><strong data-v-8c9498c0>After: Caddyfile</strong></p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0># ingress/Caddyfile</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>vps.dt.in.th</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>root</span><span style=\"color:#79B8FF;\" data-v-8c9498c0> *</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> /var/www/html</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>file_server</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>reverse_proxy</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> /api/</span><span style=\"color:#79B8FF;\" data-v-8c9498c0>*</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> api:8080</span></span></code></pre></div></div><p data-v-8c9498c0>Built with Go, it is available as a <a href=\"https://github.com/caddyserver/caddy/releases\" data-v-8c9498c0>standalone binary</a>. <a href=\"https://caddyserver.com/docs/download\" data-v-8c9498c0>Packages for popular package managers</a> are available. And there is also a ready-to-use <a href=\"https://hub.docker.com/_/caddy\" data-v-8c9498c0>Docker image</a>.</p><h2 id=\"usage-with-docker-compose\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#usage-with-docker-compose\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Usage with <a href=\"Docker\" data-v-8c9498c0>Docker</a> Compose</h2><p data-v-8c9498c0>Here&#39;s a basic docker-compose file that runs Caddy:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0># ingress/docker-compose.yml</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>version</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;3.7&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>services</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  caddy</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    image</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>caddy</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    restart</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>unless-stopped</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    ports</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;80:80&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;443:443&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    volumes</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>./Caddyfile:/etc/caddy/Caddyfile</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>./public:/var/www/html</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>caddy_data:/data</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>      - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>caddy_config:/config</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>volumes</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  caddy_data</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  caddy_config</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span></code></pre><p data-v-8c9498c0>Now when I run <code data-v-8c9498c0>docker-compose up -d</code>, Caddy starts up and:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Listens to port 80 and 443.</li><li data-v-8c9498c0>Obtains a Let&#39;s Encrypt certificate for domain <code data-v-8c9498c0>vps.dt.in.th</code>.</li><li data-v-8c9498c0>Sets up HTTP to HTTPS redirection on port 80.</li><li data-v-8c9498c0>Serves files from <code data-v-8c9498c0>public</code> folder (mounted to <code data-v-8c9498c0>/var/www/html</code> inside container).</li><li data-v-8c9498c0>Proxies requests to <code data-v-8c9498c0>/api/</code> to the <code data-v-8c9498c0>api</code> hostname.</li></ul><h3 id=\"configuring-docker-networks-for-reverse-proxy\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#configuring-docker-networks-for-reverse-proxy\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Configuring Docker networks for reverse proxy</h3><p data-v-8c9498c0>Now, other projects I run on this VPS have their own <code data-v-8c9498c0>docker-compose</code> file. We need to make the container join Caddy&#39;s Docker network for Caddy to be able to look it up via hostname.</p><p data-v-8c9498c0>This can be done by joining an external network and setting a network alias for that network.</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0># api/docker-compose.yml</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>version</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;3.8&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>services</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  server</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    restart</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>unless-stopped</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    build</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#79B8FF;\" data-v-8c9498c0>.</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    networks</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>      default</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>      ingress</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>        aliases</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>          - </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>api</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>networks</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  ingress</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    external</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#79B8FF;\" data-v-8c9498c0>true</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>    name</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>ingress_default</span></span></code></pre><section data-footnotes=\"\" class=\"footnotes\" data-v-8c9498c0><h2 id=\"footnote-label\" class=\"sr-only\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#footnote-label\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Footnotes</h2><ol data-v-8c9498c0><li id=\"user-content-fn-certbot-notes\" data-v-8c9498c0><p data-v-8c9498c0><a href=\"https://web.facebook.com/dtinth/posts/10215797763731229\" data-v-8c9498c0>A commenter</a> recommended me try out <a href=\"https://github.com/acmesh-official/acme.sh\" data-v-8c9498c0>acme.sh</a> should I need to use nginx again. <a href=\"#user-content-fnref-certbot-notes\" data-footnote-backref=\"\" aria-label=\"Back to reference 1\" class=\"data-footnote-backref\" data-v-8c9498c0>↩</a></p></li><li id=\"user-content-fn-boilerplate\" data-v-8c9498c0><p data-v-8c9498c0>Boilerplate include but not limited to:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Creating a file in <code data-v-8c9498c0>sites-available</code>.</li><li data-v-8c9498c0>Setting up a server block.</li><li data-v-8c9498c0>Setting up redirect from HTTP to HTTPS.</li><li data-v-8c9498c0>Setting up the path to the SSL certificate file.</li><li data-v-8c9498c0>Setting up HTTP headers for the reverse proxy, such as <code data-v-8c9498c0>Host</code>, <code data-v-8c9498c0>X-Real-IP</code>, <code data-v-8c9498c0>X-Forwarded-For</code>.</li><li data-v-8c9498c0>Setting up WebSocket support.</li><li data-v-8c9498c0>Symlinking the file to <code data-v-8c9498c0>sites-enabled</code>.</li></ul><a href=\"#user-content-fnref-boilerplate\" data-footnote-backref=\"\" aria-label=\"Back to reference 2\" class=\"data-footnote-backref\" data-v-8c9498c0>↩</a></li></ol></section>", 14))
 }
 __sfc__.render = render
 __sfc__.__scopeId = "data-v-8c9498c0"

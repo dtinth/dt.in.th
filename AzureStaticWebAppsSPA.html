@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="AzureStaticWebAppsSPA" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deploying modern Single Page Applications to Azure Static Web Apps | dt.in.th</title><meta property="og:title" content="Deploying modern Single Page Applications to Azure Static Web Apps" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/AzureStaticWebAppsSPA" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://dt.in.th/AzureStaticWebAppsSPA" data-source="note"><style id="note-styles">/* layer: default */
+.my[data-v-8c9498c0]{margin-top:1rem;margin-bottom:1rem;}</style>
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><h1 id="deploying-modern-single-page-applications-to-azure-static-web-apps" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#deploying-modern-single-page-applications-to-azure-static-web-apps" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Deploying modern Single Page Applications to Azure Static Web Apps</h1><p data-v-8c9498c0>I had a need to deploy a single page application to <a href="Azure" data-v-8c9498c0>Azure</a> Static Web Apps. At first I thought I wouldn&#39;t have to write this note as it&#39;s already 2025 (as of writing) — I expected Azure to have caught up to the polish of <a href="https://vercel.com" data-v-8c9498c0>Vercel</a> and <a href="https://netlify.com" data-v-8c9498c0>Netlify</a>. But here we are.</p><h2 id="what-i-liked" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#what-i-liked" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>What I liked</h2><ul data-v-8c9498c0><li data-v-8c9498c0><strong data-v-8c9498c0>Generous free tier</strong> — Their Free and Standard <a href="https://azure.microsoft.com/en-us/pricing/details/app-service/static/" data-v-8c9498c0>plans</a> are separate but switchable. On the Free plan you never get charged; they just stop serving your app when you hit limits (whereas Netlify and Vercel might bill-shock you <a href="https://www.reddit.com/r/webdev/comments/1b14bty/netlify_just_sent_me_a_104k_bill_for_a_simple/" data-v-8c9498c0>[1]</a> <a href="https://www.reddit.com/r/nextjs/comments/12dngvg/small_mistake_leads_to_3000_bill_from_vercel_and/" data-v-8c9498c0>[2]</a>)</li><li data-v-8c9498c0><strong data-v-8c9498c0>Streamlined GitHub Actions setup</strong> — I just connect my GitHub Account, and Azure portal auto-generates the workflow file for me. No need to copy and paste workflow files out of documentation.</li><li data-v-8c9498c0><strong data-v-8c9498c0>Latest LTS Node.js support</strong> — Works with Node.js 22 out of the box.</li></ul><h2 id="hurdles-to-overcome" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#hurdles-to-overcome" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Hurdles to overcome</h2><h3 id="pnpm-support" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#pnpm-support" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>PNPM support</h3><p data-v-8c9498c0>Nowadays, many developers have switched from npm and Yarn to <a href="https://pnpm.io" data-v-8c9498c0>pnpm</a>. Unfortunately, <a href="https://github.com/microsoft/Oryx" data-v-8c9498c0>Oryx</a>, the build tool used by Azure Static Web Apps, <a href="https://github.com/microsoft/Oryx/issues/2340" data-v-8c9498c0>still does not support pnpm or Corepack</a> even in 2025.</p><p data-v-8c9498c0>I had to dig into its source code and documentation to find a <a href="https://github.com/microsoft/Oryx/issues/2340#issuecomment-3280884912" data-v-8c9498c0>workaround</a>. The solution for now is to set environment variables to <a href="https://github.com/microsoft/Oryx/blob/main/doc/configuration.md" data-v-8c9498c0>configure Oryx</a>:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#85E89D;" data-v-8c9498c0>env</span><span style="color:#E1E4E8;" data-v-8c9498c0>:</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#85E89D;" data-v-8c9498c0>  CUSTOM_BUILD_COMMAND</span><span style="color:#E1E4E8;" data-v-8c9498c0>: </span><span style="color:#9ECBFF;" data-v-8c9498c0>&#39;corepack enable &amp;&amp; pnpm install &amp;&amp; pnpm run build&#39;</span></span></code></pre><div class="notes-callout" data-type="Info" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><!---->Info</p><p data-v-8c9498c0>I tried using the <code data-v-8c9498c0>CUSTOM_BUILD_COMMAND</code> and <code data-v-8c9498c0>RUN_BUILD_COMMAND</code> variables separately but it did not work for building Static Web Apps.</p></div><h3 id="single-page-application-routing" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#single-page-application-routing" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Single Page Application routing</h3><p data-v-8c9498c0>SPAs need all routes to fallback to <code data-v-8c9498c0>index.html</code> to avoid 404s on page refresh, but this is not the default on Azure Static Web Apps. I had manually <a href="https://learn.microsoft.com/en-us/azure/static-web-apps/configuration#fallback-routes" data-v-8c9498c0>configure a fallback route</a> by creating a <code data-v-8c9498c0>staticwebapp.config.json</code> file in my project root:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>{</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#79B8FF;" data-v-8c9498c0>  &quot;navigationFallback&quot;</span><span style="color:#E1E4E8;" data-v-8c9498c0>: {</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#79B8FF;" data-v-8c9498c0>    &quot;rewrite&quot;</span><span style="color:#E1E4E8;" data-v-8c9498c0>: </span><span style="color:#9ECBFF;" data-v-8c9498c0>&quot;/index.html&quot;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  }</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>}</span></span></code></pre><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+var _vue = require('vue');
+
+const _hoisted_1 = {
+  class: "notes-callout",
+  "data-type": "Info"
+}
+const _hoisted_2 = { class: "notes-callout__label" }
+function render(_ctx, _cache) {
+  const _component_notes_callout_icon = _vue.resolveComponent.call(void 0, "notes-callout-icon")
+
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
+    _cache[2] || (_cache[2] = _vue.createStaticVNode.call(void 0, "<h1 id=\"deploying-modern-single-page-applications-to-azure-static-web-apps\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#deploying-modern-single-page-applications-to-azure-static-web-apps\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Deploying modern Single Page Applications to Azure Static Web Apps</h1><p data-v-8c9498c0>I had a need to deploy a single page application to <a href=\"Azure\" data-v-8c9498c0>Azure</a> Static Web Apps. At first I thought I wouldn&#39;t have to write this note as it&#39;s already 2025 (as of writing) — I expected Azure to have caught up to the polish of <a href=\"https://vercel.com\" data-v-8c9498c0>Vercel</a> and <a href=\"https://netlify.com\" data-v-8c9498c0>Netlify</a>. But here we are.</p><h2 id=\"what-i-liked\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#what-i-liked\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>What I liked</h2><ul data-v-8c9498c0><li data-v-8c9498c0><strong data-v-8c9498c0>Generous free tier</strong> — Their Free and Standard <a href=\"https://azure.microsoft.com/en-us/pricing/details/app-service/static/\" data-v-8c9498c0>plans</a> are separate but switchable. On the Free plan you never get charged; they just stop serving your app when you hit limits (whereas Netlify and Vercel might bill-shock you <a href=\"https://www.reddit.com/r/webdev/comments/1b14bty/netlify_just_sent_me_a_104k_bill_for_a_simple/\" data-v-8c9498c0>[1]</a> <a href=\"https://www.reddit.com/r/nextjs/comments/12dngvg/small_mistake_leads_to_3000_bill_from_vercel_and/\" data-v-8c9498c0>[2]</a>)</li><li data-v-8c9498c0><strong data-v-8c9498c0>Streamlined GitHub Actions setup</strong> — I just connect my GitHub Account, and Azure portal auto-generates the workflow file for me. No need to copy and paste workflow files out of documentation.</li><li data-v-8c9498c0><strong data-v-8c9498c0>Latest LTS Node.js support</strong> — Works with Node.js 22 out of the box.</li></ul><h2 id=\"hurdles-to-overcome\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#hurdles-to-overcome\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Hurdles to overcome</h2><h3 id=\"pnpm-support\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#pnpm-support\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>PNPM support</h3><p data-v-8c9498c0>Nowadays, many developers have switched from npm and Yarn to <a href=\"https://pnpm.io\" data-v-8c9498c0>pnpm</a>. Unfortunately, <a href=\"https://github.com/microsoft/Oryx\" data-v-8c9498c0>Oryx</a>, the build tool used by Azure Static Web Apps, <a href=\"https://github.com/microsoft/Oryx/issues/2340\" data-v-8c9498c0>still does not support pnpm or Corepack</a> even in 2025.</p><p data-v-8c9498c0>I had to dig into its source code and documentation to find a <a href=\"https://github.com/microsoft/Oryx/issues/2340#issuecomment-3280884912\" data-v-8c9498c0>workaround</a>. The solution for now is to set environment variables to <a href=\"https://github.com/microsoft/Oryx/blob/main/doc/configuration.md\" data-v-8c9498c0>configure Oryx</a>:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>env</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>:</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#85E89D;\" data-v-8c9498c0>  CUSTOM_BUILD_COMMAND</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&#39;corepack enable &amp;&amp; pnpm install &amp;&amp; pnpm run build&#39;</span></span></code></pre>", 9)),
+    _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
+      _vue.createElementVNode.call(void 0, "p", _hoisted_2, [
+        _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Info" }),
+        _cache[0] || (_cache[0] = _vue.createTextVNode.call(void 0, "Info", -1 /* CACHED */))
+      ]),
+      _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "p", null, [
+        _vue.createTextVNode.call(void 0, "I tried using the "),
+        _vue.createElementVNode.call(void 0, "code", null, "CUSTOM_BUILD_COMMAND"),
+        _vue.createTextVNode.call(void 0, " and "),
+        _vue.createElementVNode.call(void 0, "code", null, "RUN_BUILD_COMMAND"),
+        _vue.createTextVNode.call(void 0, " variables separately but it did not work for building Static Web Apps.")
+      ], -1 /* CACHED */))
+    ]),
+    _cache[3] || (_cache[3] = _vue.createStaticVNode.call(void 0, "<h3 id=\"single-page-application-routing\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#single-page-application-routing\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Single Page Application routing</h3><p data-v-8c9498c0>SPAs need all routes to fallback to <code data-v-8c9498c0>index.html</code> to avoid 404s on page refresh, but this is not the default on Azure Static Web Apps. I had manually <a href=\"https://learn.microsoft.com/en-us/azure/static-web-apps/configuration#fallback-routes\" data-v-8c9498c0>configure a fallback route</a> by creating a <code data-v-8c9498c0>staticwebapp.config.json</code> file in my project root:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>{</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#79B8FF;\" data-v-8c9498c0>  &quot;navigationFallback&quot;</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: {</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#79B8FF;\" data-v-8c9498c0>    &quot;rewrite&quot;</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>: </span><span style=\"color:#9ECBFF;\" data-v-8c9498c0>&quot;/index.html&quot;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>  }</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>}</span></span></code></pre>", 3))
+  ], 64 /* STABLE_FRAGMENT */))
+}
+__sfc__.render = render
+__sfc__.__scopeId = "data-v-8c9498c0"
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"public":true,"title":"Deploying modern Single Page Applications to Azure Static Web Apps"};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

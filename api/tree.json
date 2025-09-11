@@ -364,6 +364,10 @@
 		{	"title": "Azure (topic)"
 		,	"parent": "CloudPlatform"
 		}
+	,	"AzureStaticWebAppsSPA":
+		{	"title": "Deploying modern Single Page Applications to Azure Static Web Apps"
+		,	"parent": "Azure"
+		}
 	,	"BangkokIpsum":
 		{	"title": "Bangkok Ipsum"
 		,	"parent": "Projects"

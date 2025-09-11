@@ -8,10 +8,33 @@
 <meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/Syntax" data-source="note">
 <meta property="og:image:width" content="1800" data-source="note">
 <meta property="og:image:height" content="1680" data-source="note">
-<link rel="canonical" href="https://dt.in.th/Syntax" data-source="note"><style id="note-styles">/* layer: default */
+<link rel="canonical" href="https://dt.in.th/Syntax" data-source="note"><style id="note-styles">.n-example[data-v-8c9498c0] {
+    color: #bef;
+    font-weight: bold;
+}
+.n-box[data-v-8c9498c0] {
+    border: 1px solid #656463;
+    padding: 0.5rem;
+}
+
+/* layer: default */
+.grid[data-v-8c9498c0]{display:grid;}
+.grid-cols-2[data-v-8c9498c0]{grid-template-columns:repeat(2,minmax(0,1fr));}
+.grid-cols-3[data-v-8c9498c0]{grid-template-columns:repeat(3,minmax(0,1fr));}
 .my[data-v-8c9498c0]{margin-top:1rem;margin-bottom:1rem;}
 .contents[data-v-8c9498c0]{display:contents;}
-.border[data-v-8c9498c0]{border-width:1px;}</style>
+.flex[data-v-8c9498c0]{display:flex;}
+.flex-none[data-v-8c9498c0]{flex:none;}
+.gap-2[data-v-8c9498c0]{gap:0.5rem;}
+.gap-4[data-v-8c9498c0]{gap:1rem;}
+.border[data-v-8c9498c0]{border-width:1px;}
+.border-\[\#656463\][data-v-8c9498c0]{--un-border-opacity:1;border-color:rgb(101 100 99 / var(--un-border-opacity));}
+.rounded[data-v-8c9498c0]{border-radius:0.25rem;}
+.bg-blue-500\/25[data-v-8c9498c0]{background-color:rgb(59 130 246 / 0.25);}
+.p-3[data-v-8c9498c0]{padding:0.75rem;}
+.p-4[data-v-8c9498c0]{padding:1rem;}
+.text-lg[data-v-8c9498c0]{font-size:1.125rem;line-height:1.75rem;}
+.text-white[data-v-8c9498c0]{--un-text-opacity:1;color:rgb(255 255 255 / var(--un-text-opacity));}</style>
     <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
     <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/runtime/entry/index.css" />
@@ -30,11 +53,31 @@ Left contents
 Right contents
 ::::
 :::::
-</code></pre></div></div><h2 id="grid-system" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#grid-system" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Grid system</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>Grid system powered by <a href="https://rsms.me/raster/" data-v-8c9498c0>Raster</a> allows for more flexible layout.</p><r-grid columns="3" data-v-8c9498c0><r-cell data-v-8c9498c0>One</r-cell><r-cell data-v-8c9498c0>Two</r-cell><r-cell data-v-8c9498c0>Three</r-cell></r-grid></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-html" data-v-8c9498c0>&lt;r-grid columns=&quot;3&quot;&gt;
-  &lt;r-cell&gt;One&lt;/r-cell&gt;
-  &lt;r-cell&gt;Two&lt;/r-cell&gt;
-  &lt;r-cell&gt;Three&lt;/r-cell&gt;
-&lt;/r-grid&gt;
+</code></pre></div></div><h2 id="tailwind-css" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#tailwind-css" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Tailwind CSS</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>Notes support <a href="https://tailwindcss.com/" data-v-8c9498c0>Tailwind CSS</a> utility classes powered by <a href="https://unocss.dev/" data-v-8c9498c0>UnoCSS</a>. You can use any Tailwind utility class for styling elements.</p><div class="bg-blue-500/25 text-white p-4 rounded" data-v-8c9498c0> Blue background with white text </div><p data-v-8c9498c0>Common patterns:</p><ul data-v-8c9498c0><li data-v-8c9498c0><code data-v-8c9498c0>grid grid-cols-2 gap-4</code> - Two-column grid</li><li data-v-8c9498c0><code data-v-8c9498c0>text-center text-lg font-bold</code> - Centered large bold text</li><li data-v-8c9498c0><code data-v-8c9498c0>bg-gray-100 p-4 rounded</code> - Gray background with padding</li></ul></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-html" data-v-8c9498c0>&lt;div class=&quot;bg-blue-500/25 text-white p-4 rounded&quot;&gt;
+  Blue background with white text
+&lt;/div&gt;
+</code></pre></div></div><h2 id="grid-system" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#grid-system" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Grid system</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>Grid system using Tailwind CSS classes allows for flexible layout.</p><div class="grid grid-cols-3 gap-4" data-v-8c9498c0><div class="p-3 rounded border border-[#656463]" data-v-8c9498c0>One</div><div class="p-3 rounded border border-[#656463]" data-v-8c9498c0>Two</div><div class="p-3 rounded border border-[#656463]" data-v-8c9498c0>Three</div></div></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-html" data-v-8c9498c0>&lt;div class=&quot;grid grid-cols-3 gap-4&quot;&gt;
+  &lt;div class=&quot;p-3 rounded border border-[#656463]&quot;&gt;One&lt;/div&gt;
+  &lt;div class=&quot;p-3 rounded border border-[#656463]&quot;&gt;Two&lt;/div&gt;
+  &lt;div class=&quot;p-3 rounded border border-[#656463]&quot;&gt;Three&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div><h2 id="scoped-css" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#scoped-css" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Scoped CSS</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>For custom CSS styles, use <code data-v-8c9498c0>&lt;style scoped&gt;</code> tags. All CSS classes should be prefixed with <code data-v-8c9498c0>n-</code> to follow the naming convention.</p><p class="n-example" data-v-8c9498c0>Light blue bold text</p><div class="n-box" data-v-8c9498c0>Boxed content</div><p data-v-8c9498c0>The <code data-v-8c9498c0>n-</code> prefix helps distinguish custom styles from global styles and prevents naming conflicts.</p></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-html" data-v-8c9498c0>&lt;style scoped&gt;
+  .n-example {
+    color: #bef;
+    font-weight: bold;
+  }
+  .n-box {
+    border: 1px solid #656463;
+    padding: 0.5rem;
+  }
+&lt;/style&gt;
+
+&lt;p class=&quot;n-example&quot;&gt;Light blue bold text&lt;/p&gt;
+&lt;div class=&quot;n-box&quot;&gt;Boxed content&lt;/div&gt;
+</code></pre></div></div><h2 id="buttons-and-inputs" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#buttons-and-inputs" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Buttons and Inputs</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0>Use standard HTML buttons and inputs. The <code data-v-8c9498c0>btn</code> and <code data-v-8c9498c0>form-control</code> classes provide basic styling.</p><div class="flex gap-2" data-v-8c9498c0><button class="btn flex-none" data-v-8c9498c0>Click me</button><input type="text" class="form-control" placeholder="Enter text here" data-v-8c9498c0></div></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-html" data-v-8c9498c0>&lt;div class=&quot;flex gap-2&quot;&gt;
+  &lt;button class=&quot;btn flex-none&quot;&gt;Click me&lt;/button&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Enter text here&quot; /&gt;
+&lt;/div&gt;
 </code></pre></div></div><h2 id="callouts" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#callouts" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Callouts</h2><div class="d-split" data-v-8c9498c0><div class="d-split__left"><div class="notes-callout" data-type="Info" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><notes-callout-icon type="Info" data-v-8c9498c0></notes-callout-icon>Info</p><p data-v-8c9498c0>This is an info box</p></div><div class="notes-callout" data-type="Warning" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><notes-callout-icon type="Warning" data-v-8c9498c0></notes-callout-icon>Warning</p><p data-v-8c9498c0>This is a warning box</p></div><div class="notes-callout" data-type="Tip" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><notes-callout-icon type="Tip" data-v-8c9498c0></notes-callout-icon>Tip</p><p data-v-8c9498c0>This is a tip box</p></div><div class="notes-callout" data-type="Success" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><notes-callout-icon type="Success" data-v-8c9498c0></notes-callout-icon>Success</p><p data-v-8c9498c0>This is a success box</p></div><div class="notes-callout" data-type="Important" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><notes-callout-icon type="Important" data-v-8c9498c0></notes-callout-icon>Important</p><p data-v-8c9498c0>This is an important box</p></div><div class="notes-callout" data-type="Danger" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><notes-callout-icon type="Danger" data-v-8c9498c0></notes-callout-icon>BE CAREFUL</p><p data-v-8c9498c0>This is a danger box</p></div><div class="notes-callout" data-type="Caution" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><notes-callout-icon type="Caution" data-v-8c9498c0></notes-callout-icon>Caution</p><p data-v-8c9498c0>This is a caution box</p></div><details data-v-8c9498c0><summary data-v-8c9498c0>Details</summary><p data-v-8c9498c0>This is a details box</p></details></div><div class="d-split__right"><pre data-v-8c9498c0><code class="language-markdown" data-v-8c9498c0>:::info
 This is an info box
 :::
@@ -141,18 +184,16 @@ const _hoisted_15 = {
 const _hoisted_16 = { class: "notes-bubble__author" }
 function render(_ctx, _cache) {
   const _component_d_split = _vue.resolveComponent.call(void 0, "d-split")
-  const _component_r_cell = _vue.resolveComponent.call(void 0, "r-cell")
-  const _component_r_grid = _vue.resolveComponent.call(void 0, "r-grid")
   const _component_notes_callout_icon = _vue.resolveComponent.call(void 0, "notes-callout-icon")
   const _component_youtube_embed = _vue.resolveComponent.call(void 0, "youtube-embed")
   const _component_notes_bubble_author = _vue.resolveComponent.call(void 0, "notes-bubble-author")
 
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _cache[35] || (_cache[35] = _vue.createElementVNode.call(void 0, "p", null, [
+    _cache[46] || (_cache[46] = _vue.createElementVNode.call(void 0, "p", null, [
       _vue.createElementVNode.call(void 0, "a", { href: "Markdown" }, "Markdown"),
       _vue.createTextVNode.call(void 0, " syntax extensions and custom elements available in this website (for my own reference):")
     ], -1 /* CACHED */)),
-    _cache[36] || (_cache[36] = _vue.createElementVNode.call(void 0, "h2", { id: "two-column-layout" }, [
+    _cache[47] || (_cache[47] = _vue.createElementVNode.call(void 0, "h2", { id: "two-column-layout" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -181,7 +222,50 @@ function render(_ctx, _cache) {
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[37] || (_cache[37] = _vue.createElementVNode.call(void 0, "h2", { id: "grid-system" }, [
+    _cache[48] || (_cache[48] = _vue.createElementVNode.call(void 0, "h2", { id: "tailwind-css" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#tailwind-css"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Tailwind CSS")
+    ], -1 /* CACHED */)),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[2] || (_cache[2] = [
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-html" }, "<div class=\"bg-blue-500/25 text-white p-4 rounded\">\n  Blue background with white text\n</div>\n")
+        ], -1 /* CACHED */)
+      ]))]),
+      default: _vue.withCtx.call(void 0, () => [
+        _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createTextVNode.call(void 0, "Notes support "),
+          _vue.createElementVNode.call(void 0, "a", { href: "https://tailwindcss.com/" }, "Tailwind CSS"),
+          _vue.createTextVNode.call(void 0, " utility classes powered by "),
+          _vue.createElementVNode.call(void 0, "a", { href: "https://unocss.dev/" }, "UnoCSS"),
+          _vue.createTextVNode.call(void 0, ". You can use any Tailwind utility class for styling elements.")
+        ], -1 /* CACHED */)),
+        _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "div", { class: "bg-blue-500/25 text-white p-4 rounded" }, " Blue background with white text ", -1 /* CACHED */)),
+        _cache[5] || (_cache[5] = _vue.createElementVNode.call(void 0, "p", null, "Common patterns:", -1 /* CACHED */)),
+        _cache[6] || (_cache[6] = _vue.createElementVNode.call(void 0, "ul", null, [
+          _vue.createElementVNode.call(void 0, "li", null, [
+            _vue.createElementVNode.call(void 0, "code", null, "grid grid-cols-2 gap-4"),
+            _vue.createTextVNode.call(void 0, " - Two-column grid")
+          ]),
+          _vue.createElementVNode.call(void 0, "li", null, [
+            _vue.createElementVNode.call(void 0, "code", null, "text-center text-lg font-bold"),
+            _vue.createTextVNode.call(void 0, " - Centered large bold text")
+          ]),
+          _vue.createElementVNode.call(void 0, "li", null, [
+            _vue.createElementVNode.call(void 0, "code", null, "bg-gray-100 p-4 rounded"),
+            _vue.createTextVNode.call(void 0, " - Gray background with padding")
+          ])
+        ], -1 /* CACHED */))
+      ]),
+      _: 1 /* STABLE */
+    }),
+    _cache[49] || (_cache[49] = _vue.createElementVNode.call(void 0, "h2", { id: "grid-system" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -192,44 +276,91 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "Grid system")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      right: _vue.withCtx.call(void 0, () => [...(_cache[5] || (_cache[5] = [
+      right: _vue.withCtx.call(void 0, () => [...(_cache[7] || (_cache[7] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
-          _vue.createElementVNode.call(void 0, "code", { class: "language-html" }, "<r-grid columns=\"3\">\n  <r-cell>One</r-cell>\n  <r-cell>Two</r-cell>\n  <r-cell>Three</r-cell>\n</r-grid>\n")
+          _vue.createElementVNode.call(void 0, "code", { class: "language-html" }, "<div class=\"grid grid-cols-3 gap-4\">\n  <div class=\"p-3 rounded border border-[#656463]\">One</div>\n  <div class=\"p-3 rounded border border-[#656463]\">Two</div>\n  <div class=\"p-3 rounded border border-[#656463]\">Three</div>\n</div>\n")
         ], -1 /* CACHED */)
       ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _cache[6] || (_cache[6] = _vue.createElementVNode.call(void 0, "p", null, [
-          _vue.createTextVNode.call(void 0, "Grid system powered by "),
-          _vue.createElementVNode.call(void 0, "a", { href: "https://rsms.me/raster/" }, "Raster"),
-          _vue.createTextVNode.call(void 0, " allows for more flexible layout.")
-        ], -1 /* CACHED */)),
-        _vue.createVNode.call(void 0, _component_r_grid, { columns: "3" }, {
-          default: _vue.withCtx.call(void 0, () => [
-            _vue.createVNode.call(void 0, _component_r_cell, null, {
-              default: _vue.withCtx.call(void 0, () => [...(_cache[2] || (_cache[2] = [
-                _vue.createTextVNode.call(void 0, "One", -1 /* CACHED */)
-              ]))]),
-              _: 1 /* STABLE */
-            }),
-            _vue.createVNode.call(void 0, _component_r_cell, null, {
-              default: _vue.withCtx.call(void 0, () => [...(_cache[3] || (_cache[3] = [
-                _vue.createTextVNode.call(void 0, "Two", -1 /* CACHED */)
-              ]))]),
-              _: 1 /* STABLE */
-            }),
-            _vue.createVNode.call(void 0, _component_r_cell, null, {
-              default: _vue.withCtx.call(void 0, () => [...(_cache[4] || (_cache[4] = [
-                _vue.createTextVNode.call(void 0, "Three", -1 /* CACHED */)
-              ]))]),
-              _: 1 /* STABLE */
-            })
-          ]),
-          _: 1 /* STABLE */
-        })
+        _cache[8] || (_cache[8] = _vue.createElementVNode.call(void 0, "p", null, "Grid system using Tailwind CSS classes allows for flexible layout.", -1 /* CACHED */)),
+        _cache[9] || (_cache[9] = _vue.createElementVNode.call(void 0, "div", { class: "grid grid-cols-3 gap-4" }, [
+          _vue.createElementVNode.call(void 0, "div", { class: "p-3 rounded border border-[#656463]" }, "One"),
+          _vue.createElementVNode.call(void 0, "div", { class: "p-3 rounded border border-[#656463]" }, "Two"),
+          _vue.createElementVNode.call(void 0, "div", { class: "p-3 rounded border border-[#656463]" }, "Three")
+        ], -1 /* CACHED */))
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[38] || (_cache[38] = _vue.createElementVNode.call(void 0, "h2", { id: "callouts" }, [
+    _cache[50] || (_cache[50] = _vue.createElementVNode.call(void 0, "h2", { id: "scoped-css" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#scoped-css"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Scoped CSS")
+    ], -1 /* CACHED */)),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[10] || (_cache[10] = [
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-html" }, "<style scoped>\n  .n-example {\n    color: #bef;\n    font-weight: bold;\n  }\n  .n-box {\n    border: 1px solid #656463;\n    padding: 0.5rem;\n  }\n</style>\n\n<p class=\"n-example\">Light blue bold text</p>\n<div class=\"n-box\">Boxed content</div>\n")
+        ], -1 /* CACHED */)
+      ]))]),
+      default: _vue.withCtx.call(void 0, () => [
+        _cache[11] || (_cache[11] = _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createTextVNode.call(void 0, "For custom CSS styles, use "),
+          _vue.createElementVNode.call(void 0, "code", null, "<style scoped>"),
+          _vue.createTextVNode.call(void 0, " tags. All CSS classes should be prefixed with "),
+          _vue.createElementVNode.call(void 0, "code", null, "n-"),
+          _vue.createTextVNode.call(void 0, " to follow the naming convention.")
+        ], -1 /* CACHED */)),
+        _cache[12] || (_cache[12] = _vue.createElementVNode.call(void 0, "p", { class: "n-example" }, "Light blue bold text", -1 /* CACHED */)),
+        _cache[13] || (_cache[13] = _vue.createElementVNode.call(void 0, "div", { class: "n-box" }, "Boxed content", -1 /* CACHED */)),
+        _cache[14] || (_cache[14] = _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createTextVNode.call(void 0, "The "),
+          _vue.createElementVNode.call(void 0, "code", null, "n-"),
+          _vue.createTextVNode.call(void 0, " prefix helps distinguish custom styles from global styles and prevents naming conflicts.")
+        ], -1 /* CACHED */))
+      ]),
+      _: 1 /* STABLE */
+    }),
+    _cache[51] || (_cache[51] = _vue.createElementVNode.call(void 0, "h2", { id: "buttons-and-inputs" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#buttons-and-inputs"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Buttons and Inputs")
+    ], -1 /* CACHED */)),
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[15] || (_cache[15] = [
+        _vue.createElementVNode.call(void 0, "pre", null, [
+          _vue.createElementVNode.call(void 0, "code", { class: "language-html" }, "<div class=\"flex gap-2\">\n  <button class=\"btn flex-none\">Click me</button>\n  <input type=\"text\" class=\"form-control\" placeholder=\"Enter text here\" />\n</div>\n")
+        ], -1 /* CACHED */)
+      ]))]),
+      default: _vue.withCtx.call(void 0, () => [
+        _cache[16] || (_cache[16] = _vue.createElementVNode.call(void 0, "p", null, [
+          _vue.createTextVNode.call(void 0, "Use standard HTML buttons and inputs. The "),
+          _vue.createElementVNode.call(void 0, "code", null, "btn"),
+          _vue.createTextVNode.call(void 0, " and "),
+          _vue.createElementVNode.call(void 0, "code", null, "form-control"),
+          _vue.createTextVNode.call(void 0, " classes provide basic styling.")
+        ], -1 /* CACHED */)),
+        _cache[17] || (_cache[17] = _vue.createElementVNode.call(void 0, "div", { class: "flex gap-2" }, [
+          _vue.createElementVNode.call(void 0, "button", { class: "btn flex-none" }, "Click me"),
+          _vue.createElementVNode.call(void 0, "input", {
+            type: "text",
+            class: "form-control",
+            placeholder: "Enter text here"
+          })
+        ], -1 /* CACHED */))
+      ]),
+      _: 1 /* STABLE */
+    }),
+    _cache[52] || (_cache[52] = _vue.createElementVNode.call(void 0, "h2", { id: "callouts" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -240,7 +371,7 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "Callouts")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      right: _vue.withCtx.call(void 0, () => [...(_cache[21] || (_cache[21] = [
+      right: _vue.withCtx.call(void 0, () => [...(_cache[32] || (_cache[32] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::info\nThis is an info box\n:::\n\n:::warning\nThis is a warning box\n:::\n\n:::tip\nThis is a tip box\n:::\n\n:::success\nThis is a success box\n:::\n\n:::important\nThis is an important box\n:::\n\n:::danger[BE CAREFUL]\nThis is a danger box\n:::\n\n:::caution\nThis is a caution box\n:::\n\n:::details\nThis is a details box\n:::\n")
         ], -1 /* CACHED */)
@@ -249,60 +380,60 @@ function render(_ctx, _cache) {
         _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
           _vue.createElementVNode.call(void 0, "p", _hoisted_2, [
             _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Info" }),
-            _cache[7] || (_cache[7] = _vue.createTextVNode.call(void 0, "Info", -1 /* CACHED */))
+            _cache[18] || (_cache[18] = _vue.createTextVNode.call(void 0, "Info", -1 /* CACHED */))
           ]),
-          _cache[8] || (_cache[8] = _vue.createElementVNode.call(void 0, "p", null, "This is an info box", -1 /* CACHED */))
+          _cache[19] || (_cache[19] = _vue.createElementVNode.call(void 0, "p", null, "This is an info box", -1 /* CACHED */))
         ]),
         _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
           _vue.createElementVNode.call(void 0, "p", _hoisted_4, [
             _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Warning" }),
-            _cache[9] || (_cache[9] = _vue.createTextVNode.call(void 0, "Warning", -1 /* CACHED */))
+            _cache[20] || (_cache[20] = _vue.createTextVNode.call(void 0, "Warning", -1 /* CACHED */))
           ]),
-          _cache[10] || (_cache[10] = _vue.createElementVNode.call(void 0, "p", null, "This is a warning box", -1 /* CACHED */))
+          _cache[21] || (_cache[21] = _vue.createElementVNode.call(void 0, "p", null, "This is a warning box", -1 /* CACHED */))
         ]),
         _vue.createElementVNode.call(void 0, "div", _hoisted_5, [
           _vue.createElementVNode.call(void 0, "p", _hoisted_6, [
             _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Tip" }),
-            _cache[11] || (_cache[11] = _vue.createTextVNode.call(void 0, "Tip", -1 /* CACHED */))
+            _cache[22] || (_cache[22] = _vue.createTextVNode.call(void 0, "Tip", -1 /* CACHED */))
           ]),
-          _cache[12] || (_cache[12] = _vue.createElementVNode.call(void 0, "p", null, "This is a tip box", -1 /* CACHED */))
+          _cache[23] || (_cache[23] = _vue.createElementVNode.call(void 0, "p", null, "This is a tip box", -1 /* CACHED */))
         ]),
         _vue.createElementVNode.call(void 0, "div", _hoisted_7, [
           _vue.createElementVNode.call(void 0, "p", _hoisted_8, [
             _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Success" }),
-            _cache[13] || (_cache[13] = _vue.createTextVNode.call(void 0, "Success", -1 /* CACHED */))
+            _cache[24] || (_cache[24] = _vue.createTextVNode.call(void 0, "Success", -1 /* CACHED */))
           ]),
-          _cache[14] || (_cache[14] = _vue.createElementVNode.call(void 0, "p", null, "This is a success box", -1 /* CACHED */))
+          _cache[25] || (_cache[25] = _vue.createElementVNode.call(void 0, "p", null, "This is a success box", -1 /* CACHED */))
         ]),
         _vue.createElementVNode.call(void 0, "div", _hoisted_9, [
           _vue.createElementVNode.call(void 0, "p", _hoisted_10, [
             _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Important" }),
-            _cache[15] || (_cache[15] = _vue.createTextVNode.call(void 0, "Important", -1 /* CACHED */))
+            _cache[26] || (_cache[26] = _vue.createTextVNode.call(void 0, "Important", -1 /* CACHED */))
           ]),
-          _cache[16] || (_cache[16] = _vue.createElementVNode.call(void 0, "p", null, "This is an important box", -1 /* CACHED */))
+          _cache[27] || (_cache[27] = _vue.createElementVNode.call(void 0, "p", null, "This is an important box", -1 /* CACHED */))
         ]),
         _vue.createElementVNode.call(void 0, "div", _hoisted_11, [
           _vue.createElementVNode.call(void 0, "p", _hoisted_12, [
             _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Danger" }),
-            _cache[17] || (_cache[17] = _vue.createTextVNode.call(void 0, "BE CAREFUL", -1 /* CACHED */))
+            _cache[28] || (_cache[28] = _vue.createTextVNode.call(void 0, "BE CAREFUL", -1 /* CACHED */))
           ]),
-          _cache[18] || (_cache[18] = _vue.createElementVNode.call(void 0, "p", null, "This is a danger box", -1 /* CACHED */))
+          _cache[29] || (_cache[29] = _vue.createElementVNode.call(void 0, "p", null, "This is a danger box", -1 /* CACHED */))
         ]),
         _vue.createElementVNode.call(void 0, "div", _hoisted_13, [
           _vue.createElementVNode.call(void 0, "p", _hoisted_14, [
             _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Caution" }),
-            _cache[19] || (_cache[19] = _vue.createTextVNode.call(void 0, "Caution", -1 /* CACHED */))
+            _cache[30] || (_cache[30] = _vue.createTextVNode.call(void 0, "Caution", -1 /* CACHED */))
           ]),
-          _cache[20] || (_cache[20] = _vue.createElementVNode.call(void 0, "p", null, "This is a caution box", -1 /* CACHED */))
+          _cache[31] || (_cache[31] = _vue.createElementVNode.call(void 0, "p", null, "This is a caution box", -1 /* CACHED */))
         ]),
-        _cache[22] || (_cache[22] = _vue.createElementVNode.call(void 0, "details", null, [
+        _cache[33] || (_cache[33] = _vue.createElementVNode.call(void 0, "details", null, [
           _vue.createElementVNode.call(void 0, "summary", null, "Details"),
           _vue.createElementVNode.call(void 0, "p", null, "This is a details box")
         ], -1 /* CACHED */))
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[39] || (_cache[39] = _vue.createElementVNode.call(void 0, "h2", { id: "youtube-embed" }, [
+    _cache[53] || (_cache[53] = _vue.createElementVNode.call(void 0, "h2", { id: "youtube-embed" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -313,7 +444,7 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "YouTube embed")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      right: _vue.withCtx.call(void 0, () => [...(_cache[23] || (_cache[23] = [
+      right: _vue.withCtx.call(void 0, () => [...(_cache[34] || (_cache[34] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, "::youtube[chuBHB0rRQo]\n")
         ], -1 /* CACHED */)
@@ -323,7 +454,7 @@ function render(_ctx, _cache) {
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[40] || (_cache[40] = _vue.createElementVNode.call(void 0, "h2", { id: "figures" }, [
+    _cache[54] || (_cache[54] = _vue.createElementVNode.call(void 0, "h2", { id: "figures" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -334,7 +465,7 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "Figures")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      right: _vue.withCtx.call(void 0, () => [...(_cache[24] || (_cache[24] = [
+      right: _vue.withCtx.call(void 0, () => [...(_cache[35] || (_cache[35] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::figure[Linked notes can form a network of knowledge]{.framed}\n![Network graph visualization showing hundreds of small nodes](https://im.dt.in.th/ipfs/bafybeigltieu33eda3ux2uprgua5haczvev5ownguordyfgds5qrexdlbq/image.webp)\n:::\n")
         ], -1 /* CACHED */),
@@ -347,7 +478,7 @@ function render(_ctx, _cache) {
         ], -1 /* CACHED */)
       ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _cache[25] || (_cache[25] = _vue.createElementVNode.call(void 0, "figure", { class: "framed" }, [
+        _cache[36] || (_cache[36] = _vue.createElementVNode.call(void 0, "figure", { class: "framed" }, [
           _vue.createElementVNode.call(void 0, "p", null, [
             _vue.createElementVNode.call(void 0, "img", {
               src: "https://im.dt.in.th/ipfs/bafybeigltieu33eda3ux2uprgua5haczvev5ownguordyfgds5qrexdlbq/image.webp",
@@ -359,7 +490,7 @@ function render(_ctx, _cache) {
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[41] || (_cache[41] = _vue.createElementVNode.call(void 0, "h2", { id: "chat-bubbles" }, [
+    _cache[55] || (_cache[55] = _vue.createElementVNode.call(void 0, "h2", { id: "chat-bubbles" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -370,13 +501,13 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "Chat bubbles")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      right: _vue.withCtx.call(void 0, () => [...(_cache[27] || (_cache[27] = [
+      right: _vue.withCtx.call(void 0, () => [...(_cache[38] || (_cache[38] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::me\nhi!\n:::\n\n:::bubble[ChatGPT]\nHi there! How's it going?\n:::\n")
         ], -1 /* CACHED */)
       ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _cache[28] || (_cache[28] = _vue.createElementVNode.call(void 0, "div", {
+        _cache[39] || (_cache[39] = _vue.createElementVNode.call(void 0, "div", {
           class: "notes-bubble",
           "data-author-position": "right"
         }, [
@@ -391,14 +522,14 @@ function render(_ctx, _cache) {
           _vue.createElementVNode.call(void 0, "div", _hoisted_16, [
             _vue.createVNode.call(void 0, _component_notes_bubble_author, { author: "ChatGPT" })
           ]),
-          _cache[26] || (_cache[26] = _vue.createElementVNode.call(void 0, "div", { class: "notes-bubble__message" }, [
+          _cache[37] || (_cache[37] = _vue.createElementVNode.call(void 0, "div", { class: "notes-bubble__message" }, [
             _vue.createElementVNode.call(void 0, "p", null, "Hi there! How's it going?")
           ], -1 /* CACHED */))
         ])
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[42] || (_cache[42] = _vue.createElementVNode.call(void 0, "h2", { id: "thoughts" }, [
+    _cache[56] || (_cache[56] = _vue.createElementVNode.call(void 0, "h2", { id: "thoughts" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -409,13 +540,13 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "Thoughts")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      right: _vue.withCtx.call(void 0, () => [...(_cache[29] || (_cache[29] = [
+      right: _vue.withCtx.call(void 0, () => [...(_cache[40] || (_cache[40] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::thought\nBut what about this case?\n:::\n")
         ], -1 /* CACHED */)
       ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _cache[30] || (_cache[30] = _vue.createElementVNode.call(void 0, "div", {
+        _cache[41] || (_cache[41] = _vue.createElementVNode.call(void 0, "div", {
           class: "notes-bubble",
           "data-author-position": "right"
         }, [
@@ -426,7 +557,7 @@ function render(_ctx, _cache) {
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[43] || (_cache[43] = _vue.createElementVNode.call(void 0, "h2", { id: "call-to-action" }, [
+    _cache[57] || (_cache[57] = _vue.createElementVNode.call(void 0, "h2", { id: "call-to-action" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -437,13 +568,13 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "Call to action")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      right: _vue.withCtx.call(void 0, () => [...(_cache[31] || (_cache[31] = [
+      right: _vue.withCtx.call(void 0, () => [...(_cache[42] || (_cache[42] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, "::cta[View on GitHub]{href=\"https://github.com/dtinth/notes\"}\n")
         ], -1 /* CACHED */)
       ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _cache[32] || (_cache[32] = _vue.createElementVNode.call(void 0, "p", { class: "notes-cta" }, [
+        _cache[43] || (_cache[43] = _vue.createElementVNode.call(void 0, "p", { class: "notes-cta" }, [
           _vue.createElementVNode.call(void 0, "a", {
             class: "notes-cta__link",
             href: "https://github.com/dtinth/notes"
@@ -455,7 +586,7 @@ function render(_ctx, _cache) {
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[44] || (_cache[44] = _vue.createElementVNode.call(void 0, "h2", { id: "twitter-embeds" }, [
+    _cache[58] || (_cache[58] = _vue.createElementVNode.call(void 0, "h2", { id: "twitter-embeds" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -466,13 +597,13 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "Twitter embeds")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      right: _vue.withCtx.call(void 0, () => [...(_cache[33] || (_cache[33] = [
+      right: _vue.withCtx.call(void 0, () => [...(_cache[44] || (_cache[44] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::tweet\n\n<p lang=\"en\" dir=\"ltr\">Proudly storing JWT auth token in localStorage in 2024 🥇 <a href=\"https://t.co/fhfzJZqIsZ\">https://t.co/fhfzJZqIsZ</a></p>&mdash; LiveOverflow 🔴 (@LiveOverflow) <a href=\"https://twitter.com/LiveOverflow/status/1817500071312699720?ref_src=twsrc%5Etfw\">July 28, 2024</a>\n\n:::\n")
         ], -1 /* CACHED */)
       ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _cache[34] || (_cache[34] = _vue.createElementVNode.call(void 0, "blockquote", { class: "twitter-tweet" }, [
+        _cache[45] || (_cache[45] = _vue.createElementVNode.call(void 0, "blockquote", { class: "twitter-tweet" }, [
           _vue.createElementVNode.call(void 0, "p", {
             lang: "en",
             dir: "ltr"
