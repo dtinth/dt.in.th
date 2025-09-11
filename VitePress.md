@@ -4,7 +4,7 @@ title: VitePress
 topic: true
 ---
 
-**[VitePress](https://vitepress.dev/)** is a static site generator powered by [Vite](https://vitejs.dev/) and [Vue](Vue). It is the spiritual successor to [VuePress](VuePress) with improved performance and developer experience.
+**[VitePress](https://vitepress.dev/)** is a static site generator powered by [Vite](Vite) and [Vue](Vue). It is the spiritual successor to [VuePress](VuePress) with improved performance and developer experience.
 
 ## Bookmarks
 

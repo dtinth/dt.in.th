@@ -1565,7 +1565,7 @@
 		}
 	,	"VitePress":
 		{	"title": "VitePress (topic)"
-		,	"parent": "VuePress"
+		,	"parent": "Vite"
 		}
 	,	"VitePressTalk":
 		{	"title": "สร้างเว็บแหล่งความรู้สวยๆ ด้วย VitePress"

@@ -3811,6 +3811,10 @@
 				}
 			,	{	"link": "ViteBundleSize"
 				}
+			,	{	"link": "Vue"
+				}
+			,	{	"link": "VitePress"
+				}
 			]
 		}
 	,	"ViteBundleSize":
@@ -3823,7 +3827,9 @@
 	,	"VitePress":
 		{	"title": "VitePress (topic)"
 		,	"links":
-			[	{	"link": "Vue"
+			[	{	"link": "Vite"
+				}
+			,	{	"link": "Vue"
 				}
 			,	{	"link": "VuePress"
 				}
