@@ -101,4 +101,4 @@ The `markdown-it-footnote` plugin requires at least **4 spaces** of indentation 
 
 [This commit][ex] shows how I implemented littlefoot in my website <https://dt.in.th/>
 
-[ex]: https://github.com/dtinth/dt.in.th/commit/dfa0fa28b721da81bafef44a6b193ec5844b3ed5
+[ex]: https://github.com/dtinth/dt.in.th-old/commit/dfa0fa28b721da81bafef44a6b193ec5844b3ed5

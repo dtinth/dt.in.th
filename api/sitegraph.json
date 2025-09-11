@@ -2677,7 +2677,9 @@
 	,	"NpmCheckmark":
 		{	"title": "npm checkmark"
 		,	"links":
-			[	{	"link": "GitHubActions"
+			[	{	"link": "Npm"
+				}
+			,	{	"link": "GitHubActions"
 				}
 			]
 		}
@@ -4018,6 +4020,8 @@
 			,	{	"link": "Talks"
 				}
 			,	{	"link": "Songs"
+				}
+			,	{	"link": "AboutNotes"
 				}
 			]
 		}

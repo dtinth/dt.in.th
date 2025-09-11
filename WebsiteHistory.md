@@ -65,3 +65,9 @@ Things that I made are scattered everywhere. Apart from my talks and [songs](Son
 That was a lot of stuff! And I didn't have a catalog for them! Instead of having separate catalogs for my code projects, writings, songs, talks, videos, etc. I decided to create one single collection of stuffs that I want to share. This is also a way I can give each thing I made a homepage about it.
 
 I wanted to focus more on _content_ rather than _maintaining the content infrastructure_, so I [switched](https://github.com/dtinth/dt.in.th/pull/19) the website to use [VuePress](https://vuepress.vuejs.org/).
+
+Around this time, I also started building my digital garden as a [note-taking infrastructure](AboutNotes) where I can quickly create notes and publish them.
+
+## 2025
+
+My digital garden had become my primary publishing workflow, and as a result I found myself not updating the VuePress-based website. Finally, in 2025, I migrated all content from the VuePress site to my digital garden and made that my main website.

@@ -18,7 +18,7 @@ I no longer use VuePress. Now I use [VitePress](VitePress).
 
 ## I use VuePress for these sites
 
-- [~~My website~~](https://dt.in.th/). Prior to that I used Gatsby but it required a lot of custom code to set up things. So I [migrated](https://github.com/dtinth/dt.in.th/pull/19). [From my Facebook comment][fbc1]:
+- [~~My website~~](https://dt.in.th/). Prior to that I used Gatsby but it required a lot of custom code to set up things. So I [migrated](https://github.com/dtinth/dt.in.th-old/pull/19). [From my Facebook comment][fbc1]:
 
   > My website used to be Gatsby+MDX, but there’s just too much custom code required... Now it’s VuePress on Default Theme.
   >
