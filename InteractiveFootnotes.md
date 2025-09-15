@@ -13,7 +13,7 @@ aliases:
 
 - [WaitButWhy blog post _The AI Revolution_](https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html). Implemented with [bigfoot.js](http://www.bigfootjs.com/) jQuery plugin through [WP-Bigfoot](https://wordpress.org/plugins/wp-bigfoot/) WordPress plugin.
 - [mango.pdf.zone blog post _When you browse Instagram and find former Australian Prime Minister Tony Abbott's passport number_](https://mango.pdf.zone/finding-former-australian-prime-minister-tony-abbotts-passport-number-on-instagram). Implemented with [littlefoot.js](https://github.com/goblindegook/littlefoot) which is a bigfoot.js fork that does not require jQuery.
-- This [notes](AboutNotes) server uses it too, obviously.
+- This [notes](AboutThisWebsite) server uses it too, obviously.
 
 ## Setting this up in [VuePress](VuePress)
 

@@ -5,7 +5,7 @@ aliases:
   - 20201211T195900Z2817
 ---
 
-**How about some interactivity inside a [note](AboutNotes)?**
+**How about some interactivity inside a [note](AboutThisWebsite)?**
 
 <p>
   <button class="btn" @click="count++" :disabled="!mounted">{{count}}</button>

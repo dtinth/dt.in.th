@@ -66,7 +66,7 @@ That was a lot of stuff! And I didn't have a catalog for them! Instead of having
 
 I wanted to focus more on _content_ rather than _maintaining the content infrastructure_, so I [switched](https://github.com/dtinth/dt.in.th-old/pull/19) the website to use [VuePress](https://vuepress.vuejs.org/).
 
-Around this time, I also started building my digital garden as a [note-taking infrastructure](AboutNotes) where I can quickly create notes and publish them.
+Around this time, I also started building my digital garden as a [note-taking infrastructure](AboutThisWebsite) where I can quickly create notes and publish them.
 
 ## 2025
 

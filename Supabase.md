@@ -8,7 +8,7 @@ title: Supabase
 
 - [Some notes on Supabase Auth](SupabaseAuthNotes)
 - [Running Supabase on a remote VPS while keeping local development workflow](SupabaseLocalVPS)
-- [notes.dt.in.th](AboutNotes) uses Supabase to store public notes.
+- [notes.dt.in.th](AboutThisWebsite) uses Supabase to store public notes.
 
 ```sh
 # Add Supabase CLI as a development dependency (allows running bun supabase commands)

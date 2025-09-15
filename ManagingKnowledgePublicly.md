@@ -129,7 +129,7 @@ _Digital gardens offer a more accessible alternative to traditional content crea
 
 ### Thai’s PKM & Digital Garden
 
-My [notes system](AboutNotes) and [digital garden](HomePage) uses an unstructured approach with flat file organization and extensive linking. The system is optimized for instant search functionality, allowing quick retrieval of notes that would otherwise get drowned in the timeline.
+My [notes system](AboutThisWebsite) and [digital garden](HomePage) uses an unstructured approach with flat file organization and extensive linking. The system is optimized for instant search functionality, allowing quick retrieval of notes that would otherwise get drowned in the timeline.
 
 - **Problem-solution documentation:** Sometimes I note down how I solve some problems. I position myself as a learner rather than an expert. I write them from my 1st person perspective, rather than a tutorial or a full-blown article ([example](MongoDBAuthSource)).
 - **Code snippet references:** Sometimes I copy the code snippets from documentation into my digital garden so that I can find it more quickly ([example](InstallGcloudCliOnCodespaces)).

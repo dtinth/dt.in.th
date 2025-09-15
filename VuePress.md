@@ -25,7 +25,7 @@ I no longer use VuePress. Now I use [VitePress](VitePress).
   > VuePress’ Default Theme and Markdown syntax has a lot of opinionated but customizable stuff out-of-the-box and I found myself much more productive.
 
   :::warning[Update 2025]
-  My website is now running on a custom static site generator, see [about this site](AboutNotes) for more info.
+  My website is now running on a custom static site generator, see [about this site](AboutThisWebsite) for more info.
   :::
 
 - [~~wonderful.software~~](https://wonderful.software/), a Thai language website with contents about software engineering. Also default theme with customizations.

@@ -8,6 +8,7 @@ aliases:
 
 Here are my recent writings:
 
+- 2025-09-15: [Using Bun on Cloudflare Pages](BunCloudflarePages)
 - 2025-09-12: [Deploying modern Single Page Applications to Azure Static Web Apps](AzureStaticWebAppsSPA)
 - 2025-09-09: [Running Supabase on a remote VPS while keeping local development workflow](SupabaseLocalVPS)
 - 2025-09-03: [Managing Knowledge Publicly: Unlocking Unexpected Growth](ManagingKnowledgePublicly)

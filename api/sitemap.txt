@@ -3,7 +3,6 @@ https://dt.in.th/20180215T173000Z0223
 https://dt.in.th/20181228T000000Z0000
 https://dt.in.th/20190803T094000Z2912
 https://dt.in.th/20200612T134702Z5627
-https://dt.in.th/20200905T174933Z7510
 https://dt.in.th/20200920T134111Z3753
 https://dt.in.th/20201003T173001Z7642
 https://dt.in.th/20201004T062304Z2197
@@ -81,7 +80,7 @@ https://dt.in.th/20230321T132222Z8523
 https://dt.in.th/20230403T162555Z1842
 https://dt.in.th/AIvsThaiExams
 https://dt.in.th/AWS
-https://dt.in.th/AboutNotes
+https://dt.in.th/AboutThisWebsite
 https://dt.in.th/AdventOfCode
 https://dt.in.th/AdventOfCode2021Day24
 https://dt.in.th/AsdfSnippets

@@ -9,7 +9,7 @@ public: true
 
 **[Visual Studio Code](https://code.visualstudio.com/)** is "a lightweight but powerful source code editor"
 
-- I am also [using VS Code as my note-taking platform](AboutNotes).
+- I am also [using VS Code as my note-taking platform](AboutThisWebsite).
   - [VS Code as a Markdown-based note-taking platform?](VSCodeNoteTaking)
 - [Workspace-local extensions in VS Code](20201208T104844Z2958)
 - [Providing environment variables from a VS Code extension](20210201T194432Z7472)

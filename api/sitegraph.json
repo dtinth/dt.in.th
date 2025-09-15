@@ -28,19 +28,6 @@
 		{	"title": "Ways to render Markdown in React"
 		,	"links": []
 		}
-	,	"20200905T174933Z7510":
-		{	"title": "Initial ideas for a lightweight private journaling system using Markdown files"
-		,	"links":
-			[	{	"link": "CSS"
-				}
-			,	{	"link": "NotesInteractivity"
-				}
-			,	{	"link": "Markdown"
-				}
-			,	{	"link": "AboutNotes"
-				}
-			]
-		}
 	,	"20200920T134111Z3753":
 		{	"title": "The `<blurhash-image>` Web Component"
 		,	"links":
@@ -55,7 +42,7 @@
 	,	"20201004T062304Z2197":
 		{	"title": "I wanted to create a public web interface for my semi-public journal"
 		,	"links":
-			[	{	"link": "AboutNotes"
+			[	{	"link": "AboutThisWebsite"
 				}
 			,	{	"link": "VuePress"
 				}
@@ -174,7 +161,7 @@
 		,	"links":
 			[	{	"link": "VSCode"
 				}
-			,	{	"link": "AboutNotes"
+			,	{	"link": "AboutThisWebsite"
 				}
 			,	{	"link": "20201208T104844Z2958"
 				}
@@ -441,7 +428,7 @@
 	,	"20220724T170613Z0326":
 		{	"title": "I just migrated notes.dt.in.th from Nuxt.js to Next.js"
 		,	"links":
-			[	{	"link": "AboutNotes"
+			[	{	"link": "AboutThisWebsite"
 				}
 			,	{	"link": "20220724T171557Z9306"
 				}
@@ -450,7 +437,7 @@
 	,	"20220724T171557Z9306":
 		{	"title": "These notes have some interactivity:"
 		,	"links":
-			[	{	"link": "AboutNotes"
+			[	{	"link": "AboutThisWebsite"
 				}
 			,	{	"link": "NotesInteractivity"
 				}
@@ -597,40 +584,30 @@
 				}
 			]
 		}
-	,	"AboutNotes":
-		{	"title": "About notes.dt.in.th"
+	,	"AboutThisWebsite":
+		{	"title": "About this website"
 		,	"links":
-			[	{	"link": "VSCodeNoteTaking"
+			[	{	"link": "WebsiteHistory"
 				}
-			,	{	"link": "20200905T174933Z7510"
-				}
-			,	{	"link": "20201004T062304Z2197"
-				}
-			,	{	"link": "20220724T170613Z0326"
+			,	{	"link": "DigitalGardening"
 				}
 			,	{	"link": "Supabase"
 				}
-			,	{	"link": "VSCode"
-				}
-			,	{	"link": "GitHubDeployKeySSHConfig"
-				}
-			,	{	"link": "20201211T164128Z3995"
-				}
-			,	{	"link": "PersonalPuppeteer"
-				}
-			,	{	"link": "20201013T083028Z4498"
-				}
-			,	{	"link": "20201117T201556Z6214"
-				}
-			,	{	"link": "#user-content-fn-fn1"
-				}
-			,	{	"link": "InteractiveFootnotes"
+			,	{	"link": "Markdown"
 				}
 			,	{	"link": "Syntax"
 				}
 			,	{	"link": "NotesInteractivity"
 				}
-			,	{	"link": "#user-content-fnref-fn1"
+			,	{	"link": "VSCodeNoteTaking"
+				}
+			,	{	"link": "20201211T164128Z3995"
+				}
+			,	{	"link": "GitHubDeployKeySSHConfig"
+				}
+			,	{	"link": "20201004T062304Z2197"
+				}
+			,	{	"link": "20220724T170613Z0326"
 				}
 			]
 		}
@@ -1579,7 +1556,7 @@
 		,	"links":
 			[	{	"link": "GitHub"
 				}
-			,	{	"link": "AboutNotes"
+			,	{	"link": "AboutThisWebsite"
 				}
 			]
 		}
@@ -1779,7 +1756,7 @@
 				}
 			,	{	"link": "Recent"
 				}
-			,	{	"link": "AboutNotes"
+			,	{	"link": "AboutThisWebsite"
 				}
 			,	{	"link": "CloudPlatform"
 				}
@@ -1937,7 +1914,7 @@
 		,	"links":
 			[	{	"link": "#user-content-fn-example"
 				}
-			,	{	"link": "AboutNotes"
+			,	{	"link": "AboutThisWebsite"
 				}
 			,	{	"link": "VuePress"
 				}
@@ -2291,7 +2268,7 @@
 		,	"links":
 			[	{	"link": "DigitalGardening"
 				}
-			,	{	"link": "AboutNotes"
+			,	{	"link": "AboutThisWebsite"
 				}
 			,	{	"link": "HomePage"
 				}
@@ -2696,7 +2673,7 @@
 	,	"NotesInteractivity":
 		{	"title": "Adding some interactivity to my notes"
 		,	"links":
-			[	{	"link": "AboutNotes"
+			[	{	"link": "AboutThisWebsite"
 				}
 			]
 		}
@@ -3490,7 +3467,7 @@
 				}
 			,	{	"link": "SupabaseLocalVPS"
 				}
-			,	{	"link": "AboutNotes"
+			,	{	"link": "AboutThisWebsite"
 				}
 			]
 		}
@@ -3796,7 +3773,7 @@
 	,	"VSCode":
 		{	"title": "Visual Studio Code (topic)"
 		,	"links":
-			[	{	"link": "AboutNotes"
+			[	{	"link": "AboutThisWebsite"
 				}
 			,	{	"link": "VSCodeNoteTaking"
 				}
@@ -3822,7 +3799,7 @@
 		,	"links":
 			[	{	"link": "VSCode"
 				}
-			,	{	"link": "AboutNotes"
+			,	{	"link": "AboutThisWebsite"
 				}
 			]
 		}
@@ -3935,7 +3912,7 @@
 				}
 			,	{	"link": "VitePress"
 				}
-			,	{	"link": "AboutNotes"
+			,	{	"link": "AboutThisWebsite"
 				}
 			]
 		}
@@ -4084,7 +4061,7 @@
 				}
 			,	{	"link": "Songs"
 				}
-			,	{	"link": "AboutNotes"
+			,	{	"link": "AboutThisWebsite"
 				}
 			]
 		}

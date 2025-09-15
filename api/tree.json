@@ -20,10 +20,6 @@
 		{	"title": "Ways to render Markdown in React"
 		,	"parent": "React"
 		}
-	,	"20200905T174933Z7510":
-		{	"title": "Initial ideas for a lightweight private journaling system using Markdown files"
-		,	"parent": "AboutNotes"
-		}
 	,	"20200920T134111Z3753":
 		{	"title": "The `<blurhash-image>` Web Component"
 		,	"parent": "WebComponents"
@@ -34,11 +30,11 @@
 		}
 	,	"20201004T062304Z2197":
 		{	"title": "I wanted to create a public web interface for my semi-public journal"
-		,	"parent": "AboutNotes"
+		,	"parent": "AboutThisWebsite"
 		}
 	,	"20201013T083028Z4498":
 		{	"title": "Apparently perfumed alcohol sprays are a thing…"
-		,	"parent": "AboutNotes"
+		,	"parent": "Recent"
 		}
 	,	"20201014T155147Z5685":
 		{	"title": "Array#filter type narrowing"
@@ -94,7 +90,7 @@
 		}
 	,	"20201211T164128Z3995":
 		{	"title": "Notes sidebar in VS Code"
-		,	"parent": "AboutNotes"
+		,	"parent": "AboutThisWebsite"
 		}
 	,	"20201213T171728Z5453":
 		{	"title": "One of the simplest ways to turn a simple web project into a PWA"
@@ -246,7 +242,7 @@
 		}
 	,	"20220724T170613Z0326":
 		{	"title": "I just migrated notes.dt.in.th from Nuxt.js to Next.js"
-		,	"parent": "AboutNotes"
+		,	"parent": "AboutThisWebsite"
 		}
 	,	"20220724T171557Z9306":
 		{	"title": "These notes have some interactivity:"
@@ -332,8 +328,8 @@
 		{	"title": "AWS (topic)"
 		,	"parent": "CloudPlatform"
 		}
-	,	"AboutNotes":
-		{	"title": "About notes.dt.in.th"
+	,	"AboutThisWebsite":
+		{	"title": "About this website"
 		,	"parent": "HomePage"
 		}
 	,	"AdventOfCode":
@@ -706,7 +702,7 @@
 		}
 	,	"GitHubDeployKeySSHConfig":
 		{	"title": "Cloning private GitHub projects onto a new worker Linux box"
-		,	"parent": "AboutNotes"
+		,	"parent": "AboutThisWebsite"
 		}
 	,	"GitHubToJSDelivr":
 		{	"title": "GitHub to JSDelivr link converter"
@@ -1085,7 +1081,7 @@
 		}
 	,	"NotesInteractivity":
 		{	"title": "Adding some interactivity to my notes"
-		,	"parent": "AboutNotes"
+		,	"parent": "AboutThisWebsite"
 		}
 	,	"Npm":
 		{	"title": "npm (topic)"

@@ -14,7 +14,7 @@ Hi, I’m **Thai Pangsakulyanont <span class="text-[#8b8685] font-normal">(@<spa
 Welcome to my [digital garden](DigitalGardening).
 
 - [Recent writings](Recent)
-- [About this website](AboutNotes)
+- [About this website](AboutThisWebsite)
 
 ## Topics
 

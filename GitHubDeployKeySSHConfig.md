@@ -34,4 +34,4 @@ Implementation, for each project and machine:
 
 ---
 
-I do this when I set up [my notes vault](AboutNotes) on a new machine.
+I do this when I set up [my notes vault](AboutThisWebsite) on a new machine.

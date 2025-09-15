@@ -10,7 +10,7 @@ aliases:
 Well, we can if we use Emacs as our main editor — there’s [org-mode](https://orgmode.org/ 'Org mode for Emacs'), [org-agenda](https://orgmode.org/manual/Agenda-Views.html 'Agenda Views (The Org Manual)') and [org-roam](https://github.com/org-roam/org-roam 'GitHub - org-roam/org-roam: Rudimentary Roam replica with ...') (search YouTube for many cool demos). But I’m not an Emacs user, and I prefer [VS Code](VSCode). If such a vibrant ecosystem exists for Emacs, then surely someone must have done it for VS Code right? Well, yes, that seems to be the case.
 
 :::info[Update]
-[Now I'm also experimenting with using VS Code as a note-taking platform](AboutNotes) using my own tooling.
+[Now I'm also experimenting with using VS Code as a note-taking platform](AboutThisWebsite) using my own tooling.
 :::
 
 There are some **complete frameworks** for taking notes in VS Code:
