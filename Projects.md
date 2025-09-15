@@ -9,6 +9,7 @@ topic: true
 <!-- prettier-ignore -->
 | Project | Description |
 |:--- |:--- |
+| [**AI vs Thai Exams**](AIvsThaiExams) | Evaluates large language models on Thailand's standardized exams using the ThaiExam dataset. |
 | [**Bangkok Ipsum**](BangkokIpsum) | A webpage that lets you generate random Thai text. |
 | [**Bemuse**](Bemuse) | A free and open source, online, web-based rhythm action game. |
 | [**CSS Spring Animation**](SpringAnimationInCSS) | A realistic spring-type animation using physics and calculus. |

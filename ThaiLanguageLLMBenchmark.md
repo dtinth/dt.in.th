@@ -7,7 +7,7 @@ facebook: https://www.facebook.com/dtinth/posts/pfbid0EZvGA5NDDXuZXtiwV2qp4Uf1b4
 # LLM กับข้อสอบ O-NET ม.6
 
 :::tip[New benchmark available]
-This post has not been updated since June 2024. Check out [AI vs Thai Exams](https://ai-vs-thai-exams.pages.dev/) project for a more comprehensive and up-to-date benchmark of LLMs on Thai exams.
+This post has not been updated since June 2024. Check out [**AI vs Thai Exams**](AIvsThaiExams) project for a more comprehensive and up-to-date benchmark of LLMs on Thai exams.
 :::
 
 ช่วงหลังๆ มีโมเดล [LLM](LargeLanguageModel) ตัวใหม่ๆ ปล่อยออกมาให้เล่นเยอะมาก ทั้ง [GPT-4o](https://openai.com/index/hello-gpt-4o/), [Gemini 1.5](https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/), [Claude 3.5](https://www.anthropic.com/news/claude-3-5-sonnet) จึงสงสัยว่าตัวไหนที่ทำงานกับภาษาไทยได้ดีที่สุดตอนนี้

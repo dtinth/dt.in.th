@@ -9,6 +9,7 @@ aliases:
 Here are my recent writings:
 
 - 2025-09-12: [Deploying modern Single Page Applications to Azure Static Web Apps](AzureStaticWebAppsSPA)
+- 2025-09-09: [Running Supabase on a remote VPS while keeping local development workflow](SupabaseLocalVPS)
 - 2025-09-03: [Managing Knowledge Publicly: Unlocking Unexpected Growth](ManagingKnowledgePublicly)
 - 2025-08-28: [Making Playwright test reports easily accessible from GitHub Actions](PlaywrightAccessibleTestReports)
 - 2025-08-23: [A pomodoro timer](Pomodoro)

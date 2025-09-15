@@ -577,6 +577,26 @@
 				}
 			]
 		}
+	,	"AIvsThaiExams":
+		{	"title": "AI vs Thai Exams"
+		,	"links":
+			[	{	"link": "LargeLanguageModel"
+				}
+			,	{	"link": "Projects"
+				}
+			,	{	"link": "ThaiLanguageLLMBenchmark"
+				}
+			]
+		}
+	,	"AWS":
+		{	"title": "AWS (topic)"
+		,	"links":
+			[	{	"link": "CloudPlatform"
+				}
+			,	{	"link": "BunAppRunner"
+				}
+			]
+		}
 	,	"AboutNotes":
 		{	"title": "About notes.dt.in.th"
 		,	"links":
@@ -737,6 +757,10 @@
 				}
 			,	{	"link": "BunInit"
 				}
+			,	{	"link": "BunAppRunner"
+				}
+			,	{	"link": "BunCloudflarePages"
+				}
 			,	{	"link": "Elysia"
 				}
 			]
@@ -744,6 +768,17 @@
 	,	"BunAppRunner":
 		{	"title": "Deploying a Bun app to AWS App Runner"
 		,	"links": []
+		}
+	,	"BunCloudflarePages":
+		{	"title": "Using Bun on Cloudflare Pages"
+		,	"links":
+			[	{	"link": "Bun"
+				}
+			,	{	"link": "#user-content-fn-npmfallback"
+				}
+			,	{	"link": "#user-content-fnref-npmfallback"
+				}
+			]
 		}
 	,	"BunInit":
 		{	"title": "How I initialize my Bun projects"
@@ -903,7 +938,9 @@
 	,	"CloudPlatform":
 		{	"title": "Cloud Platform (topic)"
 		,	"links":
-			[	{	"link": "Azure"
+			[	{	"link": "AWS"
+				}
+			,	{	"link": "Azure"
 				}
 			,	{	"link": "Firebase"
 				}
@@ -2009,6 +2046,8 @@
 				}
 			,	{	"link": "PackletsSetup"
 				}
+			,	{	"link": "Shake"
+				}
 			,	{	"link": "OBZBarcodeScannerJS"
 				}
 			,	{	"link": "Insta360LinkControllerWebSocketProtocol"
@@ -2975,6 +3014,8 @@
 		,	"links":
 			[	{	"link": "Tools"
 				}
+			,	{	"link": "AIvsThaiExams"
+				}
 			,	{	"link": "BangkokIpsum"
 				}
 			,	{	"link": "Bemuse"
@@ -3308,6 +3349,13 @@
 				}
 			]
 		}
+	,	"Shake":
+		{	"title": "Detecting device shake in JavaScript"
+		,	"links":
+			[	{	"link": "JavaScript"
+				}
+			]
+		}
 	,	"Shell":
 		{	"title": "Shell (topic)"
 		,	"links":
@@ -3440,6 +3488,8 @@
 				}
 			,	{	"link": "SupabaseAuthNotes"
 				}
+			,	{	"link": "SupabaseLocalVPS"
+				}
 			,	{	"link": "AboutNotes"
 				}
 			]
@@ -3448,6 +3498,17 @@
 		{	"title": "Some notes on Supabase Auth"
 		,	"links":
 			[	{	"link": "Supabase"
+				}
+			]
+		}
+	,	"SupabaseLocalVPS":
+		{	"title": "Running Supabase on a remote VPS while keeping local development workflow"
+		,	"links":
+			[	{	"link": "Docker"
+				}
+			,	{	"link": "Supabase"
+				}
+			,	{	"link": "Codespaces"
 				}
 			]
 		}
@@ -3586,7 +3647,9 @@
 	,	"ThaiLanguageLLMBenchmark":
 		{	"title": "LLM กับข้อสอบ O-NET ม.6"
 		,	"links":
-			[	{	"link": "LargeLanguageModel"
+			[	{	"link": "AIvsThaiExams"
+				}
+			,	{	"link": "LargeLanguageModel"
 				}
 			]
 		}

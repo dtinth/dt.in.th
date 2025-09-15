@@ -6,7 +6,7 @@ title: Cloud Platform
 
 My notes about various **cloud platforms** that I use…
 
-- AWS
+- [AWS](AWS)
 - [Azure](Azure)
 - Deno Deploy
 - DigitalOcean

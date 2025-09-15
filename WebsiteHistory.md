@@ -50,13 +50,13 @@ I [started writing on Medium](https://medium.com/@dtinth) instead and left the o
 
 ## 2018
 
-In addition to making software and writing blog posts, I also start giving more [talks](Talks) and compose music occasionally. So I wanted a catalog where I can refer back to it.
+In addition to making software and writing blog posts, I also start giving more [talks](Talks) and compose [songs](Songs) occasionally. So I wanted a catalog where I can refer back to it.
 
-React-based static sites becomes more mainstream. I [created](https://github.com/dtinth/dt.in.th/tree/before-gatsby) my own static site generator where React is only used to render the HTML pages during build time, with no React in the client-side.
+React-based static sites becomes more mainstream. I [created](https://github.com/dtinth/dt.in.th-old/tree/before-gatsby) my own static site generator where React is only used to render the HTML pages during build time, with no React in the client-side.
 
 ## 2019
 
-Tired of having to maintain my custom static site generator, I [migrated](https://github.com/dtinth/dt.in.th/pull/3) the website to use [Gatsby](https://www.gatsbyjs.org/).
+Tired of having to maintain my custom static site generator, I [migrated](https://github.com/dtinth/dt.in.th-old/pull/3) the website to use [Gatsby](https://www.gatsbyjs.org/).
 
 ## 2020
 
@@ -64,7 +64,7 @@ Things that I made are scattered everywhere. Apart from my talks and [songs](Son
 
 That was a lot of stuff! And I didn't have a catalog for them! Instead of having separate catalogs for my code projects, writings, songs, talks, videos, etc. I decided to create one single collection of stuffs that I want to share. This is also a way I can give each thing I made a homepage about it.
 
-I wanted to focus more on _content_ rather than _maintaining the content infrastructure_, so I [switched](https://github.com/dtinth/dt.in.th/pull/19) the website to use [VuePress](https://vuepress.vuejs.org/).
+I wanted to focus more on _content_ rather than _maintaining the content infrastructure_, so I [switched](https://github.com/dtinth/dt.in.th-old/pull/19) the website to use [VuePress](https://vuepress.vuejs.org/).
 
 Around this time, I also started building my digital garden as a [note-taking infrastructure](AboutNotes) where I can quickly create notes and publish them.
 

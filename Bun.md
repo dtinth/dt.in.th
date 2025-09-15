@@ -8,6 +8,8 @@ title: Bun
 
 - [Building a quick and dirty endpoint with Bun](BunQuickAndDirtyEndpoint)
 - [How I initialize my Bun projects](BunInit)
+- [Deploying a Bun app to AWS App Runner](BunAppRunner)
+- [Using Bun on Cloudflare Pages](BunCloudflarePages)
 
 ## Related topics
 

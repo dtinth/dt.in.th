@@ -26,6 +26,7 @@ aliases:
 - [`Array.from({ length: 5 }, (_, x) => x)`](20230128T173333Z1984)
 - [npm checkmark](NpmCheckmark)
 - [Setting up packlets](PackletsSetup)
+- [Detecting device shake in JavaScript](Shake)
 - [Reading data from OBZ Barcode Reader on the web using Web Serial API](OBZBarcodeScannerJS)
 - [Reverse-engineering Insta360 Link Controller WebSockets protocol](Insta360LinkControllerWebSocketProtocol)
 - [Hacking Surface Pen’s eraser support into Excalidraw (userscript)](ExcalidrawSurfacePen)

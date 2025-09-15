@@ -79,6 +79,8 @@ https://dt.in.th/20230128T173333Z1984
 https://dt.in.th/20230320T204610Z3613
 https://dt.in.th/20230321T132222Z8523
 https://dt.in.th/20230403T162555Z1842
+https://dt.in.th/AIvsThaiExams
+https://dt.in.th/AWS
 https://dt.in.th/AboutNotes
 https://dt.in.th/AdventOfCode
 https://dt.in.th/AdventOfCode2021Day24
@@ -96,6 +98,7 @@ https://dt.in.th/BrotherPTWebUSB
 https://dt.in.th/BubbleSortSong
 https://dt.in.th/Bun
 https://dt.in.th/BunAppRunner
+https://dt.in.th/BunCloudflarePages
 https://dt.in.th/BunInit
 https://dt.in.th/BunQuickAndDirtyEndpoint
 https://dt.in.th/BurstingMusicStar
@@ -341,6 +344,7 @@ https://dt.in.th/Semgrep
 https://dt.in.th/SemgrepGitHubActions
 https://dt.in.th/SemgrepInJavaScriptProjects
 https://dt.in.th/SemgrepSetup
+https://dt.in.th/Shake
 https://dt.in.th/Shell
 https://dt.in.th/ShortLivedMutability
 https://dt.in.th/Slip39Wordlist
@@ -353,6 +357,7 @@ https://dt.in.th/StringByteLength
 https://dt.in.th/StructuredProcrastination
 https://dt.in.th/Supabase
 https://dt.in.th/SupabaseAuthNotes
+https://dt.in.th/SupabaseLocalVPS
 https://dt.in.th/SuperSillyVortex
 https://dt.in.th/Svelte
 https://dt.in.th/SvelteKitPureESM

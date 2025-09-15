@@ -266,7 +266,7 @@
 		}
 	,	"20220907T134709Z7128":
 		{	"title": "Adding Bootstrap CSS to Next.js application"
-		,	"parent": "Next"
+		,	"parent": "CSS"
 		}
 	,	"20220923T125342Z4946":
 		{	"title": "Recording screen in Linux using ffmpeg"
@@ -323,6 +323,14 @@
 	,	"20230403T162555Z1842":
 		{	"title": "Building Firebase Realtime Database Security Rules with GPT-4"
 		,	"parent": "Firebase"
+		}
+	,	"AIvsThaiExams":
+		{	"title": "AI vs Thai Exams"
+		,	"parent": "Projects"
+		}
+	,	"AWS":
+		{	"title": "AWS (topic)"
+		,	"parent": "CloudPlatform"
 		}
 	,	"AboutNotes":
 		{	"title": "About notes.dt.in.th"
@@ -390,7 +398,11 @@
 		}
 	,	"BunAppRunner":
 		{	"title": "Deploying a Bun app to AWS App Runner"
-		,	"parent": "Recent"
+		,	"parent": "AWS"
+		}
+	,	"BunCloudflarePages":
+		{	"title": "Using Bun on Cloudflare Pages"
+		,	"parent": "Bun"
 		}
 	,	"BunInit":
 		{	"title": "How I initialize my Bun projects"
@@ -1371,6 +1383,10 @@
 		{	"title": "Automated code review with Semgrep"
 		,	"parent": "Semgrep"
 		}
+	,	"Shake":
+		{	"title": "Detecting device shake in JavaScript"
+		,	"parent": "JavaScript"
+		}
 	,	"Shell":
 		{	"title": "Shell (topic)"
 		,	"parent": "HomePage"
@@ -1417,6 +1433,10 @@
 		}
 	,	"SupabaseAuthNotes":
 		{	"title": "Some notes on Supabase Auth"
+		,	"parent": "Supabase"
+		}
+	,	"SupabaseLocalVPS":
+		{	"title": "Running Supabase on a remote VPS while keeping local development workflow"
 		,	"parent": "Supabase"
 		}
 	,	"SuperSillyVortex":

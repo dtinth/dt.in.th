@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="Shake" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detecting device shake in JavaScript | dt.in.th</title><meta property="og:title" content="Detecting device shake in JavaScript" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/Shake" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://dt.in.th/Shake" data-source="note"><style id="note-styles">/* layer: default */
+.my[data-v-8c9498c0]{margin-top:1rem;margin-bottom:1rem;}
+.b[data-v-8c9498c0],
+.border[data-v-8c9498c0]{border-width:1px;}</style>
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><h1 id="detecting-device-shake-in-javascript" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#detecting-device-shake-in-javascript" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Detecting device shake in <a href="JavaScript" data-v-8c9498c0>JavaScript</a></h1><p data-v-8c9498c0>In <a href="https://stupid.hackathon.in.th/7/" data-v-8c9498c0>the 7th Stupid Hackathon in Thailand</a>, during pitching, we wanted the audience to vote for their favorite projects by shaking their phone. For that, a <strong data-v-8c9498c0>shake detection algorithm</strong> was needed.</p><p data-v-8c9498c0>The voting web application was built by <a href="https://github.com/boomchanotai" data-v-8c9498c0>@boomchanotai</a>, while I just contributed the shake detection algorithm. You can <a href="https://web.facebook.com/dtinth/posts/pfbid02g6Nn4rtn7X51F24ve55b62ceMyxvrHCryUYf6swJZfPYmRvmrMZuZeq2Ydj8LAApl" data-v-8c9498c0>read my write-up about the experience and see the video demo of the application used in the hackathon here (Thai language)</a>.</p><p data-v-8c9498c0>For the demo to work, you need to open this page on a mobile device and allow the page to access the device motion sensor.</p><p align="center" data-v-8c9498c0><button class="btn" data-v-8c9498c0>Grant device motion permission</button><br data-v-8c9498c0> x: 0.00, y: 0.00, z: 0.00</p><div style="border-radius:1em;border:2px solid #656463;padding:1em;background:#252423;text-align:center;margin:2em 0;" data-v-8c9498c0> Shake counter <div style="font-size:4em;margin:1rem 0;" data-v-8c9498c0>0</div> Median shake speed for the last 10 shakes: - shakes/sec </div><h2 id="the-shake-detection-algorithm" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#the-shake-detection-algorithm" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>The shake detection algorithm</h2><figure class="framed" data-v-8c9498c0><p data-v-8c9498c0><img src="https://im.dt.in.th/ipfs/bafybeiabakreyptymivgrm43tsklqeos6hxwfk7qr2velbo26dztpy2xeu/image.webp" alt="Three-panel diagram explaining a device shake detection algorithm on a black background. First, a shake is started when the acceleration exceeds 30 m/s^2. We remember acceleration vector as the activation vector a0. Formula: ||a|| &gt; 30. First way to stopping a shake: A shake is stopped when the acceleration goes under 20 m/s^2. Formula: ||a|| &lt; 20. Second way to stop a shake: A shake is also stopped when the angle between the latest acceleration and the activation vector exceeds ~72° (cos^-1(0.3)). Formula: (a · a0) / (||a|| ||a0||) &lt; 0.3." data-v-8c9498c0></p></figure><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});/* Analyzed bindings: {
+  "grant": "setup-maybe-ref",
+  "accelText": "setup-maybe-ref",
+  "shakes": "setup-maybe-ref",
+  "speed": "setup-maybe-ref"
+} */
+
+  const __sfc__ = {
+    setup() {
+      const grant = async () => {
+        try {
+          DeviceMotionEvent.requestPermission()
+        } catch (e) {
+          console.error(e)
+        }
+      }
+      const accel = Vue.ref({ x: 0, y: 0, z: 0 })
+      const shakes = Vue.ref(0)
+      const speed = Vue.ref('-')
+      let speeds = []
+      let lastShake
+      const accelText = Vue.computed(() => {
+        const { x, y, z } = accel.value
+        return `x: ${x.toFixed(2)}, y: ${y.toFixed(2)}, z: ${z.toFixed(2)}`
+      })
+      let shaking
+      const normalize = (x, y, z) => {
+        const len = Math.hypot(x, y, z);
+        return [x / len, y / len, z / len];
+      }
+      const median = (arr) => {
+        const mid = Math.floor(arr.length / 2);
+        const nums = [...arr].sort((a, b) => a - b);
+        return arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
+      }
+      const onDeviceMotion = (e) => {
+        const latest = {
+          x: e.accelerationIncludingGravity.x,
+          y: e.accelerationIncludingGravity.y,
+          z: e.accelerationIncludingGravity.z,
+        }
+        accel.value = latest
+        const hypot = Math.hypot(latest.x, latest.y, latest.z)
+        if (hypot > 30) {
+          if (shaking) {
+            const [a, b, c] = normalize(latest.x, latest.y, latest.z);
+            const [d, e, f] = normalize(shaking.x, shaking.y, shaking.z);
+            if (Math.abs(a * d + b * e + c * f) < 0.3) {
+              shaking = undefined;
+            }
+          }
+          if (!shaking) {
+            shaking = latest
+            recordShake()
+          }
+        } else if (hypot < 20) {
+          shaking = undefined;
+        }
+      }
+      const recordShake = () => {
+        shakes.value += 1
+        if (lastShake) {
+          const time = performance.now() - lastShake
+          const latestSpeed = 1000 / time
+          speeds.push(latestSpeed)
+          if (speeds.length > 10) {
+            speeds.shift()
+          }
+          if (speeds.length >= 5) {
+            speed.value = median(speeds).toFixed(2)
+          }
+        }
+        lastShake = performance.now()
+      }
+      if (typeof window !== 'undefined') Object.assign(window, { recordShake })
+      Vue.onMounted(() => {
+        window.addEventListener('devicemotion', onDeviceMotion)
+      })
+      Vue.onUnmounted(() => {
+        window.removeEventListener('devicemotion', onDeviceMotion)
+      })
+      return { grant, accelText, shakes, speed }
+    }
+  }
+;
+var _vue = require('vue');
+
+const _hoisted_1 = { align: "center" }
+const _hoisted_2 = { style: {"border-radius":"1em","border":"2px solid #656463","padding":"1em","background":"#252423","text-align":"center","margin":"2em 0"} }
+const _hoisted_3 = { style: {"font-size":"4em","margin":"1rem 0"} }
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
+    _cache[3] || (_cache[3] = _vue.createStaticVNode.call(void 0, "<h1 id=\"detecting-device-shake-in-javascript\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#detecting-device-shake-in-javascript\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Detecting device shake in <a href=\"JavaScript\" data-v-8c9498c0>JavaScript</a></h1><p data-v-8c9498c0>In <a href=\"https://stupid.hackathon.in.th/7/\" data-v-8c9498c0>the 7th Stupid Hackathon in Thailand</a>, during pitching, we wanted the audience to vote for their favorite projects by shaking their phone. For that, a <strong data-v-8c9498c0>shake detection algorithm</strong> was needed.</p><p data-v-8c9498c0>The voting web application was built by <a href=\"https://github.com/boomchanotai\" data-v-8c9498c0>@boomchanotai</a>, while I just contributed the shake detection algorithm. You can <a href=\"https://web.facebook.com/dtinth/posts/pfbid02g6Nn4rtn7X51F24ve55b62ceMyxvrHCryUYf6swJZfPYmRvmrMZuZeq2Ydj8LAApl\" data-v-8c9498c0>read my write-up about the experience and see the video demo of the application used in the hackathon here (Thai language)</a>.</p><p data-v-8c9498c0>For the demo to work, you need to open this page on a mobile device and allow the page to access the device motion sensor.</p>", 4)),
+    _vue.createElementVNode.call(void 0, "p", _hoisted_1, [
+      _vue.createElementVNode.call(void 0, "button", {
+        onClick: _cache[0] || (_cache[0] = (...args) => ($setup.grant && $setup.grant(...args))),
+        class: "btn"
+      }, "Grant device motion permission"),
+      _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "br", null, null, -1 /* CACHED */)),
+      _vue.createTextVNode.call(void 0, " " + _vue.toDisplayString.call(void 0, $setup.accelText), 1 /* TEXT */)
+    ]),
+    _vue.createElementVNode.call(void 0, "div", _hoisted_2, [
+      _cache[2] || (_cache[2] = _vue.createTextVNode.call(void 0, " Shake counter ", -1 /* CACHED */)),
+      _vue.createElementVNode.call(void 0, "div", _hoisted_3, _vue.toDisplayString.call(void 0, $setup.shakes), 1 /* TEXT */),
+      _vue.createTextVNode.call(void 0, " Median shake speed for the last 10 shakes: " + _vue.toDisplayString.call(void 0, $setup.speed) + " shakes/sec ", 1 /* TEXT */)
+    ]),
+    _cache[4] || (_cache[4] = _vue.createStaticVNode.call(void 0, "<h2 id=\"the-shake-detection-algorithm\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#the-shake-detection-algorithm\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>The shake detection algorithm</h2><figure class=\"framed\" data-v-8c9498c0><p data-v-8c9498c0><img src=\"https://im.dt.in.th/ipfs/bafybeiabakreyptymivgrm43tsklqeos6hxwfk7qr2velbo26dztpy2xeu/image.webp\" alt=\"Three-panel diagram explaining a device shake detection algorithm on a black background. First, a shake is started when the acceleration exceeds 30 m/s^2. We remember acceleration vector as the activation vector a0. Formula: ||a|| &gt; 30. First way to stopping a shake: A shake is stopped when the acceleration goes under 20 m/s^2. Formula: ||a|| &lt; 20. Second way to stop a shake: A shake is also stopped when the angle between the latest acceleration and the activation vector exceeds ~72° (cos^-1(0.3)). Formula: (a · a0) / (||a|| ||a0||) &lt; 0.3.\" data-v-8c9498c0></p></figure>", 2))
+  ], 64 /* STABLE_FRAGMENT */))
+}
+__sfc__.render = render
+__sfc__.__scopeId = "data-v-8c9498c0"
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"title":"Detecting device shake in JavaScript","public":true};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

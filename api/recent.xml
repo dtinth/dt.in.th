@@ -5,7 +5,7 @@
 		<description><![CDATA[Thai Pangsakulyanont’s writings]]></description>
 		<link>https://dt.in.th</link>
 		<generator>RSS for Node</generator>
-		<lastBuildDate>Thu, 11 Sep 2025 19:47:03 GMT</lastBuildDate>
+		<lastBuildDate>Mon, 15 Sep 2025 11:16:25 GMT</lastBuildDate>
 		<atom:link href="https://dt.in.th/api/recent.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title><![CDATA[Deploying modern Single Page Applications to Azure Static Web Apps]]></title>
@@ -19,6 +19,37 @@
 			<link>https://dt.in.th/AzureStaticWebAppsSPA</link>
 			<guid isPermaLink="true">https://dt.in.th/AzureStaticWebAppsSPA</guid>
 			<pubDate>Fri, 12 Sep 2025 00:00:00 GMT</pubDate>
+		</item>
+		<item>
+			<title><![CDATA[Running Supabase on a remote VPS while keeping local development workflow]]></title>
+			<description
+			><![CDATA[<a href="https://dt.in.th/SupabaseLocalVPS">[Read on dt.in.th]</a><!--[--><h1 id="running-supabase-on-a-remote-vps-while-keeping-local-development-workflow" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#running-supabase-on-a-remote-vps-while-keeping-local-development-workflow" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Running Supabase on a remote VPS while keeping local development workflow</h1><p data-v-8c9498c0>I don’t like running <a href="Docker" data-v-8c9498c0>Docker</a> on my Mac, as I want to conserve battery. (And did you know <a href="https://supabase.com/docs/reference/cli/supabase-start#:~:text=It%20is%20recommended%20to%20have%20at%20least%207GB%20of%20RAM%20to%20start%20all%20services." data-v-8c9498c0>Supabase requires 7+ GB of RAM</a> to run locally?)</p><p data-v-8c9498c0>However, some projects require running services in Docker, which is inconvenient. Since I have a VPS, here’s how I set up <a href="Supabase" data-v-8c9498c0>Supabase</a> CLI to work with Docker running remotely and behave as if it was running locally:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0># Create a new Docker context for remote management</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>docker</span><span style="color:#9ECBFF;" data-v-8c9498c0> context</span><span style="color:#9ECBFF;" data-v-8c9498c0> create</span><span style="color:#9ECBFF;" data-v-8c9498c0> remote</span><span style="color:#79B8FF;" data-v-8c9498c0> --docker</span><span style="color:#9ECBFF;" data-v-8c9498c0> &quot;host=ssh://username@your-server-ip&quot;</span></span>
+<span class="line" data-v-8c9498c0></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0># Connect to the remote Docker context</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>docker</span><span style="color:#9ECBFF;" data-v-8c9498c0> context</span><span style="color:#9ECBFF;" data-v-8c9498c0> use</span><span style="color:#9ECBFF;" data-v-8c9498c0> remote</span></span>
+<span class="line" data-v-8c9498c0></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0># In another tab, run autossh to forward ports expected by Supabase CLI</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>autossh</span><span style="color:#79B8FF;" data-v-8c9498c0> -M</span><span style="color:#79B8FF;" data-v-8c9498c0> 0</span><span style="color:#79B8FF;" data-v-8c9498c0> -v</span><span style="color:#79B8FF;" data-v-8c9498c0> -N</span><span style="color:#79B8FF;" data-v-8c9498c0> -T</span><span style="color:#79B8FF;" data-v-8c9498c0> \</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#79B8FF;" data-v-8c9498c0>  -o</span><span style="color:#9ECBFF;" data-v-8c9498c0> ServerAliveInterval=</span><span style="color:#79B8FF;" data-v-8c9498c0>15</span><span style="color:#79B8FF;" data-v-8c9498c0> \</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#79B8FF;" data-v-8c9498c0>  -o</span><span style="color:#9ECBFF;" data-v-8c9498c0> ServerAliveCountMax=</span><span style="color:#79B8FF;" data-v-8c9498c0>3</span><span style="color:#79B8FF;" data-v-8c9498c0> \</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#79B8FF;" data-v-8c9498c0>  -o</span><span style="color:#9ECBFF;" data-v-8c9498c0> ExitOnForwardFailure=yes</span><span style="color:#79B8FF;" data-v-8c9498c0> \</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#79B8FF;" data-v-8c9498c0>  -L</span><span style="color:#9ECBFF;" data-v-8c9498c0> 54321:localhost:54321</span><span style="color:#79B8FF;" data-v-8c9498c0> \</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#79B8FF;" data-v-8c9498c0>  -L</span><span style="color:#9ECBFF;" data-v-8c9498c0> 54322:localhost:54322</span><span style="color:#79B8FF;" data-v-8c9498c0> \</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#79B8FF;" data-v-8c9498c0>  -L</span><span style="color:#9ECBFF;" data-v-8c9498c0> 54323:localhost:54323</span><span style="color:#79B8FF;" data-v-8c9498c0> \</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#79B8FF;" data-v-8c9498c0>  -L</span><span style="color:#9ECBFF;" data-v-8c9498c0> 54324:localhost:54324</span><span style="color:#79B8FF;" data-v-8c9498c0> \</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#9ECBFF;" data-v-8c9498c0>  username@your-server-ip</span></span>
+<span class="line" data-v-8c9498c0></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0># Create a Docker network where published ports will be exposed only to localhost</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0># See issue: https://github.com/supabase/cli/issues/1397</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>docker</span><span style="color:#9ECBFF;" data-v-8c9498c0> network</span><span style="color:#9ECBFF;" data-v-8c9498c0> create</span><span style="color:#79B8FF;" data-v-8c9498c0> -o</span><span style="color:#9ECBFF;" data-v-8c9498c0> &#39;com.docker.network.bridge.host_binding_ipv4=127.0.0.1&#39;</span><span style="color:#9ECBFF;" data-v-8c9498c0> supabase_network</span></span>
+<span class="line" data-v-8c9498c0></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0># Start Supabase CLI as usual, but tell it to use the created network</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0># Had to exclude vector as it fails to start in this setup</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>supabase</span><span style="color:#9ECBFF;" data-v-8c9498c0> start</span><span style="color:#79B8FF;" data-v-8c9498c0> --exclude</span><span style="color:#9ECBFF;" data-v-8c9498c0> vector</span><span style="color:#79B8FF;" data-v-8c9498c0> --network-id</span><span style="color:#9ECBFF;" data-v-8c9498c0> supabase_network</span></span></code></pre><p data-v-8c9498c0>This setup lets me:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Run Supabase Stack’s containers on my VPS instead of locally</li><li data-v-8c9498c0>Keep my local development workflow unchanged</li><li data-v-8c9498c0>Use Supabase CLI as if everything was running locally</li><li data-v-8c9498c0>Save battery by not running Docker Desktop</li></ul><p data-v-8c9498c0>A limitation of this approach is that since Docker is now running on a remote machine, we can’t use bind mounts to share files between host and containers. But for Supabase app development, this is not a problem. For cases where bind mounts are needed, I develop the project completely remotely using <a href="Codespaces" data-v-8c9498c0>GitHub Codespaces</a>.</p><p data-v-8c9498c0>Also, for some commands that runs extra Docker containers, you will need to pass <code data-v-8c9498c0>--network-id supabase_network</code> to them as well. Otherwise, you will get errors due to <code data-v-8c9498c0>db</code> host not being found.</p><!--]-->]]></description>
+			<link>https://dt.in.th/SupabaseLocalVPS</link>
+			<guid isPermaLink="true">https://dt.in.th/SupabaseLocalVPS</guid>
+			<pubDate>Tue, 09 Sep 2025 00:00:00 GMT</pubDate>
 		</item>
 		<item>
 			<title><![CDATA[Managing Knowledge Publicly: Unlocking Unexpected Growth]]></title>
@@ -395,26 +426,6 @@
 			<link>https://dt.in.th/LinuxZram</link>
 			<guid isPermaLink="true">https://dt.in.th/LinuxZram</guid>
 			<pubDate>Sat, 22 Feb 2025 00:00:00 GMT</pubDate>
-		</item>
-		<item>
-			<title><![CDATA[Enabling access logging in Caddy]]></title>
-			<description
-			><![CDATA[<a href="https://dt.in.th/CaddyAccessLogging">[Read on dt.in.th]</a><!--[--><p data-v-8c9498c0>To configure basic <strong data-v-8c9498c0>access logging</strong> in <a href="Caddy" data-v-8c9498c0>Caddy</a>, first <a href="https://caddyserver.com/docs/caddyfile/options#log" data-v-8c9498c0>configure the default logger</a> in the global options:</p><pre data-v-8c9498c0><code data-v-8c9498c0>{
-  log {
-    output file /var/log/caddy/access.log
-    format filter {
-      request&gt;headers delete
-      resp_headers delete
-    }
-  }
-}
-</code></pre><p data-v-8c9498c0>then, in your site configuration, <a href="https://caddyserver.com/docs/caddyfile/directives/log" data-v-8c9498c0>add the <code data-v-8c9498c0>log</code> directive</a> to each site you want to log:</p><pre data-v-8c9498c0><code data-v-8c9498c0>mydomain.tld {
-  log
-}
-</code></pre><p data-v-8c9498c0>By default, <a href="https://caddyserver.com/docs/caddyfile/directives/log#file" data-v-8c9498c0>logs are rotated</a> as follows:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Log files are rotated once they reach 100 MB</li><li data-v-8c9498c0>Rotated files are automatically compressed with gzip</li><li data-v-8c9498c0>Old log files are removed when either: <ul data-v-8c9498c0><li data-v-8c9498c0>They are older than 90 days, or</li><li data-v-8c9498c0>There are more than 10 newer log files</li></ul></li></ul><!--]-->]]></description>
-			<link>https://dt.in.th/CaddyAccessLogging</link>
-			<guid isPermaLink="true">https://dt.in.th/CaddyAccessLogging</guid>
-			<pubDate>Sun, 16 Feb 2025 00:00:00 GMT</pubDate>
 		</item>
 		<follow_challenge>
 			<feedId>81341335623521281</feedId>
