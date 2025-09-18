@@ -37,7 +37,7 @@ The system handles three types of content:
 - **Unlisted notes:** Shareable content accessible via direct links
 - **Public notes:** Fully indexed content that forms this website
 
-All notes are written in enhanced [Markdown](Markdown) that supports custom CSS, JavaScript, arbitrary HTML, as well as [custom directives](Syntax), so that some pages [can be made interactive](NotesInteractivity). You can view the source code of any public note by appending `.md` to the URL.
+All notes are written in enhanced [Markdown](Markdown) that supports custom CSS, JavaScript, arbitrary HTML, footnotes[^fn1], as well as [custom directives](Syntax), so that some pages [can be made interactive](NotesInteractivity). You can view the source code of any public note by appending `.md` to the URL.
 
 The publishing system automatically compiles these into optimized web pages with different delivery methods depending on the visibility level.
 
@@ -99,3 +99,5 @@ This system has been through 3 major iterations.
 - [**The first version**](https://github.com/dtinth/notes.dt.in.th/tree/archived/nuxt) (January 2020) is [powered by Nuxt and hosted on Vercel](20201004T062304Z2197).
 - [**The second version**](https://github.com/dtinth/notes.dt.in.th/tree/archived/nextjs) (July 2022) is [powered by Next.js and hosted on Vercel](20220724T170613Z0326). In the first and second version, [the notes are loaded from the GitHub repository at runtime](https://github.com/dtinth/notes.dt.in.th/blob/82d71cfc3b2d5fd6e4a2762c2ed4dce06ae40f5d/api/index.js#L156-L172), with some [access control](https://github.com/dtinth/notes.dt.in.th/blob/82d71cfc3b2d5fd6e4a2762c2ed4dce06ae40f5d/api/index.js#L198-L206) to prevent unauthorized access to private notes.
 - [**The third version**](https://github.com/dtinth/notes-frontend) (September 2024) is a static site and hosted on GitHub Pages. The public notes are [published as HTML files to GitHub](https://github.com/dtinth/notes.dt.in.th/tree/gh-pages). Unlisted notes are uploaded to [Supabase](Supabase) and dynamically fetched at runtime (using `404.html` mechanism in GitHub Pages). Private notes are not published.
+
+[^fn1]: I use footnotes for tangential but related stuff, so that I can say what I want without interrupting the main flow of the note.

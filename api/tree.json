@@ -262,7 +262,7 @@
 		}
 	,	"20220907T134709Z7128":
 		{	"title": "Adding Bootstrap CSS to Next.js application"
-		,	"parent": "CSS"
+		,	"parent": "Next"
 		}
 	,	"20220923T125342Z4946":
 		{	"title": "Recording screen in Linux using ffmpeg"
@@ -583,6 +583,10 @@
 	,	"Dotenv":
 		{	"title": ".env file"
 		,	"parent": "Shell"
+		}
+	,	"DownloadURL":
+		{	"title": "DownloadURL API for drag-and-drop file downloads (undocumented Chrome API)"
+		,	"parent": "WebPlatform"
 		}
 	,	"Elysia":
 		{	"title": "Elysia (topic)"

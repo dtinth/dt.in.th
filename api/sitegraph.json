@@ -595,6 +595,8 @@
 				}
 			,	{	"link": "Markdown"
 				}
+			,	{	"link": "#user-content-fn-fn1"
+				}
 			,	{	"link": "Syntax"
 				}
 			,	{	"link": "NotesInteractivity"
@@ -608,6 +610,8 @@
 			,	{	"link": "20201004T062304Z2197"
 				}
 			,	{	"link": "20220724T170613Z0326"
+				}
+			,	{	"link": "#user-content-fnref-fn1"
 				}
 			]
 		}
@@ -1277,6 +1281,10 @@
 			,	{	"link": "#user-content-fnref-buildvsrun"
 				}
 			]
+		}
+	,	"DownloadURL":
+		{	"title": "DownloadURL API for drag-and-drop file downloads (undocumented Chrome API)"
+		,	"links": []
 		}
 	,	"Elysia":
 		{	"title": "Elysia (topic)"
@@ -4006,7 +4014,9 @@
 	,	"WebPlatform":
 		{	"title": "Web Platform (topic)"
 		,	"links":
-			[	{	"link": "FreeTypeJSBlackWhiteText"
+			[	{	"link": "DownloadURL"
+				}
+			,	{	"link": "FreeTypeJSBlackWhiteText"
 				}
 			,	{	"link": "Win98IE5"
 				}

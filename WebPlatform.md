@@ -6,6 +6,7 @@ title: Web Platform
 
 The **web platform** is the collection of technologies that make up the web.
 
+- [Chrome's undocumented DownloadURL API for drag-and-drop file downloads](DownloadURL)
 - [Drawing low resolution monochrome text with freetype-wasm](FreeTypeJSBlackWhiteText)
 - [Running Internet Explorer 5 on Windows 98 in your browser, with internet and LAN access](Win98IE5)
 
