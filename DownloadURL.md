@@ -118,7 +118,7 @@ MIME:filename:URL
 - **MIME**: The MIME type of the file (e.g., `text/plain`, `image/png`)
 - **filename**: The suggested filename for the download
 - **URL**: A fetchable URL where the file content can be retrieved
-  - It can be a regular URL (however, if it’s cross-origin, [it may fail](https://im.dt.in.th/ipfs/bafybeibsdj3l7ykrsar4mf2rrjsbn5sxt5le6fcrxwr2qltx6j27usrrky/image.webp))
+  - It can be a regular URL (however, if it’s cross-origin, it may fail)
   - It can also be a data URL (e.g., `data:text/plain,Hello%2C%20world!`)
   - It can also be a blob URL (generated with [`URL.createObjectURL`](https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL_static))
 
