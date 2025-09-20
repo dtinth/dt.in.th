@@ -1305,6 +1305,8 @@
 				}
 			,	{	"link": "ElysiaDenoDeploy"
 				}
+			,	{	"link": "ElysiaZod"
+				}
 			]
 		}
 	,	"ElysiaDeno":
@@ -1360,6 +1362,13 @@
 		}
 	,	"ElysiaRenderHtml":
 		{	"title": "How I render HTML in Elysia"
+		,	"links":
+			[	{	"link": "Elysia"
+				}
+			]
+		}
+	,	"ElysiaZod":
+		{	"title": "Using Zod validation with Elysia and OpenAPI"
 		,	"links":
 			[	{	"link": "Elysia"
 				}
@@ -2076,7 +2085,7 @@
 				}
 			,	{	"link": "/"
 				}
-			,	{	"link": "OpenWebUILiteLLM"
+			,	{	"link": "OpenWebUI#docker-compose-setup"
 				}
 			,	{	"link": "Grist"
 				}
@@ -2129,13 +2138,13 @@
 		,	"links":
 			[	{	"link": "ThaiLanguageLLMBenchmark"
 				}
-			,	{	"link": "OpenWebUILiteLLM"
-				}
 			,	{	"link": "Gemini25ProPreviewTTSThai"
 				}
 			,	{	"link": "NotebookLMSummarizationPrompt"
 				}
 			,	{	"link": "JavaScriptBangkokTalk2024"
+				}
+			,	{	"link": "OpenWebUI"
 				}
 			]
 		}
@@ -2761,10 +2770,21 @@
 		{	"title": "Let's Start Contributing to Open Source!"
 		,	"links": []
 		}
+	,	"OpenWebUI":
+		{	"title": "Open WebUI (topic)"
+		,	"links":
+			[	{	"link": "OpenWebUILiteLLM"
+				}
+			,	{	"link": "LargeLanguageModel"
+				}
+			]
+		}
 	,	"OpenWebUILiteLLM":
 		{	"title": "Configuring Open WebUI and LiteLLM with Docker Compose to talk to OpenAI, Anthropic, Gemini, and Perplexity APIs"
 		,	"links":
-			[	{	"link": "LargeLanguageModel"
+			[	{	"link": "OpenWebUI#docker-compose-setup"
+				}
+			,	{	"link": "LargeLanguageModel"
 				}
 			]
 		}

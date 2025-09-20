@@ -1,8 +1,13 @@
 ---
 public: true
+title: Configuring Open WebUI and LiteLLM with Docker Compose to talk to OpenAI, Anthropic, Gemini, and Perplexity APIs
 ---
 
 # Configuring Open WebUI and LiteLLM with Docker Compose to talk to OpenAI, Anthropic, Gemini, and Perplexity APIs
+
+:::warning[Outdated]
+Now, both Google and Anthropic gave in and provided OpenAI-compatible APIs. So, you can now use Open WebUI directly with these APIs without needing LiteLLM as a proxy. See docs for [Google Gemini API](https://ai.google.dev/gemini-api/docs/openai) and [Claude API](https://docs.claude.com/en/api/openai-sdk). For my latest setup, see my [**Open WebUI Docker Compose setup**](OpenWebUI#docker-compose-setup).
+:::
 
 I want to use a single UI to interact with [LLMs](LargeLanguageModel) from different providers (OpenAI, Anthropic, Google, and Perplexity). I found that there is a way to do this now, but you have to self-host some software.
 

@@ -152,6 +152,7 @@ https://dt.in.th/ElysiaLogging
 https://dt.in.th/ElysiaNode
 https://dt.in.th/ElysiaRemixSession
 https://dt.in.th/ElysiaRenderHtml
+https://dt.in.th/ElysiaZod
 https://dt.in.th/EmbracingGradualTyping
 https://dt.in.th/EverydayEvermore
 https://dt.in.th/ExcalidrawSurfacePen
@@ -280,6 +281,7 @@ https://dt.in.th/OklchPlot
 https://dt.in.th/OnlyLoveRemix
 https://dt.in.th/OpaqueSpace
 https://dt.in.th/OpenSourceWorkshop2017
+https://dt.in.th/OpenWebUI
 https://dt.in.th/OpenWebUILiteLLM
 https://dt.in.th/OverWhelmingJoy
 https://dt.in.th/PWA

@@ -616,6 +616,10 @@
 		{	"title": "How I render HTML in Elysia"
 		,	"parent": "Elysia"
 		}
+	,	"ElysiaZod":
+		{	"title": "Using Zod validation with Elysia and OpenAPI"
+		,	"parent": "Elysia"
+		}
 	,	"EmbracingGradualTyping":
 		{	"title": "Embracing gradual typing"
 		,	"parent": "Talks"
@@ -1127,9 +1131,13 @@
 		{	"title": "Let's Start Contributing to Open Source!"
 		,	"parent": "Talks"
 		}
+	,	"OpenWebUI":
+		{	"title": "Open WebUI (topic)"
+		,	"parent": "LargeLanguageModel"
+		}
 	,	"OpenWebUILiteLLM":
 		{	"title": "Configuring Open WebUI and LiteLLM with Docker Compose to talk to OpenAI, Anthropic, Gemini, and Perplexity APIs"
-		,	"parent": "LargeLanguageModel"
+		,	"parent": "OpenWebUI"
 		}
 	,	"OverWhelmingJoy":
 		{	"title": "OVER-WHELMING JOY"

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="ElysiaZod" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using Zod validation with Elysia and OpenAPI | dt.in.th</title><meta property="og:title" content="Using Zod validation with Elysia and OpenAPI" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/ElysiaZod" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://dt.in.th/ElysiaZod" data-source="note">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><h1 id="using-zod-validation-with-elysia-and-openapi"><a aria-hidden="true" tabindex="-1" href="#using-zod-validation-with-elysia-and-openapi"><span class="icon icon-link"></span></a>Using Zod validation with Elysia and OpenAPI</h1><p>I tried out <a href="Elysia">Elysia</a> <a href="https://elysiajs.com/blog/elysia-14.html">v1.4</a> which adds support for <a href="https://github.com/standard-schema/standard-schema">Standard Schema</a>, so type validation and coercion works out of the box with Zod.</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#F97583;">import</span><span style="color:#E1E4E8;"> { z } </span><span style="color:#F97583;">from</span><span style="color:#9ECBFF;"> &#39;zod&#39;</span></span>
+<span class="line"><span style="color:#F97583;">import</span><span style="color:#E1E4E8;"> { Elysia } </span><span style="color:#F97583;">from</span><span style="color:#9ECBFF;"> &#39;elysia&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583;">export</span><span style="color:#F97583;"> default</span><span style="color:#F97583;"> new</span><span style="color:#B392F0;"> Elysia</span><span style="color:#E1E4E8;">().</span><span style="color:#B392F0;">get</span><span style="color:#E1E4E8;">(</span></span>
+<span class="line"><span style="color:#9ECBFF;">  &#39;/thing&#39;</span><span style="color:#E1E4E8;">,</span></span>
+<span class="line"><span style="color:#E1E4E8;">  ({ </span><span style="color:#FFAB70;">query</span><span style="color:#E1E4E8;"> }) </span><span style="color:#F97583;">=&gt;</span><span style="color:#E1E4E8;"> {</span></span>
+<span class="line"><span style="color:#F97583;">    return</span><span style="color:#E1E4E8;"> { id: query.id }</span></span>
+<span class="line"><span style="color:#E1E4E8;">  },</span></span>
+<span class="line"><span style="color:#E1E4E8;">  {</span></span>
+<span class="line"><span style="color:#E1E4E8;">    query: z.</span><span style="color:#B392F0;">object</span><span style="color:#E1E4E8;">({ id: z.coerce.</span><span style="color:#B392F0;">number</span><span style="color:#E1E4E8;">() }),</span></span>
+<span class="line"><span style="color:#E1E4E8;">  }</span></span>
+<span class="line"><span style="color:#E1E4E8;">)</span></span></code></pre><h2 id="openapi-docs-generation-integration-issues"><a aria-hidden="true" tabindex="-1" href="#openapi-docs-generation-integration-issues"><span class="icon icon-link"></span></a>OpenAPI docs generation integration issues</h2><p>When integrating with <a href="https://elysiajs.com/plugins/openapi.html">OpenAPI generation plugin <code>@elysiajs/openapi</code></a>, I ran into 2 problems:</p><ol><li>It generates docs for the <code>OPTIONS</code> method, which is distracting (they came from <a href="https://elysiajs.com/plugins/cors.html">@elysiajs/cors</a>)</li><li>The Zod schema does not get serialized into OpenAPI docs, leading to missing documentation for request parameters.</li></ol><p>It turns out that <strong>some extra configuration is needed</strong>r:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#E1E4E8;">.</span><span style="color:#B392F0;">use</span><span style="color:#E1E4E8;">(</span></span>
+<span class="line"><span style="color:#B392F0;">  openapi</span><span style="color:#E1E4E8;">({</span></span>
+<span class="line"><span style="color:#6A737D;">    // Use a more standardized path</span></span>
+<span class="line"><span style="color:#E1E4E8;">    specPath: </span><span style="color:#9ECBFF;">&quot;/openapi.json&quot;</span><span style="color:#E1E4E8;">,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;">    // Serialize Zod schema</span></span>
+<span class="line"><span style="color:#E1E4E8;">    mapJsonSchema: { zod: z.toJSONSchema },</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;">    // Skip documenting CORS endpoints</span></span>
+<span class="line"><span style="color:#E1E4E8;">    exclude: {</span></span>
+<span class="line"><span style="color:#E1E4E8;">      methods: [</span><span style="color:#9ECBFF;">&quot;OPTIONS&quot;</span><span style="color:#E1E4E8;">],</span></span>
+<span class="line"><span style="color:#E1E4E8;">    },</span></span>
+<span class="line"><span style="color:#E1E4E8;">  })</span></span>
+<span class="line"><span style="color:#E1E4E8;">)</span></span></code></pre><p>The key parts:</p><ul><li><code>mapJsonSchema: { zod: z.toJSONSchema }</code> - enables Zod schema serialization for OpenAPI</li><li><code>exclude: { methods: [&quot;OPTIONS&quot;] }</code> - removes CORS OPTIONS endpoints from documentation</li></ul><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+var _vue = require('vue');
+function render(_ctx, _cache) {
+  return _cache[0] || (_cache[0] = _vue.createStaticVNode.call(void 0, "<h1 id=\"using-zod-validation-with-elysia-and-openapi\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#using-zod-validation-with-elysia-and-openapi\"><span class=\"icon icon-link\"></span></a>Using Zod validation with Elysia and OpenAPI</h1><p>I tried out <a href=\"Elysia\">Elysia</a> <a href=\"https://elysiajs.com/blog/elysia-14.html\">v1.4</a> which adds support for <a href=\"https://github.com/standard-schema/standard-schema\">Standard Schema</a>, so type validation and coercion works out of the box with Zod.</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#F97583;\">import</span><span style=\"color:#E1E4E8;\"> { z } </span><span style=\"color:#F97583;\">from</span><span style=\"color:#9ECBFF;\"> &#39;zod&#39;</span></span>\n<span class=\"line\"><span style=\"color:#F97583;\">import</span><span style=\"color:#E1E4E8;\"> { Elysia } </span><span style=\"color:#F97583;\">from</span><span style=\"color:#9ECBFF;\"> &#39;elysia&#39;</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#F97583;\">export</span><span style=\"color:#F97583;\"> default</span><span style=\"color:#F97583;\"> new</span><span style=\"color:#B392F0;\"> Elysia</span><span style=\"color:#E1E4E8;\">().</span><span style=\"color:#B392F0;\">get</span><span style=\"color:#E1E4E8;\">(</span></span>\n<span class=\"line\"><span style=\"color:#9ECBFF;\">  &#39;/thing&#39;</span><span style=\"color:#E1E4E8;\">,</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  ({ </span><span style=\"color:#FFAB70;\">query</span><span style=\"color:#E1E4E8;\"> }) </span><span style=\"color:#F97583;\">=&gt;</span><span style=\"color:#E1E4E8;\"> {</span></span>\n<span class=\"line\"><span style=\"color:#F97583;\">    return</span><span style=\"color:#E1E4E8;\"> { id: query.id }</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  },</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  {</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">    query: z.</span><span style=\"color:#B392F0;\">object</span><span style=\"color:#E1E4E8;\">({ id: z.coerce.</span><span style=\"color:#B392F0;\">number</span><span style=\"color:#E1E4E8;\">() }),</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  }</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">)</span></span></code></pre><h2 id=\"openapi-docs-generation-integration-issues\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#openapi-docs-generation-integration-issues\"><span class=\"icon icon-link\"></span></a>OpenAPI docs generation integration issues</h2><p>When integrating with <a href=\"https://elysiajs.com/plugins/openapi.html\">OpenAPI generation plugin <code>@elysiajs/openapi</code></a>, I ran into 2 problems:</p><ol><li>It generates docs for the <code>OPTIONS</code> method, which is distracting (they came from <a href=\"https://elysiajs.com/plugins/cors.html\">@elysiajs/cors</a>)</li><li>The Zod schema does not get serialized into OpenAPI docs, leading to missing documentation for request parameters.</li></ol><p>It turns out that <strong>some extra configuration is needed</strong>r:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#E1E4E8;\">.</span><span style=\"color:#B392F0;\">use</span><span style=\"color:#E1E4E8;\">(</span></span>\n<span class=\"line\"><span style=\"color:#B392F0;\">  openapi</span><span style=\"color:#E1E4E8;\">({</span></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    // Use a more standardized path</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">    specPath: </span><span style=\"color:#9ECBFF;\">&quot;/openapi.json&quot;</span><span style=\"color:#E1E4E8;\">,</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    // Serialize Zod schema</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">    mapJsonSchema: { zod: z.toJSONSchema },</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#6A737D;\">    // Skip documenting CORS endpoints</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">    exclude: {</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">      methods: [</span><span style=\"color:#9ECBFF;\">&quot;OPTIONS&quot;</span><span style=\"color:#E1E4E8;\">],</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">    },</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">  })</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">)</span></span></code></pre><p>The key parts:</p><ul><li><code>mapJsonSchema: { zod: z.toJSONSchema }</code> - enables Zod schema serialization for OpenAPI</li><li><code>exclude: { methods: [&quot;OPTIONS&quot;] }</code> - removes CORS OPTIONS endpoints from documentation</li></ul>", 10))
+}
+__sfc__.render = render
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"title":"Using Zod validation with Elysia and OpenAPI","public":true};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

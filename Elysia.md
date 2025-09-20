@@ -12,3 +12,4 @@ topic: true
 - [Session management in Elysia using Remix’s session storage](ElysiaRemixSession)
 - [How I render HTML in Elysia](ElysiaRenderHtml)
 - [Quickly deploying API endpoints online with Elysia on Deno Deploy](ElysiaDenoDeploy)
+- [Using Zod validation with Elysia and OpenAPI](ElysiaZod)

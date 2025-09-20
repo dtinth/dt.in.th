@@ -34,7 +34,7 @@ This is a [talk](Talks) I gave at the JavaScript Bangkok 2.0.0. [Talk page.](htt
   - [Hot pot sauce research](https://www.facebook.com/photo.php?fbid=10221899535271704&set=pb.1658509977.-2207520000&type=3)
 - **Open source tools**
   - [Open WebUI](https://openwebui.com/) + [LiteLLM](https://litellm.ai/)
-    - [My Docker Compose file to configure Open WebUI and LiteLLM](OpenWebUILiteLLM)
+    - [My Docker Compose setup](OpenWebUI#docker-compose-setup)
   - [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted)
   - [r/selfhosted](https://www.reddit.com/r/selfhosted/)
   - [Grist](Grist)

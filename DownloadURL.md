@@ -74,7 +74,8 @@ Pick a color and drag the canvas to your desktop! \
   </li>
   <li>
     <strong>Drag the square below to your desktop:</strong>
-    <canvas ref="canvas" width="64" height="64" style="box-shadow: inset 0 0 0 1px #fff4, 0 2px 4px #0008; cursor: grab; display: block; margin-top: 8px;" class="rounded" draggable="true" :data-canvas-drag-filename="`color-${selectedColor.replace(/#/,'')}.png`"></canvas>
+    <canvas ref="canvas" width="64" height="64" style="box-shadow: inset 0 0 0 1px #fff4, 0 2px 4px #0008; cursor: grab; display: block;" class="rounded my-2" draggable="true" :data-canvas-drag-filename="`color-${selectedColor.replace(/#/,'')}.png`"></canvas>
+    You should get a file named “{{ `color-${selectedColor.replace(/#/,'')}.png` }}”.
   </li>
 </ol>
 
@@ -118,7 +119,7 @@ MIME:filename:URL
 - **MIME**: The MIME type of the file (e.g., `text/plain`, `image/png`)
 - **filename**: The suggested filename for the download
 - **URL**: A fetchable URL where the file content can be retrieved
-  - It can be a regular URL (however, if it’s cross-origin, it may fail)
+  - It can be a regular URL (however, if it’s cross-origin, [it may fail](https://im.dt.in.th/ipfs/bafybeibsdj3l7ykrsar4mf2rrjsbn5sxt5le6fcrxwr2qltx6j27usrrky/image.webp))
   - It can also be a data URL (e.g., `data:text/plain,Hello%2C%20world!`)
   - It can also be a blob URL (generated with [`URL.createObjectURL`](https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL_static))
 

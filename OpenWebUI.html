@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="OpenWebUI" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open WebUI | dt.in.th</title><meta property="og:title" content="Open WebUI" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/OpenWebUI" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://dt.in.th/OpenWebUI" data-source="note">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><p><a href="https://openwebui.com/"><strong>Open WebUI</strong></a> is an open-source web interface for running large language models, compatible with OpenAI API and Ollama.</p><ul><li><a href="OpenWebUILiteLLM">Configuring Open WebUI and LiteLLM with Docker Compose to talk to OpenAI, Anthropic, Gemini, and Perplexity APIs (outdated)</a></li></ul><h2 id="docker-compose-setup"><a aria-hidden="true" tabindex="-1" href="#docker-compose-setup"><span class="icon icon-link"></span></a>Docker Compose setup</h2><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#85E89D;">services</span><span style="color:#E1E4E8;">:</span></span>
+<span class="line"><span style="color:#85E89D;">  webui</span><span style="color:#E1E4E8;">:</span></span>
+<span class="line"><span style="color:#85E89D;">    image</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">ghcr.io/open-webui/open-webui:main-slim</span></span>
+<span class="line"><span style="color:#85E89D;">    restart</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">unless-stopped</span></span>
+<span class="line"><span style="color:#85E89D;">    ports</span><span style="color:#E1E4E8;">:</span></span>
+<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">&#39;127.0.0.1:8080:8080&#39;</span></span>
+<span class="line"><span style="color:#85E89D;">    volumes</span><span style="color:#E1E4E8;">:</span></span>
+<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">open-webui:/app/backend/data</span></span>
+<span class="line"><span style="color:#85E89D;">volumes</span><span style="color:#E1E4E8;">:</span></span>
+<span class="line"><span style="color:#85E89D;">  open-webui</span><span style="color:#E1E4E8;">:</span></span></code></pre><p>To enable Google login, add the following environment variables to <code>webui</code> service:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#85E89D;">    environment</span><span style="color:#E1E4E8;">:</span></span>
+<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">ENABLE_OAUTH_SIGNUP=true</span></span>
+<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">OAUTH_MERGE_ACCOUNTS_BY_EMAIL=true</span></span>
+<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">GOOGLE_CLIENT_ID</span></span>
+<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">GOOGLE_CLIENT_SECRET</span></span></code></pre><p>and add to <code>stack.env</code> (Portainer) or <code>.env</code> (docker-compose):</p><pre><code class="language-env">GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+</code></pre><h2 id="related-topics"><a aria-hidden="true" tabindex="-1" href="#related-topics"><span class="icon icon-link"></span></a>Related topics</h2><ul><li><a href="LargeLanguageModel">Large Language Model</a></li></ul><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+var _vue = require('vue');
+function render(_ctx, _cache) {
+  return _cache[0] || (_cache[0] = _vue.createStaticVNode.call(void 0, "<p><a href=\"https://openwebui.com/\"><strong>Open WebUI</strong></a> is an open-source web interface for running large language models, compatible with OpenAI API and Ollama.</p><ul><li><a href=\"OpenWebUILiteLLM\">Configuring Open WebUI and LiteLLM with Docker Compose to talk to OpenAI, Anthropic, Gemini, and Perplexity APIs (outdated)</a></li></ul><h2 id=\"docker-compose-setup\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#docker-compose-setup\"><span class=\"icon icon-link\"></span></a>Docker Compose setup</h2><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#85E89D;\">services</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">  webui</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    image</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">ghcr.io/open-webui/open-webui:main-slim</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    restart</span><span style=\"color:#E1E4E8;\">: </span><span style=\"color:#9ECBFF;\">unless-stopped</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    ports</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#9ECBFF;\">&#39;127.0.0.1:8080:8080&#39;</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">    volumes</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#9ECBFF;\">open-webui:/app/backend/data</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">volumes</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D;\">  open-webui</span><span style=\"color:#E1E4E8;\">:</span></span></code></pre><p>To enable Google login, add the following environment variables to <code>webui</code> service:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#85E89D;\">    environment</span><span style=\"color:#E1E4E8;\">:</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#9ECBFF;\">ENABLE_OAUTH_SIGNUP=true</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#9ECBFF;\">OAUTH_MERGE_ACCOUNTS_BY_EMAIL=true</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#9ECBFF;\">GOOGLE_CLIENT_ID</span></span>\n<span class=\"line\"><span style=\"color:#E1E4E8;\">      - </span><span style=\"color:#9ECBFF;\">GOOGLE_CLIENT_SECRET</span></span></code></pre><p>and add to <code>stack.env</code> (Portainer) or <code>.env</code> (docker-compose):</p><pre><code class=\"language-env\">GOOGLE_CLIENT_ID=\nGOOGLE_CLIENT_SECRET=\n</code></pre><h2 id=\"related-topics\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#related-topics\"><span class=\"icon icon-link\"></span></a>Related topics</h2><ul><li><a href=\"LargeLanguageModel\">Large Language Model</a></li></ul>", 10))
+}
+__sfc__.render = render
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"title":"Open WebUI","public":true,"topic":true};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
