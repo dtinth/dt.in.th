@@ -536,6 +536,14 @@
 		{	"title": "Digital Gardening (topic)"
 		,	"parent": "HomePage"
 		}
+	,	"DigitalOcean":
+		{	"title": "DigitalOcean (topic)"
+		,	"parent": "DigitalOceanManagedPostgresPermissions"
+		}
+	,	"DigitalOceanManagedPostgresPermissions":
+		{	"title": "Setting up PostgreSQL permissions on DigitalOcean Managed Databases"
+		,	"parent": "Recent"
+		}
 	,	"Discord":
 		{	"title": "Discord (topic)"
 		,	"parent": "HomePage"

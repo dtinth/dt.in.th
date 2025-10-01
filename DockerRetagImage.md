@@ -11,7 +11,7 @@ public: true
 
 - Some managed app platform provides the ability to deploy images simply by pushing a [Docker](Docker) image to a predefined tag.
 
-- For example, DigitalOcean’s App Platform has this option:
+- For example, [DigitalOcean](DigitalOcean)’s App Platform has this option:
 
   ![](https://im.dt.in.th/ipfs/bafybeibineoxm7kf2dqnkklpn4ningoo53kvkfuejkjspc62upy4hpjzeu/image.webp)
 

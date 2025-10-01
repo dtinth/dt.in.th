@@ -1140,6 +1140,24 @@
 				}
 			]
 		}
+	,	"DigitalOcean":
+		{	"title": "DigitalOcean (topic)"
+		,	"links":
+			[	{	"link": "DigitalOceanManagedPostgresPermissions"
+				}
+			,	{	"link": "DockerRetagImage"
+				}
+			]
+		}
+	,	"DigitalOceanManagedPostgresPermissions":
+		{	"title": "Setting up PostgreSQL permissions on DigitalOcean Managed Databases"
+		,	"links":
+			[	{	"link": "DigitalOcean"
+				}
+			,	{	"link": "PostgreSQL"
+				}
+			]
+		}
 	,	"Discord":
 		{	"title": "Discord (topic)"
 		,	"links":
@@ -1247,6 +1265,8 @@
 		{	"title": "How to retag a Docker image on a remote registry without pulling the image to local machine"
 		,	"links":
 			[	{	"link": "Docker"
+				}
+			,	{	"link": "DigitalOcean"
 				}
 			]
 		}

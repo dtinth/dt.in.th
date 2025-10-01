@@ -132,6 +132,8 @@ https://dt.in.th/Deno
 https://dt.in.th/DenoMinioPresignedGet
 https://dt.in.th/DependabotAutoMerge
 https://dt.in.th/DigitalGardening
+https://dt.in.th/DigitalOcean
+https://dt.in.th/DigitalOceanManagedPostgresPermissions
 https://dt.in.th/Discord
 https://dt.in.th/DiscordThaiCombiningMarks
 https://dt.in.th/DiscordThaiMessage
