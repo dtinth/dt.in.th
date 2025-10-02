@@ -1632,6 +1632,15 @@
 		{	"title": "Gitthereum"
 		,	"links": []
 		}
+	,	"GmailToGoogleDrive":
+		{	"title": "Automatically saving Gmail messages to Google Drive as EML files using Google Apps Script"
+		,	"links":
+			[	{	"link": "GoogleCloudServiceAccount"
+				}
+			,	{	"link": "N8n"
+				}
+			]
+		}
 	,	"GoogleCloud":
 		{	"title": "Google Cloud (topic)"
 		,	"links":
