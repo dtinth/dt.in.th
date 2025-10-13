@@ -9,6 +9,7 @@ aliases:
 **[GitHub](https://github.com)** is a code hosting service.
 
 - [Authenticating as a GitHub App in Octokit.js](OctokitGitHubAppAuth)
+- [Publishing and consuming npm packages via GitHub Releases](NpmPackagesViaGitHubReleases)
 
 ## Actions
 

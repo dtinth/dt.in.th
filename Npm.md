@@ -8,6 +8,7 @@ topic: true
 
 - [npm checkmark](NpmCheckmark)
 - [npm package version management](20220123T204235Z1268)
+- [Publishing and consuming npm packages via GitHub Releases](NpmPackagesViaGitHubReleases)
 
 ## Related topics
 

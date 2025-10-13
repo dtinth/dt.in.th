@@ -8,6 +8,7 @@ aliases:
 
 Here are my recent writings:
 
+- 2025-10-13: [Publishing and consuming npm packages via GitHub Releases](NpmPackagesViaGitHubReleases)
 - 2025-10-01: [Automatically saving Gmail messages to Google Drive as EML files using Google Apps Script](GmailToGoogleDrive)
 - 2025-09-25: [Setting up PostgreSQL permissions on DigitalOcean Managed Databases](DigitalOceanManagedPostgresPermissions)
 - 2025-09-18: [Chrome's undocumented DownloadURL API for drag-and-drop file downloads](DownloadURL)

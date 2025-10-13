@@ -1528,6 +1528,8 @@
 		,	"links":
 			[	{	"link": "OctokitGitHubAppAuth"
 				}
+			,	{	"link": "NpmPackagesViaGitHubReleases"
+				}
 			,	{	"link": "GitHubActions"
 				}
 			,	{	"link": "FreshAppFactory"
@@ -1548,6 +1550,8 @@
 			,	{	"link": "PlaywrightAccessibleTestReports"
 				}
 			,	{	"link": "GitHubActionsLinodeObjectStorageUpload"
+				}
+			,	{	"link": "NpmPackagesViaGitHubReleases"
 				}
 			,	{	"link": "GitHubActionsPushAsGitHubApp"
 				}
@@ -2732,6 +2736,8 @@
 				}
 			,	{	"link": "20220123T204235Z1268"
 				}
+			,	{	"link": "NpmPackagesViaGitHubReleases"
+				}
 			,	{	"link": "Pnpm"
 				}
 			]
@@ -2740,6 +2746,17 @@
 		{	"title": "npm checkmark"
 		,	"links":
 			[	{	"link": "Npm"
+				}
+			,	{	"link": "GitHubActions"
+				}
+			]
+		}
+	,	"NpmPackagesViaGitHubReleases":
+		{	"title": "Publishing and consuming npm packages via GitHub Releases"
+		,	"links":
+			[	{	"link": "Npm"
+				}
+			,	{	"link": "GitHub"
 				}
 			,	{	"link": "GitHubActions"
 				}

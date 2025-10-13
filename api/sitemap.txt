@@ -276,6 +276,7 @@ https://dt.in.th/NotebookLMSummarizationPrompt
 https://dt.in.th/NotesInteractivity
 https://dt.in.th/Npm
 https://dt.in.th/NpmCheckmark
+https://dt.in.th/NpmPackagesViaGitHubReleases
 https://dt.in.th/OBZBarcodeScannerJS
 https://dt.in.th/Observability
 https://dt.in.th/OctokitGitHubAppAuth

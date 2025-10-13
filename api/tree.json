@@ -1111,6 +1111,10 @@
 		{	"title": "npm checkmark"
 		,	"parent": "GitHubActions"
 		}
+	,	"NpmPackagesViaGitHubReleases":
+		{	"title": "Publishing and consuming npm packages via GitHub Releases"
+		,	"parent": "GitHub"
+		}
 	,	"OBZBarcodeScannerJS":
 		{	"title": "Reading data from OBZ Barcode Reader on the web using Web Serial API"
 		,	"parent": "Hardware"
