@@ -78,6 +78,7 @@ https://dt.in.th/20230128T173333Z1984
 https://dt.in.th/20230320T204610Z3613
 https://dt.in.th/20230321T132222Z8523
 https://dt.in.th/20230403T162555Z1842
+https://dt.in.th/AIforTeachersWriteup
 https://dt.in.th/AIvsThaiExams
 https://dt.in.th/AWS
 https://dt.in.th/AboutThisWebsite

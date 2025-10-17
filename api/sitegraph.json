@@ -564,6 +564,15 @@
 				}
 			]
 		}
+	,	"AIforTeachersWriteup":
+		{	"title": "บันทึกการทำระบบสำหรับโครงการ AI for Teachers ด้วย Supabase เพื่อรองรับการใช้งานพร้อมกันหลักหมื่นคน"
+		,	"links":
+			[	{	"link": "Firebase"
+				}
+			,	{	"link": "Supabase"
+				}
+			]
+		}
 	,	"AIvsThaiExams":
 		{	"title": "AI vs Thai Exams"
 		,	"links":
@@ -3542,6 +3551,8 @@
 			,	{	"link": "SupabaseLocalVPS"
 				}
 			,	{	"link": "AboutThisWebsite"
+				}
+			,	{	"link": "AIforTeachersWriteup"
 				}
 			]
 		}

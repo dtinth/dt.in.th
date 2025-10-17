@@ -320,6 +320,10 @@
 		{	"title": "Building Firebase Realtime Database Security Rules with GPT-4"
 		,	"parent": "Firebase"
 		}
+	,	"AIforTeachersWriteup":
+		{	"title": "บันทึกการทำระบบสำหรับโครงการ AI for Teachers ด้วย Supabase เพื่อรองรับการใช้งานพร้อมกันหลักหมื่นคน"
+		,	"parent": "Supabase"
+		}
 	,	"AIvsThaiExams":
 		{	"title": "AI vs Thai Exams"
 		,	"parent": "Projects"
