@@ -60,6 +60,14 @@ title: บันทึกการทำระบบสำหรับโคร�
 
 </div>
 
+Architecture และภาษาที่ใช้:
+
+- **Frontend** เป็น SPA Vite + Vue + Nuxt UI — deploy ขึ้น Cloudflare Pages
+- **Backend** เป็น Supabase (client direct-to-DB) โดยใช้ Row Level Security ควบคุมการเข้าถึงข้อมูล และใช้ Postgres Function ในการ implement business logic บางส่วน (ก็คือ business logic ส่วนใหญ่เขียนเป็น SQL)
+- **Background jobs** เขียนเป็น TypeScript รันบน Bun เอาไปรันบน VPS
+
+![](https://im.dt.in.th/ipfs/bafybeiedzwez5reiegwvxquhn6ahgrn6kdoevpatvry5zpszxadjy2bce4/image.webp)
+
 ---
 
 ## ตอนที่ 2: Prototyping with Lovable
