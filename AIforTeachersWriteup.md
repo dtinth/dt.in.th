@@ -401,7 +401,7 @@ Postgres มี extension ชื่อว่า [PostgREST](https://docs.postgre
   - คอยเช็คผลสอบว่าผู้เรียนคนไหนสอบผ่านบ้าง เพื่อออกเกียรติบัตร
   - คอยเช็คว่าผู้เรียนคนไหนมีสิทธิ์ได้วุฒิบัตรบ้าง เพื่อออกวุฒิบัตร
 
-  ซึ่งทีแรกก็คิดว่า implement เป็น SQL ดีไหม (แต่จะเขียน SQL ยังไงให้มัน generate PDF…? [จริงๆ Postgres Function สามารถยิง HTTP request ไป service อื่นๆ ได้](https://supabase.com/docs/guides/database/extensions/http) แต่คิดไปคิดมาก็อาจจะยัง) แต่สุดท้ายก็เลือกเขียนเป็นคำสั่ง TypeScript แล้วเอามารันบน VPS แทน คุ้นมือกว่า
+  ซึ่งทีแรกก็คิดว่า implement เป็น SQL ดีไหม (แต่จะเขียน SQL ยังไงให้มัน generate PDF…? [จริงๆ Postgres Function สามารถยิง HTTP request ไป service อื่นๆ ได้](https://supabase.com/docs/guides/database/extensions/http) แต่คิดไปคิดมาก็อาจจะยัง) สุดท้ายก็เลือกเขียนเป็นคำสั่ง TypeScript แล้วเอามารันบน VPS แทน คุ้นมือกว่า
 
 - เรื่อง DB migration มีตัวนึงที่ได้ยินแต่ยังไม่ได้ลองคือ [squitch](https://squitch.io/)
 
