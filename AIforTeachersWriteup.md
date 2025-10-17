@@ -424,3 +424,11 @@ Postgres มี extension ชื่อว่า [PostgREST](https://docs.postgre
     - การเปิด replica จะทำให้ค่าใช้จ่าย DB เพิ่มขึ้น 2 เท่า เพราะ [replica จะใช้ compute size เดียวกันกับ DB หลัก](https://supabase.com/docs/guides/platform/manage-your-usage/read-replicas) — ไม่สามารถเลือกใช้ compute size ที่เล็กกว่าได้
 
 จากสารพัดปัญหาที่กล่าวมา **สรุปคือ พอมาใช้ Supabase ก็ช่วยให้เราเก่ง Postgres มากขึ้นจริงๆ ครับ** ซึ่งก็น่าจะเป็น skill ที่ติดตัวไปใช้กับโปรเจคอื่นๆ ที่ใช้ Postgres ได้อีกเยอะเลย
+
+สุดท้ายจึงคิดว่า **ตัดสินใจถูกแล้วที่เลือกใช้ Supabase เป็น backend ของระบบนี้ครับ** แม้จะมี pain point อยู่บ้างตามที่กล่าวมา แต่ก็มีทางออกครับ นอกจากนี้ยังมีข้อดีอื่นๆ อีก เช่น:
+
+- มี Supabase dashboard ช่วยให้ไม่ต้อง implement reporting บางหน้าเอง
+- มี AI assistant ช่วยเขียนโค้ด SQL ได้ดีมาก ถามคำถามเกี่ยวกับข้อมูลเป็นภาษาอังกฤษใน dashboard ได้เลย
+- สามารถขึ้นหน้า report ใน backoffice ที่มีข้อมูลเรียลไทม์ได้ โดยไม่ต้อง denormalize ข้อมูล แบบที่ต้องทำเวลาใช้ Firebase
+
+และหลังจากผ่านประสบการณ์นี้ ก็น่าจะช่วยให้ใช้ Supabase ได้ effective ขึ้นในอนาคต
