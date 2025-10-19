@@ -571,6 +571,16 @@
 				}
 			,	{	"link": "Supabase"
 				}
+			,	{	"link": "ContinuousDelivery"
+				}
+			,	{	"link": "Playwright"
+				}
+			,	{	"link": "BlackBoxTestingTalk"
+				}
+			,	{	"link": "BlackBoxTestingStrategies"
+				}
+			,	{	"link": "PlaywrightPageObject"
+				}
 			]
 		}
 	,	"AIvsThaiExams":

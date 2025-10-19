@@ -395,13 +395,76 @@ Postgres มี extension ชื่อว่า [PostgREST](https://docs.postgre
 
 ## ตอนที่ 9: etc.
 
+### Testing
+
+- โปรเจคนี้ เราไม่ได้ทำระบบ LMS ทั้งหมดก่อนเปิดโครงการ แต่ทำระบบเท่าที่จำเป็นต้องใช้ในแต่ละช่วงก่อน [เพื่อเมื่อเราเริ่มทำฟีเจอร์​ เรามีข้อมูลประกอบการตัดสินใจในการพัฒนาต่างๆ เยอะที่สุด](https://architectelevator.com/architecture/architecture-options/) (ตัวอย่างเช่น ช่วงที่เปิดให้ลงทะเบียนเรียน ระบบเราก็มีแค่หน้าลงทะเบียนเรียนเท่านั้นเลย ส่วนระบบที่เหลือ “ไว้ค่อยทำทีหลัง” ก็ค่อยๆ ทยอย implement ตามความต้องการใช้งาน)
+
+  :::figure[Project timeline — ข้อความด้านบนเป็นกราฟเป็น development activities; ส่วนข้อความด้านล่างกราฟเป็น milestone ต่างๆ ของโครงการ]{.framed}
+  ![](https://im.dt.in.th/ipfs/bafybeieg2asv2emnlhwyfzo6ujm5x4cklpeys3zrwu46flfm62cy42xf2q/image.webp)
+  :::
+
+- นอกจากนี้ระหว่างทาง ก็มีการแก้โค้ด + refactor บ่อยมากๆ (โดยเฉพาะช่วงที่มีผู้ใช้เข้าเรียนจริง ก็ได้รับ feedback มาแก้ไขเรื่อยๆ) ตัวอย่างเช่น:
+
+  - มีผู้ใช้จำนวนนึงที่ใช้ In-app browser ของ LINE หรือ Facebook Messenger ในการเข้าระบบ [ซึ่งจะไม่สามารถใช้งาน Sign In with Google ได้](https://developers.googleblog.com/en/modernizing-oauth-interactions-in-native-apps-for-better-usability-and-security/) ก็ทำฟีเจอร์ detect webview แล้วขึ้นข้อความแนะนำให้เปิดใน browser ปกติแทน
+
+  - คอมพิวเตอร์ผู้ใช้จำนวนนึง system clock ผิด ทำให้เมื่อถึงเวลาเข้าเรียนไม่แสดงปุ่มเข้าเรียน (แปลกใจที่ปี 2025 แล้วยังต้องมา handle case พวกนี้อยู่) ก็ต้อง deploy Postgres function สำหรับเช็คเวลา server เพื่อเอามาคำนวณเวลาปัจจุบันเพิ่ม
+
+    :::details[ตัวอย่าง Postgres function สำหรับเช็คเวลา server]
+
+    ```sql
+    CREATE OR REPLACE FUNCTION public.get_server_time()
+    RETURNS jsonb
+    LANGUAGE plpgsql
+    SECURITY DEFINER
+    SET "search_path" TO ''
+    AS $$
+    BEGIN
+      RETURN jsonb_build_object(
+        'server_time', NOW(),
+        'server_time_iso', to_char(NOW() AT TIME ZONE 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS"Z"'),
+        'server_timezone', current_setting('TIMEZONE')
+      );
+    END;
+    $$;
+
+    -- Allow anyone to call this function (even unauthenticated users)
+    GRANT EXECUTE ON FUNCTION public.get_server_time() TO anon, authenticated;
+    ```
+
+    :::
+
+- แม้ว่าฟีเจอร์ต่างๆ “ไว้ค่อยทำทีหลัง” ตอนใกล้ๆ จะใช้งานจริง แต่ **สิ่งที่ผมคิดว่า “ไว้ค่อยทำทีหลัง” ไม่ได้เลย คือ Automated testing และ [Continuous delivery pipeline](ContinuousDelivery)** ซึ่งมีตั้งแต่วันแรก
+
+- **Automated testing** ทำให้ทุกๆ ครั้งที่ผมแก้โค้ด ผมมั่นใจได้ว่า ฟีเจอร์ต่างๆ ที่ทำไปแล้วยังคงทำงานได้ปกติ ซึ่งช่วยให้ผมกล้า refactor โค้ดได้แบบไม่ยั้งมือเลย
+
+  - โปรเจคนี้ผมใช้ [Playwright](Playwright) เขียน black-box test suite ทำให้ทุกครั้งที่ผมแก้โค้ด ไม่ว่าจะเยอะขนาดไหน ผมสามารถมั่นใจได้ว่า happy path ของฟีเจอร์ต่างๆ ยังคงทำงานได้ปกติ โดยแค่กดรันเทสต์​แล้วรอ 1 นาที
+
+    <div><youtube-embed video-id="qKLYBzCIaVs"></youtube-embed></div>
+
+  - ถ้าสนใจเรื่อง automated testing ผมเคยมีพูดเกี่ยวกับเรื่อง black box testing ครับ:
+
+    - [พัฒนาซอฟต์แวร์อย่างรวดเร็ว โดยยังคงคุณภาพ ด้วย Black Box Testing](BlackBoxTestingTalk)
+    - [กลยุทธ์การพัฒนาซอฟต์แวร์ให้ทดสอบได้ง่ายขึ้น | Strategies for black-box testability](BlackBoxTestingStrategies)
+
+  - โค้ด Black-box test ของโปรเจคนี้ยาวไม่ถึง 400 บรรทัด แต่เป็น 400 บรรทัดที่คุ้มค่ามากๆ… ผมใช้เทคนิค [Page Objects เพื่อทำให้เทสต์เขียนง่าย และ maintain ง่าย](PlaywrightPageObject) สามารถดูโค้ดของ test suite ได้ที่ลิงก์นี้ครับ:
+
+    ::cta[litelms.spec.ts]{href="https://gist.github.com/dtinth/835d611ee3fc132d2f22decfa067bb69"}
+
+- **Email testing:** ระหว่างที่ทำ local development ตัว Supabase CLI จะรัน [Mailpit](https://mailpit.axllent.org/) ให้ด้วย ทำให้สามารถจำลอง flow การล็อกอินด้วยอีเมลแบบ passwordless ได้ง่ายๆ เลย โดยการล็อกอินด้วยอีเมล แล้วใช้ [API ของ Mailpit](https://mailpit.axllent.org/docs/api-v1/) ดึงลิงก์ล็อกอินมาใช้ในเทสต์ได้เลย
+
+### Self-hosting
+
 - ตอนที่เขียนบทความนี้ ยังคง host Supabase ไว้กับ Supabase Pro อยู่ครับ ยังไม่ต้องย้าย infra หลักไป VPS
 
 - Supabase มี [guide สำหรับ self-hosting](https://supabase.com/docs/guides/self-hosting/docker) โดยใช้ Docker Compose อยู่ แต่พวกค่า secret ต่างๆ จะมาเป็น default หมด ซึ่งเราต้องมาแก้ไขตามคู่มือเอาเอง รวมถึงต้องเซ็ตอัพ SSL เองด้วย… แต่มีโปรเจค [supabase-automated-self-host ของคุณ​ Inder Singh](https://github.com/singh-inder/supabase-automated-self-host) ที่รันคำสั่งเดียวจบเลย เท่าที่ดูก็มีอัพเดตเรื่อยๆ อยู่ คาดว่าถ้าถึงเวลาที่ต้อง self-host จริงๆ ก็น่าจะใช้ตัวนี้
 
+### Supabase dashboard
+
 - ชอบที่เราสามารถสร้าง [Custom Report](https://supabase.com/blog/tabs-dashboard-updates#customizable-reports) โดยใส่ SQL query เองได้ ใน Dashboard ของ Supabase เลย ทำให้ไม่ต้องไปใช้พวก Metabase เพิ่ม
 
   ![](https://im.dt.in.th/ipfs/bafybeidkjekwsf4my3cufvuprrail5dd3jy2qsipjpmyz27nddskdernqu/image.webp)
+
+### Background jobs
 
 - ระบบที่ออกแบบมา คือให้การเข้าเรียน การสอบ และการออกเกียรติบัตร/วุฒิบัตร แยกกันอย่างสิ้นเชิง เพื่อความยืดหยุ่น — แปลว่าต้องมี background job ที่คอยมาทำงานพวกนี้ คือ
 
@@ -410,6 +473,8 @@ Postgres มี extension ชื่อว่า [PostgREST](https://docs.postgre
   - คอยเช็คว่าผู้เรียนคนไหนมีสิทธิ์ได้วุฒิบัตรบ้าง เพื่อออกวุฒิบัตร
 
   ซึ่งทีแรกก็คิดว่า implement เป็น SQL ดีไหม (แต่จะเขียน SQL ยังไงให้มัน generate PDF…? [จริงๆ Postgres Function สามารถยิง HTTP request ไป service อื่นๆ ได้](https://supabase.com/docs/guides/database/extensions/http) แต่คิดไปคิดมาก็อาจจะยัง) สุดท้ายก็เลือกเขียนเป็นคำสั่ง TypeScript แล้วเอามารันบน VPS แทน คุ้นมือกว่า
+
+### etc.
 
 - เรื่อง DB migration มีตัวนึงที่ได้ยินแต่ยังไม่ได้ลองคือ [squitch](https://squitch.io/)
 
@@ -422,6 +487,8 @@ Postgres มี extension ชื่อว่า [PostgREST](https://docs.postgre
     - ข้อมูลใน read replica อาจจะ delay ไปสักพัก (เรียกว่า replication lag)
     - ต้องใช้ Compute Size Small ขึ้นไป (ราคาเริ่มต้น $15/เดือน)
     - การเปิด replica จะทำให้ค่าใช้จ่าย DB เพิ่มขึ้น 2 เท่า เพราะ [replica จะใช้ compute size เดียวกันกับ DB หลัก](https://supabase.com/docs/guides/platform/manage-your-usage/read-replicas) — ไม่สามารถเลือกใช้ compute size ที่เล็กกว่าได้
+
+### Conclusion
 
 จากสารพัดปัญหาที่กล่าวมา **สรุปคือ พอมาใช้ Supabase ก็ช่วยให้เราเก่ง Postgres มากขึ้นจริงๆ ครับ** ซึ่งก็น่าจะเป็น skill ที่ติดตัวไปใช้กับโปรเจคอื่นๆ ที่ใช้ Postgres ได้อีกเยอะเลย
 
