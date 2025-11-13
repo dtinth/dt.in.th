@@ -286,7 +286,7 @@ const result = Vue.computed(() => {
     const primaryArgb = m3.argbFromHex(primaryColor.value)
     const secondaryArgb = m3.argbFromHex(secondaryColor.value)
     const tertiaryArgb = m3.argbFromHex(tertiaryColor.value)
-    const sourceColorHct = m3.Hct.fromInt(primaryArgb)
+    const hue = m3.Hct.fromInt(primaryArgb).hue
 
     const dynamicScheme = new m3.DynamicScheme({
       sourceColorArgb: primaryArgb,
@@ -296,10 +296,8 @@ const result = Vue.computed(() => {
       primaryPalette: m3.TonalPalette.fromInt(primaryArgb),
       secondaryPalette: m3.TonalPalette.fromInt(secondaryArgb),
       tertiaryPalette: m3.TonalPalette.fromInt(tertiaryArgb),
-      neutralPalette:
-        m3.TonalPalette.fromHueAndChroma(sourceColorHct.hue + 15, 8.0),
-      neutralVariantPalette:
-        m3.TonalPalette.fromHueAndChroma(sourceColorHct.hue + 15, 12.0),
+      neutralPalette: m3.TonalPalette.fromHueAndChroma(hue, 10),
+      neutralVariantPalette: m3.TonalPalette.fromHueAndChroma(hue, 12),
     })
     Object.assign(window, { dynamicScheme })
     const colorsByRole = Object.fromEntries(
@@ -375,8 +373,8 @@ const secondaryArgb = m3.argbFromHex('#8C9570')
 const tertiaryArgb = m3.argbFromHex('#5E9C91')
 
 // We have to do some color manipulation to obtain the neutral palettes,
-// so we convert primary color to HCT.
-const sourceColorHct = m3.Hct.fromInt(primaryArgb)
+// so we convert primary color to HCT and obtain its hue.
+const hue = m3.Hct.fromInt(primaryArgb).hue
 
 // Unfortunately, the Material Color Utilities API v0.3.0 does not provide
 // the Variant enum, so we define it ourselves here.
@@ -401,14 +399,8 @@ const dynamicScheme = new m3.DynamicScheme({
   primaryPalette: m3.TonalPalette.fromInt(primaryArgb),
   secondaryPalette: m3.TonalPalette.fromInt(secondaryArgb),
   tertiaryPalette: m3.TonalPalette.fromInt(tertiaryArgb),
-  neutralPalette: m3.TonalPalette.fromHueAndChroma(
-    sourceColorHct.hue + 15,
-    8.0
-  ),
-  neutralVariantPalette: m3.TonalPalette.fromHueAndChroma(
-    sourceColorHct.hue + 15,
-    12.0
-  ),
+  neutralPalette: m3.TonalPalette.fromHueAndChroma(hue, 10),
+  neutralVariantPalette: m3.TonalPalette.fromHueAndChroma(hue, 12),
 })
 
 // Get the tonal palette color as a hex string

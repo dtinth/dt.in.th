@@ -5,7 +5,7 @@
 		<description><![CDATA[Thai Pangsakulyanont’s writings]]></description>
 		<link>https://dt.in.th</link>
 		<generator>RSS for Node</generator>
-		<lastBuildDate>Thu, 13 Nov 2025 15:44:02 GMT</lastBuildDate>
+		<lastBuildDate>Thu, 13 Nov 2025 15:46:24 GMT</lastBuildDate>
 		<atom:link href="https://dt.in.th/api/recent.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title><![CDATA[Generating Material Design 3 Dynamic Color Scheme with JavaScript]]></title>
@@ -122,8 +122,8 @@
 <span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>const</span><span style="color:#79B8FF;" data-v-8c9498c0> tertiaryArgb</span><span style="color:#F97583;" data-v-8c9498c0> =</span><span style="color:#E1E4E8;" data-v-8c9498c0> m3.</span><span style="color:#B392F0;" data-v-8c9498c0>argbFromHex</span><span style="color:#E1E4E8;" data-v-8c9498c0>(</span><span style="color:#9ECBFF;" data-v-8c9498c0>&#39;#5E9C91&#39;</span><span style="color:#E1E4E8;" data-v-8c9498c0>)</span></span>
 <span class="line" data-v-8c9498c0></span>
 <span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>// We have to do some color manipulation to obtain the neutral palettes,</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>// so we convert primary color to HCT.</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>const</span><span style="color:#79B8FF;" data-v-8c9498c0> sourceColorHct</span><span style="color:#F97583;" data-v-8c9498c0> =</span><span style="color:#E1E4E8;" data-v-8c9498c0> m3.Hct.</span><span style="color:#B392F0;" data-v-8c9498c0>fromInt</span><span style="color:#E1E4E8;" data-v-8c9498c0>(primaryArgb)</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>// so we convert primary color to HCT and obtain its hue.</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>const</span><span style="color:#79B8FF;" data-v-8c9498c0> hue</span><span style="color:#F97583;" data-v-8c9498c0> =</span><span style="color:#E1E4E8;" data-v-8c9498c0> m3.Hct.</span><span style="color:#B392F0;" data-v-8c9498c0>fromInt</span><span style="color:#E1E4E8;" data-v-8c9498c0>(primaryArgb).hue</span></span>
 <span class="line" data-v-8c9498c0></span>
 <span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>// Unfortunately, the Material Color Utilities API v0.3.0 does not provide</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>// the Variant enum, so we define it ourselves here.</span></span>
@@ -148,14 +148,8 @@
 <span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  primaryPalette: m3.TonalPalette.</span><span style="color:#B392F0;" data-v-8c9498c0>fromInt</span><span style="color:#E1E4E8;" data-v-8c9498c0>(primaryArgb),</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  secondaryPalette: m3.TonalPalette.</span><span style="color:#B392F0;" data-v-8c9498c0>fromInt</span><span style="color:#E1E4E8;" data-v-8c9498c0>(secondaryArgb),</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  tertiaryPalette: m3.TonalPalette.</span><span style="color:#B392F0;" data-v-8c9498c0>fromInt</span><span style="color:#E1E4E8;" data-v-8c9498c0>(tertiaryArgb),</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  neutralPalette: m3.TonalPalette.</span><span style="color:#B392F0;" data-v-8c9498c0>fromHueAndChroma</span><span style="color:#E1E4E8;" data-v-8c9498c0>(</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>    sourceColorHct.hue </span><span style="color:#F97583;" data-v-8c9498c0>+</span><span style="color:#79B8FF;" data-v-8c9498c0> 15</span><span style="color:#E1E4E8;" data-v-8c9498c0>,</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#79B8FF;" data-v-8c9498c0>    8.0</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  ),</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  neutralVariantPalette: m3.TonalPalette.</span><span style="color:#B392F0;" data-v-8c9498c0>fromHueAndChroma</span><span style="color:#E1E4E8;" data-v-8c9498c0>(</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>    sourceColorHct.hue </span><span style="color:#F97583;" data-v-8c9498c0>+</span><span style="color:#79B8FF;" data-v-8c9498c0> 15</span><span style="color:#E1E4E8;" data-v-8c9498c0>,</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#79B8FF;" data-v-8c9498c0>    12.0</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  ),</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  neutralPalette: m3.TonalPalette.</span><span style="color:#B392F0;" data-v-8c9498c0>fromHueAndChroma</span><span style="color:#E1E4E8;" data-v-8c9498c0>(hue, </span><span style="color:#79B8FF;" data-v-8c9498c0>10</span><span style="color:#E1E4E8;" data-v-8c9498c0>),</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  neutralVariantPalette: m3.TonalPalette.</span><span style="color:#B392F0;" data-v-8c9498c0>fromHueAndChroma</span><span style="color:#E1E4E8;" data-v-8c9498c0>(hue, </span><span style="color:#79B8FF;" data-v-8c9498c0>12</span><span style="color:#E1E4E8;" data-v-8c9498c0>),</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>})</span></span>
 <span class="line" data-v-8c9498c0></span>
 <span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>// Get the tonal palette color as a hex string</span></span>
