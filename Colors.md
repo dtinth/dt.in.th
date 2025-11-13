@@ -50,6 +50,7 @@ These are the colors that I use in my creations since 2009.
 - [Using LCH colors](LCH)
 - [Modifying the alpha channel of a color using CSS](CSSChangeColorOpacity)
 - [ปริภูมิสี LCH (color space)](DiscoveringLCH)
+- [Generating Material Design 3 Dynamic Color Scheme with JavaScript](M3DynamicColorJS)
 
 ## Bookmarks
 

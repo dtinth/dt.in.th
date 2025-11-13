@@ -368,6 +368,10 @@
 		{	"title": "Deploying modern Single Page Applications to Azure Static Web Apps"
 		,	"parent": "Azure"
 		}
+	,	"BaaS":
+		{	"title": "Backend-as-a-Service (topic)"
+		,	"parent": "HomePage"
+		}
 	,	"BangkokIpsum":
 		{	"title": "Bangkok Ipsum"
 		,	"parent": "Projects"
@@ -574,7 +578,7 @@
 		}
 	,	"DockerCompose":
 		{	"title": "Docker Compose (topic)"
-		,	"parent": "Docker"
+		,	"parent": "PocketBase"
 		}
 	,	"DockerInstall":
 		{	"title": "Installing Docker on Linux"
@@ -658,7 +662,7 @@
 		}
 	,	"Firebase":
 		{	"title": "Firebase (topic)"
-		,	"parent": "Database"
+		,	"parent": "BaaS"
 		}
 	,	"Fish":
 		{	"title": "Fish (topic)"
@@ -935,6 +939,10 @@
 		{	"title": "Low-effort things you can do today to improve code maintainability a year later."
 		,	"parent": "SoftwareEngineering"
 		}
+	,	"M3DynamicColorJS":
+		{	"title": "Generating Material Design 3 Dynamic Color Scheme with JavaScript"
+		,	"parent": "Colors"
+		}
 	,	"MIDILightSwitch":
 		{	"title": "MIDI Light Switch"
 		,	"parent": "Projects"
@@ -1177,7 +1185,7 @@
 		}
 	,	"PasteQR":
 		{	"title": "Paste image to decode QR code"
-		,	"parent": "Tools"
+		,	"parent": "QRCode"
 		}
 	,	"Pastebox":
 		{	"title": "pastebox: Paste in an image, drag it out as a file"
@@ -1226,6 +1234,14 @@
 	,	"Pnpm":
 		{	"title": "pnpm (topic)"
 		,	"parent": "Npm"
+		}
+	,	"PocketBase":
+		{	"title": "PocketBase (topic)"
+		,	"parent": "BaaS"
+		}
+	,	"PocketBaseLINELogin":
+		{	"title": "PocketBase with LINE Login"
+		,	"parent": "PocketBase"
 		}
 	,	"PointerEventsTester":
 		{	"title": "Pointer events tester"
@@ -1457,7 +1473,7 @@
 		}
 	,	"Supabase":
 		{	"title": "Supabase (topic)"
-		,	"parent": "CloudPlatform"
+		,	"parent": "BaaS"
 		}
 	,	"SupabaseAuthNotes":
 		{	"title": "Some notes on Supabase Auth"
@@ -1677,7 +1693,7 @@
 		}
 	,	"WhenMathsStrikeBack":
 		{	"title": "When Maths Strike Back: Behind the 3D QR code effect in ppqr.app"
-		,	"parent": "QRCode"
+		,	"parent": "CreativeCoding"
 		}
 	,	"Win98IE5":
 		{	"title": "Running Internet Explorer 5 on Windows 98 in your browser, with internet and LAN access"

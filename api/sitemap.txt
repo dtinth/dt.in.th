@@ -90,6 +90,7 @@ https://dt.in.th/AutoSynchro
 https://dt.in.th/Automatron
 https://dt.in.th/Azure
 https://dt.in.th/AzureStaticWebAppsSPA
+https://dt.in.th/BaaS
 https://dt.in.th/BangkokIpsum
 https://dt.in.th/Bemuse
 https://dt.in.th/BlackBoxTestingStrategies
@@ -232,6 +233,7 @@ https://dt.in.th/LinuxAddUser
 https://dt.in.th/LinuxZram
 https://dt.in.th/LocalTalkInternationalization
 https://dt.in.th/LowEffortMaintainability
+https://dt.in.th/M3DynamicColorJS
 https://dt.in.th/MIDILightSwitch
 https://dt.in.th/MacOS
 https://dt.in.th/MacOSOCR
@@ -305,6 +307,8 @@ https://dt.in.th/PlaywrightAccessibleTestReports
 https://dt.in.th/PlaywrightOfflineFirstTest
 https://dt.in.th/PlaywrightPageObject
 https://dt.in.th/Pnpm
+https://dt.in.th/PocketBase
+https://dt.in.th/PocketBaseLINELogin
 https://dt.in.th/PointerEventsTester
 https://dt.in.th/Pomodoro
 https://dt.in.th/PostgreSQL

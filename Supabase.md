@@ -4,9 +4,7 @@ topic: true
 title: Supabase
 ---
 
-[Supabase](https://supabase.com/) is a “[Postgres](PostgreSQL) development platform”.
-
-It provides a Postgres database, Authentication, instant APIs, Edge Functions, Realtime subscriptions, Storage, and Vector embeddings.
+My notes about [**Supabase**](https://supabase.com/), a “[Postgres](PostgreSQL) development platform,” a [backend-as-a-service](BaaS) solution, providing a Postgres database, Authentication, instant APIs, Edge Functions, Realtime subscriptions, Storage, and Vector embeddings.
 
 - [Some notes on Supabase Auth](SupabaseAuthNotes)
 - [Running Supabase on a remote VPS while keeping local development workflow](SupabaseLocalVPS)

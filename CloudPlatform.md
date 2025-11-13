@@ -12,7 +12,6 @@ My notes about various **cloud platforms** that I use…
 - DigitalOcean
 - Feral Hosting
 - Fly.io
-- [Firebase](Firebase)
 - [Google Cloud](GoogleCloud)
 - Hop.io
 - Huawei Cloud
@@ -20,8 +19,11 @@ My notes about various **cloud platforms** that I use…
 - [Netlify](Netlify)
 - Oracle Cloud Infrastructure
 - Railway
-- [Supabase](Supabase)
 - [Vercel](Vercel)
+
+## Related topics
+
+- [Backend-as-a-Service](BaaS)
 
 ## Local cloud providers in Thailand
 

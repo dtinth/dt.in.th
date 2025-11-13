@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="PocketBaseLINELogin" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PocketBase with LINE Login | dt.in.th</title><meta property="og:title" content="PocketBase with LINE Login" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/PocketBaseLINELogin" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://dt.in.th/PocketBaseLINELogin" data-source="note">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><h1 id="pocketbase-with-line-login"><a aria-hidden="true" tabindex="-1" href="#pocketbase-with-line-login"><span class="icon icon-link"></span></a>PocketBase with LINE Login</h1><p>To set up <a href="PocketBase">PocketBase</a> to use LINE Login as an OAuth2 identity provider for authentication, first create a LINE Login channel in the <a href="https://developers.line.biz/console/">LINE Developers Console</a>.</p><ul><li>Note the <strong>Channel ID</strong> and <strong>Secret</strong> from the LINE Login channel settings. <ul><li>This will be the <strong>Client ID</strong> and <strong>Client Secret</strong> in PocketBase OAuth2 configuration.</li></ul></li><li>Set the <strong>Callback URL</strong> in LINE Developers Console to <code>https://yourdomain.com/api/oauth2-redirect</code><ul><li>Replace <code>yourdomain.com</code> with your PocketBase domain.</li></ul></li></ul><h2 id="update-users-collection-fields"><a aria-hidden="true" tabindex="-1" href="#update-users-collection-fields"><span class="icon icon-link"></span></a>Update <code>users</code> collection fields</h2><ol><li><p><strong>Remove email validation.</strong> Edit the <code>users</code> collection and remove the “non-empty” validation requirement from the <code>email</code> field. This allows users to sign up with LINE without providing an email address.</p></li><li><p><strong>Add <code>externalId</code> field.</strong> Add a new <em>text</em> field to the <code>users</code> collection to store the LINE user ID.</p></li><li><p><strong>Create a unique index on <code>externalId</code>.</strong> This is to ensure no two users can have the same LINE user ID.</p></li></ol><h2 id="set-up-oauth2-configuration"><a aria-hidden="true" tabindex="-1" href="#set-up-oauth2-configuration"><span class="icon icon-link"></span></a>Set up OAuth2 configuration</h2><p>Again in <code>users</code> collection settings, go to the <strong>Options</strong> tab, and under <strong>Auth Methods</strong>, enable <strong>OAuth2</strong> and configure the following:</p><ol><li><p><strong>Add the <code>oidc</code> provider.</strong> Configure the provider with these settings:</p><table><thead><tr><th align="left">Setting</th><th align="left">Value</th></tr></thead><tbody><tr><td align="left"><strong>Auth URL</strong></td><td align="left"><code>https://access.line.me/oauth2/v2.1/authorize</code></td></tr><tr><td align="left"><strong>Token URL</strong></td><td align="left"><code>https://api.line.me/oauth2/v2.1/token</code></td></tr><tr><td align="left"><strong>Fetch user info from</strong></td><td align="left">User info URL</td></tr><tr><td align="left"><strong>User info URL</strong></td><td align="left"><code>https://api.line.me/oauth2/v2.1/userinfo</code></td></tr><tr><td align="left"><strong>Support PKCE</strong></td><td align="left">✓ (enabled)</td></tr></tbody></table></li><li><p><strong>Set up field mapping.</strong> Expand <strong>Optional users create fields map</strong> section and map OAuth2 response fields to PocketBase user fields:</p><ul><li><code>OAuth2 full name</code> → <code>name</code></li><li><code>OAuth2 avatar</code> → <code>avatar</code></li><li><code>OAuth2 id</code> → <code>externalId</code></li></ul></li></ol><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+var _vue = require('vue');
+function render(_ctx, _cache) {
+  return _cache[0] || (_cache[0] = _vue.createStaticVNode.call(void 0, "<h1 id=\"pocketbase-with-line-login\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#pocketbase-with-line-login\"><span class=\"icon icon-link\"></span></a>PocketBase with LINE Login</h1><p>To set up <a href=\"PocketBase\">PocketBase</a> to use LINE Login as an OAuth2 identity provider for authentication, first create a LINE Login channel in the <a href=\"https://developers.line.biz/console/\">LINE Developers Console</a>.</p><ul><li>Note the <strong>Channel ID</strong> and <strong>Secret</strong> from the LINE Login channel settings. <ul><li>This will be the <strong>Client ID</strong> and <strong>Client Secret</strong> in PocketBase OAuth2 configuration.</li></ul></li><li>Set the <strong>Callback URL</strong> in LINE Developers Console to <code>https://yourdomain.com/api/oauth2-redirect</code><ul><li>Replace <code>yourdomain.com</code> with your PocketBase domain.</li></ul></li></ul><h2 id=\"update-users-collection-fields\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#update-users-collection-fields\"><span class=\"icon icon-link\"></span></a>Update <code>users</code> collection fields</h2><ol><li><p><strong>Remove email validation.</strong> Edit the <code>users</code> collection and remove the “non-empty” validation requirement from the <code>email</code> field. This allows users to sign up with LINE without providing an email address.</p></li><li><p><strong>Add <code>externalId</code> field.</strong> Add a new <em>text</em> field to the <code>users</code> collection to store the LINE user ID.</p></li><li><p><strong>Create a unique index on <code>externalId</code>.</strong> This is to ensure no two users can have the same LINE user ID.</p></li></ol><h2 id=\"set-up-oauth2-configuration\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#set-up-oauth2-configuration\"><span class=\"icon icon-link\"></span></a>Set up OAuth2 configuration</h2><p>Again in <code>users</code> collection settings, go to the <strong>Options</strong> tab, and under <strong>Auth Methods</strong>, enable <strong>OAuth2</strong> and configure the following:</p><ol><li><p><strong>Add the <code>oidc</code> provider.</strong> Configure the provider with these settings:</p><table><thead><tr><th align=\"left\">Setting</th><th align=\"left\">Value</th></tr></thead><tbody><tr><td align=\"left\"><strong>Auth URL</strong></td><td align=\"left\"><code>https://access.line.me/oauth2/v2.1/authorize</code></td></tr><tr><td align=\"left\"><strong>Token URL</strong></td><td align=\"left\"><code>https://api.line.me/oauth2/v2.1/token</code></td></tr><tr><td align=\"left\"><strong>Fetch user info from</strong></td><td align=\"left\">User info URL</td></tr><tr><td align=\"left\"><strong>User info URL</strong></td><td align=\"left\"><code>https://api.line.me/oauth2/v2.1/userinfo</code></td></tr><tr><td align=\"left\"><strong>Support PKCE</strong></td><td align=\"left\">✓ (enabled)</td></tr></tbody></table></li><li><p><strong>Set up field mapping.</strong> Expand <strong>Optional users create fields map</strong> section and map OAuth2 response fields to PocketBase user fields:</p><ul><li><code>OAuth2 full name</code> → <code>name</code></li><li><code>OAuth2 avatar</code> → <code>avatar</code></li><li><code>OAuth2 id</code> → <code>externalId</code></li></ul></li></ol>", 8))
+}
+__sfc__.render = render
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"title":"PocketBase with LINE Login","public":true};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
