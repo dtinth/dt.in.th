@@ -393,7 +393,7 @@ Variant[(Variant['FRUIT_SALAD'] = 8)] = 'FRUIT_SALAD'
 const isDark = true
 const dynamicScheme = new m3.DynamicScheme({
   sourceColorArgb: primaryArgb,
-  variant: m3.Variant.VIBRANT,
+  variant: Variant.VIBRANT,
   isDark,
   contrastLevel: 0.0,
   primaryPalette: m3.TonalPalette.fromInt(primaryArgb),

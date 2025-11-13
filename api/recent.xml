@@ -5,7 +5,7 @@
 		<description><![CDATA[Thai Pangsakulyanont’s writings]]></description>
 		<link>https://dt.in.th</link>
 		<generator>RSS for Node</generator>
-		<lastBuildDate>Thu, 13 Nov 2025 15:46:24 GMT</lastBuildDate>
+		<lastBuildDate>Thu, 13 Nov 2025 15:48:48 GMT</lastBuildDate>
 		<atom:link href="https://dt.in.th/api/recent.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title><![CDATA[Generating Material Design 3 Dynamic Color Scheme with JavaScript]]></title>
@@ -142,7 +142,7 @@
 <span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>const</span><span style="color:#79B8FF;" data-v-8c9498c0> isDark</span><span style="color:#F97583;" data-v-8c9498c0> =</span><span style="color:#79B8FF;" data-v-8c9498c0> true</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>const</span><span style="color:#79B8FF;" data-v-8c9498c0> dynamicScheme</span><span style="color:#F97583;" data-v-8c9498c0> =</span><span style="color:#F97583;" data-v-8c9498c0> new</span><span style="color:#E1E4E8;" data-v-8c9498c0> m3.</span><span style="color:#B392F0;" data-v-8c9498c0>DynamicScheme</span><span style="color:#E1E4E8;" data-v-8c9498c0>({</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  sourceColorArgb: primaryArgb,</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  variant: m3.Variant.</span><span style="color:#79B8FF;" data-v-8c9498c0>VIBRANT</span><span style="color:#E1E4E8;" data-v-8c9498c0>,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  variant: Variant.</span><span style="color:#79B8FF;" data-v-8c9498c0>VIBRANT</span><span style="color:#E1E4E8;" data-v-8c9498c0>,</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  isDark,</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  contrastLevel: </span><span style="color:#79B8FF;" data-v-8c9498c0>0.0</span><span style="color:#E1E4E8;" data-v-8c9498c0>,</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  primaryPalette: m3.TonalPalette.</span><span style="color:#B392F0;" data-v-8c9498c0>fromInt</span><span style="color:#E1E4E8;" data-v-8c9498c0>(primaryArgb),</span></span>
