@@ -43,12 +43,14 @@ Use this playground to generate Material Design 3 dynamic color schemes.
 
 <div :style="output">
 
+Click on the color blocks to learn more about each color role and when to use them.
+
 <div class="flex flex-col gap-4 mb-4 p-6 rounded" :style="`
   background: var(--m3-background);
   color: var(--m3-on-background);
 `">
   <div class="flex flex-wrap gap-3" v-for="blocks in rows">
-    <div
+    <a
       v-for="block in blocks"
       class="rounded p-4"
       :key="block.name"
@@ -57,11 +59,14 @@ Use this playground to generate Material Design 3 dynamic color schemes.
         color: var(--m3-${kebab(block.color)});
         ${block.outlineColor ? `box-shadow: inset 0 0 0 1px var(--m3-${kebab(block.outlineColor)});` : ''}
       `"
+      :href="block.link"
+      target="_blank"
+      rel="noopener"
     >
       {{ block.name }}
       <span v-if="block.variantColor" :style="`color: var(--m3-${kebab(block.variantColor)})`"> ({{ block.variantName || 'with variant' }})</span>
       <span v-if="block.outlineColor"> ({{ block.outlineName }})</span>
-    </div>
+    </a>
   </div>
 </div>
 
@@ -216,48 +221,59 @@ const tonalPaletteNames = [
   'error',
 ]
 
+const links = {
+  primary: 'https://m3.material.io/styles/color/roles#41f55188-5c63-4107-ac41-822ebca8ae1b',
+  fixed: 'https://m3.material.io/styles/color/roles#26b6a882-064d-4668-b096-c51142477850',
+  secondary: 'https://m3.material.io/styles/color/roles#290bcc49-b728-414c-8cc5-04336c1c799c',
+  tertiary: 'https://m3.material.io/styles/color/roles#727a0bf8-c95f-4f83-bc43-290d20f24e8e',
+  error: 'https://m3.material.io/styles/color/roles#47a25970-8a80-43be-8307-c12e0f7a2b43',
+  surface: 'https://m3.material.io/styles/color/roles#89f972b1-e372-494c-aabc-69aea34ed591',
+  outline: 'https://m3.material.io/styles/color/roles#e7d72e44-72e2-4ce9-a18d-df07b1433d18',
+  brightDim: 'https://m3.material.io/styles/color/roles#63d6db08-59e2-4341-ac33-9509eefd9b4f',
+  inverse: 'https://m3.material.io/styles/color/roles#7fc6b47e-db22-4e98-8359-7649a099e4a1',
+}
+
 const rows = [
   [
-    { name: 'Primary', background: 'primary', color: 'onPrimary' },
-    { name: 'Primary Container', background: 'primaryContainer', color: 'onPrimaryContainer' },
-    { name: 'Primary Fixed', background: 'primaryFixed', color: 'onPrimaryFixed', variantColor: 'onPrimaryFixedVariant' },
-    { name: 'Primary Fixed Dim', background: 'primaryFixedDim', color: 'onPrimaryFixed' },
-
+    { name: 'Primary', background: 'primary', color: 'onPrimary', link: links.primary },
+    { name: 'Primary Container', background: 'primaryContainer', color: 'onPrimaryContainer', link: links.primary },
+    { name: 'Primary Fixed', background: 'primaryFixed', color: 'onPrimaryFixed', variantColor: 'onPrimaryFixedVariant', link: links.fixed },
+    { name: 'Primary Fixed Dim', background: 'primaryFixedDim', color: 'onPrimaryFixed', link: links.fixed },
   ],
   [
-    { name: 'Secondary', background: 'secondary', color: 'onSecondary' },
-    { name: 'Secondary Container', background: 'secondaryContainer', color: 'onSecondaryContainer' },
-    { name: 'Secondary Fixed', background: 'secondaryFixed', color: 'onSecondaryFixed', variantColor: 'onSecondaryFixedVariant' },
-    { name: 'Secondary Fixed Dim', background: 'secondaryFixedDim', color: 'onSecondaryFixed' },
+    { name: 'Secondary', background: 'secondary', color: 'onSecondary', link: links.secondary },
+    { name: 'Secondary Container', background: 'secondaryContainer', color: 'onSecondaryContainer', link: links.secondary },
+    { name: 'Secondary Fixed', background: 'secondaryFixed', color: 'onSecondaryFixed', variantColor: 'onSecondaryFixedVariant', link: links.fixed },
+    { name: 'Secondary Fixed Dim', background: 'secondaryFixedDim', color: 'onSecondaryFixed', link: links.fixed },
   ],
   [
-    { name: 'Tertiary', background: 'tertiary', color: 'onTertiary' },
-    { name: 'Tertiary Container', background: 'tertiaryContainer', color: 'onTertiaryContainer' },
-    { name: 'Tertiary Fixed', background: 'tertiaryFixed', color: 'onTertiaryFixed', variantColor: 'onTertiaryFixedVariant' },
-    { name: 'Tertiary Fixed Dim', background: 'tertiaryFixedDim', color: 'onTertiaryFixed' },
+    { name: 'Tertiary', background: 'tertiary', color: 'onTertiary', link: links.tertiary },
+    { name: 'Tertiary Container', background: 'tertiaryContainer', color: 'onTertiaryContainer', link: links.tertiary },
+    { name: 'Tertiary Fixed', background: 'tertiaryFixed', color: 'onTertiaryFixed', variantColor: 'onTertiaryFixedVariant', link: links.fixed },
+    { name: 'Tertiary Fixed Dim', background: 'tertiaryFixedDim', color: 'onTertiaryFixed', link: links.fixed },
   ],
   [
-    { name: 'Error', background: 'error', color: 'onError' },
-    { name: 'Error Container', background: 'errorContainer', color: 'onErrorContainer' },
+    { name: 'Error', background: 'error', color: 'onError', link: links.error },
+    { name: 'Error Container', background: 'errorContainer', color: 'onErrorContainer', link: links.error },
   ],
   [
-    { name: 'Background', background: 'background', color: 'onBackground', outlineColor: 'outline', outlineName: 'with Outline' },
-    { name: 'Background', background: 'background', color: 'onBackground', outlineColor: 'outlineVariant', outlineName: 'with Outline Variant' },
+    { name: 'Background', background: 'background', color: 'onBackground', outlineColor: 'outline', outlineName: 'with Outline', link: links.outline },
+    { name: 'Background', background: 'background', color: 'onBackground', outlineColor: 'outlineVariant', outlineName: 'with Outline Variant', link: links.outline },
   ],
   [
-    { name: 'Surface', background: 'surface', color: 'onSurface', variantColor: 'onSurfaceVariant' },
-    { name: 'Surface Dim', background: 'surfaceDim', color: 'onSurface', variantColor: 'onSurfaceVariant' },
-    { name: 'Surface Bright', background: 'surfaceBright', color: 'onSurface', variantColor: 'onSurfaceVariant' },
+    { name: 'Surface', background: 'surface', color: 'onSurface', variantColor: 'onSurfaceVariant', link: links.surface },
+    { name: 'Surface Dim', background: 'surfaceDim', color: 'onSurface', variantColor: 'onSurfaceVariant', links: links.brightDim },
+    { name: 'Surface Bright', background: 'surfaceBright', color: 'onSurface', variantColor: 'onSurfaceVariant', links: links.brightDim },
   ],
   [
-    { name: 'Surface Container Lowest', background: 'surfaceContainerLowest', color: 'onSurface', variantColor: 'onSurfaceVariant' },
-    { name: 'Surface Container Low', background: 'surfaceContainerLow', color: 'onSurface', variantColor: 'onSurfaceVariant' },
-    { name: 'Surface Container', background: 'surfaceContainer', color: 'onSurface', variantColor: 'onSurfaceVariant' },
-    { name: 'Surface Container High', background: 'surfaceContainerHigh', color: 'onSurface', variantColor: 'onSurfaceVariant' },
-    { name: 'Surface Container Highest', background: 'surfaceContainerHighest', color: 'onSurface', variantColor: 'onSurfaceVariant' },
+    { name: 'Surface Container Lowest', background: 'surfaceContainerLowest', color: 'onSurface', variantColor: 'onSurfaceVariant', link: links.surface },
+    { name: 'Surface Container Low', background: 'surfaceContainerLow', color: 'onSurface', variantColor: 'onSurfaceVariant', link: links.surface },
+    { name: 'Surface Container', background: 'surfaceContainer', color: 'onSurface', variantColor: 'onSurfaceVariant', link: links.surface },
+    { name: 'Surface Container High', background: 'surfaceContainerHigh', color: 'onSurface', variantColor: 'onSurfaceVariant', link: links.surface },
+    { name: 'Surface Container Highest', background: 'surfaceContainerHighest', color: 'onSurface', variantColor: 'onSurfaceVariant', link: links.surface },
   ],
   [
-    { name: 'Inverse Surface', background: 'inverseSurface', color: 'inverseOnSurface', variantColor: 'inversePrimary', variantName: 'with inverse primary' },
+    { name: 'Inverse Surface', background: 'inverseSurface', color: 'inverseOnSurface', variantColor: 'inversePrimary', variantName: 'with inverse primary', link: links.inverse },
   ]
 ]
 
