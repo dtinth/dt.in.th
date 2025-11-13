@@ -151,7 +151,7 @@ const darkMode = Vue.computed(() => colorMode.value === 'dark')
 Vue.onMounted(async () => {
   const m3 = await import('https://cdn.jsdelivr.net/npm/@material/material-color-utilities@0.3.0/+esm')
   m3Ref.value = m3
-  Object.assign(global, { m3 })
+  Object.assign(window, { m3 })
 })
 
 const m3ColorRoles = [
@@ -283,7 +283,7 @@ const result = Vue.computed(() => {
       neutralVariantPalette:
         m3.TonalPalette.fromHueAndChroma(sourceColorHct.hue + 15, 12.0),
     })
-    Object.assign(global, { dynamicScheme })
+    Object.assign(window, { dynamicScheme })
     const colorsByRole = Object.fromEntries(
       m3ColorRoles.map(role => [role, m3.hexFromArgb(dynamicScheme[role])])
     )
