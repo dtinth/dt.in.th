@@ -5,7 +5,7 @@
 		<description><![CDATA[Thai Pangsakulyanont’s writings]]></description>
 		<link>https://dt.in.th</link>
 		<generator>RSS for Node</generator>
-		<lastBuildDate>Thu, 13 Nov 2025 15:25:40 GMT</lastBuildDate>
+		<lastBuildDate>Thu, 13 Nov 2025 15:32:39 GMT</lastBuildDate>
 		<atom:link href="https://dt.in.th/api/recent.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title><![CDATA[Generating Material Design 3 Dynamic Color Scheme with JavaScript]]></title>
@@ -81,7 +81,15 @@
         background-color: var(--m3-surface);
         color: var(--m3-on-surface);
         
-      " data-v-8c9498c0>Surface <span style="color: var(--m3-on-surface-variant)" data-v-8c9498c0> (with variant)</span><!----></div><!--]--></div><div class="flex flex-wrap gap-3" data-v-8c9498c0><!--[--><div class="rounded p-4" style="
+      " data-v-8c9498c0>Surface <span style="color: var(--m3-on-surface-variant)" data-v-8c9498c0> (with variant)</span><!----></div><div class="rounded p-4" style="
+        background-color: var(--m3-surface-dim);
+        color: var(--m3-on-surface);
+        
+      " data-v-8c9498c0>Surface Dim <span style="color: var(--m3-on-surface-variant)" data-v-8c9498c0> (with variant)</span><!----></div><div class="rounded p-4" style="
+        background-color: var(--m3-surface-bright);
+        color: var(--m3-on-surface);
+        
+      " data-v-8c9498c0>Surface Bright <span style="color: var(--m3-on-surface-variant)" data-v-8c9498c0> (with variant)</span><!----></div><!--]--></div><div class="flex flex-wrap gap-3" data-v-8c9498c0><!--[--><div class="rounded p-4" style="
         background-color: var(--m3-surface-container-lowest);
         color: var(--m3-on-surface);
         
@@ -150,10 +158,10 @@
 <span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  ),</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>})</span></span>
 <span class="line" data-v-8c9498c0></span>
-<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>// Get the tonal palette color as hex string</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>// Get the tonal palette color as a hex string</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>console.</span><span style="color:#B392F0;" data-v-8c9498c0>log</span><span style="color:#E1E4E8;" data-v-8c9498c0>(m3.</span><span style="color:#B392F0;" data-v-8c9498c0>hexFromArgb</span><span style="color:#E1E4E8;" data-v-8c9498c0>(dynamicScheme.primaryPalette.</span><span style="color:#B392F0;" data-v-8c9498c0>tone</span><span style="color:#E1E4E8;" data-v-8c9498c0>(</span><span style="color:#79B8FF;" data-v-8c9498c0>40</span><span style="color:#E1E4E8;" data-v-8c9498c0>)))</span></span>
 <span class="line" data-v-8c9498c0></span>
-<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>// Get the color roles as hex string</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>// Get the color of a color role as a hex string</span></span>
 <span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>console.</span><span style="color:#B392F0;" data-v-8c9498c0>log</span><span style="color:#E1E4E8;" data-v-8c9498c0>(m3.</span><span style="color:#B392F0;" data-v-8c9498c0>hexFromArgb</span><span style="color:#E1E4E8;" data-v-8c9498c0>(dynamicScheme.primary))</span></span></code></pre><!--]-->]]></description>
 			<link>https://dt.in.th/M3DynamicColorJS</link>
 			<guid isPermaLink="true">https://dt.in.th/M3DynamicColorJS</guid>

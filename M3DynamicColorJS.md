@@ -246,6 +246,8 @@ const rows = [
   ],
   [
     { name: 'Surface', background: 'surface', color: 'onSurface', variantColor: 'onSurfaceVariant' },
+    { name: 'Surface Dim', background: 'surfaceDim', color: 'onSurface', variantColor: 'onSurfaceVariant' },
+    { name: 'Surface Bright', background: 'surfaceBright', color: 'onSurface', variantColor: 'onSurfaceVariant' },
   ],
   [
     { name: 'Surface Container Lowest', background: 'surfaceContainerLowest', color: 'onSurface', variantColor: 'onSurfaceVariant' },
@@ -393,9 +395,9 @@ const dynamicScheme = new m3.DynamicScheme({
   ),
 })
 
-// Get the tonal palette color as hex string
+// Get the tonal palette color as a hex string
 console.log(m3.hexFromArgb(dynamicScheme.primaryPalette.tone(40)))
 
-// Get the color roles as hex string
+// Get the color of a color role as a hex string
 console.log(m3.hexFromArgb(dynamicScheme.primary))
 ```
