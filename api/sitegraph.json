@@ -3027,6 +3027,8 @@
 				}
 			,	{	"link": "PocketBaseLINELogin"
 				}
+			,	{	"link": "PocketBaseTypeGen"
+				}
 			,	{	"link": "DockerCompose"
 				}
 			]
@@ -3035,6 +3037,15 @@
 		{	"title": "PocketBase with LINE Login"
 		,	"links":
 			[	{	"link": "PocketBase"
+				}
+			]
+		}
+	,	"PocketBaseTypeGen":
+		{	"title": "PocketBase TypeScript Type Generator"
+		,	"links":
+			[	{	"link": "TypeScript"
+				}
+			,	{	"link": "PocketBase"
 				}
 			]
 		}

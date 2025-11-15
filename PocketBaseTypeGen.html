@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="PocketBaseTypeGen" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PocketBase TypeScript Type Generator | dt.in.th</title><meta property="og:title" content="PocketBase TypeScript Type Generator" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/PocketBaseTypeGen" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://dt.in.th/PocketBaseTypeGen" data-source="note"><style id="note-styles">/* layer: default */
+.ml-auto[data-v-8c9498c0]{margin-left:auto;}
+.mt-0[data-v-8c9498c0]{margin-top:0;}
+.mt-1[data-v-8c9498c0]{margin-top:0.25rem;}
+.flex[data-v-8c9498c0]{display:flex;}
+.text-\[\#8b8685\][data-v-8c9498c0]{--un-text-opacity:1;color:rgb(139 134 133 / var(--un-text-opacity));}</style>
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><h1 id="pocketbase-typescript-type-generator" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#pocketbase-typescript-type-generator" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>PocketBase TypeScript Type Generator</h1><p data-v-8c9498c0>This tool lets you generate <a href="TypeScript" data-v-8c9498c0>TypeScript</a> types from your <a href="PocketBase" data-v-8c9498c0>PocketBase</a> collections.</p><ol data-v-8c9498c0><li data-v-8c9498c0>In the PocketBase admin dashboard, go to <strong data-v-8c9498c0>Settings</strong> → <strong data-v-8c9498c0>Export collections</strong>.</li><li data-v-8c9498c0>Click <strong data-v-8c9498c0>Copy</strong> to copy the JSON export of your collections.</li><li data-v-8c9498c0>Paste the JSON into the textarea below.</li></ol><div style="display:flex;flex-direction:column;gap:1em;" data-v-8c9498c0><div data-v-8c9498c0><label for="pb-input" data-v-8c9498c0><strong class="text-[#8b8685]" data-v-8c9498c0>PocketBase Collections JSON</strong></label><textarea id="pb-input" class="form-control mt-1" data-v-8c9498c0></textarea></div><!----><div style="display:flex;flex-direction:column;gap:0.5em;" data-v-8c9498c0><div style="display:flex;gap:0.5em;align-items:flex-end;" data-v-8c9498c0><strong class="text-[#8b8685]" data-v-8c9498c0>Generated TypeScript Code</strong><button disabled class="btn ml-auto" data-v-8c9498c0>Copy</button></div><pre class="mt-0" data-v-8c9498c0><code data-v-8c9498c0>/* Generated code will display here */</code></pre></div></div><p data-v-8c9498c0>You can use the generated types like this:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>function</span><span style="color:#B392F0;" data-v-8c9498c0> collection</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#B392F0;" data-v-8c9498c0>T</span><span style="color:#F97583;" data-v-8c9498c0> extends</span><span style="color:#F97583;" data-v-8c9498c0> keyof</span><span style="color:#B392F0;" data-v-8c9498c0> Collections</span><span style="color:#E1E4E8;" data-v-8c9498c0>&gt;(</span><span style="color:#FFAB70;" data-v-8c9498c0>name</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#B392F0;" data-v-8c9498c0> T</span><span style="color:#E1E4E8;" data-v-8c9498c0>) {</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>  return</span><span style="color:#E1E4E8;" data-v-8c9498c0> pb.</span><span style="color:#B392F0;" data-v-8c9498c0>collection</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#B392F0;" data-v-8c9498c0>Collections</span><span style="color:#E1E4E8;" data-v-8c9498c0>[</span><span style="color:#B392F0;" data-v-8c9498c0>T</span><span style="color:#E1E4E8;" data-v-8c9498c0>]&gt;(name)</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>}</span></span></code></pre><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});/* Analyzed bindings: {
+  "input": "setup-maybe-ref",
+  "error": "setup-maybe-ref",
+  "generatedCode": "setup-maybe-ref",
+  "copyToClipboard": "setup-maybe-ref"
+} */
+
+  const __sfc__ = {
+    setup() {
+      const input = Vue.ref('')
+      const error = Vue.ref('')
+      const generatedCode = Vue.ref('')
+
+      const fieldTypeMap = {
+        'text': 'string',
+        'email': 'string',
+        'number': 'number',
+        'bool': 'boolean',
+        'date': 'string',
+        'autodate': 'string',
+        'file': 'string',
+        'json': 'any',
+        'relation': 'string',
+        'select': 'string',
+        'password': 'string',
+      }
+
+      const generateTypes = () => {
+        error.value = ''
+        generatedCode.value = ''
+
+        if (!input.value.trim()) {
+          return
+        }
+
+        try {
+          const collections = JSON.parse(input.value)
+          if (!Array.isArray(collections)) {
+            throw new Error('Expected an array of collections')
+          }
+
+          const collectionTypes = collections.map(collection => {
+            const name = collection.name
+
+            const fields = collection.fields
+              .filter(f => !f.system || f.name === 'id')
+              .map(field => {
+                const fieldName = field.name
+                let fieldType = fieldTypeMap[field.type] || 'any'
+
+                // Handle select types with string unions
+                if (field.type === 'select' && field.values && field.values.length > 0) {
+                  fieldType = field.values.map(v => `"${v}"`).join(' | ')
+                }
+
+                const isRequired = field.required ? '' : '?'
+                return `    ${fieldName}${isRequired}: ${fieldType}`
+              })
+              .join('\n')
+
+            return `  ${name}: {\n${fields}\n  }`
+          }).join('\n\n')
+
+          generatedCode.value = `export interface Collections {\n${collectionTypes}\n}`
+        } catch (err) {
+          error.value = err.message || 'Invalid JSON'
+        }
+      }
+
+      const toPascalCase = (str) => {
+        return str
+          .split(/[\W_]+/)
+          .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+          .join('')
+      }
+
+      const copyToClipboard = async () => {
+        try {
+          await navigator.clipboard.writeText(generatedCode.value)
+          alert('Copied to clipboard!')
+        } catch (err) {
+          alert('Failed to copy')
+        }
+      }
+
+      Vue.watch(input, () => {
+        generateTypes()
+      })
+
+      return { input, error, generatedCode, copyToClipboard }
+    }
+  }
+;
+var _vue = require('vue');
+
+const _hoisted_1 = { style: {"display":"flex","flex-direction":"column","gap":"1em"} }
+const _hoisted_2 = { key: 0 }
+const _hoisted_3 = { style: {"display":"flex","flex-direction":"column","gap":"0.5em"} }
+const _hoisted_4 = { style: {"display":"flex","gap":"0.5em","align-items":"flex-end"} }
+const _hoisted_5 = ["disabled"]
+const _hoisted_6 = { class: "mt-0" }
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
+    _cache[5] || (_cache[5] = _vue.createStaticVNode.call(void 0, "<h1 id=\"pocketbase-typescript-type-generator\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#pocketbase-typescript-type-generator\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>PocketBase TypeScript Type Generator</h1><p data-v-8c9498c0>This tool lets you generate <a href=\"TypeScript\" data-v-8c9498c0>TypeScript</a> types from your <a href=\"PocketBase\" data-v-8c9498c0>PocketBase</a> collections.</p><ol data-v-8c9498c0><li data-v-8c9498c0>In the PocketBase admin dashboard, go to <strong data-v-8c9498c0>Settings</strong> → <strong data-v-8c9498c0>Export collections</strong>.</li><li data-v-8c9498c0>Click <strong data-v-8c9498c0>Copy</strong> to copy the JSON export of your collections.</li><li data-v-8c9498c0>Paste the JSON into the textarea below.</li></ol>", 3)),
+    _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
+      _vue.createElementVNode.call(void 0, "div", null, [
+        _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "label", { for: "pb-input" }, [
+          _vue.createElementVNode.call(void 0, "strong", { class: "text-[#8b8685]" }, "PocketBase Collections JSON")
+        ], -1 /* CACHED */)),
+        _vue.withDirectives.call(void 0, _vue.createElementVNode.call(void 0, "textarea", {
+          id: "pb-input",
+          "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($setup.input) = $event)),
+          class: "form-control mt-1"
+        }, null, 512 /* NEED_PATCH */), [
+          [_vue.vModelText, $setup.input]
+        ])
+      ]),
+      ($setup.error)
+        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_2, [
+            _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "strong", null, "Error:", -1 /* CACHED */)),
+            _vue.createTextVNode.call(void 0, " " + _vue.toDisplayString.call(void 0, $setup.error), 1 /* TEXT */)
+          ]))
+        : _vue.createCommentVNode.call(void 0, "v-if", true),
+      _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
+        _vue.createElementVNode.call(void 0, "div", _hoisted_4, [
+          _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "strong", { class: "text-[#8b8685]" }, "Generated TypeScript Code", -1 /* CACHED */)),
+          _vue.createElementVNode.call(void 0, "button", {
+            onClick: _cache[1] || (_cache[1] = (...args) => ($setup.copyToClipboard && $setup.copyToClipboard(...args))),
+            disabled: !$setup.generatedCode,
+            class: "btn ml-auto"
+          }, "Copy", 8 /* PROPS */, _hoisted_5)
+        ]),
+        _vue.createElementVNode.call(void 0, "pre", _hoisted_6, [
+          _vue.createElementVNode.call(void 0, "code", null, _vue.toDisplayString.call(void 0, $setup.generatedCode || '/* Generated code will display here */'), 1 /* TEXT */)
+        ])
+      ])
+    ]),
+    _cache[6] || (_cache[6] = _vue.createStaticVNode.call(void 0, "<p data-v-8c9498c0>You can use the generated types like this:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>function</span><span style=\"color:#B392F0;\" data-v-8c9498c0> collection</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#B392F0;\" data-v-8c9498c0>T</span><span style=\"color:#F97583;\" data-v-8c9498c0> extends</span><span style=\"color:#F97583;\" data-v-8c9498c0> keyof</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Collections</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&gt;(</span><span style=\"color:#FFAB70;\" data-v-8c9498c0>name</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#B392F0;\" data-v-8c9498c0> T</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>) {</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>  return</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> pb.</span><span style=\"color:#B392F0;\" data-v-8c9498c0>collection</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#B392F0;\" data-v-8c9498c0>Collections</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>[</span><span style=\"color:#B392F0;\" data-v-8c9498c0>T</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>]&gt;(name)</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>}</span></span></code></pre>", 2))
+  ], 64 /* STABLE_FRAGMENT */))
+}
+__sfc__.render = render
+__sfc__.__scopeId = "data-v-8c9498c0"
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"title":"PocketBase TypeScript Type Generator","public":true};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

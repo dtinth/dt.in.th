@@ -1243,6 +1243,10 @@
 		{	"title": "PocketBase with LINE Login"
 		,	"parent": "PocketBase"
 		}
+	,	"PocketBaseTypeGen":
+		{	"title": "PocketBase TypeScript Type Generator"
+		,	"parent": "PocketBase"
+		}
 	,	"PointerEventsTester":
 		{	"title": "Pointer events tester"
 		,	"parent": "Tools"

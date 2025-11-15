@@ -6,7 +6,8 @@ public: true
 
 My notes about [**PocketBase**](https://pocketbase.io/), an “open-source [backend](BaaS) in 1 file.”
 
-- [PocketBase with LINE Login](PocketBaseLINELogin) – Set up OAuth2 authentication using LINE
+- [PocketBase with LINE Login](PocketBaseLINELogin)
+- [PocketBase TypeScript Type Generator](PocketBaseTypeGen)
 
 ## My setup
 

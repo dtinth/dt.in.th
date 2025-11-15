@@ -309,6 +309,7 @@ https://dt.in.th/PlaywrightPageObject
 https://dt.in.th/Pnpm
 https://dt.in.th/PocketBase
 https://dt.in.th/PocketBaseLINELogin
+https://dt.in.th/PocketBaseTypeGen
 https://dt.in.th/PointerEventsTester
 https://dt.in.th/Pomodoro
 https://dt.in.th/PostgreSQL
