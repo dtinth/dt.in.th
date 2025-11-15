@@ -586,7 +586,7 @@
 		}
 	,	"DockerMacOSColima":
 		{	"title": "Replacing Docker Desktop on Mac with Colima"
-		,	"parent": "Docker"
+		,	"parent": "MacOS"
 		}
 	,	"DockerRetagImage":
 		{	"title": "How to retag a Docker image on a remote registry without pulling the image to local machine"
@@ -670,7 +670,7 @@
 		}
 	,	"FlutterMacOS":
 		{	"title": "Setting up Flutter and Android in macOS using Homebrew"
-		,	"parent": "Recent"
+		,	"parent": "MacOS"
 		}
 	,	"FocusMusic":
 		{	"title": "Music I use to concentrate"
@@ -1318,10 +1318,6 @@
 	,	"RandomPort":
 		{	"title": "Port number randomizer"
 		,	"parent": "Tools"
-		}
-	,	"Raycast":
-		{	"title": "Raycast (topic)"
-		,	"parent": "MacOS"
 		}
 	,	"React":
 		{	"title": "React (topic)"
