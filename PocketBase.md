@@ -8,6 +8,7 @@ My notes about [**PocketBase**](https://pocketbase.io/), an “open-source [back
 
 - [PocketBase with LINE Login](PocketBaseLINELogin)
 - [PocketBase TypeScript Type Generator](PocketBaseTypeGen)
+- [Implementing Conditional Updates in PocketBase](PocketBaseConditionalUpdates)
 
 ## My setup
 
@@ -44,6 +45,23 @@ services:
       start_period: 30s
 volumes:
   pb_data:
+```
+
+## Snippets
+
+Importing PocketBase JS SDK:
+
+```ts
+import PocketBase from 'pocketbase'
+export const pb = new PocketBase('…')
+```
+
+Authenticating as superuser:
+
+```ts
+await pb
+  .collection('_superusers')
+  .authWithPassword(process.env.PB_ADMIN_EMAIL!, process.env.PB_ADMIN_PASSWORD!)
 ```
 
 ## Bookmarks

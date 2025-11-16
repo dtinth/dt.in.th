@@ -1239,6 +1239,10 @@
 		{	"title": "PocketBase (topic)"
 		,	"parent": "BaaS"
 		}
+	,	"PocketBaseConditionalUpdates":
+		{	"title": "Implementing Conditional Updates in PocketBase"
+		,	"parent": "PocketBase"
+		}
 	,	"PocketBaseLINELogin":
 		{	"title": "PocketBase with LINE Login"
 		,	"parent": "PocketBase"

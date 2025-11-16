@@ -3031,7 +3031,26 @@
 				}
 			,	{	"link": "PocketBaseTypeGen"
 				}
+			,	{	"link": "PocketBaseConditionalUpdates"
+				}
 			,	{	"link": "DockerCompose"
+				}
+			]
+		}
+	,	"PocketBaseConditionalUpdates":
+		{	"title": "Implementing Conditional Updates in PocketBase"
+		,	"links":
+			[	{	"link": "BaaS"
+				}
+			,	{	"link": "PocketBase"
+				}
+			,	{	"link": "#user-content-fn-fn0"
+				}
+			,	{	"link": "#user-content-fn-fn1"
+				}
+			,	{	"link": "#user-content-fnref-fn0"
+				}
+			,	{	"link": "#user-content-fnref-fn1"
 				}
 			]
 		}
