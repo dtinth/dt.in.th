@@ -8,6 +8,7 @@ aliases:
 
 Here are my recent writings:
 
+- 2025-11-20: [How I initialize a Node.js project (Node 24.x + TypeScript without build step)](NodeInit)
 - 2025-11-16: [Implementing Conditional Updates in PocketBase](PocketBaseConditionalUpdates)
 - 2025-11-15: [PocketBase TypeScript Type Generator](PocketBaseTypeGen)
 - 2025-11-13: [Generating Material Design 3 Dynamic Color Scheme with JavaScript](M3DynamicColorJS)

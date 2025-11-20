@@ -18,6 +18,7 @@ aliases:
 - [Quickly protecting an Express HTTP server with GitHub authentication via Auth0](20201102T104426Z6417)
 - [Using Google APIs in Node.js with a service account](NodeGoogleAPIsServiceAccount)
 - [Using TypeScript natively in Node.js 22](Node22NativeTypeScript)
+- [How I initialize a Node.js project (Node 24.x + TypeScript without build step)](NodeInit)
 
 ## Related topics
 

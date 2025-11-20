@@ -270,6 +270,7 @@ https://dt.in.th/Nixpacks
 https://dt.in.th/Node22NativeTypeScript
 https://dt.in.th/NodeGoogleAPIsServiceAccount
 https://dt.in.th/NodeInDocker
+https://dt.in.th/NodeInit
 https://dt.in.th/NodeMemoryLimit
 https://dt.in.th/NodeNixpacks
 https://dt.in.th/NodeParseArgsSnippets

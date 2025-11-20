@@ -2688,6 +2688,17 @@
 				}
 			]
 		}
+	,	"NodeInit":
+		{	"title": "How I initialize a Node.js project (Node 24.x + TypeScript without build step)"
+		,	"links":
+			[	{	"link": "Nodejs"
+				}
+			,	{	"link": "TypeScript"
+				}
+			,	{	"link": "Node22NativeTypeScript"
+				}
+			]
+		}
 	,	"NodeMemoryLimit":
 		{	"title": "Increasing Node.js heap size (memory limit)"
 		,	"links":
@@ -2736,6 +2747,8 @@
 			,	{	"link": "NodeGoogleAPIsServiceAccount"
 				}
 			,	{	"link": "Node22NativeTypeScript"
+				}
+			,	{	"link": "NodeInit"
 				}
 			,	{	"link": "Elysia"
 				}

@@ -1087,6 +1087,10 @@
 		{	"title": "Running Node.js app in a Docker container without building the image"
 		,	"parent": "Docker"
 		}
+	,	"NodeInit":
+		{	"title": "How I initialize a Node.js project (Node 24.x + TypeScript without build step)"
+		,	"parent": "Nodejs"
+		}
 	,	"NodeMemoryLimit":
 		{	"title": "Increasing Node.js heap size (memory limit)"
 		,	"parent": "Nodejs"
