@@ -7,6 +7,8 @@ title: Fish
 **[Fish](https://fishshell.com/)** is “a smart and user-friendly command line
 shell for Linux, macOS, and the rest of the family.”
 
+- [Persistent aliases in Fish](FishPersistentAlias)
+
 ## set
 
 ### scoping

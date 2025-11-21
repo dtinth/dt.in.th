@@ -165,6 +165,7 @@ https://dt.in.th/Fastify
 https://dt.in.th/FastifyInExpress
 https://dt.in.th/Firebase
 https://dt.in.th/Fish
+https://dt.in.th/FishPersistentAlias
 https://dt.in.th/FlutterMacOS
 https://dt.in.th/FocusMusic
 https://dt.in.th/FreeTypeJSBlackWhiteText
@@ -252,6 +253,7 @@ https://dt.in.th/Mosh
 https://dt.in.th/Music
 https://dt.in.th/N8n
 https://dt.in.th/N8nVirtuozzoPaas
+https://dt.in.th/NameGenerator
 https://dt.in.th/Netlify
 https://dt.in.th/NetlifyURLRedirector
 https://dt.in.th/Next

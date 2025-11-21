@@ -1490,7 +1490,17 @@
 		}
 	,	"Fish":
 		{	"title": "Fish (topic)"
-		,	"links": []
+		,	"links":
+			[	{	"link": "FishPersistentAlias"
+				}
+			]
+		}
+	,	"FishPersistentAlias":
+		{	"title": "Persistent aliases in Fish"
+		,	"links":
+			[	{	"link": "Fish"
+				}
+			]
 		}
 	,	"FlutterMacOS":
 		{	"title": "Setting up Flutter and Android in macOS using Homebrew"
@@ -2496,6 +2506,10 @@
 		}
 	,	"N8nVirtuozzoPaas":
 		{	"title": "Deploying n8n to Virtuozzo Application Platform"
+		,	"links": []
+		}
+	,	"NameGenerator":
+		{	"title": "A survey of name generators in open source tools"
 		,	"links": []
 		}
 	,	"Netlify":

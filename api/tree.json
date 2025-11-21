@@ -668,6 +668,10 @@
 		{	"title": "Fish (topic)"
 		,	"parent": "Shell"
 		}
+	,	"FishPersistentAlias":
+		{	"title": "Persistent aliases in Fish"
+		,	"parent": "Fish"
+		}
 	,	"FlutterMacOS":
 		{	"title": "Setting up Flutter and Android in macOS using Homebrew"
 		,	"parent": "MacOS"
@@ -1014,6 +1018,10 @@
 	,	"N8nVirtuozzoPaas":
 		{	"title": "Deploying n8n to Virtuozzo Application Platform"
 		,	"parent": "N8n"
+		}
+	,	"NameGenerator":
+		{	"title": "A survey of name generators in open source tools"
+		,	"parent": "Recent"
 		}
 	,	"Netlify":
 		{	"title": "Netlify (topic)"
