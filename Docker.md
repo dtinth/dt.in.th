@@ -15,6 +15,7 @@ aliases:
 - [Enabling sudo in Docker images](20221010T053934Z5044)
 - [Replacing Docker Desktop on Mac with Colima](DockerMacOSColima)
 - [Running pgAdmin in Docker Compose](20230117T061333Z2948)
+- [Using Docker CLI locally against a remote Docker Daemon via SSH](DockerRemoteContext)
 
 ## One-liner to install Docker on a VPS
 

@@ -8,6 +8,7 @@ aliases:
 
 Here are my recent writings:
 
+- 2025-11-22: [Using Docker CLI locally against a remote Docker Daemon via SSH](DockerRemoteContext)
 - 2025-11-21: [A survey of name generators in open source tools](NameGenerator)
 - 2025-11-21: [Persistent aliases in Fish](FishPersistentAlias)
 - 2025-11-20: [How I initialize a Node.js project (Node 24.x + TypeScript without build step)](NodeInit)

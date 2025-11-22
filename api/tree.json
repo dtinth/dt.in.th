@@ -588,6 +588,10 @@
 		{	"title": "Replacing Docker Desktop on Mac with Colima"
 		,	"parent": "MacOS"
 		}
+	,	"DockerRemoteContext":
+		{	"title": "Using Docker CLI locally against a remote Docker Daemon via SSH"
+		,	"parent": "Docker"
+		}
 	,	"DockerRetagImage":
 		{	"title": "How to retag a Docker image on a remote registry without pulling the image to local machine"
 		,	"parent": "Recent"

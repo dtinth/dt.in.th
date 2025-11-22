@@ -5,8 +5,16 @@
 		<description><![CDATA[Thai Pangsakulyanont’s writings]]></description>
 		<link>https://dt.in.th</link>
 		<generator>RSS for Node</generator>
-		<lastBuildDate>Fri, 21 Nov 2025 14:21:39 GMT</lastBuildDate>
+		<lastBuildDate>Sat, 22 Nov 2025 09:36:02 GMT</lastBuildDate>
 		<atom:link href="https://dt.in.th/api/recent.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title><![CDATA[Using Docker CLI locally against a remote Docker Daemon via SSH]]></title>
+			<description
+			><![CDATA[<a href="https://dt.in.th/DockerRemoteContext">[Read on dt.in.th]</a><!--[--><p data-v-8c9498c0>I don&#39;t like installing <a href="Docker" data-v-8c9498c0>Docker</a> Daemon on my local machine due to battery and resource usage. Instead, I prefer to run Docker on a remote VPS. In the past, I used <a href="VSCode" data-v-8c9498c0>VS Code</a>&#39;s <a href="https://code.visualstudio.com/docs/remote/ssh" data-v-8c9498c0>Remote SSH</a> extension to also remotely develop the project, but running VS Code Server on a cheap VPS led to it running out of memory. That is, until I learned about <a href="https://docs.docker.com/engine/manage-resources/contexts/" data-v-8c9498c0>Docker contexts</a>.</p><h2 id="create-a-remote-context" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#create-a-remote-context" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Create a remote context</h2><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>docker</span><span style="color:#9ECBFF;" data-v-8c9498c0> context</span><span style="color:#9ECBFF;" data-v-8c9498c0> create</span><span style="color:#9ECBFF;" data-v-8c9498c0> myremote</span><span style="color:#79B8FF;" data-v-8c9498c0> --docker</span><span style="color:#9ECBFF;" data-v-8c9498c0> &quot;host=ssh://user@your-vps-ip&quot;</span></span></code></pre><p data-v-8c9498c0>This creates a context named <code data-v-8c9498c0>myremote</code> that connects to the VPS via SSH.</p><h2 id="use-the-remote-context" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#use-the-remote-context" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Use the remote context</h2><p data-v-8c9498c0>To switch to the remote context, either:</p><ul data-v-8c9498c0><li data-v-8c9498c0><p data-v-8c9498c0>Use <code data-v-8c9498c0>docker context use</code>:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>docker</span><span style="color:#9ECBFF;" data-v-8c9498c0> context</span><span style="color:#9ECBFF;" data-v-8c9498c0> use</span><span style="color:#9ECBFF;" data-v-8c9498c0> myremote</span></span></code></pre></li><li data-v-8c9498c0><p data-v-8c9498c0>Set the <code data-v-8c9498c0>DOCKER_CONTEXT</code> environment variable for the shell session:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>export</span><span style="color:#E1E4E8;" data-v-8c9498c0> DOCKER_CONTEXT</span><span style="color:#F97583;" data-v-8c9498c0>=</span><span style="color:#E1E4E8;" data-v-8c9498c0>myremote</span></span></code></pre></li></ul><p data-v-8c9498c0>Now all <code data-v-8c9498c0>docker</code> commands will run against the remote host.</p><ul data-v-8c9498c0><li data-v-8c9498c0>This also works well with <a href="DockerCompose" data-v-8c9498c0><code data-v-8c9498c0>docker compose</code></a>.</li><li data-v-8c9498c0>When building images using <code data-v-8c9498c0>docker build</code>, all files in the <a href="https://docs.docker.com/build/concepts/context/" data-v-8c9498c0>build context</a> that are not excluded by <a href="https://docs.docker.com/build/concepts/context/#dockerignore-files" data-v-8c9498c0><code data-v-8c9498c0>.dockerignore</code></a> are automatically uploaded to the remote server for building, so there&#39;s no need to manually sync files between local and remote machines.</li></ul><!--]-->]]></description>
+			<link>https://dt.in.th/DockerRemoteContext</link>
+			<guid isPermaLink="true">https://dt.in.th/DockerRemoteContext</guid>
+			<pubDate>Sat, 22 Nov 2025 00:00:00 GMT</pubDate>
+		</item>
 		<item>
 			<title><![CDATA[A survey of name generators in open source tools]]></title>
 			<description
@@ -932,21 +940,6 @@
 			<link>https://dt.in.th/GristUpsertN8n</link>
 			<guid isPermaLink="true">https://dt.in.th/GristUpsertN8n</guid>
 			<pubDate>Tue, 05 Aug 2025 00:00:00 GMT</pubDate>
-		</item>
-		<item>
-			<title><![CDATA[Creating a free Google Cloud Compute Engine VM in Google Cloud Shell]]></title>
-			<description
-			><![CDATA[<a href="https://dt.in.th/GoogleCloudFreeTier">[Read on dt.in.th]</a><!--[--><div class="lead"><p><a href="GoogleCloud">Google Cloud</a> has a free tier that includes 1 e2-micro VM instance per month. Here&#39;s how I create a free compute instance using Google Cloud Shell.</p></div><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#B392F0;">gcloud</span><span style="color:#9ECBFF;"> compute</span><span style="color:#9ECBFF;"> instances</span><span style="color:#9ECBFF;"> create</span><span style="color:#9ECBFF;"> longdist</span><span style="color:#79B8FF;"> \</span></span>
-<span class="line"><span style="color:#79B8FF;">        --zone=us-west1-a</span><span style="color:#79B8FF;"> \</span></span>
-<span class="line"><span style="color:#79B8FF;">        --machine-type=e2-micro</span><span style="color:#79B8FF;"> \</span></span>
-<span class="line"><span style="color:#79B8FF;">        --image-family=debian-12</span><span style="color:#79B8FF;"> \</span></span>
-<span class="line"><span style="color:#79B8FF;">        --image-project=debian-cloud</span><span style="color:#79B8FF;"> \</span></span>
-<span class="line"><span style="color:#79B8FF;">        --boot-disk-size=30GB</span><span style="color:#79B8FF;"> \</span></span>
-<span class="line"><span style="color:#79B8FF;">        --scopes=https://www.googleapis.com/auth/cloud-platform</span><span style="color:#79B8FF;"> \</span></span>
-<span class="line"><span style="color:#79B8FF;">        --network-tier=STANDARD</span></span></code></pre><p>According to the <a href="https://cloud.google.com/free/docs/compute-getting-started#about_the_compute_free_tier">Compute Free Tier documentation</a>:</p><ul><li><strong>1 non-preemptible e2-micro VM instance</strong> per month in one of these US regions: <ul><li>Oregon: us-west1</li><li>Iowa: us-central1</li><li>South Carolina: us-east1</li></ul></li><li><strong>30 GB-months standard persistent disk</strong></li><li><strong>1 GB data transfer</strong> from North America to all regions (excluding China and Australia) per month</li><li><strong>Free external IP address</strong> (no charge for external IP on free tier)</li></ul><p>The free tier e2-micro instance limit is by time, not by instance. Each month, all e2-micro instances share a pool of hours equal to the total hours in the current month.</p><p>GPUs and TPUs are not included in the free tier and are always charged.</p><!--]-->]]></description>
-			<link>https://dt.in.th/GoogleCloudFreeTier</link>
-			<guid isPermaLink="true">https://dt.in.th/GoogleCloudFreeTier</guid>
-			<pubDate>Fri, 01 Aug 2025 00:00:00 GMT</pubDate>
 		</item>
 		<follow_challenge>
 			<feedId>81341335623521281</feedId>
