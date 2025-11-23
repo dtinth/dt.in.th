@@ -17,17 +17,11 @@ Use this playground to generate Material Design 3 dynamic color schemes.
 
 ### Select base colors
 
-| Color     | Select                                          |
-| --------- | ----------------------------------------------- |
-| Primary   | <input type="color" v-model="primaryColor" />   |
-| Secondary | <input type="color" v-model="secondaryColor" /> |
-| Tertiary  | <input type="color" v-model="tertiaryColor" />  |
-
 <div class="flex flex-wrap gap-3 items-center">
   <div class="flex gap-2 items-center">
     <label class="flex-none" for="variant-select">Variant:</label>
     <select v-model="selectedVariant" class="form-control" id="variant-select">
-      <option v-for="name in variantNames" :key="name" :value="name">{{ name }}</option>
+      <option v-for="option in variantOptions" :key="option.name" :value="option.name">{{ option.name }}</option>
     </select>
   </div>
   <div class="flex gap-2 items-center">
@@ -37,7 +31,41 @@ Use this playground to generate Material Design 3 dynamic color schemes.
       <option value="dark">Dark</option>
     </select>
   </div>
+  <div class="flex gap-2 items-center">
+    <label class="flex-none" for="behavior-select">Behavior:</label>
+    <select v-model="behavior" class="form-control" id="behavior-select">
+      <option value="auto">Automatically generate palette from source color</option>
+      <option value="manual">Manually specify primary, secondary, and tertiary colors</option>
+    </select>
+  </div>
 </div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th>Select</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-if="behavior === 'auto'">
+      <td>Source Color</td>
+      <td><input type="color" v-model="sourceColor" /></td>
+    </tr>
+    <tr>
+      <td :class="behavior === 'auto' ? 'text-[#8b8685]' : ''">Primary</td>
+      <td><input type="color" v-model="primaryColor" :disabled="behavior === 'auto'" /></td>
+    </tr>
+    <tr>
+      <td :class="behavior === 'auto' ? 'text-[#8b8685]' : ''">Secondary</td>
+      <td><input type="color" v-model="secondaryColor" :disabled="behavior === 'auto'" /></td>
+    </tr>
+    <tr>
+      <td :class="behavior === 'auto' ? 'text-[#8b8685]' : ''">Tertiary</td>
+      <td><input type="color" v-model="tertiaryColor" :disabled="behavior === 'auto'" /></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Preview
 
@@ -133,9 +161,11 @@ import { ref } from 'vue'
 
 const m3Ref = ref(null)
 
-const primaryColor = ref('#D7FC70')
-const secondaryColor = ref('#8C9570')
-const tertiaryColor = ref('#5E9C91')
+const behavior = ref('auto')
+const sourceColor = ref('#d7fc70')
+const primaryColor = ref('#d7fc70')
+const secondaryColor = ref('#8c9570')
+const tertiaryColor = ref('#5e9c91')
 
 const Variant = {}
 Variant[Variant["MONOCHROME"] = 0] = "MONOCHROME";
@@ -148,8 +178,20 @@ Variant[Variant["CONTENT"] = 6] = "CONTENT";
 Variant[Variant["RAINBOW"] = 7] = "RAINBOW";
 Variant[Variant["FRUIT_SALAD"] = 8] = "FRUIT_SALAD";
 
+const variantOptions = [
+  { name: 'MONOCHROME', value: Variant.MONOCHROME, className: 'SchemeMonochrome' },
+  { name: 'NEUTRAL', value: Variant.NEUTRAL, className: 'SchemeNeutral' },
+  { name: 'TONAL_SPOT', value: Variant.TONAL_SPOT, className: 'SchemeTonalSpot' },
+  { name: 'VIBRANT', value: Variant.VIBRANT, className: 'SchemeVibrant' },
+  { name: 'EXPRESSIVE', value: Variant.EXPRESSIVE, className: 'SchemeExpressive' },
+  { name: 'FIDELITY', value: Variant.FIDELITY, className: 'SchemeFidelity' },
+  { name: 'CONTENT', value: Variant.CONTENT, className: 'SchemeContent' },
+  { name: 'RAINBOW', value: Variant.RAINBOW, className: 'SchemeRainbow' },
+  { name: 'FRUIT_SALAD', value: Variant.FRUIT_SALAD, className: 'SchemeFruitSalad' },
+]
+
 const variantNames = Object.keys(Variant).filter(k => isNaN(Number(k)))
-const selectedVariant = ref('VIBRANT')
+const selectedVariant = ref('TONAL_SPOT')
 const colorMode = ref('dark')
 const darkMode = Vue.computed(() => colorMode.value === 'dark')
 
@@ -283,22 +325,30 @@ const result = Vue.computed(() => {
   }
   try {
     const m3 = m3Ref.value
-    const primaryArgb = m3.argbFromHex(primaryColor.value)
-    const secondaryArgb = m3.argbFromHex(secondaryColor.value)
-    const tertiaryArgb = m3.argbFromHex(tertiaryColor.value)
-    const hue = m3.Hct.fromInt(primaryArgb).hue
 
-    const dynamicScheme = new m3.DynamicScheme({
-      sourceColorArgb: primaryArgb,
-      variant: Variant[selectedVariant.value],
-      isDark: darkMode.value,
-      contrastLevel: 0.0,
-      primaryPalette: m3.TonalPalette.fromInt(primaryArgb),
-      secondaryPalette: m3.TonalPalette.fromInt(secondaryArgb),
-      tertiaryPalette: m3.TonalPalette.fromInt(tertiaryArgb),
-      neutralPalette: m3.TonalPalette.fromHueAndChroma(hue, 10),
-      neutralVariantPalette: m3.TonalPalette.fromHueAndChroma(hue, 12),
-    })
+    let dynamicScheme
+    if (behavior.value === 'auto') {
+      const className = variantOptions.find(v => v.name === selectedVariant.value).className
+      const Constructor = m3[className]
+      const sourceColorHct = m3.Hct.fromInt(m3.argbFromHex(sourceColor.value))
+      dynamicScheme = new Constructor(sourceColorHct, darkMode.value, 0.0)
+    } else {
+      const primaryArgb = m3.argbFromHex(primaryColor.value)
+      const secondaryArgb = m3.argbFromHex(secondaryColor.value)
+      const tertiaryArgb = m3.argbFromHex(tertiaryColor.value)
+      const hue = m3.Hct.fromInt(primaryArgb).hue
+      dynamicScheme = new m3.DynamicScheme({
+        sourceColorArgb: primaryArgb,
+        variant: Variant[selectedVariant.value],
+        isDark: darkMode.value,
+        contrastLevel: 0.0,
+        primaryPalette: m3.TonalPalette.fromInt(primaryArgb),
+        secondaryPalette: m3.TonalPalette.fromInt(secondaryArgb),
+        tertiaryPalette: m3.TonalPalette.fromInt(tertiaryArgb),
+        neutralPalette: m3.TonalPalette.fromHueAndChroma(hue, 10),
+        neutralVariantPalette: m3.TonalPalette.fromHueAndChroma(hue, 12),
+      })
+    }
     Object.assign(window, { dynamicScheme })
     const colorsByRole = Object.fromEntries(
       m3ColorRoles.map(role => [role, m3.hexFromArgb(dynamicScheme[role])])
@@ -319,11 +369,46 @@ const result = Vue.computed(() => {
       neutralVariant: tonesOf(dynamicScheme.neutralVariantPalette),
       error: tonesOf(dynamicScheme.errorPalette),
     }
-    return { data: { colorsByRole, tonalPalettes } }
+    return {
+      data: {
+        colorsByRole,
+        tonalPalettes,
+        behavior: behavior.value,
+        keyColors: {
+          primary: m3.hexFromArgb(dynamicScheme.primaryPalette.keyColor.argb),
+          secondary: m3.hexFromArgb(dynamicScheme.secondaryPalette.keyColor.argb),
+          tertiary: m3.hexFromArgb(dynamicScheme.tertiaryPalette.keyColor.argb),
+        }
+      }
+    }
   } catch (e) {
     console.error(e)
     return { message: `Error: ${e}` }
   }
+})
+
+let timeout
+
+Vue.watch(result, (newValue) => {
+  const keyColors = newValue.data?.keyColors
+  if (newValue.data?.behavior === 'auto' && keyColors) {
+    clearTimeout(timeout)
+    timeout = setTimeout(() => {
+      if (keyColors.primary) {
+        primaryColor.value = keyColors.primary
+      }
+      if (keyColors.secondary) {
+        secondaryColor.value = keyColors.secondary
+      }
+      if (keyColors.tertiary) {
+        tertiaryColor.value = keyColors.tertiary
+      }
+    })
+  }
+}, { immediate: true })
+
+Vue.onUnmounted(() => {
+  clearTimeout(timeout)
 })
 
 const output = Vue.computed(() => {
