@@ -327,26 +327,15 @@ const result = Vue.computed(() => {
     const m3 = m3Ref.value
 
     let dynamicScheme
-    if (behavior.value === 'auto') {
-      const className = variantOptions.find(v => v.name === selectedVariant.value).className
-      const Constructor = m3[className]
-      const sourceColorHct = m3.Hct.fromInt(m3.argbFromHex(sourceColor.value))
-      dynamicScheme = new Constructor(sourceColorHct, darkMode.value, 0.0)
-    } else {
-      const primaryArgb = m3.argbFromHex(primaryColor.value)
-      const secondaryArgb = m3.argbFromHex(secondaryColor.value)
-      const tertiaryArgb = m3.argbFromHex(tertiaryColor.value)
-      const hue = m3.Hct.fromInt(primaryArgb).hue
-      dynamicScheme = new m3.DynamicScheme({
-        sourceColorArgb: primaryArgb,
-        variant: Variant[selectedVariant.value],
-        isDark: darkMode.value,
-        contrastLevel: 0.0,
-        primaryPalette: m3.TonalPalette.fromInt(primaryArgb),
-        secondaryPalette: m3.TonalPalette.fromInt(secondaryArgb),
-        tertiaryPalette: m3.TonalPalette.fromInt(tertiaryArgb),
-        neutralPalette: m3.TonalPalette.fromHueAndChroma(hue, 10),
-        neutralVariantPalette: m3.TonalPalette.fromHueAndChroma(hue, 12),
+    const className = variantOptions.find(v => v.name === selectedVariant.value).className
+    const Constructor = m3[className]
+    const sourceColorHct = m3.Hct.fromInt(m3.argbFromHex(sourceColor.value))
+    dynamicScheme = new Constructor(sourceColorHct, darkMode.value, 0.0)
+    if (behavior.value !== 'auto') {
+      Object.assign(dynamicScheme, {
+        primaryPalette: m3.TonalPalette.fromInt(m3.argbFromHex(primaryColor.value)),
+        secondaryPalette: m3.TonalPalette.fromInt(m3.argbFromHex(secondaryColor.value)),
+        tertiaryPalette: m3.TonalPalette.fromInt(m3.argbFromHex(tertiaryColor.value)),
       })
     }
     Object.assign(window, { dynamicScheme })
@@ -452,40 +441,32 @@ Feel free to open the browser console and use `m3` global variable to experiment
 // Import Material Color Utilities
 import * as m3 from '@material/material-color-utilities'
 
-// Convert hex color to ARGB integer
-const primaryArgb = m3.argbFromHex('#D7FC70')
-const secondaryArgb = m3.argbFromHex('#8C9570')
-const tertiaryArgb = m3.argbFromHex('#5E9C91')
-
-// We have to do some color manipulation to obtain the neutral palettes,
-// so we convert primary color to HCT and obtain its hue.
-const hue = m3.Hct.fromInt(primaryArgb).hue
-
-// Unfortunately, the Material Color Utilities API v0.3.0 does not provide
-// the Variant enum, so we define it ourselves here.
-const Variant = {}
-Variant[(Variant['MONOCHROME'] = 0)] = 'MONOCHROME'
-Variant[(Variant['NEUTRAL'] = 1)] = 'NEUTRAL'
-Variant[(Variant['TONAL_SPOT'] = 2)] = 'TONAL_SPOT'
-Variant[(Variant['VIBRANT'] = 3)] = 'VIBRANT'
-Variant[(Variant['EXPRESSIVE'] = 4)] = 'EXPRESSIVE'
-Variant[(Variant['FIDELITY'] = 5)] = 'FIDELITY'
-Variant[(Variant['CONTENT'] = 6)] = 'CONTENT'
-Variant[(Variant['RAINBOW'] = 7)] = 'RAINBOW'
-Variant[(Variant['FRUIT_SALAD'] = 8)] = 'FRUIT_SALAD'
-
-// Create a dynamic color scheme
+// Whether to use dark mode
+const sourceColorHct = m3.Hct.fromInt(m3.argbFromHex('#d7fc70'))
 const isDark = true
-const dynamicScheme = new m3.DynamicScheme({
-  sourceColorArgb: primaryArgb,
-  variant: Variant.VIBRANT,
+const contrastLevel = 0.0
+
+// Create a palette based on a variant. Choose one of these constructors:
+// - m3.SchemeMonochrome
+// - m3.SchemeNeutral
+// - m3.SchemeTonalSpot
+// - m3.SchemeVibrant
+// - m3.SchemeExpressive
+// - m3.SchemeFidelity
+// - m3.SchemeContent
+// - m3.SchemeRainbow
+// - m3.SchemeFruitSalad
+const dynamicScheme = new m3.SchemeTonalSpot(
+  sourceColorHct,
   isDark,
-  contrastLevel: 0.0,
-  primaryPalette: m3.TonalPalette.fromInt(primaryArgb),
-  secondaryPalette: m3.TonalPalette.fromInt(secondaryArgb),
-  tertiaryPalette: m3.TonalPalette.fromInt(tertiaryArgb),
-  neutralPalette: m3.TonalPalette.fromHueAndChroma(hue, 10),
-  neutralVariantPalette: m3.TonalPalette.fromHueAndChroma(hue, 12),
+  contrastLevel
+)
+
+// If you want to override the primary, secondary, and tertiary colors manually:
+Object.assign(dynamicScheme, {
+  primaryPalette: m3.TonalPalette.fromInt(m3.argbFromHex('#d7fc70')),
+  secondaryPalette: m3.TonalPalette.fromInt(m3.argbFromHex('#8c9570')),
+  tertiaryPalette: m3.TonalPalette.fromInt(m3.argbFromHex('#5e9c91')),
 })
 
 // Get the tonal palette color as a hex string
@@ -494,3 +475,7 @@ console.log(m3.hexFromArgb(dynamicScheme.primaryPalette.tone(40)))
 // Get the color of a color role as a hex string
 console.log(m3.hexFromArgb(dynamicScheme.primary))
 ```
+
+## References
+
+- [Creating a Color Scheme](https://github.com/material-foundation/material-color-utilities/blob/main/dev_guide/creating_color_scheme.md)
