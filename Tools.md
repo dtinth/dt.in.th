@@ -11,6 +11,7 @@ Some lightweight tools available on this site:
 |:--- |:--- |
 | [**GitHub to JSDelivr converter**](GitHubToJSDelivr) | Convert GitHub file links to JSDelivr CDN links for faster delivery. |
 | [**Major scale practice trainer**](PianoMajorScaleTrainer) | Practice major scales on the piano with a MIDI keyboard. |
+| [**MML player**](MMLPlayer) | Play and share quick musical ideas using MML (Music Macro Language). |
 | [**Mnemonic code randomizer**](Slip39Wordlist) | Generates a random mnemonic code (e.g. ‘keyboard-herald’) using the SLIP39 wordlist. |
 | [**Oklab visualizer**](OklabVisualizer) | Visualizes the A-B plane of the Oklab color space within sRGB. |
 | [**OKLCH color scale plotter**](OklchPlot) | Plot color scale in the OKLCH color space (LC and LH). |
