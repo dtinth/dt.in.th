@@ -154,6 +154,11 @@ Click on the color blocks to learn more about each color role and when to use th
 
 ### CSS
 
+<div class="flex gap-2 items-center mb-2">
+  <input type="checkbox" id="generate-rgb-checkbox" v-model="generateRgb" />
+  <label class="flex-none" for="generate-rgb-checkbox">Generate RGB format</label>
+</div>
+
 <textarea readonly rows="10" class="form-control font-mono" :value="output"></textarea>
 
 <script setup>
@@ -161,6 +166,7 @@ import { ref } from 'vue'
 
 const m3Ref = ref(null)
 
+const generateRgb = ref(false)
 const behavior = ref('auto')
 const sourceColor = ref('#d7fc70')
 const primaryColor = ref('#d7fc70')
@@ -401,18 +407,31 @@ Vue.onUnmounted(() => {
 })
 
 const output = Vue.computed(() => {
+  const cssVar = (name, color) => {
+    const out = []
+    out.push(`${name}: ${color};`)
+    if (generateRgb.value) {
+      const m3 = m3Ref.value
+      const argb = m3.argbFromHex(color)
+      const r = m3.redFromArgb(argb)
+      const g = m3.greenFromArgb(argb)
+      const b = m3.blueFromArgb(argb)
+      out.push(`${name}-rgb: ${r}, ${g}, ${b};`)
+    }
+    return out.join('\n')
+  }
   if (result.value.data) {
     return [
       '/* Color Roles */',
       Object.entries(result.value.data.colorsByRole).map(([role, color]) => {
         const roleKebab = kebab(role)
-        return `--m3-${roleKebab}: ${color};`
+        return cssVar(`--m3-${roleKebab}`, color)
       }).join('\n'),
       '',
       '/* Tonal Palettes */',
       Object.entries(result.value.data.tonalPalettes).map(([paletteName, tones]) => {
         const lines = Object.entries(tones).map(([tone, color]) => {
-          return `--m3-${kebab(paletteName)}-${tone}: ${color};`
+          return cssVar(`--m3-${kebab(paletteName)}-${tone}`, color)
         })
         return lines.join('\n')
       }).join('\n'),
