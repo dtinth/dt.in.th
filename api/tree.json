@@ -955,6 +955,10 @@
 		{	"title": "MIDI Light Switch"
 		,	"parent": "Projects"
 		}
+	,	"MMLPlayer":
+		{	"title": "MML Player"
+		,	"parent": "Music"
+		}
 	,	"MacOS":
 		{	"title": "macOS (topic)"
 		,	"parent": "HomePage"

@@ -9,6 +9,7 @@ My notes about **music**:
 - [Major scale practice trainer](PianoMajorScaleTrainer)
 - [How I play music by ear](PlayByEar)
 - [Music I use to concentrate](FocusMusic)
+- [MML Player (tool)](MMLPlayer)
 
 ## Bookmarks
 

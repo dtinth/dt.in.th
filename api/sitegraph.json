@@ -2346,6 +2346,15 @@
 		{	"title": "MIDI Light Switch"
 		,	"links": []
 		}
+	,	"MMLPlayer":
+		{	"title": "MML Player"
+		,	"links":
+			[	{	"link": "Tools"
+				}
+			,	{	"link": "Music"
+				}
+			]
+		}
 	,	"MacOS":
 		{	"title": "macOS (topic)"
 		,	"links":
@@ -2491,6 +2500,8 @@
 			,	{	"link": "PlayByEar"
 				}
 			,	{	"link": "FocusMusic"
+				}
+			,	{	"link": "MMLPlayer"
 				}
 			,	{	"link": "WebMIDICon"
 				}
