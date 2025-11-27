@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="WebSpeechToText" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web speech-to-text | dt.in.th</title><meta property="og:title" content="Web speech-to-text" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/WebSpeechToText" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://dt.in.th/WebSpeechToText" data-source="note"><style id="note-styles">/* layer: shortcuts */
+.container[data-v-8c9498c0]{width:100%;}
+@media (min-width: 640px){
+.container[data-v-8c9498c0]{max-width:640px;}
+}
+@media (min-width: 768px){
+.container[data-v-8c9498c0]{max-width:768px;}
+}
+@media (min-width: 1024px){
+.container[data-v-8c9498c0]{max-width:1024px;}
+}
+@media (min-width: 1280px){
+.container[data-v-8c9498c0]{max-width:1280px;}
+}
+@media (min-width: 1536px){
+.container[data-v-8c9498c0]{max-width:1536px;}
+}
+/* layer: default */
+.absolute[data-v-8c9498c0]{position:absolute;}
+.fixed[data-v-8c9498c0]{position:fixed;}
+.relative[data-v-8c9498c0]{position:relative;}
+.m-0[data-v-8c9498c0]{margin:0;}
+.mb-2[data-v-8c9498c0]{margin-bottom:0.5rem;}
+.ml-auto[data-v-8c9498c0]{margin-left:auto;}
+.block[data-v-8c9498c0]{display:block;}
+.hidden[data-v-8c9498c0]{display:none;}
+.flex[data-v-8c9498c0]{display:flex;}
+.flex-col[data-v-8c9498c0]{flex-direction:column;}
+.flex-wrap[data-v-8c9498c0]{flex-wrap:wrap;}
+.list-none[data-v-8c9498c0]{list-style-type:none;}
+.items-start[data-v-8c9498c0]{align-items:flex-start;}
+.gap-1[data-v-8c9498c0]{gap:0.25rem;}
+.gap-2[data-v-8c9498c0]{gap:0.5rem;}
+.border[data-v-8c9498c0]{border-width:1px;}
+.rounded[data-v-8c9498c0]{border-radius:0.25rem;}
+.bg-\[\#353433\][data-v-8c9498c0]{--un-bg-opacity:1;background-color:rgb(53 52 51 / var(--un-bg-opacity));}
+.p-0[data-v-8c9498c0]{padding:0;}
+.px-3[data-v-8c9498c0]{padding-left:0.75rem;padding-right:0.75rem;}
+.py-2[data-v-8c9498c0]{padding-top:0.5rem;padding-bottom:0.5rem;}
+.text-sm[data-v-8c9498c0]{font-size:0.875rem;line-height:1.25rem;}
+.text-\[\#8b8685\][data-v-8c9498c0]{--un-text-opacity:1;color:rgb(139 134 133 / var(--un-text-opacity));}
+.font-bold[data-v-8c9498c0]{font-weight:700;}</style>
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><h1 id="web-speech-to-text" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#web-speech-to-text" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Web speech-to-text</h1><div class="lead" data-v-8c9498c0><p data-v-8c9498c0>Use this tool to transcribe speech to text. All processing happens locally on your device.</p></div><div style="border-radius:1em;border:2px solid var(--n-listen-border);padding:1em;background:#252423;margin:2em 0;--n-listen-border:#656463;" data-v-8c9498c0><div class="flex gap-2 mb-2 flex-wrap items-start" data-v-8c9498c0><button class="btn" style="min-width:120px;" data-v-8c9498c0>Start</button><button class="btn" style="min-width:120px;" data-v-8c9498c0>Show HUD</button><div class="ml-auto" data-v-8c9498c0><input value="en-US" type="text" class="form-control" placeholder="e.g. en-US, ja-JP, th-TH, es-ES, fr-FR" data-v-8c9498c0><label class="text-[#8b8685] text-sm font-bold" data-v-8c9498c0>Language Code</label></div></div><textarea readonly class="form-control" rows="2" data-v-8c9498c0>[Diagnostic output]</textarea><div style="margin-top:1em;height:250px;overflow-y:auto;" data-v-8c9498c0><strong class="text-[#8b8685]" data-v-8c9498c0>Recognition log:</strong><ul class="flex flex-col gap-1 list-none p-0 m-0 not-prose" data-v-8c9498c0><!--[--><!--]--><li class="bg-[#353433] px-3 py-2 rounded text-[#8b8685]" data-v-8c9498c0>[No results yet]</li></ul></div><div class="flex gap-2 mb-2 flex-wrap items-start" data-v-8c9498c0><button disabled class="btn" style="min-width:120px;" data-v-8c9498c0> Copy All Transcript </button></div><div style="color:#8b8685;font-size:0.85em;margin-top:1em;" data-v-8c9498c0><strong style="color:inherit;" data-v-8c9498c0>Tip:</strong> Open browser console (F12) to see detailed event logs </div></div><!----><div class="notes-callout" data-type="Warning" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><!---->Warning</p><p data-v-8c9498c0>This tool uses <a href="https://caniuse.com/mdn-api_speechrecognition_processlocally" data-v-8c9498c0>a feature that is currently only available in Google Chrome 142+</a>, and requires downloading language models. It may not be available in all regions.</p></div><div class="notes-callout" data-type="Tip" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><!---->How to use</p><ul data-v-8c9498c0><li data-v-8c9498c0>Click <strong data-v-8c9498c0>Start</strong> to begin speech recognition. The browser may ask for microphone permission.</li><li data-v-8c9498c0>Speak clearly into your microphone. The recognized text will appear in the log.</li><li data-v-8c9498c0>Click <strong data-v-8c9498c0>Show HUD</strong> to open a Picture-in-Picture window displaying the transcript. This window will stay on top of other windows, allowing you to see the transcript while using other applications. <ul data-v-8c9498c0><li data-v-8c9498c0>In the HUD, click the copy icon next to any transcript to copy it to your clipboard.</li><li data-v-8c9498c0>You can also drag copy buttons to other applications to drop the text there.</li></ul></li></ul></div><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _optionalChain(ops) { let lastAccessLHS = undefined; let value = ops[0]; let i = 1; while (i < ops.length) { const op = ops[i]; const fn = ops[i + 1]; i += 2; if ((op === 'optionalAccess' || op === 'optionalCall') && value == null) { return undefined; } if (op === 'access' || op === 'optionalAccess') { lastAccessLHS = value; value = fn(value); } else if (op === 'call' || op === 'optionalCall') { value = fn((...args) => value.call(lastAccessLHS, ...args)); lastAccessLHS = undefined; } } return value; }/* Analyzed bindings: {
+  "isListening": "setup-maybe-ref",
+  "isLoading": "setup-maybe-ref",
+  "diagnostic": "setup-maybe-ref",
+  "results": "setup-maybe-ref",
+  "showHUD": "setup-maybe-ref",
+  "interimTranscript": "setup-maybe-ref",
+  "lastCopiedId": "setup-maybe-ref",
+  "languageCode": "setup-maybe-ref",
+  "copyIcon": "literal-const",
+  "micIcon": "literal-const",
+  "recognition": "setup-let",
+  "hudVideoElement": "setup-let",
+  "dragText": "setup-const",
+  "dispatchSpeechEvent": "setup-const",
+  "onSpeechEvent": "setup-const",
+  "initRecognition": "setup-const",
+  "checkLanguageAvailability": "setup-const",
+  "toggleListening": "setup-const",
+  "copyTextFromHud": "setup-const",
+  "toggleHUD": "setup-const",
+  "scrollHUDToBottom": "setup-const",
+  "copyAllTranscript": "setup-const"
+} */
+var _vue = require('vue');
+
+const _hoisted_1 = { class: "flex gap-2 mb-2 flex-wrap items-start" }
+const _hoisted_2 = ["disabled"]
+const _hoisted_3 = { class: "ml-auto" }
+const _hoisted_4 = ["disabled"]
+const _hoisted_5 = ["value"]
+const _hoisted_6 = { style: {"margin-top":"1em","height":"250px","overflow-y":"auto"} }
+const _hoisted_7 = { class: "flex flex-col gap-1 list-none p-0 m-0 not-prose" }
+const _hoisted_8 = {
+  key: 0,
+  class: "bg-[#353433] px-3 py-2 rounded text-[#8b8685]"
+}
+const _hoisted_9 = { class: "flex gap-2 mb-2 flex-wrap items-start" }
+const _hoisted_10 = ["disabled"]
+const _hoisted_11 = { class: "hud-section" }
+const _hoisted_12 = {
+  key: 0,
+  style: {"color":"#8b8685"}
+}
+const _hoisted_13 = ["onClick", "onDragstart"]
+const _hoisted_14 = {
+  key: 0,
+  style: {"position":"absolute","top":"0","left":"0","right":"0","bottom":"0","display":"flex","justify-content":"center","align-items":"center"}
+}
+const _hoisted_15 = { class: "hud-text" }
+const _hoisted_16 = {
+  key: 1,
+  class: "hud-item"
+}
+const _hoisted_17 = { class: "hud-text interim" }
+const _hoisted_18 = {
+  class: "notes-callout",
+  "data-type": "Warning"
+}
+const _hoisted_19 = { class: "notes-callout__label" }
+const _hoisted_20 = {
+  class: "notes-callout",
+  "data-type": "Tip"
+}
+const _hoisted_21 = { class: "notes-callout__label" }
+
+const copyIcon = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiM4Yjg2ODUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIj48cmVjdCB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHg9IjgiIHk9IjgiIHJ4PSIyIiByeT0iMiIvPjxwYXRoIGQ9Ik00IDE2Yy0xLjEgMC0yLS45LTItMlY0YzAtMS4xLjktMiAyLTJoMTBjMS4xIDAgMiAuOSAyIDIiLz48L2c+PC9zdmc+'
+  const micIcon = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiM4Yjg2ODUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIj48cGF0aCBkPSJNMTIgMTl2M203LTEydjJhNyA3IDAgMCAxLTE0IDB2LTIiLz48cmVjdCB3aWR0aD0iNiIgaGVpZ2h0PSIxMyIgeD0iOSIgeT0iMiIgcng9IjMiLz48L2c+PC9zdmc+'
+  
+const __sfc__ = {
+  __name: 'Note',
+  setup(__props) {
+
+  const isListening = Vue.ref(false)
+  const isLoading = Vue.ref(false)
+  const diagnostic = Vue.ref('')
+  const results = Vue.ref([])
+  const showHUD = Vue.ref(false)
+  const interimTranscript = Vue.ref('')
+  const lastCopiedId = Vue.ref(null)
+  const languageCode = Vue.ref('en-US')
+  let recognition = null
+  let hudVideoElement = null
+
+  const dragText = (text, event) => {
+    event.dataTransfer.clearData()
+    event.dataTransfer.setData('text/plain', text)
+  }
+
+  const dispatchSpeechEvent = (type, payload) => {
+    window.dispatchEvent(new CustomEvent('speechevent', {
+      detail: { type, payload }
+    }))
+  }
+  const onSpeechEvent = (event) => {
+    console.log('[speechevent] type:', _optionalChain([event, 'access', _ => _.detail, 'optionalAccess', _2 => _2.type]), '|', 'payload:', _optionalChain([event, 'access', _3 => _3.detail, 'optionalAccess', _4 => _4.payload]))
+    if (_optionalChain([event, 'access', _5 => _5.detail, 'optionalAccess', _6 => _6.type]) === 'replace') {
+      const id = _optionalChain([event, 'access', _7 => _7.detail, 'optionalAccess', _8 => _8.payload, 'optionalAccess', _9 => _9.id])
+      const newText = _optionalChain([event, 'access', _10 => _10.detail, 'optionalAccess', _11 => _11.payload, 'optionalAccess', _12 => _12.transcript])
+      const index = results.value.findIndex(r => r.id === id)
+      if (index !== -1) {
+        results.value[index].transcript = newText
+      }
+    }
+  }
+  Vue.onMounted(() => {
+    window.addEventListener('speechevent', onSpeechEvent)
+  })
+  Vue.onUnmounted(() => {
+    window.removeEventListener('speechevent', onSpeechEvent)
+  })
+
+  const initRecognition = async () => {
+    if (!('SpeechRecognition' in window || 'webkitSpeechRecognition' in window)) {
+      diagnostic.value = 'Speech Recognition not supported in this browser'
+      console.error('Speech Recognition not supported')
+      return false
+    }
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
+    recognition = new SpeechRecognition()
+    recognition.continuous = true
+    recognition.interimResults = true
+    recognition.lang = languageCode.value
+
+    // Try to use on-device processing if available
+    if ('processLocally' in recognition) {
+      recognition.processLocally = true
+      dispatchSpeechEvent('ondevice', { enabled: true })
+    }
+
+    recognition.addEventListener('start', () => {
+      diagnostic.value = 'Listening...'
+      dispatchSpeechEvent('start', {})
+    })
+
+    recognition.addEventListener('result', (event) => {
+      const timestamp = new Date().toISOString()
+      let interim = ''
+      let final = ''
+      let lastConfidence = 0
+
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        const transcript = event.results[i][0].transcript
+        const confidence = event.results[i][0].confidence
+        const isFinal = event.results[i].isFinal
+
+        if (isFinal) {
+          final += transcript + ' '
+          lastConfidence = confidence
+        } else {
+          interim += transcript
+          dispatchSpeechEvent('interim', { transcript, confidence, isFinal: false })
+        }
+      }
+
+      // Update interim transcript for HUD
+      interimTranscript.value = interim
+
+      if (final) {
+        const finalText = final.trim()
+        diagnostic.value = `Recognized: "${finalText}"`
+        results.value.push({
+          transcript: finalText,
+          confidence: lastConfidence,
+          id: timestamp,
+        })
+        dispatchSpeechEvent('transcript', {
+          transcript: finalText,
+          confidence: lastConfidence,
+          id: timestamp
+        })
+        scrollHUDToBottom()
+      } else if (interim) {
+        diagnostic.value = `Interim: "${interim}"`
+      }
+    })
+
+    recognition.addEventListener('error', (event) => {
+      diagnostic.value = `Error: ${event.error}`
+      dispatchSpeechEvent('error', { error: event.error })
+    })
+
+    recognition.addEventListener('end', () => {
+      if (isListening.value) {
+        diagnostic.value = 'Restarting...'
+        dispatchSpeechEvent('restart', {})
+        setTimeout(() => {
+          if (isListening.value && recognition) {
+            recognition.start()
+          }
+        }, 100)
+      } else {
+        diagnostic.value = 'Stopped listening'
+        dispatchSpeechEvent('end', {})
+      }
+    })
+
+    return true
+  }
+
+  const checkLanguageAvailability = async () => {
+    if (!('SpeechRecognition' in window || 'webkitSpeechRecognition' in window)) {
+      return false
+    }
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
+    if (!('available' in SpeechRecognition)) {
+      dispatchSpeechEvent('langcheck-unavailable', { reason: 'API not available' })
+      return false
+    }
+    try {
+      isLoading.value = true
+      diagnostic.value = 'Checking language availability...'
+
+      const result = await SpeechRecognition.available({
+        langs: [languageCode.value],
+        processLocally: true
+      })
+
+      if (result === 'available') {
+        diagnostic.value = 'Language pack ready'
+        dispatchSpeechEvent('langcheck', { status: 'available' })
+        return true
+      } else if (result === 'unavailable') {
+        diagnostic.value = 'Language pack not available for download'
+        dispatchSpeechEvent('langcheck', { status: 'unavailable' })
+        return false
+      } else {
+        // result === 'downloading'
+        diagnostic.value = 'Downloading language pack...'
+        dispatchSpeechEvent('langinstall', { status: 'downloading' })
+        const installResult = await SpeechRecognition.install({
+          langs: [languageCode.value],
+          processLocally: true
+        })
+        if (installResult) {
+          diagnostic.value = 'Language pack downloaded'
+          dispatchSpeechEvent('langinstall', { status: 'success' })
+          return true
+        } else {
+          diagnostic.value = 'Failed to download language pack'
+          dispatchSpeechEvent('langinstall', { status: 'failed' })
+          return false
+        }
+      }
+    } catch (error) {
+      dispatchSpeechEvent('langcheck-error', { error: String(error) })
+      diagnostic.value = `Error checking language pack: ${error}`
+      return false
+    } finally {
+      isLoading.value = false
+    }
+  }
+
+  const toggleListening = async () => {
+    if (isListening.value) {
+      if (recognition) {
+        recognition.stop()
+        isListening.value = false
+      }
+    } else {
+      if (!recognition || recognition.lang !== languageCode.value) {
+        recognition = null
+        const initialized = await initRecognition()
+        if (!initialized) return
+      }
+
+      isLoading.value = true
+      const available = await checkLanguageAvailability()
+      isLoading.value = false
+
+      if (available) {
+        recognition.start()
+        isListening.value = true
+      }
+    }
+  }
+
+  const copyTextFromHud = (text, id) => {
+    // Use the document where the button is (PiP window or main window)
+    const targetDoc = document
+
+    const textarea = targetDoc.createElement('textarea')
+    textarea.value = text
+    textarea.style.position = 'fixed'
+    textarea.style.opacity = '0'
+    targetDoc.body.appendChild(textarea)
+
+    textarea.select()
+    try {
+      targetDoc.execCommand('copy')
+      lastCopiedId.value = id
+      setTimeout(() => {
+        if (lastCopiedId.value === id) {
+          lastCopiedId.value = null
+        }
+      }, 2000)
+    } catch (err) {
+      console.error('Copy failed:', err)
+    }
+    targetDoc.body.removeChild(textarea)
+  }
+
+  const toggleHUD = async () => {
+    if (showHUD.value) {
+      showHUD.value = false
+      if (hudVideoElement) {
+        hudVideoElement.close()
+        hudVideoElement = null
+      }
+    } else {
+      try {
+        const pipWindow = await documentPictureInPicture.requestWindow({
+          width: 480,
+          height: 640
+        })
+
+        // Create container in PiP window
+        const container = pipWindow.document.createElement('div')
+        container.id = 'hud-container'
+        pipWindow.document.body.appendChild(container)
+
+        // Add styles to PiP window
+        const style = pipWindow.document.createElement('style')
+        style.textContent = `
+          body {
+            margin: 0;
+            padding: 10px;
+            background: #252423;
+            color: #ffffff;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 13px;
+            line-height: 1.4;
+            overflow-y: auto;
+          }
+          #hud-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+          .hud-title {
+            color: #d7fc70;
+            font-weight: bold;
+            margin-bottom: 8px;
+          }
+          .hud-item {
+            background: #353433;
+            border-radius: 2px;
+            margin-bottom: 4px;
+            overflow: hidden;
+            display: flex;
+          }
+          .hud-mic, .hud-button {
+            flex: none;
+            display: flex;
+            align-items: center;
+            padding: 6px;
+            border: none;
+            color: #8b8685;
+            user-select: none;
+            background: transparent;
+          }
+          .hud-button {
+            cursor: pointer;
+          }
+          .hud-button:hover {
+            background: #454443;
+          }
+          .hud-text {
+            word-break: break-word;
+            flex: 1;
+            padding: 6px;
+          }
+          .interim {
+            color: #bef;
+          }
+        `
+        pipWindow.document.head.appendChild(style)
+
+        hudVideoElement = pipWindow
+        showHUD.value = true
+
+        // Handle window close
+        pipWindow.addEventListener('unload', () => {
+          showHUD.value = false
+          hudVideoElement = null
+        })
+      } catch (error) {
+        console.error('Failed to open Picture-in-Picture window:', error)
+        alert('Picture-in-Picture is not supported')
+      }
+    }
+  }
+
+  // Auto-scroll HUD to bottom when content updates
+  const scrollHUDToBottom = (v) => {
+    Vue.nextTick(() => {
+      if (hudVideoElement) {
+        const body = hudVideoElement.document
+        const items = body.querySelectorAll('.hud-item')
+        const lastItem = items[items.length - 1]
+        if (lastItem) {
+          lastItem.scrollIntoView({ behavior: 'smooth', block: 'end' })
+        }
+      }
+    })
+  }
+
+  const copyAllTranscript = () => {
+    const allText = results.value.map(r => r.transcript).join('\n')
+    navigator.clipboard.writeText(allText).then(() => {
+      diagnostic.value = 'All transcript copied to clipboard'
+    }).catch((err) => {
+      console.error('Failed to copy all transcript:', err)
+      diagnostic.value = 'Failed to copy all transcript'
+    })
+  }
+
+return (_ctx, _cache) => {
+  const _component_notes_callout_icon = _vue.resolveComponent.call(void 0, "notes-callout-icon")
+
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
+    _cache[9] || (_cache[9] = _vue.createElementVNode.call(void 0, "h1", { id: "web-speech-to-text" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#web-speech-to-text"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Web speech-to-text")
+    ], -1 /* CACHED */)),
+    _cache[10] || (_cache[10] = _vue.createElementVNode.call(void 0, "div", { class: "lead" }, [
+      _vue.createElementVNode.call(void 0, "p", null, "Use this tool to transcribe speech to text. All processing happens locally on your device.")
+    ], -1 /* CACHED */)),
+    _vue.createElementVNode.call(void 0, "div", {
+      style: _vue.normalizeStyle.call(void 0, [{"border-radius":"1em","border":"2px solid var(--n-listen-border)","padding":"1em","background":"#252423","margin":"2em 0"}, { '--n-listen-border': _vue.unref.call(void 0, isListening) ? '#d7fc70' : '#656463' }])
+    }, [
+      _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
+        _vue.createElementVNode.call(void 0, "button", {
+          onClick: toggleListening,
+          disabled: _vue.unref.call(void 0, isLoading),
+          class: "btn",
+          style: {"min-width":"120px"}
+        }, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, isLoading) ? 'Loading...' : (_vue.unref.call(void 0, isListening) ? 'Stop' : 'Start')), 9 /* TEXT, PROPS */, _hoisted_2),
+        _vue.createElementVNode.call(void 0, "button", {
+          onClick: toggleHUD,
+          class: "btn",
+          style: {"min-width":"120px"}
+        }, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, showHUD) ? 'Close HUD' : 'Show HUD'), 1 /* TEXT */),
+        _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
+          _vue.withDirectives.call(void 0, _vue.createElementVNode.call(void 0, "input", {
+            "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (_vue.isRef.call(void 0, languageCode) ? (languageCode).value = $event : null)),
+            disabled: _vue.unref.call(void 0, isListening),
+            type: "text",
+            class: "form-control",
+            placeholder: "e.g. en-US, ja-JP, th-TH, es-ES, fr-FR"
+          }, null, 8 /* PROPS */, _hoisted_4), [
+            [_vue.vModelText, _vue.unref.call(void 0, languageCode)]
+          ]),
+          _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "label", { class: "text-[#8b8685] text-sm font-bold" }, "Language Code", -1 /* CACHED */))
+        ])
+      ]),
+      _vue.createElementVNode.call(void 0, "textarea", {
+        readonly: "",
+        class: "form-control",
+        value: _vue.unref.call(void 0, diagnostic) || '[Diagnostic output]',
+        rows: "2"
+      }, null, 8 /* PROPS */, _hoisted_5),
+      _vue.createElementVNode.call(void 0, "div", _hoisted_6, [
+        _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "strong", { class: "text-[#8b8685]" }, "Recognition log:", -1 /* CACHED */)),
+        _vue.createElementVNode.call(void 0, "ul", _hoisted_7, [
+          (_vue.openBlock.call(void 0, true), _vue.createElementBlock.call(void 0, _vue.Fragment, null, _vue.renderList.call(void 0, _vue.unref.call(void 0, results).slice(-50), (result, index) => {
+            return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "li", {
+              key: result.id,
+              class: "bg-[#353433] px-3 py-2 rounded"
+            }, _vue.toDisplayString.call(void 0, result.transcript), 1 /* TEXT */))
+          }), 128 /* KEYED_FRAGMENT */)),
+          (_vue.unref.call(void 0, results).length === 0)
+            ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "li", _hoisted_8, "[No results yet]"))
+            : _vue.createCommentVNode.call(void 0, "v-if", true)
+        ])
+      ]),
+      _vue.createElementVNode.call(void 0, "div", _hoisted_9, [
+        _vue.createElementVNode.call(void 0, "button", {
+          onClick: copyAllTranscript,
+          disabled: _vue.unref.call(void 0, results).length === 0,
+          class: "btn",
+          style: {"min-width":"120px"}
+        }, " Copy All Transcript ", 8 /* PROPS */, _hoisted_10)
+      ]),
+      _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "div", { style: {"color":"#8b8685","font-size":"0.85em","margin-top":"1em"} }, [
+        _vue.createElementVNode.call(void 0, "strong", { style: {"color":"inherit"} }, "Tip:"),
+        _vue.createTextVNode.call(void 0, " Open browser console (F12) to see detailed event logs ")
+      ], -1 /* CACHED */))
+    ], 4 /* STYLE */),
+    (_vue.unref.call(void 0, showHUD) && _vue.unref.call(void 0, hudVideoElement))
+      ? (_vue.openBlock.call(void 0, ), _vue.createBlock.call(void 0, _vue.Teleport, {
+          key: 0,
+          to: _vue.unref.call(void 0, hudVideoElement).document.getElementById('hud-container')
+        }, [
+          _vue.createElementVNode.call(void 0, "div", _hoisted_11, [
+            _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "div", { class: "hud-title" }, "Transcript", -1 /* CACHED */)),
+            (_vue.unref.call(void 0, results).length === 0 && !_vue.unref.call(void 0, isListening))
+              ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_12, "(No results yet)"))
+              : _vue.createCommentVNode.call(void 0, "v-if", true),
+            (_vue.openBlock.call(void 0, true), _vue.createElementBlock.call(void 0, _vue.Fragment, null, _vue.renderList.call(void 0, _vue.unref.call(void 0, results).slice(-50), (result, index) => {
+              return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", {
+                key: result.id,
+                class: "hud-item"
+              }, [
+                _vue.createElementVNode.call(void 0, "button", {
+                  class: "hud-button",
+                  style: {"position":"relative"},
+                  onClick: $event => (copyTextFromHud(result.transcript, result.id)),
+                  draggable: "true",
+                  onDragstart: $event => (dragText(result.transcript, $event))
+                }, [
+                  _vue.createElementVNode.call(void 0, "span", {
+                    style: _vue.normalizeStyle.call(void 0, { opacity: _vue.unref.call(void 0, lastCopiedId) === result.id ? 0 : 1 })
+                  }, [
+                    _vue.createElementVNode.call(void 0, "img", {
+                      width: "16",
+                      height: "16",
+                      src: copyIcon,
+                      alt: "Copy"
+                    })
+                  ], 4 /* STYLE */),
+                  (_vue.unref.call(void 0, lastCopiedId) === result.id)
+                    ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "span", _hoisted_14, "✔︎"))
+                    : _vue.createCommentVNode.call(void 0, "v-if", true)
+                ], 40 /* PROPS, NEED_HYDRATION */, _hoisted_13),
+                _vue.createElementVNode.call(void 0, "div", _hoisted_15, _vue.toDisplayString.call(void 0, result.transcript), 1 /* TEXT */)
+              ]))
+            }), 128 /* KEYED_FRAGMENT */)),
+            (_vue.unref.call(void 0, isListening))
+              ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_16, [
+                  _vue.createElementVNode.call(void 0, "div", { class: "hud-mic" }, [
+                    _vue.createElementVNode.call(void 0, "img", {
+                      width: "16",
+                      height: "16",
+                      src: micIcon,
+                      alt: "Mic"
+                    })
+                  ]),
+                  _vue.createElementVNode.call(void 0, "div", _hoisted_17, _vue.toDisplayString.call(void 0, _vue.unref.call(void 0, interimTranscript) || '(listening)'), 1 /* TEXT */)
+                ]))
+              : _vue.createCommentVNode.call(void 0, "v-if", true)
+          ])
+        ], 8 /* PROPS */, ["to"]))
+      : _vue.createCommentVNode.call(void 0, "v-if", true),
+    _vue.createElementVNode.call(void 0, "div", _hoisted_18, [
+      _vue.createElementVNode.call(void 0, "p", _hoisted_19, [
+        _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Warning" }),
+        _cache[5] || (_cache[5] = _vue.createTextVNode.call(void 0, "Warning", -1 /* CACHED */))
+      ]),
+      _cache[6] || (_cache[6] = _vue.createElementVNode.call(void 0, "p", null, [
+        _vue.createTextVNode.call(void 0, "This tool uses "),
+        _vue.createElementVNode.call(void 0, "a", { href: "https://caniuse.com/mdn-api_speechrecognition_processlocally" }, "a feature that is currently only available in Google Chrome 142+"),
+        _vue.createTextVNode.call(void 0, ", and requires downloading language models. It may not be available in all regions.")
+      ], -1 /* CACHED */))
+    ]),
+    _vue.createElementVNode.call(void 0, "div", _hoisted_20, [
+      _vue.createElementVNode.call(void 0, "p", _hoisted_21, [
+        _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Tip" }),
+        _cache[7] || (_cache[7] = _vue.createTextVNode.call(void 0, "How to use", -1 /* CACHED */))
+      ]),
+      _cache[8] || (_cache[8] = _vue.createElementVNode.call(void 0, "ul", null, [
+        _vue.createElementVNode.call(void 0, "li", null, [
+          _vue.createTextVNode.call(void 0, "Click "),
+          _vue.createElementVNode.call(void 0, "strong", null, "Start"),
+          _vue.createTextVNode.call(void 0, " to begin speech recognition. The browser may ask for microphone permission.")
+        ]),
+        _vue.createElementVNode.call(void 0, "li", null, "Speak clearly into your microphone. The recognized text will appear in the log."),
+        _vue.createElementVNode.call(void 0, "li", null, [
+          _vue.createTextVNode.call(void 0, "Click "),
+          _vue.createElementVNode.call(void 0, "strong", null, "Show HUD"),
+          _vue.createTextVNode.call(void 0, " to open a Picture-in-Picture window displaying the transcript. This window will stay on top of other windows, allowing you to see the transcript while using other applications. "),
+          _vue.createElementVNode.call(void 0, "ul", null, [
+            _vue.createElementVNode.call(void 0, "li", null, "In the HUD, click the copy icon next to any transcript to copy it to your clipboard."),
+            _vue.createElementVNode.call(void 0, "li", null, "You can also drag copy buttons to other applications to drop the text there.")
+          ])
+        ])
+      ], -1 /* CACHED */))
+    ])
+  ], 64 /* STABLE_FRAGMENT */))
+}
+}
+
+}
+__sfc__.__scopeId = "data-v-8c9498c0"
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"title":"Web speech-to-text","public":true};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

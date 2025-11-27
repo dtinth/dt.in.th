@@ -424,6 +424,7 @@ https://dt.in.th/WebMIDI
 https://dt.in.th/WebMIDICon
 https://dt.in.th/WebMIDITalk
 https://dt.in.th/WebPlatform
+https://dt.in.th/WebSpeechToText
 https://dt.in.th/Webring
 https://dt.in.th/WebringBsky
 https://dt.in.th/WebsiteHistory

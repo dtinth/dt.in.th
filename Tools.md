@@ -21,5 +21,6 @@ Some lightweight tools available on this site:
 | [**Pomodoro timer**](Pomodoro) | Minimal Pomodoro timer with attention blinks and wake lock. |
 | [**Pointer events tester**](PointerEventsTester) | Test pointer events on your device. |
 | [**Web-based printing tool for Brother P-touch**](BrotherPTWebUSB) | Print labels using a Brother P-touch label printer from your browser. |
+| [**Web speech-to-text**](WebSpeechToText) | Convert spoken words into text on-device using Google Chrome's speech recognizer. |
 
 For other projects that I built, see [projects](Projects).

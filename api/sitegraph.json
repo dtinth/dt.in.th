@@ -3884,6 +3884,8 @@
 				}
 			,	{	"link": "PianoMajorScaleTrainer"
 				}
+			,	{	"link": "MMLPlayer"
+				}
 			,	{	"link": "Slip39Wordlist"
 				}
 			,	{	"link": "OklabVisualizer"
@@ -3901,6 +3903,8 @@
 			,	{	"link": "PointerEventsTester"
 				}
 			,	{	"link": "BrotherPTWebUSB"
+				}
+			,	{	"link": "WebSpeechToText"
 				}
 			,	{	"link": "Projects"
 				}
@@ -4246,6 +4250,10 @@
 			,	{	"link": "20210109T141458Z5537"
 				}
 			]
+		}
+	,	"WebSpeechToText":
+		{	"title": "Web speech-to-text"
+		,	"links": []
 		}
 	,	"Webring":
 		{	"title": "webring (topic)"

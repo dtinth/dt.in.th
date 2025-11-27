@@ -1703,6 +1703,10 @@
 		{	"title": "Web Platform (topic)"
 		,	"parent": "HomePage"
 		}
+	,	"WebSpeechToText":
+		{	"title": "Web speech-to-text"
+		,	"parent": "Tools"
+		}
 	,	"Webring":
 		{	"title": "webring (topic)"
 		,	"parent": "HomePage"
