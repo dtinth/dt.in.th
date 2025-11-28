@@ -31,10 +31,20 @@ Use this tool to transcribe speech to text. All processing happens locally on yo
         v-model="languageCode"
         :disabled="isListening"
         type="text"
-        class="form-control"
-        placeholder="e.g. en-US, ja-JP, th-TH, es-ES, fr-FR"
+        class="form-control w-[140px]"
+        placeholder="e.g. en-US"
+        list="language-codes"
       />
       <label class="text-[#8b8685] text-sm font-bold">Language Code</label>
+      <datalist id="language-codes">
+        <option
+          v-for="lang in supportedLanguages"
+          :key="lang.code"
+          :value="lang.code"
+        >
+          {{ lang.description }}
+        </option>
+      </datalist>
     </div>
   </div>
   <textarea readonly class="form-control" :value="diagnostic || '[Diagnostic output]'" rows="2"></textarea>
@@ -115,6 +125,25 @@ This tool uses [a feature that is currently only available in Google Chrome 142+
   const micIcon = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiM4Yjg2ODUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIj48cGF0aCBkPSJNMTIgMTl2M203LTEydjJhNyA3IDAgMCAxLTE0IDB2LTIiLz48cmVjdCB3aWR0aD0iNiIgaGVpZ2h0PSIxMyIgeD0iOSIgeT0iMiIgcng9IjMiLz48L2c+PC9zdmc+'
   let recognition = null
   let hudVideoElement = null
+  const supportedLanguages = [
+    { code: 'de-DE', description: 'German, Germany' },
+    { code: 'en-US', description: 'English, United States' },
+    { code: 'es-ES', description: 'Spanish, Spain' },
+    { code: 'fr-FR', description: 'French, France' },
+    { code: 'hi-IN', description: 'Hindi, India' },
+    { code: 'id-ID', description: 'Indonesian, Indonesia' },
+    { code: 'it-IT', description: 'Italian, Italy' },
+    { code: 'ja-JP', description: 'Japanese, Japan' },
+    { code: 'ko-KR', description: 'Korean, South Korea' },
+    { code: 'pl-PL', description: 'Polish, Poland' },
+    { code: 'pt-BR', description: 'Portuguese, Brazil' },
+    { code: 'ru-RU', description: 'Russian, Russia' },
+    { code: 'th-TH', description: 'Thai, Thailand' },
+    { code: 'tr-TR', description: 'Turkish, Turkey' },
+    { code: 'vi-VN', description: 'Vietnamese, Vietnam' },
+    { code: 'zh-CN', description: 'Chinese, Mandarin, Simplified' },
+    { code: 'zh-TW', description: 'Chinese, Mandarin, Traditional' },
+  ]
 
   const dragText = (text, event) => {
     event.dataTransfer.clearData()
