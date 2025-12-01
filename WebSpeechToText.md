@@ -26,6 +26,10 @@ Use this tool to transcribe speech to text. All processing happens locally on yo
     >
       {{ showHUD ? 'Close HUD' : 'Show HUD' }}
     </button>
+    <div v-for="(setting, settingKey) in settings" :key="settingKey" class="flex items-center mt-2 px-1 gap-1">
+      <input type="checkbox" v-model="setting.value" :id="`setting-${settingKey}`" />
+      <label :for="`setting-${settingKey}`" class="select-none">{{ setting.label }}</label>
+    </div>
     <div class="ml-auto">
       <input
         v-model="languageCode"
@@ -73,7 +77,6 @@ Use this tool to transcribe speech to text. All processing happens locally on yo
 </div><Teleport v-if="showHUD && hudVideoElement" :to="hudVideoElement.document.getElementById('hud-container')">
   <div class="hud-section">
     <div class="hud-title">Transcript</div>
-    <div v-if="results.length === 0 && !isListening" style="color: #8b8685;">(No results yet)</div>
     <div
       v-for="(result, index) in results.slice(-50)"
       :key="result.id"
@@ -96,14 +99,13 @@ Use this tool to transcribe speech to text. All processing happens locally on yo
       </button>
       <div class="hud-text">{{ result.transcript }}</div>
     </div>
-    <div
-      v-if="isListening"
-      class="hud-item"
-    >
-      <div class="hud-mic">
-        <img width="16" height="16" :src="micIcon" alt="Mic" />
+    <div class="hud-item">
+      <button class="hud-mic" @click="toggleListening">
+        <img width="16" height="16" :src="isListening ? micIcon : micOffIcon" alt="Mic" />
+      </button>
+      <div class="hud-text interim">
+        {{ isListening ? (interimTranscript || '(listening)') : '–' }}
       </div>
-      <div class="hud-text interim">{{ interimTranscript || '(listening)' }}</div>
     </div>
   </div>
 </Teleport>
@@ -121,8 +123,72 @@ This tool uses [a feature that is currently only available in Google Chrome 142+
   const interimTranscript = Vue.ref('')
   const lastCopiedId = Vue.ref(null)
   const languageCode = Vue.ref('en-US')
+
+  const settings = Vue.reactive({
+    audioFeedback: {
+      label: 'Audio feedback',
+      value: false
+    }
+  })
+
+  const pipCss = `
+    body {
+      margin: 0;
+      padding: 10px;
+      background: #252423;
+      color: #ffffff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 13px;
+      line-height: 1.4;
+      overflow-y: auto;
+      padding-bottom: 32vh;
+    }
+    #hud-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .hud-title {
+      color: #d7fc70;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .hud-item {
+      background: #353433;
+      border-radius: 2px;
+      margin-bottom: 4px;
+      overflow: hidden;
+      display: flex;
+    }
+    .hud-mic, .hud-button {
+      flex: none;
+      display: flex;
+      align-items: center;
+      padding: 6px;
+      border: none;
+      color: #8b8685;
+      user-select: none;
+      background: transparent;
+    }
+    .hud-button {
+      cursor: pointer;
+    }
+    .hud-button:hover {
+      background: #454443;
+    }
+    .hud-text {
+      word-break: break-word;
+      flex: 1;
+      padding: 6px;
+    }
+    .interim {
+      color: #bef;
+    }
+  `
   const copyIcon = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiM4Yjg2ODUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIj48cmVjdCB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHg9IjgiIHk9IjgiIHJ4PSIyIiByeT0iMiIvPjxwYXRoIGQ9Ik00IDE2Yy0xLjEgMC0yLS45LTItMlY0YzAtMS4xLjktMiAyLTJoMTBjMS4xIDAgMiAuOSAyIDIiLz48L2c+PC9zdmc+'
   const micIcon = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiM4Yjg2ODUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIj48cGF0aCBkPSJNMTIgMTl2M203LTEydjJhNyA3IDAgMCAxLTE0IDB2LTIiLz48cmVjdCB3aWR0aD0iNiIgaGVpZ2h0PSIxMyIgeD0iOSIgeT0iMiIgcng9IjMiLz48L2c+PC9zdmc+'
+  const micOffIcon = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZjg4ODgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIj48cGF0aCBkPSJNMTIgMTl2M20zLTEyLjY2VjVhMyAzIDAgMCAwLTUuNjgtMS4zM203LjYzIDEzLjI4QTcgNyAwIDAgMSA1IDEydi0ybTEzLjg5IDMuMjNBNyA3IDAgMCAwIDE5IDEydi0yTTIgMmwyMCAyMCIvPjxwYXRoIGQ9Ik05IDl2M2EzIDMgMCAwIDAgNS4xMiAyLjEyIi8+PC9nPjwvc3ZnPg=='
+
   let recognition = null
   let hudVideoElement = null
   const supportedLanguages = [
@@ -145,6 +211,65 @@ This tool uses [a feature that is currently only available in Google Chrome 142+
     { code: 'zh-TW', description: 'Chinese, Mandarin, Traditional' },
   ]
 
+  // SimpleTone
+  const playTone = (() => {
+    /** @type {{ emitTone: (f: number, s: number, v?: number) => void } | undefined} */
+    let toneGenerator
+    function getToneGenerator() {
+      if (toneGenerator) {
+        return toneGenerator
+      }
+
+      var ac = new AudioContext();
+      let nextToneTime = 0
+
+      /**
+       * @param {number} f
+       * @param {number} s
+       * @param {number} [v]
+       */
+      function emitTone(f, s, v = 0.5) {
+        const d = s * 0.05
+        const t = Math.max(ac.currentTime + d, nextToneTime)
+        nextToneTime = t + 0.05
+
+        const osc = ac.createOscillator()
+        const gain = ac.createGain()
+
+        osc.frequency.value = 220 * Math.pow(2, f / 12)
+        osc.connect(gain)
+
+        gain.gain.setValueAtTime(v, t)
+        gain.gain.linearRampToValueAtTime(0.0, t + 0.07)
+        gain.connect(ac.destination)
+
+        osc.start(t)
+        osc.stop(t + 0.1)
+        ac.resume();
+      }
+
+      toneGenerator = { emitTone }
+      return toneGenerator
+    }
+
+    /**
+     * Plays a sequence of tones.
+     * @param {number[]} a The sound frequencies to play. They will be played in sequence.
+     *  0 is the base frequency (220 Hz), 12 is one octave higher, -12 is one octave lower, etc.
+     * @param {number} [v] The volume (0.0 to 1.0). Default is 0.5.
+     */
+    return (a, v) => {
+      for (const [i, f] of a.entries()) {
+        getToneGenerator().emitTone(f, i, v)
+      }
+    }
+  })();
+  Vue.watch(() => settings.audioFeedback.value, (newVal) => {
+    if (newVal) {
+      playTone([26, 31])
+    }
+  });
+
   const dragText = (text, event) => {
     event.dataTransfer.clearData()
     event.dataTransfer.setData('text/plain', text)
@@ -165,12 +290,42 @@ This tool uses [a feature that is currently only available in Google Chrome 142+
         results.value[index].transcript = newText
       }
     }
+    if (event.detail?.type === 'addSetting') {
+      const settingKey = event.detail?.payload?.key
+      const settingLabel = event.detail?.payload?.label || settingKey
+      if (settingKey && !(settingKey in settings)) {
+        Object.assign(settings, { [settingKey]: {
+          label: settingLabel,
+          value: false
+        }})
+      }
+    }
   }
+  const onBuiltinPluginSpeechEvent = (() => {
+    let started = false
+    return (e) => {
+      if (settings.audioFeedback.value) {
+        if (e.detail.type === 'start' && !started) {
+          started = true
+          playTone([0, 5, 10])
+        }
+        if (e.detail.type === 'end') {
+          started = false
+          playTone([15, 8, 1])
+        }
+        if (e.detail.type === 'transcript') {
+          playTone([5, 10, 15])
+        }
+      }
+    }
+  })();
   Vue.onMounted(() => {
     window.addEventListener('speechevent', onSpeechEvent)
+    window.addEventListener('speechevent', onBuiltinPluginSpeechEvent)
   })
   Vue.onUnmounted(() => {
     window.removeEventListener('speechevent', onSpeechEvent)
+    window.removeEventListener('speechevent', onBuiltinPluginSpeechEvent)
   })
 
   const initRecognition = async () => {
@@ -221,7 +376,7 @@ This tool uses [a feature that is currently only available in Google Chrome 142+
       interimTranscript.value = interim
 
       if (final) {
-        const finalText = final.trim()
+        const finalText = normalizeText(final.trim())
         diagnostic.value = `Recognized: "${finalText}"`
         results.value.push({
           transcript: finalText,
@@ -231,7 +386,8 @@ This tool uses [a feature that is currently only available in Google Chrome 142+
         dispatchSpeechEvent('transcript', {
           transcript: finalText,
           confidence: lastConfidence,
-          id: timestamp
+          id: timestamp,
+          settings: JSON.parse(JSON.stringify(settings)),
         })
         scrollHUDToBottom()
       } else if (interim) {
@@ -385,59 +541,7 @@ This tool uses [a feature that is currently only available in Google Chrome 142+
 
         // Add styles to PiP window
         const style = pipWindow.document.createElement('style')
-        style.textContent = `
-          body {
-            margin: 0;
-            padding: 10px;
-            background: #252423;
-            color: #ffffff;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            font-size: 13px;
-            line-height: 1.4;
-            overflow-y: auto;
-          }
-          #hud-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-          }
-          .hud-title {
-            color: #d7fc70;
-            font-weight: bold;
-            margin-bottom: 8px;
-          }
-          .hud-item {
-            background: #353433;
-            border-radius: 2px;
-            margin-bottom: 4px;
-            overflow: hidden;
-            display: flex;
-          }
-          .hud-mic, .hud-button {
-            flex: none;
-            display: flex;
-            align-items: center;
-            padding: 6px;
-            border: none;
-            color: #8b8685;
-            user-select: none;
-            background: transparent;
-          }
-          .hud-button {
-            cursor: pointer;
-          }
-          .hud-button:hover {
-            background: #454443;
-          }
-          .hud-text {
-            word-break: break-word;
-            flex: 1;
-            padding: 6px;
-          }
-          .interim {
-            color: #bef;
-          }
-        `
+        style.textContent = pipCss;
         pipWindow.document.head.appendChild(style)
 
         hudVideoElement = pipWindow
@@ -463,7 +567,7 @@ This tool uses [a feature that is currently only available in Google Chrome 142+
         const items = body.querySelectorAll('.hud-item')
         const lastItem = items[items.length - 1]
         if (lastItem) {
-          lastItem.scrollIntoView({ behavior: 'smooth', block: 'end' })
+          lastItem.scrollIntoView({ behavior: 'smooth', block: 'center' })
         }
       }
     })
@@ -477,6 +581,10 @@ This tool uses [a feature that is currently only available in Google Chrome 142+
       console.error('Failed to copy all transcript:', err)
       diagnostic.value = 'Failed to copy all transcript'
     })
+  }
+
+  const normalizeText = (text) => {
+    return text.replace(/([\u0E01-\u0E45\u0E47-\u0E4E])[ ](?=[\u0E01-\u0E4E])/g, '$1')
   }
 </script>
 
