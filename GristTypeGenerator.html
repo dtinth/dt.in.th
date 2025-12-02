@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="GristTypeGenerator" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grist TypeScript Type Generator | dt.in.th</title><meta property="og:title" content="Grist TypeScript Type Generator" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/GristTypeGenerator" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://dt.in.th/GristTypeGenerator" data-source="note"><style id="note-styles">/* layer: default */
+.ml-auto[data-v-8c9498c0]{margin-left:auto;}
+.mt-0[data-v-8c9498c0]{margin-top:0;}
+.mt-1[data-v-8c9498c0]{margin-top:0.25rem;}
+.flex[data-v-8c9498c0]{display:flex;}
+.indent[data-v-8c9498c0]{text-indent:1.5rem;}
+.text-\[\#8b8685\][data-v-8c9498c0]{--un-text-opacity:1;color:rgb(139 134 133 / var(--un-text-opacity));}
+.font-mono[data-v-8c9498c0]{font-family:Comic Mono, ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;}</style>
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><h1 id="grist-typescript-type-generator" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#grist-typescript-type-generator" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Grist TypeScript Type Generator</h1><p data-v-8c9498c0>This <a href="Tools" data-v-8c9498c0>tool</a> generates <a href="TypeScript" data-v-8c9498c0>TypeScript</a> types from your <a href="Grist" data-v-8c9498c0>Grist</a> code view Python schema.</p><ol data-v-8c9498c0><li data-v-8c9498c0>Go to your Grist document</li><li data-v-8c9498c0>Click <strong data-v-8c9498c0>Code View</strong> (the code icon in the toolbar)</li><li data-v-8c9498c0>Copy the entire Python code</li><li data-v-8c9498c0>Paste it into the textarea below</li></ol><div style="display:flex;flex-direction:column;gap:1em;" data-v-8c9498c0><div data-v-8c9498c0><label for="grist-input" data-v-8c9498c0><strong class="text-[#8b8685]" data-v-8c9498c0>Grist Python Schema</strong></label><textarea id="grist-input" class="form-control mt-1 font-mono" placeholder="Paste your Grist Python code here..." style="min-height:300px;" data-v-8c9498c0></textarea></div><!----><div style="display:flex;flex-direction:column;gap:0.5em;" data-v-8c9498c0><div style="display:flex;gap:0.5em;align-items:flex-end;" data-v-8c9498c0><strong class="text-[#8b8685]" data-v-8c9498c0>Generated TypeScript Code</strong><button disabled class="btn ml-auto" data-v-8c9498c0>Copy</button></div><pre class="mt-0" data-v-8c9498c0><code data-v-8c9498c0>/* Generated code will display here */</code></pre></div></div><h2 id="usage" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#usage" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Usage</h2><p data-v-8c9498c0>Here&#39;s the type-safe GristDocAPI interface you can use with the generated types:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>// TypedGristDocAPI.ts</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>import</span><span style="color:#F97583;" data-v-8c9498c0> type</span><span style="color:#E1E4E8;" data-v-8c9498c0> { GristDocAPI } </span><span style="color:#F97583;" data-v-8c9498c0>from</span><span style="color:#9ECBFF;" data-v-8c9498c0> &#39;grist-api&#39;</span></span>
+<span class="line" data-v-8c9498c0></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>// From: https://dt.in.th/GristTypeGenerator</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>export</span><span style="color:#F97583;" data-v-8c9498c0> interface</span><span style="color:#B392F0;" data-v-8c9498c0> TypedGristDocAPI</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#B392F0;" data-v-8c9498c0>Tables</span><span style="color:#F97583;" data-v-8c9498c0> extends</span><span style="color:#B392F0;" data-v-8c9498c0> AnyTables</span><span style="color:#E1E4E8;" data-v-8c9498c0>&gt;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>  extends</span><span style="color:#B392F0;" data-v-8c9498c0> Omit</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>    GristDocAPI</span><span style="color:#E1E4E8;" data-v-8c9498c0>,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>    |</span><span style="color:#9ECBFF;" data-v-8c9498c0> &#39;fetchTable&#39;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>    |</span><span style="color:#9ECBFF;" data-v-8c9498c0> &#39;addRecords&#39;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>    |</span><span style="color:#9ECBFF;" data-v-8c9498c0> &#39;deleteRecords&#39;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>    |</span><span style="color:#9ECBFF;" data-v-8c9498c0> &#39;updateRecords&#39;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>    |</span><span style="color:#9ECBFF;" data-v-8c9498c0> &#39;syncTable&#39;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  &gt; {</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  fetchTable</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#B392F0;" data-v-8c9498c0>TableName</span><span style="color:#F97583;" data-v-8c9498c0> extends</span><span style="color:#F97583;" data-v-8c9498c0> keyof</span><span style="color:#B392F0;" data-v-8c9498c0> Tables</span><span style="color:#E1E4E8;" data-v-8c9498c0>&gt;(</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#FFAB70;" data-v-8c9498c0>    tableName</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#B392F0;" data-v-8c9498c0> TableName</span><span style="color:#E1E4E8;" data-v-8c9498c0>,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#FFAB70;" data-v-8c9498c0>    filters</span><span style="color:#F97583;" data-v-8c9498c0>?:</span><span style="color:#B392F0;" data-v-8c9498c0> FilterSpec</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#B392F0;" data-v-8c9498c0>Tables</span><span style="color:#E1E4E8;" data-v-8c9498c0>[</span><span style="color:#B392F0;" data-v-8c9498c0>TableName</span><span style="color:#E1E4E8;" data-v-8c9498c0>]&gt;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  )</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#B392F0;" data-v-8c9498c0> Promise</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#B392F0;" data-v-8c9498c0>Tables</span><span style="color:#E1E4E8;" data-v-8c9498c0>[</span><span style="color:#B392F0;" data-v-8c9498c0>TableName</span><span style="color:#E1E4E8;" data-v-8c9498c0>][]&gt;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  addRecords</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#B392F0;" data-v-8c9498c0>TableName</span><span style="color:#F97583;" data-v-8c9498c0> extends</span><span style="color:#F97583;" data-v-8c9498c0> keyof</span><span style="color:#B392F0;" data-v-8c9498c0> Tables</span><span style="color:#E1E4E8;" data-v-8c9498c0>&gt;(</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#FFAB70;" data-v-8c9498c0>    tableName</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#B392F0;" data-v-8c9498c0> TableName</span><span style="color:#E1E4E8;" data-v-8c9498c0>,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#FFAB70;" data-v-8c9498c0>    records</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#B392F0;" data-v-8c9498c0> Partial</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#B392F0;" data-v-8c9498c0>Tables</span><span style="color:#E1E4E8;" data-v-8c9498c0>[</span><span style="color:#B392F0;" data-v-8c9498c0>TableName</span><span style="color:#E1E4E8;" data-v-8c9498c0>]&gt;[]</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  )</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#B392F0;" data-v-8c9498c0> Promise</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#79B8FF;" data-v-8c9498c0>number</span><span style="color:#E1E4E8;" data-v-8c9498c0>[]&gt;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  deleteRecords</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#B392F0;" data-v-8c9498c0>TableName</span><span style="color:#F97583;" data-v-8c9498c0> extends</span><span style="color:#F97583;" data-v-8c9498c0> keyof</span><span style="color:#B392F0;" data-v-8c9498c0> Tables</span><span style="color:#E1E4E8;" data-v-8c9498c0>&gt;(</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#FFAB70;" data-v-8c9498c0>    tableName</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#B392F0;" data-v-8c9498c0> TableName</span><span style="color:#E1E4E8;" data-v-8c9498c0>,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#FFAB70;" data-v-8c9498c0>    recordIds</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#79B8FF;" data-v-8c9498c0> number</span><span style="color:#E1E4E8;" data-v-8c9498c0>[]</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  )</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#B392F0;" data-v-8c9498c0> Promise</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#79B8FF;" data-v-8c9498c0>void</span><span style="color:#E1E4E8;" data-v-8c9498c0>&gt;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  updateRecords</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#B392F0;" data-v-8c9498c0>TableName</span><span style="color:#F97583;" data-v-8c9498c0> extends</span><span style="color:#F97583;" data-v-8c9498c0> keyof</span><span style="color:#B392F0;" data-v-8c9498c0> Tables</span><span style="color:#E1E4E8;" data-v-8c9498c0>&gt;(</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#FFAB70;" data-v-8c9498c0>    tableName</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#B392F0;" data-v-8c9498c0> TableName</span><span style="color:#E1E4E8;" data-v-8c9498c0>,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#FFAB70;" data-v-8c9498c0>    records</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#E1E4E8;" data-v-8c9498c0> (</span><span style="color:#B392F0;" data-v-8c9498c0>Partial</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#B392F0;" data-v-8c9498c0>Tables</span><span style="color:#E1E4E8;" data-v-8c9498c0>[</span><span style="color:#B392F0;" data-v-8c9498c0>TableName</span><span style="color:#E1E4E8;" data-v-8c9498c0>]&gt; </span><span style="color:#F97583;" data-v-8c9498c0>&amp;</span><span style="color:#E1E4E8;" data-v-8c9498c0> { </span><span style="color:#FFAB70;" data-v-8c9498c0>id</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#79B8FF;" data-v-8c9498c0> number</span><span style="color:#E1E4E8;" data-v-8c9498c0> })[]</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  )</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#B392F0;" data-v-8c9498c0> Promise</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#79B8FF;" data-v-8c9498c0>void</span><span style="color:#E1E4E8;" data-v-8c9498c0>&gt;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>  syncTable</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#B392F0;" data-v-8c9498c0>TableName</span><span style="color:#F97583;" data-v-8c9498c0> extends</span><span style="color:#F97583;" data-v-8c9498c0> keyof</span><span style="color:#B392F0;" data-v-8c9498c0> Tables</span><span style="color:#E1E4E8;" data-v-8c9498c0>&gt;(</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#FFAB70;" data-v-8c9498c0>    tableName</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#B392F0;" data-v-8c9498c0> TableName</span><span style="color:#E1E4E8;" data-v-8c9498c0>,</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#FFAB70;" data-v-8c9498c0>    records</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#B392F0;" data-v-8c9498c0> Partial</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#B392F0;" data-v-8c9498c0>Tables</span><span style="color:#E1E4E8;" data-v-8c9498c0>[</span><span style="color:#B392F0;" data-v-8c9498c0>TableName</span><span style="color:#E1E4E8;" data-v-8c9498c0>]&gt;[],</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#FFAB70;" data-v-8c9498c0>    keyColIds</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#E1E4E8;" data-v-8c9498c0> (</span><span style="color:#F97583;" data-v-8c9498c0>keyof</span><span style="color:#B392F0;" data-v-8c9498c0> Tables</span><span style="color:#E1E4E8;" data-v-8c9498c0>[</span><span style="color:#B392F0;" data-v-8c9498c0>TableName</span><span style="color:#E1E4E8;" data-v-8c9498c0>])[],</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#FFAB70;" data-v-8c9498c0>    options</span><span style="color:#F97583;" data-v-8c9498c0>?:</span><span style="color:#E1E4E8;" data-v-8c9498c0> { </span><span style="color:#FFAB70;" data-v-8c9498c0>filters</span><span style="color:#F97583;" data-v-8c9498c0>?:</span><span style="color:#B392F0;" data-v-8c9498c0> FilterSpec</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#B392F0;" data-v-8c9498c0>Tables</span><span style="color:#E1E4E8;" data-v-8c9498c0>[</span><span style="color:#B392F0;" data-v-8c9498c0>TableName</span><span style="color:#E1E4E8;" data-v-8c9498c0>]&gt; }</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  )</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#B392F0;" data-v-8c9498c0> Promise</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#79B8FF;" data-v-8c9498c0>void</span><span style="color:#E1E4E8;" data-v-8c9498c0>&gt;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>}</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>export</span><span style="color:#F97583;" data-v-8c9498c0> type</span><span style="color:#B392F0;" data-v-8c9498c0> AnyTable</span><span style="color:#F97583;" data-v-8c9498c0> =</span><span style="color:#E1E4E8;" data-v-8c9498c0> { [</span><span style="color:#FFAB70;" data-v-8c9498c0>colId</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#79B8FF;" data-v-8c9498c0> string</span><span style="color:#E1E4E8;" data-v-8c9498c0>]</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#79B8FF;" data-v-8c9498c0> unknown</span><span style="color:#E1E4E8;" data-v-8c9498c0> }</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>export</span><span style="color:#F97583;" data-v-8c9498c0> type</span><span style="color:#B392F0;" data-v-8c9498c0> AnyTables</span><span style="color:#F97583;" data-v-8c9498c0> =</span><span style="color:#E1E4E8;" data-v-8c9498c0> { [</span><span style="color:#FFAB70;" data-v-8c9498c0>table</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#79B8FF;" data-v-8c9498c0> string</span><span style="color:#E1E4E8;" data-v-8c9498c0>]</span><span style="color:#F97583;" data-v-8c9498c0>:</span><span style="color:#B392F0;" data-v-8c9498c0> AnyTable</span><span style="color:#E1E4E8;" data-v-8c9498c0> }</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>export</span><span style="color:#F97583;" data-v-8c9498c0> type</span><span style="color:#B392F0;" data-v-8c9498c0> FilterSpec</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#B392F0;" data-v-8c9498c0>Table</span><span style="color:#F97583;" data-v-8c9498c0> extends</span><span style="color:#B392F0;" data-v-8c9498c0> AnyTable</span><span style="color:#E1E4E8;" data-v-8c9498c0>&gt; </span><span style="color:#F97583;" data-v-8c9498c0>=</span><span style="color:#E1E4E8;" data-v-8c9498c0> {</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>  [</span><span style="color:#B392F0;" data-v-8c9498c0>ColId</span><span style="color:#F97583;" data-v-8c9498c0> in</span><span style="color:#F97583;" data-v-8c9498c0> keyof</span><span style="color:#B392F0;" data-v-8c9498c0> Table</span><span style="color:#E1E4E8;" data-v-8c9498c0>]</span><span style="color:#F97583;" data-v-8c9498c0>?:</span><span style="color:#B392F0;" data-v-8c9498c0> Table</span><span style="color:#E1E4E8;" data-v-8c9498c0>[</span><span style="color:#B392F0;" data-v-8c9498c0>ColId</span><span style="color:#E1E4E8;" data-v-8c9498c0>][]</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>}</span></span></code></pre><p data-v-8c9498c0>To use it, cast the <code data-v-8c9498c0>GristDocAPI</code> instance with your generated <code data-v-8c9498c0>GristTables</code> type:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>import</span><span style="color:#E1E4E8;" data-v-8c9498c0> { GristDocAPI } </span><span style="color:#F97583;" data-v-8c9498c0>from</span><span style="color:#9ECBFF;" data-v-8c9498c0> &#39;grist-api&#39;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>import</span><span style="color:#F97583;" data-v-8c9498c0> type</span><span style="color:#E1E4E8;" data-v-8c9498c0> { GristTables } </span><span style="color:#F97583;" data-v-8c9498c0>from</span><span style="color:#9ECBFF;" data-v-8c9498c0> &#39;./GristTables&#39;</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>import</span><span style="color:#F97583;" data-v-8c9498c0> type</span><span style="color:#E1E4E8;" data-v-8c9498c0> { TypedGristDocAPI } </span><span style="color:#F97583;" data-v-8c9498c0>from</span><span style="color:#9ECBFF;" data-v-8c9498c0> &#39;./TypedGristDocAPI&#39;</span></span>
+<span class="line" data-v-8c9498c0></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>const</span><span style="color:#79B8FF;" data-v-8c9498c0> gristDoc</span><span style="color:#F97583;" data-v-8c9498c0> =</span><span style="color:#F97583;" data-v-8c9498c0> new</span><span style="color:#B392F0;" data-v-8c9498c0> GristDocAPI</span><span style="color:#E1E4E8;" data-v-8c9498c0>(docUrl) </span><span style="color:#F97583;" data-v-8c9498c0>as</span><span style="color:#B392F0;" data-v-8c9498c0> TypedGristDocAPI</span><span style="color:#E1E4E8;" data-v-8c9498c0>&lt;</span><span style="color:#B392F0;" data-v-8c9498c0>GristTables</span><span style="color:#E1E4E8;" data-v-8c9498c0>&gt;</span></span></code></pre><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});/* Analyzed bindings: {
+  "input": "setup-maybe-ref",
+  "error": "setup-maybe-ref",
+  "generatedCode": "setup-maybe-ref",
+  "copyToClipboard": "setup-maybe-ref"
+} */
+
+  const __sfc__ = {
+    setup() {
+      const input = Vue.ref('')
+      const error = Vue.ref('')
+      const generatedCode = Vue.ref('')
+
+      const gristTypeDefinitions = {
+        'Text': 'string',
+        'Numeric': 'number',
+        'Int': 'number',
+        'Bool': 'boolean',
+        'Date': 'string',
+        'DateTime': 'string',
+        'Choice': 'string',
+        'Reference': 'number',
+        'ReferenceList': '(["L", ...number[]] | null)',
+        'ChoiceList': '(["L", ...string[]] | null)',
+        'Attachments': '(["L", ...number[]] | null)',
+        'Any': 'any',
+      }
+
+      const gristTypeMap = {
+        'Text': 'grist.Text',
+        'Numeric': 'grist.Numeric',
+        'Int': 'grist.Int',
+        'Bool': 'grist.Bool',
+        'Date': 'grist.Date',
+        'DateTime': 'grist.DateTime',
+        'Choice': 'grist.Choice',
+        'Reference': 'grist.Reference',
+        'ReferenceList': 'grist.ReferenceList',
+        'ChoiceList': 'grist.ChoiceList',
+        'Attachments': 'grist.Attachments',
+        'Calculated': 'grist.Any',
+        'Any': 'grist.Any',
+      }
+
+      const parseGristSchema = (code) => {
+        const lines = code.split('\n').map((text, i) => ({
+          text,
+          trimmed: text.trim(),
+          indent: text.match(/^\s*/)[0].length,
+          index: i
+        }))
+
+        // Parse top level: find @grist.UserTable and collect class children
+        const parseTopLevel = () => {
+          const trees = []
+          let i = 0
+
+          while (i < lines.length) {
+            if (lines[i].trimmed === '@grist.UserTable') {
+              // Find the class definition
+              let classLineIndex = null
+              for (let j = i + 1; j < lines.length; j++) {
+                if (lines[j].trimmed.startsWith('class ')) {
+                  classLineIndex = j
+                  break
+                }
+              }
+
+              if (classLineIndex) {
+                const classLine = lines[classLineIndex]
+                const className = classLine.trimmed.match(/class\s+(\w+):/)[1]
+
+                // Skip nested classes like _Summary
+                if (!className.includes('_Summary')) {
+                  const classIndent = classLine.indent
+
+                  // Collect all children (any line with indent > classIndent)
+                  const children = []
+                  for (let j = classLineIndex + 1; j < lines.length; j++) {
+                    const l = lines[j]
+
+                    // Stop conditions
+                    if (l.trimmed === '@grist.UserTable') break
+                    if (l.trimmed && l.indent === 0) break
+
+                    // Collect direct children
+                    if (l.indent > classIndent) {
+                      children.push(l)
+                    }
+                  }
+
+                  trees.push({
+                    name: className,
+                    classIndent: classIndent,
+                    children
+                  })
+                }
+
+                i = classLineIndex
+              } else {
+                i++
+              }
+            } else {
+              i++
+            }
+          }
+
+          return trees
+        }
+
+        // Parse second level: extract fields and methods from children
+        const parseSecondLevel = (trees) => {
+          trees.forEach(table => {
+            const fields = []
+            let lastDecorator = null
+            let inNestedClass = false
+            let nestedClassIndent = 0
+
+            table.children.forEach(line => {
+              const trimmed = line.trimmed
+
+              // Skip empty and comments
+              if (!trimmed || trimmed.startsWith('#')) {
+                return
+              }
+
+              // Detect nested class (like _Summary)
+              if (trimmed.startsWith('class ')) {
+                inNestedClass = true
+                nestedClassIndent = line.indent
+                return
+              }
+
+              // Skip everything inside nested class
+              if (inNestedClass) {
+                if (line.indent <= nestedClassIndent && trimmed) {
+                  inNestedClass = false
+                } else {
+                  return
+                }
+              }
+
+              // Check for @grist.formulaType decorator
+              const decoratorMatch = trimmed.match(/@grist\.formulaType\s*\(\s*grist\.(\w+)\s*\((.*?)\)\s*\)/)
+              if (decoratorMatch) {
+                lastDecorator = {
+                  type: decoratorMatch[1],
+                  args: decoratorMatch[2]
+                }
+                return
+              }
+
+              // Skip other decorators
+              if (trimmed.startsWith('@')) {
+                lastDecorator = null
+                return
+              }
+
+              // Field: name = grist.Type(...)
+              const fieldMatch = trimmed.match(/^(\w+)\s*=\s*grist\.(\w+)\s*\((.*)\)/)
+              if (fieldMatch) {
+                fields.push({
+                  name: fieldMatch[1],
+                  type: fieldMatch[2],
+                  args: fieldMatch[3]
+                })
+                lastDecorator = null
+                return
+              }
+
+              // Method: def name(...)
+              const methodMatch = trimmed.match(/^def\s+(\w+)\s*\(/)
+              if (methodMatch) {
+                const methodName = methodMatch[1]
+                if (!methodName.startsWith('_')) {
+                  fields.push({
+                    name: methodName,
+                    type: lastDecorator ? lastDecorator.type : 'Calculated',
+                    args: lastDecorator ? lastDecorator.args : '',
+                    isMethod: true
+                  })
+                }
+                lastDecorator = null
+              }
+            })
+
+            table.fields = fields
+          })
+        }
+
+        const trees = parseTopLevel()
+        parseSecondLevel(trees)
+
+        return trees.map(t => ({
+          name: t.name,
+          fields: t.fields
+        }))
+      }
+
+      const generateTypes = () => {
+        error.value = ''
+        generatedCode.value = ''
+
+        if (!input.value.trim()) {
+          return
+        }
+
+        try {
+          const tables = parseGristSchema(input.value)
+
+          if (tables.length === 0) {
+            throw new Error('No Grist tables found. Make sure the code contains @grist.UserTable decorated classes.')
+          }
+
+          // Generate namespace with type definitions
+          const namespaceTypes = Object.entries(gristTypeDefinitions)
+            .map(([name, type]) => `  export type ${name} = ${type}`)
+            .join('\n')
+
+          const gristNamespace = `export namespace grist {\n${namespaceTypes}\n}\n`
+
+          // Generate TypeScript types
+          const tableTypes = tables.map(table => {
+            const fields = table.fields.map(field => {
+              let tsType = gristTypeMap[field.type] || 'any'
+
+              // Add comment only for calculated/formula fields
+              const suffix = field.isMethod ? ` // calculated/formula` : ''
+              return `    ${field.name}: ${tsType}${suffix}`
+            }).join('\n')
+
+            let result = `  ${table.name}: {\n`
+            result += `    id: number\n`
+            if (fields) {
+              result += fields + '\n'
+            }
+            result += `  }`
+
+            return result
+          }).join('\n\n')
+
+          const typeDefinitions = `${gristNamespace}\nexport type GristTables = {\n${tableTypes}\n}`
+          generatedCode.value = typeDefinitions
+        } catch (err) {
+          error.value = err.message || 'Failed to parse Grist schema'
+        }
+      }
+
+      const copyToClipboard = async () => {
+        try {
+          await navigator.clipboard.writeText(generatedCode.value)
+          alert('Copied to clipboard!')
+        } catch (err) {
+          alert('Failed to copy')
+        }
+      }
+
+      Vue.watch(input, () => {
+        generateTypes()
+      })
+
+      return { input, error, generatedCode, copyToClipboard }
+    }
+  }
+;
+var _vue = require('vue');
+
+const _hoisted_1 = { style: {"display":"flex","flex-direction":"column","gap":"1em"} }
+const _hoisted_2 = { key: 0 }
+const _hoisted_3 = { style: {"display":"flex","flex-direction":"column","gap":"0.5em"} }
+const _hoisted_4 = { style: {"display":"flex","gap":"0.5em","align-items":"flex-end"} }
+const _hoisted_5 = ["disabled"]
+const _hoisted_6 = { class: "mt-0" }
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
+    _cache[5] || (_cache[5] = _vue.createStaticVNode.call(void 0, "<h1 id=\"grist-typescript-type-generator\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#grist-typescript-type-generator\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Grist TypeScript Type Generator</h1><p data-v-8c9498c0>This <a href=\"Tools\" data-v-8c9498c0>tool</a> generates <a href=\"TypeScript\" data-v-8c9498c0>TypeScript</a> types from your <a href=\"Grist\" data-v-8c9498c0>Grist</a> code view Python schema.</p><ol data-v-8c9498c0><li data-v-8c9498c0>Go to your Grist document</li><li data-v-8c9498c0>Click <strong data-v-8c9498c0>Code View</strong> (the code icon in the toolbar)</li><li data-v-8c9498c0>Copy the entire Python code</li><li data-v-8c9498c0>Paste it into the textarea below</li></ol>", 3)),
+    _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
+      _vue.createElementVNode.call(void 0, "div", null, [
+        _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "label", { for: "grist-input" }, [
+          _vue.createElementVNode.call(void 0, "strong", { class: "text-[#8b8685]" }, "Grist Python Schema")
+        ], -1 /* CACHED */)),
+        _vue.withDirectives.call(void 0, _vue.createElementVNode.call(void 0, "textarea", {
+          id: "grist-input",
+          "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($setup.input) = $event)),
+          class: "form-control mt-1 font-mono",
+          placeholder: "Paste your Grist Python code here...",
+          style: {"min-height":"300px"}
+        }, null, 512 /* NEED_PATCH */), [
+          [_vue.vModelText, $setup.input]
+        ])
+      ]),
+      ($setup.error)
+        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_2, [
+            _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "strong", null, "Error:", -1 /* CACHED */)),
+            _vue.createTextVNode.call(void 0, " " + _vue.toDisplayString.call(void 0, $setup.error), 1 /* TEXT */)
+          ]))
+        : _vue.createCommentVNode.call(void 0, "v-if", true),
+      _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
+        _vue.createElementVNode.call(void 0, "div", _hoisted_4, [
+          _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "strong", { class: "text-[#8b8685]" }, "Generated TypeScript Code", -1 /* CACHED */)),
+          _vue.createElementVNode.call(void 0, "button", {
+            onClick: _cache[1] || (_cache[1] = (...args) => ($setup.copyToClipboard && $setup.copyToClipboard(...args))),
+            disabled: !$setup.generatedCode,
+            class: "btn ml-auto"
+          }, "Copy", 8 /* PROPS */, _hoisted_5)
+        ]),
+        _vue.createElementVNode.call(void 0, "pre", _hoisted_6, [
+          _vue.createElementVNode.call(void 0, "code", null, _vue.toDisplayString.call(void 0, $setup.generatedCode || '/* Generated code will display here */'), 1 /* TEXT */)
+        ])
+      ])
+    ]),
+    _cache[6] || (_cache[6] = _vue.createStaticVNode.call(void 0, "<h2 id=\"usage\" data-v-8c9498c0><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#usage\" data-v-8c9498c0><span class=\"icon icon-link\" data-v-8c9498c0></span></a>Usage</h2><p data-v-8c9498c0>Here&#39;s the type-safe GristDocAPI interface you can use with the generated types:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>// TypedGristDocAPI.ts</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>import</span><span style=\"color:#F97583;\" data-v-8c9498c0> type</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> { GristDocAPI } </span><span style=\"color:#F97583;\" data-v-8c9498c0>from</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> &#39;grist-api&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>// From: https://dt.in.th/GristTypeGenerator</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>export</span><span style=\"color:#F97583;\" data-v-8c9498c0> interface</span><span style=\"color:#B392F0;\" data-v-8c9498c0> TypedGristDocAPI</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#B392F0;\" data-v-8c9498c0>Tables</span><span style=\"color:#F97583;\" data-v-8c9498c0> extends</span><span style=\"color:#B392F0;\" data-v-8c9498c0> AnyTables</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&gt;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>  extends</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Omit</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>    GristDocAPI</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>    |</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> &#39;fetchTable&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>    |</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> &#39;addRecords&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>    |</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> &#39;deleteRecords&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>    |</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> &#39;updateRecords&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>    |</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> &#39;syncTable&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>  &gt; {</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  fetchTable</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#B392F0;\" data-v-8c9498c0>TableName</span><span style=\"color:#F97583;\" data-v-8c9498c0> extends</span><span style=\"color:#F97583;\" data-v-8c9498c0> keyof</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Tables</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&gt;(</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#FFAB70;\" data-v-8c9498c0>    tableName</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#B392F0;\" data-v-8c9498c0> TableName</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#FFAB70;\" data-v-8c9498c0>    filters</span><span style=\"color:#F97583;\" data-v-8c9498c0>?:</span><span style=\"color:#B392F0;\" data-v-8c9498c0> FilterSpec</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#B392F0;\" data-v-8c9498c0>Tables</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>[</span><span style=\"color:#B392F0;\" data-v-8c9498c0>TableName</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>]&gt;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>  )</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Promise</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#B392F0;\" data-v-8c9498c0>Tables</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>[</span><span style=\"color:#B392F0;\" data-v-8c9498c0>TableName</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>][]&gt;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  addRecords</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#B392F0;\" data-v-8c9498c0>TableName</span><span style=\"color:#F97583;\" data-v-8c9498c0> extends</span><span style=\"color:#F97583;\" data-v-8c9498c0> keyof</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Tables</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&gt;(</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#FFAB70;\" data-v-8c9498c0>    tableName</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#B392F0;\" data-v-8c9498c0> TableName</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#FFAB70;\" data-v-8c9498c0>    records</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Partial</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#B392F0;\" data-v-8c9498c0>Tables</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>[</span><span style=\"color:#B392F0;\" data-v-8c9498c0>TableName</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>]&gt;[]</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>  )</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Promise</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#79B8FF;\" data-v-8c9498c0>number</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>[]&gt;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  deleteRecords</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#B392F0;\" data-v-8c9498c0>TableName</span><span style=\"color:#F97583;\" data-v-8c9498c0> extends</span><span style=\"color:#F97583;\" data-v-8c9498c0> keyof</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Tables</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&gt;(</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#FFAB70;\" data-v-8c9498c0>    tableName</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#B392F0;\" data-v-8c9498c0> TableName</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#FFAB70;\" data-v-8c9498c0>    recordIds</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#79B8FF;\" data-v-8c9498c0> number</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>[]</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>  )</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Promise</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#79B8FF;\" data-v-8c9498c0>void</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&gt;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  updateRecords</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#B392F0;\" data-v-8c9498c0>TableName</span><span style=\"color:#F97583;\" data-v-8c9498c0> extends</span><span style=\"color:#F97583;\" data-v-8c9498c0> keyof</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Tables</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&gt;(</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#FFAB70;\" data-v-8c9498c0>    tableName</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#B392F0;\" data-v-8c9498c0> TableName</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#FFAB70;\" data-v-8c9498c0>    records</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> (</span><span style=\"color:#B392F0;\" data-v-8c9498c0>Partial</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#B392F0;\" data-v-8c9498c0>Tables</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>[</span><span style=\"color:#B392F0;\" data-v-8c9498c0>TableName</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>]&gt; </span><span style=\"color:#F97583;\" data-v-8c9498c0>&amp;</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> { </span><span style=\"color:#FFAB70;\" data-v-8c9498c0>id</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#79B8FF;\" data-v-8c9498c0> number</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> })[]</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>  )</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Promise</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#79B8FF;\" data-v-8c9498c0>void</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&gt;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>  syncTable</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#B392F0;\" data-v-8c9498c0>TableName</span><span style=\"color:#F97583;\" data-v-8c9498c0> extends</span><span style=\"color:#F97583;\" data-v-8c9498c0> keyof</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Tables</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&gt;(</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#FFAB70;\" data-v-8c9498c0>    tableName</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#B392F0;\" data-v-8c9498c0> TableName</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>,</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#FFAB70;\" data-v-8c9498c0>    records</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Partial</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#B392F0;\" data-v-8c9498c0>Tables</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>[</span><span style=\"color:#B392F0;\" data-v-8c9498c0>TableName</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>]&gt;[],</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#FFAB70;\" data-v-8c9498c0>    keyColIds</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> (</span><span style=\"color:#F97583;\" data-v-8c9498c0>keyof</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Tables</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>[</span><span style=\"color:#B392F0;\" data-v-8c9498c0>TableName</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>])[],</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#FFAB70;\" data-v-8c9498c0>    options</span><span style=\"color:#F97583;\" data-v-8c9498c0>?:</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> { </span><span style=\"color:#FFAB70;\" data-v-8c9498c0>filters</span><span style=\"color:#F97583;\" data-v-8c9498c0>?:</span><span style=\"color:#B392F0;\" data-v-8c9498c0> FilterSpec</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#B392F0;\" data-v-8c9498c0>Tables</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>[</span><span style=\"color:#B392F0;\" data-v-8c9498c0>TableName</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>]&gt; }</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>  )</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Promise</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#79B8FF;\" data-v-8c9498c0>void</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&gt;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>}</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>export</span><span style=\"color:#F97583;\" data-v-8c9498c0> type</span><span style=\"color:#B392F0;\" data-v-8c9498c0> AnyTable</span><span style=\"color:#F97583;\" data-v-8c9498c0> =</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> { [</span><span style=\"color:#FFAB70;\" data-v-8c9498c0>colId</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#79B8FF;\" data-v-8c9498c0> string</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>]</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#79B8FF;\" data-v-8c9498c0> unknown</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> }</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>export</span><span style=\"color:#F97583;\" data-v-8c9498c0> type</span><span style=\"color:#B392F0;\" data-v-8c9498c0> AnyTables</span><span style=\"color:#F97583;\" data-v-8c9498c0> =</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> { [</span><span style=\"color:#FFAB70;\" data-v-8c9498c0>table</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#79B8FF;\" data-v-8c9498c0> string</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>]</span><span style=\"color:#F97583;\" data-v-8c9498c0>:</span><span style=\"color:#B392F0;\" data-v-8c9498c0> AnyTable</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> }</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>export</span><span style=\"color:#F97583;\" data-v-8c9498c0> type</span><span style=\"color:#B392F0;\" data-v-8c9498c0> FilterSpec</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#B392F0;\" data-v-8c9498c0>Table</span><span style=\"color:#F97583;\" data-v-8c9498c0> extends</span><span style=\"color:#B392F0;\" data-v-8c9498c0> AnyTable</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&gt; </span><span style=\"color:#F97583;\" data-v-8c9498c0>=</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> {</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>  [</span><span style=\"color:#B392F0;\" data-v-8c9498c0>ColId</span><span style=\"color:#F97583;\" data-v-8c9498c0> in</span><span style=\"color:#F97583;\" data-v-8c9498c0> keyof</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Table</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>]</span><span style=\"color:#F97583;\" data-v-8c9498c0>?:</span><span style=\"color:#B392F0;\" data-v-8c9498c0> Table</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>[</span><span style=\"color:#B392F0;\" data-v-8c9498c0>ColId</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>][]</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>}</span></span></code></pre><p data-v-8c9498c0>To use it, cast the <code data-v-8c9498c0>GristDocAPI</code> instance with your generated <code data-v-8c9498c0>GristTables</code> type:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>import</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> { GristDocAPI } </span><span style=\"color:#F97583;\" data-v-8c9498c0>from</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> &#39;grist-api&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>import</span><span style=\"color:#F97583;\" data-v-8c9498c0> type</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> { GristTables } </span><span style=\"color:#F97583;\" data-v-8c9498c0>from</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> &#39;./GristTables&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>import</span><span style=\"color:#F97583;\" data-v-8c9498c0> type</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> { TypedGristDocAPI } </span><span style=\"color:#F97583;\" data-v-8c9498c0>from</span><span style=\"color:#9ECBFF;\" data-v-8c9498c0> &#39;./TypedGristDocAPI&#39;</span></span>\n<span class=\"line\" data-v-8c9498c0></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>const</span><span style=\"color:#79B8FF;\" data-v-8c9498c0> gristDoc</span><span style=\"color:#F97583;\" data-v-8c9498c0> =</span><span style=\"color:#F97583;\" data-v-8c9498c0> new</span><span style=\"color:#B392F0;\" data-v-8c9498c0> GristDocAPI</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>(docUrl) </span><span style=\"color:#F97583;\" data-v-8c9498c0>as</span><span style=\"color:#B392F0;\" data-v-8c9498c0> TypedGristDocAPI</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&lt;</span><span style=\"color:#B392F0;\" data-v-8c9498c0>GristTables</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0>&gt;</span></span></code></pre>", 5))
+  ], 64 /* STABLE_FRAGMENT */))
+}
+__sfc__.render = render
+__sfc__.__scopeId = "data-v-8c9498c0"
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"title":"Grist TypeScript Type Generator","public":true};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

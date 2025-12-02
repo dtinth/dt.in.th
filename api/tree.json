@@ -788,6 +788,10 @@
 		{	"title": "Self-hosted Grist benchmarks"
 		,	"parent": "Grist"
 		}
+	,	"GristTypeGenerator":
+		{	"title": "Grist TypeScript Type Generator"
+		,	"parent": "Grist"
+		}
 	,	"GristUpsertN8n":
 		{	"title": "Upserting data into Grist using n8n"
 		,	"parent": "N8n"

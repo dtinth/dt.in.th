@@ -1761,6 +1761,8 @@
 				}
 			,	{	"link": "GristUpsertN8n"
 				}
+			,	{	"link": "GristTypeGenerator"
+				}
 			,	{	"link": "Database"
 				}
 			,	{	"link": "N8n"
@@ -1786,6 +1788,17 @@
 			,	{	"link": "#user-content-fnref-1"
 				}
 			,	{	"link": "#user-content-fnref-2"
+				}
+			]
+		}
+	,	"GristTypeGenerator":
+		{	"title": "Grist TypeScript Type Generator"
+		,	"links":
+			[	{	"link": "Tools"
+				}
+			,	{	"link": "TypeScript"
+				}
+			,	{	"link": "Grist"
 				}
 			]
 		}

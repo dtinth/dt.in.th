@@ -8,6 +8,7 @@ aliases:
 
 Here are my recent writings:
 
+- 2025-12-02: [Grist TypeScript Type Generator](GristTypeGenerator)
 - 2025-11-28: [Web speech-to-text](WebSpeechToText)
 - 2025-11-24: [MML Player](MMLPlayer)
 - 2025-11-22: [Using Docker CLI locally against a remote Docker Daemon via SSH](DockerRemoteContext)
