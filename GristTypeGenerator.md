@@ -279,7 +279,7 @@ This [tool](Tools) generates [TypeScript](TypeScript) types from your [Grist](Gr
 
 ## Usage
 
-Here's the type-safe GristDocAPI interface you can use with the generated types:
+Here's the type-safe [`GristDocAPI`](https://github.com/gristlabs/grist-api) interface you can use with the generated types:
 
 ```ts
 // TypedGristDocAPI.ts
@@ -334,3 +334,7 @@ import type { TypedGristDocAPI } from './TypedGristDocAPI'
 
 const gristDoc = new GristDocAPI(docUrl) as TypedGristDocAPI<GristTables>
 ```
+
+:::warning[Caveat: Invalid values]
+The typesafe client _does not handle_ invalid values! When an invalid value is stored in a Grist cell (e.g. a string in a numeric column), the Grist API will return a `string` type for that field instead of the expected type.
+:::
