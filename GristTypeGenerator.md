@@ -21,11 +21,8 @@ This [tool](Tools) generates [TypeScript](TypeScript) types from your [Grist](Gr
     <strong>Error:</strong> {{ error }}
   </div>
   <div style="display: flex; flex-direction: column; gap: 0.5em;">
-    <div style="display: flex; gap: 0.5em; align-items: flex-end;">
-      <strong class="text-[#8b8685]">Generated TypeScript Code</strong>
-      <button @click="copyToClipboard" :disabled="!generatedCode" class="btn ml-auto">Copy</button>
-    </div>
-    <pre class="mt-0"><code>{{ generatedCode || '/* Generated code will display here */' }}</code></pre>
+    <strong class="text-[#8b8685]">Generated TypeScript Code</strong>
+    <pre class="mt-0 relative copy-button-parent"><code>{{ generatedCode || '/* Generated code will display here */' }}</code><copy-button up="pre" down="code"></copy-button></pre>
   </div>
 </div>
 
@@ -271,20 +268,11 @@ This [tool](Tools) generates [TypeScript](TypeScript) types from your [Grist](Gr
         }
       }
 
-      const copyToClipboard = async () => {
-        try {
-          await navigator.clipboard.writeText(generatedCode.value)
-          alert('Copied to clipboard!')
-        } catch (err) {
-          alert('Failed to copy')
-        }
-      }
-
       Vue.watch(input, () => {
         generateTypes()
       })
 
-      return { input, error, generatedCode, copyToClipboard }
+      return { input, error, generatedCode }
     }
   }
 </script>
