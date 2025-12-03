@@ -20,11 +20,10 @@ This tool lets you generate [TypeScript](TypeScript) types from your [PocketBase
     <strong>Error:</strong> {{ error }}
   </div>
   <div style="display: flex; flex-direction: column; gap: 0.5em;">
-    <div style="display: flex; gap: 0.5em; align-items: flex-end;">
+    <div>
       <strong class="text-[#8b8685]">Generated TypeScript Code</strong>
-      <button @click="copyToClipboard" :disabled="!generatedCode" class="btn ml-auto">Copy</button>
     </div>
-    <pre class="mt-0"><code>{{ generatedCode || '/* Generated code will display here */' }}</code></pre>
+    <pre class="mt-0"><code>{{ generatedCode || '/* Generated code will display here */' }}</code><copy-button up="pre" down="code"></copy-button></pre>
   </div>
 </div>
 

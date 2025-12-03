@@ -90,7 +90,7 @@ const fe = /* @__PURE__ */ w(ge), le = Object.freeze(JSON.parse('{"colors":{"act
     loadWasm: ee
   })
 );
-async function be(o, r = () => {
+async function me(o, r = () => {
 }) {
   r("markdownToVue started");
   const { content: t, data: a } = ne(o);
@@ -148,14 +148,14 @@ async function be(o, r = () => {
             `<a class="notes-cta__link" href="${e.attributes?.href}">`
           ), this.tag('<span class="notes-cta__title">'), this.raw(e.label || ""), this.tag("</span>"), this.tag('<span class="notes-cta__url">'), this.raw(e.attributes?.href || ""), this.tag("</span>"), this.tag("</a>"), this.tag("</p>"), !0);
         },
-        note: c("Note"),
-        success: c("Success"),
-        info: c("Info"),
-        tip: c("Tip"),
-        important: c("Important"),
-        warning: c("Warning"),
-        caution: c("Caution"),
-        danger: c("Danger"),
+        note: u("Note"),
+        success: u("Success"),
+        info: u("Info"),
+        tip: u("Tip"),
+        important: u("Important"),
+        warning: u("Warning"),
+        caution: u("Caution"),
+        danger: u("Danger"),
         details: function(e) {
           return e.type !== "containerDirective" ? !1 : (this.tag("<details>"), this.tag("<summary>"), this.raw(e.label || "Details"), this.tag("</summary>"), e.content && this.raw(e.content), this.tag("</details>"), !0);
         },
@@ -182,12 +182,12 @@ async function be(o, r = () => {
     frontMatter: a
   };
 }
-function c(o) {
+function u(o) {
   return function(r) {
     return r.type !== "containerDirective" ? !1 : (this.tag(`<div class="notes-callout" data-type="${o}">`), this.tag('<p class="notes-callout__label">'), this.tag(`<notes-callout-icon type="${o}"></notes-callout-icon>`), this.raw(r.label || o), this.tag("</p>"), r.content && this.raw(r.content), this.tag("</div>"), !0);
   };
 }
-const me = O({
+const be = O({
   presets: [R({ preflight: !1 })],
   extendTheme: (o) => {
     o.fontFamily ??= {}, o.fontFamily.sans = [
@@ -216,12 +216,12 @@ async function xe(o, r) {
     t.log.push([performance.now(), n]);
   };
   try {
-    let { vueTemplate: n, frontMatter: i } = await be(o, a);
+    let { vueTemplate: n, frontMatter: i } = await me(o, a);
     t.debuggingInfo.vueTemplate = n, t.compiled.frontMatter = i;
     {
-      const u = await me.generate(n);
-      u.css && (n += `
-<style scoped>${u.css}</style>`, t.debuggingInfo.vueTemplate = n), a("unocss processed");
+      const c = await be.generate(n);
+      c.css && (n += `
+<style scoped>${c.css}</style>`, t.debuggingInfo.vueTemplate = n), a("unocss processed");
     }
     /*!
      * This function includes code yoinked from @vue/repl.
@@ -230,30 +230,39 @@ async function xe(o, r) {
      *
      * Used under the MIT License
      */
-    const s = await import("./vue-repl_CW-irzU5.js").then((u) => u.v);
+    const s = await import("./vue-repl_CW-irzU5.js").then((c) => c.v);
     a("vue compiler imported");
-    const e = { compiler: I, sfcOptions: {} }, d = {
+    const e = {
+      compiler: I,
+      sfcOptions: {
+        template: {
+          compilerOptions: {
+            isCustomElement: (c) => c.includes("-")
+          }
+        }
+      }
+    }, d = {
       filename: "Note.vue",
       code: n,
       compiled: { js: "", css: "", ssr: "" }
     }, g = await s.compileFile(e, d);
     if (a("vue compiler finished"), g.length) {
-      for (const u of g)
-        t.errors.push(v(u));
+      for (const c of g)
+        t.errors.push(v(c));
       throw new Error("Failed to compile Vue SFC: " + g.join(", "));
     }
     t.debuggingInfo.ssrEsm = d.compiled.ssr, t.debuggingInfo.clientEsm = d.compiled.js, a("converting ssr");
-    const b = await y(d.compiled.ssr, a);
-    t.debuggingInfo.ssrCjs = b, a("converting js");
+    const m = await y(d.compiled.ssr, a);
+    t.debuggingInfo.ssrCjs = m, a("converting js");
     const F = await y(d.compiled.js, a);
     t.compiled.js = F;
     const S = d.compiled.css;
     t.compiled.css = S, a("executing ssr");
-    const H = te(b, {
+    const H = te(m, {
       "vue/server-renderer": T
-    }).default, m = _(H);
-    re(m);
-    const E = await j(m);
+    }).default, b = _(H);
+    re(b);
+    const E = await j(b);
     t.compiled.html = E, a("ssr executed"), i.wide && (t.compiled.dataset.layout = "wide"), i.title && (t.compiled.title = i.title);
     const x = `https://screenshot.source.in.th/image/_/notes/${r}`;
     t.compiled.head.push(
