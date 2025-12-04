@@ -1,6 +1,7 @@
 ---
 public: true
 title: Using Bun on Cloudflare Pages
+giscus: true
 ---
 
 # Using Bun on Cloudflare Pages

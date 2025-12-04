@@ -1,6 +1,7 @@
 ---
 public: true
 title: MML Player
+giscus: true
 ---
 
 # MML Player

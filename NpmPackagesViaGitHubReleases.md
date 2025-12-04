@@ -1,6 +1,7 @@
 ---
 title: 'Publishing and consuming npm packages via GitHub Releases'
 public: true
+giscus: true
 ---
 
 # Publishing and consuming npm packages via GitHub Releases

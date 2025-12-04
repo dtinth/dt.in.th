@@ -1,6 +1,7 @@
 ---
 public: true
 title: How I initialize my Bun projects
+giscus: true
 ---
 
 # How I initialize my Bun projects

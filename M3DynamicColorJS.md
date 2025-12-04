@@ -1,6 +1,7 @@
 ---
 title: Generating Material Design 3 Dynamic Color Scheme with JavaScript
 public: true
+giscus: true
 ---
 
 :::lead

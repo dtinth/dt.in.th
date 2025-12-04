@@ -1,6 +1,7 @@
 ---
 title: How I initialize a Node.js project (Node 24.x + TypeScript without build step)
 public: true
+giscus: true
 ---
 
 This is how I initialize a [Node.js](Nodejs) project:

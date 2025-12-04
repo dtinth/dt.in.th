@@ -1,6 +1,7 @@
 ---
 title: PocketBase TypeScript Type Generator
 public: true
+giscus: true
 ---
 
 # PocketBase TypeScript Type Generator

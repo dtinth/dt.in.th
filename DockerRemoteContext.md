@@ -1,6 +1,7 @@
 ---
 title: Using Docker CLI locally against a remote Docker Daemon via SSH
 public: true
+giscus: true
 ---
 
 I don't like installing [Docker](Docker) Daemon on my local machine due to battery and resource usage. Instead, I prefer to run Docker on a remote VPS. In the past, I used [VS Code](VSCode)'s [Remote SSH](https://code.visualstudio.com/docs/remote/ssh) extension to also remotely develop the project, but running VS Code Server on a cheap VPS led to it running out of memory. That is, until I learned about [Docker contexts](https://docs.docker.com/engine/manage-resources/contexts/).

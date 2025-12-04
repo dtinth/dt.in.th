@@ -1,6 +1,7 @@
 ---
 public: true
 title: 'Implementing Conditional Updates in PocketBase'
+giscus: true
 ---
 
 # Implementing Conditional Updates in PocketBase

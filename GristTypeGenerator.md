@@ -1,6 +1,7 @@
 ---
 title: Grist TypeScript Type Generator
 public: true
+giscus: true
 ---
 
 # Grist TypeScript Type Generator
