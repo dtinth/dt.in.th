@@ -4,9 +4,7 @@ topic: true
 title: Grist
 ---
 
-:::lead
-**[Grist](https://www.getgrist.com/)** is a modern spreadsheet-database hybrid that combines the familiar interface of a spreadsheet with the power of a relational database.
-:::
+My notes about **[Grist](https://www.getgrist.com/)**, a modern spreadsheet-database hybrid that combines the familiar interface of a spreadsheet with the power of a relational database:
 
 - [Running Grist with Google Sign-In and External Storage on Docker Compose](GristDockerCompose)
 - [Self-hosted Grist benchmarks](GristSelfHostedBenchmark)

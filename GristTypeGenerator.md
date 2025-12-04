@@ -336,5 +336,5 @@ const gristDoc = new GristDocAPI(docUrl) as TypedGristDocAPI<GristTables>
 ```
 
 :::warning[Caveat: Invalid values]
-The typesafe client _does not handle_ invalid values! When an invalid value is stored in a Grist cell (e.g. a string in a numeric column), the Grist API will return a `string` type for that field instead of the expected type.
+_The typesafe client does not handle invalid values!_ When an invalid value is stored in a Grist cell (e.g. a string in a numeric column), that cell will show up with a red background in Grist UI, and the Grist API will return a `string` type for that field instead of the expected type.
 :::
