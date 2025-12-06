@@ -1,6 +1,7 @@
 ---
 title: Service Accounts in Grist
 public: true
+giscus: true
 ---
 
 [Grist](Grist) [recently](https://support.getgrist.com/newsletters/2025-10/#self-hosted-grist-service-accounts-api) [added](https://github.com/gristlabs/grist-core/pull/1699) support for [**service accounts**](https://support.getgrist.com/api/#tag/service-accounts) in [v1.7.5](https://github.com/gristlabs/grist-core/releases/tag/v1.7.5), which can be enabled in self-hosted instances. However, there is currently no UI for managing service accounts, so this note documents how to create and use them via the Grist API.

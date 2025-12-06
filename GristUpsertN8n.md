@@ -1,6 +1,7 @@
 ---
 public: true
 title: Upserting data into Grist using n8n
+giscus: true
 ---
 
 # Upserting data into Grist using n8n
