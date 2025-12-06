@@ -37,6 +37,7 @@ aliases:
 - [Chrome Extension Development](20220130T174417Z8065)
 - [Deno](Deno)
 - [Elysia](Elysia)
+- [Google Apps Script](GoogleAppsScript)
 - [Node.js](Nodejs)
 - [npm](Npm)
 - [Pino](Pino)
