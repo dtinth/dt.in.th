@@ -3,6 +3,7 @@ public: true
 title: HDR QR Code
 facebook: https://www.facebook.com/dtinth/posts/pfbid0jtRx6sYhyT43799rJ9YMEYmjYUWYy2S8rHp1jG6iVUsy7GR7oxfAY1wNJc1G9JbGl
 twitter: https://twitter.com/dtinth/status/1670438696871501825
+created: 2023-06-18
 ---
 
 # HDR QR Code
