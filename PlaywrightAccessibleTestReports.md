@@ -2,7 +2,9 @@
 title: 'Making Playwright test reports easily accessible from GitHub Actions'
 public: true
 created: 2025-08-28
-updated: 2025-12-06
+updates:
+  - date: 2025-12-06
+    description: Added Tigris setup and lifecycle management sections
 giscus: true
 ---
 
