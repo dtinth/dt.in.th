@@ -1,6 +1,8 @@
 ---
 public: true
 title: Session management in Elysia using Remix’s session storage
+created: 2025-05-10
+giscus: true
 ---
 
 :::lead

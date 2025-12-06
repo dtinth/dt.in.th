@@ -1,6 +1,8 @@
 ---
 title: 'DownloadURL API for drag-and-drop file downloads (undocumented Chrome API)'
 public: true
+created: 2025-09-18
+giscus: true
 ---
 
 :::lead

@@ -2,6 +2,7 @@
 title: PocketBase TypeScript Type Generator
 public: true
 giscus: true
+created: 2025-11-15
 ---
 
 # PocketBase TypeScript Type Generator

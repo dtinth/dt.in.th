@@ -1,6 +1,8 @@
 ---
 title: Deploying a Bun app to AWS App Runner
 public: true
+created: 2025-02-08
+giscus: true
 ---
 
 As of February 2025, [AWS App Runner](https://docs.aws.amazon.com/apprunner/latest/dg/service-source-code-nodejs-releases.html) supports Node.js 18 runtime. We can use it to run a Bun server.

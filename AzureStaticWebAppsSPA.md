@@ -1,6 +1,8 @@
 ---
 public: true
 title: Deploying modern Single Page Applications to Azure Static Web Apps
+created: 2025-09-12
+giscus: true
 ---
 
 # Deploying modern Single Page Applications to Azure Static Web Apps

@@ -2,6 +2,7 @@
 title: Grist TypeScript Type Generator
 public: true
 giscus: true
+created: 2025-12-02
 ---
 
 # Grist TypeScript Type Generator

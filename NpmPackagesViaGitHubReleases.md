@@ -2,6 +2,7 @@
 title: 'Publishing and consuming npm packages via GitHub Releases'
 public: true
 giscus: true
+created: 2025-10-13
 ---
 
 # Publishing and consuming npm packages via GitHub Releases

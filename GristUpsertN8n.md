@@ -2,6 +2,10 @@
 public: true
 title: Upserting data into Grist using n8n
 giscus: true
+created: 2025-08-05
+updates:
+  - date: 2025-08-07
+    description: Submitted a pull request to n8n to add native upsert support to the Grist node.
 ---
 
 # Upserting data into Grist using n8n

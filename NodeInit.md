@@ -2,6 +2,10 @@
 title: How I initialize a Node.js project (Node 24.x + TypeScript without build step)
 public: true
 giscus: true
+created: 2025-10-13
+updates:
+  - date: 2025-11-20
+    description: Updated to Node.js 24.x
 ---
 
 This is how I initialize a [Node.js](Nodejs) project:

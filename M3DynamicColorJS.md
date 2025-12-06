@@ -2,6 +2,10 @@
 title: Generating Material Design 3 Dynamic Color Scheme with JavaScript
 public: true
 giscus: true
+created: 2025-11-13
+updates:
+  - date: 2025-11-23
+    note: Added option to generate primary, secondary, and tertiary colors from a single source color according to each variant. Also added an option to also generate raw RGB values (for use with Bootstrap 5).
 ---
 
 :::lead

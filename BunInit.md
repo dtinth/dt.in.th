@@ -2,6 +2,7 @@
 public: true
 title: How I initialize my Bun projects
 giscus: true
+created: 2024-10-05
 ---
 
 # How I initialize my Bun projects

@@ -1,6 +1,8 @@
 ---
 public: true
 title: Using ZRAM for compressed RAM-backed swap space in Linux
+created: 2025-02-22
+giscus: true
 ---
 
 # Using ZRAM for compressed RAM-backed swap space in Linux

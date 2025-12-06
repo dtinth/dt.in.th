@@ -1,6 +1,8 @@
 ---
 public: true
 title: Running Supabase on a remote VPS while keeping local development workflow
+created: 2025-09-09
+giscus: true
 ---
 
 # Running Supabase on a remote VPS while keeping local development workflow

@@ -1,6 +1,12 @@
 ---
 title: Using Elysia in Node.js
 public: true
+created: 2024-09-01
+updates:
+  - date: 2024-10-05
+    description: Added StackBlitz demo link
+  - date: 2025-09-20
+    description: Updated for Elysia v1.1.11 native Node.js support
 ---
 
 # Using [Elysia](Elysia) in [Node.js](Nodejs)

@@ -1,6 +1,7 @@
 ---
 title: PocketBase with LINE Login
 public: true
+created: 2025-11-13
 ---
 
 # PocketBase with LINE Login

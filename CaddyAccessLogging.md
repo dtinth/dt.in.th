@@ -1,6 +1,8 @@
 ---
 public: true
 title: Enabling access logging in Caddy
+created: 2025-02-16
+giscus: true
 ---
 
 To configure basic **access logging** in [Caddy](Caddy), first [configure the default logger](https://caddyserver.com/docs/caddyfile/options#log) in the global options:

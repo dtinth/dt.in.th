@@ -2,6 +2,7 @@
 title: Persistent aliases in Fish
 public: true
 giscus: true
+created: 2025-11-21
 ---
 
 In [Fish shell](Fish), persistent aliases can be created with the `--save` flag:

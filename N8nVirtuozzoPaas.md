@@ -1,6 +1,8 @@
 ---
 public: true
 title: Deploying n8n to Virtuozzo Application Platform
+created: 2025-05-25
+giscus: true
 ---
 
 # Deploying n8n to Virtuozzo Application Platform

@@ -1,6 +1,8 @@
 ---
 public: true
 title: Quickly deploying API endpoints online with Elysia on Deno Deploy
+created: 2025-07-09
+giscus: true
 ---
 
 Sometimes I need to quickly deploy a small API endpoint without the overhead of setting up a full server. [**Deno Deploy**](https://deno.com/deploy) is perfect for this. Upon logging in, you create a **New Playground**, which lets you write and test your code directly in the browser.

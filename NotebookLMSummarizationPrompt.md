@@ -2,6 +2,8 @@
 title: My NotebookLM Summarization Prompt
 public: true
 facebook: https://www.facebook.com/dtinth/posts/pfbid0mQD6vY8K92xFt1VZr2MZT3vLiRRK8TkFULTTKUZkuqHACSHw5GoSVudfc7De5QpKl
+created: 2025-06-07
+giscus: true
 ---
 
 # My NotebookLM Summarization Prompt

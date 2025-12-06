@@ -1,6 +1,8 @@
 ---
 public: true
 title: Generating Presigned GET URLs for S3-Compatible Object Storage with Deno and Minio JS SDK
+created: 2025-07-31
+giscus: true
 ---
 
 I had to generate [presigned GET URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html) for S3-compatible object storage service. Here’s a quick way to do it with [Deno](Deno) and the [Minio JS](MinioJS) [SDK](https://github.com/minio/minio-js/blob/master/docs/API.md).

@@ -1,6 +1,8 @@
 ---
 public: true
 title: Request and response logging in Elysia
+created: 2024-10-30
+giscus: true
 ---
 
 # Request and response logging in Elysia

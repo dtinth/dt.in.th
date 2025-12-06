@@ -2,6 +2,7 @@
 title: 'Automatically saving Gmail messages to Google Drive as EML files using Google Apps Script'
 public: true
 giscus: true
+created: 2025-10-01
 ---
 
 # Automatically saving Gmail messages to Google Drive using [Google Apps Script](GoogleAppsScript)

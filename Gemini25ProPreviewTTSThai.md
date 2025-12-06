@@ -1,6 +1,8 @@
 ---
 public: true
 title: Gemini 2.5 Pro Text-to-Speech Thai Voice Previews
+created: 2025-05-21
+giscus: true
 ---
 
 # Gemini 2.5 Pro TTS Thai Voice Previews

@@ -1,6 +1,8 @@
 ---
 public: true
 title: Extracting text from image in macOS from the CLI
+created: 2024-11-19
+giscus: true
 ---
 
 # Extracting text from image in macOS from the CLI

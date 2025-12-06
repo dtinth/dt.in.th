@@ -1,6 +1,8 @@
 ---
 title: K-sortable unique ID formats (and generator)
 public: true
+created: 2024-12-13
+giscus: true
 ---
 
 :::lead

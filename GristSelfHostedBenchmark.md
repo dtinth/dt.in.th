@@ -1,6 +1,8 @@
 ---
 public: true
 title: Self-hosted Grist benchmarks
+created: 2024-11-16
+giscus: true
 ---
 
 # Self-hosted Grist benchmarks

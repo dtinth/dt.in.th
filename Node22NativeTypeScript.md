@@ -1,6 +1,13 @@
 ---
 title: Using TypeScript natively in Node.js 22
 public: true
+created: 2025-05-22
+updates:
+  - date: 2025-08-01
+    description: Added information about Node.js v22.18.0 default behavior.
+  - date: 2025-08-13
+    description: Clarified that Node.js v22.18.0's default behavior only uses type stripping, and that full transformation still requires the experimental CLI flag.
+giscus: true
 ---
 
 :::lead

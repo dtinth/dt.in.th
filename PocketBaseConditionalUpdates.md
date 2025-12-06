@@ -2,6 +2,7 @@
 public: true
 title: 'Implementing Conditional Updates in PocketBase'
 giscus: true
+created: 2025-11-16
 ---
 
 # Implementing Conditional Updates in PocketBase

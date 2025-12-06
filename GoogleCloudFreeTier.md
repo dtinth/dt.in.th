@@ -1,6 +1,8 @@
 ---
 title: Creating a free Google Cloud Compute Engine VM in Google Cloud Shell
 public: true
+created: 2025-08-01
+giscus: true
 ---
 
 :::lead
@@ -22,7 +24,7 @@ According to the [Compute Free Tier documentation](https://cloud.google.com/free
 
 - **1 non-preemptible e2-micro VM instance** per month in one of these US regions:
   - Oregon: us-west1
-  - Iowa: us-central1  
+  - Iowa: us-central1
   - South Carolina: us-east1
 - **30 GB-months standard persistent disk**
 - **1 GB data transfer** from North America to all regions (excluding China and Australia) per month

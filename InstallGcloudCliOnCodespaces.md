@@ -1,6 +1,8 @@
 ---
 public: true
 title: Installing Google Cloud CLI on GitHub Codespaces
+created: 2025-05-09
+giscus: true
 ---
 
 # Installing Google Cloud CLI on GitHub Codespaces

@@ -2,6 +2,7 @@
 public: true
 title: A survey of name generators in open source tools
 giscus: true
+created: 2025-11-21
 ---
 
 Many tools need to generate human-friendly names for transient resources—containers, sessions, builds, temporary instances. Rather than forcing users to come up with names (or generating cryptic IDs), some tools take the fun approach of generating random, memorable names. This note documents several such name generators used in popular open source tools.
