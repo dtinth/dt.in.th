@@ -1,6 +1,12 @@
 ---
 public: true
 title: Running Grist with Google Sign-In and External Storage on Docker Compose
+created: 2024-11-16
+updates:
+  - date: 2025-05-15
+    description: Added external object storage configuration
+  - date: 2025-12-07
+    description: Added configuration to enable service accounts
 ---
 
 # Running Grist with Google Sign-In and External Storage on Docker Compose
@@ -43,6 +49,10 @@ GRIST_DOCS_MINIO_BUCKET_REGION=
 GRIST_DOCS_MINIO_BUCKET=
 GRIST_DOCS_MINIO_ENDPOINT=
 GRIST_EXTERNAL_ATTACHMENTS_MODE=snapshots
+
+# Enable service accounts
+# See: https://dt.in.th/GristServiceAccounts
+GRIST_ENABLE_SERVICE_ACCOUNTS=true
 ```
 
 `docker-compose.yml`
