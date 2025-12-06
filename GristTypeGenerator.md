@@ -39,7 +39,7 @@ This [tool](Tools) generates [TypeScript](TypeScript) types from your [Grist](Gr
         'Numeric': 'number',
         'Int': 'number',
         'Bool': 'boolean',
-        'Date': 'string',
+        'Date': 'number',
         'DateTime': 'string',
         'Choice': 'string',
         'Reference': 'number',

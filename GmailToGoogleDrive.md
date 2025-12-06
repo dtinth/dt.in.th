@@ -4,7 +4,7 @@ public: true
 giscus: true
 ---
 
-# Automatically saving Gmail messages to Google Drive using Google Apps Script
+# Automatically saving Gmail messages to Google Drive using [Google Apps Script](GoogleAppsScript)
 
 I want to automatically save receipts from my Gmail account to Google Drive as [`.eml`](https://en.wikipedia.org/wiki/Email#Filename_extensions) files, so that I can do offline processing on it.
 
