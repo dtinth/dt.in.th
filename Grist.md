@@ -10,6 +10,7 @@ My notes about **[Grist](https://www.getgrist.com/)**, a modern spreadsheet-data
 - [Self-hosted Grist benchmarks](GristSelfHostedBenchmark)
 - [Upserting data in Grist using n8n](GristUpsertN8n)
 - [Grist TypeScript Type Generator](GristTypeGenerator)
+- [Service Accounts in Grist](GristServiceAccounts)
 
 ## Related topics
 

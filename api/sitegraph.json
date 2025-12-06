@@ -1765,6 +1765,8 @@
 				}
 			,	{	"link": "GristTypeGenerator"
 				}
+			,	{	"link": "GristServiceAccounts"
+				}
 			,	{	"link": "Database"
 				}
 			,	{	"link": "N8n"
@@ -1790,6 +1792,13 @@
 			,	{	"link": "#user-content-fnref-1"
 				}
 			,	{	"link": "#user-content-fnref-2"
+				}
+			]
+		}
+	,	"GristServiceAccounts":
+		{	"title": "Service Accounts in Grist"
+		,	"links":
+			[	{	"link": "Grist"
 				}
 			]
 		}

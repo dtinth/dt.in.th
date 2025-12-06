@@ -11,7 +11,13 @@ Although [n8n](N8n) offers [a built-in Grist integration](https://docs.n8n.io/in
 
 The key to efficient upserting is to batch multiple records into a single API request, rather than making one request per record. The [Grist API](https://support.getgrist.com/api/#tag/records/operation/modifyRecords) supports batched upserts, which significantly improves performance.
 
+:::figure{.framed}
 ![Workflow diagram](https://im.dt.in.th/ipfs/bafybeifontes6i57c5f3ntos6on4pqfzdvhqjtxmqrr2emtgwswoiohbvm/image.webp)
+:::
+
+:::note[Update (2025-08-07)]
+[I am submitting a pull request to n8n to add native upsert support to the Grist node.](https://github.com/n8n-io/n8n/pull/18067) If accepted, this will simplify the workflow significantly. Upvote the PR if you would like to see this feature added.
+:::
 
 ## Prerequisites
 

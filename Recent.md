@@ -8,6 +8,7 @@ aliases:
 
 Here are my recent writings:
 
+- 2025-12-06: [Service Accounts in Grist](GristServiceAccounts)
 - 2025-12-02: [Grist TypeScript Type Generator](GristTypeGenerator)
 - 2025-11-28: [Web speech-to-text](WebSpeechToText)
 - 2025-11-24: [MML Player](MMLPlayer)

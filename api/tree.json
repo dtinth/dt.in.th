@@ -788,6 +788,10 @@
 		{	"title": "Self-hosted Grist benchmarks"
 		,	"parent": "Grist"
 		}
+	,	"GristServiceAccounts":
+		{	"title": "Service Accounts in Grist"
+		,	"parent": "Grist"
+		}
 	,	"GristTypeGenerator":
 		{	"title": "Grist TypeScript Type Generator"
 		,	"parent": "Grist"
