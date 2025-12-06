@@ -1,9 +1,16 @@
 ---
 title: 'Making Playwright test reports easily accessible from GitHub Actions'
 public: true
+created: 2025-08-28
+updated: 2025-12-06
+giscus: true
 ---
 
-The default [Playwright](Playwright) [GitHub Actions](GitHubActions) workflow uploads HTML reports as workflow artifacts. This is trivial to set up, but viewing them is inconvenient[^inconvenience]. A solution is to upload the report to an Object Storage service for direct browser access with clickable URLs that work immediately.
+The default [Playwright](Playwright) [GitHub Actions](GitHubActions) workflow uploads HTML reports as workflow artifacts. This is trivial to set up, but viewing them is inconvenient[^inconvenience].
+
+![](https://im.dt.in.th/ipfs/bafybeib6qhczrox57weze2ll34s3bjddphcrrq5llrkoedsl35e3va5ybu/image.webp)
+
+A solution is to upload the report to an Object Storage service for direct browser access. This note documents my implementation and my choice of object storage providers.
 
 [^inconvenience]: I had to download a zip file, extract it, and view locally, which works fine until I want to view traces, because Playwright’s [Trace Viewer](https://playwright.dev/docs/trace-viewer) doesn’t work with the `file://` protocol and require running [`npx playwright show-report`](https://playwright.dev/docs/test-cli#show-report) to launch a local web server.
 
@@ -74,6 +81,37 @@ As of August 2025, here are some S3-compatible storage providers I use:
 
 In this example, I use Tigris for open source project reports.
 
-## Lifecycle management
+### Tigris setup
+
+In Tigris, I created:
+
+- A single bucket shared across multiple projects (`ghartifacts`)
+- An access key for each GitHub repository
+- An IAM policy for each access key to restrict permissions to the specific subfolder.[^tigris-iam]
+
+[^tigris-iam]: Unlike AWS where policies are attached to users, Tigris allows attaching (i.e. “linking”) policies to access keys directly.
+
+To onboard a new project I do this:
+
+1. Create a new Access Key.
+
+2. Create a new IAM Policy with the following JSON:
+
+   ```json
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Action": "s3:*",
+         "Resource": "arn:aws:s3:::ghartifacts/dtinth/$PROJECT_NAME/*"
+       }
+     ]
+   }
+   ```
+
+3. In the Access Key settings, link the newly created IAM Policy to the Access Key.
+
+### Lifecycle management
 
 To avoid accumulating storage usage indefinitely, set up lifecycle policies or lifecycle rules in your object storage provider to automatically delete old reports after a certain period.
