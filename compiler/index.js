@@ -197,7 +197,7 @@ const be = O({
       o.fontFamily.sans
     ].join(", "), o.fontFamily.mono = ["Comic Mono", o.fontFamily.mono].join(", ");
   }
-});
+}), he = /* @__PURE__ */ new Set(["d-split"]);
 async function xe(o, r) {
   const t = {
     compiled: {
@@ -237,7 +237,7 @@ async function xe(o, r) {
       sfcOptions: {
         template: {
           compilerOptions: {
-            isCustomElement: (c) => c.includes("-")
+            isCustomElement: (c) => c.includes("-") && !he.has(c)
           }
         }
       }
@@ -264,17 +264,17 @@ async function xe(o, r) {
     re(b);
     const E = await j(b);
     t.compiled.html = E, a("ssr executed"), i.wide && (t.compiled.dataset.layout = "wide"), i.title && (t.compiled.title = i.title);
-    const x = `https://screenshot.source.in.th/image/_/notes/${r}`;
+    const C = `https://screenshot.source.in.th/image/_/notes/${r}`;
     t.compiled.head.push(
       ["meta", { property: "og:title", content: t.compiled.title }],
-      ["meta", { property: "og:image", content: x }],
+      ["meta", { property: "og:image", content: C }],
       ["meta", { property: "og:image:width", content: "1800" }],
       ["meta", { property: "og:image:height", content: "1680" }]
     );
-    const C = `https://dt.in.th/${r}`;
+    const x = `https://dt.in.th/${r}`;
     t.compiled.head.push([
       "link",
-      { rel: "canonical", href: C }
+      { rel: "canonical", href: x }
     ]);
   } catch (n) {
     t.errors.push(v(n));

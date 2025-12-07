@@ -1,9 +1,9 @@
 ---
 title: 'Managing Knowledge Publicly: Unlocking Unexpected Growth'
 public: true
+giscus: true
 wide: true
 created: 2025-09-03
-giscus: true
 ---
 
 # Managing Knowledge Publicly: Unlocking Unexpected Growth

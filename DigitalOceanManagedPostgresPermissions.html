@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/static/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DigitalOceanManagedPostgresPermissions | dt.in.th</title><style id="note-styles">/* Compilation unsuccessful */</style>
+    <title>Setting up PostgreSQL permissions on DigitalOcean Managed Databases | dt.in.th</title><meta property="og:title" content="Setting up PostgreSQL permissions on DigitalOcean Managed Databases" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/DigitalOceanManagedPostgresPermissions" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://dt.in.th/DigitalOceanManagedPostgresPermissions" data-source="note"><style id="note-styles">.n-preview img[data-v-8c9498c0] { width: 270px; margin-left: auto; margin-right: auto;
+}</style>
     <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
     <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/runtime/entry/index.css" />
@@ -16,7 +21,16 @@
     <div class="h-entry">
       <main id="main">
         <div id="mainContents">
-          <div class="prose e-content" id="noteContents"><!-- Compilation unsuccessful --></div>
+          <div class="prose e-content" id="noteContents"><!--[--><div class="d-split" data-v-8c9498c0><div class="d-split__left"><div class="lead" data-v-8c9498c0><p data-v-8c9498c0><a href="DigitalOcean" data-v-8c9498c0>DigitalOcean</a> has a managed <a href="PostgreSQL" data-v-8c9498c0>PostgreSQL</a> service. In the web console, you can create users, and you can create databases. However, the users created do not have access to any databases.</p></div><p data-v-8c9498c0>This is how I set up permissions for users to access databases:</p></div><div class="d-split__right"><figure class="framed n-preview" data-v-8c9498c0><p data-v-8c9498c0><img src="https://im.dt.in.th/ipfs/bafybeida5aipvcoj6lve4t47n45p7qmfwcgkwor3mkgrhdkvqseyohuvcq/image.webp" alt data-v-8c9498c0></p><figcaption data-v-8c9498c0>DigitalOcean’s Managed PostgreSQL Users &amp; Database management UI</figcaption></figure></div></div><ol data-v-8c9498c0><li data-v-8c9498c0><div class="d-split" data-v-8c9498c0><div class="d-split__left"><p data-v-8c9498c0><strong data-v-8c9498c0>Obtain the connection string</strong>:</p><ul data-v-8c9498c0><li data-v-8c9498c0>Go to the <strong data-v-8c9498c0>Overview</strong> tab</li><li data-v-8c9498c0>Under <strong data-v-8c9498c0>Connection Details</strong>, select “Connection string”</li><li data-v-8c9498c0>Set <strong data-v-8c9498c0>User:</strong> to <code data-v-8c9498c0>doadmin</code></li><li data-v-8c9498c0>Set <strong data-v-8c9498c0>Database/Pool:</strong> to <code data-v-8c9498c0>defaultdb</code></li></ul><p data-v-8c9498c0>Then click Copy.</p></div><div class="d-split__right"><figure class="framed" data-v-8c9498c0><p data-v-8c9498c0><img src="https://im.dt.in.th/ipfs/bafybeic36new7ypxrmuz3fsmsbaqbbj5uvrm4qfvxzeg54m6sbsri5ihbi/image.webp" alt data-v-8c9498c0></p><figcaption data-v-8c9498c0>Obtaining the connection string</figcaption></figure></div></div></li><li data-v-8c9498c0><p data-v-8c9498c0><strong data-v-8c9498c0>Connect to the database</strong> using <code data-v-8c9498c0>psql</code>:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0># --dbname accepts a connection string</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0># Ref. https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>psql</span><span style="color:#79B8FF;" data-v-8c9498c0> --dbname</span><span style="color:#E1E4E8;" data-v-8c9498c0> $DATABASE_URL</span></span></code></pre></li><li data-v-8c9498c0><p data-v-8c9498c0>To give a user full access to a database (e.g., <code data-v-8c9498c0>my_service</code> user accessing <code data-v-8c9498c0>my_db</code>):</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>-- Grant all privileges on the database</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>GRANT</span><span style="color:#E1E4E8;" data-v-8c9498c0> ALL PRIVILEGES </span><span style="color:#F97583;" data-v-8c9498c0>ON</span><span style="color:#F97583;" data-v-8c9498c0> DATABASE</span><span style="color:#E1E4E8;" data-v-8c9498c0> my_db </span><span style="color:#F97583;" data-v-8c9498c0>TO</span><span style="color:#E1E4E8;" data-v-8c9498c0> my_service;</span></span>
+<span class="line" data-v-8c9498c0></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>-- Connect to the target database</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#E1E4E8;" data-v-8c9498c0>\c my_db</span></span>
+<span class="line" data-v-8c9498c0></span>
+<span class="line" data-v-8c9498c0><span style="color:#6A737D;" data-v-8c9498c0>-- Grant all privileges on the public schema</span></span>
+<span class="line" data-v-8c9498c0><span style="color:#F97583;" data-v-8c9498c0>GRANT</span><span style="color:#E1E4E8;" data-v-8c9498c0> ALL </span><span style="color:#F97583;" data-v-8c9498c0>ON</span><span style="color:#F97583;" data-v-8c9498c0> SCHEMA</span><span style="color:#E1E4E8;" data-v-8c9498c0> public </span><span style="color:#F97583;" data-v-8c9498c0>TO</span><span style="color:#E1E4E8;" data-v-8c9498c0> my_service;</span></span></code></pre></li></ol><p data-v-8c9498c0>If the user will be creating their own objects, they only need privileges on the database and schema. The <code data-v-8c9498c0>ALTER DEFAULT PRIVILEGES</code> commands are unnecessary since they&#39;ll own the objects they create.</p><h2 id="further-reading" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#further-reading" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>Further reading</h2><ul data-v-8c9498c0><li data-v-8c9498c0><a href="https://www.digitalocean.com/community/tutorials/how-to-use-roles-and-manage-grant-permissions-in-postgresql-on-a-vps-2" data-v-8c9498c0>https://www.digitalocean.com/community/tutorials/how-to-use-roles-and-manage-grant-permissions-in-postgresql-on-a-vps-2</a></li></ul><!--]--></div>
         </div>
       </main>
       <footer>
@@ -26,7 +40,113 @@
       </footer>
     </div>
     <script>
-window.precompiledNoteBehavior = function(require, exports, module, Vue) {/* Compilation unsuccessful */};
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+var _vue = require('vue');
+function render(_ctx, _cache) {
+  const _component_d_split = _vue.resolveComponent.call(void 0, "d-split")
+
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
+    _vue.createVNode.call(void 0, _component_d_split, null, {
+      right: _vue.withCtx.call(void 0, () => [...(_cache[0] || (_cache[0] = [
+        _vue.createElementVNode.call(void 0, "figure", { class: "framed n-preview" }, [
+          _vue.createElementVNode.call(void 0, "p", null, [
+            _vue.createElementVNode.call(void 0, "img", {
+              src: "https://im.dt.in.th/ipfs/bafybeida5aipvcoj6lve4t47n45p7qmfwcgkwor3mkgrhdkvqseyohuvcq/image.webp",
+              alt: ""
+            })
+          ]),
+          _vue.createElementVNode.call(void 0, "figcaption", null, "DigitalOcean’s Managed PostgreSQL Users & Database management UI")
+        ], -1 /* CACHED */)
+      ]))]),
+      default: _vue.withCtx.call(void 0, () => [
+        _cache[1] || (_cache[1] = _vue.createElementVNode.call(void 0, "div", { class: "lead" }, [
+          _vue.createElementVNode.call(void 0, "p", null, [
+            _vue.createElementVNode.call(void 0, "a", { href: "DigitalOcean" }, "DigitalOcean"),
+            _vue.createTextVNode.call(void 0, " has a managed "),
+            _vue.createElementVNode.call(void 0, "a", { href: "PostgreSQL" }, "PostgreSQL"),
+            _vue.createTextVNode.call(void 0, " service. In the web console, you can create users, and you can create databases. However, the users created do not have access to any databases.")
+          ])
+        ], -1 /* CACHED */)),
+        _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "p", null, "This is how I set up permissions for users to access databases:", -1 /* CACHED */))
+      ]),
+      _: 1 /* STABLE */
+    }),
+    _vue.createElementVNode.call(void 0, "ol", null, [
+      _vue.createElementVNode.call(void 0, "li", null, [
+        _vue.createVNode.call(void 0, _component_d_split, null, {
+          right: _vue.withCtx.call(void 0, () => [...(_cache[3] || (_cache[3] = [
+            _vue.createElementVNode.call(void 0, "figure", { class: "framed" }, [
+              _vue.createElementVNode.call(void 0, "p", null, [
+                _vue.createElementVNode.call(void 0, "img", {
+                  src: "https://im.dt.in.th/ipfs/bafybeic36new7ypxrmuz3fsmsbaqbbj5uvrm4qfvxzeg54m6sbsri5ihbi/image.webp",
+                  alt: ""
+                })
+              ]),
+              _vue.createElementVNode.call(void 0, "figcaption", null, "Obtaining the connection string")
+            ], -1 /* CACHED */)
+          ]))]),
+          default: _vue.withCtx.call(void 0, () => [
+            _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "p", null, [
+              _vue.createElementVNode.call(void 0, "strong", null, "Obtain the connection string"),
+              _vue.createTextVNode.call(void 0, ":")
+            ], -1 /* CACHED */)),
+            _cache[5] || (_cache[5] = _vue.createElementVNode.call(void 0, "ul", null, [
+              _vue.createElementVNode.call(void 0, "li", null, [
+                _vue.createTextVNode.call(void 0, "Go to the "),
+                _vue.createElementVNode.call(void 0, "strong", null, "Overview"),
+                _vue.createTextVNode.call(void 0, " tab")
+              ]),
+              _vue.createElementVNode.call(void 0, "li", null, [
+                _vue.createTextVNode.call(void 0, "Under "),
+                _vue.createElementVNode.call(void 0, "strong", null, "Connection Details"),
+                _vue.createTextVNode.call(void 0, ", select “Connection string”")
+              ]),
+              _vue.createElementVNode.call(void 0, "li", null, [
+                _vue.createTextVNode.call(void 0, "Set "),
+                _vue.createElementVNode.call(void 0, "strong", null, "User:"),
+                _vue.createTextVNode.call(void 0, " to "),
+                _vue.createElementVNode.call(void 0, "code", null, "doadmin")
+              ]),
+              _vue.createElementVNode.call(void 0, "li", null, [
+                _vue.createTextVNode.call(void 0, "Set "),
+                _vue.createElementVNode.call(void 0, "strong", null, "Database/Pool:"),
+                _vue.createTextVNode.call(void 0, " to "),
+                _vue.createElementVNode.call(void 0, "code", null, "defaultdb")
+              ])
+            ], -1 /* CACHED */)),
+            _cache[6] || (_cache[6] = _vue.createElementVNode.call(void 0, "p", null, "Then click Copy.", -1 /* CACHED */))
+          ]),
+          _: 1 /* STABLE */
+        })
+      ]),
+      _cache[7] || (_cache[7] = _vue.createStaticVNode.call(void 0, "<li data-v-8c9498c0><p data-v-8c9498c0><strong data-v-8c9498c0>Connect to the database</strong> using <code data-v-8c9498c0>psql</code>:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0># --dbname accepts a connection string</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0># Ref. https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#B392F0;\" data-v-8c9498c0>psql</span><span style=\"color:#79B8FF;\" data-v-8c9498c0> --dbname</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> $DATABASE_URL</span></span></code></pre></li><li data-v-8c9498c0><p data-v-8c9498c0>To give a user full access to a database (e.g., <code data-v-8c9498c0>my_service</code> user accessing <code data-v-8c9498c0>my_db</code>):</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\" data-v-8c9498c0><code data-v-8c9498c0><span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>-- Grant all privileges on the database</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>GRANT</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> ALL PRIVILEGES </span><span style=\"color:#F97583;\" data-v-8c9498c0>ON</span><span style=\"color:#F97583;\" data-v-8c9498c0> DATABASE</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> my_db </span><span style=\"color:#F97583;\" data-v-8c9498c0>TO</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> my_service;</span></span>\n<span class=\"line\" data-v-8c9498c0></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>-- Connect to the target database</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#E1E4E8;\" data-v-8c9498c0>\\c my_db</span></span>\n<span class=\"line\" data-v-8c9498c0></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#6A737D;\" data-v-8c9498c0>-- Grant all privileges on the public schema</span></span>\n<span class=\"line\" data-v-8c9498c0><span style=\"color:#F97583;\" data-v-8c9498c0>GRANT</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> ALL </span><span style=\"color:#F97583;\" data-v-8c9498c0>ON</span><span style=\"color:#F97583;\" data-v-8c9498c0> SCHEMA</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> public </span><span style=\"color:#F97583;\" data-v-8c9498c0>TO</span><span style=\"color:#E1E4E8;\" data-v-8c9498c0> my_service;</span></span></code></pre></li>", 2))
+    ]),
+    _cache[8] || (_cache[8] = _vue.createElementVNode.call(void 0, "p", null, [
+      _vue.createTextVNode.call(void 0, "If the user will be creating their own objects, they only need privileges on the database and schema. The "),
+      _vue.createElementVNode.call(void 0, "code", null, "ALTER DEFAULT PRIVILEGES"),
+      _vue.createTextVNode.call(void 0, " commands are unnecessary since they'll own the objects they create.")
+    ], -1 /* CACHED */)),
+    _cache[9] || (_cache[9] = _vue.createElementVNode.call(void 0, "h2", { id: "further-reading" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#further-reading"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "Further reading")
+    ], -1 /* CACHED */)),
+    _cache[10] || (_cache[10] = _vue.createElementVNode.call(void 0, "ul", null, [
+      _vue.createElementVNode.call(void 0, "li", null, [
+        _vue.createElementVNode.call(void 0, "a", { href: "https://www.digitalocean.com/community/tutorials/how-to-use-roles-and-manage-grant-permissions-in-postgresql-on-a-vps-2" }, "https://www.digitalocean.com/community/tutorials/how-to-use-roles-and-manage-grant-permissions-in-postgresql-on-a-vps-2")
+      ])
+    ], -1 /* CACHED */))
+  ], 64 /* STABLE_FRAGMENT */))
+}
+__sfc__.render = render
+__sfc__.__scopeId = "data-v-8c9498c0"
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
 window.precompiledFrontMatter = {"public":true,"title":"Setting up PostgreSQL permissions on DigitalOcean Managed Databases","created":"2025-09-25T00:00:00.000Z"};
 </script>
     <script type="module" src="/runtime/entry/index.js"></script>

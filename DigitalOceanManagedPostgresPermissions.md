@@ -20,7 +20,7 @@ created: 2025-09-25
 :::
 ::::
 
-This is how I set up permissions for users to access databases.
+This is how I set up permissions for users to access databases:
 
 ::::::::
 
