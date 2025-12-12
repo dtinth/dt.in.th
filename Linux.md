@@ -4,9 +4,15 @@ public: true
 title: Linux
 ---
 
-Notes on working with a **Linux** system.
+My notes on working with a **Linux** system. When I set up a new Linux VPS, these are the things I usually do:
 
-- [Installing Docker on Linux](DockerInstall)
+- Set up the [hostname](LinuxHostname)
+- Set up [Tailscale](LinuxTailscale) so I have an encrypted connection to the VPS
+- Set up memory compression using [zram](LinuxZram) and/or [zswap](LinuxZswap)
+- [Install Docker](DockerInstall) (can be skipped if using [Dokploy](Dokploy) instead, as it installs Docker for you)
+
+Other notes:
+
 - [Dockerized virtual desktop](VirtualDesktop)
 - [Recording screen in Linux using ffmpeg](20220923T125342Z4946)
 - [Codespaces-like development container setup](Codebox)
@@ -15,7 +21,6 @@ Notes on working with a **Linux** system.
 - [Creating encrypted directories with gocryptfs](20221209T090307Z6968)
 - [My asdf snippets](AsdfSnippets)
 - [TIL: pgrep and pkill](20220204T170710Z2789)
-- [Using ZRAM for compressed RAM-backed swap space in Linux](LinuxZram)
 
 ## Related topics
 

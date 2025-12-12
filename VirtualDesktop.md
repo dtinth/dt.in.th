@@ -3,7 +3,7 @@ public: true
 title: Dockerized virtual desktop
 ---
 
-Sometimes I want to start a virtual desktop on a [Linux](Linux) server. I created the [virtual-desktop](https://github.com/dtinth/virtual-desktop) project which builds a Debian-based virtual desktop in a [Docker](Docker) container.
+Sometimes I want to start a virtual desktop on a [Linux](Linux) server. I created the [**virtual-desktop**](https://github.com/dtinth/virtual-desktop) project which builds a Debian-based virtual desktop in a [Docker](Docker) container.
 
 ## Usage
 

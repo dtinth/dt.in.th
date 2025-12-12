@@ -1,17 +1,17 @@
 ---
 public: true
-title: Using ZRAM for compressed RAM-backed swap space in Linux
+title: Using zram for compressed RAM-backed swap space in Linux
 created: 2025-02-22
 giscus: true
 ---
 
-# Using ZRAM for compressed RAM-backed swap space in Linux
+# Using zram for compressed RAM-backed swap space in Linux
 
 :::lead
 **When using a cheap VPS, available RAM is often limited.** While [adding a disk-backed swap space][swap] can help, it's much slower than RAM.
 :::
 
-**[ZRAM][zram]** is a [Linux](Linux) kernel feature that creates a compressed block device in RAM that can be used as swap space. When memory is swapped to and from the ZRAM device, it is compressed and decompressed on-the-fly.
+**[zram][zram]** is a [Linux](Linux) kernel feature that creates a compressed block device in RAM that can be used as swap space. When memory is swapped to and from the zram device, it is compressed and decompressed on-the-fly.
 
 [swap]: https://www.digitalocean.com/community/tutorial-collections/how-to-add-swap-space
 [zram]: https://en.wikipedia.org/wiki/Zram
@@ -52,7 +52,7 @@ Filename     Type       Size     Used     Priority
 
 References:
 
-- [Debian Wiki - ZRAM](https://wiki.debian.org/ZRam)
+- [Debian Wiki - ZRam](https://wiki.debian.org/ZRam)
 - [Reddit discussion on ZRAM performance benefits](https://www.reddit.com/r/lowendgaming/comments/13d5brx/enable_zram_on_low_end_linux_machines_for_a_free/)
-- [Arch Wiki - ZRAM](https://wiki.archlinux.org/title/Zram)
+- [Arch Wiki - zram](https://wiki.archlinux.org/title/Zram)
 - [ZRAM article on _Make Debian Fun Again And Learn How To Do Other Cool Stuff Too_](https://makedebianfunagainandlearnhowtodoothercoolstufftoo.computer/doku.php?id=start:zramswap)

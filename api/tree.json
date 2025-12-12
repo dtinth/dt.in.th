@@ -596,6 +596,10 @@
 		{	"title": "How to retag a Docker image on a remote registry without pulling the image to local machine"
 		,	"parent": "Recent"
 		}
+	,	"Dokploy":
+		{	"title": "Dokploy (topic)"
+		,	"parent": "Linux"
+		}
 	,	"DontWakeMeUpReRemix":
 		{	"title": "Don't Wake Me Up (iaht's Re-Remix)"
 		,	"parent": "Songs"
@@ -735,6 +739,10 @@
 	,	"GitHubDeployKeySSHConfig":
 		{	"title": "Cloning private GitHub projects onto a new worker Linux box"
 		,	"parent": "AboutThisWebsite"
+		}
+	,	"GitHubMarkdownAlerts":
+		{	"title": "GitHub-flavored Markdown alerts/admonitions/callouts"
+		,	"parent": "Markdown"
 		}
 	,	"GitHubToJSDelivr":
 		{	"title": "GitHub to JSDelivr link converter"
@@ -943,8 +951,20 @@
 		{	"title": "“Which one to use, useradd or adduser?”"
 		,	"parent": "Linux"
 		}
+	,	"LinuxHostname":
+		{	"title": "Setting hostname on a Linux machine"
+		,	"parent": "Linux"
+		}
+	,	"LinuxTailscale":
+		{	"title": "Setting up Tailscale on a Linux VPS"
+		,	"parent": "Linux"
+		}
 	,	"LinuxZram":
-		{	"title": "Using ZRAM for compressed RAM-backed swap space in Linux"
+		{	"title": "Using zram for compressed RAM-backed swap space in Linux"
+		,	"parent": "Linux"
+		}
+	,	"LinuxZswap":
+		{	"title": "Using zswap for compressed RAM-cached swap space in Linux"
 		,	"parent": "Linux"
 		}
 	,	"LocalTalkInternationalization":

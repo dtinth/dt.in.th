@@ -6,6 +6,7 @@ title: Markdown
 
 [**Markdown**](https://daringfireball.net/projects/markdown/) is a lightweight markup language with plain text formatting syntax.
 
+- [GitHub-flavored Markdown alerts/admonitions/callouts](GitHubMarkdownAlerts)
 - [Quickly publish a Markdown page without build tool](PublishMarkdownPageWithoutBuildTool)
 - [Interactive footnotes](InteractiveFootnotes)
 
