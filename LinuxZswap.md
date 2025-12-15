@@ -1,15 +1,19 @@
 ---
-title: Using zswap for compressed RAM-cached swap space in Linux
+title: Using zswap for compressed swap caching in Linux
 public: true
 created: 2025-12-12
 ---
 
-When setting up a new [Linux](Linux) VPS, I usually set up [zram](LinuxZram). However, I recently read the article [_I was wrong! zswap IS better than zram_](https://linuxblog.io/zswap-better-than-zram/), which led me to try out **zswap** instead.
+# Using zswap for compressed swap caching in Linux
 
-Prerequisites:
+When setting up a new [Linux](Linux) VPS, I usually set up [zram](LinuxZram). However, I recently read the article [_I was wrong! zswap IS better than zram_](https://linuxblog.io/zswap-better-than-zram/), which led me to try out **zswap**.
+
+## Prerequisites
 
 - A Linux kernel with zswap support. Note that in Debian Bookworm, zswap is included in the standard kernel, _but not the `-cloud` variant,_ so the command belows may not work on all VPS providers.
 - A swap space configured, as zswap works as a cache for an existing swap space (unlike zram which creates its own swap device).
+
+## Setting up
 
 These commands should be run as root:
 
@@ -59,7 +63,7 @@ To check the stats:
 sudo grep -r . /sys/kernel/debug/zswap/
 ```
 
-References:
+## References
 
 - [Kernel Documentation - zswap](https://docs.kernel.org/admin-guide/mm/zswap.html)
 - [Debian Wiki - zswap](https://wiki.debian.org/Zswap)

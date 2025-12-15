@@ -948,6 +948,17 @@
 		{	"title": "CircleCI Dummy Config"
 		,	"links": []
 		}
+	,	"ClaudeWebGitHubMCP":
+		{	"title": "Using GitHub’s official Remote MCP Server with Claude Web"
+		,	"links":
+			[	{	"link": "GitHub"
+				}
+			,	{	"link": "DockerCompose"
+				}
+			,	{	"link": "Dokploy"
+				}
+			]
+		}
 	,	"CloudPlatform":
 		{	"title": "Cloud Platform (topic)"
 		,	"links":
@@ -1254,9 +1265,11 @@
 				}
 			,	{	"link": "DockerRemoteContext"
 				}
-			,	{	"link": "Nixpacks"
-				}
 			,	{	"link": "DockerCompose"
+				}
+			,	{	"link": "Dokploy"
+				}
+			,	{	"link": "Nixpacks"
 				}
 			]
 		}
@@ -1318,7 +1331,11 @@
 	,	"Dokploy":
 		{	"title": "Dokploy (topic)"
 		,	"links":
-			[	{	"link": "LinuxTailscale"
+			[	{	"link": "Linux"
+				}
+			,	{	"link": "Docker"
+				}
+			,	{	"link": "LinuxTailscale"
 				}
 			]
 		}
@@ -1594,6 +1611,8 @@
 				}
 			,	{	"link": "NpmPackagesViaGitHubReleases"
 				}
+			,	{	"link": "ClaudeWebGitHubMCP"
+				}
 			,	{	"link": "GitHubActions"
 				}
 			,	{	"link": "FreshAppFactory"
@@ -1795,6 +1814,8 @@
 		{	"title": "Running Grist with Google Sign-In and External Storage on Docker Compose"
 		,	"links":
 			[	{	"link": "Grist"
+				}
+			,	{	"link": "GristServiceAccounts"
 				}
 			]
 		}
@@ -2370,10 +2391,12 @@
 		,	"links":
 			[	{	"link": "Linux"
 				}
+			,	{	"link": "LinuxZswap"
+				}
 			]
 		}
 	,	"LinuxZswap":
-		{	"title": "Using zswap for compressed RAM-cached swap space in Linux"
+		{	"title": "Using zswap for compressed swap caching in Linux"
 		,	"links":
 			[	{	"link": "Linux"
 				}
@@ -3345,7 +3368,13 @@
 				}
 			,	{	"link": "PasteQR"
 				}
+			,	{	"link": "QRLogger"
+				}
 			]
+		}
+	,	"QRLogger":
+		{	"title": "QR Code Logger"
+		,	"links": []
 		}
 	,	"QRScan":
 		{	"title": "Adding a QR code scanner to a web app"

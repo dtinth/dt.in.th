@@ -294,7 +294,7 @@
 		}
 	,	"20230117T061333Z2948":
 		{	"title": "Running pgAdmin in Docker Compose"
-		,	"parent": "Docker"
+		,	"parent": "PostgreSQL"
 		}
 	,	"20230117T063739Z2762":
 		{	"title": "pgAdmin 4 Version Compatibility Matrix"
@@ -472,6 +472,10 @@
 		{	"title": "CircleCI Dummy Config"
 		,	"parent": "ContinuousIntegration"
 		}
+	,	"ClaudeWebGitHubMCP":
+		{	"title": "Using GitHub’s official Remote MCP Server with Claude Web"
+		,	"parent": "GitHub"
+		}
 	,	"CloudPlatform":
 		{	"title": "Cloud Platform (topic)"
 		,	"parent": "HomePage"
@@ -598,7 +602,7 @@
 		}
 	,	"Dokploy":
 		{	"title": "Dokploy (topic)"
-		,	"parent": "Linux"
+		,	"parent": "Docker"
 		}
 	,	"DontWakeMeUpReRemix":
 		{	"title": "Don't Wake Me Up (iaht's Re-Remix)"
@@ -957,14 +961,14 @@
 		}
 	,	"LinuxTailscale":
 		{	"title": "Setting up Tailscale on a Linux VPS"
-		,	"parent": "Linux"
+		,	"parent": "Dokploy"
 		}
 	,	"LinuxZram":
 		{	"title": "Using zram for compressed RAM-backed swap space in Linux"
 		,	"parent": "Linux"
 		}
 	,	"LinuxZswap":
-		{	"title": "Using zswap for compressed RAM-cached swap space in Linux"
+		{	"title": "Using zswap for compressed swap caching in Linux"
 		,	"parent": "Linux"
 		}
 	,	"LocalTalkInternationalization":
@@ -1346,6 +1350,10 @@
 	,	"QRCode":
 		{	"title": "QR Code (topic)"
 		,	"parent": "HomePage"
+		}
+	,	"QRLogger":
+		{	"title": "QR Code Logger"
+		,	"parent": "QRCode"
 		}
 	,	"QRScan":
 		{	"title": "Adding a QR code scanner to a web app"

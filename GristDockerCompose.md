@@ -7,19 +7,25 @@ updates:
     description: Added external object storage configuration
   - date: 2025-12-07
     description: Added configuration to enable service accounts
+  - date: 2025-12-14
+    description: Added list of tested object storage services; updated volume configuration to use named volume instead of bind mount
+giscus: true
 ---
 
 # Running Grist with Google Sign-In and External Storage on Docker Compose
 
 This is how I [self-host](https://support.getgrist.com/self-managed/) [Grist](Grist) on Docker (through [Portainer](https://www.portainer.io/)) with:
 
-- Google sign-in
-- Object storage for document snapshots and attachments
+- [Authentication](https://support.getgrist.com/self-managed/#how-do-i-set-up-authentication) via [Google Identity](https://developers.google.com/identity)
+- [Object storage for document snapshots](https://support.getgrist.com/self-managed/#how-do-i-set-up-snapshots) and [external attachments](https://support.getgrist.com/self-managed/#how-do-i-enable-external-attachments)
+- [Service accounts](GristServiceAccounts) for safer automation
+
+## Required environment variables
 
 `stack.env`
 
 ```sh
-# Put a random string here
+# Put a random string here (e.g. use `openssl rand -hex 32`)
 GRIST_SESSION_SECRET=
 
 # Put your public hostname here
@@ -42,6 +48,7 @@ GRIST_DEFAULT_EMAIL=
 
 # Set up cloud storage to reduce storage size on your VPS
 # and offload attachments to an object storage service.
+# For `GRIST_DOCS_MINIO_ENDPOINT`, do not include the protocol; only the hostname
 # See: https://support.getgrist.com/self-managed/
 GRIST_DOCS_MINIO_ACCESS_KEY=
 GRIST_DOCS_MINIO_SECRET_KEY=
@@ -55,6 +62,8 @@ GRIST_EXTERNAL_ATTACHMENTS_MODE=snapshots
 GRIST_ENABLE_SERVICE_ACCOUNTS=true
 ```
 
+## Docker Compose configuration
+
 `docker-compose.yml`
 
 ```yaml
@@ -66,5 +75,14 @@ services:
     ports:
       - '127.0.0.1:8484:8484'
     volumes:
-      - './persist:/persist'
+      - 'data:/persist'
+volumes:
+  data:
 ```
+
+## Tested object storage services
+
+- ✅ AWS S3
+- ✅ Linode Object Storage
+- ❌ Google Cloud Storage (via HMAC keys and XML API)
+  - You can create and save Grist documents, but once the Grist container is restarted, the document cannot be reopened. The error message is: “Error accessing document — You can try reloading the document, or using recovery mode. Recovery mode opens the document to be fully accessible to owners, and inaccessible to others. It also disables formulas. [MinIOExternaiStorage.head did not get expected fields].” However, recovery mode does not work either.

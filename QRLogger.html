@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="QRLogger" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Logger | dt.in.th</title><meta property="og:title" content="QR Code Logger" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/QRLogger" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://dt.in.th/QRLogger" data-source="note"><style id="note-styles">/* layer: default */
+.mb-2[data-v-8c9498c0]{margin-bottom:0.5rem;}
+.ml-auto[data-v-8c9498c0]{margin-left:auto;}
+.hidden[data-v-8c9498c0]{display:none;}
+.flex[data-v-8c9498c0]{display:flex;}
+.flex-wrap[data-v-8c9498c0]{flex-wrap:wrap;}
+.items-center[data-v-8c9498c0]{align-items:center;}
+.gap-1[data-v-8c9498c0]{gap:0.25rem;}
+.gap-2[data-v-8c9498c0]{gap:0.5rem;}
+.border[data-v-8c9498c0]{border-width:1px;}
+.px-1\.5[data-v-8c9498c0]{padding-left:0.375rem;padding-right:0.375rem;}
+.py-0\.5[data-v-8c9498c0]{padding-top:0.125rem;padding-bottom:0.125rem;}
+.text-sm[data-v-8c9498c0]{font-size:0.875rem;line-height:1.25rem;}
+.text-\[\#8b8685\][data-v-8c9498c0]{--un-text-opacity:1;color:rgb(139 134 133 / var(--un-text-opacity));}</style>
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><h1 id="qr-code-logger" data-v-8c9498c0><a aria-hidden="true" tabindex="-1" href="#qr-code-logger" data-v-8c9498c0><span class="icon icon-link" data-v-8c9498c0></span></a>QR Code Logger</h1><div class="lead" data-v-8c9498c0><p data-v-8c9498c0>Scan QR codes and log them to a list. All data is saved to your device and can be exported as TSV for easy import into spreadsheets.</p></div><div style="border-radius:1em;border:2px solid #656463;padding:1em;background:#252423;margin:2em 0;" data-v-8c9498c0><div class="flex gap-2 mb-2 flex-wrap items-center" data-v-8c9498c0><button class="btn" style="min-width:120px;" data-v-8c9498c0>Start Scanning</button><span class="text-sm text-[#8b8685]" data-v-8c9498c0>Ready</span></div><!----><div style="margin-bottom:1em;" data-v-8c9498c0><textarea class="form-control" rows="8" readonly style="font-family:monospace;font-size:0.9em;" data-v-8c9498c0>Timestamp	QR Code Data
+</textarea></div><div class="flex gap-2 flex-wrap items-center" data-v-8c9498c0><button class="btn py-0.5 px-1.5" disabled title="Copy log to clipboard" data-v-8c9498c0><iconify-icon icon="octicon:copy-16" inline="" data-v-8c9498c0></iconify-icon> Copy </button><button class="btn py-0.5 px-1.5" disabled data-v-8c9498c0> Clear </button><!----><button class="btn py-0.5 px-1.5" disabled title="Download as .tsv file" data-v-8c9498c0><iconify-icon icon="octicon:download-16" inline="" data-v-8c9498c0></iconify-icon> Save </button><label class="flex items-center gap-1 ml-auto text-sm" data-v-8c9498c0><input type="checkbox" checked data-v-8c9498c0> Audio feedback </label></div></div><div class="notes-callout" data-type="Tip" data-v-8c9498c0><p class="notes-callout__label" data-v-8c9498c0><notes-callout-icon type="Tip" data-v-8c9498c0></notes-callout-icon>How to use</p><ol data-v-8c9498c0><li data-v-8c9498c0>Click <strong data-v-8c9498c0>Start Scanning</strong> to begin</li><li data-v-8c9498c0>The scanner window will open. Point your camera at QR codes</li><li data-v-8c9498c0>Each scan is automatically logged with a timestamp</li><li data-v-8c9498c0>Use <strong data-v-8c9498c0>Copy</strong> to copy the log, <strong data-v-8c9498c0>Clear</strong> to reset, <strong data-v-8c9498c0>Save</strong> to download as TSV, or <strong data-v-8c9498c0>Share</strong> to send to other apps</li><li data-v-8c9498c0>The log is automatically saved to your device and persists between sessions</li></ol><p data-v-8c9498c0><strong data-v-8c9498c0>Pro tip</strong>: TSV format can be pasted directly into Google Sheets or Excel!</p></div><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});/* Analyzed bindings: {
+  "onMounted": "setup-const",
+  "onUnmounted": "setup-const",
+  "ref": "setup-const",
+  "watch": "setup-const",
+  "isScanning": "setup-ref",
+  "log": "setup-ref",
+  "defaultLog": "literal-const",
+  "status": "setup-ref",
+  "canShare": "setup-ref",
+  "audioEnabled": "setup-ref",
+  "scannerIframe": "setup-ref",
+  "DEDUP_THRESHOLD": "literal-const",
+  "seenCodesMap": "setup-let",
+  "audioContext": "setup-let",
+  "localStorageKey": "literal-const",
+  "playSound": "setup-const",
+  "handleMessage": "setup-const",
+  "copyLog": "setup-const",
+  "clearLog": "setup-const",
+  "shareLog": "setup-const",
+  "saveLog": "setup-const",
+  "toggleScanning": "setup-const"
+} */
+var _vue = require('vue');
+
+const _hoisted_1 = { style: {"border-radius":"1em","border":"2px solid #656463","padding":"1em","background":"#252423","margin":"2em 0"} }
+const _hoisted_2 = { class: "flex gap-2 mb-2 flex-wrap items-center" }
+const _hoisted_3 = { class: "text-sm text-[#8b8685]" }
+const _hoisted_4 = {
+  key: 0,
+  style: {"margin-bottom":"1em","border":"2px solid #656463","border-radius":"0.5em","overflow":"hidden"}
+}
+const _hoisted_5 = { style: {"margin-bottom":"1em"} }
+const _hoisted_6 = ["value"]
+const _hoisted_7 = { class: "flex gap-2 flex-wrap items-center" }
+const _hoisted_8 = ["disabled"]
+const _hoisted_9 = ["disabled"]
+const _hoisted_10 = ["disabled"]
+const _hoisted_11 = ["disabled"]
+const _hoisted_12 = { class: "flex items-center gap-1 ml-auto text-sm" }
+
+
+
+const defaultLog = 'Timestamp\tQR Code Data\n';
+const DEDUP_THRESHOLD = 2000; // 2 seconds
+const localStorageKey = 'QRLogger:log';
+
+// Audio feedback
+
+const __sfc__ = {
+  __name: 'Note',
+  setup(__props) {
+
+const isScanning = _vue.ref.call(void 0, false);
+const log = _vue.ref.call(void 0, 'Timestamp\tQR Code Data\n');
+const status = _vue.ref.call(void 0, 'Ready');
+const canShare = _vue.ref.call(void 0, false);
+const audioEnabled = _vue.ref.call(void 0, true);
+const scannerIframe = _vue.ref.call(void 0, null);
+
+let seenCodesMap = new Map(); // Map<code, lastSeenTimestamp>
+let audioContext = null;
+function playSound(code) {
+  if (!audioEnabled.value) return;
+  if (!audioContext) {
+    audioContext = new AudioContext();
+  }
+
+  const baseFreq = 523; // C5
+
+  // Count how many times this code already appears in the log
+  const lines = log.value.split('\n').slice(1); // Skip header
+  const count = lines.filter(line => {
+    const parts = line.split('\t');
+    return parts[1] === code;
+  }).length;
+
+  // Adjust base frequency by just intonation (perfect fifth intervals)
+  // Each occurrence multiplies by 1.5 * 1.5 / 2 = 1.125
+  // This gives us major second intervals
+  let freq = baseFreq;
+  for (let i = 0; i < count; i++) {
+    freq = freq * 1.5 * 1.5 / 2;
+  }
+
+  // Play two notes: base and base × 1.5 (perfect fifth)
+  const notes = [freq, freq * 1.5];
+
+  for (const [i, note] of notes.entries()) {
+    const oscillator = audioContext.createOscillator();
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(note, audioContext.currentTime);
+
+    const gain = audioContext.createGain();
+    const start = audioContext.currentTime + i * 0.075;
+    gain.gain.setValueAtTime(0.3, start);
+    gain.gain.exponentialRampToValueAtTime(0.01, start + 0.1);
+
+    oscillator.connect(gain);
+    gain.connect(audioContext.destination);
+
+    oscillator.start(start);
+    oscillator.stop(start + 0.1);
+  }
+}
+
+// Message handler from iframe
+function handleMessage(event) {
+  // Only accept messages from the scanner iframe
+  if (!scannerIframe.value || event.source !== scannerIframe.value.contentWindow) {
+    return;
+  }
+
+  if (event.data && event.data.text) {
+    const now = Date.now();
+    const code = event.data.text;
+
+    // Clean up old entries from the map (codes older than threshold)
+    for (const [key, timestamp] of seenCodesMap.entries()) {
+      if (now - timestamp > DEDUP_THRESHOLD) {
+        seenCodesMap.delete(key);
+      }
+    }
+
+    // Check if code is in the "recently seen" map (anything here is within threshold)
+    if (seenCodesMap.has(code)) {
+      seenCodesMap.set(code, now); // Update timestamp
+      return; // Skip logging
+    }
+
+    // Add to log and update map
+    const timestamp = new Date().toISOString();
+    log.value += `${timestamp}\t${code}\n`;
+    seenCodesMap.set(code, now);
+    status.value = `Scanned: ${code}`;
+
+    // Play audio feedback
+    playSound(code);
+  }
+}
+
+// Copy to clipboard
+async function copyLog() {
+  try {
+    await navigator.clipboard.writeText(log.value);
+    const originalStatus = status.value;
+    status.value = 'Copied to clipboard!';
+    setTimeout(() => {
+      status.value = originalStatus;
+    }, 2000);
+  } catch (err) {
+    console.error('Failed to copy:', err);
+    status.value = 'Failed to copy';
+  }
+}
+
+// Clear log
+function clearLog() {
+  if (confirm('Clear all scanned codes? This cannot be undone.')) {
+    log.value = defaultLog;
+    seenCodesMap.clear();
+    status.value = 'Log cleared';
+  }
+}
+
+// Share via Web Share API
+async function shareLog() {
+  try {
+    const file = new File([log.value], 'qr-codes.tsv', { type: 'text/tab-separated-values' });
+    await navigator.share({
+      files: [file],
+      title: 'QR Codes Log',
+      text: 'Scanned QR codes'
+    });
+  } catch (err) {
+    if (err.name !== 'AbortError') {
+      console.error('Share failed:', err);
+      status.value = 'Share failed';
+    }
+  }
+}
+
+// Save as file
+function saveLog() {
+  try {
+    const blob = new Blob([log.value], { type: 'text/tab-separated-values' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `qr-codes-${new Date().toISOString().split('T')[0]}.tsv`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    status.value = 'File downloaded';
+  } catch (err) {
+    console.error('Failed to save:', err);
+    status.value = 'Failed to save';
+  }
+}
+
+// Toggle scanning
+function toggleScanning() {
+  isScanning.value = !isScanning.value;
+  if (isScanning.value) {
+    status.value = 'Scanning... position QR code in camera';
+  } else {
+    status.value = 'Stopped';
+  }
+}
+
+// Persist log to localStorage
+_vue.watch.call(void 0, log, (newValue) => {
+  localStorage.setItem(localStorageKey, newValue);
+});
+
+_vue.onMounted.call(void 0, () => {
+  // Load from localStorage
+  const saved = localStorage.getItem(localStorageKey);
+  if (saved) {
+    log.value = saved;
+  }
+
+  // Check for Web Share API
+  canShare.value = !!navigator.share;
+
+  // Listen for messages from iframe
+  window.addEventListener('message', handleMessage);
+});
+
+_vue.onUnmounted.call(void 0, () => {
+  window.removeEventListener('message', handleMessage);
+  isScanning.value = false;
+  seenCodesMap.clear();
+});
+
+return (_ctx, _cache) => {
+  return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
+    _cache[5] || (_cache[5] = _vue.createElementVNode.call(void 0, "h1", { id: "qr-code-logger" }, [
+      _vue.createElementVNode.call(void 0, "a", {
+        "aria-hidden": "true",
+        tabindex: "-1",
+        href: "#qr-code-logger"
+      }, [
+        _vue.createElementVNode.call(void 0, "span", { class: "icon icon-link" })
+      ]),
+      _vue.createTextVNode.call(void 0, "QR Code Logger")
+    ], -1 /* CACHED */)),
+    _cache[6] || (_cache[6] = _vue.createElementVNode.call(void 0, "div", { class: "lead" }, [
+      _vue.createElementVNode.call(void 0, "p", null, "Scan QR codes and log them to a list. All data is saved to your device and can be exported as TSV for easy import into spreadsheets.")
+    ], -1 /* CACHED */)),
+    _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
+      _vue.createElementVNode.call(void 0, "div", _hoisted_2, [
+        _vue.createElementVNode.call(void 0, "button", {
+          class: "btn",
+          onClick: toggleScanning,
+          style: {"min-width":"120px"}
+        }, _vue.toDisplayString.call(void 0, isScanning.value ? 'Stop Scanning' : 'Start Scanning'), 1 /* TEXT */),
+        _vue.createElementVNode.call(void 0, "span", _hoisted_3, _vue.toDisplayString.call(void 0, status.value), 1 /* TEXT */)
+      ]),
+      (isScanning.value)
+        ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_4, [
+            _vue.createElementVNode.call(void 0, "iframe", {
+              ref_key: "scannerIframe",
+              ref: scannerIframe,
+              src: `https://qr.spacet.me/?action=scan&fit=cover&delay=100&post=parent`,
+              style: {"width":"100%","height":"320px","border":"none"},
+              allow: "camera"
+            }, null, 512 /* NEED_PATCH */)
+          ]))
+        : _vue.createCommentVNode.call(void 0, "v-if", true),
+      _vue.createElementVNode.call(void 0, "div", _hoisted_5, [
+        _vue.createElementVNode.call(void 0, "textarea", {
+          class: "form-control",
+          rows: "8",
+          readonly: "",
+          value: log.value,
+          style: {"font-family":"monospace","font-size":"0.9em"}
+        }, null, 8 /* PROPS */, _hoisted_6)
+      ]),
+      _vue.createElementVNode.call(void 0, "div", _hoisted_7, [
+        _vue.createElementVNode.call(void 0, "button", {
+          class: "btn py-0.5 px-1.5",
+          onClick: copyLog,
+          disabled: log.value === defaultLog,
+          title: "Copy log to clipboard"
+        }, [...(_cache[1] || (_cache[1] = [
+          _vue.createElementVNode.call(void 0, "iconify-icon", {
+            icon: "octicon:copy-16",
+            inline: ""
+          }, null, -1 /* CACHED */),
+          _vue.createTextVNode.call(void 0, " Copy ", -1 /* CACHED */)
+        ]))], 8 /* PROPS */, _hoisted_8),
+        _vue.createElementVNode.call(void 0, "button", {
+          class: "btn py-0.5 px-1.5",
+          onClick: clearLog,
+          disabled: log.value === defaultLog
+        }, " Clear ", 8 /* PROPS */, _hoisted_9),
+        (canShare.value)
+          ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "button", {
+              key: 0,
+              class: "btn py-0.5 px-1.5",
+              onClick: shareLog,
+              disabled: log.value === defaultLog,
+              title: "Share as text file"
+            }, [...(_cache[2] || (_cache[2] = [
+              _vue.createElementVNode.call(void 0, "iconify-icon", {
+                icon: "octicon:share-16",
+                inline: ""
+              }, null, -1 /* CACHED */),
+              _vue.createTextVNode.call(void 0, " Share ", -1 /* CACHED */)
+            ]))], 8 /* PROPS */, _hoisted_10))
+          : _vue.createCommentVNode.call(void 0, "v-if", true),
+        _vue.createElementVNode.call(void 0, "button", {
+          class: "btn py-0.5 px-1.5",
+          onClick: saveLog,
+          disabled: log.value === defaultLog,
+          title: "Download as .tsv file"
+        }, [...(_cache[3] || (_cache[3] = [
+          _vue.createElementVNode.call(void 0, "iconify-icon", {
+            icon: "octicon:download-16",
+            inline: ""
+          }, null, -1 /* CACHED */),
+          _vue.createTextVNode.call(void 0, " Save ", -1 /* CACHED */)
+        ]))], 8 /* PROPS */, _hoisted_11),
+        _vue.createElementVNode.call(void 0, "label", _hoisted_12, [
+          _vue.withDirectives.call(void 0, _vue.createElementVNode.call(void 0, "input", {
+            type: "checkbox",
+            "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => ((audioEnabled).value = $event))
+          }, null, 512 /* NEED_PATCH */), [
+            [_vue.vModelCheckbox, audioEnabled.value]
+          ]),
+          _cache[4] || (_cache[4] = _vue.createTextVNode.call(void 0, " Audio feedback ", -1 /* CACHED */))
+        ])
+      ])
+    ]),
+    _cache[7] || (_cache[7] = _vue.createStaticVNode.call(void 0, "<div class=\"notes-callout\" data-type=\"Tip\" data-v-8c9498c0><p class=\"notes-callout__label\" data-v-8c9498c0><notes-callout-icon type=\"Tip\" data-v-8c9498c0></notes-callout-icon>How to use</p><ol data-v-8c9498c0><li data-v-8c9498c0>Click <strong data-v-8c9498c0>Start Scanning</strong> to begin</li><li data-v-8c9498c0>The scanner window will open. Point your camera at QR codes</li><li data-v-8c9498c0>Each scan is automatically logged with a timestamp</li><li data-v-8c9498c0>Use <strong data-v-8c9498c0>Copy</strong> to copy the log, <strong data-v-8c9498c0>Clear</strong> to reset, <strong data-v-8c9498c0>Save</strong> to download as TSV, or <strong data-v-8c9498c0>Share</strong> to send to other apps</li><li data-v-8c9498c0>The log is automatically saved to your device and persists between sessions</li></ol><p data-v-8c9498c0><strong data-v-8c9498c0>Pro tip</strong>: TSV format can be pasted directly into Google Sheets or Excel!</p></div>", 1))
+  ], 64 /* STABLE_FRAGMENT */))
+}
+}
+
+}
+__sfc__.__scopeId = "data-v-8c9498c0"
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"title":"QR Code Logger","public":true};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

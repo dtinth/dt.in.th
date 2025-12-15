@@ -8,6 +8,7 @@ aliases:
 
 Here are my recent writings:
 
+- 2025-12-15: [Using GitHub’s official Remote MCP Server with Claude Web](ClaudeWebGitHubMCP)
 - 2025-12-06: [Service Accounts in Grist](GristServiceAccounts)
 - 2025-12-02: [Grist TypeScript Type Generator](GristTypeGenerator)
 - 2025-11-28: [Web speech-to-text](WebSpeechToText)
@@ -45,7 +46,7 @@ Here are my recent writings:
 - 2025-05-09: [Installing Google Cloud CLI on GitHub Codespaces](InstallGcloudCliOnCodespaces)
 - 2025-03-27: [Random mnemonic code generator based on SLIP39 wordlist](Slip39Wordlist)
 - 2025-03-23: [A web-based printing tool for Brother P-touch series label printers](BrotherPTWebUSB)
-- 2025-02-22: [Using ZRAM for compressed RAM-backed swap space in Linux](LinuxZram)
+- 2025-02-22: [Using zram for compressed RAM-backed swap space in Linux](LinuxZram)
 - 2025-02-16: [Enabling access logging in Caddy](CaddyAccessLogging)
 - 2025-02-08: [Deploying a Bun app to AWS App Runner](BunAppRunner)
 - 2024-12-13: [K-sortable unique ID formats (and generator)](KSortableUniqueID)

@@ -54,6 +54,7 @@ title: QR Code
 ## Tools
 
 - [Paste image to decode QR code](PasteQR) – Decode QR codes from screenshots or images
+- [QR Code Logger](QRLogger) – Scan and log QR codes, export as TSV
 
 <script setup>
   const qrText = Vue.ref('')

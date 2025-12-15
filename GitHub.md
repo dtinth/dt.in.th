@@ -10,6 +10,7 @@ aliases:
 
 - [Authenticating as a GitHub App in Octokit.js](OctokitGitHubAppAuth)
 - [Publishing and consuming npm packages via GitHub Releases](NpmPackagesViaGitHubReleases)
+- [Using GitHub’s official Remote MCP Server with Claude Web](ClaudeWebGitHubMCP)
 
 ## Actions
 

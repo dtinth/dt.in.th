@@ -116,6 +116,7 @@ https://dt.in.th/CaddyReverseProxy
 https://dt.in.th/CaddySelfSigned
 https://dt.in.th/ChucKSong4
 https://dt.in.th/CircleCIDummyConfig
+https://dt.in.th/ClaudeWebGitHubMCP
 https://dt.in.th/CloudPlatform
 https://dt.in.th/Codebox
 https://dt.in.th/Codespaces
@@ -335,6 +336,7 @@ https://dt.in.th/Projects
 https://dt.in.th/PublishMarkdownPageWithoutBuildTool
 https://dt.in.th/PythonRecursionIntro
 https://dt.in.th/QRCode
+https://dt.in.th/QRLogger
 https://dt.in.th/QRScan
 https://dt.in.th/RaceConditionsInJSApps
 https://dt.in.th/Rails
