@@ -979,6 +979,10 @@
 		{	"title": "Low-effort things you can do today to improve code maintainability a year later."
 		,	"parent": "SoftwareEngineering"
 		}
+	,	"Lsnr":
+		{	"title": "@lsnr"
+		,	"parent": "Projects"
+		}
 	,	"M3DynamicColorJS":
 		{	"title": "Generating Material Design 3 Dynamic Color Scheme with JavaScript"
 		,	"parent": "Colors"

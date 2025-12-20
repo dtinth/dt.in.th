@@ -243,6 +243,7 @@ https://dt.in.th/LinuxZram
 https://dt.in.th/LinuxZswap
 https://dt.in.th/LocalTalkInternationalization
 https://dt.in.th/LowEffortMaintainability
+https://dt.in.th/Lsnr
 https://dt.in.th/M3DynamicColorJS
 https://dt.in.th/MIDILightSwitch
 https://dt.in.th/MMLPlayer

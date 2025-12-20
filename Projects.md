@@ -16,6 +16,7 @@ topic: true
 | [**dt.in.th**](WebsiteHistory) | Thai's website documenting the things he makes, with its evolution since 2005. |
 | [**Gyroscratch**](Gyroscratch) | A rhythm game turntable built by putting a phone in a ceramic plate. |
 | [**iPedal**](IPedal) | A programmable foot pedal for your iPad and Node.js. |
+| [**@lsnr**](Lsnr) | A LINE chatbot that transcribes speech to text. |
 | [**MIDI Light Switch**](MIDILightSwitch) | Turning a MIDI keyboard into a light switch for my room. |
 | [**pastebox**](Pastebox) | A drag-and-drop/copy-paste bridge for streamlined video editing workflow on macOS. |
 | [**super-silly-vortex**](SuperSillyVortex) | A silly recreation of the Rain Vortex at Jewel Changi Airport, but it's node_modules instead of water. |

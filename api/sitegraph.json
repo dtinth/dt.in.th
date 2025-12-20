@@ -2430,6 +2430,13 @@
 				}
 			]
 		}
+	,	"Lsnr":
+		{	"title": "@lsnr"
+		,	"links":
+			[	{	"link": "JavaScriptBangkokTalk2024"
+				}
+			]
+		}
 	,	"M3DynamicColorJS":
 		{	"title": "Generating Material Design 3 Dynamic Color Scheme with JavaScript"
 		,	"links":
@@ -3323,6 +3330,8 @@
 			,	{	"link": "Gyroscratch"
 				}
 			,	{	"link": "IPedal"
+				}
+			,	{	"link": "Lsnr"
 				}
 			,	{	"link": "MIDILightSwitch"
 				}
