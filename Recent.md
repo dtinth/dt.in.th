@@ -8,7 +8,8 @@ aliases:
 
 Here are my recent writings:
 
-- 2025-12-15: [Using GitHub’s official Remote MCP Server with Claude Web](ClaudeWebGitHubMCP)
+- 2026-01-01: [Tyndale's One Year Bible Reading Plan for The Word of Promise Audio Bible app](OneYearBiblePlanForWordOfPromiseApp)
+- 2025-12-15: [Using GitHub's official Remote MCP Server with Claude Web](ClaudeWebGitHubMCP)
 - 2025-12-06: [Service Accounts in Grist](GristServiceAccounts)
 - 2025-12-02: [Grist TypeScript Type Generator](GristTypeGenerator)
 - 2025-11-28: [Web speech-to-text](WebSpeechToText)

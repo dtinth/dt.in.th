@@ -916,11 +916,15 @@
 	,	"CaddyReverseProxy":
 		{	"title": "Setting up a reverse proxy using Caddy"
 		,	"links":
-			[	{	"link": "#user-content-fn-certbot-notes"
+			[	{	"link": "Caddy"
+				}
+			,	{	"link": "DockerCompose"
+				}
+			,	{	"link": "Dokploy"
+				}
+			,	{	"link": "#user-content-fn-certbot-notes"
 				}
 			,	{	"link": "#user-content-fn-boilerplate"
-				}
-			,	{	"link": "Caddy"
 				}
 			,	{	"link": "Docker"
 				}
@@ -934,6 +938,13 @@
 		{	"title": "Making Caddy use a self-signed SSL certificate"
 		,	"links":
 			[	{	"link": "Caddy"
+				}
+			]
+		}
+	,	"Christianity":
+		{	"title": "Christianity (topic)"
+		,	"links":
+			[	{	"link": "OneYearBiblePlanForWordOfPromiseApp"
 				}
 			]
 		}
@@ -1927,6 +1938,8 @@
 			,	{	"link": "AboutThisWebsite"
 				}
 			,	{	"link": "BaaS"
+				}
+			,	{	"link": "Christianity"
 				}
 			,	{	"link": "CloudPlatform"
 				}
@@ -2996,6 +3009,19 @@
 		{	"title": "OKLCH Color Scale Plotter"
 		,	"links":
 			[	{	"link": "Colors"
+				}
+			]
+		}
+	,	"OneYearBiblePlanForWordOfPromiseApp":
+		{	"title": "Tyndale's One Year Bible Reading Plan for The Word of Promise Audio Bible app"
+		,	"links":
+			[	{	"link": "#user-content-fn-wop"
+				}
+			,	{	"link": "#user-content-fn-format"
+				}
+			,	{	"link": "#user-content-fnref-wop"
+				}
+			,	{	"link": "#user-content-fnref-format"
 				}
 			]
 		}

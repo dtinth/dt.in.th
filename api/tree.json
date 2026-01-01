@@ -464,6 +464,10 @@
 		{	"title": "Making Caddy use a self-signed SSL certificate"
 		,	"parent": "Caddy"
 		}
+	,	"Christianity":
+		{	"title": "Christianity (topic)"
+		,	"parent": "HomePage"
+		}
 	,	"ChucKSong4":
 		{	"title": "ChucK The Fourth Time"
 		,	"parent": "ProgrammaticMusic"
@@ -1202,6 +1206,10 @@
 	,	"OklchPlot":
 		{	"title": "OKLCH Color Scale Plotter"
 		,	"parent": "Colors"
+		}
+	,	"OneYearBiblePlanForWordOfPromiseApp":
+		{	"title": "Tyndale's One Year Bible Reading Plan for The Word of Promise Audio Bible app"
+		,	"parent": "Christianity"
 		}
 	,	"OnlyLoveRemix":
 		{	"title": "Only Love (Euphoric Trance Remix)"

@@ -4,6 +4,23 @@ facebook: https://www.facebook.com/dtinth/posts/10215797763731229
 title: Setting up a reverse proxy using Caddy
 aliases:
   - 20201121T173226Z1294
+created: 2020-11-21
+updates:
+  - date: 2025-12-22
+    description: Updated for usage with Dokploy and Docker Compose.
+---
+
+**To run [Caddy](Caddy) as a reverse proxy** with [Docker Compose](DockerCompose) and [Dokploy](Dokploy), I use this compose file:
+
+```yaml
+services:
+  proxy:
+    image: caddy
+    command: 'caddy reverse-proxy --from :80 --to https://192.168.8.2:8379'
+```
+
+_Original note content follows:_
+
 ---
 
 **The most boring thing about setting up a web server on a new cloud server for me is the initial configuration.**

@@ -21,6 +21,7 @@ Welcome to my [digital garden](DigitalGardening).
 <div id="topic-list">
 
 - [Backend-as-a-Service](BaaS)
+- [Christianity](Christianity)
 - [Cloud Platform](CloudPlatform)
 - [Colors](Colors)
 - [Creative Coding](CreativeCoding)
