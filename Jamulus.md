@@ -6,7 +6,7 @@ aliases:
   - 20220126T115523Z9734
 ---
 
-My notes about **Jamulus**, a software that allows you to play [music](Music) with others online:
+My notes about [**Jamulus**](https://jamulus.io), a software that allows you to play [music](Music) with others online:
 
 - [Jamulus protocol study notes](JamulusProtocolStudyNotes)
 - [Proof-of-concept: Web based Jamulus client](20210920T171647Z1352)

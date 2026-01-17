@@ -8,6 +8,10 @@ aliases:
 
 Here are my recent writings:
 
+- 2026-01-17: [GitHub Actions + GCP Authentication without Secrets](GitHubActionsGCP)
+- 2026-01-17: [Using Mise in GitHub Actions](GitHubActionsMise)
+- 2026-01-15: [Braindump เรื่อง public dataset ใน Google BigQuery](BigQueryBrainDump)
+- 2026-01-13: [Braindump เรื่อง open source ที่มีการใช้งานจริงในภาครัฐ](GovernmentGradeOpenSourceBrainDump)
 - 2026-01-01: [Tyndale's One Year Bible Reading Plan for The Word of Promise Audio Bible app](OneYearBiblePlanForWordOfPromiseApp)
 - 2025-12-15: [Using GitHub's official Remote MCP Server with Claude Web](ClaudeWebGitHubMCP)
 - 2025-12-06: [Service Accounts in Grist](GristServiceAccounts)

@@ -380,6 +380,10 @@
 		{	"title": "Bemuse"
 		,	"parent": "Projects"
 		}
+	,	"BigQueryBrainDump":
+		{	"title": "Braindump เรื่อง public dataset ใน Google BigQuery"
+		,	"parent": "Recent"
+		}
 	,	"BlackBoxTestingStrategies":
 		{	"title": "Strategies for Black-Box Testability (2024 talk)"
 		,	"parent": "Talks"
@@ -791,6 +795,10 @@
 	,	"GoogleCloudServiceAccountIdToken":
 		{	"title": "Using Google Cloud Service Accounts to authenticate between your own services"
 		,	"parent": "GoogleCloud"
+		}
+	,	"GovernmentGradeOpenSourceBrainDump":
+		{	"title": "Braindump เรื่อง open source ที่มีการใช้งานจริงในภาครัฐ"
+		,	"parent": "Recent"
 		}
 	,	"Grist":
 		{	"title": "Grist (topic)"

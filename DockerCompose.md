@@ -6,7 +6,7 @@ aliases:
   - DockerComposeSnippets
 ---
 
-Common snippets for [Docker](Docker) Compose. I usually run these in [Portainer](https://portainer.io).
+This page lists some [Docker](Docker) Compose snippets. I used to run these in [Portainer](https://portainer.io). But nowadays I use [Dokploy](Dokploy) to manage my Docker deployments.
 
 - [**Grist** with Google Sign-In and External Storage](GristDockerCompose)
 - [**PostgreSQL** and pgAdmin with Docker Compose](PostgresDockerCompose)

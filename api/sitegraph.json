@@ -730,6 +730,17 @@
 				}
 			]
 		}
+	,	"BigQueryBrainDump":
+		{	"title": "Braindump เรื่อง public dataset ใน Google BigQuery"
+		,	"links":
+			[	{	"link": "Jamulus"
+				}
+			,	{	"link": "#user-content-fn-jam"
+				}
+			,	{	"link": "#user-content-fnref-jam"
+				}
+			]
+		}
 	,	"BlackBoxTestingStrategies":
 		{	"title": "Strategies for Black-Box Testability (2024 talk)"
 		,	"links":
@@ -1289,6 +1300,8 @@
 		,	"links":
 			[	{	"link": "Docker"
 				}
+			,	{	"link": "Dokploy"
+				}
 			,	{	"link": "GristDockerCompose"
 				}
 			,	{	"link": "PostgresDockerCompose"
@@ -1345,6 +1358,8 @@
 			[	{	"link": "Linux"
 				}
 			,	{	"link": "Docker"
+				}
+			,	{	"link": "DockerCompose"
 				}
 			,	{	"link": "LinuxTailscale"
 				}
@@ -1799,6 +1814,17 @@
 			,	{	"link": "Nodejs"
 				}
 			,	{	"link": "JWT"
+				}
+			]
+		}
+	,	"GovernmentGradeOpenSourceBrainDump":
+		{	"title": "Braindump เรื่อง open source ที่มีการใช้งานจริงในภาครัฐ"
+		,	"links":
+			[	{	"link": "#user-content-fn-oss"
+				}
+			,	{	"link": "Grist"
+				}
+			,	{	"link": "#user-content-fnref-oss"
 				}
 			]
 		}
@@ -2557,6 +2583,8 @@
 		{	"title": "mise-en-place (topic)"
 		,	"links":
 			[	{	"link": "MiseEnv"
+				}
+			,	{	"link": "GitHubActions"
 				}
 			]
 		}
