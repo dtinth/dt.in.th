@@ -17,3 +17,5 @@ title: GitHub Actions
 - [GitHub Actions: Composite action boilerplate](GitHubActionsCompositeBoilerplate)
 - [npm checkmark](NpmCheckmark)
 - [Auto-merging dependabot PRs](DependabotAutoMerge)
+- [GitHub Actions + GCP Authentication without Secrets](GitHubActionsGCP)
+- [Using Mise in GitHub Actions](GitHubActionsMise)

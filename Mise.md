@@ -7,6 +7,7 @@ title: mise-en-place
 [**mise-en-place**](https://mise.jdx.dev/) is a command-line tool that manages developer tools, environment variables, and project tasks.
 
 - [Loading `.env` file with mise-en-place](MiseEnv)
+- [Using Mise in GitHub Actions](GitHubActionsMise)
 
 ## Installation
 
@@ -18,12 +19,6 @@ curl https://mise.run | sh
 
 ```bash
 echo '~/.local/bin/mise activate fish | source' >> ~/.config/fish/config.fish
-```
-
-Installation in [GitHub Actions](GitHubActions):
-
-```yaml
-- uses: jdx/mise-action@v3
 ```
 
 Usage with [Copilot Coding Agent Setup Steps](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-environment#preinstalling-tools-or-dependencies-in-copilots-environment):

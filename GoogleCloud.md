@@ -14,6 +14,7 @@ aliases:
 - [How to make authenticated API calls to Google Cloud Function (2nd generation) or Google Cloud Run services from Cloudflare Workers (or other non-Node.js JavaScipt runtimes)](InvokingGoogleCloudRunFromCloudflareWorkers)
 - [Installing Google Cloud CLI on GitHub Codespaces](InstallGcloudCliOnCodespaces)
 - [Creating a free Google Cloud Compute Engine VM in Google Cloud Shell](GoogleCloudFreeTier)
+- [GitHub Actions + GCP Authentication without Secrets](GitHubActionsGCP)
 
 ## Google APIs
 
