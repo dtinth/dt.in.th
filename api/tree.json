@@ -740,9 +740,17 @@
 		{	"title": "GitHub Actions Composite Action Boilerplate"
 		,	"parent": "GitHubActions"
 		}
+	,	"GitHubActionsGCP":
+		{	"title": "GitHub Actions + GCP Authentication without Secrets"
+		,	"parent": "GoogleCloud"
+		}
 	,	"GitHubActionsLinodeObjectStorageUpload":
 		{	"title": "A GitHub Actions workflow to save files to Linode Object Storage"
 		,	"parent": "GitHubActions"
+		}
+	,	"GitHubActionsMise":
+		{	"title": "Using Mise in GitHub Actions"
+		,	"parent": "Mise"
 		}
 	,	"GitHubActionsPushAsGitHubApp":
 		{	"title": "GitHub Actions: Push commit as GitHub App"

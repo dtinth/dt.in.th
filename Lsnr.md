@@ -1,6 +1,26 @@
 ---
 public: true
 title: '@lsnr'
+created: 2024-11-01
+updates:
+  - date: 2024-11-01
+    description: <a href="https://www.facebook.com/dtinth/posts/pfbid029Q8CAA2GMPNeUUh421u7EgpmXQgnzMw3WxUJHTm3Ru7wDn8v1QgtQJz3G5d1hyGJl" target="_blank">Initial release announcement posted on Facebook</a>
+  - date: 2025-01-22
+    description: <a href="https://www.facebook.com/dtinth/posts/pfbid0bBRuZ57XBKhXb5D2E9a8UNUQkfbMpG7WJyEa7b48jRzbZGsM73GxpSyrMxASfoo7l" target="_blank">Added group chat support</a>
+  - date: 2025-04-08
+    description: When transcription fails, the quick reply button now allows retrying.
+  - date: 2025-09-09
+    description: Migrated to Gemini 2.5 Flash, following the sunset of Gemini 1.x API.
+  - date: 2025-12-11
+    description: Improved the formatting of transcription results.
+  - date: 2025-12-19
+    description: Added support for sharing audio clips from Voice Memos app on iOS.
+  - date: 2025-12-20
+    description: <a href="https://www.facebook.com/reel/851386957812485/" target="_blank">Posted a video demo comparing @lsnr transcription with iOS and Android built-in transcription</a>
+  - date: 2026-01-07
+    description: Added an advanced setting where users can choose to temporarily store an encrypted copy of the transcription for easy copying.
+  - date: 2026-01-21
+    description: Updated to use Gemini 3 Flash for better transcription quality and faster processing.
 ---
 
 ::::::::split

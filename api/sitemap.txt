@@ -183,7 +183,9 @@ https://dt.in.th/GenerateFontWeights
 https://dt.in.th/GitHub
 https://dt.in.th/GitHubActions
 https://dt.in.th/GitHubActionsCompositeBoilerplate
+https://dt.in.th/GitHubActionsGCP
 https://dt.in.th/GitHubActionsLinodeObjectStorageUpload
+https://dt.in.th/GitHubActionsMise
 https://dt.in.th/GitHubActionsPushAsGitHubApp
 https://dt.in.th/GitHubDeployKeySSHConfig
 https://dt.in.th/GitHubMarkdownAlerts

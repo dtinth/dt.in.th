@@ -1676,6 +1676,10 @@
 				}
 			,	{	"link": "DependabotAutoMerge"
 				}
+			,	{	"link": "GitHubActionsGCP"
+				}
+			,	{	"link": "GitHubActionsMise"
+				}
 			]
 		}
 	,	"GitHubActionsCompositeBoilerplate":
@@ -1685,12 +1689,36 @@
 				}
 			]
 		}
+	,	"GitHubActionsGCP":
+		{	"title": "GitHub Actions + GCP Authentication without Secrets"
+		,	"links":
+			[	{	"link": "GitHubActions"
+				}
+			,	{	"link": "GoogleCloud"
+				}
+			,	{	"link": "GoogleCloudServiceAccount"
+				}
+			,	{	"link": "GitHub"
+				}
+			,	{	"link": "JWT"
+				}
+			]
+		}
 	,	"GitHubActionsLinodeObjectStorageUpload":
 		{	"title": "A GitHub Actions workflow to save files to Linode Object Storage"
 		,	"links":
 			[	{	"link": "GitHubActions"
 				}
 			,	{	"link": "Linode"
+				}
+			]
+		}
+	,	"GitHubActionsMise":
+		{	"title": "Using Mise in GitHub Actions"
+		,	"links":
+			[	{	"link": "Mise"
+				}
+			,	{	"link": "GitHubActions"
 				}
 			]
 		}
@@ -1779,6 +1807,8 @@
 			,	{	"link": "InstallGcloudCliOnCodespaces"
 				}
 			,	{	"link": "GoogleCloudFreeTier"
+				}
+			,	{	"link": "GitHubActionsGCP"
 				}
 			,	{	"link": "NodeGoogleAPIsServiceAccount"
 				}
@@ -2584,7 +2614,7 @@
 		,	"links":
 			[	{	"link": "MiseEnv"
 				}
-			,	{	"link": "GitHubActions"
+			,	{	"link": "GitHubActionsMise"
 				}
 			]
 		}
