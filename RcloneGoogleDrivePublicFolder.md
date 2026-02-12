@@ -1,6 +1,7 @@
 ---
 public: true
 title: Using Rclone with a Public Google Drive folder
+created: 2026-02-12
 ---
 
 I had to mirror some public Google Drive folder to an object storage service. [Rclone](https://rclone.org/) can do this easily, but configuring it is a bit tricky.
