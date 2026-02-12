@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html data-precompiled=true data-slug="RcloneGoogleDrivePublicFolder" lang="en" data-dtinth="true">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using Rclone with a Public Google Drive folder | dt.in.th</title><meta property="og:title" content="Using Rclone with a Public Google Drive folder" data-source="note">
+<meta property="og:image" content="https://screenshot.source.in.th/image/_/notes/RcloneGoogleDrivePublicFolder" data-source="note">
+<meta property="og:image:width" content="1800" data-source="note">
+<meta property="og:image:height" content="1680" data-source="note">
+<link rel="canonical" href="https://dt.in.th/RcloneGoogleDrivePublicFolder" data-source="note">
+    <script async src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" integrity="sha256-dY2Ug42wyv3rl+sLVKEg3jbPs8f+hi7tmJ836AxVDwI=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/blurhash-image@1.0.1/blurhash-image.min.js" integrity="sha256-qrUUgTGk7xA7iVCwraHNQjwy2JryA0K4L3DL4qidagQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/runtime/entry/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerLeft"><a href="/">dt.in.th</a></div>
+    </header>
+    <div class="h-entry">
+      <main id="main">
+        <div id="mainContents">
+          <div class="prose e-content" id="noteContents"><!--[--><p>I had to mirror some public Google Drive folder to an object storage service. <a href="https://rclone.org/">Rclone</a> can do this easily, but configuring it is a bit tricky.</p><h2 id="prerequisites"><a aria-hidden="true" tabindex="-1" href="#prerequisites"><span class="icon icon-link"></span></a>Prerequisites</h2><ul><li>Rclone installed</li><li>A Google Cloud Project with Drive API enabled</li><li>A Google Cloud service account — you can create a service account without giving it any permission, as a public folder can already be accessed by anyone</li></ul><h2 id="configuration"><a aria-hidden="true" tabindex="-1" href="#configuration"><span class="icon icon-link"></span></a>Configuration</h2><pre><code>[gdrivepublic]
+type = drive
+scope = drive.readonly
+service_account_file = /path/to/gdrivepublic.service-account.json
+</code></pre><p>Normally we would have to configure the <code>root_folder_id</code> setting, but this setting can also be configured from the environment variables, which is what we will use.</p><h2 id="usage"><a aria-hidden="true" tabindex="-1" href="#usage"><span class="icon icon-link"></span></a>Usage</h2><p>Then you can use the <code>RCLONE_CONFIG_GDRIVEPUBLIC_ROOT_FOLDER_ID</code> environment variable to specify the public folder ID. For example:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0"><code><span class="line"><span style="color:#B392F0;">env</span><span style="color:#9ECBFF;"> RCLONE_CONFIG_GDRIVEPUBLIC_ROOT_FOLDER_ID=…</span><span style="color:#9ECBFF;"> rclone</span><span style="color:#9ECBFF;"> lsjson</span><span style="color:#9ECBFF;"> gdrivepublic:</span><span style="color:#79B8FF;"> --recursive</span><span style="color:#79B8FF;"> --files-only</span></span></code></pre><!--]--></div>
+        </div>
+      </main>
+      <footer>
+        <div id="footerContents">
+          <p><a class="u-author h-card" href="/" title="Thai Pangsakulyanont"><img src="/icon.png" alt="" style="display:none">@dtinth</a></p>
+        </div>
+      </footer>
+    </div>
+    <script>
+window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
+var _vue = require('vue');
+function render(_ctx, _cache) {
+  return _cache[0] || (_cache[0] = _vue.createStaticVNode.call(void 0, "<p>I had to mirror some public Google Drive folder to an object storage service. <a href=\"https://rclone.org/\">Rclone</a> can do this easily, but configuring it is a bit tricky.</p><h2 id=\"prerequisites\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#prerequisites\"><span class=\"icon icon-link\"></span></a>Prerequisites</h2><ul><li>Rclone installed</li><li>A Google Cloud Project with Drive API enabled</li><li>A Google Cloud service account — you can create a service account without giving it any permission, as a public folder can already be accessed by anyone</li></ul><h2 id=\"configuration\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#configuration\"><span class=\"icon icon-link\"></span></a>Configuration</h2><pre><code>[gdrivepublic]\ntype = drive\nscope = drive.readonly\nservice_account_file = /path/to/gdrivepublic.service-account.json\n</code></pre><p>Normally we would have to configure the <code>root_folder_id</code> setting, but this setting can also be configured from the environment variables, which is what we will use.</p><h2 id=\"usage\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#usage\"><span class=\"icon icon-link\"></span></a>Usage</h2><p>Then you can use the <code>RCLONE_CONFIG_GDRIVEPUBLIC_ROOT_FOLDER_ID</code> environment variable to specify the public folder ID. For example:</p><pre class=\"shiki github-dark\" style=\"background-color:#252423;color:#e1e4e8;\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#B392F0;\">env</span><span style=\"color:#9ECBFF;\"> RCLONE_CONFIG_GDRIVEPUBLIC_ROOT_FOLDER_ID=…</span><span style=\"color:#9ECBFF;\"> rclone</span><span style=\"color:#9ECBFF;\"> lsjson</span><span style=\"color:#9ECBFF;\"> gdrivepublic:</span><span style=\"color:#79B8FF;\"> --recursive</span><span style=\"color:#79B8FF;\"> --files-only</span></span></code></pre>", 9))
+}
+__sfc__.render = render
+__sfc__.__file = "Note.vue"
+exports. default = __sfc__};
+window.precompiledFrontMatter = {"public":true,"title":"Using Rclone with a Public Google Drive folder"};
+</script>
+    <script type="module" src="/runtime/entry/index.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09ed5abf1cf7485c9af5d066baedf2a9"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

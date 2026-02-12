@@ -350,6 +350,7 @@ https://dt.in.th/Rails
 https://dt.in.th/RailsVersion
 https://dt.in.th/RandomHexPasswordBcrypt
 https://dt.in.th/RandomPort
+https://dt.in.th/RcloneGoogleDrivePublicFolder
 https://dt.in.th/React
 https://dt.in.th/React18RC
 https://dt.in.th/ReactBKK2LiveCoding

@@ -8,6 +8,7 @@ aliases:
 
 Here are my recent writings:
 
+- 2026-02-12: [Using Rclone with a Public Google Drive folder](RcloneGoogleDrivePublicFolder)
 - 2026-01-17: [GitHub Actions + GCP Authentication without Secrets](GitHubActionsGCP)
 - 2026-01-17: [Using Mise in GitHub Actions](GitHubActionsMise)
 - 2026-01-15: [Braindump เรื่อง public dataset ใน Google BigQuery](BigQueryBrainDump)
