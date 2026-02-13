@@ -384,6 +384,10 @@
 		{	"title": "Braindump เรื่อง public dataset ใน Google BigQuery"
 		,	"parent": "Recent"
 		}
+	,	"BlackBoxTesting2026":
+		{	"title": "Move Fast While Maintaining Quality with Black-Box Testing (2026)"
+		,	"parent": "Recent"
+		}
 	,	"BlackBoxTestingStrategies":
 		{	"title": "Strategies for Black-Box Testability (2024 talk)"
 		,	"parent": "Talks"

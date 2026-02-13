@@ -741,6 +741,19 @@
 				}
 			]
 		}
+	,	"BlackBoxTesting2026":
+		{	"title": "Move Fast While Maintaining Quality with Black-Box Testing (2026)"
+		,	"links":
+			[	{	"link": "BlackBoxTestingTalk"
+				}
+			,	{	"link": "BlackBoxTestingStrategies"
+				}
+			,	{	"link": "PlaywrightPageObject"
+				}
+			,	{	"link": "#which-tools-are-used-for-the-test-suite-in-the-demo"
+				}
+			]
+		}
 	,	"BlackBoxTestingStrategies":
 		{	"title": "Strategies for Black-Box Testability (2024 talk)"
 		,	"links":
