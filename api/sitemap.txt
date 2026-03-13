@@ -164,6 +164,7 @@ https://dt.in.th/ElysiaRemixSession
 https://dt.in.th/ElysiaRenderHtml
 https://dt.in.th/ElysiaZod
 https://dt.in.th/EmbracingGradualTyping
+https://dt.in.th/EncryptedEnvFnox
 https://dt.in.th/EverydayEvermore
 https://dt.in.th/ExcalidrawSurfacePen
 https://dt.in.th/FacebookPageLongLivedAccessToken
@@ -178,6 +179,7 @@ https://dt.in.th/FreeTypeJSBlackWhiteText
 https://dt.in.th/FreshAppFactory
 https://dt.in.th/Frontend2015
 https://dt.in.th/FrontendFeatureFlags
+https://dt.in.th/FrpSubdomainProxy
 https://dt.in.th/FunctionalReactiveProgrammingRxJSTalk
 https://dt.in.th/Gemini25ProPreviewTTSThai
 https://dt.in.th/GenerateFontWeights

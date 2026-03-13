@@ -664,6 +664,10 @@
 		{	"title": "Embracing gradual typing"
 		,	"parent": "Talks"
 		}
+	,	"EncryptedEnvFnox":
+		{	"title": "Encrypted environment variables with fnox"
+		,	"parent": "FrpSubdomainProxy"
+		}
 	,	"EverydayEvermore":
 		{	"title": "Everyday evermore"
 		,	"parent": "Songs"
@@ -719,6 +723,10 @@
 	,	"FrontendFeatureFlags":
 		{	"title": "Simple front-end feature flags"
 		,	"parent": "JavaScript"
+		}
+	,	"FrpSubdomainProxy":
+		{	"title": "Exposing a local server to the internet with stable subdomains using frp"
+		,	"parent": "Recent"
 		}
 	,	"FunctionalReactiveProgrammingRxJSTalk":
 		{	"title": "Functional Reactive Programming using RxJS"

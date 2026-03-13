@@ -1511,6 +1511,10 @@
 				}
 			]
 		}
+	,	"EncryptedEnvFnox":
+		{	"title": "Encrypted environment variables with fnox"
+		,	"links": []
+		}
 	,	"EverydayEvermore":
 		{	"title": "Everyday evermore"
 		,	"links":
@@ -1622,6 +1626,17 @@
 		{	"title": "Simple front-end feature flags"
 		,	"links":
 			[	{	"link": "JavaScript"
+				}
+			]
+		}
+	,	"FrpSubdomainProxy":
+		{	"title": "Exposing a local server to the internet with stable subdomains using frp"
+		,	"links":
+			[	{	"link": "Docker"
+				}
+			,	{	"link": "Caddy"
+				}
+			,	{	"link": "EncryptedEnvFnox"
 				}
 			]
 		}
