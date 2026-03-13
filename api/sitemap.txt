@@ -381,6 +381,7 @@ https://dt.in.th/Semgrep
 https://dt.in.th/SemgrepGitHubActions
 https://dt.in.th/SemgrepInJavaScriptProjects
 https://dt.in.th/SemgrepSetup
+https://dt.in.th/SemiAutomatedRPAPuppeteerPlaywright
 https://dt.in.th/Shake
 https://dt.in.th/Shell
 https://dt.in.th/ShortLivedMutability

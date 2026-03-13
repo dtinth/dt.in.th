@@ -1531,6 +1531,10 @@
 		{	"title": "Automated code review with Semgrep"
 		,	"parent": "Semgrep"
 		}
+	,	"SemiAutomatedRPAPuppeteerPlaywright":
+		{	"title": "Semi-Automated RPA with Puppeteer and Playwright"
+		,	"parent": "Recent"
+		}
 	,	"Shake":
 		{	"title": "Detecting device shake in JavaScript"
 		,	"parent": "JavaScript"

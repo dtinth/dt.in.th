@@ -8,6 +8,7 @@ aliases:
 
 Here are my recent writings:
 
+- 2026-03-13: [Semi-Automated RPA with Puppeteer and Playwright](SemiAutomatedRPAPuppeteerPlaywright)
 - 2026-02-26: [Exposing a local server to the internet with stable subdomains using frp](FrpSubdomainProxy)
 - 2026-02-12: [Using Rclone with a Public Google Drive folder](RcloneGoogleDrivePublicFolder)
 - 2026-02-06: [Move Fast While Maintaining Quality with Black-Box Testing (2026)](BlackBoxTesting2026)

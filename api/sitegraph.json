@@ -3771,6 +3771,13 @@
 				}
 			]
 		}
+	,	"SemiAutomatedRPAPuppeteerPlaywright":
+		{	"title": "Semi-Automated RPA with Puppeteer and Playwright"
+		,	"links":
+			[	{	"link": "Playwright"
+				}
+			]
+		}
 	,	"Shake":
 		{	"title": "Detecting device shake in JavaScript"
 		,	"links":
