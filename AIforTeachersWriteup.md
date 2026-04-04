@@ -501,3 +501,5 @@ Postgres มี extension ชื่อว่า [PostgREST](https://docs.postgre
 - สามารถขึ้นหน้า report ใน backoffice ที่มีข้อมูลเรียลไทม์ได้ โดยไม่ต้อง denormalize ข้อมูล แบบที่ต้องทำเวลาใช้ Firebase
 
 และหลังจากผ่านประสบการณ์นี้ ก็น่าจะช่วยให้ใช้ Supabase ได้ effective ขึ้นในอนาคต
+
+<!-- … -->
