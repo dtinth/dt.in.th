@@ -64,6 +64,17 @@ This is how I set up permissions for users to access databases:
    GRANT ALL ON SCHEMA public TO my_service;
    ```
 
+   Or for read-only access:
+
+   ```sql
+   GRANT CONNECT ON DATABASE my_db TO readonly_user;
+   GRANT USAGE ON SCHEMA public TO readonly_user;
+   GRANT SELECT ON ALL TABLES IN SCHEMA public TO readonly_user;
+   GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO readonly_user;
+   ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO readonly_user;
+   ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON SEQUENCES TO readonly_user;
+   ```
+
 If the user will be creating their own objects, they only need privileges on the database and schema. The `ALTER DEFAULT PRIVILEGES` commands are unnecessary since they'll own the objects they create.
 
 ## Further reading
