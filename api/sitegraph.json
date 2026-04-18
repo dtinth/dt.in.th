@@ -741,6 +741,13 @@
 				}
 			]
 		}
+	,	"Bizdocgen":
+		{	"title": "bizdocgen, a business document generator widget for Grist"
+		,	"links":
+			[	{	"link": "Grist"
+				}
+			]
+		}
 	,	"BlackBoxTesting2026":
 		{	"title": "Move Fast While Maintaining Quality with Black-Box Testing (2026)"
 		,	"links":

@@ -94,6 +94,7 @@ https://dt.in.th/BaaS
 https://dt.in.th/BangkokIpsum
 https://dt.in.th/Bemuse
 https://dt.in.th/BigQueryBrainDump
+https://dt.in.th/Bizdocgen
 https://dt.in.th/BlackBoxTesting2026
 https://dt.in.th/BlackBoxTestingStrategies
 https://dt.in.th/BlackBoxTestingTalk

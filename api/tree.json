@@ -384,6 +384,10 @@
 		{	"title": "Braindump เรื่อง public dataset ใน Google BigQuery"
 		,	"parent": "Recent"
 		}
+	,	"Bizdocgen":
+		{	"title": "bizdocgen, a business document generator widget for Grist"
+		,	"parent": "Recent"
+		}
 	,	"BlackBoxTesting2026":
 		{	"title": "Move Fast While Maintaining Quality with Black-Box Testing (2026)"
 		,	"parent": "Recent"
