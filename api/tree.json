@@ -598,7 +598,7 @@
 		}
 	,	"DockerCompose":
 		{	"title": "Docker Compose (topic)"
-		,	"parent": "PocketBase"
+		,	"parent": "Docker"
 		}
 	,	"DockerInstall":
 		{	"title": "Installing Docker on Linux"
@@ -618,7 +618,7 @@
 		}
 	,	"Dokploy":
 		{	"title": "Dokploy (topic)"
-		,	"parent": "Docker"
+		,	"parent": "PocketBase"
 		}
 	,	"DontWakeMeUpReRemix":
 		{	"title": "Don't Wake Me Up (iaht's Re-Remix)"
