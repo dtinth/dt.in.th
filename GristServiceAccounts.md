@@ -13,7 +13,7 @@ created: 2025-12-06
 
 ## What and why
 
-Prior to v1.7.5, to work with Grist documents programmatically, one would have to [create an API key](https://support.getgrist.com/rest-api/#authentication) for a user. This API key would be able to access all documents that the user has access to, which is not ideal from a security standpoint. For finer-grained access control, one would have to create a dedicated user account for each workload, which is cumbersome.
+Prior to v1.7.5, to work with Grist documents programmatically, one would have to [create an API key](https://support.getgrist.com/rest-api/#authentication) for a user. This API key would be able to access all documents that the user has access to, which is not ideal from a security standpoint. For finer-grained access control, one would have to create a dedicated user account for each workload, which is cumbersome. (For temporary, single-document access from a custom widget, see [Using Grist API from a custom widget](GristAccessToken).)
 
 Since v1.7.5, with this feature enabled in your instance, a user can create a **service account** for each workload, each with its own API key, then grant each service account access to only the documents it needs. A service account:
 

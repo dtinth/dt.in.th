@@ -1906,9 +1906,26 @@
 				}
 			,	{	"link": "GristServiceAccounts"
 				}
+			,	{	"link": "GristAccessToken"
+				}
 			,	{	"link": "Database"
 				}
 			,	{	"link": "N8n"
+				}
+			]
+		}
+	,	"GristAccessToken":
+		{	"title": "Using Grist API from a custom widget"
+		,	"links":
+			[	{	"link": "Grist"
+				}
+			,	{	"link": "GristServiceAccounts"
+				}
+			,	{	"link": "N8n"
+				}
+			,	{	"link": "#user-content-fn-disam"
+				}
+			,	{	"link": "#user-content-fnref-disam"
 				}
 			]
 		}
@@ -1940,6 +1957,8 @@
 		{	"title": "Service Accounts in Grist"
 		,	"links":
 			[	{	"link": "Grist"
+				}
+			,	{	"link": "GristAccessToken"
 				}
 			]
 		}

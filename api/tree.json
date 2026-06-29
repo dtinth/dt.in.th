@@ -828,6 +828,10 @@
 		{	"title": "Grist (topic)"
 		,	"parent": "HomePage"
 		}
+	,	"GristAccessToken":
+		{	"title": "Using Grist API from a custom widget"
+		,	"parent": "Grist"
+		}
 	,	"GristDockerCompose":
 		{	"title": "Running Grist with Google Sign-In and External Storage on Docker Compose"
 		,	"parent": "Grist"

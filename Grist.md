@@ -11,6 +11,7 @@ My notes about **[Grist](https://www.getgrist.com/)**, a modern spreadsheet-data
 - [Upserting data in Grist using n8n](GristUpsertN8n)
 - [Grist TypeScript Type Generator](GristTypeGenerator)
 - [Service Accounts in Grist](GristServiceAccounts)
+- [Using Grist API from a custom widget](GristAccessToken)
 
 ## Related topics
 
