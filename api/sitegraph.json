@@ -1575,6 +1575,19 @@
 				}
 			,	{	"link": "JoseVerifyFirebaseIdToken"
 				}
+			,	{	"link": "FirebaseHostingGitHubActionsDeploy"
+				}
+			]
+		}
+	,	"FirebaseHostingGitHubActionsDeploy":
+		{	"title": "Deploying Firebase Hosting from GitHub Actions with no stored secrets"
+		,	"links":
+			[	{	"link": "GitHubActions"
+				}
+			,	{	"link": "Firebase"
+				}
+			,	{	"link": "GitHubActionsGCP"
+				}
 			]
 		}
 	,	"Fish":
@@ -1712,6 +1725,8 @@
 			,	{	"link": "DependabotAutoMerge"
 				}
 			,	{	"link": "GitHubActionsGCP"
+				}
+			,	{	"link": "FirebaseHostingGitHubActionsDeploy"
 				}
 			,	{	"link": "GitHubActionsMise"
 				}

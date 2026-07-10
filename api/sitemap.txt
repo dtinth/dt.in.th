@@ -172,6 +172,7 @@ https://dt.in.th/FacebookPageLongLivedAccessToken
 https://dt.in.th/Fastify
 https://dt.in.th/FastifyInExpress
 https://dt.in.th/Firebase
+https://dt.in.th/FirebaseHostingGitHubActionsDeploy
 https://dt.in.th/Fish
 https://dt.in.th/FishPersistentAlias
 https://dt.in.th/FlutterMacOS

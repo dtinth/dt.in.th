@@ -13,3 +13,5 @@ My notes about **[Firebase](https://firebase.google.com/)**, “an app developme
 - **Firebase Authentication**
   - [Example Firebase ID Tokens](20220710T144059Z3505)
   - [Verifying Firebase ID tokens in Node.js without Firebase Admin SDK](JoseVerifyFirebaseIdToken)
+- **Firebase Hosting**
+  - [Deploying Firebase Hosting from GitHub Actions with no stored secrets](FirebaseHostingGitHubActionsDeploy)

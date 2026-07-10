@@ -18,4 +18,5 @@ title: GitHub Actions
 - [npm checkmark](NpmCheckmark)
 - [Auto-merging dependabot PRs](DependabotAutoMerge)
 - [GitHub Actions + GCP Authentication without Secrets](GitHubActionsGCP)
+- [Deploying Firebase Hosting from GitHub Actions with no stored secrets](FirebaseHostingGitHubActionsDeploy)
 - [Using Mise in GitHub Actions](GitHubActionsMise)

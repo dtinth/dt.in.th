@@ -5,8 +5,15 @@
 		<description><![CDATA[Thai Pangsakulyanont’s writings]]></description>
 		<link>https://dt.in.th</link>
 		<generator>RSS for Node</generator>
-		<lastBuildDate>Mon, 29 Jun 2026 08:59:11 GMT</lastBuildDate>
+		<lastBuildDate>Fri, 10 Jul 2026 12:11:13 GMT</lastBuildDate>
 		<atom:link href="https://dt.in.th/api/recent.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title><![CDATA[Deploying Firebase Hosting from GitHub Actions with no stored secrets]]></title>
+			<description><![CDATA[<a href="https://dt.in.th/FirebaseHostingGitHubActionsDeploy">[Read on dt.in.th]</a><!-- Compilation unsuccessful -->]]></description>
+			<link>https://dt.in.th/FirebaseHostingGitHubActionsDeploy</link>
+			<guid isPermaLink="true">https://dt.in.th/FirebaseHostingGitHubActionsDeploy</guid>
+			<pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
+		</item>
 		<item>
 			<title><![CDATA[Using Grist API from a custom widget]]></title>
 			<description
@@ -390,23 +397,6 @@ l16&lt;[e&gt;e]r[f+&gt;f+]r[g+&gt;g+]r[e&gt;e]r[a&gt;a]
 			<link>https://dt.in.th/FishPersistentAlias</link>
 			<guid isPermaLink="true">https://dt.in.th/FishPersistentAlias</guid>
 			<pubDate>Fri, 21 Nov 2025 00:00:00 GMT</pubDate>
-		</item>
-		<item>
-			<title><![CDATA[How I initialize a Node.js project (Node 24.x + TypeScript without build step)]]></title>
-			<description
-			><![CDATA[<a href="https://dt.in.th/NodeInit">[Read on dt.in.th]</a><!--[--><p data-v-8c9498c0>This is how I initialize a <a href="Nodejs" data-v-8c9498c0>Node.js</a> project:</p><ol data-v-8c9498c0><li data-v-8c9498c0><p data-v-8c9498c0>Initialize a new Node.js project using pnpm:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>pnpm</span><span style="color:#9ECBFF;" data-v-8c9498c0> init</span><span style="color:#79B8FF;" data-v-8c9498c0> --init-type=module</span><span style="color:#79B8FF;" data-v-8c9498c0> --init-package-manager</span></span></code></pre></li><li data-v-8c9498c0><p data-v-8c9498c0>If the project is not going to be open source, remove the default <code data-v-8c9498c0>license</code> field from <code data-v-8c9498c0>package.json</code>:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>pnpm</span><span style="color:#9ECBFF;" data-v-8c9498c0> pkg</span><span style="color:#9ECBFF;" data-v-8c9498c0> delete</span><span style="color:#9ECBFF;" data-v-8c9498c0> license</span></span></code></pre></li><li data-v-8c9498c0><p data-v-8c9498c0>Install <a href="TypeScript" data-v-8c9498c0>TypeScript</a> and types for Node.js:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>pnpm</span><span style="color:#9ECBFF;" data-v-8c9498c0> add</span><span style="color:#79B8FF;" data-v-8c9498c0> -D</span><span style="color:#9ECBFF;" data-v-8c9498c0> typescript</span><span style="color:#9ECBFF;" data-v-8c9498c0> @types/node@24.x</span><span style="color:#9ECBFF;" data-v-8c9498c0> @tsconfig/node24</span></span></code></pre></li><li data-v-8c9498c0><p data-v-8c9498c0>Set up <code data-v-8c9498c0>tsconfig.json</code> file (<a href="Node22NativeTypeScript" data-v-8c9498c0>more info</a>):</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>cat</span><span style="color:#F97583;" data-v-8c9498c0> &gt;</span><span style="color:#9ECBFF;" data-v-8c9498c0> tsconfig.json</span><span style="color:#F97583;" data-v-8c9498c0> &lt;&lt;</span><span style="color:#9ECBFF;" data-v-8c9498c0>&#39;EOF&#39;</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#9ECBFF;" data-v-8c9498c0>{</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#9ECBFF;" data-v-8c9498c0>  &quot;extends&quot;: &quot;@tsconfig/node24/tsconfig.json&quot;,</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#9ECBFF;" data-v-8c9498c0>  &quot;compilerOptions&quot;: {</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#9ECBFF;" data-v-8c9498c0>    &quot;verbatimModuleSyntax&quot;: true,</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#9ECBFF;" data-v-8c9498c0>    &quot;allowImportingTsExtensions&quot;: true,</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#9ECBFF;" data-v-8c9498c0>    &quot;noEmit&quot;: true</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#9ECBFF;" data-v-8c9498c0>  }</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#9ECBFF;" data-v-8c9498c0>}</span></span>
-<span class="line" data-v-8c9498c0><span style="color:#9ECBFF;" data-v-8c9498c0>EOF</span></span></code></pre></li><li data-v-8c9498c0><p data-v-8c9498c0>Add <code data-v-8c9498c0>.gitignore</code>:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>wget</span><span style="color:#79B8FF;" data-v-8c9498c0> -O</span><span style="color:#9ECBFF;" data-v-8c9498c0> .gitignore</span><span style="color:#9ECBFF;" data-v-8c9498c0> https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Node.gitignore</span></span></code></pre></li><li data-v-8c9498c0><p data-v-8c9498c0>Add <code data-v-8c9498c0>node</code> script to let me use <code data-v-8c9498c0>pnpm node</code> command to <a href="Node22NativeTypeScript" data-v-8c9498c0>run Node.js with TypeScript support</a>:</p><pre class="shiki github-dark" style="background-color:#252423;color:#e1e4e8;" tabindex="0" data-v-8c9498c0><code data-v-8c9498c0><span class="line" data-v-8c9498c0><span style="color:#B392F0;" data-v-8c9498c0>pnpm</span><span style="color:#9ECBFF;" data-v-8c9498c0> pkg</span><span style="color:#9ECBFF;" data-v-8c9498c0> set</span><span style="color:#9ECBFF;" data-v-8c9498c0> scripts.node=&quot;node --experimental-transform-types&quot;</span></span></code></pre></li></ol><!--]-->]]></description>
-			<link>https://dt.in.th/NodeInit</link>
-			<guid isPermaLink="true">https://dt.in.th/NodeInit</guid>
-			<pubDate>Thu, 20 Nov 2025 00:00:00 GMT</pubDate>
 		</item>
 		<follow_challenge>
 			<feedId>81341335623521281</feedId>

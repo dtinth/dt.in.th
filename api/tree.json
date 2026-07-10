@@ -696,6 +696,10 @@
 		{	"title": "Firebase (topic)"
 		,	"parent": "BaaS"
 		}
+	,	"FirebaseHostingGitHubActionsDeploy":
+		{	"title": "Deploying Firebase Hosting from GitHub Actions with no stored secrets"
+		,	"parent": "Firebase"
+		}
 	,	"Fish":
 		{	"title": "Fish (topic)"
 		,	"parent": "Shell"
