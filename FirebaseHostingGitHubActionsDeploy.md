@@ -69,38 +69,32 @@ gcloud iam service-accounts add-iam-policy-binding "$SA@$PROJECT_ID.iam.gservice
 
 ## GitHub Actions workflow
 
-Configure permissions and env:
-
 ```yaml
 permissions:
   contents: read
   id-token: write # lets the runner mint the OIDC token
 
-env:
-  GCP_PROJECT:        your-project-id
-  GCP_PROJECT_NUMBER: "000000000000"
-  DEPLOY_SA:          github-deployer
-```
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-Deploying
+      - id: auth
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: projects/PROJECT_NUMBER/locations/global/workloadIdentityPools/github/providers/github
+          service_account: github-deployer@PROJECT_ID.iam.gserviceaccount.com
+          token_format: access_token # firebase can't use the WIF file
+          create_credentials_file: false
 
-```yaml
-- id: auth
-  uses: google-github-actions/auth@v3
-  with:
-    workload_identity_provider: projects/${{ env.GCP_PROJECT_NUMBER }}/locations/global/workloadIdentityPools/github/providers/github
-    service_account: ${{ env.DEPLOY_SA }}@${{ env.GCP_PROJECT }}.iam.gserviceaccount.com
-    token_format: access_token # firebase can't use the WIF file
-    create_credentials_file: false
+      - uses: actions/setup-node@v6
+        with: { node-version: 22 }
 
-- uses: actions/setup-node@v6
-  with: { node-version: 22 }
-
-- name: Deploy to live channel
-  env:
-    FIREBASE_TOKEN: "${{ steps.auth.outputs.access_token }}"
-  run: npx --yes firebase-tools@latest deploy --only hosting
-        --project ${{ env.GCP_PROJECT }} --non-interactive
+      - name: Deploy to live channel
+        env:
+          FIREBASE_TOKEN: ${{ steps.auth.outputs.access_token }}
+        run: npx --yes firebase-tools@latest deploy --only hosting --project PROJECT_ID --non-interactive
 ```
 
 ## Why each setting is there
