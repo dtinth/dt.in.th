@@ -69,6 +69,8 @@ gcloud iam service-accounts add-iam-policy-binding "$SA@$PROJECT_ID.iam.gservice
 
 ## GitHub Actions workflow
 
+<div v-pre>
+
 ```yaml
 permissions:
   contents: read
@@ -96,6 +98,8 @@ jobs:
           FIREBASE_TOKEN: ${{ steps.auth.outputs.access_token }}
         run: npx --yes firebase-tools@latest deploy --only hosting --project PROJECT_ID --non-interactive
 ```
+
+</div>
 
 ## Why each setting is there
 
