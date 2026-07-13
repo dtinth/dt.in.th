@@ -380,6 +380,10 @@
 		{	"title": "Bemuse"
 		,	"parent": "Projects"
 		}
+	,	"Bgx":
+		{	"title": "bgx: BackGround eXecute"
+		,	"parent": "Projects"
+		}
 	,	"BigQueryBrainDump":
 		{	"title": "Braindump เรื่อง public dataset ใน Google BigQuery"
 		,	"parent": "Recent"

@@ -12,6 +12,7 @@ topic: true
 | [**AI vs Thai Exams**](AIvsThaiExams) | Evaluates large language models on Thailand's standardized exams using the ThaiExam dataset. |
 | [**Bangkok Ipsum**](BangkokIpsum) | A webpage that lets you generate random Thai text. |
 | [**Bemuse**](Bemuse) | A free and open source, online, web-based rhythm action game. |
+| [**bgx**](Bgx) | A CI-agnostic tool for running commands in the background and joining on them later, for parallelism within a single CI job. |
 | [**CSS Spring Animation**](SpringAnimationInCSS) | A realistic spring-type animation using physics and calculus. |
 | [**dt.in.th**](WebsiteHistory) | Thai's website documenting the things he makes, with its evolution since 2005. |
 | [**Gyroscratch**](Gyroscratch) | A rhythm game turntable built by putting a phone in a ceramic plate. |

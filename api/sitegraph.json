@@ -730,6 +730,15 @@
 				}
 			]
 		}
+	,	"Bgx":
+		{	"title": "bgx: BackGround eXecute"
+		,	"links":
+			[	{	"link": "GitHubActions"
+				}
+			,	{	"link": "Mise"
+				}
+			]
+		}
 	,	"BigQueryBrainDump":
 		{	"title": "Braindump เรื่อง public dataset ใน Google BigQuery"
 		,	"links":
@@ -1729,6 +1738,8 @@
 			,	{	"link": "FirebaseHostingGitHubActionsDeploy"
 				}
 			,	{	"link": "GitHubActionsMise"
+				}
+			,	{	"link": "Bgx"
 				}
 			]
 		}
@@ -3475,6 +3486,8 @@
 			,	{	"link": "BangkokIpsum"
 				}
 			,	{	"link": "Bemuse"
+				}
+			,	{	"link": "Bgx"
 				}
 			,	{	"link": "SpringAnimationInCSS"
 				}
