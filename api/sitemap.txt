@@ -352,6 +352,7 @@ https://dt.in.th/PythonRecursionIntro
 https://dt.in.th/QRCode
 https://dt.in.th/QRLogger
 https://dt.in.th/QRScan
+https://dt.in.th/Qwen35OmniFlashTTSThai
 https://dt.in.th/RaceConditionsInJSApps
 https://dt.in.th/Rails
 https://dt.in.th/RailsVersion

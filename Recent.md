@@ -8,6 +8,7 @@ aliases:
 
 Here are my recent writings:
 
+- 2026-08-07: [Qwen3.5-Omni-Flash Text-to-Speech Thai Voice Previews](Qwen35OmniFlashTTSThai)
 - 2026-07-13: [bgx: BackGround eXecute](Bgx)
 - 2026-07-10: [Deploying Firebase Hosting from GitHub Actions with no stored secrets](FirebaseHostingGitHubActionsDeploy)
 - 2026-06-29: [Using Grist API from a custom widget](GristAccessToken)

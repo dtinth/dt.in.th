@@ -1415,6 +1415,10 @@
 		{	"title": "Adding a QR code scanner to a web app"
 		,	"parent": "QRCode"
 		}
+	,	"Qwen35OmniFlashTTSThai":
+		{	"title": "Qwen3.5-Omni-Flash Text-to-Speech Thai Voice Previews"
+		,	"parent": "LargeLanguageModel"
+		}
 	,	"RaceConditionsInJSApps":
 		{	"title": "Race Conditions in JS Apps"
 		,	"parent": "Talks"

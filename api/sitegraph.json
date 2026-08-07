@@ -2444,6 +2444,8 @@
 				}
 			,	{	"link": "Gemini25ProPreviewTTSThai"
 				}
+			,	{	"link": "Qwen35OmniFlashTTSThai"
+				}
 			,	{	"link": "NotebookLMSummarizationPrompt"
 				}
 			,	{	"link": "JavaScriptBangkokTalk2024"
@@ -3559,6 +3561,10 @@
 			,	{	"link": "QRCode"
 				}
 			]
+		}
+	,	"Qwen35OmniFlashTTSThai":
+		{	"title": "Qwen3.5-Omni-Flash Text-to-Speech Thai Voice Previews"
+		,	"links": []
 		}
 	,	"RaceConditionsInJSApps":
 		{	"title": "Race Conditions in JS Apps"
