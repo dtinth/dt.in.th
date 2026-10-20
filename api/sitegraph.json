@@ -652,6 +652,13 @@
 				}
 			]
 		}
+	,	"AgenticCoding":
+		{	"title": "Agentic Coding (topic)"
+		,	"links":
+			[	{	"link": "ClaudeCode"
+				}
+			]
+		}
 	,	"AsdfSnippets":
 		{	"title": "My asdf snippets"
 		,	"links":
@@ -2072,6 +2079,8 @@
 			,	{	"link": "Recent"
 				}
 			,	{	"link": "AboutThisWebsite"
+				}
+			,	{	"link": "AgenticCoding"
 				}
 			,	{	"link": "BaaS"
 				}

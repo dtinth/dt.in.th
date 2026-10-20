@@ -84,6 +84,7 @@ https://dt.in.th/AWS
 https://dt.in.th/AboutThisWebsite
 https://dt.in.th/AdventOfCode
 https://dt.in.th/AdventOfCode2021Day24
+https://dt.in.th/AgenticCoding
 https://dt.in.th/AsdfSnippets
 https://dt.in.th/AudioEncodingBenchmark
 https://dt.in.th/AutoSynchro

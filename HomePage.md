@@ -20,6 +20,7 @@ Welcome to my [digital garden](DigitalGardening).
 
 <div id="topic-list">
 
+- [Agentic Coding](AgenticCoding)
 - [Backend-as-a-Service](BaaS)
 - [Christianity](Christianity)
 - [Cloud Platform](CloudPlatform)

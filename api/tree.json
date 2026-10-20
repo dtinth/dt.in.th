@@ -344,6 +344,10 @@
 		{	"title": "Advent of Code 2021: Day 24"
 		,	"parent": "AdventOfCode"
 		}
+	,	"AgenticCoding":
+		{	"title": "Agentic Coding (topic)"
+		,	"parent": "HomePage"
+		}
 	,	"AsdfSnippets":
 		{	"title": "My asdf snippets"
 		,	"parent": "Codespaces"
