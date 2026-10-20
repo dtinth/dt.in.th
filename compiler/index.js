@@ -1,4 +1,4 @@
-import { V as h, d as D, S as f, e as I, U as T, W as _, X as j } from "./vue_zazawFZq.js";
+import { V as h, d as D, S as f, e as I, U as T, W as _, X as j } from "./vue_DuSuc2o-.js";
 import { c as O, p as R } from "./unocss_BHFsKZqx.js";
 import { v as q, r as M, a as G, b as V, c as $ } from "./rehype-plugins_BuBHLxS0.js";
 import { a as w } from "./sucrase_Vx5h13n5.js";
@@ -230,7 +230,7 @@ async function xe(o, r) {
      *
      * Used under the MIT License
      */
-    const s = await import("./vue-repl_CW-irzU5.js").then((c) => c.v);
+    const s = await import("./vue-repl_BZgPmXOj.js").then((c) => c.v);
     a("vue compiler imported");
     const e = {
       compiler: I,

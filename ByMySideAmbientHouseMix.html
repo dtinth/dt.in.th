@@ -20,7 +20,7 @@
     <div class="h-entry">
       <main id="main">
         <div id="mainContents">
-          <div class="prose e-content" id="noteContents"><!--[--><h1 id="bymyside-ambient-house-mix"><a aria-hidden="true" tabindex="-1" href="#bymyside-ambient-house-mix"><span class="icon icon-link"></span></a>BY☆MY☆SIDE (Ambient House Mix)</h1><p>A slower and calmer version of <a href="ByMySide">BY☆MY☆SIDE</a>. Created in 2 hours using FL Studio.</p><!----><p>This <a href="Songs">song</a> has been made into the background music of the song selection screen in <a href="Bemuse">Bemuse</a> game.</p><!--]--></div>
+          <div class="prose e-content" id="noteContents"><!--[--><h1 id="bymyside-ambient-house-mix"><a aria-hidden="true" tabindex="-1" href="#bymyside-ambient-house-mix"><span class="icon icon-link"></span></a>BY☆MY☆SIDE (Ambient House Mix)</h1><p>A slower and calmer version of <a href="ByMySide">BY☆MY☆SIDE</a>. Created in 2 hours using FL Studio.</p><soundcloud-embed track-id="207325787"></soundcloud-embed><p>This <a href="Songs">song</a> has been made into the background music of the song selection screen in <a href="Bemuse">Bemuse</a> game.</p><!--]--></div>
         </div>
       </main>
       <footer>
@@ -33,8 +33,6 @@
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
 function render(_ctx, _cache) {
-  const _component_soundcloud_embed = _vue.resolveComponent.call(void 0, "soundcloud-embed")
-
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
     _cache[0] || (_cache[0] = _vue.createElementVNode.call(void 0, "h1", { id: "bymyside-ambient-house-mix" }, [
       _vue.createElementVNode.call(void 0, "a", {
@@ -51,8 +49,8 @@ function render(_ctx, _cache) {
       _vue.createElementVNode.call(void 0, "a", { href: "ByMySide" }, "BY☆MY☆SIDE"),
       _vue.createTextVNode.call(void 0, ". Created in 2 hours using FL Studio.")
     ], -1 /* CACHED */)),
-    _vue.createVNode.call(void 0, _component_soundcloud_embed, { "track-id": "207325787" }),
-    _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "p", null, [
+    _cache[2] || (_cache[2] = _vue.createElementVNode.call(void 0, "soundcloud-embed", { "track-id": "207325787" }, null, -1 /* CACHED */)),
+    _cache[3] || (_cache[3] = _vue.createElementVNode.call(void 0, "p", null, [
       _vue.createTextVNode.call(void 0, "This "),
       _vue.createElementVNode.call(void 0, "a", { href: "Songs" }, "song"),
       _vue.createTextVNode.call(void 0, " has been made into the background music of the song selection screen in "),

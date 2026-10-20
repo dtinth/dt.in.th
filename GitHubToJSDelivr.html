@@ -109,10 +109,7 @@ const _hoisted_6 = {
   class: "notes-callout",
   "data-type": "Danger"
 }
-const _hoisted_7 = { class: "notes-callout__label" }
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_notes_callout_icon = _vue.resolveComponent.call(void 0, "notes-callout-icon")
-
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
     _cache[5] || (_cache[5] = _vue.createElementVNode.call(void 0, "p", null, [
       _vue.createTextVNode.call(void 0, "This little "),
@@ -155,10 +152,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       ($setup.error)
         ? (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, "div", _hoisted_5, [
             _vue.createElementVNode.call(void 0, "div", _hoisted_6, [
-              _vue.createElementVNode.call(void 0, "p", _hoisted_7, [
-                _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Danger" }),
-                _cache[4] || (_cache[4] = _vue.createTextVNode.call(void 0, "Error", -1 /* CACHED */))
-              ]),
+              _cache[4] || (_cache[4] = _vue.createElementVNode.call(void 0, "p", { class: "notes-callout__label" }, [
+                _vue.createElementVNode.call(void 0, "notes-callout-icon", { type: "Danger" }),
+                _vue.createTextVNode.call(void 0, "Error")
+              ], -1 /* CACHED */)),
               _vue.createElementVNode.call(void 0, "p", null, _vue.toDisplayString.call(void 0, $setup.error), 1 /* TEXT */)
             ])
           ]))

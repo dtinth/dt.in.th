@@ -141,59 +141,15 @@ But what about this case?
     <script>
 window.precompiledNoteBehavior = function(require, exports, module, Vue) {"use strict";Object.defineProperty(exports, "__esModule", {value: true});const __sfc__ = {};
 var _vue = require('vue');
-
-const _hoisted_1 = {
-  class: "notes-callout",
-  "data-type": "Info"
-}
-const _hoisted_2 = { class: "notes-callout__label" }
-const _hoisted_3 = {
-  class: "notes-callout",
-  "data-type": "Warning"
-}
-const _hoisted_4 = { class: "notes-callout__label" }
-const _hoisted_5 = {
-  class: "notes-callout",
-  "data-type": "Tip"
-}
-const _hoisted_6 = { class: "notes-callout__label" }
-const _hoisted_7 = {
-  class: "notes-callout",
-  "data-type": "Success"
-}
-const _hoisted_8 = { class: "notes-callout__label" }
-const _hoisted_9 = {
-  class: "notes-callout",
-  "data-type": "Important"
-}
-const _hoisted_10 = { class: "notes-callout__label" }
-const _hoisted_11 = {
-  class: "notes-callout",
-  "data-type": "Danger"
-}
-const _hoisted_12 = { class: "notes-callout__label" }
-const _hoisted_13 = {
-  class: "notes-callout",
-  "data-type": "Caution"
-}
-const _hoisted_14 = { class: "notes-callout__label" }
-const _hoisted_15 = {
-  class: "notes-bubble",
-  "data-author-position": "left"
-}
-const _hoisted_16 = { class: "notes-bubble__author" }
 function render(_ctx, _cache) {
   const _component_d_split = _vue.resolveComponent.call(void 0, "d-split")
-  const _component_notes_callout_icon = _vue.resolveComponent.call(void 0, "notes-callout-icon")
-  const _component_youtube_embed = _vue.resolveComponent.call(void 0, "youtube-embed")
-  const _component_notes_bubble_author = _vue.resolveComponent.call(void 0, "notes-bubble-author")
 
   return (_vue.openBlock.call(void 0, ), _vue.createElementBlock.call(void 0, _vue.Fragment, null, [
-    _cache[46] || (_cache[46] = _vue.createElementVNode.call(void 0, "p", null, [
+    _cache[40] || (_cache[40] = _vue.createElementVNode.call(void 0, "p", null, [
       _vue.createElementVNode.call(void 0, "a", { href: "Markdown" }, "Markdown"),
       _vue.createTextVNode.call(void 0, " syntax extensions and custom elements available in this website (for my own reference):")
     ], -1 /* CACHED */)),
-    _cache[47] || (_cache[47] = _vue.createElementVNode.call(void 0, "h2", { id: "two-column-layout" }, [
+    _cache[41] || (_cache[41] = _vue.createElementVNode.call(void 0, "h2", { id: "two-column-layout" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -222,7 +178,7 @@ function render(_ctx, _cache) {
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[48] || (_cache[48] = _vue.createElementVNode.call(void 0, "h2", { id: "tailwind-css" }, [
+    _cache[42] || (_cache[42] = _vue.createElementVNode.call(void 0, "h2", { id: "tailwind-css" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -265,7 +221,7 @@ function render(_ctx, _cache) {
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[49] || (_cache[49] = _vue.createElementVNode.call(void 0, "h2", { id: "grid-system" }, [
+    _cache[43] || (_cache[43] = _vue.createElementVNode.call(void 0, "h2", { id: "grid-system" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -291,7 +247,7 @@ function render(_ctx, _cache) {
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[50] || (_cache[50] = _vue.createElementVNode.call(void 0, "h2", { id: "scoped-css" }, [
+    _cache[44] || (_cache[44] = _vue.createElementVNode.call(void 0, "h2", { id: "scoped-css" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -325,7 +281,7 @@ function render(_ctx, _cache) {
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[51] || (_cache[51] = _vue.createElementVNode.call(void 0, "h2", { id: "buttons-and-inputs" }, [
+    _cache[45] || (_cache[45] = _vue.createElementVNode.call(void 0, "h2", { id: "buttons-and-inputs" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -360,7 +316,7 @@ function render(_ctx, _cache) {
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[52] || (_cache[52] = _vue.createElementVNode.call(void 0, "h2", { id: "callouts" }, [
+    _cache[46] || (_cache[46] = _vue.createElementVNode.call(void 0, "h2", { id: "callouts" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -371,69 +327,90 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "Callouts")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      right: _vue.withCtx.call(void 0, () => [...(_cache[32] || (_cache[32] = [
+      right: _vue.withCtx.call(void 0, () => [...(_cache[18] || (_cache[18] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::info\nThis is an info box\n:::\n\n:::warning\nThis is a warning box\n:::\n\n:::tip\nThis is a tip box\n:::\n\n:::success\nThis is a success box\n:::\n\n:::important\nThis is an important box\n:::\n\n:::danger[BE CAREFUL]\nThis is a danger box\n:::\n\n:::caution\nThis is a caution box\n:::\n\n:::details\nThis is a details box\n:::\n")
         ], -1 /* CACHED */)
       ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _vue.createElementVNode.call(void 0, "div", _hoisted_1, [
-          _vue.createElementVNode.call(void 0, "p", _hoisted_2, [
-            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Info" }),
-            _cache[18] || (_cache[18] = _vue.createTextVNode.call(void 0, "Info", -1 /* CACHED */))
+        _cache[19] || (_cache[19] = _vue.createElementVNode.call(void 0, "div", {
+          class: "notes-callout",
+          "data-type": "Info"
+        }, [
+          _vue.createElementVNode.call(void 0, "p", { class: "notes-callout__label" }, [
+            _vue.createElementVNode.call(void 0, "notes-callout-icon", { type: "Info" }),
+            _vue.createTextVNode.call(void 0, "Info")
           ]),
-          _cache[19] || (_cache[19] = _vue.createElementVNode.call(void 0, "p", null, "This is an info box", -1 /* CACHED */))
-        ]),
-        _vue.createElementVNode.call(void 0, "div", _hoisted_3, [
-          _vue.createElementVNode.call(void 0, "p", _hoisted_4, [
-            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Warning" }),
-            _cache[20] || (_cache[20] = _vue.createTextVNode.call(void 0, "Warning", -1 /* CACHED */))
+          _vue.createElementVNode.call(void 0, "p", null, "This is an info box")
+        ], -1 /* CACHED */)),
+        _cache[20] || (_cache[20] = _vue.createElementVNode.call(void 0, "div", {
+          class: "notes-callout",
+          "data-type": "Warning"
+        }, [
+          _vue.createElementVNode.call(void 0, "p", { class: "notes-callout__label" }, [
+            _vue.createElementVNode.call(void 0, "notes-callout-icon", { type: "Warning" }),
+            _vue.createTextVNode.call(void 0, "Warning")
           ]),
-          _cache[21] || (_cache[21] = _vue.createElementVNode.call(void 0, "p", null, "This is a warning box", -1 /* CACHED */))
-        ]),
-        _vue.createElementVNode.call(void 0, "div", _hoisted_5, [
-          _vue.createElementVNode.call(void 0, "p", _hoisted_6, [
-            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Tip" }),
-            _cache[22] || (_cache[22] = _vue.createTextVNode.call(void 0, "Tip", -1 /* CACHED */))
+          _vue.createElementVNode.call(void 0, "p", null, "This is a warning box")
+        ], -1 /* CACHED */)),
+        _cache[21] || (_cache[21] = _vue.createElementVNode.call(void 0, "div", {
+          class: "notes-callout",
+          "data-type": "Tip"
+        }, [
+          _vue.createElementVNode.call(void 0, "p", { class: "notes-callout__label" }, [
+            _vue.createElementVNode.call(void 0, "notes-callout-icon", { type: "Tip" }),
+            _vue.createTextVNode.call(void 0, "Tip")
           ]),
-          _cache[23] || (_cache[23] = _vue.createElementVNode.call(void 0, "p", null, "This is a tip box", -1 /* CACHED */))
-        ]),
-        _vue.createElementVNode.call(void 0, "div", _hoisted_7, [
-          _vue.createElementVNode.call(void 0, "p", _hoisted_8, [
-            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Success" }),
-            _cache[24] || (_cache[24] = _vue.createTextVNode.call(void 0, "Success", -1 /* CACHED */))
+          _vue.createElementVNode.call(void 0, "p", null, "This is a tip box")
+        ], -1 /* CACHED */)),
+        _cache[22] || (_cache[22] = _vue.createElementVNode.call(void 0, "div", {
+          class: "notes-callout",
+          "data-type": "Success"
+        }, [
+          _vue.createElementVNode.call(void 0, "p", { class: "notes-callout__label" }, [
+            _vue.createElementVNode.call(void 0, "notes-callout-icon", { type: "Success" }),
+            _vue.createTextVNode.call(void 0, "Success")
           ]),
-          _cache[25] || (_cache[25] = _vue.createElementVNode.call(void 0, "p", null, "This is a success box", -1 /* CACHED */))
-        ]),
-        _vue.createElementVNode.call(void 0, "div", _hoisted_9, [
-          _vue.createElementVNode.call(void 0, "p", _hoisted_10, [
-            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Important" }),
-            _cache[26] || (_cache[26] = _vue.createTextVNode.call(void 0, "Important", -1 /* CACHED */))
+          _vue.createElementVNode.call(void 0, "p", null, "This is a success box")
+        ], -1 /* CACHED */)),
+        _cache[23] || (_cache[23] = _vue.createElementVNode.call(void 0, "div", {
+          class: "notes-callout",
+          "data-type": "Important"
+        }, [
+          _vue.createElementVNode.call(void 0, "p", { class: "notes-callout__label" }, [
+            _vue.createElementVNode.call(void 0, "notes-callout-icon", { type: "Important" }),
+            _vue.createTextVNode.call(void 0, "Important")
           ]),
-          _cache[27] || (_cache[27] = _vue.createElementVNode.call(void 0, "p", null, "This is an important box", -1 /* CACHED */))
-        ]),
-        _vue.createElementVNode.call(void 0, "div", _hoisted_11, [
-          _vue.createElementVNode.call(void 0, "p", _hoisted_12, [
-            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Danger" }),
-            _cache[28] || (_cache[28] = _vue.createTextVNode.call(void 0, "BE CAREFUL", -1 /* CACHED */))
+          _vue.createElementVNode.call(void 0, "p", null, "This is an important box")
+        ], -1 /* CACHED */)),
+        _cache[24] || (_cache[24] = _vue.createElementVNode.call(void 0, "div", {
+          class: "notes-callout",
+          "data-type": "Danger"
+        }, [
+          _vue.createElementVNode.call(void 0, "p", { class: "notes-callout__label" }, [
+            _vue.createElementVNode.call(void 0, "notes-callout-icon", { type: "Danger" }),
+            _vue.createTextVNode.call(void 0, "BE CAREFUL")
           ]),
-          _cache[29] || (_cache[29] = _vue.createElementVNode.call(void 0, "p", null, "This is a danger box", -1 /* CACHED */))
-        ]),
-        _vue.createElementVNode.call(void 0, "div", _hoisted_13, [
-          _vue.createElementVNode.call(void 0, "p", _hoisted_14, [
-            _vue.createVNode.call(void 0, _component_notes_callout_icon, { type: "Caution" }),
-            _cache[30] || (_cache[30] = _vue.createTextVNode.call(void 0, "Caution", -1 /* CACHED */))
+          _vue.createElementVNode.call(void 0, "p", null, "This is a danger box")
+        ], -1 /* CACHED */)),
+        _cache[25] || (_cache[25] = _vue.createElementVNode.call(void 0, "div", {
+          class: "notes-callout",
+          "data-type": "Caution"
+        }, [
+          _vue.createElementVNode.call(void 0, "p", { class: "notes-callout__label" }, [
+            _vue.createElementVNode.call(void 0, "notes-callout-icon", { type: "Caution" }),
+            _vue.createTextVNode.call(void 0, "Caution")
           ]),
-          _cache[31] || (_cache[31] = _vue.createElementVNode.call(void 0, "p", null, "This is a caution box", -1 /* CACHED */))
-        ]),
-        _cache[33] || (_cache[33] = _vue.createElementVNode.call(void 0, "details", null, [
+          _vue.createElementVNode.call(void 0, "p", null, "This is a caution box")
+        ], -1 /* CACHED */)),
+        _cache[26] || (_cache[26] = _vue.createElementVNode.call(void 0, "details", null, [
           _vue.createElementVNode.call(void 0, "summary", null, "Details"),
           _vue.createElementVNode.call(void 0, "p", null, "This is a details box")
         ], -1 /* CACHED */))
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[53] || (_cache[53] = _vue.createElementVNode.call(void 0, "h2", { id: "youtube-embed" }, [
+    _cache[47] || (_cache[47] = _vue.createElementVNode.call(void 0, "h2", { id: "youtube-embed" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -444,17 +421,17 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "YouTube embed")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      right: _vue.withCtx.call(void 0, () => [...(_cache[34] || (_cache[34] = [
+      right: _vue.withCtx.call(void 0, () => [...(_cache[27] || (_cache[27] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, "::youtube[chuBHB0rRQo]\n")
         ], -1 /* CACHED */)
       ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _vue.createVNode.call(void 0, _component_youtube_embed, { "video-id": "chuBHB0rRQo" })
+        _cache[28] || (_cache[28] = _vue.createElementVNode.call(void 0, "youtube-embed", { "video-id": "chuBHB0rRQo" }, null, -1 /* CACHED */))
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[54] || (_cache[54] = _vue.createElementVNode.call(void 0, "h2", { id: "figures" }, [
+    _cache[48] || (_cache[48] = _vue.createElementVNode.call(void 0, "h2", { id: "figures" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -465,7 +442,7 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "Figures")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      right: _vue.withCtx.call(void 0, () => [...(_cache[35] || (_cache[35] = [
+      right: _vue.withCtx.call(void 0, () => [...(_cache[29] || (_cache[29] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::figure[Linked notes can form a network of knowledge]{.framed}\n![Network graph visualization showing hundreds of small nodes](https://im.dt.in.th/ipfs/bafybeigltieu33eda3ux2uprgua5haczvev5ownguordyfgds5qrexdlbq/image.webp)\n:::\n")
         ], -1 /* CACHED */),
@@ -478,7 +455,7 @@ function render(_ctx, _cache) {
         ], -1 /* CACHED */)
       ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _cache[36] || (_cache[36] = _vue.createElementVNode.call(void 0, "figure", { class: "framed" }, [
+        _cache[30] || (_cache[30] = _vue.createElementVNode.call(void 0, "figure", { class: "framed" }, [
           _vue.createElementVNode.call(void 0, "p", null, [
             _vue.createElementVNode.call(void 0, "img", {
               src: "https://im.dt.in.th/ipfs/bafybeigltieu33eda3ux2uprgua5haczvev5ownguordyfgds5qrexdlbq/image.webp",
@@ -490,7 +467,7 @@ function render(_ctx, _cache) {
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[55] || (_cache[55] = _vue.createElementVNode.call(void 0, "h2", { id: "chat-bubbles" }, [
+    _cache[49] || (_cache[49] = _vue.createElementVNode.call(void 0, "h2", { id: "chat-bubbles" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -501,13 +478,13 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "Chat bubbles")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      right: _vue.withCtx.call(void 0, () => [...(_cache[38] || (_cache[38] = [
+      right: _vue.withCtx.call(void 0, () => [...(_cache[31] || (_cache[31] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::me\nhi!\n:::\n\n:::bubble[ChatGPT]\nHi there! How's it going?\n:::\n")
         ], -1 /* CACHED */)
       ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _cache[39] || (_cache[39] = _vue.createElementVNode.call(void 0, "div", {
+        _cache[32] || (_cache[32] = _vue.createElementVNode.call(void 0, "div", {
           class: "notes-bubble",
           "data-author-position": "right"
         }, [
@@ -518,18 +495,21 @@ function render(_ctx, _cache) {
             _vue.createElementVNode.call(void 0, "p", null, "hi!")
           ])
         ], -1 /* CACHED */)),
-        _vue.createElementVNode.call(void 0, "div", _hoisted_15, [
-          _vue.createElementVNode.call(void 0, "div", _hoisted_16, [
-            _vue.createVNode.call(void 0, _component_notes_bubble_author, { author: "ChatGPT" })
+        _cache[33] || (_cache[33] = _vue.createElementVNode.call(void 0, "div", {
+          class: "notes-bubble",
+          "data-author-position": "left"
+        }, [
+          _vue.createElementVNode.call(void 0, "div", { class: "notes-bubble__author" }, [
+            _vue.createElementVNode.call(void 0, "notes-bubble-author", { author: "ChatGPT" })
           ]),
-          _cache[37] || (_cache[37] = _vue.createElementVNode.call(void 0, "div", { class: "notes-bubble__message" }, [
+          _vue.createElementVNode.call(void 0, "div", { class: "notes-bubble__message" }, [
             _vue.createElementVNode.call(void 0, "p", null, "Hi there! How's it going?")
-          ], -1 /* CACHED */))
-        ])
+          ])
+        ], -1 /* CACHED */))
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[56] || (_cache[56] = _vue.createElementVNode.call(void 0, "h2", { id: "thoughts" }, [
+    _cache[50] || (_cache[50] = _vue.createElementVNode.call(void 0, "h2", { id: "thoughts" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -540,13 +520,13 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "Thoughts")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      right: _vue.withCtx.call(void 0, () => [...(_cache[40] || (_cache[40] = [
+      right: _vue.withCtx.call(void 0, () => [...(_cache[34] || (_cache[34] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::thought\nBut what about this case?\n:::\n")
         ], -1 /* CACHED */)
       ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _cache[41] || (_cache[41] = _vue.createElementVNode.call(void 0, "div", {
+        _cache[35] || (_cache[35] = _vue.createElementVNode.call(void 0, "div", {
           class: "notes-bubble",
           "data-author-position": "right"
         }, [
@@ -557,7 +537,7 @@ function render(_ctx, _cache) {
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[57] || (_cache[57] = _vue.createElementVNode.call(void 0, "h2", { id: "call-to-action" }, [
+    _cache[51] || (_cache[51] = _vue.createElementVNode.call(void 0, "h2", { id: "call-to-action" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -568,13 +548,13 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "Call to action")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      right: _vue.withCtx.call(void 0, () => [...(_cache[42] || (_cache[42] = [
+      right: _vue.withCtx.call(void 0, () => [...(_cache[36] || (_cache[36] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, "::cta[View on GitHub]{href=\"https://github.com/dtinth/notes\"}\n")
         ], -1 /* CACHED */)
       ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _cache[43] || (_cache[43] = _vue.createElementVNode.call(void 0, "p", { class: "notes-cta" }, [
+        _cache[37] || (_cache[37] = _vue.createElementVNode.call(void 0, "p", { class: "notes-cta" }, [
           _vue.createElementVNode.call(void 0, "a", {
             class: "notes-cta__link",
             href: "https://github.com/dtinth/notes"
@@ -586,7 +566,7 @@ function render(_ctx, _cache) {
       ]),
       _: 1 /* STABLE */
     }),
-    _cache[58] || (_cache[58] = _vue.createElementVNode.call(void 0, "h2", { id: "twitter-embeds" }, [
+    _cache[52] || (_cache[52] = _vue.createElementVNode.call(void 0, "h2", { id: "twitter-embeds" }, [
       _vue.createElementVNode.call(void 0, "a", {
         "aria-hidden": "true",
         tabindex: "-1",
@@ -597,13 +577,13 @@ function render(_ctx, _cache) {
       _vue.createTextVNode.call(void 0, "Twitter embeds")
     ], -1 /* CACHED */)),
     _vue.createVNode.call(void 0, _component_d_split, null, {
-      right: _vue.withCtx.call(void 0, () => [...(_cache[44] || (_cache[44] = [
+      right: _vue.withCtx.call(void 0, () => [...(_cache[38] || (_cache[38] = [
         _vue.createElementVNode.call(void 0, "pre", null, [
           _vue.createElementVNode.call(void 0, "code", { class: "language-markdown" }, ":::tweet\n\n<p lang=\"en\" dir=\"ltr\">Proudly storing JWT auth token in localStorage in 2024 🥇 <a href=\"https://t.co/fhfzJZqIsZ\">https://t.co/fhfzJZqIsZ</a></p>&mdash; LiveOverflow 🔴 (@LiveOverflow) <a href=\"https://twitter.com/LiveOverflow/status/1817500071312699720?ref_src=twsrc%5Etfw\">July 28, 2024</a>\n\n:::\n")
         ], -1 /* CACHED */)
       ]))]),
       default: _vue.withCtx.call(void 0, () => [
-        _cache[45] || (_cache[45] = _vue.createElementVNode.call(void 0, "blockquote", { class: "twitter-tweet" }, [
+        _cache[39] || (_cache[39] = _vue.createElementVNode.call(void 0, "blockquote", { class: "twitter-tweet" }, [
           _vue.createElementVNode.call(void 0, "p", {
             lang: "en",
             dir: "ltr"
