@@ -655,7 +655,9 @@
 	,	"AgenticCoding":
 		{	"title": "Agentic Coding (topic)"
 		,	"links":
-			[	{	"link": "ClaudeCode"
+			[	{	"link": "Gangprompting"
+				}
+			,	{	"link": "ClaudeCode"
 				}
 			]
 		}
@@ -1680,6 +1682,17 @@
 		{	"title": "Functional Reactive Programming using RxJS"
 		,	"links":
 			[	{	"link": "Talks"
+				}
+			]
+		}
+	,	"Gangprompting":
+		{	"title": "Gangprompting"
+		,	"links":
+			[	{	"link": "Discord"
+				}
+			,	{	"link": "AgenticCoding"
+				}
+			,	{	"link": "PromptingInPublic"
 				}
 			]
 		}
@@ -3525,6 +3538,15 @@
 			,	{	"link": "WebMIDICon"
 				}
 			,	{	"link": "Webring"
+				}
+			]
+		}
+	,	"PromptingInPublic":
+		{	"title": "Prompting in Public"
+		,	"links":
+			[	{	"link": "AgenticCoding"
+				}
+			,	{	"link": "Gangprompting"
 				}
 			]
 		}

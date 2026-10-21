@@ -748,6 +748,10 @@
 		{	"title": "Functional Reactive Programming using RxJS"
 		,	"parent": "Talks"
 		}
+	,	"Gangprompting":
+		{	"title": "Gangprompting"
+		,	"parent": "AgenticCoding"
+		}
 	,	"Gemini25ProPreviewTTSThai":
 		{	"title": "Gemini 2.5 Pro Text-to-Speech Thai Voice Previews"
 		,	"parent": "LargeLanguageModel"
@@ -1398,6 +1402,10 @@
 	,	"Projects":
 		{	"title": "Projects (topic)"
 		,	"parent": "HomePage"
+		}
+	,	"PromptingInPublic":
+		{	"title": "Prompting in Public"
+		,	"parent": "Gangprompting"
 		}
 	,	"PublishMarkdownPageWithoutBuildTool":
 		{	"title": "Quickly publish a Markdown page without build tool"
