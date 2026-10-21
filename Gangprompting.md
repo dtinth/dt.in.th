@@ -78,7 +78,7 @@ The most important subcommands are:
 
 ### Example bridge implementations
 
-Here are some of the bridges I built.
+Here are some of the bridges I built:
 
 - [Discord](https://github.com/dtinth/gangprompting-skill/blob/main/skills/gangprompting/discord-agent-bridge.ts) — simple reference implementation
 - [dtinth/claw](https://github.com/dtinth/claw) — I use this for [prompting in public](PromptingInPublic) on GitHub. Uses a central poller.
@@ -106,9 +106,7 @@ Some implementation tips:
   - **Print it twice.** Once at the start, and once more at the end. Why? Some harnesses truncate the beginning of long shell output, while others truncate the end.
   - **Tell the agent how to resubscribe.** Print the exact command to run next, with `--after` set to the id of the last message printed.
 
-- **Filter out the agent's own messages.** Make it so that `read` and `long-poll` skip bot messages, so the agent’s own replies don’t end the long-poll. Otherwise it will get notified of its own message, which wastes tokens. Sometimes an agent may want to re-read its own messages (e.g. after compacting). In this case, a bright can provide an `--include-bots` flag.
-
-- **Use an allow list if the channel has other bots or people you don't trust.** The reference doesn't have one. It only skips bots. Dev-null-bridge has one, through `BRIDGE_AUTHORS`. In a group, the agent must not confuse other people's messages with yours.
+- **Filter out the agent's own messages.** Make it so that `read` and `long-poll` skip bot messages, so the agent’s own replies don’t end the long-poll. Otherwise it will get notified of its own message, which wastes tokens. Sometimes an agent may want to re-read its own messages (e.g. after compacting). In this case, a bridge can provide an `--include-bots` flag.
 
 :::tip[Alternative to long-polling: Monitor tool]
 Claude Code also has a [Monitor tool](https://code.claude.com/docs/en/tools-reference#monitor-tool), which lets an agent run a background script, where each time the script outputs something, it gets injected as a message in the session. My gangprompting-skill used to use it, but [recent versions of Claude Code have limited the Monitor lifetime to 30 minutes](https://github.com/anthropics/claude-code/issues/94553). For sessions that span days, this [wastes a lot of tokens](https://im.dt.in.th/ipfs/bafybeigyh4nspsdxpkzgdstxgcu4j76z3ch6y7j43jjcsv4p4zdy6dnrwy/image.webp), so [I had to remove it](https://github.com/dtinth/gangprompting-skill/issues/2#issuecomment-5848049544).
