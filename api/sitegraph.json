@@ -3546,7 +3546,13 @@
 		,	"links":
 			[	{	"link": "AgenticCoding"
 				}
+			,	{	"link": "#user-content-fn-humancode"
+				}
 			,	{	"link": "Gangprompting"
+				}
+			,	{	"link": "Gangprompting#sharing-the-poller"
+				}
+			,	{	"link": "#user-content-fnref-humancode"
 				}
 			]
 		}
