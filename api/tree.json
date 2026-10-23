@@ -500,6 +500,10 @@
 		{	"title": "Claude Code (topic)"
 		,	"parent": "AgenticCoding"
 		}
+	,	"ClaudeCodeLongLivedOAuth":
+		{	"title": "Using a long-lived Claude Code OAuth token"
+		,	"parent": "ClaudeCode"
+		}
 	,	"ClaudeCodeWeb":
 		{	"title": "Claude Code on the web"
 		,	"parent": "ClaudeCode"

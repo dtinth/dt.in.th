@@ -4,12 +4,17 @@ topic: true
 public: true
 ---
 
-**[Claude Code](https://claude.com/product/claude-code)** is a [coding agent](AgenticCoding) from Anthropic.
-
-## Notes
+My notes about **[Claude Code](https://claude.com/product/claude-code)**, a [coding agent](AgenticCoding) from Anthropic:
 
 - [Claude Code on the web](ClaudeCodeWeb)
+- [Using a long-lived Claude Code OAuth token](ClaudeCodeLongLivedOAuth)
 - [Gangprompting](Gangprompting)
+
+## Installation
+
+```sh
+curl -fsSL https://claude.ai/install.sh | bash
+```
 
 ## Check usage
 

@@ -123,6 +123,7 @@ https://dt.in.th/Christianity
 https://dt.in.th/ChucKSong4
 https://dt.in.th/CircleCIDummyConfig
 https://dt.in.th/ClaudeCode
+https://dt.in.th/ClaudeCodeLongLivedOAuth
 https://dt.in.th/ClaudeCodeWeb
 https://dt.in.th/ClaudeWebGitHubMCP
 https://dt.in.th/CloudPlatform

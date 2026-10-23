@@ -1015,6 +1015,8 @@
 				}
 			,	{	"link": "ClaudeCodeWeb"
 				}
+			,	{	"link": "ClaudeCodeLongLivedOAuth"
+				}
 			,	{	"link": "Gangprompting"
 				}
 			,	{	"link": "Deno"
@@ -1022,6 +1024,13 @@
 			,	{	"link": "Mise"
 				}
 			,	{	"link": "Fish"
+				}
+			]
+		}
+	,	"ClaudeCodeLongLivedOAuth":
+		{	"title": "Using a long-lived Claude Code OAuth token"
+		,	"links":
+			[	{	"link": "ClaudeCode"
 				}
 			]
 		}
