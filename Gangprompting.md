@@ -172,9 +172,21 @@ The bridge launches the harness and controls it. [remorses/kimaki](https://githu
 
 ### A bridge that _talks to_ the harness
 
+:::::split
+
 The bridge runs as a separate daemon and communicates with the harness. For example, OpenCode has an [open API](https://opencode.ai/v2/docs/api) that lets external scripts inject messages directly into a session.
 
 When integrating with OpenCode, I run a daemon that polls the channel and injects each new message straight into the session via the [`opencode api`](https://opencode.ai/v2/docs/cli/commands/#api) command. (I haven’t published the code for this, but you can ask your agent to build it.)
+
+::::aside
+
+:::figure[The daemon checks for new messages in Discord and directly injects them into the session, without the agent having check for new messages by itself]{.framed}
+![](https://im.dt.in.th/ipfs/bafybeifzhg2a7xifpokhnxkan2otweuu7zr7uxdg6rihby7qt6xa62qqsq/image.webp)
+:::
+
+::::
+
+:::::
 
 ## Staying safe
 
