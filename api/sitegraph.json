@@ -1008,6 +1008,30 @@
 		{	"title": "CircleCI Dummy Config"
 		,	"links": []
 		}
+	,	"ClaudeCode":
+		{	"title": "Claude Code (topic)"
+		,	"links":
+			[	{	"link": "AgenticCoding"
+				}
+			,	{	"link": "ClaudeCodeWeb"
+				}
+			,	{	"link": "Gangprompting"
+				}
+			,	{	"link": "Deno"
+				}
+			,	{	"link": "Mise"
+				}
+			,	{	"link": "Fish"
+				}
+			]
+		}
+	,	"ClaudeCodeWeb":
+		{	"title": "Claude Code on the web"
+		,	"links":
+			[	{	"link": "ClaudeCode"
+				}
+			]
+		}
 	,	"ClaudeWebGitHubMCP":
 		{	"title": "Using GitHub’s official Remote MCP Server with Claude Web"
 		,	"links":
@@ -1693,6 +1717,8 @@
 			,	{	"link": "AgenticCoding"
 				}
 			,	{	"link": "PromptingInPublic"
+				}
+			,	{	"link": "ClaudeCode"
 				}
 			]
 		}

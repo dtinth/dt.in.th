@@ -496,6 +496,14 @@
 		{	"title": "CircleCI Dummy Config"
 		,	"parent": "ContinuousIntegration"
 		}
+	,	"ClaudeCode":
+		{	"title": "Claude Code (topic)"
+		,	"parent": "AgenticCoding"
+		}
+	,	"ClaudeCodeWeb":
+		{	"title": "Claude Code on the web"
+		,	"parent": "ClaudeCode"
+		}
 	,	"ClaudeWebGitHubMCP":
 		{	"title": "Using GitHub’s official Remote MCP Server with Claude Web"
 		,	"parent": "GitHub"
@@ -558,7 +566,7 @@
 		}
 	,	"Deno":
 		{	"title": "Deno (topic)"
-		,	"parent": "JavaScript"
+		,	"parent": "ClaudeCode"
 		}
 	,	"DenoMinioPresignedGet":
 		{	"title": "Generating Presigned GET URLs for S3-Compatible Object Storage with Deno and Minio JS SDK"
@@ -1705,7 +1713,7 @@
 		}
 	,	"TypeScript":
 		{	"title": "TypeScript (topic)"
-		,	"parent": "JavaScript"
+		,	"parent": "Deno"
 		}
 	,	"TypeScriptTestingInfrastructure":
 		{	"title": "Test infrastructure ของโครงการ TypeScript"
