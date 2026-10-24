@@ -51,9 +51,14 @@ At first, I do this manually whenever I remember, but I often forget when I'm fo
 
 Claude Code's [mods](https://code.claude.com/docs/en/plugins/mods/overview) feature lets me write TypeScript plugins that integrate deeply with Claude Code. A mod can read the state of the conversation and trigger compaction. So I build a small [`polite-compaction` plugin](https://github.com/dtinth/claude-code-mods/tree/main/polite-compaction) that does this:
 
-:::figure[The polite-compaction plugin tells Claude Code to prepare for compaction after context grows larger than 300k tokens. It saves things to memory and tells the plugin that it’s ready for compaction, and the plugin triggered a compaction.]{.framed}
+:::figure[Screenshot of a polite-compaction plugin working in action]{.framed}
 ![](https://im.dt.in.th/ipfs/bafybeick52grjyobncgikyveasit5jmap7p5mij7uof6plwklvhhafusve/image.webp)
 :::
+
+The `polite-compaction` plugin automatically tells Claude Code to prepare for compaction after context grows larger than 300k tokens. Claude then saves things to memory and tells the plugin that it’s ready for compaction, and the plugin triggers a compaction.
+
+- It waits for a turn to finish first. So for really complex task, the plugin will let the agent finish the work at hand first. (From my experience, sometimes this can go up to 450k.)
+- This works separately from Claude’s auto-compact (which triggers at 967k of context).
 
 You can install it by running this in Claude Code:
 
