@@ -8,6 +8,7 @@ My notes about **[Claude Code](https://claude.com/product/claude-code)**, a [cod
 
 - [Claude Code on the web](ClaudeCodeWeb)
 - [Using a long-lived Claude Code OAuth token](ClaudeCodeLongLivedOAuth)
+- [Polite Compaction for Claude Code](ClaudeCodePoliteCompaction)
 - [Gangprompting](Gangprompting)
 
 ## Installation

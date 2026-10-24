@@ -1017,6 +1017,8 @@
 				}
 			,	{	"link": "ClaudeCodeLongLivedOAuth"
 				}
+			,	{	"link": "ClaudeCodePoliteCompaction"
+				}
 			,	{	"link": "Gangprompting"
 				}
 			,	{	"link": "Deno"
@@ -1031,6 +1033,17 @@
 		{	"title": "Using a long-lived Claude Code OAuth token"
 		,	"links":
 			[	{	"link": "ClaudeCode"
+				}
+			]
+		}
+	,	"ClaudeCodePoliteCompaction":
+		{	"title": "Polite Compaction for Claude Code"
+		,	"links":
+			[	{	"link": "ClaudeCode"
+				}
+			,	{	"link": "Gangprompting"
+				}
+			,	{	"link": "PromptingInPublic"
 				}
 			]
 		}

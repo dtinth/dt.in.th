@@ -504,6 +504,10 @@
 		{	"title": "Using a long-lived Claude Code OAuth token"
 		,	"parent": "ClaudeCode"
 		}
+	,	"ClaudeCodePoliteCompaction":
+		{	"title": "Polite Compaction for Claude Code"
+		,	"parent": "ClaudeCode"
+		}
 	,	"ClaudeCodeWeb":
 		{	"title": "Claude Code on the web"
 		,	"parent": "ClaudeCode"
@@ -1417,7 +1421,7 @@
 		}
 	,	"PromptingInPublic":
 		{	"title": "Prompting in Public"
-		,	"parent": "Gangprompting"
+		,	"parent": "ClaudeCodePoliteCompaction"
 		}
 	,	"PublishMarkdownPageWithoutBuildTool":
 		{	"title": "Quickly publish a Markdown page without build tool"

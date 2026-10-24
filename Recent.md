@@ -8,6 +8,7 @@ aliases:
 
 Here are my recent writings:
 
+- 2026-10-23: [Prompting in Public](PromptingInPublic)
 - 2026-10-22: [Gangprompting](Gangprompting)
 - 2026-08-07: [Qwen3.5-Omni-Flash Text-to-Speech Thai Voice Previews](Qwen35OmniFlashTTSThai)
 - 2026-07-13: [bgx: BackGround eXecute](Bgx)
