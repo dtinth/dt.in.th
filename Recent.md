@@ -8,6 +8,7 @@ aliases:
 
 Here are my recent writings:
 
+- 2026-10-24: [Polite Compaction for Claude Code](ClaudeCodePoliteCompaction)
 - 2026-10-23: [Prompting in Public](PromptingInPublic)
 - 2026-10-22: [Gangprompting](Gangprompting)
 - 2026-08-07: [Qwen3.5-Omni-Flash Text-to-Speech Thai Voice Previews](Qwen35OmniFlashTTSThai)
