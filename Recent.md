@@ -8,6 +8,7 @@ aliases:
 
 Here are my recent writings:
 
+- 2026-11-15: [OpenThai 2.0 OCR in the browser](OpenThaiOCRWebDemo)
 - 2026-10-24: [Polite Compaction for Claude Code](ClaudeCodePoliteCompaction)
 - 2026-10-23: [Prompting in Public](PromptingInPublic)
 - 2026-10-22: [Gangprompting](Gangprompting)

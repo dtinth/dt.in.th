@@ -1291,6 +1291,10 @@
 		{	"title": "Let's Start Contributing to Open Source!"
 		,	"parent": "Talks"
 		}
+	,	"OpenThaiOCRWebDemo":
+		{	"title": "OpenThai 2.0 OCR in the browser"
+		,	"parent": "Recent"
+		}
 	,	"OpenWebUI":
 		{	"title": "Open WebUI (topic)"
 		,	"parent": "LargeLanguageModel"

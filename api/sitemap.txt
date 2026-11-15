@@ -321,6 +321,7 @@ https://dt.in.th/OneYearBiblePlanForWordOfPromiseApp
 https://dt.in.th/OnlyLoveRemix
 https://dt.in.th/OpaqueSpace
 https://dt.in.th/OpenSourceWorkshop2017
+https://dt.in.th/OpenThaiOCRWebDemo
 https://dt.in.th/OpenWebUI
 https://dt.in.th/OpenWebUILiteLLM
 https://dt.in.th/OverWhelmingJoy
