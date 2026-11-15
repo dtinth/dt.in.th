@@ -7,10 +7,12 @@ created: 2026-11-15
 # OpenThai 2.0 OCR in the browser
 
 :::lead
-[**OpenThai 2.0 OCR**](https://huggingface.co/iapp/OpenThai2.0-OCR-Text) is a new OCR model from iApp Technology that reads Thai and English, [released on November 12, 2026](https://iapp.co.th/blog/openthai2p0-ocr-how-to-run). It's free (Apache-2.0 licensed) and it's only **4 MB** large.
+[**OpenThai 2.0 OCR**](https://huggingface.co/iapp/OpenThai2.0-OCR-Text) is a new OCR model from [iApp Technology](https://iapp.co.th/) that reads Thai and English, [released on November 12, 2026](https://iapp.co.th/blog/openthai2p0-ocr-how-to-run). It is free-to-use[^free] and is only **4 MB** large.
 :::
 
-Using [ONNX Runtime Web](https://onnxruntime.ai/docs/tutorials/web/), it is possible to run this model on the web browser. In this demo, after downloading the runtime and the model (~20 MB combined), everything afterwards happens on your device.
+Using [ONNX Runtime Web](https://onnxruntime.ai/docs/tutorials/web/), we can run this model on the web browser. This demo lets you run OCR on an image. Everything happens on-device. Combined download size (model + runtime) is around 20 MB.
+
+[^free]: It is Apache-2.0 licensed, so this model can be used for free even in commercial setting.
 
 <template v-if="error">
 
@@ -693,10 +695,15 @@ Vue.onMounted(() => document.addEventListener('paste', onPaste))
 Vue.onUnmounted(() => document.removeEventListener('paste', onPaste))
 </script>
 
-## About the demo
+## About this demo
 
-- **Model:** [iapp/OpenThai2.0-OCR-Text](https://huggingface.co/iapp/OpenThai2.0-OCR-Text) by iApp Technology, Apache-2.0. It is based on PaddlePaddle PP-OCRv6-tiny.
-- **Parts:** a text detector (`det.onnx`) finds the text boxes. A line reader (`rec.onnx`) reads each box.
+- **Model used:** [iapp/OpenThai2.0-OCR-Text](https://huggingface.co/iapp/OpenThai2.0-OCR-Text) by iApp Technology, Apache-2.0.
+  - It is based on PaddlePaddle PP-OCRv6-tiny.
+- **Parts:**
+  - Text detector: `det.onnx`, for finding the text boxes
+  - Line reader: `rec.onnx`, for reading each box
 - **Guide:** [How to run OpenThai 2.0 OCR](https://iapp.co.th/blog/openthai2p0-ocr-how-to-run) on iApp's blog.
-- **Differences from official Python demo:** This page is a JavaScript port of the model's Python runtime (`runtime/line_engine.py`). It skips page rotation, deskewing and column-gap splitting, so tilted photos can come out worse than in the original.
+- **Differences from official Python demo:**
+  - This demo is based on the model's Python runtime ([`runtime/line_engine.py`](https://huggingface.co/iapp/OpenThai2.0-OCR-Text/blob/main/runtime/line_engine.py)).
+  - It skips page rotation, deskewing and column-gap splitting, so tilted photos can come out worse than in the original.
 - **Demo source code:** See [OpenThaiOCRWebDemo.md](OpenThaiOCRWebDemo.md).

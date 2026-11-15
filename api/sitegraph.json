@@ -3253,7 +3253,11 @@
 	,	"OpenThaiOCRWebDemo":
 		{	"title": "OpenThai 2.0 OCR in the browser"
 		,	"links":
-			[	{	"link": "OpenThaiOCRWebDemo.md"
+			[	{	"link": "#user-content-fn-free"
+				}
+			,	{	"link": "OpenThaiOCRWebDemo.md"
+				}
+			,	{	"link": "#user-content-fnref-free"
 				}
 			]
 		}
