@@ -34,22 +34,27 @@ I had my agents build **bridges** for communicating over a public channel. Basic
 - [dtinth/claw](https://github.com/dtinth/claw) (GitHub)
 - [dtinth/dev-null-bridge](https://github.com/dtinth/dev-null-bridge) (/dev/null)
 
-With the bridges built, to start working on a new project in the open, I would:
+Each bridge contains:
+
+- A set of scripts for communicating in that channel
+- A skill teaching coding agents how to use that bridge
+
+After the bridge have been built, to start working on a new project in the open, I would:
 
 1. Create a GitHub issue or a /dev/null commit.
-2. Tell my agents to talk to me via the bridge instead of directly.
+2. Tell my agents to talk to me via the bridge instead of directly, by invoking the skill:
 
-I do that by invoking the skill that gets shipped with the bridge:
+   :::me
+   [/dtinth-claw](https://github.com/dtinth/claw/blob/main/skills/dtinth-claw/SKILL.md) let's talk in <https://github.com/bemusic/bemuse/issues/844>
+   :::
 
-:::me
-[/dtinth-claw](https://github.com/dtinth/claw/blob/main/skills/dtinth-claw/SKILL.md) let's talk in <https://github.com/bemusic/bemuse/issues/844>
-:::
+   :::me
+   [/dev-null-bridge](https://github.com/dtinth/dev-null-bridge/blob/main/skills/dev-null-bridge/SKILL.md) let's talk in <https://dev-null.sh/@dtinth/commits/01a15555-27f2-7026-9b16-35c58c1cdb8d>
+   :::
 
-…or:
+Then I can start communicating over there.
 
-:::me
-[/dev-null-bridge](https://github.com/dtinth/dev-null-bridge/blob/main/skills/dev-null-bridge/SKILL.md) let's talk in <https://dev-null.sh/@dtinth/commits/01a15555-27f2-7026-9b16-35c58c1cdb8d>
-:::
+![](https://im.dt.in.th/ipfs/bafybeie6xflse7fx7maqhvu6fzooms3daijazkt6tak6yqklsw4dxeu73m/ipad.png)
 
 If you’re curious about how to build these bridges, I’ve explained them in much more detail on the dedicated [**Gangprompting**](Gangprompting) page. Please check it out.
 
@@ -57,13 +62,13 @@ Unlike in gangprompting, where the agent talks to everyone in the group chat, he
 
 ## Building a custom UI for GitHub communication
 
-Inasmuch as I'd like to prompt my agents through GitHub, its issues UI is too janky for quick prompting, so I built a custom web dashboard where I can read and reply to my agents’ GitHub comments. [The full conversation is on GitHub.](https://github.com/dtinth/claw/issues/5#issue-4936264048)
+After communicating with my agents via GitHub for a while, I found that its issues UI is too janky for quick prompting, so I built a custom web dashboard where I can read and reply to my agents’ GitHub comments [(see the full conversation is on GitHub)](https://github.com/dtinth/claw/issues/5#issue-4936264048).
 
 ![claw's dashboard, open on an iPad — a sidebar showing Claude usage meters and recent bot activity next to a comment feed](https://im.dt.in.th/ipfs/bafybeihabthjsoevcrqx2r4gdgkhucql332xy6dczpllrytiis34ifmqdm/ipad.png)
 
 ## Building the /dev/null bridge on /dev/null
 
-I built the /dev/null bridge mostly by prompting my agent on /dev/null. [You can read the whole conversation here.](https://dev-null.sh/@dtinth/commits/01a15545-da41-714b-a93a-ceb9c1225973) I bootstrapped the project by:
+I built the /dev/null bridge mostly by prompting my agent on /dev/null [(thread)](https://dev-null.sh/@dtinth/commits/01a15545-da41-714b-a93a-ceb9c1225973). I bootstrapped the project by:
 
 1. Cloning the [dev-null.sh](https://github.com/nunomaduro/dev-null.sh) repo (it’s open source) and put my agent in it
 2. I asked it to commit (post) something on my bot account, then watch for my replies to it. This is easy because the agent has access to the platform’s source code, so it knows what to do. It built a rudimentary bridge.
