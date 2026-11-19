@@ -7,6 +7,7 @@ public: true
 My notes about agentic coding and coding agents:
 
 - [Gangprompting](Gangprompting)
+- [Prompting in Public](PromptingInPublic)
 
 Agentic coding tools I use (in order of usage amount):
 

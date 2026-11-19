@@ -1425,7 +1425,7 @@
 		}
 	,	"PromptingInPublic":
 		{	"title": "Prompting in Public"
-		,	"parent": "ClaudeCodePoliteCompaction"
+		,	"parent": "AgenticCoding"
 		}
 	,	"PublishMarkdownPageWithoutBuildTool":
 		{	"title": "Quickly publish a Markdown page without build tool"
